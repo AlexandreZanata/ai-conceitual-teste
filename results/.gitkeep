@@ -1,0 +1,4 @@
+# results/
+
+Experiment outputs (JSON/CSV per run). **Gitignored.**  
+Keep only summaries or figures under `docs/` when publishing phase 09.

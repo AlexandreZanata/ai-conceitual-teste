@@ -1,0 +1,23 @@
+{
+  "name": "ai-conceitual-teste",
+  "private": true,
+  "version": "0.0.0",
+  "description": "EvoGen — lightweight genetic + direct + selection learning research PoC (C++).",
+  "scripts": {
+    "prepare": "lefthook install || true",
+    "verify": "bash scripts/check-quality.sh",
+    "check:size": "python3 scripts/check_size_complexity.py --root .",
+    "check:lint": "bash scripts/check-lint.sh",
+    "check:system": "bash scripts/check-system.sh",
+    "hooks:install": "lefthook install",
+    "build": "cmake -S . -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build --parallel",
+    "test": "ctest --test-dir build --output-on-failure",
+    "evogen": "./build/evogen"
+  },
+  "devDependencies": {
+    "lefthook": "2.1.6"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
