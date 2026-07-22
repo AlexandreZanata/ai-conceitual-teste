@@ -6,11 +6,40 @@
 
 | ID | Task | Purpose |
 |----|------|---------|
-| T1 | Function approximation (XOR / sine) | Cheapest full-loop validation |
-| T2 | 2D grid navigation to a target | Selection + online adaptation inside episode |
-| T3 | Incremental classifier with concept drift | Dynamic environment stress test |
+| T1 | Function approximation (XOR / sine) | Cheapest full-loop validation (phase 04) |
+| T2 | **Trait Forge Arena** (survival grid) | Visible selection pressure; species must develop under rules/variables (phase 06+) |
+| T3 | Arena season / hazard drift | Dynamic stress; recovery lag under timed benches |
 
-**First implementation:** T1 (XOR + sine) — implemented in phase 04.
+**First implementation:** T1 done. **Next product focus:** T2 survival game + timed technique benchmarks (see `.local/SURVIVAL-GAME-PLAN.md`).
+
+### T2 rules vs variables (sketch)
+
+| Rules (fixed) | Variables (config) |
+|---------------|--------------------|
+| Bounds, collision, death at energy ≤ 0 | `grid_*`, `food_density`, `energy_drain`, `hazard_rate`, `start_energy`, `episode_ticks` |
+| Food raises energy; drain per tick | Season length / flip point (T3 / TB-DRIFT) |
+
+### Techniques (phase 07+)
+
+| ID | Genetic | Direct | Notes |
+|----|---------|--------|-------|
+| R0 | No | No | Random floor |
+| A | Yes | No | Genetic only |
+| B | No | Yes | Direct only |
+| C | Yes | Yes | Full system (Darwinian) |
+| C-L | Yes | Yes | Lamarckian inheritance |
+| A+ | Yes | No | Stronger elitism |
+
+### Timed budgets (phase 08)
+
+| Bench | Budget (example) | Goal |
+|-------|------------------|------|
+| TB-30 | 30 s or 40 gens | Mild τ |
+| TB-60 | 60 s or 80 gens | Medium τ |
+| TB-120 | 120 s or 150 gens | Harsh τ |
+| TB-DRIFT | 90 s or 100 gens | Recovery after mid-run flip |
+
+Progress metrics: time-to-threshold, fitness@budget, learning-curve AUC, survival rate, recovery lag.
 
 ## Conditions
 

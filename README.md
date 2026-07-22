@@ -16,9 +16,8 @@ npm run verify
 ./build/evogen --config experiments/config_A_only_genetic.json --generations 1
 ```
 
-Phase 03–04 core CLI is available (DirectLearner + T1 XOR/sine, conditions A/B/C).  
-Phase 05 embedded web metrics: `./build/evogen --serve` → `http://127.0.0.1:8080/`.
-
+Phase 03–05 done (CLI + DirectLearner + embedded web).  
+**Next:** survival game + timed technique benchmarks — `.local/SURVIVAL-GAME-PLAN.md` / phase 06.
 ## Docs map
 
 | Doc | Purpose |

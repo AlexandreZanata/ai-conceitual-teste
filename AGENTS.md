@@ -44,12 +44,12 @@ npm run verify
 2. Core evolutionary CLI (phase 03) — done  
 3. DirectLearner + function approx (phase 04) — done  
 4. Embedded web metrics (phase 05) — done  
-5. Full dashboard (phase 06) — **next**  
-6. Extra environments (phase 07)  
-7. Formal A/B/C runs (phase 08)  
-8. Scientific write-up (phase 09)
+5. Survival game arena (phase 06) — **next**  
+6. Learning technique matrix (phase 07)  
+7. Timed learning benchmarks (phase 08)  
+8. Benchmark report (phase 09)
 
-Do **not** mix algorithm debugging with frontend debugging: finish 03–04 before 05 (complete).
+Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green while building the arena.
 
 ---
 
