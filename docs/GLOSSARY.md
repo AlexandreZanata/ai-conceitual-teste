@@ -118,5 +118,12 @@
 
 ## Recorder
 
-**Definition:** Component that logs per-generation metrics (mean/max fitness, diversity) for the web UI and results files.  
+**Definition:** Component that logs per-generation metrics (mean/max fitness, diversity, `wall_ms_elapsed`) and run `meta.json` (`stop_reason`, budgets, τ).  
 **Code name:** `Recorder`
+
+---
+
+## Timed Bench
+
+**Definition:** Equal-budget survival comparison ID: `TB-30`, `TB-60`, `TB-120`, `TB-DRIFT`. Caps via `max_wall_ms` and/or `max_generations`; success via `fitness_threshold` (τ).  
+**Code name:** `bench` (ExperimentConfig field)

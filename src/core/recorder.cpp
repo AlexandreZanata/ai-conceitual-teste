@@ -76,7 +76,8 @@ void Recorder::log_generation(const GenerationMetrics& metrics) const {
                       {"learning_rate_mean", metrics.learning_rate_mean},
                       {"mutation_rate_mean", metrics.mutation_rate_mean},
                       {"alive_mean", metrics.alive_mean},
-                      {"technique", metrics.technique}};
+                      {"technique", metrics.technique},
+                      {"wall_ms_elapsed", metrics.wall_ms_elapsed}};
   const auto path =
       std::filesystem::path(results_dir_) / "metrics.jsonl";
   std::ofstream out(path, std::ios::app);
@@ -84,6 +85,15 @@ void Recorder::log_generation(const GenerationMetrics& metrics) const {
     throw std::runtime_error("cannot write metrics: " + path.string());
   }
   out << j.dump() << '\n';
+}
+
+void Recorder::write_meta(const nlohmann::json& meta) const {
+  const auto path = std::filesystem::path(results_dir_) / "meta.json";
+  std::ofstream out(path);
+  if (!out) {
+    throw std::runtime_error("cannot write meta: " + path.string());
+  }
+  out << meta.dump(2) << '\n';
 }
 
 }  // namespace evogen

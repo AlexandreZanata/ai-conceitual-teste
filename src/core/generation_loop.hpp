@@ -6,11 +6,15 @@
 #include "core/rng.hpp"
 #include "environments/environment.hpp"
 
+#include <string>
+
 namespace evogen {
 
 struct RunResult {
   GenerationMetrics last;
   int generations_run{0};
+  std::string stop_reason{"max_generations"};
+  int drift_at_gen{-1};
 };
 
 /** One generation: evaluate all agents, metrics, then evolve. */

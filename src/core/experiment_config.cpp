@@ -88,6 +88,29 @@ void apply_arena(ExperimentConfig& cfg, const nlohmann::json& j) {
   }
 }
 
+void apply_budget(ExperimentConfig& cfg, const nlohmann::json& j) {
+  if (j.contains("max_wall_ms")) {
+    cfg.max_wall_ms = j.at("max_wall_ms").get<std::int64_t>();
+  }
+  if (j.contains("fitness_threshold")) {
+    cfg.use_fitness_threshold = true;
+    cfg.fitness_threshold = j.at("fitness_threshold").get<float>();
+  }
+  if (j.contains("enable_drift")) {
+    cfg.enable_drift = j.at("enable_drift").get<bool>();
+  }
+  if (j.contains("drift_at_fraction")) {
+    cfg.drift_at_fraction = j.at("drift_at_fraction").get<float>();
+  }
+  if (j.contains("post_drift_hazard_rate")) {
+    cfg.post_drift_hazard_rate = j.at("post_drift_hazard_rate").get<float>();
+  }
+  if (j.contains("post_drift_food_density")) {
+    cfg.post_drift_food_density = j.at("post_drift_food_density").get<float>();
+  }
+  if (j.contains("bench")) cfg.bench = j.at("bench").get<std::string>();
+}
+
 }  // namespace
 
 void apply_condition_defaults(ExperimentConfig& cfg) {
@@ -110,6 +133,7 @@ ExperimentConfig parse_experiment_config(const nlohmann::json& j) {
   apply_sizes(cfg, j);
   apply_flags_and_rates(cfg, j);
   apply_arena(cfg, j);
+  apply_budget(cfg, j);
   apply_technique_defaults(cfg);
   validate_experiment_config(cfg);
   return cfg;

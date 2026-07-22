@@ -43,6 +43,7 @@ set(EVOGEN_CORE_SOURCES
   src/core/experiment_config.cpp
   src/core/experiment_config_validate.cpp
   src/core/technique.cpp
+  src/core/budget.cpp
   src/core/recorder.cpp
   src/core/generation_loop.cpp
   src/environments/function_approx_env.cpp
@@ -84,6 +85,7 @@ add_executable(evogen_tests
   tests/test_function_approx.cpp
   tests/test_survival_arena.cpp
   tests/test_technique.cpp
+  tests/test_budget.cpp
   tests/test_experiment_controller.cpp
   tests/test_web_server.cpp
 )

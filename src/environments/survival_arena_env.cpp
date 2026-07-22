@@ -100,7 +100,7 @@ std::vector<float> SurvivalArenaEnv::observe() const {
           cell_food(x_, y_ + 1),
           cell_food(x_ - 1, y_),
           cell_hazard(x_, y_),
-          0.0f,
+          season_,
           1.0f};
 }
 

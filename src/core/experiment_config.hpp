@@ -33,6 +33,17 @@ struct ExperimentConfig {
   float hazard_rate{0.03f};
   float start_energy{1.0f};
   std::size_t episode_ticks{32};
+  /** 0 = wall-clock budget disabled. */
+  std::int64_t max_wall_ms{0};
+  bool use_fitness_threshold{false};
+  float fitness_threshold{0.0f};
+  bool enable_drift{false};
+  float drift_at_fraction{0.5f};
+  /** <0 = double current hazard_rate on drift. */
+  float post_drift_hazard_rate{-1.0f};
+  /** <0 = leave food_density unchanged on drift. */
+  float post_drift_food_density{-1.0f};
+  std::string bench;
 };
 
 ExperimentConfig load_experiment_config(const std::string& path);

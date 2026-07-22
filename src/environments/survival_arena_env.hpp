@@ -48,6 +48,13 @@ class SurvivalArenaEnv final : public Environment {
   int y() const { return y_; }
   std::size_t ticks_done() const { return ticks_done_; }
 
+  void set_season(float season) override { season_ = season; }
+  float season() const override { return season_; }
+  void set_hazard_rate(float rate) override { hazard_rate_ = rate; }
+  float hazard_rate() const override { return hazard_rate_; }
+  void set_food_density(float density) override { food_density_ = density; }
+  float food_density() const override { return food_density_; }
+
  private:
   int action_from_response(float response) const;
   void place_cells(std::uint64_t seed);
@@ -69,6 +76,7 @@ class SurvivalArenaEnv final : public Environment {
   float energy_{0};
   bool alive_{true};
   std::size_t ticks_done_{0};
+  float season_{0.0f};
 };
 
 }  // namespace evogen

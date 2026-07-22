@@ -94,6 +94,21 @@ void validate_rates(const ExperimentConfig& cfg) {
   }
 }
 
+void validate_budget(const ExperimentConfig& cfg) {
+  if (cfg.max_wall_ms < 0) {
+    throw std::invalid_argument("max_wall_ms must be >= 0");
+  }
+  if (cfg.drift_at_fraction < 0.0f || cfg.drift_at_fraction > 1.0f) {
+    throw std::invalid_argument("drift_at_fraction must be in [0, 1]");
+  }
+  if (cfg.post_drift_hazard_rate > 1.0f) {
+    throw std::invalid_argument("post_drift_hazard_rate must be <= 1");
+  }
+  if (cfg.post_drift_food_density > 1.0f) {
+    throw std::invalid_argument("post_drift_food_density must be <= 1");
+  }
+}
+
 }  // namespace
 
 void validate_experiment_config(const ExperimentConfig& cfg) {
@@ -101,6 +116,7 @@ void validate_experiment_config(const ExperimentConfig& cfg) {
   validate_modes(cfg);
   validate_rates(cfg);
   validate_arena(cfg);
+  validate_budget(cfg);
 }
 
 }  // namespace evogen

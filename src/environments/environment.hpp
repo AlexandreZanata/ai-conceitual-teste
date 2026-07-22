@@ -29,6 +29,14 @@ class Environment {
     return 0.0f;
   }
   virtual bool agent_alive() const { return true; }
+
+  /** T3 / TB-DRIFT knobs (no-op on batch T1 environments). */
+  virtual void set_season(float season) { (void)season; }
+  virtual float season() const { return 0.0f; }
+  virtual void set_hazard_rate(float rate) { (void)rate; }
+  virtual float hazard_rate() const { return 0.0f; }
+  virtual void set_food_density(float density) { (void)density; }
+  virtual float food_density() const { return 0.0f; }
 };
 
 }  // namespace evogen

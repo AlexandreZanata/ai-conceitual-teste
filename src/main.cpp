@@ -139,7 +139,8 @@ int run_from_config(const CliArgs& args) {
       evogen::run_generations(population, *env, cfg, recorder, args.generations);
   std::cout << "done generations_run=" << result.generations_run
             << " fitness_mean=" << result.last.fitness_mean
-            << " fitness_max=" << result.last.fitness_max << '\n';
+            << " fitness_max=" << result.last.fitness_max
+            << " stop_reason=" << result.stop_reason << '\n';
   return 0;
 }
 

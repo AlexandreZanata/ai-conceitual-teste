@@ -64,7 +64,9 @@ for each generation:
         if direct learning:
           phenotype += lr * (target - response) * stimulus
         agent.fitness += reward
-  recorder.log_generation(... includes alive_mean)
+  recorder.log_generation(... includes alive_mean, wall_ms_elapsed)
+  if budgets hit (τ / max_wall_ms / max_generations): stop; write meta.json
+  if drift due: flip season/hazard on Environment
   if genetic reproduction enabled:
     parents from genotype (Darwinian) or phenotype→genotype (Lamarckian)
     population = crossover_and_mutate(parents)

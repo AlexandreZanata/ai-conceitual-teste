@@ -13,6 +13,8 @@
     "build": "cmake -S . -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build --parallel",
     "test": "ctest --test-dir build --output-on-failure",
     "evogen": "./build/evogen",
+    "bench:smoke": "python3 scripts/run_survival_bench.py --bench TB-30 --technique R0 --technique C --seeds 2",
+    "bench:aggregate": "python3 scripts/aggregate_survival_bench.py --out-csv docs/results/survival-benchmark-summary.csv",
     "lint": "node --check web/app.js"
   },
   "devDependencies": {
