@@ -1,5 +1,7 @@
 #include "core/experiment_config.hpp"
 
+#include "core/technique.hpp"
+
 #include <fstream>
 #include <nlohmann/json.hpp>
 #include <stdexcept>
@@ -11,6 +13,9 @@ namespace {
 void apply_identity(ExperimentConfig& cfg, const nlohmann::json& j) {
   if (j.contains("name")) cfg.name = j.at("name").get<std::string>();
   if (j.contains("condition")) cfg.condition = j.at("condition").get<std::string>();
+  if (j.contains("technique")) {
+    cfg.technique = j.at("technique").get<std::string>();
+  }
   if (j.contains("environment")) {
     cfg.environment = j.at("environment").get<std::string>();
   }
@@ -105,6 +110,7 @@ ExperimentConfig parse_experiment_config(const nlohmann::json& j) {
   apply_sizes(cfg, j);
   apply_flags_and_rates(cfg, j);
   apply_arena(cfg, j);
+  apply_technique_defaults(cfg);
   validate_experiment_config(cfg);
   return cfg;
 }

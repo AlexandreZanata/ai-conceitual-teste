@@ -39,26 +39,23 @@
     meanData.push(msg.fitness_mean);
     maxData.push(msg.fitness_max);
     chart.update();
+    const tech = msg.technique ? ` [${msg.technique}]` : "";
     const alive =
       msg.alive_mean === undefined ? "" : ` alive=${msg.alive_mean.toFixed(2)}`;
     setStatus(
-      `gen ${msg.generation} mean=${msg.fitness_mean.toFixed(4)} max=${msg.fitness_max.toFixed(4)}${alive}`
+      `gen ${msg.generation}${tech} mean=${msg.fitness_mean.toFixed(4)} max=${msg.fitness_max.toFixed(4)}${alive}`
     );
   }
 
   function buildStartBody() {
-    const condition = document.getElementById("condition").value;
+    const technique = document.getElementById("technique").value;
     const environment = document.getElementById("environment").value;
-    const learning = condition === "A" ? 0.0 : 0.01;
     const body = {
-      condition,
+      technique,
       environment,
       population_size: 20,
       max_generations: Number(document.getElementById("gens").value),
       seed: Number(document.getElementById("seed").value),
-      inheritance_mode: "Darwinian",
-      initial_mutation_rate: condition === "B" ? 0.0 : 0.05,
-      initial_learning_rate: learning,
       genome_size: 8,
       generation_delay_ms: 40,
     };
@@ -101,9 +98,10 @@
   document.getElementById("start").onclick = async () => {
     try {
       resetChart();
-      const data = await post("/experiments", buildStartBody());
+      const body = buildStartBody();
+      const data = await post("/experiments", body);
       experimentId = data.experiment_id;
-      setStatus(`running ${experimentId}`);
+      setStatus(`running ${body.technique} ${experimentId}`);
     } catch (err) {
       setStatus(`error: ${err.message}`);
     }

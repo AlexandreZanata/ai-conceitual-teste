@@ -3,6 +3,7 @@
 #include "core/population.hpp"
 #include "core/recorder.hpp"
 #include "core/rng.hpp"
+#include "core/technique.hpp"
 #include "environments/env_factory.hpp"
 #include "server/run_web_server.hpp"
 
@@ -21,14 +22,15 @@ void print_help() {
   std::cout
       << "EvoGen " << EVOGEN_VERSION << " — evolutionary research CLI\n"
       << "Usage:\n"
-      << "  evogen --config <path> [--generations N] [--results DIR]\n"
+      << "  evogen --config <path> [--technique ID] [--generations N]\n"
+      << "  evogen --technique <R0|A|B|C|C-L|A+> [--generations N]\n"
       << "  evogen --serve [--port N] [--bind HOST] [--web-root DIR]\n"
-      << "  evogen --help\n"
-      << "  evogen --version\n";
+      << "  evogen --help | --version\n";
 }
 
 struct CliArgs {
   std::string config_path;
+  std::string technique;
   int generations{-1};
   std::string results_dir{"results"};
   bool help{false};
@@ -74,6 +76,8 @@ void apply_valued_option(const std::string& a, int& i, int argc, char** argv,
                          CliArgs& args) {
   if (a == "--config") {
     require_value(i, argc, argv, args.config_path, "--config");
+  } else if (a == "--technique") {
+    require_value(i, argc, argv, args.technique, "--technique");
   } else if (a == "--results") {
     require_value(i, argc, argv, args.results_dir, "--results");
   } else if (a == "--bind") {
@@ -108,10 +112,25 @@ CliArgs parse_args(int argc, char** argv) {
   return args;
 }
 
+void apply_cli_technique(evogen::ExperimentConfig& cfg,
+                         const std::string& technique) {
+  if (technique.empty()) {
+    return;
+  }
+  cfg.technique = technique;
+  evogen::apply_technique_defaults(cfg);
+  evogen::validate_experiment_config(cfg);
+}
+
 int run_from_config(const CliArgs& args) {
-  auto cfg = evogen::load_experiment_config(args.config_path);
+  std::string path = args.config_path;
+  if (path.empty() && !args.technique.empty()) {
+    path = "experiments/survival/" + args.technique + ".json";
+  }
+  auto cfg = evogen::load_experiment_config(path);
+  apply_cli_technique(cfg, args.technique);
   std::cout << "seed=" << cfg.seed << " condition=" << cfg.condition
-            << " name=" << cfg.name << '\n';
+            << " technique=" << cfg.technique << " name=" << cfg.name << '\n';
   evogen::Rng rng(cfg.seed);
   auto population = evogen::Population::create_random(cfg, rng);
   auto env = evogen::make_environment(cfg);
@@ -145,8 +164,8 @@ int main(int argc, char** argv) {
       serve.results_dir = args.results_dir;
       return evogen::run_web_server(serve, EVOGEN_VERSION);
     }
-    if (args.config_path.empty()) {
-      std::cerr << "error: --config or --serve is required\n";
+    if (args.config_path.empty() && args.technique.empty()) {
+      std::cerr << "error: --config or --technique is required\n";
       print_help();
       return 1;
     }

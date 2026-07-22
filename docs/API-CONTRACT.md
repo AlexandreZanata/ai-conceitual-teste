@@ -24,14 +24,11 @@ Conflict if another experiment is active → **409**.
 
 ```json
 {
-  "condition": "C",
+  "technique": "C",
   "environment": "survival_arena",
   "population_size": 20,
   "max_generations": 20,
   "seed": 42,
-  "inheritance_mode": "Darwinian",
-  "initial_mutation_rate": 0.05,
-  "initial_learning_rate": 0.01,
   "genome_size": 8,
   "grid_w": 16,
   "grid_h": 16,
@@ -44,8 +41,9 @@ Conflict if another experiment is active → **409**.
 }
 ```
 
+- `technique` (optional): `R0` | `A` | `B` | `C` | `C-L` | `A+` — applies flag matrix (see EXPERIMENTAL-DESIGN). Unknown ID → 400.
 - `environment`: `function_approx` (T1) or `survival_arena` (T2 Trait Forge Arena).
-- `condition` **A|B|C** applies enable-flag defaults (overridable by explicit `enable_*` fields).
+- `condition` **A|B|C** still accepted; when `technique` is set it overrides enable_* / inheritance / elite.
 - `generation_delay_ms` (optional, default `0`): sleep after each generation so UI/WS clients can observe pause/resume.
 - Arena knobs validated when `environment` is `survival_arena`.
 
@@ -74,11 +72,13 @@ Server pushes per-generation events (text JSON):
   "fitness_max": 0.88,
   "diversity_mean": 0.17,
   "learning_rate_mean": 0.009,
-  "alive_mean": 0.45
+  "alive_mean": 0.45,
+  "technique": "C"
 }
 ```
 
-`alive_mean` is the fraction of agents still alive at episode end (1.0 for non-interactive T1).
+`alive_mean` is the fraction of agents still alive at episode end (1.0 for non-interactive T1).  
+`technique` is the learning-technique ID when set (phase 07).
 
 **Update budget (UC-003):** a `generation` event MUST arrive within **1s** after the generation completes (local process; typically immediate).
 
@@ -90,6 +90,8 @@ Server pushes per-generation events (text JSON):
 
 ```bash
 ./build/evogen --serve [--port 8080] [--bind 127.0.0.1] [--web-root web] [--results DIR]
+./build/evogen --technique C --generations 5
+./build/evogen --config experiments/survival/R0.json --generations 5
 ```
 
 ## Non-goals (v1)

@@ -36,6 +36,13 @@
 
 ---
 
+## Experiment Technique
+
+**Definition:** Named learning regime for comparable runs: `R0`, `A`, `B`, `C`, `C-L`, `A+`. Maps to genetic/direct/inheritance/elite flags via `apply_technique_defaults`.  
+**Code name:** `technique` (ExperimentConfig field)
+
+---
+
 ## Trait Forge Arena
 
 **Definition:** T2 survival grid world: rules (bounds, drain, death) + variables (food/hazard density, ticks); species develops via selection/learning.  

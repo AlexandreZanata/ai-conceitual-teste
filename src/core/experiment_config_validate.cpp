@@ -1,5 +1,7 @@
 #include "core/experiment_config.hpp"
 
+#include "core/technique.hpp"
+
 #include <stdexcept>
 
 namespace evogen {
@@ -42,6 +44,9 @@ void validate_modes(const ExperimentConfig& cfg) {
       cfg.inheritance_mode != "Lamarckian") {
     throw std::invalid_argument(
         "inheritance_mode must be Darwinian or Lamarckian");
+  }
+  if (!cfg.technique.empty() && !is_known_technique(cfg.technique)) {
+    throw std::invalid_argument("unknown technique: " + cfg.technique);
   }
 }
 

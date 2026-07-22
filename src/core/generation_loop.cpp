@@ -80,6 +80,7 @@ GenerationMetrics step_generation(Population& population, Environment& env,
       compute_metrics(generation, cfg.seed, cfg.condition, population.agents());
   metrics.alive_mean =
       static_cast<float>(alive) / static_cast<float>(population.size());
+  metrics.technique = cfg.technique;
   population.evolve(cfg, rng);
   return metrics;
 }

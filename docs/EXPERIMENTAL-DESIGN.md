@@ -24,16 +24,20 @@ Reward: Δenergy this tick + 0.01 alive bonus while alive.
 Factory: `environment: "survival_arena"`. Smoke config: `experiments/config_survival_C_smoke.json`.  
 Metric: `alive_mean` = fraction of agents still alive at episode end.
 
-### Techniques (phase 07+)
+### Techniques (phase 07)
 
-| ID | Genetic | Direct | Notes |
-|----|---------|--------|-------|
-| R0 | No | No | Random floor |
-| A | Yes | No | Genetic only |
-| B | No | Yes | Direct only |
-| C | Yes | Yes | Full system (Darwinian) |
-| C-L | Yes | Yes | Lamarckian inheritance |
-| A+ | Yes | No | Stronger elitism |
+| ID | Genetic | Direct | Inheritance | Elite | Condition field |
+|----|---------|--------|-------------|-------|-----------------|
+| R0 | No | No | Darwinian | 1 | A |
+| A | Yes | No | Darwinian | 1 | A |
+| B | No | Yes | Darwinian | 1 | B |
+| C | Yes | Yes | Darwinian | 1 | C |
+| C-L | Yes | Yes | Lamarckian | 1 | C |
+| A+ | Yes | No | Darwinian | **5** | A |
+
+Runtime: JSON/`--technique` → `apply_technique_defaults` (overrides enable_* / inheritance / elite / rates).  
+Configs: `experiments/survival/{R0,A,B,C,C-L,A+}.json` (shared arena knobs).  
+A+ strong elitism trades diversity for exploitation (fewer unique lineages).
 
 ### Timed budgets (phase 08)
 
@@ -60,6 +64,7 @@ Configs under `experiments/`:
 - `config_B_only_direct.json` — direct only (`enable_genetic_reproduction: false`)
 - `config_C_full_system.json` — full system
 - `config_survival_C_smoke.json` — Trait Forge Arena (T2) condition C smoke
+- `experiments/survival/{R0,A,B,C,C-L,A+}.json` — technique matrix presets
 
 T1 knobs: `function_task` (`xor`|`sine`), `episode_length`, `inheritance_mode` (`Darwinian`|`Lamarckian`).
 

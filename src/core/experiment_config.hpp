@@ -10,6 +10,7 @@ namespace evogen {
 struct ExperimentConfig {
   std::string name;
   std::string condition{"A"};
+  std::string technique;
   std::string environment{"function_approx"};
   std::size_t population_size{50};
   int max_generations{100};

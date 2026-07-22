@@ -135,3 +135,42 @@ TEST_CASE("given_experiment_when_pause_resume_stop_then_ok", "[web][lifecycle]")
   REQUIRE(cli.Post("/experiments/" + id + "/stop", "", "application/json")
               ->status == 200);
 }
+
+// Contract: phase 07 — technique in POST/snapshot; R0 ≠ C flags
+TEST_CASE("given_technique_R0_and_C_when_start_then_snapshot_labels",
+          "[web][technique]") {
+  TestServer ts;
+  httplib::Client cli(ts.base());
+  const std::string r0 = R"({
+    "technique":"R0","environment":"survival_arena","population_size":6,
+    "genome_size":8,"max_generations":40,"seed":5,"generation_delay_ms":30,
+    "grid_w":8,"grid_h":8,"episode_ticks":8
+  })";
+  const auto started = cli.Post("/experiments", r0, "application/json");
+  REQUIRE(started);
+  REQUIRE(started->status == 201);
+  const std::string id =
+      nlohmann::json::parse(started->body).at("experiment_id").get<std::string>();
+  const auto snap = nlohmann::json::parse(cli.Get("/experiments/" + id)->body);
+  REQUIRE(snap.at("technique") == "R0");
+  REQUIRE(cli.Post("/experiments/" + id + "/stop", "", "application/json")
+              ->status == 200);
+
+  const std::string cbody = R"({
+    "technique":"C","environment":"survival_arena","population_size":6,
+    "genome_size":8,"max_generations":40,"seed":5,"generation_delay_ms":30,
+    "grid_w":8,"grid_h":8,"episode_ticks":8,"initial_learning_rate":0.01
+  })";
+  const auto started_c = cli.Post("/experiments", cbody, "application/json");
+  REQUIRE(started_c);
+  REQUIRE(started_c->status == 201);
+  const std::string id_c = nlohmann::json::parse(started_c->body)
+                               .at("experiment_id")
+                               .get<std::string>();
+  const auto snap_c =
+      nlohmann::json::parse(cli.Get("/experiments/" + id_c)->body);
+  REQUIRE(snap_c.at("technique") == "C");
+  REQUIRE(id != id_c);
+  REQUIRE(cli.Post("/experiments/" + id_c + "/stop", "", "application/json")
+              ->status == 200);
+}

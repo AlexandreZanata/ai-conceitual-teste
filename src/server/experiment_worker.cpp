@@ -21,7 +21,8 @@ nlohmann::json metrics_to_ws(const std::string& id,
           {"fitness_max", m.fitness_max},
           {"diversity_mean", m.diversity_mean},
           {"learning_rate_mean", m.learning_rate_mean},
-          {"alive_mean", m.alive_mean}};
+          {"alive_mean", m.alive_mean},
+          {"technique", m.technique}};
 }
 
 }  // namespace
