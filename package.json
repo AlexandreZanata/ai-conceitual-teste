@@ -15,6 +15,8 @@
     "evogen": "./build/evogen",
     "bench:smoke": "python3 scripts/run_survival_bench.py --bench TB-30 --technique R0 --technique C --seeds 2",
     "bench:aggregate": "python3 scripts/aggregate_survival_bench.py --out-csv docs/results/survival-benchmark-summary.csv",
+    "bench:curves": "python3 scripts/export_survival_curves.py",
+    "report:validate": "python3 scripts/validate_benchmark_report.py",
     "lint": "node --check web/app.js"
   },
   "devDependencies": {

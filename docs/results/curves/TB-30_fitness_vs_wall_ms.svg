@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="280" viewBox="0 0 640 280">
+<rect width="100%" height="100%" fill="#f7f5f1"/>
+<text x="48" y="24" font-family="Georgia, serif" font-size="14">TB-30 fitness vs wall_ms (seed_1)</text>
+<text x="320.0" y="272" text-anchor="middle" font-size="11" font-family="sans-serif">wall_ms_elapsed</text>
+<polyline fill="none" stroke="#1b1b1b" stroke-width="2" points="48.0,182.5 48.0,197.7 48.0,212.8 48.0,193.3 48.0,218.8 48.0,218.8 48.0,208.8 48.0,181.2 48.0,219.6 184.0,224.1 184.0,205.8 184.0,197.8 184.0,204.5 184.0,188.6 184.0,190.1 184.0,222.3 184.0,224.1 184.0,202.2 320.0,223.4 320.0,147.0 320.0,189.3 320.0,198.4 320.0,214.4 320.0,196.9 320.0,200.7 320.0,206.9 320.0,214.9 456.0,216.6 456.0,211.4 456.0,181.0 456.0,228.7 456.0,213.2 456.0,193.9 456.0,199.2 456.0,191.1 456.0,206.7 456.0,204.5 592.0,190.2 592.0,216.7 592.0,208.4"/>
+<text x="592" y="40" text-anchor="end" font-size="11" fill="#1b1b1b" font-family="sans-serif">R0</text>
+<polyline fill="none" stroke="#0b6e4f" stroke-width="2" points="48.0,182.5 48.0,141.7 48.0,140.9 48.0,48.0"/>
+<text x="592" y="56" text-anchor="end" font-size="11" fill="#0b6e4f" font-family="sans-serif">A</text>
+<polyline fill="none" stroke="#8b1e3f" stroke-width="2" points="48.0,201.9 48.0,211.3 48.0,215.8 48.0,212.9 48.0,214.3 48.0,223.4 48.0,222.6 48.0,212.6 48.0,213.5 184.0,221.9 184.0,212.0 184.0,221.9 184.0,219.6 184.0,226.4 184.0,224.1 184.0,228.7 184.0,230.9 184.0,219.6 320.0,226.4 320.0,175.0 320.0,211.3 320.0,232.0 320.0,230.9 320.0,221.9 320.0,209.0 320.0,218.8 320.0,219.6 320.0,230.9 456.0,226.4 456.0,187.8 456.0,224.1 456.0,218.8 456.0,208.2 456.0,221.1 456.0,221.9 456.0,228.7 456.0,228.7 456.0,222.0 592.0,224.1 592.0,226.4"/>
+<text x="592" y="72" text-anchor="end" font-size="11" fill="#8b1e3f" font-family="sans-serif">B</text>
+<polyline fill="none" stroke="#1d4e89" stroke-width="2" points="48.0,201.9 48.0,138.6 48.0,131.1 48.0,119.0"/>
+<text x="592" y="88" text-anchor="end" font-size="11" fill="#1d4e89" font-family="sans-serif">C</text>
+</svg>

@@ -54,7 +54,8 @@ Stop when **first** of: `fitness_mean ≥ τ`, `wall_ms ≥ max_wall_ms`, or `ge
 
 Configs: `experiments/survival/benches/{TB-30,TB-60,TB-120,TB-DRIFT}.json`.  
 Runner: `python3 scripts/run_survival_bench.py` → `results/survival/<bench>/<technique>/seed_<n>/{meta.json,metrics.jsonl}`.  
-Aggregate: `python3 scripts/aggregate_survival_bench.py` → `docs/results/survival-benchmark-summary.md` (+ optional CSV).
+Aggregate: `python3 scripts/aggregate_survival_bench.py` → `docs/results/survival-benchmark-summary.md` (+ optional CSV).  
+Curves / report: `python3 scripts/export_survival_curves.py`; narrative in `docs/results/BENCHMARK-REPORT.md`.
 
 Progress metrics: time-to-threshold, fitness@budget, learning-curve AUC, survival rate, recovery lag.
 

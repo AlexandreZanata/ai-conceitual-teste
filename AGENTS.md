@@ -47,9 +47,10 @@ npm run verify
 5. Survival game arena (phase 06) — done  
 6. Learning technique matrix (phase 07) — done  
 7. Timed learning benchmarks (phase 08) — done  
-8. Benchmark report (phase 09) — **next**
+8. Benchmark report (phase 09) — done  
 
-Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green while building the arena.
+**Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
+Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
 
 ---
 
