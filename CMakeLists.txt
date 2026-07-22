@@ -27,6 +27,7 @@ set(EVOGEN_CORE_SOURCES
   src/core/genome.cpp
   src/core/rng.cpp
   src/core/agent.cpp
+  src/core/direct_learning.cpp
   src/core/selection.cpp
   src/core/crossover.cpp
   src/core/mutation.cpp
@@ -52,6 +53,8 @@ add_executable(evogen_tests
   tests/test_agent.cpp
   tests/test_operators.cpp
   tests/test_config_loop.cpp
+  tests/test_direct_learning.cpp
+  tests/test_function_approx.cpp
 )
 target_link_libraries(evogen_tests PRIVATE evogen_core Catch2::Catch2WithMain)
 include(CTest)

@@ -36,6 +36,9 @@ void apply_sizes(ExperimentConfig& cfg, const nlohmann::json& j) {
   if (j.contains("elite_count")) {
     cfg.elite_count = j.at("elite_count").get<std::size_t>();
   }
+  if (j.contains("episode_length")) {
+    cfg.episode_length = j.at("episode_length").get<std::size_t>();
+  }
 }
 
 void apply_flags_and_rates(ExperimentConfig& cfg, const nlohmann::json& j) {
@@ -51,6 +54,41 @@ void apply_flags_and_rates(ExperimentConfig& cfg, const nlohmann::json& j) {
   }
   if (j.contains("initial_learning_rate")) {
     cfg.initial_learning_rate = j.at("initial_learning_rate").get<float>();
+  }
+  if (j.contains("function_task")) {
+    cfg.function_task = j.at("function_task").get<std::string>();
+  }
+}
+
+void validate_sizes(const ExperimentConfig& cfg) {
+  if (cfg.population_size == 0) {
+    throw std::invalid_argument("population_size must be > 0");
+  }
+  if (cfg.genome_size == 0) {
+    throw std::invalid_argument("genome_size must be > 0");
+  }
+  if (cfg.max_generations < 0) {
+    throw std::invalid_argument("max_generations must be >= 0");
+  }
+  if (cfg.episode_length == 0) {
+    throw std::invalid_argument("episode_length must be > 0");
+  }
+}
+
+void validate_modes_and_rates(const ExperimentConfig& cfg) {
+  if (cfg.function_task != "xor" && cfg.function_task != "sine") {
+    throw std::invalid_argument("function_task must be xor or sine");
+  }
+  if (cfg.inheritance_mode != "Darwinian" &&
+      cfg.inheritance_mode != "Lamarckian") {
+    throw std::invalid_argument(
+        "inheritance_mode must be Darwinian or Lamarckian");
+  }
+  if (cfg.initial_mutation_rate < 0.0f || cfg.initial_mutation_rate > 1.0f) {
+    throw std::invalid_argument("initial_mutation_rate must be in [0, 1]");
+  }
+  if (cfg.initial_learning_rate < 0.0f || cfg.initial_learning_rate > 1.0f) {
+    throw std::invalid_argument("initial_learning_rate must be in [0, 1]");
   }
 }
 
@@ -72,21 +110,8 @@ ExperimentConfig load_experiment_config(const std::string& path) {
 }
 
 void validate_experiment_config(const ExperimentConfig& cfg) {
-  if (cfg.population_size == 0) {
-    throw std::invalid_argument("population_size must be > 0");
-  }
-  if (cfg.genome_size == 0) {
-    throw std::invalid_argument("genome_size must be > 0");
-  }
-  if (cfg.max_generations < 0) {
-    throw std::invalid_argument("max_generations must be >= 0");
-  }
-  if (cfg.initial_mutation_rate < 0.0f || cfg.initial_mutation_rate > 1.0f) {
-    throw std::invalid_argument("initial_mutation_rate must be in [0, 1]");
-  }
-  if (cfg.initial_learning_rate < 0.0f || cfg.initial_learning_rate > 1.0f) {
-    throw std::invalid_argument("initial_learning_rate must be in [0, 1]");
-  }
+  validate_sizes(cfg);
+  validate_modes_and_rates(cfg);
 }
 
 }  // namespace evogen

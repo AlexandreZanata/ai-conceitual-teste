@@ -15,13 +15,13 @@ TEST_CASE("agent fitness accumulates rewards", "[agent]") {
   REQUIRE(agent.fitness() == 0.0f);
 }
 
-TEST_CASE("linear respond and stub environment evaluate", "[agent][env]") {
+TEST_CASE("linear respond and xor environment evaluate", "[agent][env]") {
   evogen::Genome g;
-  g.weights = {1.0f, 1.0f, 0.0f, 0.0f};
+  g.weights = {1.0f, 1.0f};
   evogen::Agent agent(g);
-  evogen::FunctionApproxEnv env;
+  evogen::FunctionApproxEnv env("xor", 4);
   const auto episode = env.episode();
-  REQUIRE_FALSE(episode.empty());
+  REQUIRE(episode.size() == 4);
   float total = 0.0f;
   for (const auto& stim : episode) {
     const float y = agent.respond(stim);

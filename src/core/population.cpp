@@ -4,6 +4,8 @@
 #include "core/mutation.hpp"
 #include "core/selection.hpp"
 
+#include "core/agent.hpp"
+
 #include <algorithm>
 #include <numeric>
 #include <stdexcept>
@@ -31,6 +33,7 @@ void Population::evolve(const ExperimentConfig& cfg, Rng& rng) {
   if (!cfg.enable_genetic_reproduction) {
     return;
   }
+  const bool lamarckian = is_lamarckian(cfg.inheritance_mode);
   const std::size_t n = agents_.size();
   std::vector<std::size_t> order(n);
   std::iota(order.begin(), order.end(), 0);
@@ -42,14 +45,14 @@ void Population::evolve(const ExperimentConfig& cfg, Rng& rng) {
   next.reserve(n);
   const std::size_t elites = std::min(cfg.elite_count, n);
   for (std::size_t i = 0; i < elites; ++i) {
-    next.push_back(agents_[order[i]]);
-    next.back().reset_fitness();
+    next.emplace_back(agents_[order[i]].reproduction_genome(lamarckian));
   }
   while (next.size() < n) {
     const auto p1 = tournament_pick(agents_, cfg.tournament_k, rng);
     const auto p2 = tournament_pick(agents_, cfg.tournament_k, rng);
-    Genome child =
-        uniform_crossover(agents_[p1].genome(), agents_[p2].genome(), rng);
+    Genome child = uniform_crossover(
+        agents_[p1].reproduction_genome(lamarckian),
+        agents_[p2].reproduction_genome(lamarckian), rng);
     mutate_genome(child, rng);
     next.emplace_back(std::move(child));
   }

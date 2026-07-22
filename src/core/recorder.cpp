@@ -19,8 +19,8 @@ float mean_pairwise_distance(const std::vector<Agent>& agents) {
   std::size_t pairs = 0;
   for (std::size_t i = 0; i < agents.size(); ++i) {
     for (std::size_t j = i + 1; j < agents.size(); ++j) {
-      const auto& a = agents[i].genome().weights;
-      const auto& b = agents[j].genome().weights;
+      const auto& a = agents[i].genotype().weights;
+      const auto& b = agents[j].genotype().weights;
       double d = 0.0;
       for (std::size_t k = 0; k < a.size(); ++k) {
         const double diff = static_cast<double>(a[k] - b[k]);
@@ -49,8 +49,8 @@ GenerationMetrics compute_metrics(int generation, std::uint64_t seed,
   for (const Agent& a : agents) {
     fit_sum += a.fitness();
     fit_max = std::max(fit_max, a.fitness());
-    lr_sum += a.genome().learning_rate;
-    mut_sum += a.genome().mutation_rate;
+    lr_sum += a.genotype().learning_rate;
+    mut_sum += a.genotype().mutation_rate;
   }
   const float n = static_cast<float>(agents.size());
   m.fitness_mean = fit_sum / n;

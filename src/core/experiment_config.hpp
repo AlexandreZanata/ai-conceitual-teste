@@ -20,6 +20,8 @@ struct ExperimentConfig {
   std::size_t genome_size{16};
   std::size_t tournament_k{3};
   std::size_t elite_count{1};
+  std::string function_task{"xor"};
+  std::size_t episode_length{16};
 };
 
 ExperimentConfig load_experiment_config(const std::string& path);

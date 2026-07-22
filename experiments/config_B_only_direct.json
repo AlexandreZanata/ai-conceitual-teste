@@ -2,6 +2,8 @@
   "name": "B_only_direct",
   "condition": "B",
   "environment": "function_approx",
+  "function_task": "xor",
+  "episode_length": 4,
   "population_size": 50,
   "max_generations": 100,
   "seed": 42,

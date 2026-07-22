@@ -16,7 +16,8 @@ npm run verify
 ./build/evogen --config experiments/config_A_only_genetic.json --generations 1
 ```
 
-Phase 03 core CLI is available. DirectLearner + full T1: `.local/phases/04-direct-learner-function-approx/`.
+Phase 03–04 core CLI is available (DirectLearner + T1 XOR/sine, conditions A/B/C).  
+Web metrics: `.local/phases/05-embedded-web-metrics/`.
 
 ## Docs map
 

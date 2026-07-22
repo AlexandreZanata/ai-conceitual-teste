@@ -2,6 +2,8 @@
   "name": "A_only_genetic",
   "condition": "A",
   "environment": "function_approx",
+  "function_task": "xor",
+  "episode_length": 4,
   "population_size": 50,
   "max_generations": 100,
   "seed": 42,

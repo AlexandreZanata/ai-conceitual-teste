@@ -47,14 +47,18 @@ ExperimentController ← Application starts/pauses loop
 ```text
 for each generation:
   for each agent:
+    begin_lifetime() unless condition B continuing online
     for each stimulus in environment.episode():
-      response = agent.respond(stimulus)
+      response = agent.respond(stimulus)          # phenotype weights
+      target   = environment.target_of(stimulus)
       reward   = environment.evaluate(response, stimulus)
-      agent.direct_learn(...)     # optional by condition
+      if direct learning enabled:
+        phenotype += lr * (target - response) * stimulus
       agent.fitness += reward
   recorder.log_generation(...)
-  parents = selection.select(population)
-  population = crossover_and_mutate(parents)   # skipped in condition B
+  if genetic reproduction enabled:
+    parents from genotype (Darwinian) or phenotype→genotype (Lamarckian)
+    population = crossover_and_mutate(parents)
 ```
 
 ## Size and complexity (mandatory)

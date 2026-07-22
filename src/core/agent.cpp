@@ -5,22 +5,33 @@
 
 namespace evogen {
 
-Agent::Agent(Genome genome) : genome_(std::move(genome)) {
-  clamp_genome_rates(genome_);
+Agent::Agent(Genome genotype) : genotype_(std::move(genotype)) {
+  clamp_genome_rates(genotype_);
+  begin_lifetime();
 }
+
+void Agent::begin_lifetime() { phenotype_ = genotype_.weights; }
 
 void Agent::reset_fitness() { fitness_ = 0.0f; }
 
 void Agent::add_reward(float reward) { fitness_ += reward; }
 
 float Agent::respond(const std::vector<float>& stimulus) const {
-  const auto& weights = genome_.weights;
-  const std::size_t n = std::min(weights.size(), stimulus.size());
+  const std::size_t n = std::min(phenotype_.size(), stimulus.size());
   float sum = 0.0f;
   for (std::size_t i = 0; i < n; ++i) {
-    sum += weights[i] * stimulus[i];
+    sum += phenotype_[i] * stimulus[i];
   }
   return sum;
+}
+
+Genome Agent::reproduction_genome(bool lamarckian) const {
+  Genome out = genotype_;
+  if (lamarckian) {
+    out.weights = phenotype_;
+  }
+  clamp_genome_rates(out);
+  return out;
 }
 
 }  // namespace evogen

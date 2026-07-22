@@ -10,7 +10,7 @@
 | T2 | 2D grid navigation to a target | Selection + online adaptation inside episode |
 | T3 | Incremental classifier with concept drift | Dynamic environment stress test |
 
-**First implementation:** T1 only (phases 03–04).
+**First implementation:** T1 (XOR + sine) — implemented in phase 04.
 
 ## Conditions
 
@@ -20,11 +20,15 @@
 | **B** | No (no reproduction between gens) | Yes | Control |
 | **C** | Yes | Yes | Full system |
 
-Configs (to be added under `experiments/`):
+Configs under `experiments/`:
 
-- `config_A_only_genetic.json`
-- `config_B_only_direct.json`
-- `config_C_full_system.json`
+- `config_A_only_genetic.json` — genetic only (`enable_direct_learning: false`)
+- `config_B_only_direct.json` — direct only (`enable_genetic_reproduction: false`)
+- `config_C_full_system.json` — full system
+
+T1 knobs: `function_task` (`xor`|`sine`), `episode_length`, `inheritance_mode` (`Darwinian`|`Lamarckian`).
+
+Reward: `-(response - target)^2`.
 
 ## Success metrics
 

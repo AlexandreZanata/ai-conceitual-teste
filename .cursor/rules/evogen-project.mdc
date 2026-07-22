@@ -6,8 +6,8 @@ alwaysApply: true
 # EvoGen project rules
 
 - Product docs: `docs/plano-conceitual-evogen.md` (intent) + English `docs/ARCHITECTURE.md` / `GLOSSARY.md`.
-- Delivery order: phases 03–04 (C++ core + DirectLearner) **before** any HTTP/UI (05+).
+- Delivery order: phases 03–04 (C++ core + DirectLearner) done; HTTP/UI starts at phase 05+.
 - Domain terms only from `docs/GLOSSARY.md` — never call evolutionary individuals “coding agents”.
-- Experiment semantics from `docs/EXPERIMENTAL-DESIGN.md` (conditions A/B/C).
+- Experiment semantics from `docs/EXPERIMENTAL-DESIGN.md` (conditions A/B/C; T1 XOR/sine).
 - Caps: ≤80 lines/function, ≤200 lines/file, cyclomatic ≤10; run `npm run verify`.
 - Implementation checklists live in `.local/phases/*/TASKS.md` (gitignored).

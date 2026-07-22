@@ -15,7 +15,7 @@
 
 ## Agent
 
-**Definition:** Individual that holds a `Genome`, responds to stimuli, accumulates fitness, and may apply direct learning during its lifetime.  
+**Definition:** Individual that holds a heritable `Genome` (genotype) plus phenotype weights adapted by direct learning during its lifetime; accumulates fitness.  
 **Not the same as:** Coding agent (LLM). In this repo, “agent” in domain code always means an evolutionary individual.  
 **Code name:** `Agent`
 

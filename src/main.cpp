@@ -82,7 +82,7 @@ int run_from_config(const CliArgs& args) {
             << " name=" << cfg.name << '\n';
   evogen::Rng rng(cfg.seed);
   auto population = evogen::Population::create_random(cfg, rng);
-  evogen::FunctionApproxEnv env;
+  evogen::FunctionApproxEnv env(cfg.function_task, cfg.episode_length);
   evogen::Recorder recorder(args.results_dir);
   const auto result =
       evogen::run_generations(population, env, cfg, recorder, args.generations);
