@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EvoGen metrics</title>
+  <title>EvoGen — Trait Forge Arena</title>
   <style>
     :root {
       --bg: #0f1419;
@@ -41,8 +41,12 @@
 </head>
 <body>
   <h1>EvoGen</h1>
-  <p>Live fitness stream (UC-003). Chart.js MIT — see THIRD_PARTY_NOTICES.md.</p>
+  <p>Trait Forge Arena — live fitness + survival (UC-003). Chart.js MIT — see THIRD_PARTY_NOTICES.md.</p>
   <div class="row">
+    <select id="environment">
+      <option value="survival_arena" selected>survival arena</option>
+      <option value="function_approx">function approx</option>
+    </select>
     <select id="condition">
       <option value="A">A genetic</option>
       <option value="B">B direct</option>

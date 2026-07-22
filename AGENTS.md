@@ -44,8 +44,8 @@ npm run verify
 2. Core evolutionary CLI (phase 03) — done  
 3. DirectLearner + function approx (phase 04) — done  
 4. Embedded web metrics (phase 05) — done  
-5. Survival game arena (phase 06) — **next**  
-6. Learning technique matrix (phase 07)  
+5. Survival game arena (phase 06) — done  
+6. Learning technique matrix (phase 07) — **next**  
 7. Timed learning benchmarks (phase 08)  
 8. Benchmark report (phase 09)
 

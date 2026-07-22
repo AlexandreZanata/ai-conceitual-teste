@@ -10,14 +10,19 @@
 | T2 | **Trait Forge Arena** (survival grid) | Visible selection pressure; species must develop under rules/variables (phase 06+) |
 | T3 | Arena season / hazard drift | Dynamic stress; recovery lag under timed benches |
 
-**First implementation:** T1 done. **Next product focus:** T2 survival game + timed technique benchmarks (see `.local/SURVIVAL-GAME-PLAN.md`).
+**First implementation:** T1 done. **T2 SurvivalArenaEnv** implemented (phase 06). Timed technique benches remain phase 08.
 
-### T2 rules vs variables (sketch)
+### T2 rules vs variables
 
 | Rules (fixed) | Variables (config) |
 |---------------|--------------------|
-| Bounds, collision, death at energy ≤ 0 | `grid_*`, `food_density`, `energy_drain`, `hazard_rate`, `start_energy`, `episode_ticks` |
-| Food raises energy; drain per tick | Season length / flip point (T3 / TB-DRIFT) |
+| Bounds (wall = no move); death at energy ≤ 0 | `grid_w`, `grid_h` (default **16×16**) |
+| Per-tick `energy_drain`; food +0.35; hazard −0.4 | `food_density`, `energy_drain`, `hazard_rate`, `start_energy`, `episode_ticks` |
+| Discrete **5-way** actions from scalar response bins (N/E/S/W/stay) | Season stub in stimulus (flip in T3 / TB-DRIFT) |
+
+Reward: Δenergy this tick + 0.01 alive bonus while alive.  
+Factory: `environment: "survival_arena"`. Smoke config: `experiments/config_survival_C_smoke.json`.  
+Metric: `alive_mean` = fraction of agents still alive at episode end.
 
 ### Techniques (phase 07+)
 
@@ -54,6 +59,7 @@ Configs under `experiments/`:
 - `config_A_only_genetic.json` — genetic only (`enable_direct_learning: false`)
 - `config_B_only_direct.json` — direct only (`enable_genetic_reproduction: false`)
 - `config_C_full_system.json` — full system
+- `config_survival_C_smoke.json` — Trait Forge Arena (T2) condition C smoke
 
 T1 knobs: `function_task` (`xor`|`sine`), `episode_length`, `inheritance_mode` (`Darwinian`|`Lamarckian`).
 

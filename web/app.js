@@ -39,9 +39,43 @@
     meanData.push(msg.fitness_mean);
     maxData.push(msg.fitness_max);
     chart.update();
+    const alive =
+      msg.alive_mean === undefined ? "" : ` alive=${msg.alive_mean.toFixed(2)}`;
     setStatus(
-      `gen ${msg.generation} mean=${msg.fitness_mean.toFixed(4)} max=${msg.fitness_max.toFixed(4)}`
+      `gen ${msg.generation} mean=${msg.fitness_mean.toFixed(4)} max=${msg.fitness_max.toFixed(4)}${alive}`
     );
+  }
+
+  function buildStartBody() {
+    const condition = document.getElementById("condition").value;
+    const environment = document.getElementById("environment").value;
+    const learning = condition === "A" ? 0.0 : 0.01;
+    const body = {
+      condition,
+      environment,
+      population_size: 20,
+      max_generations: Number(document.getElementById("gens").value),
+      seed: Number(document.getElementById("seed").value),
+      inheritance_mode: "Darwinian",
+      initial_mutation_rate: condition === "B" ? 0.0 : 0.05,
+      initial_learning_rate: learning,
+      genome_size: 8,
+      generation_delay_ms: 40,
+    };
+    if (environment === "survival_arena") {
+      Object.assign(body, {
+        grid_w: 16,
+        grid_h: 16,
+        food_density: 0.08,
+        energy_drain: 0.05,
+        hazard_rate: 0.02,
+        start_energy: 1.0,
+        episode_ticks: 32,
+      });
+    } else {
+      Object.assign(body, { function_task: "xor", episode_length: 4 });
+    }
+    return body;
   }
 
   const wsProto = location.protocol === "https:" ? "wss" : "ws";
@@ -67,22 +101,7 @@
   document.getElementById("start").onclick = async () => {
     try {
       resetChart();
-      const condition = document.getElementById("condition").value;
-      const learning = condition === "A" ? 0.0 : 0.01;
-      const data = await post("/experiments", {
-        condition,
-        environment: "function_approx",
-        function_task: "xor",
-        episode_length: 4,
-        population_size: 20,
-        max_generations: Number(document.getElementById("gens").value),
-        seed: Number(document.getElementById("seed").value),
-        inheritance_mode: "Darwinian",
-        initial_mutation_rate: condition === "B" ? 0.0 : 0.05,
-        initial_learning_rate: learning,
-        genome_size: 8,
-        generation_delay_ms: 40,
-      });
+      const data = await post("/experiments", buildStartBody());
       experimentId = data.experiment_id;
       setStatus(`running ${experimentId}`);
     } catch (err) {

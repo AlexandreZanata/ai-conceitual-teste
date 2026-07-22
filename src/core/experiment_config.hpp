@@ -25,6 +25,13 @@ struct ExperimentConfig {
   std::string function_task{"xor"};
   std::size_t episode_length{16};
   int generation_delay_ms{0};
+  std::size_t grid_w{16};
+  std::size_t grid_h{16};
+  float food_density{0.08f};
+  float energy_drain{0.05f};
+  float hazard_rate{0.03f};
+  float start_energy{1.0f};
+  std::size_t episode_ticks{32};
 };
 
 ExperimentConfig load_experiment_config(const std::string& path);

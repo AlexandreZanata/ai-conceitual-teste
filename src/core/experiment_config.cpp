@@ -63,44 +63,23 @@ void apply_flags_and_rates(ExperimentConfig& cfg, const nlohmann::json& j) {
   }
 }
 
-void validate_sizes(const ExperimentConfig& cfg) {
-  if (cfg.population_size == 0) {
-    throw std::invalid_argument("population_size must be > 0");
+void apply_arena(ExperimentConfig& cfg, const nlohmann::json& j) {
+  if (j.contains("grid_w")) cfg.grid_w = j.at("grid_w").get<std::size_t>();
+  if (j.contains("grid_h")) cfg.grid_h = j.at("grid_h").get<std::size_t>();
+  if (j.contains("food_density")) {
+    cfg.food_density = j.at("food_density").get<float>();
   }
-  if (cfg.genome_size == 0) {
-    throw std::invalid_argument("genome_size must be > 0");
+  if (j.contains("energy_drain")) {
+    cfg.energy_drain = j.at("energy_drain").get<float>();
   }
-  if (cfg.max_generations < 0) {
-    throw std::invalid_argument("max_generations must be >= 0");
+  if (j.contains("hazard_rate")) {
+    cfg.hazard_rate = j.at("hazard_rate").get<float>();
   }
-  if (cfg.episode_length == 0) {
-    throw std::invalid_argument("episode_length must be > 0");
+  if (j.contains("start_energy")) {
+    cfg.start_energy = j.at("start_energy").get<float>();
   }
-}
-
-void validate_modes(const ExperimentConfig& cfg) {
-  if (cfg.condition != "A" && cfg.condition != "B" && cfg.condition != "C") {
-    throw std::invalid_argument("condition must be A, B, or C");
-  }
-  if (cfg.function_task != "xor" && cfg.function_task != "sine") {
-    throw std::invalid_argument("function_task must be xor or sine");
-  }
-  if (cfg.inheritance_mode != "Darwinian" &&
-      cfg.inheritance_mode != "Lamarckian") {
-    throw std::invalid_argument(
-        "inheritance_mode must be Darwinian or Lamarckian");
-  }
-}
-
-void validate_rates(const ExperimentConfig& cfg) {
-  if (cfg.initial_mutation_rate < 0.0f || cfg.initial_mutation_rate > 1.0f) {
-    throw std::invalid_argument("initial_mutation_rate must be in [0, 1]");
-  }
-  if (cfg.initial_learning_rate < 0.0f || cfg.initial_learning_rate > 1.0f) {
-    throw std::invalid_argument("initial_learning_rate must be in [0, 1]");
-  }
-  if (cfg.generation_delay_ms < 0) {
-    throw std::invalid_argument("generation_delay_ms must be >= 0");
+  if (j.contains("episode_ticks")) {
+    cfg.episode_ticks = j.at("episode_ticks").get<std::size_t>();
   }
 }
 
@@ -125,6 +104,7 @@ ExperimentConfig parse_experiment_config(const nlohmann::json& j) {
   apply_condition_defaults(cfg);
   apply_sizes(cfg, j);
   apply_flags_and_rates(cfg, j);
+  apply_arena(cfg, j);
   validate_experiment_config(cfg);
   return cfg;
 }
@@ -137,12 +117,6 @@ ExperimentConfig load_experiment_config(const std::string& path) {
   nlohmann::json j;
   in >> j;
   return parse_experiment_config(j);
-}
-
-void validate_experiment_config(const ExperimentConfig& cfg) {
-  validate_sizes(cfg);
-  validate_modes(cfg);
-  validate_rates(cfg);
 }
 
 }  // namespace evogen

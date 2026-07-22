@@ -3,7 +3,7 @@
 #include "core/population.hpp"
 #include "core/recorder.hpp"
 #include "core/rng.hpp"
-#include "environments/function_approx_env.hpp"
+#include "environments/env_factory.hpp"
 #include "server/run_web_server.hpp"
 
 #include <cstdlib>
@@ -114,10 +114,10 @@ int run_from_config(const CliArgs& args) {
             << " name=" << cfg.name << '\n';
   evogen::Rng rng(cfg.seed);
   auto population = evogen::Population::create_random(cfg, rng);
-  evogen::FunctionApproxEnv env(cfg.function_task, cfg.episode_length);
+  auto env = evogen::make_environment(cfg);
   evogen::Recorder recorder(args.results_dir);
   const auto result =
-      evogen::run_generations(population, env, cfg, recorder, args.generations);
+      evogen::run_generations(population, *env, cfg, recorder, args.generations);
   std::cout << "done generations_run=" << result.generations_run
             << " fitness_mean=" << result.last.fitness_mean
             << " fitness_max=" << result.last.fitness_max << '\n';

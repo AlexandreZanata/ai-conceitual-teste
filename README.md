@@ -16,8 +16,8 @@ npm run verify
 ./build/evogen --config experiments/config_A_only_genetic.json --generations 1
 ```
 
-Phase 03–05 done (CLI + DirectLearner + embedded web).  
-**Next:** survival game + timed technique benchmarks — `.local/SURVIVAL-GAME-PLAN.md` / phase 06.
+Phase 03–06 done (CLI + DirectLearner + web + **Trait Forge Arena**).  
+**Next:** learning technique matrix — `.local/phases/07-learning-techniques/`.
 ## Docs map
 
 | Doc | Purpose |
@@ -37,6 +37,7 @@ Phase 03–05 done (CLI + DirectLearner + embedded web).
 - `experiments/config_A_only_genetic.json`
 - `experiments/config_B_only_direct.json`
 - `experiments/config_C_full_system.json`
+- `experiments/config_survival_C_smoke.json` — Trait Forge Arena (T2)
 
 ## Quality gates
 

@@ -3,7 +3,7 @@
 #include "core/generation_loop.hpp"
 #include "core/population.hpp"
 #include "core/rng.hpp"
-#include "environments/function_approx_env.hpp"
+#include "environments/env_factory.hpp"
 
 #include <chrono>
 #include <thread>
@@ -20,7 +20,8 @@ nlohmann::json metrics_to_ws(const std::string& id,
           {"fitness_mean", m.fitness_mean},
           {"fitness_max", m.fitness_max},
           {"diversity_mean", m.diversity_mean},
-          {"learning_rate_mean", m.learning_rate_mean}};
+          {"learning_rate_mean", m.learning_rate_mean},
+          {"alive_mean", m.alive_mean}};
 }
 
 }  // namespace
@@ -28,7 +29,7 @@ nlohmann::json metrics_to_ws(const std::string& id,
 void ExperimentController::run_worker(ExperimentConfig cfg, std::string id) {
   Rng rng(cfg.seed);
   auto population = Population::create_random(cfg, rng);
-  FunctionApproxEnv env(cfg.function_task, cfg.episode_length);
+  auto env = make_environment(cfg);
   Recorder recorder(results_dir_);
   for (int gen = 0; gen < cfg.max_generations; ++gen) {
     {
@@ -40,7 +41,7 @@ void ExperimentController::run_worker(ExperimentConfig cfg, std::string id) {
       }
     }
     const GenerationMetrics metrics =
-        step_generation(population, env, cfg, rng, gen);
+        step_generation(population, *env, cfg, rng, gen);
     recorder.log_generation(metrics);
     hub_.publish(metrics_to_ws(id, metrics).dump());
     {

@@ -18,6 +18,7 @@ struct GenerationMetrics {
   float diversity_mean{0.0f};
   float learning_rate_mean{0.0f};
   float mutation_rate_mean{0.0f};
+  float alive_mean{1.0f};
 };
 
 GenerationMetrics compute_metrics(int generation, std::uint64_t seed,

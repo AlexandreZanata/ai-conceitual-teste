@@ -48,14 +48,23 @@ ExperimentController ← Application starts/pauses loop
 for each generation:
   for each agent:
     begin_lifetime() unless condition B continuing online
-    for each stimulus in environment.episode():
-      response = agent.respond(stimulus)          # phenotype weights
-      target   = environment.target_of(stimulus)
-      reward   = environment.evaluate(response, stimulus)
-      if direct learning enabled:
-        phenotype += lr * (target - response) * stimulus
-      agent.fitness += reward
-  recorder.log_generation(...)
+    if env.interactive():          # T2 SurvivalArenaEnv
+      reset_episode(seed)
+      while not done:
+        stimulus = observe()
+        response = agent.respond(stimulus)
+        reward   = step(response)   # move/eat/hazard; may end episode
+        if direct learning: phenotype += lr * (target - response) * stimulus
+        agent.fitness += reward
+    else:                          # T1 function approx
+      for each stimulus in environment.episode():
+        response = agent.respond(stimulus)
+        target   = environment.target_of(stimulus)
+        reward   = environment.evaluate(response, stimulus)
+        if direct learning:
+          phenotype += lr * (target - response) * stimulus
+        agent.fitness += reward
+  recorder.log_generation(... includes alive_mean)
   if genetic reproduction enabled:
     parents from genotype (Darwinian) or phenotype→genotype (Lamarckian)
     population = crossover_and_mutate(parents)

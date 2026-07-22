@@ -141,6 +141,7 @@ nlohmann::json ExperimentController::snapshot(const std::string& id) const {
           {"fitness_max", latest_.fitness_max},
           {"diversity_mean", latest_.diversity_mean},
           {"learning_rate_mean", latest_.learning_rate_mean},
+          {"alive_mean", latest_.alive_mean},
           {"condition", config_.condition},
           {"seed", config_.seed}};
 }

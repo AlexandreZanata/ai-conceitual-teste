@@ -74,7 +74,8 @@ void Recorder::log_generation(const GenerationMetrics& metrics) const {
                       {"fitness_max", metrics.fitness_max},
                       {"diversity_mean", metrics.diversity_mean},
                       {"learning_rate_mean", metrics.learning_rate_mean},
-                      {"mutation_rate_mean", metrics.mutation_rate_mean}};
+                      {"mutation_rate_mean", metrics.mutation_rate_mean},
+                      {"alive_mean", metrics.alive_mean}};
   const auto path =
       std::filesystem::path(results_dir_) / "metrics.jsonl";
   std::ofstream out(path, std::ios::app);

@@ -30,9 +30,16 @@
 
 ## Environment
 
-**Definition:** Task that emits stimuli and returns rewards / evaluation for agent responses.  
+**Definition:** Task that emits stimuli and returns rewards / evaluation for agent responses. May be batch (T1 function approx) or interactive (T2 Trait Forge Arena).  
 **Not the same as:** Host OS environment variables.  
 **Code name:** `Environment`
+
+---
+
+## Trait Forge Arena
+
+**Definition:** T2 survival grid world: rules (bounds, drain, death) + variables (food/hazard density, ticks); species develops via selection/learning.  
+**Code name:** `SurvivalArenaEnv`
 
 ---
 
