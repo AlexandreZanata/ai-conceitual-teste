@@ -17,7 +17,7 @@ npm run verify
 ```
 
 Phase 03–04 core CLI is available (DirectLearner + T1 XOR/sine, conditions A/B/C).  
-Web metrics: `.local/phases/05-embedded-web-metrics/`.
+Phase 05 embedded web metrics: `./build/evogen --serve` → `http://127.0.0.1:8080/`.
 
 ## Docs map
 
@@ -28,7 +28,7 @@ Web metrics: `.local/phases/05-embedded-web-metrics/`.
 | [docs/GLOSSARY.md](docs/GLOSSARY.md) | Ubiquitous language |
 | [docs/EXPERIMENTAL-DESIGN.md](docs/EXPERIMENTAL-DESIGN.md) | A/B/C protocol + metrics |
 | [docs/RESEARCH-QUESTIONS.md](docs/RESEARCH-QUESTIONS.md) | Open RQs |
-| [docs/API-CONTRACT.md](docs/API-CONTRACT.md) | REST/WS sketch |
+| [docs/API-CONTRACT.md](docs/API-CONTRACT.md) | REST/WS contract (phase 05) |
 | [docs/TECH-STACK.md](docs/TECH-STACK.md) | C++ / web choices |
 | [docs/QUALITY-GATES.md](docs/QUALITY-GATES.md) | Lefthook caps |
 | [docs/NEW-PROJECT-CHECKLIST.md](docs/NEW-PROJECT-CHECKLIST.md) | Pre-code gate |

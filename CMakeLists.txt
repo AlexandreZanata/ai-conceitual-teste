@@ -21,7 +21,15 @@ FetchContent_Declare(
   GIT_TAG v3.5.4
   GIT_SHALLOW TRUE
 )
-FetchContent_MakeAvailable(json Catch2)
+FetchContent_Declare(
+  httplib
+  GIT_REPOSITORY https://github.com/yhirose/cpp-httplib.git
+  GIT_TAG v0.50.1
+  GIT_SHALLOW TRUE
+)
+FetchContent_MakeAvailable(json Catch2 httplib)
+
+find_package(Threads REQUIRED)
 
 set(EVOGEN_CORE_SOURCES
   src/core/genome.cpp
@@ -38,13 +46,28 @@ set(EVOGEN_CORE_SOURCES
   src/environments/function_approx_env.cpp
 )
 
+set(EVOGEN_SERVER_SOURCES
+  src/server/metrics_hub.cpp
+  src/server/experiment_controller.cpp
+  src/server/experiment_worker.cpp
+  src/server/web_server.cpp
+  src/server/run_web_server.cpp
+)
+
 add_library(evogen_core ${EVOGEN_CORE_SOURCES})
 target_include_directories(evogen_core PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
 target_link_libraries(evogen_core PUBLIC nlohmann_json::nlohmann_json)
 
+add_library(evogen_server ${EVOGEN_SERVER_SOURCES})
+target_include_directories(evogen_server PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/src")
+target_link_libraries(evogen_server PUBLIC evogen_core httplib::httplib Threads::Threads)
+
 add_executable(evogen src/main.cpp)
-target_link_libraries(evogen PRIVATE evogen_core)
-target_compile_definitions(evogen PRIVATE EVOGEN_VERSION="${PROJECT_VERSION}")
+target_link_libraries(evogen PRIVATE evogen_server)
+target_compile_definitions(evogen PRIVATE
+  EVOGEN_VERSION="${PROJECT_VERSION}"
+  EVOGEN_DEFAULT_WEB_ROOT="${CMAKE_SOURCE_DIR}/web"
+)
 
 list(APPEND CMAKE_MODULE_PATH ${catch2_SOURCE_DIR}/extras)
 enable_testing()
@@ -55,8 +78,13 @@ add_executable(evogen_tests
   tests/test_config_loop.cpp
   tests/test_direct_learning.cpp
   tests/test_function_approx.cpp
+  tests/test_experiment_controller.cpp
+  tests/test_web_server.cpp
 )
-target_link_libraries(evogen_tests PRIVATE evogen_core Catch2::Catch2WithMain)
+target_link_libraries(evogen_tests PRIVATE evogen_server Catch2::Catch2WithMain)
+target_compile_definitions(evogen_tests PRIVATE
+  EVOGEN_TEST_WEB_ROOT="${CMAKE_SOURCE_DIR}/web"
+)
 include(CTest)
 include(Catch)
 catch_discover_tests(evogen_tests

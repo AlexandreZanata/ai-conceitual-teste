@@ -3,6 +3,8 @@
 #include <cstdint>
 #include <string>
 
+#include <nlohmann/json.hpp>
+
 namespace evogen {
 
 struct ExperimentConfig {
@@ -22,9 +24,12 @@ struct ExperimentConfig {
   std::size_t elite_count{1};
   std::string function_task{"xor"};
   std::size_t episode_length{16};
+  int generation_delay_ms{0};
 };
 
 ExperimentConfig load_experiment_config(const std::string& path);
+ExperimentConfig parse_experiment_config(const nlohmann::json& j);
+void apply_condition_defaults(ExperimentConfig& cfg);
 void validate_experiment_config(const ExperimentConfig& cfg);
 
 }  // namespace evogen

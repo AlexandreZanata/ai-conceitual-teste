@@ -58,6 +58,9 @@ void apply_flags_and_rates(ExperimentConfig& cfg, const nlohmann::json& j) {
   if (j.contains("function_task")) {
     cfg.function_task = j.at("function_task").get<std::string>();
   }
+  if (j.contains("generation_delay_ms")) {
+    cfg.generation_delay_ms = j.at("generation_delay_ms").get<int>();
+  }
 }
 
 void validate_sizes(const ExperimentConfig& cfg) {
@@ -75,7 +78,10 @@ void validate_sizes(const ExperimentConfig& cfg) {
   }
 }
 
-void validate_modes_and_rates(const ExperimentConfig& cfg) {
+void validate_modes(const ExperimentConfig& cfg) {
+  if (cfg.condition != "A" && cfg.condition != "B" && cfg.condition != "C") {
+    throw std::invalid_argument("condition must be A, B, or C");
+  }
   if (cfg.function_task != "xor" && cfg.function_task != "sine") {
     throw std::invalid_argument("function_task must be xor or sine");
   }
@@ -84,15 +90,44 @@ void validate_modes_and_rates(const ExperimentConfig& cfg) {
     throw std::invalid_argument(
         "inheritance_mode must be Darwinian or Lamarckian");
   }
+}
+
+void validate_rates(const ExperimentConfig& cfg) {
   if (cfg.initial_mutation_rate < 0.0f || cfg.initial_mutation_rate > 1.0f) {
     throw std::invalid_argument("initial_mutation_rate must be in [0, 1]");
   }
   if (cfg.initial_learning_rate < 0.0f || cfg.initial_learning_rate > 1.0f) {
     throw std::invalid_argument("initial_learning_rate must be in [0, 1]");
   }
+  if (cfg.generation_delay_ms < 0) {
+    throw std::invalid_argument("generation_delay_ms must be >= 0");
+  }
 }
 
 }  // namespace
+
+void apply_condition_defaults(ExperimentConfig& cfg) {
+  if (cfg.condition == "A") {
+    cfg.enable_direct_learning = false;
+    cfg.enable_genetic_reproduction = true;
+  } else if (cfg.condition == "B") {
+    cfg.enable_direct_learning = true;
+    cfg.enable_genetic_reproduction = false;
+  } else if (cfg.condition == "C") {
+    cfg.enable_direct_learning = true;
+    cfg.enable_genetic_reproduction = true;
+  }
+}
+
+ExperimentConfig parse_experiment_config(const nlohmann::json& j) {
+  ExperimentConfig cfg;
+  apply_identity(cfg, j);
+  apply_condition_defaults(cfg);
+  apply_sizes(cfg, j);
+  apply_flags_and_rates(cfg, j);
+  validate_experiment_config(cfg);
+  return cfg;
+}
 
 ExperimentConfig load_experiment_config(const std::string& path) {
   std::ifstream in(path);
@@ -101,17 +136,13 @@ ExperimentConfig load_experiment_config(const std::string& path) {
   }
   nlohmann::json j;
   in >> j;
-  ExperimentConfig cfg;
-  apply_identity(cfg, j);
-  apply_sizes(cfg, j);
-  apply_flags_and_rates(cfg, j);
-  validate_experiment_config(cfg);
-  return cfg;
+  return parse_experiment_config(j);
 }
 
 void validate_experiment_config(const ExperimentConfig& cfg) {
   validate_sizes(cfg);
-  validate_modes_and_rates(cfg);
+  validate_modes(cfg);
+  validate_rates(cfg);
 }
 
 }  // namespace evogen

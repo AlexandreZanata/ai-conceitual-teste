@@ -1,7 +1,6 @@
 #include "core/generation_loop.hpp"
 
 #include "core/direct_learning.hpp"
-#include "core/rng.hpp"
 
 #include <iostream>
 
@@ -30,6 +29,21 @@ void evaluate_agent(Agent& agent, Environment& env, bool enable_direct,
 
 }  // namespace
 
+GenerationMetrics step_generation(Population& population, Environment& env,
+                                  const ExperimentConfig& cfg, Rng& rng,
+                                  int generation) {
+  // Condition B: keep phenotype across generations (online learning only).
+  const bool reset_phenotype =
+      cfg.enable_genetic_reproduction || generation == 0;
+  for (Agent& agent : population.agents()) {
+    evaluate_agent(agent, env, cfg.enable_direct_learning, reset_phenotype);
+  }
+  GenerationMetrics metrics =
+      compute_metrics(generation, cfg.seed, cfg.condition, population.agents());
+  population.evolve(cfg, rng);
+  return metrics;
+}
+
 RunResult run_generations(Population& population, Environment& env,
                           const ExperimentConfig& cfg, Recorder& recorder,
                           int generations) {
@@ -37,21 +51,13 @@ RunResult run_generations(Population& population, Environment& env,
   RunResult result;
   const int n = generations < 0 ? cfg.max_generations : generations;
   for (int gen = 0; gen < n; ++gen) {
-    // Condition B: keep phenotype across generations (online learning only).
-    const bool reset_phenotype =
-        cfg.enable_genetic_reproduction || gen == 0;
-    for (Agent& agent : population.agents()) {
-      evaluate_agent(agent, env, cfg.enable_direct_learning, reset_phenotype);
-    }
-    result.last =
-        compute_metrics(gen, cfg.seed, cfg.condition, population.agents());
+    result.last = step_generation(population, env, cfg, rng, gen);
     recorder.log_generation(result.last);
     std::cout << "generation=" << result.last.generation
               << " fitness_mean=" << result.last.fitness_mean
               << " fitness_max=" << result.last.fitness_max
               << " learning_rate_mean=" << result.last.learning_rate_mean
               << '\n';
-    population.evolve(cfg, rng);
     result.generations_run = gen + 1;
   }
   return result;

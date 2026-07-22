@@ -1,0 +1,109 @@
+(() => {
+  const statusEl = document.getElementById("status");
+  const labels = [];
+  const meanData = [];
+  const maxData = [];
+  let experimentId = null;
+
+  const chart = new Chart(document.getElementById("chart"), {
+    type: "line",
+    data: {
+      labels,
+      datasets: [
+        { label: "fitness_mean", data: meanData, borderColor: "#3d9a7a", tension: 0.15 },
+        { label: "fitness_max", data: maxData, borderColor: "#c4a35a", tension: 0.15 },
+      ],
+    },
+    options: {
+      animation: false,
+      scales: {
+        x: { title: { display: true, text: "generation" } },
+        y: { title: { display: true, text: "fitness" } },
+      },
+    },
+  });
+
+  function setStatus(text) {
+    statusEl.textContent = text;
+  }
+
+  function resetChart() {
+    labels.length = 0;
+    meanData.length = 0;
+    maxData.length = 0;
+    chart.update();
+  }
+
+  function onGeneration(msg) {
+    labels.push(String(msg.generation));
+    meanData.push(msg.fitness_mean);
+    maxData.push(msg.fitness_max);
+    chart.update();
+    setStatus(
+      `gen ${msg.generation} mean=${msg.fitness_mean.toFixed(4)} max=${msg.fitness_max.toFixed(4)}`
+    );
+  }
+
+  const wsProto = location.protocol === "https:" ? "wss" : "ws";
+  const ws = new WebSocket(`${wsProto}://${location.host}/ws/metrics`);
+  ws.onmessage = (ev) => {
+    const msg = JSON.parse(ev.data);
+    if (msg.type === "generation") onGeneration(msg);
+  };
+  ws.onopen = () => setStatus("ws connected — idle");
+  ws.onclose = () => setStatus("ws disconnected");
+
+  async function post(path, body) {
+    const res = await fetch(path, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: body ? JSON.stringify(body) : undefined,
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error?.message || res.statusText);
+    return data;
+  }
+
+  document.getElementById("start").onclick = async () => {
+    try {
+      resetChart();
+      const condition = document.getElementById("condition").value;
+      const learning = condition === "A" ? 0.0 : 0.01;
+      const data = await post("/experiments", {
+        condition,
+        environment: "function_approx",
+        function_task: "xor",
+        episode_length: 4,
+        population_size: 20,
+        max_generations: Number(document.getElementById("gens").value),
+        seed: Number(document.getElementById("seed").value),
+        inheritance_mode: "Darwinian",
+        initial_mutation_rate: condition === "B" ? 0.0 : 0.05,
+        initial_learning_rate: learning,
+        genome_size: 8,
+        generation_delay_ms: 40,
+      });
+      experimentId = data.experiment_id;
+      setStatus(`running ${experimentId}`);
+    } catch (err) {
+      setStatus(`error: ${err.message}`);
+    }
+  };
+
+  async function lifecycle(action) {
+    if (!experimentId) {
+      setStatus("no experiment");
+      return;
+    }
+    try {
+      const data = await post(`/experiments/${experimentId}/${action}`);
+      setStatus(`${data.status} ${experimentId}`);
+    } catch (err) {
+      setStatus(`error: ${err.message}`);
+    }
+  }
+
+  document.getElementById("pause").onclick = () => lifecycle("pause");
+  document.getElementById("resume").onclick = () => lifecycle("resume");
+  document.getElementById("stop").onclick = () => lifecycle("stop");
+})();

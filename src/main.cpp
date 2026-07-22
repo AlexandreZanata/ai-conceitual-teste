@@ -4,11 +4,16 @@
 #include "core/recorder.hpp"
 #include "core/rng.hpp"
 #include "environments/function_approx_env.hpp"
+#include "server/run_web_server.hpp"
 
 #include <cstdlib>
 #include <iostream>
 #include <stdexcept>
 #include <string>
+
+#ifndef EVOGEN_DEFAULT_WEB_ROOT
+#define EVOGEN_DEFAULT_WEB_ROOT "web"
+#endif
 
 namespace {
 
@@ -17,6 +22,7 @@ void print_help() {
       << "EvoGen " << EVOGEN_VERSION << " — evolutionary research CLI\n"
       << "Usage:\n"
       << "  evogen --config <path> [--generations N] [--results DIR]\n"
+      << "  evogen --serve [--port N] [--bind HOST] [--web-root DIR]\n"
       << "  evogen --help\n"
       << "  evogen --version\n";
 }
@@ -27,6 +33,10 @@ struct CliArgs {
   std::string results_dir{"results"};
   bool help{false};
   bool version{false};
+  bool serve{false};
+  int port{8080};
+  std::string bind_host{"127.0.0.1"};
+  std::string web_root{EVOGEN_DEFAULT_WEB_ROOT};
 };
 
 bool take_value(int& i, int argc, char** argv, std::string& out) {
@@ -37,11 +47,47 @@ bool take_value(int& i, int argc, char** argv, std::string& out) {
   return true;
 }
 
-void apply_flag(const std::string& a, CliArgs& args) {
+bool apply_flag(const std::string& a, CliArgs& args) {
   if (a == "--help" || a == "-h") {
     args.help = true;
-  } else if (a == "--version") {
+    return true;
+  }
+  if (a == "--version") {
     args.version = true;
+    return true;
+  }
+  if (a == "--serve") {
+    args.serve = true;
+    return true;
+  }
+  return false;
+}
+
+void require_value(int& i, int argc, char** argv, std::string& out,
+                   const char* flag) {
+  if (!take_value(i, argc, argv, out)) {
+    throw std::runtime_error(std::string(flag) + " needs a value");
+  }
+}
+
+void apply_valued_option(const std::string& a, int& i, int argc, char** argv,
+                         CliArgs& args) {
+  if (a == "--config") {
+    require_value(i, argc, argv, args.config_path, "--config");
+  } else if (a == "--results") {
+    require_value(i, argc, argv, args.results_dir, "--results");
+  } else if (a == "--bind") {
+    require_value(i, argc, argv, args.bind_host, "--bind");
+  } else if (a == "--web-root") {
+    require_value(i, argc, argv, args.web_root, "--web-root");
+  } else if (a == "--generations") {
+    std::string raw;
+    require_value(i, argc, argv, raw, "--generations");
+    args.generations = std::stoi(raw);
+  } else if (a == "--port") {
+    std::string raw;
+    require_value(i, argc, argv, raw, "--port");
+    args.port = std::stoi(raw);
   } else {
     throw std::runtime_error("unknown argument: " + a);
   }
@@ -49,22 +95,8 @@ void apply_flag(const std::string& a, CliArgs& args) {
 
 void apply_option(const std::string& a, int& i, int argc, char** argv,
                   CliArgs& args) {
-  if (a == "--config") {
-    if (!take_value(i, argc, argv, args.config_path)) {
-      throw std::runtime_error("--config needs a path");
-    }
-  } else if (a == "--generations") {
-    std::string raw;
-    if (!take_value(i, argc, argv, raw)) {
-      throw std::runtime_error("--generations needs an int");
-    }
-    args.generations = std::stoi(raw);
-  } else if (a == "--results") {
-    if (!take_value(i, argc, argv, args.results_dir)) {
-      throw std::runtime_error("--results needs a directory");
-    }
-  } else {
-    apply_flag(a, args);
+  if (!apply_flag(a, args)) {
+    apply_valued_option(a, i, argc, argv, args);
   }
 }
 
@@ -105,8 +137,16 @@ int main(int argc, char** argv) {
       std::cout << EVOGEN_VERSION << '\n';
       return 0;
     }
+    if (args.serve) {
+      evogen::ServeArgs serve;
+      serve.bind_host = args.bind_host;
+      serve.port = args.port;
+      serve.web_root = args.web_root;
+      serve.results_dir = args.results_dir;
+      return evogen::run_web_server(serve, EVOGEN_VERSION);
+    }
     if (args.config_path.empty()) {
-      std::cerr << "error: --config is required\n";
+      std::cerr << "error: --config or --serve is required\n";
       print_help();
       return 1;
     }

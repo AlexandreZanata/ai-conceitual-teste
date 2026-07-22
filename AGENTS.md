@@ -43,8 +43,8 @@ npm run verify
 1. Docs / checklist (phase 02) — done  
 2. Core evolutionary CLI (phase 03) — done  
 3. DirectLearner + function approx (phase 04) — done  
-4. Embedded web metrics (phase 05) — **next**  
-5. Full dashboard (phase 06)  
+4. Embedded web metrics (phase 05) — done  
+5. Full dashboard (phase 06) — **next**  
 6. Extra environments (phase 07)  
 7. Formal A/B/C runs (phase 08)  
 8. Scientific write-up (phase 09)

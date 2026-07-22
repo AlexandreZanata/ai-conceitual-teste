@@ -12,7 +12,8 @@
     "hooks:install": "lefthook install",
     "build": "cmake -S . -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build --parallel",
     "test": "ctest --test-dir build --output-on-failure",
-    "evogen": "./build/evogen"
+    "evogen": "./build/evogen",
+    "lint": "node --check web/app.js"
   },
   "devDependencies": {
     "lefthook": "2.1.6"

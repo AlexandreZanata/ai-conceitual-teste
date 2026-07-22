@@ -17,7 +17,7 @@ Core language: **C++17/20**. One process: evolutionary engine + embedded HTTP/We
 | Layer | Responsibility | Location |
 |-------|----------------|----------|
 | **Interfaces** | REST/WebSocket JSON, static `web/` assets | `src/server/`, `web/` |
-| **Application** | Experiment control (start/pause/config), recording, A/B/C modes | `src/server/`, experiment configs |
+| **Application** | Experiment control (start/pause/config), recording, A/B/C modes | `src/server/` (`ExperimentController`, `MetricsHub`) |
 | **Domain** | `Genome`, `Agent`, `Population`, selection, mutation, `DirectLearner`, `Environment` contracts | `src/core/`, `src/environments/` |
 | **Infrastructure** | RNG, JSON I/O, optional SQLite/JSON persistence, threading | thin adapters next to core |
 
