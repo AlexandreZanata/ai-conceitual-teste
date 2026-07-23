@@ -60,7 +60,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-TAX | Wealth tax: scale elite weights ×(1−τ) | ≤ H-SEL — **smoke KILL/hold** |
 | H-CAN | Winner copies loser LayerNorm stats | No gain / NaN — **smoke KILL/hold** (tie) |
 | H-PAR | Parasite vector steals selection credit | Parasite dominates / no host gain — **smoke KILL** |
-| H-SYM | Obligate pair: both must beat mean to breed | ≤ H-SEL — **smoke PROMOTE** (beats H-SEL; tentative) |
+| H-SYM | Obligate pair: both must beat mean to breed | ≤ H-SEL — **smoke PROMOTE**; **formal KILL** (≤ B2) |
 | H-FOS | Fossil vault: resurrect extinct lineage every K gens | ≤ no-resurrect — **smoke KILL/hold** (tie vs H-SEL) |
 | H-ZOM | Zombie: reinject dead weights with sign-flipped noise | Diverges / ≤ H-SEL — **smoke KILL/hold** |
 | H-LOTU | Underdog lottery: worst gets one free elite clone | ≤ H-SEL — **smoke KILL/hold** |
@@ -158,7 +158,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 23 | H-TAX wealth tax vs H-SEL (smoke KILL/hold) |
 | 24 | H-CAN LN cannibalism vs H-SEL (smoke KILL/hold — tie) |
 | 25 | H-PAR parasite genome vs H-SEL (smoke KILL — dominates) |
-| 26 | H-SYM obligate pair vs H-SEL (smoke PROMOTE tentative) |
+| 26 | H-SYM obligate pair vs H-SEL (smoke PROMOTE; **formal KILL** — Δ−1.66 vs B2) |
 | 27 | H-FOS fossil vault vs H-SEL (smoke KILL/hold — tie) |
 | 28 | H-ZOM zombie reinject vs H-SEL (smoke KILL/hold) |
 | 29 | H-LOTU underdog lottery vs H-SEL (smoke KILL/hold) |
@@ -176,6 +176,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 41 | Formal H-HOLD vs B2 (KILL — overfit + reverse smoke Δ−1.84) |
 | 42 | Formal H-XOV vs B2 (KILL — reverse smoke Δ−1.65; no collapse) |
 | 43 | Formal H-FIT vs B2 (KILL — overfit + reverse smoke Δ−1.84) |
+| 44 | Formal H-SYM vs B2 (KILL — reverse smoke Δ−1.66) |
 
 ## Success
 

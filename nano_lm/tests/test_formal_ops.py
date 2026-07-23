@@ -102,3 +102,25 @@ def test_given_worse_hfit_when_formal_then_reverse():
     assert decide_formal_vs_b2("H-FIT", stats) == (
         "KILL / reverse smoke (H-FIT ≤ B2)"
     )
+
+
+def test_given_better_hsym_when_formal_then_promote():
+    stats = {
+        "B2": {"lp": -15.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-SYM": {
+            "lp": -14.5, "wall": 90.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0
+        },
+    }
+    assert decide_formal_vs_b2("H-SYM", stats) == "PROMOTE confirmed (H-SYM > B2)"
+
+
+def test_given_worse_hsym_when_formal_then_reverse():
+    stats = {
+        "B2": {"lp": -14.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-SYM": {
+            "lp": -16.0, "wall": 90.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0
+        },
+    }
+    assert decide_formal_vs_b2("H-SYM", stats) == (
+        "KILL / reverse smoke (H-SYM ≤ B2)"
+    )

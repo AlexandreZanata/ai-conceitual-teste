@@ -66,7 +66,7 @@ H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).
 | H-TAX | -17.0837 | +0.0080 | 55 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-CAN | -17.0080 | +0.0838 | 60 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-PAR | -17.6378 | -0.5461 | 54 | — | 3 | KILL (parasite dominates) |
-| H-SYM | -16.8181 | +0.2737 | 72 | — | 3 | PROMOTE (beats H-SEL) |
+| H-SYM | -16.8181 | +0.2737 | 72 | — | 3 | PROMOTE smoke; formal KILL vs B2 |
 | H-FOS | -17.0080 | +0.0838 | 61 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-ZOM | -17.4219 | -0.3301 | 52 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-LOTU | -17.2746 | -0.1828 | 54 | — | 3 | KILL / hold (≤ H-SEL) |
@@ -133,4 +133,5 @@ H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).
 - H-HOLD smoke PROMOTE was reversed on formal — see `formal-hhold-vs-b2.md`.
 - H-XOV smoke PROMOTE was reversed on formal — see `formal-hxov-vs-b2.md`.
 - H-FIT smoke PROMOTE was reversed on formal — see `formal-hfit-vs-b2.md`.
+- H-SYM smoke PROMOTE was reversed on formal — see `formal-hsym-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

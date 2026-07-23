@@ -71,7 +71,7 @@ npm run verify
 29. H-TAX wealth tax — done (smoke **KILL/hold** vs H-SEL)
 30. H-CAN LN cannibalism — done (smoke **KILL/hold** vs H-SEL; tie)
 31. H-PAR parasite genome — done (smoke **KILL** — parasite dominates)
-32. H-SYM obligate pair — done (smoke **PROMOTE** vs H-SEL; tentative)
+32. H-SYM obligate pair — done (smoke **PROMOTE**; **formal KILL** vs B2 Δ−1.66)
 33. H-FOS fossil vault — done (smoke **KILL/hold** vs H-SEL; tie)
 34. H-ZOM zombie reinject — done (smoke **KILL/hold** vs H-SEL)
 35. H-LOTU underdog lottery — done (smoke **KILL/hold** vs H-SEL)
@@ -89,6 +89,7 @@ npm run verify
 47. Formal H-HOLD vs B2 — done (**KILL** — overfit + reverse smoke; Δ−1.84)
 48. Formal H-XOV vs B2 — done (**KILL** — reverse smoke; Δ−1.65; no collapse)
 49. Formal H-FIT vs B2 — done (**KILL** — overfit + reverse smoke; Δ−1.84)
+50. Formal H-SYM vs B2 — done (**KILL** — reverse smoke; Δ−1.66)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
