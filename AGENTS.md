@@ -126,6 +126,7 @@ npm run verify
 84. H-CLIP logit-clipped KD — done (smoke **KILL** — ≤ B2 Δ−0.34)
 85. H-LS label-smoothed KD — done (smoke **KILL** — ≤ B2 Δ+0.00)
 86. H-NGRAM no-repeat n-gram decode — done (smoke **PROMOTE**; **formal PROMOTE** — dual vs B4)
+87. H-NGE evolve ngram gene — done (smoke **KILL** — quality drop vs H-NGRAM Δ−0.08)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
