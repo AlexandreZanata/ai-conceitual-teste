@@ -93,6 +93,9 @@ npm run verify
 51. Formal H-DEC vs B4 — done (**PROMOTE confirmed** — Δ+2.43; no overfit)
 52. Formal H-SHO vs B2 — done (**KILL** — reverse smoke; Δ−1.86)
 53. Formal H-LAM vs H-BAL — done (**KILL** — reverse smoke; Δ−0.12; also ≤ B2)
+54. H-LAT latency-aware decode vs B4 — done (smoke **KILL** — lp↑, no wall win)
+55. H-DECK proxy+top-k decode — done (smoke **PROMOTE**; **formal PROMOTE** vs B4 Δ+2.53)
+56. H-DECK2 top_k ablation — done (smoke **KILL**; **formal PROMOTE** — best k=1 Δ+0.25 vs k=2)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

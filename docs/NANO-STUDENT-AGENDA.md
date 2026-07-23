@@ -76,6 +76,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE**; **formal PROMOTE** vs B4 |
 | H-LAT | Latency-aware gene fitness `lp − λ·log1p(wall)` | No wall win vs B4 — **smoke KILL** (lp↑, slower) |
 | H-DECK | Student proxy ranks genes; teacher rescores top-k | < H-DEC−ε or no save — **smoke PROMOTE**; **formal PROMOTE** vs B4 |
+| H-DECK2 | Sweep `top_k`∈{1,2,3} equal pop×gens | Best k ≤ H-DECK (k=2) — **smoke KILL**; **formal PROMOTE** (best k=1) |
 
 ### B — Inference as learning
 
@@ -184,6 +185,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 47 | Formal H-LAM vs H-BAL (KILL — reverse smoke Δ−0.12; also ≤ B2) |
 | 48 | H-LAT latency-aware decode vs B4 (**smoke KILL** — no speedup) |
 | 49 | H-DECK proxy+top-k decode vs B4 (**smoke PROMOTE**; **formal PROMOTE** Δ+2.53) |
+| 50 | H-DECK2 top_k∈{1,2,3} ablation (**smoke KILL**; **formal PROMOTE** — best k=1 Δ+0.25 vs k=2) |
 
 ## Success
 
