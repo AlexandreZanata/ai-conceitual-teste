@@ -54,6 +54,7 @@ npm run verify
 12. H-BAL Baldwin lifetime GD — done (smoke **KILL/hold**, ≤ B2)
 13. H-DEC evolve decode knobs — done (smoke **PROMOTE** vs B4, tentative)
 14. H-LAM Lamarckian write-back — done (smoke **PROMOTE** vs H-BAL, tentative)
+15. H-ELI strong elitism — done (smoke **KILL/hold** vs H-SEL)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

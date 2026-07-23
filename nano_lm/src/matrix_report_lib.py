@@ -3,9 +3,18 @@
 from __future__ import annotations
 
 from collections import defaultdict
-from typing import Any
+from typing import Any, Callable
 
 EPS_LP = 0.05
+
+
+def _mean_optional(items: list[dict[str, Any]], key: str) -> float:
+    vals = [float(x[key]) for x in items if x.get(key) is not None]
+    return sum(vals) / len(vals) if vals else float("nan")
+
+
+def _flag_any(items: list[dict[str, Any]], key: str) -> float:
+    return 1.0 if any(bool(x.get(key)) for x in items) else 0.0
 
 
 def mean_by_family(rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
@@ -17,46 +26,14 @@ def mean_by_family(rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
 
 def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
     lps = [float(x["teacher_mean_logprob"]) for x in items]
-    walls = [
-        float(x["mean_wall_ms"])
-        for x in items
-        if x.get("mean_wall_ms") is not None
-    ]
-    speeds = [
-        float(x["mean_tokens_per_s"])
-        for x in items
-        if x.get("mean_tokens_per_s") is not None
-    ]
     return {
         "mean_lp": sum(lps) / len(lps),
-        "mean_wall": sum(walls) / len(walls) if walls else float("nan"),
-        "mean_tps": sum(speeds) / len(speeds) if speeds else float("nan"),
+        "mean_wall": _mean_optional(items, "mean_wall_ms"),
+        "mean_tps": _mean_optional(items, "mean_tokens_per_s"),
         "n": float(len(items)),
-        "unstable": 1.0 if any(bool(x.get("unstable")) for x in items) else 0.0,
+        "unstable": _flag_any(items, "unstable"),
+        "collapsed": _flag_any(items, "diversity_collapsed"),
     }
-
-
-def decision(fam: str, s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
-    b2 = stats.get("B2", {}).get("mean_lp")
-    if fam == "B2":
-        return "BASELINE (claim gate)"
-    if fam in {"B0", "B1"}:
-        return "control"
-    if fam == "B3":
-        return "decode control (AR)"
-    if fam == "B4":
-        return "decode control (BoN)"
-    if fam == "H-DEC":
-        return _decide_hdec(s, stats)
-    if fam == "H-LAM":
-        return _decide_hlam(s, stats)
-    if fam == "H-SPEC":
-        return _decide_hspec(s, stats)
-    if fam in {"H-SUP", "H-INT", "BoN-uniform"}:
-        return _decide_quantum(fam, s, stats)
-    if b2 is not None and s["mean_lp"] > b2 + 1e-6:
-        return "PROMOTE (beats B2)"
-    return "KILL / hold (≤ B2)"
 
 
 def _decide_hlam(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
@@ -68,6 +45,17 @@ def _decide_hlam(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
     if s["mean_lp"] > bal["mean_lp"] + 1e-6:
         return "PROMOTE (beats H-BAL)"
     return "KILL (≤ H-BAL)"
+
+
+def _decide_heli(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
+    if s.get("collapsed", 0.0) > 0.0:
+        return "KILL (diversity collapse)"
+    hsel = stats.get("H-SEL")
+    if hsel is None:
+        return "needs H-SEL control"
+    if s["mean_lp"] > hsel["mean_lp"] + 1e-6:
+        return "PROMOTE (beats H-SEL, diversity ok)"
+    return "KILL / hold (≤ H-SEL)"
 
 
 def _decide_hdec(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
@@ -103,3 +91,30 @@ def _decide_quantum(
     if s["mean_lp"] > bon + 1e-6:
         return "PROMOTE (vs uniform BoN)"
     return "KILL (≤ uniform BoN)"
+
+
+_SPECIAL: dict[str, Callable[..., str]] = {
+    "H-DEC": _decide_hdec,
+    "H-LAM": _decide_hlam,
+    "H-ELI": _decide_heli,
+    "H-SPEC": _decide_hspec,
+}
+
+
+def decision(fam: str, s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
+    if fam == "B2":
+        return "BASELINE (claim gate)"
+    if fam in {"B0", "B1"}:
+        return "control"
+    if fam == "B3":
+        return "decode control (AR)"
+    if fam == "B4":
+        return "decode control (BoN)"
+    if fam in _SPECIAL:
+        return _SPECIAL[fam](s, stats)
+    if fam in {"H-SUP", "H-INT", "BoN-uniform"}:
+        return _decide_quantum(fam, s, stats)
+    b2 = stats.get("B2", {}).get("mean_lp")
+    if b2 is not None and s["mean_lp"] > b2 + 1e-6:
+        return "PROMOTE (beats B2)"
+    return "KILL / hold (≤ B2)"

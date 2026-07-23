@@ -9,6 +9,7 @@ import torch
 
 from hyp_bal import run_h_bal
 from hyp_bon import run_h_bon
+from hyp_eli import run_h_eli
 from hyp_lam import run_h_lam
 from hyp_mae import run_h_mae
 from hyp_sel import run_h_sel
@@ -35,10 +36,36 @@ def run_hypotheses(c: dict[str, Any], device: torch.device, rows: list) -> None:
         )
         write_json(out / f"HSEL_seed{seed}_train.json", meta)
         rows.append(eval_ckpt(c, ckpt, seed, "H-SEL"))
+    _run_eli(c, device, rows)
     _run_bal(c, device, rows)
     _run_lam(c, device, rows)
     _run_bon(c, device, rows)
     _run_mae(c, device, rows)
+
+
+def _run_eli(c: dict[str, Any], device: torch.device, rows: list) -> None:
+    out: Path = c["out"]
+    elite_k = int(c.get("elite_k", 2))
+    for seed in c["seeds"]:
+        ckpt = out / f"HELI_seed{seed}.pt"
+        meta = run_h_eli(
+            tokenizer_id=c["tokenizer_id"],
+            cache_dir=c["cache"],
+            device=device,
+            pop_size=4,
+            generations=3,
+            elite_k=elite_k,
+            mutate_scale=0.02,
+            seq_len=c["seq_len"],
+            batch_size=c["batch_size"],
+            max_examples=c["max_examples"],
+            seed=seed,
+            out_path=ckpt,
+        )
+        write_json(out / f"HELI_seed{seed}_train.json", meta)
+        ev = eval_ckpt(c, ckpt, seed, "H-ELI")
+        ev["diversity_collapsed"] = bool(meta.get("diversity_collapsed"))
+        rows.append(ev)
 
 
 def _run_bal(c: dict[str, Any], device: torch.device, rows: list) -> None:

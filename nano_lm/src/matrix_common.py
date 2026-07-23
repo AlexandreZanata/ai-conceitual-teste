@@ -30,6 +30,7 @@ def matrix_cfg() -> dict[str, Any]:
         "draft_len": 4,
         "bon_n_eval": 4,
         "lifetime_steps": 2,
+        "elite_k": 2,
     }
 
 
