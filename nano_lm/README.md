@@ -65,6 +65,7 @@ npm run nano:anti            # H-ANTI anti-selection vs H-SEL
 npm run nano:tax             # H-TAX wealth tax vs H-SEL
 npm run nano:can             # H-CAN LN cannibalism vs H-SEL
 npm run nano:par             # H-PAR parasite genome vs H-SEL
+npm run nano:sym             # H-SYM obligate pair vs H-SEL
 npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
 npm run nano:formal:hsel:report
 ```
@@ -92,6 +93,7 @@ H-ANTI smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hanti-vs-hsel.md`
 H-TAX smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htax-vs-hsel.md`.
 H-CAN smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hcan-vs-hsel.md`.
 H-PAR smoke: KILL (parasite dominates) — see `docs/results/nano-lm/hpar-vs-hsel.md`.
+H-SYM smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hsym-vs-hsel.md`.
 
 ## Commands
 
