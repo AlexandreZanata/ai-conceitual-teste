@@ -18,7 +18,6 @@ Novelty = ultra-small student + TinyStories teacher + wild operators under one p
 
 ## System
 Frozen teacher → soft labels / scores → hypothesis operator → trainable student → eval (teacher NLL + speed).
-
 ## Baselines (claim gate)
 | ID | Name |
 |----|------|
