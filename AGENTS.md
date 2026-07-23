@@ -80,7 +80,7 @@ npm run verify
 38. H-RPS RPS niches — done (smoke **KILL** — niche collapse)
 39. H-CAT catastrophe — done (smoke **KILL/hold** vs H-SEL)
 40. H-HIB hibernation — done (smoke **KILL/hold** vs H-SEL)
-41. H-SHO layer shock — done (smoke **PROMOTE** vs H-SEL; tentative)
+41. H-SHO layer shock — done (smoke **PROMOTE**; **formal KILL** vs B2 Δ−1.86)
 42. H-HOLD holdout fitness — done (smoke **PROMOTE**; **formal KILL** — overfit + reverse)
 43. H-FXS FIT×XOV×SHO stack — done (smoke **KILL/hold** vs max(H-FIT,H-XOV))
 44. H-LOFI low-fidelity rescore — done (smoke **KILL** — wall save but quality < H-FIT)
@@ -91,6 +91,7 @@ npm run verify
 49. Formal H-FIT vs B2 — done (**KILL** — overfit + reverse smoke; Δ−1.84)
 50. Formal H-SYM vs B2 — done (**KILL** — reverse smoke; Δ−1.66)
 51. Formal H-DEC vs B4 — done (**PROMOTE confirmed** — Δ+2.43; no overfit)
+52. Formal H-SHO vs B2 — done (**KILL** — reverse smoke; Δ−1.86)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

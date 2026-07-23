@@ -75,7 +75,7 @@ H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).
 | H-RPS | -17.5223 | -0.4305 | 58 | — | 3 | KILL (collapsed to 1 niche) |
 | H-CAT | -17.5397 | -0.4479 | 57 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-HIB | -17.4219 | -0.3301 | 54 | — | 3 | KILL / hold (≤ H-SEL) |
-| H-SHO | -16.9601 | +0.1317 | 52 | — | 3 | PROMOTE (beats H-SEL) |
+| H-SHO | -16.9601 | +0.1317 | 52 | — | 3 | PROMOTE smoke; formal KILL vs B2 |
 | H-HOLD | -16.7060 | +0.3858 | 45 | — | 3 | PROMOTE (beats B2, holdout ok) |
 | H-FXS | -17.1325 | -0.0407 | 44 | — | 3 | KILL / hold (≤ max FIT/XOV) |
 | H-LOFI | -17.2565 | -0.1647 | 47 | — | 3 | KILL (worse quality than H-FIT) |
@@ -135,4 +135,5 @@ H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).
 - H-FIT smoke PROMOTE was reversed on formal — see `formal-hfit-vs-b2.md`.
 - H-SYM smoke PROMOTE was reversed on formal — see `formal-hsym-vs-b2.md`.
 - H-DEC smoke PROMOTE confirmed on formal — see `formal-hdec-vs-b4.md`.
+- H-SHO smoke PROMOTE was reversed on formal — see `formal-hsho-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

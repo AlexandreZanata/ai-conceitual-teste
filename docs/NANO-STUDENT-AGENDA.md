@@ -69,7 +69,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-RPS | RPS niches: cyclic dominance over 3 niches | Collapse to 1 niche — **smoke KILL** |
 | H-CAT | Catastrophe: wipe all but top-1 + immigrants | ≤ steady H-SEL — **smoke KILL/hold** |
 | H-HIB | Hibernation: skip eval; inherit parent fit × decay | Cheating / ≤ H-SEL — **smoke KILL/hold** |
-| H-SHO | Shock: reinit one random child layer after mutate | ≤ plain mutate — **smoke PROMOTE** (beats H-SEL; tentative) |
+| H-SHO | Shock: reinit one random child layer after mutate | ≤ plain mutate — **smoke PROMOTE**; **formal KILL** (≤ B2) |
 | H-HOLD | Select on fit prompts; eval on disjoint claim prompts | Overfit train≫eval or ≤ B2 — **smoke PROMOTE**; **formal KILL** (overfit + ≤ B2) |
 | H-FXS | H-FIT fitness + H-XOV crossover + H-SHO shock | ≤ max(H-FIT,H-XOV) — **smoke KILL/hold** |
 | H-LOFI | CE-rank pop; teacher_lp rescore top-k only | Quality < H-FIT or no wall save — **smoke KILL** (wall save; quality↓) |
@@ -167,7 +167,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 32 | H-RPS RPS niches vs H-SEL (smoke KILL — niche collapse) |
 | 33 | H-CAT catastrophe vs H-SEL (smoke KILL/hold) |
 | 34 | H-HIB hibernation vs H-SEL (smoke KILL/hold) |
-| 35 | H-SHO layer shock vs H-SEL (smoke PROMOTE tentative) |
+| 35 | H-SHO layer shock vs H-SEL (smoke PROMOTE; **formal KILL** — Δ−1.86 vs B2) |
 | 36 | H-HOLD holdout fitness vs B2 (smoke PROMOTE; **formal KILL** — overfit + Δ−1.84) |
 | 37 | H-FXS FIT×XOV×SHO stack vs max(FIT,XOV) (smoke KILL/hold) |
 | 38 | H-LOFI CE top-k + teacher rescore vs H-FIT (smoke KILL — quality↓) |
@@ -178,6 +178,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 43 | Formal H-FIT vs B2 (KILL — overfit + reverse smoke Δ−1.84) |
 | 44 | Formal H-SYM vs B2 (KILL — reverse smoke Δ−1.66) |
 | 45 | Formal H-DEC vs B4 (PROMOTE confirmed — Δ+2.43; no overfit) |
+| 46 | Formal H-SHO vs B2 (KILL — reverse smoke Δ−1.86) |
 
 ## Success
 

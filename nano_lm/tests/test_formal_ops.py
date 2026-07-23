@@ -162,3 +162,25 @@ def test_given_overfit_hdec_when_formal_then_kill():
         },
     }
     assert decide_formal_vs_control("H-DEC", "B4", stats) == "KILL (overfit; H-DEC)"
+
+
+def test_given_better_hsho_when_formal_then_promote():
+    stats = {
+        "B2": {"lp": -15.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-SHO": {
+            "lp": -14.5, "wall": 90.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0
+        },
+    }
+    assert decide_formal_vs_b2("H-SHO", stats) == "PROMOTE confirmed (H-SHO > B2)"
+
+
+def test_given_worse_hsho_when_formal_then_reverse():
+    stats = {
+        "B2": {"lp": -14.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-SHO": {
+            "lp": -16.0, "wall": 90.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0
+        },
+    }
+    assert decide_formal_vs_b2("H-SHO", stats) == (
+        "KILL / reverse smoke (H-SHO ≤ B2)"
+    )
