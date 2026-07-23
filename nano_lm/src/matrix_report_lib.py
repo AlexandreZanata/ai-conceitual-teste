@@ -36,6 +36,7 @@ def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
         "collapsed": max(
             _flag_any(items, "diversity_collapsed"),
             _flag_any(items, "heads_collapsed"),
+            _flag_any(items, "niche_collapsed"),
         ),
         "nan": _flag_any(items, "had_nan"),
         "parasite_dominates": _flag_any(items, "parasite_dominates"),
@@ -89,6 +90,14 @@ def _decide_hgld(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
     if s["mean_lp"] > c["mean_lp"] + 1e-6:
         return "PROMOTE (beats max-lp / H-FIT)"
     return "KILL / hold (≤ max-lp fitness)"
+
+
+def _decide_hrps(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
+    if s.get("collapsed", 0.0) > 0.0:
+        return "KILL (collapsed to 1 niche)"
+    return _decide_hfit(s, stats)
+
+
 def _decide_hnic(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     rate = s.get("div_up_rate", float("nan"))
     if rate == rate and rate < 1.0 - 1e-9:
@@ -156,6 +165,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-PAR": _decide_hpar,
     "H-GLD": _decide_hgld,
     "H-SEA": _decide_hgld,
+    "H-RPS": _decide_hrps,
     "H-ENT": _decide_hent,
     "H-ANN": _decide_hann,
     "H-SPEC": _decide_hspec,

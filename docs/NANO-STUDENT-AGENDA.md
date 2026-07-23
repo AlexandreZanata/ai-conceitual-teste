@@ -66,6 +66,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-LOTU | Underdog lottery: worst gets one free elite clone | ≤ H-SEL — **smoke KILL/hold** |
 | H-GLD | Goldilocks: reward mid teacher_lp band | ≤ max-lp fitness — **smoke KILL/hold** (tie vs H-FIT) |
 | H-SEA | Seasons: odd gens CE, even gens teacher_lp | ≤ fixed H-FIT — **smoke KILL/hold** |
+| H-RPS | RPS niches: cyclic dominance over 3 niches | Collapse to 1 niche — **smoke KILL** |
 | H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE** (beats B4; tentative) |
 
 ### B — Inference as learning
@@ -155,6 +156,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 29 | H-LOTU underdog lottery vs H-SEL (smoke KILL/hold) |
 | 30 | H-GLD Goldilocks vs H-FIT (smoke KILL/hold — tie) |
 | 31 | H-SEA seasonal fitness vs H-FIT (smoke KILL/hold) |
+| 32 | H-RPS RPS niches vs H-SEL (smoke KILL — niche collapse) |
 
 ## Success
 

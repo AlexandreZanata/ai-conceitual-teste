@@ -71,6 +71,7 @@ npm run nano:zom             # H-ZOM zombie reinject vs H-SEL
 npm run nano:lotu            # H-LOTU underdog lottery vs H-SEL
 npm run nano:gld             # H-GLD Goldilocks fitness vs H-FIT
 npm run nano:sea             # H-SEA seasonal fitness vs H-FIT
+npm run nano:rps             # H-RPS RPS niches vs H-SEL
 npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
 npm run nano:formal:hsel:report
 ```
@@ -104,6 +105,7 @@ H-ZOM smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hzom-vs-hsel.md`.
 H-LOTU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hlotu-vs-hsel.md`.
 H-GLD smoke: KILL/hold vs H-FIT — see `docs/results/nano-lm/hgld-vs-hfit.md`.
 H-SEA smoke: KILL/hold vs H-FIT — see `docs/results/nano-lm/hsea-vs-hfit.md`.
+H-RPS smoke: KILL (niche collapse) — see `docs/results/nano-lm/hrps-vs-hsel.md`.
 
 ## Commands
 
