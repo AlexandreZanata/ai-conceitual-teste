@@ -8,6 +8,7 @@ from typing import Any, Callable
 from hold_ops import decide_hhold
 from fxs_ops import decide_hfxs
 from lofi_ops import decide_hlofi
+from ent2_ops import decide_hent2
 
 EPS_LP = 0.05
 
@@ -168,6 +169,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-HOLD": decide_hhold,
     "H-FXS": decide_hfxs,
     "H-LOFI": decide_hlofi,
+    "H-ENT2": decide_hent2,
 }
 for _fam in (
     "H-FIT", "H-TOU", "H-MUT", "H-RAN", "H-AGE", "H-MOR", "H-SPE",

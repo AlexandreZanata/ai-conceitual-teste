@@ -78,6 +78,7 @@ npm run nano:sho             # H-SHO layer shock vs H-SEL
 npm run nano:hold            # H-HOLD holdout fitness vs B2
 npm run nano:fxs             # H-FXS FIT×XOV×SHO stack vs max(FIT,XOV)
 npm run nano:lofi            # H-LOFI CE top-k + teacher rescore vs H-FIT
+npm run nano:ent2            # H-ENT2 dual-head TV floor vs B2
 npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
 npm run nano:formal:hsel:report
 ```
