@@ -61,6 +61,15 @@ def _decide_heli(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
     return "KILL / hold (≤ H-SEL)"
 
 
+def _decide_hfit(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
+    hsel = stats.get("H-SEL")
+    if hsel is None:
+        return "needs H-SEL control"
+    if s["mean_lp"] > hsel["mean_lp"] + 1e-6:
+        return "PROMOTE (beats H-SEL)"
+    return "KILL / hold (≤ H-SEL)"
+
+
 def _decide_hann(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     cos = stats.get("KD-cos")
     if cos is None:
@@ -120,6 +129,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-DEC": _decide_hdec,
     "H-LAM": _decide_hlam,
     "H-ELI": _decide_heli,
+    "H-FIT": _decide_hfit,
     "H-ENT": _decide_hent,
     "H-ANN": _decide_hann,
     "H-SPEC": _decide_hspec,

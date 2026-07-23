@@ -36,6 +36,7 @@ def matrix_cfg() -> dict[str, Any]:
         "steps_ann": 30,
         "ann_temp_start": 2.0,
         "ann_temp_end": 1.0,
+        "max_new_fit": 16,
     }
 
 

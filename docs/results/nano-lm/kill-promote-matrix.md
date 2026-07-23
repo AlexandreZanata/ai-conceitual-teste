@@ -9,6 +9,7 @@ H-LAM gate: stable and teacher_lp > H-BAL.
 H-ELI gate: no diversity collapse and teacher_lp > H-SEL.
 H-ENT gate: heads not collapsed and teacher_lp > B2.
 H-ANN gate: teacher_lp > KD-cos (cosine schedule control).
+H-FIT gate: teacher_lp > H-SEL (claim-aligned fitness).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -23,6 +24,7 @@ H-ANN gate: teacher_lp > KD-cos (cosine schedule control).
 | H-BAL | -17.3913 | -0.2996 | 54 | — | 3 | KILL / hold (≤ B2) |
 | H-LAM | -17.0049 | +0.0869 | 54 | — | 3 | PROMOTE (beats H-BAL) |
 | H-ELI | -17.4219 | -0.3301 | 52 | — | 3 | KILL / hold (≤ H-SEL) |
+| H-FIT | -16.8318 | +0.2600 | 38 | — | 3 | PROMOTE (beats H-SEL) |
 | H-ENT | -16.9916 | +0.1002 | 57 | — | 3 | KILL (collapsed to one head) |
 | KD-cos | -17.3873 | -0.2955 | 63 | — | 3 | schedule control (cosine KD) |
 | H-ANN | -17.3793 | -0.2876 | 41 | — | 3 | PROMOTE (beats cosine KD) |
@@ -43,6 +45,7 @@ H-ANN gate: teacher_lp > KD-cos (cosine schedule control).
 - H-ELI smoke detail: `docs/results/nano-lm/heli-vs-hsel.md`.
 - H-ENT smoke detail: `docs/results/nano-lm/hent-vs-b2.md`.
 - H-ANN smoke detail: `docs/results/nano-lm/hann-vs-kdcos.md`.
+- H-FIT smoke detail: `docs/results/nano-lm/hfit-vs-hsel.md`.
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

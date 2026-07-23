@@ -57,6 +57,7 @@ npm run verify
 15. H-ELI strong elitism — done (smoke **KILL/hold** vs H-SEL)
 16. H-ENT dual-head entanglement — done (smoke **KILL**, head collapse)
 17. H-ANN anneal vs cosine KD — done (smoke **PROMOTE** vs KD-cos, tentative)
+18. H-FIT teacher_lp fitness — done (smoke **PROMOTE** vs H-SEL, tentative)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
