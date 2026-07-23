@@ -50,6 +50,7 @@ npm run nano:dec             # H-DEC evolve decode knobs vs B4
 npm run nano:lam             # H-LAM Lamarckian write-back vs H-BAL
 npm run nano:eli             # H-ELI strong elitism vs H-SEL
 npm run nano:ent             # H-ENT dual-head entanglement vs B2
+npm run nano:ann             # H-ANN anneal vs cosine KD
 npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
 npm run nano:formal:hsel:report
 ```
@@ -62,6 +63,7 @@ H-DEC smoke: PROMOTE vs B4 (tentative) — see `docs/results/nano-lm/hdec-vs-b4.
 H-LAM smoke: PROMOTE vs H-BAL (tentative) — see `docs/results/nano-lm/hlam-vs-hbal.md`.
 H-ELI smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/heli-vs-hsel.md`.
 H-ENT smoke: KILL (head collapse) — see `docs/results/nano-lm/hent-vs-b2.md`.
+H-ANN smoke: PROMOTE vs KD-cos (tentative) — see `docs/results/nano-lm/hann-vs-kdcos.md`.
 
 ## Commands
 

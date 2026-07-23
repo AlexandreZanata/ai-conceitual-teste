@@ -61,6 +61,15 @@ def _decide_heli(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
     return "KILL / hold (≤ H-SEL)"
 
 
+def _decide_hann(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
+    cos = stats.get("KD-cos")
+    if cos is None:
+        return "needs KD-cos control"
+    if s["mean_lp"] > cos["mean_lp"] + 1e-6:
+        return "PROMOTE (beats cosine KD)"
+    return "KILL (cosine wins)"
+
+
 def _decide_hent(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     if s.get("collapsed", 0.0) > 0.0:
         return "KILL (collapsed to one head)"
@@ -112,6 +121,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-LAM": _decide_hlam,
     "H-ELI": _decide_heli,
     "H-ENT": _decide_hent,
+    "H-ANN": _decide_hann,
     "H-SPEC": _decide_hspec,
 }
 
@@ -119,6 +129,8 @@ _SPECIAL: dict[str, Callable[..., str]] = {
 def decision(fam: str, s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     if fam == "B2":
         return "BASELINE (claim gate)"
+    if fam == "KD-cos":
+        return "schedule control (cosine KD)"
     if fam in {"B0", "B1"}:
         return "control"
     if fam == "B3":
