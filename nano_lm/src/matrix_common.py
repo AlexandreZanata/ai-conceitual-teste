@@ -37,6 +37,7 @@ def matrix_cfg() -> dict[str, Any]:
         "ann_temp_start": 2.0,
         "ann_temp_end": 1.0,
         "max_new_fit": 16,
+        "tournament_k": 3,
     }
 
 

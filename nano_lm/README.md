@@ -52,6 +52,7 @@ npm run nano:eli             # H-ELI strong elitism vs H-SEL
 npm run nano:ent             # H-ENT dual-head entanglement vs B2
 npm run nano:ann             # H-ANN anneal vs cosine KD
 npm run nano:fit             # H-FIT teacher_lp fitness vs H-SEL
+npm run nano:tou             # H-TOU tournament selection vs H-SEL
 npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
 npm run nano:formal:hsel:report
 ```
@@ -66,6 +67,7 @@ H-ELI smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/heli-vs-hsel.md`.
 H-ENT smoke: KILL (head collapse) — see `docs/results/nano-lm/hent-vs-b2.md`.
 H-ANN smoke: PROMOTE vs KD-cos (tentative) — see `docs/results/nano-lm/hann-vs-kdcos.md`.
 H-FIT smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hfit-vs-hsel.md`.
+H-TOU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htou-vs-hsel.md`.
 
 ## Commands
 
