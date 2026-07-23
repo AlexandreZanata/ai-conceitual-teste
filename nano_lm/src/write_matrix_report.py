@@ -15,6 +15,7 @@ ORDER = [
     "B3",
     "B4",
     "H-SPEC",
+    "H-DEC",
     "H-SEL",
     "H-BAL",
     "H-BON",
@@ -62,6 +63,8 @@ def _decision(fam: str, s: dict[str, float], stats: dict[str, dict[str, float]])
         return "decode control (AR)"
     if fam == "B4":
         return "decode control (BoN)"
+    if fam == "H-DEC":
+        return _decide_hdec(s, stats)
     if fam == "H-SPEC":
         return _decide_hspec(s, stats)
     if fam in {"H-SUP", "H-INT", "BoN-uniform"}:
@@ -69,6 +72,15 @@ def _decision(fam: str, s: dict[str, float], stats: dict[str, dict[str, float]])
     if b2 is not None and s["mean_lp"] > b2 + 1e-6:
         return "PROMOTE (beats B2)"
     return "KILL / hold (≤ B2)"
+
+
+def _decide_hdec(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
+    b4 = stats.get("B4")
+    if b4 is None:
+        return "needs B4 control"
+    if s["mean_lp"] > b4["mean_lp"] + 1e-6:
+        return "PROMOTE (beats fixed BoN/B4)"
+    return "KILL (≤ fixed BoN/B4)"
 
 
 def _decide_hspec(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
@@ -140,6 +152,7 @@ def render(matrix_path: Path) -> str:
             "- B3/B4/H-SPEC decode on B2 checkpoints; H-SPEC vs B3 on speed+quality.",
             "- H-SPEC smoke detail: `docs/results/nano-lm/hspec-vs-b3.md`.",
             "- H-BAL smoke detail: `docs/results/nano-lm/hbal-vs-b2.md`.",
+            "- H-DEC smoke detail: `docs/results/nano-lm/hdec-vs-b4.md`.",
             "- H-SUP/H-INT rows are decode selection scores on teacher, not trained students.",
             "- H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.",
             "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
