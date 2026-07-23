@@ -53,6 +53,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-MUT | Adaptive mutate scale (1/5 success rule) | Fixed scale wins — **smoke KILL/hold** |
 | H-RAN | Linear rank selection vs truncation | ≤ H-SEL — **smoke KILL/hold** |
 | H-AGE | Age-layered pops + immigrants (ALPS-lite) | ≤ H-SEL wall-matched — **smoke KILL/hold** |
+| H-MOR | Soft mortality (cull bottom quartile) | ≤ H-SEL — **smoke KILL/hold** |
 | H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE** (beats B4; tentative) |
 
 ### B — Inference as learning
@@ -129,6 +130,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 16 | H-MUT adaptive mutate vs H-SEL (smoke KILL/hold) |
 | 17 | H-RAN rank selection vs H-SEL (smoke KILL/hold) |
 | 18 | H-AGE age layers vs H-SEL (smoke KILL/hold) |
+| 19 | H-MOR soft mortality vs H-SEL (smoke KILL/hold) |
 
 ## Success
 

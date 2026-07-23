@@ -58,6 +58,7 @@ npm run nano:nic             # H-NIC fitness sharing vs H-SEL
 npm run nano:mut             # H-MUT adaptive mutate vs H-SEL
 npm run nano:ran             # H-RAN rank selection vs H-SEL
 npm run nano:age             # H-AGE age layers vs H-SEL
+npm run nano:mor             # H-MOR soft mortality vs H-SEL
 npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
 npm run nano:formal:hsel:report
 ```
@@ -78,6 +79,7 @@ H-NIC smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hnic-vs-hsel.md`.
 H-MUT smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hmut-vs-hsel.md`.
 H-RAN smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hran-vs-hsel.md`.
 H-AGE smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hage-vs-hsel.md`.
+H-MOR smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hmor-vs-hsel.md`.
 
 ## Commands
 

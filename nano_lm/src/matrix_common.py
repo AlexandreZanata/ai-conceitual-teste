@@ -42,6 +42,7 @@ def matrix_cfg() -> dict[str, Any]:
         "mut_adapt_factor": 1.2,
         "age_layers": 2,
         "immigrants_per_gen": 1,
+        "mortality_fraction": 0.25,
     }
 
 

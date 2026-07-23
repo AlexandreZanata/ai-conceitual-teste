@@ -150,6 +150,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-MUT": _decide_hfit,
     "H-RAN": _decide_hfit,
     "H-AGE": _decide_hfit,
+    "H-MOR": _decide_hfit,
     "H-ENT": _decide_hent,
     "H-ANN": _decide_hann,
     "H-SPEC": _decide_hspec,
