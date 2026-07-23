@@ -90,6 +90,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-BON | Distill teacher-chosen BoN winners | No gain vs B2 |
 | H-MAE | Distill lookahead MAE commits | BoN distill cheaper/better |
 | H-SPEC | Student draft; teacher accept/reject | No speedup or quality drop — **smoke KILL** (no speedup vs B3) |
+| H-TKD | Top-k sparse KD (teacher mass on k) | ≤ B2 — **smoke PROMOTE**; **formal KILL** |
 
 ### C — Quantum-inspired (classical only)
 | ID | Mechanism | Kill if |
@@ -195,6 +196,6 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 58 | H-DECP per-prompt gene bank (**smoke PROMOTE**; **formal KILL** — ≤ GLOBAL) |
 | 59 | H-DECM elite gene mixture (**smoke/formal PROMOTE** — > H-LAT2 Δ+0.34) |
 | 60 | H-DECQ quantized gene codes (**smoke PROMOTE**; **formal KILL** — ≤ H-DECM) |
-| 61 | EARLY↑; STACK/ROUT/ORAC tip-dual **KILL**; DEB formal KILL |
+| 61 | ORAC tip-dual KILL; H-TKD smoke↑ / **formal KILL** (Δ−2.03) |
 ## Success
 ≥1 non-baseline H-ID improves teacher-judged quality **or** tokens/s vs B2 at fixed budget, with ablation. Negatives are logged wins for science.

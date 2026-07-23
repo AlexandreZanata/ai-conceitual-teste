@@ -121,6 +121,7 @@ npm run verify
 79. H-DEB dual student; teacher picks — done (smoke **PROMOTE**; **formal KILL** — Δ−0.01 vs B2)
 80. H-ROUT confidence tip router — done (smoke **KILL** — ≤ max tip Δ−0.29; no dual)
 81. H-ORAC teacher-oracle tip pick — done (smoke **KILL** — quality↑ but no dual wall)
+82. H-TKD top-k sparse KD — done (smoke **PROMOTE**; **formal KILL** — Δ−2.03 vs B2)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
