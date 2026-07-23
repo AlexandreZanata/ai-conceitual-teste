@@ -30,6 +30,7 @@ H-LOTU gate: teacher_lp > H-SEL (underdog lottery vs truncation).
 H-GLD gate: teacher_lp > H-FIT (Goldilocks vs max-lp fitness).
 H-SEA gate: teacher_lp > H-FIT (seasonal vs fixed H-FIT).
 H-RPS gate: ≥2 niches and teacher_lp > H-SEL (RPS niches).
+H-CAT gate: teacher_lp > H-SEL (catastrophe vs steady).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -65,6 +66,7 @@ H-RPS gate: ≥2 niches and teacher_lp > H-SEL (RPS niches).
 | H-GLD | -16.8318 | +0.2600 | 39 | — | 3 | KILL / hold (≤ max-lp fitness) |
 | H-SEA | -17.3290 | -0.2373 | 40 | — | 3 | KILL / hold (≤ max-lp fitness) |
 | H-RPS | -17.5223 | -0.4305 | 58 | — | 3 | KILL (collapsed to 1 niche) |
+| H-CAT | -17.5397 | -0.4479 | 57 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-ENT | -16.9916 | +0.1002 | 57 | — | 3 | KILL (collapsed to one head) |
 | KD-cos | -17.3873 | -0.2955 | 63 | — | 3 | schedule control (cosine KD) |
 | H-ANN | -17.3793 | -0.2876 | 41 | — | 3 | PROMOTE (beats cosine KD) |
@@ -106,6 +108,7 @@ H-RPS gate: ≥2 niches and teacher_lp > H-SEL (RPS niches).
 - H-GLD smoke detail: `docs/results/nano-lm/hgld-vs-hfit.md`.
 - H-SEA smoke detail: `docs/results/nano-lm/hsea-vs-hfit.md`.
 - H-RPS smoke detail: `docs/results/nano-lm/hrps-vs-hsel.md`.
+- H-CAT smoke detail: `docs/results/nano-lm/hcat-vs-hsel.md`.
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

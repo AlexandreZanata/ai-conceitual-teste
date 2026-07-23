@@ -172,7 +172,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
 }
 for _fam in (
     "H-FIT", "H-TOU", "H-MUT", "H-RAN", "H-AGE", "H-MOR", "H-SPE",
-    "H-SEX", "H-ANTI", "H-TAX", "H-SYM", "H-FOS", "H-LOTU",
+    "H-SEX", "H-ANTI", "H-TAX", "H-SYM", "H-FOS", "H-LOTU", "H-CAT",
 ):
     _SPECIAL[_fam] = _decide_hfit
 
