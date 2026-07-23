@@ -19,6 +19,7 @@ H-AGE gate: teacher_lp > H-SEL (ALPS vs flat).
 H-MOR gate: teacher_lp > H-SEL (mortality vs no cull).
 H-SPE gate: teacher_lp > H-SEL (islands vs single).
 H-SEX gate: teacher_lp > H-SEL (mate choice vs truncation).
+H-ANTI gate: teacher_lp > H-SEL (anti-selection vs truncation).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -43,6 +44,7 @@ H-SEX gate: teacher_lp > H-SEL (mate choice vs truncation).
 | H-MOR | -17.2746 | -0.1828 | 57 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-SPE | -17.2271 | -0.1353 | 54 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-SEX | -17.0612 | +0.0306 | 66 | — | 3 | KILL / hold (≤ H-SEL) |
+| H-ANTI | -17.6378 | -0.5461 | 69 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-ENT | -16.9916 | +0.1002 | 57 | — | 3 | KILL (collapsed to one head) |
 | KD-cos | -17.3873 | -0.2955 | 63 | — | 3 | schedule control (cosine KD) |
 | H-ANN | -17.3793 | -0.2876 | 41 | — | 3 | PROMOTE (beats cosine KD) |
@@ -73,6 +75,7 @@ H-SEX gate: teacher_lp > H-SEL (mate choice vs truncation).
 - H-MOR smoke detail: `docs/results/nano-lm/hmor-vs-hsel.md`.
 - H-SPE smoke detail: `docs/results/nano-lm/hspe-vs-hsel.md`.
 - H-SEX smoke detail: `docs/results/nano-lm/hsex-vs-hsel.md`.
+- H-ANTI smoke detail: `docs/results/nano-lm/hanti-vs-hsel.md`.
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
