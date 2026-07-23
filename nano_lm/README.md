@@ -60,6 +60,7 @@ npm run nano:ran             # H-RAN rank selection vs H-SEL
 npm run nano:age             # H-AGE age layers vs H-SEL
 npm run nano:mor             # H-MOR soft mortality vs H-SEL
 npm run nano:spe             # H-SPE island migration vs H-SEL
+npm run nano:sex             # H-SEX mate choice vs H-SEL
 npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
 npm run nano:formal:hsel:report
 ```
@@ -82,6 +83,7 @@ H-RAN smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hran-vs-hsel.md`.
 H-AGE smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hage-vs-hsel.md`.
 H-MOR smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hmor-vs-hsel.md`.
 H-SPE smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hspe-vs-hsel.md`.
+H-SEX smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hsex-vs-hsel.md`.
 
 ## Commands
 

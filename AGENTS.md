@@ -66,6 +66,7 @@ npm run verify
 24. H-AGE age-layered pops — done (smoke **KILL/hold** vs H-SEL)
 25. H-MOR soft mortality — done (smoke **KILL/hold** vs H-SEL)
 26. H-SPE island speciation — done (smoke **KILL/hold** vs H-SEL)
+27. H-SEX mate choice — done (smoke **KILL/hold** vs H-SEL)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
