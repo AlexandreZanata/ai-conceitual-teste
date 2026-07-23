@@ -37,6 +37,7 @@ H-HOLD gate: no overfit and teacher_lp > B2 (holdout fit≠eval).
 H-FXS gate: teacher_lp > max(H-FIT, H-XOV) (FIT×XOV×SHO stack).
 H-LOFI gate: teacher_lp ≥ H-FIT−ε and wall_save (fewer teacher forwards).
 H-ENT2 gate: heads not collapsed and teacher_lp > B2 (TV floor).
+H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -79,6 +80,7 @@ H-ENT2 gate: heads not collapsed and teacher_lp > B2 (TV floor).
 | H-FXS | -17.1325 | -0.0407 | 44 | — | 3 | KILL / hold (≤ max FIT/XOV) |
 | H-LOFI | -17.2565 | -0.1647 | 47 | — | 3 | KILL (worse quality than H-FIT) |
 | H-ENT2 | -16.9916 | +0.1002 | 149 | — | 3 | KILL (collapsed again) |
+| H-ENT3 | -16.9916 | +0.1002 | 115 | — | 3 | KILL (collapsed) |
 | H-ENT | -16.9916 | +0.1002 | 57 | — | 3 | KILL (collapsed to one head) |
 | KD-cos | -17.3873 | -0.2955 | 63 | — | 3 | schedule control (cosine KD) |
 | H-ANN | -17.3793 | -0.2876 | 41 | — | 3 | PROMOTE (beats cosine KD) |
@@ -87,9 +89,7 @@ H-ENT2 gate: heads not collapsed and teacher_lp > B2 (TV floor).
 | H-SUP | -0.5197 | +16.5721 | — | — | 1 | KILL (≤ uniform BoN) |
 | H-INT | -0.5197 | +16.5721 | — | — | 1 | KILL (≤ uniform BoN) |
 | BoN-uniform | -0.3698 | +16.7220 | — | — | 1 | ablation control |
-
 ## Notes
-
 - Smoke budgets (few steps / small pop). Formal claims need longer runs.
 - B3/B4/H-SPEC decode on B2 checkpoints; H-SPEC vs B3 on speed+quality.
 - H-SPEC smoke detail: `docs/results/nano-lm/hspec-vs-b3.md`.
@@ -127,6 +127,7 @@ H-ENT2 gate: heads not collapsed and teacher_lp > B2 (TV floor).
 - H-FXS smoke detail: `docs/results/nano-lm/hfxs-vs-fit-xov.md`.
 - H-LOFI smoke detail: `docs/results/nano-lm/hlofi-vs-hfit.md`.
 - H-ENT2 smoke detail: `docs/results/nano-lm/hent2-vs-b2.md`.
+- H-ENT3 smoke detail: `docs/results/nano-lm/hent3-vs-b2.md`.
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

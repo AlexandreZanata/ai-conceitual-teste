@@ -61,6 +61,7 @@
     "nano:fxs": "nano_lm/.venv/bin/python nano_lm/src/run_fxs_smoke.py",
     "nano:lofi": "nano_lm/.venv/bin/python nano_lm/src/run_lofi_smoke.py",
     "nano:ent2": "nano_lm/.venv/bin/python nano_lm/src/run_ent2_smoke.py",
+    "nano:ent3": "nano_lm/.venv/bin/python nano_lm/src/run_ent3_smoke.py",
     "nano:formal:hsel": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hsel.py",
     "nano:formal:hsel:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hsel_report.py",
     "lint": "node --check web/app.js"

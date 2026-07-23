@@ -9,22 +9,19 @@ from hold_ops import decide_hhold
 from fxs_ops import decide_hfxs
 from lofi_ops import decide_hlofi
 from ent2_ops import decide_hent2
+from ent3_ops import decide_hent3
 
 EPS_LP = 0.05
-
 def _mean_optional(items: list[dict[str, Any]], key: str) -> float:
     vals = [float(x[key]) for x in items if x.get(key) is not None]
     return sum(vals) / len(vals) if vals else float("nan")
-
 def _flag_any(items: list[dict[str, Any]], key: str) -> float:
     return 1.0 if any(bool(x.get(key)) for x in items) else 0.0
-
 def mean_by_family(rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
     buckets: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for r in rows:
         buckets[r["family"]].append(r)
     return {fam: _family_stats(items) for fam, items in buckets.items()}
-
 def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
     lps = [float(x["teacher_mean_logprob"]) for x in items]
     ups = [float(bool(x["diversity_up"])) for x in items if "diversity_up" in x]
@@ -43,6 +40,7 @@ def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
         "parasite_dominates": _flag_any(items, "parasite_dominates"),
         "overfit": _flag_any(items, "overfit"),
         "wall_save": _flag_any(items, "wall_save"),
+        "mode_chaos": _flag_any(items, "mode_chaos"),
         "div_up_rate": sum(ups) / len(ups) if ups else float("nan"),
     }
 
@@ -170,6 +168,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-FXS": decide_hfxs,
     "H-LOFI": decide_hlofi,
     "H-ENT2": decide_hent2,
+    "H-ENT3": decide_hent3,
 }
 for _fam in (
     "H-FIT", "H-TOU", "H-MUT", "H-RAN", "H-AGE", "H-MOR", "H-SPE",

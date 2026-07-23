@@ -48,6 +48,7 @@ ORDER = [
     "H-FXS",
     "H-LOFI",
     "H-ENT2",
+    "H-ENT3",
     "H-ENT",
     "KD-cos",
     "H-ANN",
@@ -59,9 +60,7 @@ ORDER = [
 ]
 
 NOTES = [
-    "",
     "## Notes",
-    "",
     "- Smoke budgets (few steps / small pop). Formal claims need longer runs.",
     "- B3/B4/H-SPEC decode on B2 checkpoints; H-SPEC vs B3 on speed+quality.",
     "- H-SPEC smoke detail: `docs/results/nano-lm/hspec-vs-b3.md`.",
@@ -99,10 +98,10 @@ NOTES = [
     "- H-FXS smoke detail: `docs/results/nano-lm/hfxs-vs-fit-xov.md`.",
     "- H-LOFI smoke detail: `docs/results/nano-lm/hlofi-vs-hfit.md`.",
     "- H-ENT2 smoke detail: `docs/results/nano-lm/hent2-vs-b2.md`.",
+    "- H-ENT3 smoke detail: `docs/results/nano-lm/hent3-vs-b2.md`.",
     "- H-SUP/H-INT rows are decode selection scores on teacher, not trained students.",
     "- H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
-    "",
 ]
 
 
@@ -157,6 +156,7 @@ def render(matrix_path: Path) -> str:
         "H-FXS gate: teacher_lp > max(H-FIT, H-XOV) (FIT×XOV×SHO stack).",
         "H-LOFI gate: teacher_lp ≥ H-FIT−ε and wall_save (fewer teacher forwards).",
         "H-ENT2 gate: heads not collapsed and teacher_lp > B2 (TV floor).",
+        "H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).",
         "",
         "| family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |",
         "|--------|-----------------|---------|--------------|-------|---|-----------|",

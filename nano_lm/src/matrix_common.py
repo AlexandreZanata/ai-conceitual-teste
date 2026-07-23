@@ -35,6 +35,7 @@ def matrix_cfg() -> dict[str, Any]:
         "agree_weight": 0.1,
         "tv_tau": 0.02,
         "tv_floor_weight": 1.0,
+        "disagree_weight": 0.1,
         "steps_ann": 30,
         "ann_temp_start": 2.0,
         "ann_temp_end": 1.0,
