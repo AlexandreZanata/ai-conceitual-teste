@@ -85,6 +85,8 @@
     "nano:deb:report": "nano_lm/.venv/bin/python nano_lm/src/write_hdeb_report.py",
     "nano:rout": "nano_lm/.venv/bin/python nano_lm/src/run_rout_smoke.py",
     "nano:rout:report": "nano_lm/.venv/bin/python nano_lm/src/write_hrout_report.py",
+    "nano:orac": "nano_lm/.venv/bin/python nano_lm/src/run_orac_smoke.py",
+    "nano:orac:report": "nano_lm/.venv/bin/python nano_lm/src/write_horac_report.py",
     "nano:formal:hdeb": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hdeb.py",
     "nano:formal:hdeb:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hdeb_report.py",
     "nano:formal:hhop": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hhop.py",

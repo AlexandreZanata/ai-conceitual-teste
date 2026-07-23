@@ -32,6 +32,7 @@ GATES = [
     "H-ADV gate: no mode collapse and teacher_lp > B2 (weak disc).",
     "H-DEB gate: teacher_lp > B2 (dual student; teacher picks).",
     "H-ROUT gate: lp ≥ max(EARLY,DECM)−ε and wall < min tip (conf router).",
+    "H-ORAC gate: same dual tip gate (teacher-oracle winner-wall bound).",
     "H-DECK gate: teacher_lp ≥ H-DEC−ε and wall_save (proxy+top-k search).",
     "H-DECK2 gate: best top_k∈{1,2,3} > H-DECK (k=2) equal pop×gens.",
     "H-PROXY2 gate: teacher_lp > H-DECK @ ≤ teacher_forwards (CE vs self-lp).",

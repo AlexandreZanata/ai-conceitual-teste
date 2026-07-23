@@ -60,6 +60,7 @@ npm run nano:dif             # H-DIF discrete diffusion vs B2
 npm run nano:adv             # H-ADV weak discriminator vs B2
 npm run nano:deb             # H-DEB dual student teacher-pick vs B2
 npm run nano:rout            # H-ROUT conf-route EARLY vs DECM tips
+npm run nano:orac            # H-ORAC teacher-oracle tip pick (bound)
 npm run nano:fit             # H-FIT teacher_lp fitness vs H-SEL
 npm run nano:tou             # H-TOU tournament selection vs H-SEL
 npm run nano:xov             # H-XOV weight crossover vs H-SEL
@@ -114,6 +115,7 @@ H-DIF smoke: KILL vs B2 (≤ B2 Δ−0.72; VRAM OK) — see `docs/results/nano-l
 H-ADV smoke: KILL vs B2 (≤ B2; no mode collapse) — see `docs/results/nano-lm/hadv-vs-b2.md`.
 H-DEB: smoke PROMOTE / formal KILL (Δ−0.01) — `hdeb-vs-b2.md`, `formal-hdeb-vs-b2.md`.
 H-ROUT smoke: KILL vs tips (≤ max tip Δ−0.29) — see `docs/results/nano-lm/hrout-vs-tips.md`.
+H-ORAC smoke: KILL vs tips (lp↑ but no dual wall) — see `docs/results/nano-lm/horac-vs-tips.md`.
 H-STACK smoke: KILL vs tips (≤ max tip quality) — see `docs/results/nano-lm/hstack-vs-tips.md`.
 H-FIT smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hfit-vs-hsel.md`.
 H-TOU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htou-vs-hsel.md`.
