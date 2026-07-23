@@ -97,6 +97,7 @@ npm run verify
 55. H-DECK proxy+top-k decode — done (smoke **PROMOTE**; **formal PROMOTE** vs B4 Δ+2.53)
 56. H-DECK2 top_k ablation — done (smoke **KILL**; **formal PROMOTE** — best k=1 Δ+0.25 vs k=2)
 57. H-PROXY2 CE proxy vs self-lp — done (smoke **PROMOTE**; **formal KILL** — Δ−0.11 vs H-DECK)
+58. H-CASC proxy→mid→full — done (smoke **PROMOTE**; **formal PROMOTE** vs B4 Δ+2.27)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

@@ -37,6 +37,8 @@
     "nano:deck2:report": "nano_lm/.venv/bin/python nano_lm/src/write_hdeck2_report.py",
     "nano:proxy2": "nano_lm/.venv/bin/python nano_lm/src/run_proxy2_smoke.py",
     "nano:proxy2:report": "nano_lm/.venv/bin/python nano_lm/src/write_hproxy2_report.py",
+    "nano:casc": "nano_lm/.venv/bin/python nano_lm/src/run_casc_smoke.py",
+    "nano:casc:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcasc_report.py",
     "nano:lam": "nano_lm/.venv/bin/python nano_lm/src/run_lam_smoke.py",
     "nano:eli": "nano_lm/.venv/bin/python nano_lm/src/run_eli_smoke.py",
     "nano:ent": "nano_lm/.venv/bin/python nano_lm/src/run_ent_smoke.py",
@@ -92,6 +94,8 @@
     "nano:formal:hdeck2:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hdeck2_report.py",
     "nano:formal:hproxy2": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hproxy2.py",
     "nano:formal:hproxy2:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hproxy2_report.py",
+    "nano:formal:hcasc": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hcasc.py",
+    "nano:formal:hcasc:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hcasc_report.py",
     "lint": "node --check web/app.js"
   },
   "devDependencies": {
