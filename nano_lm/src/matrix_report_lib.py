@@ -32,7 +32,10 @@ def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
         "mean_tps": _mean_optional(items, "mean_tokens_per_s"),
         "n": float(len(items)),
         "unstable": _flag_any(items, "unstable"),
-        "collapsed": _flag_any(items, "diversity_collapsed"),
+        "collapsed": max(
+            _flag_any(items, "diversity_collapsed"),
+            _flag_any(items, "heads_collapsed"),
+        ),
     }
 
 
@@ -56,6 +59,17 @@ def _decide_heli(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
     if s["mean_lp"] > hsel["mean_lp"] + 1e-6:
         return "PROMOTE (beats H-SEL, diversity ok)"
     return "KILL / hold (≤ H-SEL)"
+
+
+def _decide_hent(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
+    if s.get("collapsed", 0.0) > 0.0:
+        return "KILL (collapsed to one head)"
+    b2 = stats.get("B2", {}).get("mean_lp")
+    if b2 is None:
+        return "needs B2 control"
+    if s["mean_lp"] > b2 + 1e-6:
+        return "PROMOTE (beats B2, heads distinct)"
+    return "KILL / hold (≤ B2)"
 
 
 def _decide_hdec(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
@@ -97,6 +111,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-DEC": _decide_hdec,
     "H-LAM": _decide_hlam,
     "H-ELI": _decide_heli,
+    "H-ENT": _decide_hent,
     "H-SPEC": _decide_hspec,
 }
 

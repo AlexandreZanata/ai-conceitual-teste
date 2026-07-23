@@ -62,7 +62,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 |----|-----------|---------|
 | H-SUP | Amplitude weights over K futures; collapse by \|α\|² / score | Uniform BoN ≥ |
 | H-INT | Signed/phase interference scores | No better than softmax BoN |
-| H-ENT | Dual heads, shared noise | Collapses to one head |
+| H-ENT | Dual heads, shared noise | Collapses to one head — **smoke KILL** (TV≈0.005) |
 | H-ANN | Annealing schedule vs cosine | Cosine wins |
 
 ### D — Plasticity
@@ -113,6 +113,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 7 | H-DEC evolve decode knobs vs B4 (smoke PROMOTE, tentative) |
 | 8 | H-LAM Lamarckian write-back vs H-BAL (smoke PROMOTE, tentative) |
 | 9 | H-ELI strong elitism vs H-SEL (smoke KILL/hold — ≤ H-SEL) |
+| 10 | H-ENT dual heads (smoke KILL — collapsed to one head) |
 
 ## Success
 

@@ -7,6 +7,7 @@ Primary metric: teacher (TinyStories-33M) mean log-prob of student completions (
 H-SPEC gate: tokens/s > B3 and teacher_lp ≥ B3 − 0.05.
 H-LAM gate: stable and teacher_lp > H-BAL.
 H-ELI gate: no diversity collapse and teacher_lp > H-SEL.
+H-ENT gate: heads not collapsed and teacher_lp > B2.
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -21,6 +22,7 @@ H-ELI gate: no diversity collapse and teacher_lp > H-SEL.
 | H-BAL | -17.3913 | -0.2996 | 54 | — | 3 | KILL / hold (≤ B2) |
 | H-LAM | -17.0049 | +0.0869 | 54 | — | 3 | PROMOTE (beats H-BAL) |
 | H-ELI | -17.4219 | -0.3301 | 52 | — | 3 | KILL / hold (≤ H-SEL) |
+| H-ENT | -16.9916 | +0.1002 | 57 | — | 3 | KILL (collapsed to one head) |
 | H-BON | -17.2071 | -0.1153 | 143 | — | 3 | KILL / hold (≤ B2) |
 | H-MAE | -17.2136 | -0.1218 | 212 | — | 3 | KILL / hold (≤ B2) |
 | H-SUP | -0.5197 | +16.5721 | — | — | 1 | KILL (≤ uniform BoN) |
@@ -36,6 +38,7 @@ H-ELI gate: no diversity collapse and teacher_lp > H-SEL.
 - H-DEC smoke detail: `docs/results/nano-lm/hdec-vs-b4.md`.
 - H-LAM smoke detail: `docs/results/nano-lm/hlam-vs-hbal.md`.
 - H-ELI smoke detail: `docs/results/nano-lm/heli-vs-hsel.md`.
+- H-ENT smoke detail: `docs/results/nano-lm/hent-vs-b2.md`.
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

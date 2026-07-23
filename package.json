@@ -31,6 +31,7 @@
     "nano:dec": "nano_lm/.venv/bin/python nano_lm/src/run_dec_smoke.py",
     "nano:lam": "nano_lm/.venv/bin/python nano_lm/src/run_lam_smoke.py",
     "nano:eli": "nano_lm/.venv/bin/python nano_lm/src/run_eli_smoke.py",
+    "nano:ent": "nano_lm/.venv/bin/python nano_lm/src/run_ent_smoke.py",
     "nano:formal:hsel": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hsel.py",
     "nano:formal:hsel:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hsel_report.py",
     "lint": "node --check web/app.js"
