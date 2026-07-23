@@ -56,6 +56,7 @@ npm run nano:tou             # H-TOU tournament selection vs H-SEL
 npm run nano:xov             # H-XOV weight crossover vs H-SEL
 npm run nano:nic             # H-NIC fitness sharing vs H-SEL
 npm run nano:mut             # H-MUT adaptive mutate vs H-SEL
+npm run nano:ran             # H-RAN rank selection vs H-SEL
 npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
 npm run nano:formal:hsel:report
 ```
@@ -74,6 +75,7 @@ H-TOU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htou-vs-hsel.md`.
 H-XOV smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hxov-vs-hsel.md`.
 H-NIC smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hnic-vs-hsel.md`.
 H-MUT smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hmut-vs-hsel.md`.
+H-RAN smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hran-vs-hsel.md`.
 
 ## Commands
 
