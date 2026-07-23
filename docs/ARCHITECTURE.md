@@ -82,6 +82,6 @@ Every `.cpp` / `.hpp` must obey harness caps: **≤80 lines/function**, **≤200
 - Heavy ML libraries (PyTorch, TensorFlow, etc.) inside the evolutionary binary  
 - Microservices or mandatory external DB  
 
-## Side track — nano-LM (phase 10)
+## Side track — nano-LM (phases 10–11)
 
-[`nano_lm/`](../nano_lm/) is an **isolated** Python/PyTorch experiment: frozen TinyStories-1M + decode-method comparison (AR / Best-of-N / Lookahead MAE). It is **not** part of Domain aggregates (`Genome`, `Population`, …). Protocol: [NANO-LM-TRACK.md](NANO-LM-TRACK.md). 
+[`nano_lm/`](../nano_lm/) is an **isolated** Python/PyTorch experiment: TinyStories decode comparison (AR / BoN / MAE) plus student≤5M + teacher-33M matrix (B0–B4, H-* including speculative H-SPEC). It is **not** part of Domain aggregates (`Genome`, `Population`, …). Protocol: [NANO-LM-TRACK.md](NANO-LM-TRACK.md), [NANO-STUDENT-AGENDA.md](NANO-STUDENT-AGENDA.md). 

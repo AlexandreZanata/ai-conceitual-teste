@@ -11,7 +11,7 @@ import torch.nn.functional as F
 from scorers import DecodeResult, mean_logprob
 
 
-def _top_p_filter(logits: torch.Tensor, top_p: float) -> torch.Tensor:
+def top_p_filter(logits: torch.Tensor, top_p: float) -> torch.Tensor:
     sorted_logits, sorted_idx = torch.sort(logits, descending=True)
     probs = F.softmax(sorted_logits, dim=-1)
     cum = torch.cumsum(probs, dim=-1)
@@ -33,7 +33,7 @@ def sample_next_batch(
     with torch.no_grad():
         logits = model(input_ids).logits[:, -1, :].float()
         logits = logits / max(temperature, 1e-6)
-        logits = _top_p_filter(logits, top_p)
+        logits = top_p_filter(logits, top_p)
         probs = F.softmax(logits, dim=-1)
         token = torch.multinomial(probs, num_samples=1)
         logp = torch.log(probs.gather(-1, token).squeeze(-1) + 1e-12)

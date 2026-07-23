@@ -30,10 +30,11 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | B0 | Random-init student AR (floor) |
 | B1 | Supervised CE on TinyStories |
 | B2 | KD (KL to teacher logits) |
-| B3 | B2 + AR decode |
-| B4 | B2 + Best-of-N |
+| B3 | B2 + AR decode (decode control) |
+| B4 | B2 + Best-of-N (decode control) |
 
-**Claim rule:** wild H-ID must beat B2 on quality@budget **or** match B2 quality at lower wall/FLOPs (seeds ≥3 for formal; smoke may use fewer).
+**Claim rule:** wild H-ID must beat B2 on quality@budget **or** match B2 quality at lower wall/FLOPs (seeds ≥3 for formal; smoke may use fewer).  
+**H-SPEC gate:** tokens/s > B3 **and** teacher_lp ≥ B3 − ε (ε=0.05 smoke).
 
 ## Hypothesis catalog
 
@@ -53,7 +54,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 |----|-----------|---------|
 | H-BON | Distill teacher-chosen BoN winners | No gain vs B2 |
 | H-MAE | Distill lookahead MAE commits | BoN distill cheaper/better |
-| H-SPEC | Student draft; teacher accept/reject | No speedup or quality drop |
+| H-SPEC | Student draft; teacher accept/reject | No speedup or quality drop — **smoke KILL** (no speedup vs B3) |
 
 ### C — Quantum-inspired (classical only)
 
@@ -107,6 +108,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 2 | H-SEL, H-BON, H-MAE vs B2 |
 | 3 | H-SUP (+ H-INT) vs uniform BoN |
 | 4 | Kill/promote matrix |
+| 5 | B3/B4 decode controls + H-SPEC vs B3 (smoke KILL) |
 
 ## Success
 

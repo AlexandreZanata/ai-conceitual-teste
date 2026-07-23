@@ -27,6 +27,8 @@ def matrix_cfg() -> dict[str, Any]:
         "lr": 3e-4,
         "seeds": [0, 1, 2],
         "max_new_eval": 32,
+        "draft_len": 4,
+        "bon_n_eval": 4,
     }
 
 

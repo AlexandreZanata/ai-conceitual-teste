@@ -50,9 +50,10 @@ npm run verify
 8. Benchmark report (phase 09) — done  
 9. Nano-LM track TinyStories AR vs BoN vs MAE (phase 10) — done (smoke)  
 10. Nano student + teacher agenda / matrix (phase 11) — done (smoke matrix)  
+11. H-SPEC speculative decode vs B3/B4 — done (smoke **KILL**, no speedup)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
-**Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md`.  
+**Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + H-SPEC `docs/results/nano-lm/hspec-vs-b3.md`.  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
 
 ---

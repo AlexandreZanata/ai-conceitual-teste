@@ -10,6 +10,7 @@ from typing import Any
 from load_model import resolve_device
 from matrix_baselines import run_baselines
 from matrix_common import matrix_cfg, write_json
+from matrix_decode import run_decode_ops
 from matrix_hyps import run_hypotheses
 from matrix_quantum import run_quantum
 
@@ -23,6 +24,7 @@ def run_matrix() -> int:
     rows: list[dict[str, Any]] = []
     t0 = time.perf_counter()
     run_baselines(c, device, rows)
+    run_decode_ops(c, rows)
     run_hypotheses(c, device, rows)
     run_quantum(c, rows)
     payload = {

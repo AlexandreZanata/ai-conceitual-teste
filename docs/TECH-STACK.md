@@ -25,7 +25,7 @@ PyTorch, TensorFlow, microservices, mandatory external databases in the evolutio
 | Runtime | PyTorch + `transformers` + `datasets` | Teacher/student + TinyStories data |
 | Student | ≤5M GPT-Neo-tiny | Speed/efficiency research |
 | Teacher | TinyStories-33M frozen | Fits 8 GiB; KD + judge |
-| Tests | pytest | Contract tests for scorers / BoN / MAE / H-SUP |
+| Tests | pytest | Contract tests for scorers / BoN / MAE / H-SUP / H-SPEC accept |
 | Protocol | [NANO-LM-TRACK.md](NANO-LM-TRACK.md), [NANO-STUDENT-AGENDA.md](NANO-STUDENT-AGENDA.md) | Decode + student agenda |
 
 Does **not** link into the C++ Domain. Install: `pip install -r nano_lm/requirements.txt`.
