@@ -28,6 +28,7 @@ H-FOS gate: teacher_lp > H-SEL (fossil resurrect vs no-resurrect).
 H-ZOM gate: no diverge and teacher_lp > H-SEL (zombie reinject).
 H-LOTU gate: teacher_lp > H-SEL (underdog lottery vs truncation).
 H-GLD gate: teacher_lp > H-FIT (Goldilocks vs max-lp fitness).
+H-SEA gate: teacher_lp > H-FIT (seasonal vs fixed H-FIT).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -61,6 +62,7 @@ H-GLD gate: teacher_lp > H-FIT (Goldilocks vs max-lp fitness).
 | H-ZOM | -17.4219 | -0.3301 | 52 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-LOTU | -17.2746 | -0.1828 | 54 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-GLD | -16.8318 | +0.2600 | 39 | — | 3 | KILL / hold (≤ max-lp fitness) |
+| H-SEA | -17.3290 | -0.2373 | 40 | — | 3 | KILL / hold (≤ max-lp fitness) |
 | H-ENT | -16.9916 | +0.1002 | 57 | — | 3 | KILL (collapsed to one head) |
 | KD-cos | -17.3873 | -0.2955 | 63 | — | 3 | schedule control (cosine KD) |
 | H-ANN | -17.3793 | -0.2876 | 41 | — | 3 | PROMOTE (beats cosine KD) |
@@ -100,6 +102,7 @@ H-GLD gate: teacher_lp > H-FIT (Goldilocks vs max-lp fitness).
 - H-ZOM smoke detail: `docs/results/nano-lm/hzom-vs-hsel.md`.
 - H-LOTU smoke detail: `docs/results/nano-lm/hlotu-vs-hsel.md`.
 - H-GLD smoke detail: `docs/results/nano-lm/hgld-vs-hfit.md`.
+- H-SEA smoke detail: `docs/results/nano-lm/hsea-vs-hfit.md`.
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
