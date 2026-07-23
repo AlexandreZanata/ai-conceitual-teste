@@ -70,7 +70,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-CAT | Catastrophe: wipe all but top-1 + immigrants | ≤ steady H-SEL — **smoke KILL/hold** |
 | H-HIB | Hibernation: skip eval; inherit parent fit × decay | Cheating / ≤ H-SEL — **smoke KILL/hold** |
 | H-SHO | Shock: reinit one random child layer after mutate | ≤ plain mutate — **smoke PROMOTE** (beats H-SEL; tentative) |
-| H-HOLD | Select on fit prompts; eval on disjoint claim prompts | Overfit train≫eval or ≤ B2 — **smoke PROMOTE** (beats B2; no overfit; tentative) |
+| H-HOLD | Select on fit prompts; eval on disjoint claim prompts | Overfit train≫eval or ≤ B2 — **smoke PROMOTE**; **formal KILL** (overfit + ≤ B2) |
 | H-FXS | H-FIT fitness + H-XOV crossover + H-SHO shock | ≤ max(H-FIT,H-XOV) — **smoke KILL/hold** |
 | H-LOFI | CE-rank pop; teacher_lp rescore top-k only | Quality < H-FIT or no wall save — **smoke KILL** (wall save; quality↓) |
 | H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE** (beats B4; tentative) |
@@ -173,6 +173,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 38 | H-LOFI CE top-k + teacher rescore vs H-FIT (smoke KILL — quality↓) |
 | 39 | H-ENT2 dual-head TV floor vs B2 (smoke KILL — collapsed again) |
 | 40 | H-ENT3 max-TV + mix KD vs B2 (smoke KILL — collapsed) |
+| 41 | Formal H-HOLD vs B2 (KILL — overfit + reverse smoke Δ−1.84) |
 
 ## Success
 

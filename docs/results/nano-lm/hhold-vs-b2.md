@@ -12,12 +12,10 @@ Overfit kill if `train_fit − eval_lp` > 1.0 (any seed).
 
 **Decision: PROMOTE** (tentative) — beats B2 on disjoint eval; no overfit flag.
 Params ≤5M; `fit_prompt_ids`/`eval_prompt_ids` logged per seed.
-Formal reverse-check on `eval_prompts.yaml` still required before claim
-(smoke promotes have reversed before — e.g. H-SEL).
 
-Integrity note: holdout did **not** erase the smoke edge vs B2, so H-FIT’s
-smoke Δ is not explained by prompt leak alone at this budget. Still not a
-formal claim.
+**Formal reverse:** `docs/results/nano-lm/formal-hhold-vs-b2.md` — **KILL**
+(overfit on 2/3 seeds; also Δ−1.84 vs B2). Smoke promote reversed.
 
-Commands: `npm run nano:hold` → `npm run nano:matrix:report`.  
-Artifacts: `results/nano-lm/student-matrix/hold_smoke.json`, `HHOLD_seed*_train.json`.
+Commands: `npm run nano:hold` → `npm run nano:formal:hhold` → report.  
+Artifacts: `results/nano-lm/student-matrix/hold_smoke.json`; formal under
+`results/nano-lm/formal-hhold-b2/`.
