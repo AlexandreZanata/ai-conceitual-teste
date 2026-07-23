@@ -58,6 +58,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-SEX | Mate choice: high fit × high pairwise L2 | ≤ H-SEL / random pairing — **smoke KILL/hold** |
 | H-ANTI | Anti-selection: breed worst half only | ≤ H-SEL / B2 — **smoke KILL/hold** |
 | H-TAX | Wealth tax: scale elite weights ×(1−τ) | ≤ H-SEL — **smoke KILL/hold** |
+| H-CAN | Winner copies loser LayerNorm stats | No gain / NaN — **smoke KILL/hold** (tie) |
 | H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE** (beats B4; tentative) |
 
 ### B — Inference as learning
@@ -139,6 +140,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 21 | H-SEX mate choice vs H-SEL (smoke KILL/hold) |
 | 22 | H-ANTI anti-selection vs H-SEL (smoke KILL/hold) |
 | 23 | H-TAX wealth tax vs H-SEL (smoke KILL/hold) |
+| 24 | H-CAN LN cannibalism vs H-SEL (smoke KILL/hold — tie) |
 
 ## Success
 

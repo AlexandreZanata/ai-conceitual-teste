@@ -37,6 +37,7 @@ def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
             _flag_any(items, "diversity_collapsed"),
             _flag_any(items, "heads_collapsed"),
         ),
+        "nan": _flag_any(items, "had_nan"),
         "div_up_rate": sum(ups) / len(ups) if ups else float("nan"),
     }
 
@@ -70,6 +71,12 @@ def _decide_hfit(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
     if s["mean_lp"] > hsel["mean_lp"] + 1e-6:
         return "PROMOTE (beats H-SEL)"
     return "KILL / hold (≤ H-SEL)"
+
+
+def _decide_hcan(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
+    if s.get("nan", 0.0) > 0.0:
+        return "KILL (NaN)"
+    return _decide_hfit(s, stats)
 
 
 def _decide_hnic(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
@@ -155,6 +162,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-SEX": _decide_hfit,
     "H-ANTI": _decide_hfit,
     "H-TAX": _decide_hfit,
+    "H-CAN": _decide_hcan,
     "H-ENT": _decide_hent,
     "H-ANN": _decide_hann,
     "H-SPEC": _decide_hspec,
