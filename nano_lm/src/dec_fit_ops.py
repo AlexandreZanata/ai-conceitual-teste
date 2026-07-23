@@ -5,11 +5,14 @@ from __future__ import annotations
 import time
 from typing import Any
 
+import torch
+
 from decode_bon import decode_bon
 from decode_genes import Gene, clamp_gene
 from decode_mae import decode_mae
 from eval_student import teacher_mean_logprob
 from load_model import LoadedModel
+from train_ce import ce_loss
 
 
 def decode_with_gene(
@@ -112,4 +115,34 @@ def proxy_fitness_gene(
     for i, text in enumerate(prompts):
         result = decode_with_gene(g, student, tok, text, max_new, seed + i, device)
         scores.append(float(result.mean_logprob))
+    return sum(scores) / len(scores)
+
+
+def proxy_ce_fitness_gene(
+    gene: Gene,
+    *,
+    student: object,
+    tok: Any,
+    device: Any,
+    prompts: list[str],
+    max_new: int,
+    seed: int,
+) -> float:
+    """
+    GIVEN gene + prompts
+    WHEN scoring without teacher
+    THEN return mean −CE of student on prompt+completion (teacher-forced).
+    """
+    g = clamp_gene(gene)
+    scores: list[float] = []
+    for i, text in enumerate(prompts):
+        result = decode_with_gene(g, student, tok, text, max_new, seed + i, device)
+        prompt_ids = tok.encode(text, return_tensors="pt").to(device)
+        if not result.token_ids:
+            scores.append(float("-inf"))
+            continue
+        comp = torch.tensor([list(result.token_ids)], device=device, dtype=torch.long)
+        full = torch.cat([prompt_ids, comp], dim=1)
+        with torch.no_grad():
+            scores.append(-float(ce_loss(student(full).logits, full).item()))
     return sum(scores) / len(scores)

@@ -9,13 +9,18 @@ from typing import Any
 
 import yaml
 
-from dec_fit_ops import fitness_gene, proxy_fitness_gene
+from dec_fit_ops import fitness_gene, proxy_ce_fitness_gene, proxy_fitness_gene
 from decode_genes import clamp_gene, mutate_gene, random_gene
 from deck_ops import teacher_forward_budget, wall_saved
 from eval_student import load_student_ckpt
 from load_model import load_causal_lm
 from lofi_ops import top_k_indices
 from matrix_common import write_json
+
+_PROXY = {
+    "self_lp": proxy_fitness_gene,
+    "ce": proxy_ce_fitness_gene,
+}
 
 
 def _prompts(path: Path) -> list[str]:
@@ -37,7 +42,12 @@ def run_h_deck(
     out_meta: Path,
     top_k: int = 2,
     eval_max_new: int | None = None,
+    proxy: str = "self_lp",
+    hypothesis: str = "H-DECK",
 ) -> dict[str, Any]:
+    if proxy not in _PROXY:
+        raise ValueError(f"run_h_deck: unknown proxy {proxy!r}")
+    proxy_fn = _PROXY[proxy]
     rng = random.Random(seed)
     teacher = load_causal_lm(
         teacher_id, tokenizer_id, cache_dir=cache_dir, use_fp16=True
@@ -54,7 +64,7 @@ def run_h_deck(
     t0 = time.perf_counter()
     for gen in range(generations):
         proxies = [
-            proxy_fitness_gene(
+            proxy_fn(
                 g,
                 student=student,
                 tok=tok,
@@ -104,7 +114,8 @@ def run_h_deck(
         top_k=top_k,
     )
     meta = {
-        "hypothesis": "H-DECK",
+        "hypothesis": hypothesis,
+        "proxy": proxy,
         "top_k": top_k,
         "best_gene": best_gene,
         "best_fit": best_fit,
