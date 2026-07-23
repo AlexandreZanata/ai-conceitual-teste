@@ -64,6 +64,7 @@ npm run nano:orac            # H-ORAC teacher-oracle tip pick (bound)
 npm run nano:tkd             # H-TKD top-k sparse KD vs B2
 npm run nano:rep             # H-REP rep-penalty decode vs B4
 npm run nano:clip            # H-CLIP logit-clipped KD vs B2
+npm run nano:ls              # H-LS label-smoothed KD vs B2
 npm run nano:fit             # H-FIT teacher_lp fitness vs H-SEL
 npm run nano:tou             # H-TOU tournament selection vs H-SEL
 npm run nano:xov             # H-XOV weight crossover vs H-SEL
@@ -122,6 +123,7 @@ H-ORAC smoke: KILL vs tips (lp↑ but no dual wall) — see `docs/results/nano-l
 H-TKD: smoke PROMOTE / formal KILL (Δ−2.03) — `htkd-vs-b2.md`, `formal-htkd-vs-b2.md`.
 H-REP smoke: KILL vs B4 (lp↑ +0.53; no wall win) — see `docs/results/nano-lm/hrep-vs-b4.md`.
 H-CLIP smoke: KILL vs B2 (≤ B2 Δ−0.34) — see `docs/results/nano-lm/hclip-vs-b2.md`.
+H-LS smoke: KILL vs B2 (≤ B2 Δ+0.00) — see `docs/results/nano-lm/hls-vs-b2.md`.
 H-STACK smoke: KILL vs tips (≤ max tip quality) — see `docs/results/nano-lm/hstack-vs-tips.md`.
 H-FIT smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hfit-vs-hsel.md`.
 H-TOU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htou-vs-hsel.md`.
