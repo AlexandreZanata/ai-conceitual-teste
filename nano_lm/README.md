@@ -52,6 +52,7 @@ npm run nano:eli             # H-ELI strong elitism vs H-SEL
 npm run nano:ent             # H-ENT dual-head entanglement vs B2
 npm run nano:ann             # H-ANN anneal vs cosine KD
 npm run nano:heb             # H-HEB local Hebbian vs B2
+npm run nano:epi             # H-EPI context LR/masks vs B2
 npm run nano:fit             # H-FIT teacher_lp fitness vs H-SEL
 npm run nano:tou             # H-TOU tournament selection vs H-SEL
 npm run nano:xov             # H-XOV weight crossover vs H-SEL
@@ -98,6 +99,7 @@ H-ELI smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/heli-vs-hsel.md`.
 H-ENT smoke: KILL (head collapse) — see `docs/results/nano-lm/hent-vs-b2.md`.
 H-ANN: smoke/formal PROMOTE vs KD-cos (Δ+0.15 formal; ≪ B2) — `hann-vs-kdcos.md`, `formal-hann-vs-kdcos.md`.
 H-HEB smoke: KILL vs B2 (≤ B2; stable) — see `docs/results/nano-lm/hheb-vs-b2.md`.
+H-EPI smoke: KILL vs B2 (≤ fixed LR) — see `docs/results/nano-lm/hepi-vs-b2.md`.
 H-STACK smoke: KILL vs tips (≤ max tip quality) — see `docs/results/nano-lm/hstack-vs-tips.md`.
 H-FIT smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hfit-vs-hsel.md`.
 H-TOU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htou-vs-hsel.md`.

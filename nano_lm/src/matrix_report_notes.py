@@ -24,6 +24,7 @@ GATES = [
     "H-EARLY gate: teacher_lp ≥ B4−ε and wall_ms < B4 (confidence early-exit).",
     "H-STACK gate: lp ≥ max(H-EARLY,H-DECM)−ε and wall < min tips.",
     "H-HEB gate: not diverged and teacher_lp > B2 (local Hebbian).",
+    "H-EPI gate: teacher_lp > B2 (context LR/masks vs fixed LR).",
     "H-DECK gate: teacher_lp ≥ H-DEC−ε and wall_save (proxy+top-k search).",
     "H-DECK2 gate: best top_k∈{1,2,3} > H-DECK (k=2) equal pop×gens.",
     "H-PROXY2 gate: teacher_lp > H-DECK @ ≤ teacher_forwards (CE vs self-lp).",

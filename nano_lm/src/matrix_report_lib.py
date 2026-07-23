@@ -8,6 +8,7 @@ from typing import Any, Callable
 from hold_ops import decide_hhold
 from fxs_ops import decide_hfxs
 from heb_ops import decide_hheb
+from epi_ops import decide_hepi
 from lofi_ops import decide_hlofi
 from ent2_ops import decide_hent2
 from ent3_ops import decide_hent3
@@ -169,7 +170,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-FXS": decide_hfxs,
     "H-LOFI": decide_hlofi,
     "H-ENT2": decide_hent2,
-    "H-ENT3": decide_hent3, "H-HEB": decide_hheb,
+    "H-ENT3": decide_hent3, "H-HEB": decide_hheb, "H-EPI": decide_hepi,
 }
 for _fam in (
     "H-FIT", "H-TOU", "H-MUT", "H-RAN", "H-AGE", "H-MOR", "H-SPE",
