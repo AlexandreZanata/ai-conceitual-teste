@@ -61,6 +61,7 @@ npm run verify
 19. H-TOU tournament selection — done (smoke **KILL/hold** vs H-SEL)
 20. H-XOV weight crossover — done (smoke **PROMOTE** vs H-SEL, tentative)
 21. H-NIC fitness sharing — done (smoke **KILL/hold** vs H-SEL; diversity↑ but tie)
+22. H-MUT adaptive mutate scale — done (smoke **KILL/hold** vs H-SEL)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

@@ -39,6 +39,7 @@ def matrix_cfg() -> dict[str, Any]:
         "max_new_fit": 16,
         "tournament_k": 3,
         "niche_alpha": 1e-3,
+        "mut_adapt_factor": 1.2,
     }
 
 
