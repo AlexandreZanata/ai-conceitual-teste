@@ -48,8 +48,11 @@ npm run verify
 6. Learning technique matrix (phase 07) — done  
 7. Timed learning benchmarks (phase 08) — done  
 8. Benchmark report (phase 09) — done  
+9. Nano-LM track TinyStories AR vs BoN vs MAE (phase 10) — done (smoke)  
+10. Nano student + teacher agenda / matrix (phase 11) — done (smoke matrix)  
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
+**Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md`.  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
 
 ---

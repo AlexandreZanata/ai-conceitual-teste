@@ -76,8 +76,12 @@ for each generation:
 
 Every `.cpp` / `.hpp` must obey harness caps: **≤80 lines/function**, **≤200 lines/file**, **cyclomatic ≤10**. Prefer more files over larger files. Quality scanner must include C++ suffixes before the first C++ commit lands.
 
-## Non-goals
+## Non-goals (C++ EvoGen product)
 
 - Generic ML framework  
-- Heavy ML libraries (PyTorch, TensorFlow, etc.)  
+- Heavy ML libraries (PyTorch, TensorFlow, etc.) inside the evolutionary binary  
 - Microservices or mandatory external DB  
+
+## Side track — nano-LM (phase 10)
+
+[`nano_lm/`](../nano_lm/) is an **isolated** Python/PyTorch experiment: frozen TinyStories-1M + decode-method comparison (AR / Best-of-N / Lookahead MAE). It is **not** part of Domain aggregates (`Genome`, `Population`, …). Protocol: [NANO-LM-TRACK.md](NANO-LM-TRACK.md). 

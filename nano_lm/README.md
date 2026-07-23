@@ -1,0 +1,72 @@
+# nano_lm — TinyStories decode comparison track
+
+Isolated Python/PyTorch research track (not part of the C++ EvoGen domain).
+
+## Baseline
+
+- Model: [`roneneldan/TinyStories-1M`](https://huggingface.co/roneneldan/TinyStories-1M) (&lt;50M params)
+- Tokenizer: `EleutherAI/gpt-neo-125M`
+- Paper: Eldan & Li, [arXiv:2305.07759](https://arxiv.org/abs/2305.07759)
+
+## Methods
+
+| ID | Behavior |
+|----|----------|
+| `ar` | Temperature + top-p next-token sampling |
+| `bon` | Best-of-N full completions; pick max length-normalized log-prob |
+| `mae` | Lookahead multi-attempt evaluate: K candidate blocks, score by H-token future mean log-prob, commit winner |
+
+## Setup
+
+```bash
+python3 -m venv nano_lm/.venv
+source nano_lm/.venv/bin/activate
+pip install -r nano_lm/requirements.txt
+```
+
+## Terminal lab (live progress + GPU charts + comparison)
+
+```bash
+npm run nano:lab          # GPU-heavy config (batched BoN/MAE, fp16, live charts)
+npm run nano:lab:smoke    # lighter smoke config + live charts
+npm run nano:lab:bench    # formal bench + live charts
+```
+
+Dashboard shows: SM util / mem controller / VRAM / power bars, util+VRAM sparklines,
+per-CPU-core busy %, live AR vs BoN vs MAE table. Requires CUDA.
+
+Outputs under `results/nano-lm/<name>-lab/`.
+
+## Student + teacher matrix (phase 11)
+
+Agenda: [docs/NANO-STUDENT-AGENDA.md](../docs/NANO-STUDENT-AGENDA.md)
+
+```bash
+npm run nano:matrix          # B0–B2 + H-SEL/BON/MAE + H-SUP/INT smoke
+npm run nano:matrix:report   # kill/promote table → docs/results/nano-lm/
+npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
+npm run nano:formal:hsel:report
+```
+
+Teacher: TinyStories-33M (frozen). Student: ≤5M GPT-Neo-tiny.
+Formal note: smoke H-SEL promote was reversed — see `docs/results/nano-lm/formal-hsel-vs-b2.md`.
+
+## Commands
+
+```bash
+# Contract tests (no model download)
+cd nano_lm && .venv/bin/pytest tests/ -q
+
+# Smoke bench (downloads TinyStories-1M on first run)
+python src/run_bench.py configs/smoke.json
+
+# Aggregate
+python src/aggregate.py --runs ../results/nano-lm/smoke/runs.jsonl \
+  --out-md ../docs/results/nano-lm/smoke-summary.md
+```
+
+From repo root: `npm run nano:test`, `npm run nano:smoke`, `npm run nano:aggregate`, `npm run nano:lab`.
+
+## Protocol
+
+See [docs/NANO-LM-TRACK.md](../docs/NANO-LM-TRACK.md).

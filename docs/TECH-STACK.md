@@ -13,9 +13,22 @@
 | Tests | **Catch2 v3** (FetchContent) | Contract-first unit tests on Domain |
 | Quality | Lefthook + size/complexity scanner (+ clang-tidy when compile_commands present) | Harness caps |
 
-## Explicitly out of scope
+## Explicitly out of scope (C++ EvoGen core)
 
-PyTorch, TensorFlow, microservices, mandatory external databases.
+PyTorch, TensorFlow, microservices, mandatory external databases in the evolutionary binary.
+
+## Optional side track — `nano_lm/`
+
+| Piece | Choice | Why |
+|-------|--------|-----|
+| Language | Python 3.10+ | TinyStories / Hugging Face ecosystem |
+| Runtime | PyTorch + `transformers` + `datasets` | Teacher/student + TinyStories data |
+| Student | ≤5M GPT-Neo-tiny | Speed/efficiency research |
+| Teacher | TinyStories-33M frozen | Fits 8 GiB; KD + judge |
+| Tests | pytest | Contract tests for scorers / BoN / MAE / H-SUP |
+| Protocol | [NANO-LM-TRACK.md](NANO-LM-TRACK.md), [NANO-STUDENT-AGENDA.md](NANO-STUDENT-AGENDA.md) | Decode + student agenda |
+
+Does **not** link into the C++ Domain. Install: `pip install -r nano_lm/requirements.txt`.
 
 ## Optional persistence
 

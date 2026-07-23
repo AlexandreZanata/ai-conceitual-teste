@@ -1,0 +1,16 @@
+{
+  "model_id": "roneneldan/TinyStories-1M",
+  "tokenizer_id": "EleutherAI/gpt-neo-125M",
+  "teacher_model_id": "roneneldan/TinyStories-33M",
+  "prompts_path": "prompts/eval_prompts.yaml",
+  "methods": ["ar", "bon", "mae"],
+  "seeds": [0, 1, 2],
+  "max_new_tokens": 128,
+  "temperature": 0.8,
+  "top_p": 0.9,
+  "bon_n": 32,
+  "mae_k": 32,
+  "mae_block": 4,
+  "mae_horizon": 16,
+  "out_dir": "results/nano-lm/bench"
+}

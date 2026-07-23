@@ -1,0 +1,6 @@
+# Smoke subset (2 prompts) — same style as eval_prompts.yaml; formal bench uses full set.
+prompts:
+  - id: p01
+    text: "Once upon a time there was a little girl named Lily. She loved"
+  - id: p02
+    text: "One day, a boy found a magic key under a big oak tree. He"

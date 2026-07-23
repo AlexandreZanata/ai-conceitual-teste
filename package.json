@@ -17,6 +17,17 @@
     "bench:aggregate": "python3 scripts/aggregate_survival_bench.py --out-csv docs/results/survival-benchmark-summary.csv",
     "bench:curves": "python3 scripts/export_survival_curves.py",
     "report:validate": "python3 scripts/validate_benchmark_report.py",
+    "nano:test": "nano_lm/.venv/bin/python -m pytest nano_lm/tests -q",
+    "nano:smoke": "nano_lm/.venv/bin/python nano_lm/src/run_bench.py nano_lm/configs/smoke.json",
+    "nano:bench": "nano_lm/.venv/bin/python nano_lm/src/run_bench.py nano_lm/configs/bench.json",
+    "nano:aggregate": "nano_lm/.venv/bin/python nano_lm/src/aggregate.py --runs results/nano-lm/smoke/runs.jsonl --out-md docs/results/nano-lm/smoke-summary.md --out-csv docs/results/nano-lm/smoke-summary.csv",
+    "nano:lab": "nano_lm/.venv/bin/python nano_lm/src/lab.py configs/lab_gpu.json",
+    "nano:lab:smoke": "nano_lm/.venv/bin/python nano_lm/src/lab.py configs/smoke.json",
+    "nano:lab:bench": "nano_lm/.venv/bin/python nano_lm/src/lab.py configs/bench.json",
+    "nano:matrix": "nano_lm/.venv/bin/python nano_lm/src/run_matrix.py",
+    "nano:matrix:report": "nano_lm/.venv/bin/python nano_lm/src/write_matrix_report.py",
+    "nano:formal:hsel": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hsel.py",
+    "nano:formal:hsel:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hsel_report.py",
     "lint": "node --check web/app.js"
   },
   "devDependencies": {

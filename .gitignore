@@ -17,6 +17,11 @@ __pycache__/
 .venv/
 venv/
 *.pyc
+.pytest_cache/
+
+# nano_lm Hugging Face / torch caches (weights stay local)
+nano_lm/.cache/
+nano_lm/.hf_cache/
 
 # Node
 node_modules/
