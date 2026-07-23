@@ -9,10 +9,10 @@ from hold_ops import decide_hhold
 from fxs_ops import decide_hfxs
 from heb_ops import decide_hheb
 from epi_ops import decide_hepi
+from lot_ops import decide_hlot
 from lofi_ops import decide_hlofi
 from ent2_ops import decide_hent2
 from ent3_ops import decide_hent3
-
 EPS_LP = 0.05
 def _mean_optional(items: list[dict[str, Any]], key: str) -> float:
     vals = [float(x[key]) for x in items if x.get(key) is not None]
@@ -45,7 +45,6 @@ def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
         "mode_chaos": _flag_any(items, "mode_chaos"),
         "div_up_rate": sum(ups) / len(ups) if ups else float("nan"),
     }
-
 def _decide_hlam(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     if s.get("unstable", 0.0) > 0.0:
         return "KILL (unstable)"
@@ -170,7 +169,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-FXS": decide_hfxs,
     "H-LOFI": decide_hlofi,
     "H-ENT2": decide_hent2,
-    "H-ENT3": decide_hent3, "H-HEB": decide_hheb, "H-EPI": decide_hepi,
+    "H-ENT3": decide_hent3, "H-HEB": decide_hheb, "H-EPI": decide_hepi, "H-LOT": decide_hlot,
 }
 for _fam in (
     "H-FIT", "H-TOU", "H-MUT", "H-RAN", "H-AGE", "H-MOR", "H-SPE",
