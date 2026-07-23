@@ -111,6 +111,7 @@ npm run verify
 69. H-EARLY confidence early-exit — done (smoke/formal **PROMOTE** — Δ+2.66 vs B4 + wall win)
 70. Formal H-ANN vs KD-cos — done (**PROMOTE confirmed** — Δ+0.15; both still ≪ B2)
 71. H-STACK EARLY×DECM mixture claim — done (smoke **KILL** — ≤ max tip quality)
+72. H-HEB local Hebbian MLP — done (smoke **KILL** — ≤ B2; stable)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

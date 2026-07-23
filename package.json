@@ -67,6 +67,8 @@
     "nano:eli": "nano_lm/.venv/bin/python nano_lm/src/run_eli_smoke.py",
     "nano:ent": "nano_lm/.venv/bin/python nano_lm/src/run_ent_smoke.py",
     "nano:ann": "nano_lm/.venv/bin/python nano_lm/src/run_ann_smoke.py",
+    "nano:heb": "nano_lm/.venv/bin/python nano_lm/src/run_heb_smoke.py",
+    "nano:heb:report": "nano_lm/.venv/bin/python nano_lm/src/write_hheb_report.py",
     "nano:formal:hann": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hann.py",
     "nano:formal:hann:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hann_report.py",
     "nano:fit": "nano_lm/.venv/bin/python nano_lm/src/run_fit_smoke.py",
