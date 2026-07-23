@@ -22,6 +22,7 @@ H-SEX gate: teacher_lp > H-SEL (mate choice vs truncation).
 H-ANTI gate: teacher_lp > H-SEL (anti-selection vs truncation).
 H-TAX gate: teacher_lp > H-SEL (wealth tax vs no tax).
 H-CAN gate: no NaN and teacher_lp > H-SEL (LN cannibalism).
+H-PAR gate: parasite does not dominate and teacher_lp > H-SEL.
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -49,6 +50,7 @@ H-CAN gate: no NaN and teacher_lp > H-SEL (LN cannibalism).
 | H-ANTI | -17.6378 | -0.5461 | 69 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-TAX | -17.0837 | +0.0080 | 55 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-CAN | -17.0080 | +0.0838 | 60 | — | 3 | KILL / hold (≤ H-SEL) |
+| H-PAR | -17.6378 | -0.5461 | 54 | — | 3 | KILL (parasite dominates) |
 | H-ENT | -16.9916 | +0.1002 | 57 | — | 3 | KILL (collapsed to one head) |
 | KD-cos | -17.3873 | -0.2955 | 63 | — | 3 | schedule control (cosine KD) |
 | H-ANN | -17.3793 | -0.2876 | 41 | — | 3 | PROMOTE (beats cosine KD) |
@@ -82,6 +84,7 @@ H-CAN gate: no NaN and teacher_lp > H-SEL (LN cannibalism).
 - H-ANTI smoke detail: `docs/results/nano-lm/hanti-vs-hsel.md`.
 - H-TAX smoke detail: `docs/results/nano-lm/htax-vs-hsel.md`.
 - H-CAN smoke detail: `docs/results/nano-lm/hcan-vs-hsel.md`.
+- H-PAR smoke detail: `docs/results/nano-lm/hpar-vs-hsel.md`.
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

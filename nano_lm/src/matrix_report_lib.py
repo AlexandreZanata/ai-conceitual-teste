@@ -38,6 +38,7 @@ def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
             _flag_any(items, "heads_collapsed"),
         ),
         "nan": _flag_any(items, "had_nan"),
+        "parasite_dominates": _flag_any(items, "parasite_dominates"),
         "div_up_rate": sum(ups) / len(ups) if ups else float("nan"),
     }
 
@@ -76,6 +77,12 @@ def _decide_hfit(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
 def _decide_hcan(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     if s.get("nan", 0.0) > 0.0:
         return "KILL (NaN)"
+    return _decide_hfit(s, stats)
+
+
+def _decide_hpar(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
+    if s.get("parasite_dominates", 0.0) > 0.0:
+        return "KILL (parasite dominates)"
     return _decide_hfit(s, stats)
 
 
@@ -163,6 +170,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-ANTI": _decide_hfit,
     "H-TAX": _decide_hfit,
     "H-CAN": _decide_hcan,
+    "H-PAR": _decide_hpar,
     "H-ENT": _decide_hent,
     "H-ANN": _decide_hann,
     "H-SPEC": _decide_hspec,

@@ -46,6 +46,7 @@
     "nano:anti": "nano_lm/.venv/bin/python nano_lm/src/run_anti_smoke.py",
     "nano:tax": "nano_lm/.venv/bin/python nano_lm/src/run_tax_smoke.py",
     "nano:can": "nano_lm/.venv/bin/python nano_lm/src/run_can_smoke.py",
+    "nano:par": "nano_lm/.venv/bin/python nano_lm/src/run_par_smoke.py",
     "nano:formal:hsel": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hsel.py",
     "nano:formal:hsel:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hsel_report.py",
     "lint": "node --check web/app.js"
