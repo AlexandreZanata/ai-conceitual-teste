@@ -89,6 +89,8 @@
     "nano:orac:report": "nano_lm/.venv/bin/python nano_lm/src/write_horac_report.py",
     "nano:tkd": "nano_lm/.venv/bin/python nano_lm/src/run_tkd_smoke.py",
     "nano:tkd:report": "nano_lm/.venv/bin/python nano_lm/src/write_htkd_report.py",
+    "nano:rep": "nano_lm/.venv/bin/python nano_lm/src/run_rep_smoke.py",
+    "nano:rep:report": "nano_lm/.venv/bin/python nano_lm/src/write_hrep_report.py",
     "nano:formal:htkd": "nano_lm/.venv/bin/python nano_lm/src/run_formal_htkd.py",
     "nano:formal:htkd:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_htkd_report.py",
     "nano:formal:hdeb": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hdeb.py",

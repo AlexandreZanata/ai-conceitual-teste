@@ -80,9 +80,8 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-DECQ | Quantized T/top_p codebook + mixture claim | ≤ H-DECM / B4 — **smoke PROMOTE**; **formal KILL** |
 | H-DRAFT/H-BEAM | Evolved draft / beam knobs | No wall win — **smoke KILL** |
 | H-EARLY | Confidence early-exit / adaptive length | ≤ B4 / no wall — **smoke/formal PROMOTE** |
-| H-STACK | Early-gene elite mixture claim (EARLY×DECM) | ≤ max tip / no dual — **smoke KILL** |
-| H-ROUT | Conf-route frozen EARLY vs DECM tip genes | ≤ max tip / no dual — **smoke KILL** |
-| H-ORAC | Teacher-oracle EARLY/DECM pick (winner wall) | no dual / ≤ max tip — **smoke KILL** (wall) |
+| H-STACK/ROUT/ORAC | Tip dual / conf / oracle | no dual — **smoke KILL** |
+| H-REP | Grid HF repetition-penalty decode | ≤ B4 / no wall — **smoke KILL** (lp↑) |
 
 ### B — Inference as learning
 | ID | Mechanism | Kill if |
@@ -195,6 +194,6 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 58 | H-DECP per-prompt gene bank (**smoke PROMOTE**; **formal KILL** — ≤ GLOBAL) |
 | 59 | H-DECM elite gene mixture (**smoke/formal PROMOTE** — > H-LAT2 Δ+0.34) |
 | 60 | H-DECQ quantized gene codes (**smoke PROMOTE**; **formal KILL** — ≤ H-DECM) |
-| 61 | ORAC tip-dual KILL; H-TKD smoke↑ / **formal KILL** (Δ−2.03) |
+| 61 | TKD formal KILL; H-REP smoke **KILL** (lp↑, no wall vs B4) |
 ## Success
 ≥1 non-baseline H-ID improves teacher-judged quality **or** tokens/s vs B2 at fixed budget, with ablation. Negatives are logged wins for science.
