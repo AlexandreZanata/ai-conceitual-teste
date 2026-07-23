@@ -28,6 +28,7 @@ GATES = [
     "H-LOT gate: teacher_lp > B2; cliff if Δ < −0.5 (lottery ticket).",
     "H-HOP gate: teacher_lp > B2 (Hopfield prior vs AR/KD).",
     "H-BLK gate: lp ≥ B3−ε and wall < B3; crash if Δ < −0.5.",
+    "H-DIF gate: lp > B2 and wall ≤ 2×B2 and VRAM ≤ 7 GiB.",
     "H-DECK gate: teacher_lp ≥ H-DEC−ε and wall_save (proxy+top-k search).",
     "H-DECK2 gate: best top_k∈{1,2,3} > H-DECK (k=2) equal pop×gens.",
     "H-PROXY2 gate: teacher_lp > H-DECK @ ≤ teacher_forwards (CE vs self-lp).",
