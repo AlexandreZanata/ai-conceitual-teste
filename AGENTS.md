@@ -72,6 +72,7 @@ npm run verify
 30. H-CAN LN cannibalism — done (smoke **KILL/hold** vs H-SEL; tie)
 31. H-PAR parasite genome — done (smoke **KILL** — parasite dominates)
 32. H-SYM obligate pair — done (smoke **PROMOTE** vs H-SEL; tentative)
+33. H-FOS fossil vault — done (smoke **KILL/hold** vs H-SEL; tie)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

@@ -172,6 +172,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-CAN": _decide_hcan,
     "H-PAR": _decide_hpar,
     "H-SYM": _decide_hfit,
+    "H-FOS": _decide_hfit,
     "H-ENT": _decide_hent,
     "H-ANN": _decide_hann,
     "H-SPEC": _decide_hspec,
