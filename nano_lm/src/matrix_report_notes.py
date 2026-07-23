@@ -1,0 +1,24 @@
+"""Footer notes + gate blurbs for kill/promote matrix markdown."""
+
+NOTES = [
+    "## Notes",
+    "- Smoke budgets (few steps / small pop). Formal claims need longer runs.",
+    "- B3/B4/H-SPEC decode on B2 checkpoints; H-SPEC vs B3 on speed+quality.",
+    "- Per-hypothesis smoke detail: `docs/results/nano-lm/h*-vs-*.md`.",
+    "- H-DEC/H-LAT/H-DECK: `hdec-vs-b4.md`, `hlat-vs-b4.md`, `hdeck-vs-hdec.md`.",
+    "- H-SUP/H-INT rows are decode selection scores on teacher, not trained students.",
+    "- H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.",
+    "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
+]
+
+GATES = [
+    "H-SPEC gate: tokens/s > B3 and teacher_lp ≥ B3 − 0.05.",
+    "H-DEC gate: teacher_lp > B4 (evolved decode knobs).",
+    "H-LAT gate: teacher_lp ≥ B4−ε and wall_ms < B4 (latency-aware genes).",
+    "H-DECK gate: teacher_lp ≥ H-DEC−ε and wall_save (proxy+top-k search).",
+    "H-LAM gate: stable and teacher_lp > H-BAL.",
+    "Selection ops: teacher_lp > H-SEL unless noted (see agenda).",
+    "H-HOLD gate: no overfit and teacher_lp > B2 (holdout fit≠eval).",
+    "H-LOFI gate: teacher_lp ≥ H-FIT−ε and wall_save.",
+    "H-ENT* gate: heads not collapsed and teacher_lp > B2.",
+]

@@ -29,6 +29,10 @@
     "nano:spec": "nano_lm/.venv/bin/python nano_lm/src/run_spec_smoke.py",
     "nano:bal": "nano_lm/.venv/bin/python nano_lm/src/run_bal_smoke.py",
     "nano:dec": "nano_lm/.venv/bin/python nano_lm/src/run_dec_smoke.py",
+    "nano:lat": "nano_lm/.venv/bin/python nano_lm/src/run_lat_smoke.py",
+    "nano:lat:report": "nano_lm/.venv/bin/python nano_lm/src/write_hlat_report.py",
+    "nano:deck": "nano_lm/.venv/bin/python nano_lm/src/run_deck_smoke.py",
+    "nano:deck:report": "nano_lm/.venv/bin/python nano_lm/src/write_hdeck_report.py",
     "nano:lam": "nano_lm/.venv/bin/python nano_lm/src/run_lam_smoke.py",
     "nano:eli": "nano_lm/.venv/bin/python nano_lm/src/run_eli_smoke.py",
     "nano:ent": "nano_lm/.venv/bin/python nano_lm/src/run_ent_smoke.py",
@@ -78,6 +82,8 @@
     "nano:formal:hsho:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hsho_report.py",
     "nano:formal:hlam": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hlam.py",
     "nano:formal:hlam:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hlam_report.py",
+    "nano:formal:hdeck": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hdeck.py",
+    "nano:formal:hdeck:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hdeck_report.py",
     "lint": "node --check web/app.js"
   },
   "devDependencies": {
