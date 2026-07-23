@@ -10,6 +10,7 @@ from fxs_ops import decide_hfxs
 from heb_ops import decide_hheb
 from epi_ops import decide_hepi
 from lot_ops import decide_hlot
+from hop_ops import decide_hhop
 from lofi_ops import decide_hlofi
 from ent2_ops import decide_hent2
 from ent3_ops import decide_hent3
@@ -169,7 +170,8 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-FXS": decide_hfxs,
     "H-LOFI": decide_hlofi,
     "H-ENT2": decide_hent2,
-    "H-ENT3": decide_hent3, "H-HEB": decide_hheb, "H-EPI": decide_hepi, "H-LOT": decide_hlot,
+    "H-ENT3": decide_hent3, "H-HEB": decide_hheb, "H-EPI": decide_hepi,
+    "H-LOT": decide_hlot, "H-HOP": decide_hhop,
 }
 for _fam in (
     "H-FIT", "H-TOU", "H-MUT", "H-RAN", "H-AGE", "H-MOR", "H-SPE",
@@ -177,7 +179,6 @@ for _fam in (
     "H-SHO",
 ):
     _SPECIAL[_fam] = _decide_hfit
-
 def decision(fam: str, s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     if fam == "B2":
         return "BASELINE (claim gate)"

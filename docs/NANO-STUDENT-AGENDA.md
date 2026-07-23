@@ -109,7 +109,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 ### E — Memory / non-AR
 | ID | Mechanism | Kill if |
 |----|-----------|---------|
-| H-HOP | Tiny Hopfield prior | No gain vs deeper AR |
+| H-HOP | Tiny Hopfield prior | No gain vs deeper AR — **smoke PROMOTE**; **formal KILL** |
 | H-BLK | Block-parallel decode | Quality crash |
 | H-DIF | Discrete diffusion nano | Too slow/VRAM |
 
@@ -194,6 +194,6 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 59 | H-DECM elite gene mixture (**smoke/formal PROMOTE** — > H-LAT2 Δ+0.34) |
 | 60 | H-DECQ quantized gene codes (**smoke PROMOTE**; **formal KILL** — ≤ H-DECM) |
 | 61 | H-DRAFT/H-BEAM KILL; H-EARLY formal PROMOTE (Δ+2.66); H-STACK KILL |
-| 62 | H-HEB/H-EPI KILL; H-LOT smoke PROMOTE / **formal KILL** (cliff Δ−1.52) |
+| 62 | H-HEB/H-EPI KILL; H-LOT formal KILL; H-HOP smoke↑ / **formal KILL** |
 ## Success
 ≥1 non-baseline H-ID improves teacher-judged quality **or** tokens/s vs B2 at fixed budget, with ablation. Negatives are logged wins for science.
