@@ -79,6 +79,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-DECK2 | Sweep `top_k`∈{1,2,3} equal pop×gens | Best k ≤ H-DECK (k=2) — **smoke KILL**; **formal PROMOTE** (best k=1) |
 | H-PROXY2 | Teacher-forced CE proxy vs self-lp | ≤ H-DECK @forwards — **smoke PROMOTE**; **formal KILL** |
 | H-CASC | Proxy → short mid teacher → full top-k | No save or ≤ B4 — **smoke PROMOTE**; **formal PROMOTE** |
+| H-BAND | UCB1 over fixed gene arms (no mutate) | ≤ H-DECK/H-CASC — **smoke KILL** |
 
 ### B — Inference as learning
 
@@ -190,6 +191,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 50 | H-DECK2 top_k∈{1,2,3} ablation (**smoke KILL**; **formal PROMOTE** — best k=1 Δ+0.25 vs k=2) |
 | 51 | H-PROXY2 CE proxy vs H-DECK self-lp (**smoke PROMOTE**; **formal KILL** — Δ−0.11) |
 | 52 | H-CASC proxy→mid→full vs B4 (**smoke PROMOTE**; **formal PROMOTE** Δ+2.27) |
+| 53 | H-BAND UCB1 gene arms vs H-CASC/H-DECK (**smoke KILL**) |
 
 ## Success
 

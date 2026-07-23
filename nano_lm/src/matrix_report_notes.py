@@ -5,8 +5,7 @@ NOTES = [
     "- Smoke budgets (few steps / small pop). Formal claims need longer runs.",
     "- B3/B4/H-SPEC decode on B2 checkpoints; H-SPEC vs B3 on speed+quality.",
     "- Per-hypothesis smoke detail: `docs/results/nano-lm/h*-vs-*.md`.",
-    "- H-DEC/H-LAT/H-DECK/H-DECK2/H-PROXY2/H-CASC: see `h*-vs-*.md` under "
-    "`docs/results/nano-lm/`.",
+    "- Decode trunk H-DEC…H-BAND: see `h*-vs-*.md` under `docs/results/nano-lm/`.",
     "- H-SUP/H-INT rows are decode selection scores on teacher, not trained students.",
     "- H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
@@ -20,6 +19,7 @@ GATES = [
     "H-DECK2 gate: best top_k∈{1,2,3} > H-DECK (k=2) equal pop×gens.",
     "H-PROXY2 gate: teacher_lp > H-DECK @ ≤ teacher_forwards (CE vs self-lp).",
     "H-CASC gate: teacher_lp > B4 and wall_save (proxy→mid→full).",
+    "H-BAND gate: teacher_lp > max(H-DECK, H-CASC) (UCB1 arms).",
     "H-LAM gate: stable and teacher_lp > H-BAL.",
     "Selection ops: teacher_lp > H-SEL unless noted (see agenda).",
     "H-HOLD gate: no overfit and teacher_lp > B2 (holdout fit≠eval).",

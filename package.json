@@ -39,6 +39,8 @@
     "nano:proxy2:report": "nano_lm/.venv/bin/python nano_lm/src/write_hproxy2_report.py",
     "nano:casc": "nano_lm/.venv/bin/python nano_lm/src/run_casc_smoke.py",
     "nano:casc:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcasc_report.py",
+    "nano:band": "nano_lm/.venv/bin/python nano_lm/src/run_band_smoke.py",
+    "nano:band:report": "nano_lm/.venv/bin/python nano_lm/src/write_hband_report.py",
     "nano:lam": "nano_lm/.venv/bin/python nano_lm/src/run_lam_smoke.py",
     "nano:eli": "nano_lm/.venv/bin/python nano_lm/src/run_eli_smoke.py",
     "nano:ent": "nano_lm/.venv/bin/python nano_lm/src/run_ent_smoke.py",
@@ -96,6 +98,8 @@
     "nano:formal:hproxy2:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hproxy2_report.py",
     "nano:formal:hcasc": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hcasc.py",
     "nano:formal:hcasc:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hcasc_report.py",
+    "nano:formal:hband": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hband.py",
+    "nano:formal:hband:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hband_report.py",
     "lint": "node --check web/app.js"
   },
   "devDependencies": {
