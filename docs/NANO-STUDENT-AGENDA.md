@@ -57,6 +57,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-SPE | 2 islands + ring migrate top-1 | ≤ single-island H-SEL — **smoke KILL/hold** |
 | H-SEX | Mate choice: high fit × high pairwise L2 | ≤ H-SEL / random pairing — **smoke KILL/hold** |
 | H-ANTI | Anti-selection: breed worst half only | ≤ H-SEL / B2 — **smoke KILL/hold** |
+| H-TAX | Wealth tax: scale elite weights ×(1−τ) | ≤ H-SEL — **smoke KILL/hold** |
 | H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE** (beats B4; tentative) |
 
 ### B — Inference as learning
@@ -137,6 +138,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 20 | H-SPE island migration vs H-SEL (smoke KILL/hold) |
 | 21 | H-SEX mate choice vs H-SEL (smoke KILL/hold) |
 | 22 | H-ANTI anti-selection vs H-SEL (smoke KILL/hold) |
+| 23 | H-TAX wealth tax vs H-SEL (smoke KILL/hold) |
 
 ## Success
 

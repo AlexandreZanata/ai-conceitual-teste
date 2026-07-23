@@ -68,6 +68,7 @@ npm run verify
 26. H-SPE island speciation — done (smoke **KILL/hold** vs H-SEL)
 27. H-SEX mate choice — done (smoke **KILL/hold** vs H-SEL)
 28. H-ANTI anti-selection — done (smoke **KILL/hold** vs H-SEL)
+29. H-TAX wealth tax — done (smoke **KILL/hold** vs H-SEL)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

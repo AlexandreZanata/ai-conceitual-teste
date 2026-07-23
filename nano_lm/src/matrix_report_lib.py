@@ -154,6 +154,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-SPE": _decide_hfit,
     "H-SEX": _decide_hfit,
     "H-ANTI": _decide_hfit,
+    "H-TAX": _decide_hfit,
     "H-ENT": _decide_hent,
     "H-ANN": _decide_hann,
     "H-SPEC": _decide_hspec,
