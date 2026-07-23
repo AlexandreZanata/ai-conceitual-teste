@@ -102,6 +102,7 @@ npm run verify
 60. H-DECKL DECK+lat claim — done (smoke/formal **PROMOTE** — Pareto-dominates B4)
 61. H-POOL cross-seed warm-start — done (smoke/formal **PROMOTE** Δ+0.04 vs cold H-DECKL)
 62. H-PARE Pareto archive + knee claim — done (smoke/formal **PROMOTE** — Pareto-dominates B4 Δ+2.14)
+63. H-LAT2 λ≥0.4 + n≤2 clamp — done (smoke/formal **PROMOTE** — Δ+2.39 vs B4 + wall win)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

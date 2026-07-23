@@ -69,6 +69,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-LOFI | CE-rank pop; teacher_lp rescore top-k only | Quality < H-FIT or no wall save — **smoke KILL** (wall save; quality↓) |
 | H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE**; **formal PROMOTE** vs B4 |
 | H-LAT | Latency-aware gene fitness `lp − λ·log1p(wall)` | No wall win vs B4 — **smoke KILL** (lp↑, slower) |
+| H-LAT2 | H-LAT + λ≥0.4 + n≤2 clamp | No wall win vs B4 — **smoke/formal PROMOTE** |
 | H-DECK | Student proxy ranks genes; teacher rescores top-k | < H-DEC−ε or no save — **smoke PROMOTE**; **formal PROMOTE** vs B4 |
 | H-DECK2 | Sweep `top_k`∈{1,2,3} equal pop×gens | Best k ≤ H-DECK (k=2) — **smoke KILL**; **formal PROMOTE** (best k=1) |
 | H-PROXY2 | Teacher-forced CE proxy vs self-lp | ≤ H-DECK @forwards — **smoke PROMOTE**; **formal KILL** |
@@ -79,7 +80,6 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-PARE | Archive (lp, wall); claim knee of front | Empty front / ≤ B4 — **smoke/formal PROMOTE** |
 
 ### B — Inference as learning
-
 | ID | Mechanism | Kill if |
 |----|-----------|---------|
 | H-BON | Distill teacher-chosen BoN winners | No gain vs B2 |
@@ -87,7 +87,6 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-SPEC | Student draft; teacher accept/reject | No speedup or quality drop — **smoke KILL** (no speedup vs B3) |
 
 ### C — Quantum-inspired (classical only)
-
 | ID | Mechanism | Kill if |
 |----|-----------|---------|
 | H-SUP | Amplitude weights over K futures; collapse by \|α\|² / score | Uniform BoN ≥ |
@@ -98,7 +97,6 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-ANN | Annealing schedule vs cosine | Cosine wins — **smoke PROMOTE** (beats KD-cos by ~0.008; tentative) |
 
 ### D — Plasticity
-
 | ID | Mechanism | Kill if |
 |----|-----------|---------|
 | H-HEB | Local Hebbian layers | Diverges or ≪ B2 |
@@ -106,7 +104,6 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-LOT | Sparse lottery ticket | Quality cliff |
 
 ### E — Memory / non-AR
-
 | ID | Mechanism | Kill if |
 |----|-----------|---------|
 | H-HOP | Tiny Hopfield prior | No gain vs deeper AR |
@@ -114,7 +111,6 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-DIF | Discrete diffusion nano | Too slow/VRAM |
 
 ### F — Multi-agent
-
 | ID | Mechanism | Kill if |
 |----|-----------|---------|
 | H-ADV | Discriminator + teacher judge | Mode collapse |
@@ -190,5 +186,6 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 54 | H-DECKL DECK+lat claim vs B4 (**smoke/formal PROMOTE** — Pareto-dominates) |
 | 55 | H-POOL cross-seed warm-start (**smoke/formal PROMOTE** Δ+0.04 vs cold H-DECKL) |
 | 56 | H-PARE Pareto archive + knee claim (**smoke/formal PROMOTE** — dominates B4 Δ+2.14) |
+| 57 | H-LAT2 λ≥0.4 + n≤2 vs B4 (**smoke/formal PROMOTE** — Δ+2.39 + wall win) |
 ## Success
 ≥1 non-baseline H-ID improves teacher-judged quality **or** tokens/s vs B2 at fixed budget, with ablation. Negatives are logged wins for science.
