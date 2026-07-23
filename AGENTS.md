@@ -115,6 +115,7 @@ npm run verify
 73. H-EPI context LR/masks — done (smoke **KILL** — ≤ fixed LR / B2)
 74. H-LOT sparse lottery ticket — done (smoke **PROMOTE**; **formal KILL** — quality cliff Δ−1.52)
 75. H-HOP tiny Hopfield prior — done (smoke **PROMOTE**; **formal KILL** — Δ−0.40 vs B2)
+76. H-BLK block-parallel decode — done (smoke **KILL** — no wall win vs B3; Δ−0.04)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
