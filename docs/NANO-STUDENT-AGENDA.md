@@ -72,6 +72,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-SHO | Shock: reinit one random child layer after mutate | ≤ plain mutate — **smoke PROMOTE** (beats H-SEL; tentative) |
 | H-HOLD | Select on fit prompts; eval on disjoint claim prompts | Overfit train≫eval or ≤ B2 — **smoke PROMOTE** (beats B2; no overfit; tentative) |
 | H-FXS | H-FIT fitness + H-XOV crossover + H-SHO shock | ≤ max(H-FIT,H-XOV) — **smoke KILL/hold** |
+| H-LOFI | CE-rank pop; teacher_lp rescore top-k only | Quality < H-FIT or no wall save — **smoke KILL** (wall save; quality↓) |
 | H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE** (beats B4; tentative) |
 
 ### B — Inference as learning
@@ -167,6 +168,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 35 | H-SHO layer shock vs H-SEL (smoke PROMOTE tentative) |
 | 36 | H-HOLD holdout fitness vs B2 (smoke PROMOTE tentative; no overfit) |
 | 37 | H-FXS FIT×XOV×SHO stack vs max(FIT,XOV) (smoke KILL/hold) |
+| 38 | H-LOFI CE top-k + teacher rescore vs H-FIT (smoke KILL — quality↓) |
 
 ## Success
 

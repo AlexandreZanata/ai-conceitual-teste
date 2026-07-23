@@ -7,6 +7,7 @@ from typing import Any, Callable
 
 from hold_ops import decide_hhold
 from fxs_ops import decide_hfxs
+from lofi_ops import decide_hlofi
 
 EPS_LP = 0.05
 
@@ -40,6 +41,7 @@ def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
         "nan": _flag_any(items, "had_nan"),
         "parasite_dominates": _flag_any(items, "parasite_dominates"),
         "overfit": _flag_any(items, "overfit"),
+        "wall_save": _flag_any(items, "wall_save"),
         "div_up_rate": sum(ups) / len(ups) if ups else float("nan"),
     }
 
@@ -165,6 +167,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-SPEC": _decide_hspec,
     "H-HOLD": decide_hhold,
     "H-FXS": decide_hfxs,
+    "H-LOFI": decide_hlofi,
 }
 for _fam in (
     "H-FIT", "H-TOU", "H-MUT", "H-RAN", "H-AGE", "H-MOR", "H-SPE",

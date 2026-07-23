@@ -83,6 +83,7 @@ npm run verify
 41. H-SHO layer shock — done (smoke **PROMOTE** vs H-SEL; tentative)
 42. H-HOLD holdout fitness — done (smoke **PROMOTE** vs B2; no overfit; tentative)
 43. H-FXS FIT×XOV×SHO stack — done (smoke **KILL/hold** vs max(H-FIT,H-XOV))
+44. H-LOFI low-fidelity rescore — done (smoke **KILL** — wall save but quality < H-FIT)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

@@ -38,6 +38,7 @@ def matrix_cfg() -> dict[str, Any]:
         "ann_temp_end": 1.0,
         "max_new_fit": 16,
         "fit_prompts": ROOT / "prompts/fit_prompts.yaml",
+        "lofi_top_k": 2,
         "tournament_k": 3,
         "niche_alpha": 1e-3,
         "mut_adapt_factor": 1.2,
