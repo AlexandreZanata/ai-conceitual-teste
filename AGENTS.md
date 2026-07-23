@@ -81,6 +81,7 @@ npm run verify
 39. H-CAT catastrophe — done (smoke **KILL/hold** vs H-SEL)
 40. H-HIB hibernation — done (smoke **KILL/hold** vs H-SEL)
 41. H-SHO layer shock — done (smoke **PROMOTE** vs H-SEL; tentative)
+42. H-HOLD holdout fitness — done (smoke **PROMOTE** vs B2; no overfit; tentative)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

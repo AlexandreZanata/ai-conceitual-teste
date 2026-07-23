@@ -33,6 +33,7 @@ H-RPS gate: ≥2 niches and teacher_lp > H-SEL (RPS niches).
 H-CAT gate: teacher_lp > H-SEL (catastrophe vs steady).
 H-HIB gate: teacher_lp > H-SEL (hibernate vs full eval).
 H-SHO gate: teacher_lp > H-SEL (shock vs plain mutate).
+H-HOLD gate: no overfit and teacher_lp > B2 (holdout fit≠eval).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -71,6 +72,7 @@ H-SHO gate: teacher_lp > H-SEL (shock vs plain mutate).
 | H-CAT | -17.5397 | -0.4479 | 57 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-HIB | -17.4219 | -0.3301 | 54 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-SHO | -16.9601 | +0.1317 | 52 | — | 3 | PROMOTE (beats H-SEL) |
+| H-HOLD | -16.7060 | +0.3858 | 45 | — | 3 | PROMOTE (beats B2, holdout ok) |
 | H-ENT | -16.9916 | +0.1002 | 57 | — | 3 | KILL (collapsed to one head) |
 | KD-cos | -17.3873 | -0.2955 | 63 | — | 3 | schedule control (cosine KD) |
 | H-ANN | -17.3793 | -0.2876 | 41 | — | 3 | PROMOTE (beats cosine KD) |
@@ -115,6 +117,7 @@ H-SHO gate: teacher_lp > H-SEL (shock vs plain mutate).
 - H-CAT smoke detail: `docs/results/nano-lm/hcat-vs-hsel.md`.
 - H-HIB smoke detail: `docs/results/nano-lm/hhib-vs-hsel.md`.
 - H-SHO smoke detail: `docs/results/nano-lm/hsho-vs-hsel.md`.
+- H-HOLD smoke detail: `docs/results/nano-lm/hhold-vs-b2.md`.
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

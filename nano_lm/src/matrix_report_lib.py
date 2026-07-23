@@ -5,17 +5,16 @@ from __future__ import annotations
 from collections import defaultdict
 from typing import Any, Callable
 
-EPS_LP = 0.05
+from hold_ops import decide_hhold
 
+EPS_LP = 0.05
 
 def _mean_optional(items: list[dict[str, Any]], key: str) -> float:
     vals = [float(x[key]) for x in items if x.get(key) is not None]
     return sum(vals) / len(vals) if vals else float("nan")
 
-
 def _flag_any(items: list[dict[str, Any]], key: str) -> float:
     return 1.0 if any(bool(x.get(key)) for x in items) else 0.0
-
 
 def mean_by_family(rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
     buckets: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -23,26 +22,25 @@ def mean_by_family(rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
         buckets[r["family"]].append(r)
     return {fam: _family_stats(items) for fam, items in buckets.items()}
 
-
 def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
     lps = [float(x["teacher_mean_logprob"]) for x in items]
     ups = [float(bool(x["diversity_up"])) for x in items if "diversity_up" in x]
+    col = max(
+        _flag_any(items, k)
+        for k in ("diversity_collapsed", "heads_collapsed", "niche_collapsed")
+    )
     return {
         "mean_lp": sum(lps) / len(lps),
         "mean_wall": _mean_optional(items, "mean_wall_ms"),
         "mean_tps": _mean_optional(items, "mean_tokens_per_s"),
         "n": float(len(items)),
         "unstable": _flag_any(items, "unstable"),
-        "collapsed": max(
-            _flag_any(items, "diversity_collapsed"),
-            _flag_any(items, "heads_collapsed"),
-            _flag_any(items, "niche_collapsed"),
-        ),
+        "collapsed": col,
         "nan": _flag_any(items, "had_nan"),
         "parasite_dominates": _flag_any(items, "parasite_dominates"),
+        "overfit": _flag_any(items, "overfit"),
         "div_up_rate": sum(ups) / len(ups) if ups else float("nan"),
     }
-
 
 def _decide_hlam(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     if s.get("unstable", 0.0) > 0.0:
@@ -54,7 +52,6 @@ def _decide_hlam(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
         return "PROMOTE (beats H-BAL)"
     return "KILL (≤ H-BAL)"
 
-
 def _decide_heli(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     if s.get("collapsed", 0.0) > 0.0:
         return "KILL (diversity collapse)"
@@ -65,7 +62,6 @@ def _decide_heli(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
         return "PROMOTE (beats H-SEL, diversity ok)"
     return "KILL / hold (≤ H-SEL)"
 
-
 def _decide_hfit(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     hsel = stats.get("H-SEL")
     if hsel is None:
@@ -73,7 +69,6 @@ def _decide_hfit(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
     if s["mean_lp"] > hsel["mean_lp"] + 1e-6:
         return "PROMOTE (beats H-SEL)"
     return "KILL / hold (≤ H-SEL)"
-
 
 def _decide_hcan(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     if s.get("nan", 0.0) > 0.0:
@@ -91,12 +86,10 @@ def _decide_hgld(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
         return "PROMOTE (beats max-lp / H-FIT)"
     return "KILL / hold (≤ max-lp fitness)"
 
-
 def _decide_hrps(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     if s.get("collapsed", 0.0) > 0.0:
         return "KILL (collapsed to 1 niche)"
     return _decide_hfit(s, stats)
-
 
 def _decide_hnic(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     rate = s.get("div_up_rate", float("nan"))
@@ -169,6 +162,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-ENT": _decide_hent,
     "H-ANN": _decide_hann,
     "H-SPEC": _decide_hspec,
+    "H-HOLD": decide_hhold,
 }
 for _fam in (
     "H-FIT", "H-TOU", "H-MUT", "H-RAN", "H-AGE", "H-MOR", "H-SPE",

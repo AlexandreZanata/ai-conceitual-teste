@@ -75,6 +75,7 @@ npm run nano:rps             # H-RPS RPS niches vs H-SEL
 npm run nano:cat             # H-CAT catastrophe vs H-SEL
 npm run nano:hib             # H-HIB hibernation vs H-SEL
 npm run nano:sho             # H-SHO layer shock vs H-SEL
+npm run nano:hold            # H-HOLD holdout fitness vs B2
 npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
 npm run nano:formal:hsel:report
 ```
