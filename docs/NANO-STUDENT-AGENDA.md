@@ -87,9 +87,8 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 ### B — Inference as learning
 | ID | Mechanism | Kill if |
 |----|-----------|---------|
-| H-BON | Distill teacher-chosen BoN winners | No gain vs B2 |
-| H-MAE | Distill lookahead MAE commits | BoN distill cheaper/better |
-| H-SPEC | Student draft; teacher accept/reject | No speedup or quality drop — **smoke KILL** (no speedup vs B3) |
+| H-BON/H-MAE | Distill BoN / MAE winners | No gain vs B2 |
+| H-SPEC | Student draft; teacher accept/reject | No speedup — **smoke KILL** |
 | H-TKD | Top-k sparse KD (teacher mass on k) | ≤ B2 — **smoke PROMOTE**; **formal KILL** |
 
 ### C — Quantum-inspired (classical only)
