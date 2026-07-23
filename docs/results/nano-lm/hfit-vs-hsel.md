@@ -11,11 +11,11 @@ probe CE.
 | B2 | −17.09 | — | — | 3 |
 
 **Decision: PROMOTE (beats H-SEL)** — tentative smoke. Addresses formal H-SEL
-reverse (probe CE ≠ claim metric). Formal reverse-check still required before
-claims.
+reverse (probe CE ≠ claim metric).
 
-Train meta logs `fitness_kind`, `pop_size`, `generations`, `max_new_fit`, `history`.
-Student params ≈3.3M (≤5M).
+**Formal reverse:** `docs/results/nano-lm/formal-hfit-vs-b2.md` — **KILL**
+(overfit + Δ−1.84 vs B2; holdout fit≠eval).
 
-Commands: `npm run nano:fit` → `npm run nano:matrix:report`.  
-Artifacts: `results/nano-lm/student-matrix/fit_smoke.json`, `HFIT_seed*_train.json`.
+Commands: `npm run nano:fit` → `npm run nano:formal:hfit` → report.  
+Artifacts: `results/nano-lm/student-matrix/fit_smoke.json`; formal under
+`results/nano-lm/formal-hfit-b2/`.

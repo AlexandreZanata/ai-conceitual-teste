@@ -80,3 +80,25 @@ def test_given_better_hxov_when_formal_then_promote():
         },
     }
     assert decide_formal_vs_b2("H-XOV", stats) == "PROMOTE confirmed (H-XOV > B2)"
+
+
+def test_given_overfit_hfit_when_formal_then_kill():
+    stats = {
+        "B2": {"lp": -15.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-FIT": {
+            "lp": -14.0, "wall": 90.0, "n": 3.0, "overfit": 1.0, "collapsed": 0.0
+        },
+    }
+    assert decide_formal_vs_b2("H-FIT", stats) == "KILL (overfit; H-FIT)"
+
+
+def test_given_worse_hfit_when_formal_then_reverse():
+    stats = {
+        "B2": {"lp": -14.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-FIT": {
+            "lp": -16.0, "wall": 90.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0
+        },
+    }
+    assert decide_formal_vs_b2("H-FIT", stats) == (
+        "KILL / reverse smoke (H-FIT ≤ B2)"
+    )

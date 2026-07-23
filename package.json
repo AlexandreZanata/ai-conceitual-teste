@@ -68,6 +68,8 @@
     "nano:formal:hhold:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hhold_report.py",
     "nano:formal:hxov": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hxov.py",
     "nano:formal:hxov:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hxov_report.py",
+    "nano:formal:hfit": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hfit.py",
+    "nano:formal:hfit:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hfit_report.py",
     "lint": "node --check web/app.js"
   },
   "devDependencies": {

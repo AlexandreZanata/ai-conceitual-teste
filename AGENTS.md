@@ -57,7 +57,7 @@ npm run verify
 15. H-ELI strong elitism — done (smoke **KILL/hold** vs H-SEL)
 16. H-ENT dual-head entanglement — done (smoke **KILL**, head collapse)
 17. H-ANN anneal vs cosine KD — done (smoke **PROMOTE** vs KD-cos, tentative)
-18. H-FIT teacher_lp fitness — done (smoke **PROMOTE** vs H-SEL, tentative)
+18. H-FIT teacher_lp fitness — done (smoke **PROMOTE**; **formal KILL** vs B2 — overfit + Δ−1.84)
 19. H-TOU tournament selection — done (smoke **KILL/hold** vs H-SEL)
 20. H-XOV weight crossover — done (smoke **PROMOTE**; **formal KILL** vs B2 Δ−1.65)
 21. H-NIC fitness sharing — done (smoke **KILL/hold** vs H-SEL; diversity↑ but tie)
@@ -88,6 +88,7 @@ npm run verify
 46. H-ENT3 max-TV + mix KD — done (smoke **KILL** — collapsed)
 47. Formal H-HOLD vs B2 — done (**KILL** — overfit + reverse smoke; Δ−1.84)
 48. Formal H-XOV vs B2 — done (**KILL** — reverse smoke; Δ−1.65; no collapse)
+49. Formal H-FIT vs B2 — done (**KILL** — overfit + reverse smoke; Δ−1.84)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

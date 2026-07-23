@@ -46,7 +46,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-BAL | Lifetime GD + Darwinian inherit | No faster than H-SEL/B2 — **smoke KILL/hold** (≤ B2) |
 | H-LAM | Phenotype → genotype write-back | Unstable or loses to H-BAL — **smoke PROMOTE** (beats H-BAL; tentative) |
 | H-ELI | Strong elitism | Diversity collapse + worse OOD — **smoke KILL/hold** (≤ H-SEL; no collapse) |
-| H-FIT | Fitness = teacher_lp on completions (not probe CE) | ≤ H-SEL — **smoke PROMOTE** (beats H-SEL; tentative) |
+| H-FIT | Fitness = teacher_lp on completions (not probe CE) | ≤ H-SEL — **smoke PROMOTE**; **formal KILL** (overfit + ≤ B2) |
 | H-TOU | Tournament selection (k=3) vs truncation | ≤ H-SEL — **smoke KILL/hold** |
 | H-XOV | Uniform weight crossover then mutate | ≤ H-SEL / collapse — **smoke PROMOTE**; **formal KILL** (≤ B2) |
 | H-NIC | Fitness sharing by weight-space crowding | No diversity↑ or quality↓ — **smoke KILL/hold** (tie vs H-SEL; diversity↑) |
@@ -144,7 +144,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 9 | H-ELI strong elitism vs H-SEL (smoke KILL/hold — ≤ H-SEL) |
 | 10 | H-ENT dual heads (smoke KILL — collapsed to one head) |
 | 11 | H-ANN anneal vs cosine KD (smoke PROMOTE tentative) |
-| 12 | H-FIT teacher_lp fitness vs H-SEL (smoke PROMOTE tentative) |
+| 12 | H-FIT teacher_lp fitness vs H-SEL (smoke PROMOTE; **formal KILL** — overfit + Δ−1.84) |
 | 13 | H-TOU tournament vs H-SEL truncation (smoke KILL/hold) |
 | 14 | H-XOV weight crossover vs H-SEL (smoke PROMOTE; **formal KILL** — Δ−1.65 vs B2) |
 | 15 | H-NIC fitness sharing vs H-SEL (smoke KILL/hold — tie) |
@@ -175,6 +175,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 40 | H-ENT3 max-TV + mix KD vs B2 (smoke KILL — collapsed) |
 | 41 | Formal H-HOLD vs B2 (KILL — overfit + reverse smoke Δ−1.84) |
 | 42 | Formal H-XOV vs B2 (KILL — reverse smoke Δ−1.65; no collapse) |
+| 43 | Formal H-FIT vs B2 (KILL — overfit + reverse smoke Δ−1.84) |
 
 ## Success
 
