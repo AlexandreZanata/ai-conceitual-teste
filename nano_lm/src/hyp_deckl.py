@@ -10,13 +10,14 @@ from typing import Any
 import yaml
 
 from dec_fit_ops import fitness_gene_detail, proxy_fitness_gene
-from decode_genes import clamp_gene, mutate_gene, random_gene
+from decode_genes import Gene, clamp_gene, mutate_gene, random_gene
 from deck_ops import teacher_forward_budget, wall_saved
 from eval_student import load_student_ckpt
 from lat_ops import latency_aware_score
 from load_model import load_causal_lm
 from lofi_ops import top_k_indices
 from matrix_common import write_json
+from pool_ops import warm_start_pop
 
 
 def _prompts(path: Path) -> list[str]:
@@ -39,6 +40,8 @@ def run_h_deckl(
     top_k: int = 1,
     lam: float = 0.15,
     eval_max_new: int | None = None,
+    init_genes: list[Gene] | None = None,
+    hypothesis: str = "H-DECKL",
 ) -> dict[str, Any]:
     rng = random.Random(seed)
     teacher = load_causal_lm(
@@ -48,7 +51,10 @@ def run_h_deckl(
     device = teacher.device
     student = load_student_ckpt(student_ckpt, tok, device)
     prompts = _prompts(prompts_path)
-    pop = [random_gene(rng) for _ in range(pop_size)]
+    if init_genes:
+        pop = warm_start_pop(init_genes, pop_size, rng)
+    else:
+        pop = [random_gene(rng) for _ in range(pop_size)]
     history: list[dict[str, Any]] = []
     best_gene = pop[0]
     best_score = float("-inf")
@@ -118,7 +124,8 @@ def run_h_deckl(
         top_k=top_k,
     )
     meta = {
-        "hypothesis": "H-DECKL",
+        "hypothesis": hypothesis,
+        "warm_start": bool(init_genes),
         "top_k": top_k,
         "lam": lam,
         "best_gene": best_gene,

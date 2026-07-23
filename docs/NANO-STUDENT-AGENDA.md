@@ -81,6 +81,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-CASC | Proxy → short mid teacher → full top-k | No save or ≤ B4 — **smoke PROMOTE**; **formal PROMOTE** |
 | H-BAND | UCB1 over fixed gene arms (no mutate) | ≤ H-DECK/H-CASC — **smoke KILL** |
 | H-DECKL | DECK search; lat-aware claim (Pareto) | Dominated vs B4 — **smoke/formal PROMOTE** |
+| H-POOL | Warm-start pop from other seeds’ best genes | ≤ cold H-DECKL — **smoke/formal PROMOTE** |
 
 ### B — Inference as learning
 
@@ -194,7 +195,6 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 52 | H-CASC proxy→mid→full vs B4 (**smoke PROMOTE**; **formal PROMOTE** Δ+2.27) |
 | 53 | H-BAND UCB1 gene arms vs H-CASC/H-DECK (**smoke KILL**) |
 | 54 | H-DECKL DECK+lat claim vs B4 (**smoke/formal PROMOTE** — Pareto-dominates) |
-
+| 55 | H-POOL cross-seed warm-start (**smoke/formal PROMOTE** Δ+0.04 vs cold H-DECKL) |
 ## Success
-
 ≥1 non-baseline H-ID improves teacher-judged quality **or** tokens/s vs B2 at fixed budget, with ablation. Negatives are logged wins for science.

@@ -43,6 +43,8 @@
     "nano:band:report": "nano_lm/.venv/bin/python nano_lm/src/write_hband_report.py",
     "nano:deckl": "nano_lm/.venv/bin/python nano_lm/src/run_deckl_smoke.py",
     "nano:deckl:report": "nano_lm/.venv/bin/python nano_lm/src/write_hdeckl_report.py",
+    "nano:pool": "nano_lm/.venv/bin/python nano_lm/src/run_pool_smoke.py",
+    "nano:pool:report": "nano_lm/.venv/bin/python nano_lm/src/write_hpool_report.py",
     "nano:lam": "nano_lm/.venv/bin/python nano_lm/src/run_lam_smoke.py",
     "nano:eli": "nano_lm/.venv/bin/python nano_lm/src/run_eli_smoke.py",
     "nano:ent": "nano_lm/.venv/bin/python nano_lm/src/run_ent_smoke.py",
@@ -104,6 +106,8 @@
     "nano:formal:hband:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hband_report.py",
     "nano:formal:hdeckl": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hdeckl.py",
     "nano:formal:hdeckl:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hdeckl_report.py",
+    "nano:formal:hpool": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hpool.py",
+    "nano:formal:hpool:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hpool_report.py",
     "lint": "node --check web/app.js"
   },
   "devDependencies": {
