@@ -49,6 +49,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-FIT | Fitness = teacher_lp on completions (not probe CE) | ≤ H-SEL — **smoke PROMOTE** (beats H-SEL; tentative) |
 | H-TOU | Tournament selection (k=3) vs truncation | ≤ H-SEL — **smoke KILL/hold** |
 | H-XOV | Uniform weight crossover then mutate | ≤ H-SEL / collapse — **smoke PROMOTE** (beats H-SEL; tentative) |
+| H-NIC | Fitness sharing by weight-space crowding | No diversity↑ or quality↓ — **smoke KILL/hold** (tie vs H-SEL; diversity↑) |
 | H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE** (beats B4; tentative) |
 
 ### B — Inference as learning
@@ -121,6 +122,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 12 | H-FIT teacher_lp fitness vs H-SEL (smoke PROMOTE tentative) |
 | 13 | H-TOU tournament vs H-SEL truncation (smoke KILL/hold) |
 | 14 | H-XOV weight crossover vs H-SEL (smoke PROMOTE tentative) |
+| 15 | H-NIC fitness sharing vs H-SEL (smoke KILL/hold — tie) |
 
 ## Success
 

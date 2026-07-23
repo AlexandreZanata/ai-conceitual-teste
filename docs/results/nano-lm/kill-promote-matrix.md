@@ -12,6 +12,7 @@ H-ANN gate: teacher_lp > KD-cos (cosine schedule control).
 H-FIT gate: teacher_lp > H-SEL (claim-aligned fitness).
 H-TOU gate: teacher_lp > H-SEL (tournament vs truncation).
 H-XOV gate: no diversity collapse and teacher_lp > H-SEL.
+H-NIC gate: diversity↑ and teacher_lp > H-SEL.
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -29,6 +30,7 @@ H-XOV gate: no diversity collapse and teacher_lp > H-SEL.
 | H-FIT | -16.8318 | +0.2600 | 38 | — | 3 | PROMOTE (beats H-SEL) |
 | H-TOU | -17.4219 | -0.3301 | 56 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-XOV | -16.2818 | +0.8100 | 53 | — | 3 | PROMOTE (beats H-SEL, diversity ok) |
+| H-NIC | -17.0080 | +0.0838 | 62 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-ENT | -16.9916 | +0.1002 | 57 | — | 3 | KILL (collapsed to one head) |
 | KD-cos | -17.3873 | -0.2955 | 63 | — | 3 | schedule control (cosine KD) |
 | H-ANN | -17.3793 | -0.2876 | 41 | — | 3 | PROMOTE (beats cosine KD) |
@@ -52,6 +54,7 @@ H-XOV gate: no diversity collapse and teacher_lp > H-SEL.
 - H-FIT smoke detail: `docs/results/nano-lm/hfit-vs-hsel.md`.
 - H-TOU smoke detail: `docs/results/nano-lm/htou-vs-hsel.md`.
 - H-XOV smoke detail: `docs/results/nano-lm/hxov-vs-hsel.md`.
+- H-NIC smoke detail: `docs/results/nano-lm/hnic-vs-hsel.md`.
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

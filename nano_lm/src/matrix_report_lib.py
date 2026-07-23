@@ -26,6 +26,7 @@ def mean_by_family(rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
 
 def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
     lps = [float(x["teacher_mean_logprob"]) for x in items]
+    ups = [float(bool(x["diversity_up"])) for x in items if "diversity_up" in x]
     return {
         "mean_lp": sum(lps) / len(lps),
         "mean_wall": _mean_optional(items, "mean_wall_ms"),
@@ -36,6 +37,7 @@ def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
             _flag_any(items, "diversity_collapsed"),
             _flag_any(items, "heads_collapsed"),
         ),
+        "div_up_rate": sum(ups) / len(ups) if ups else float("nan"),
     }
 
 
@@ -67,6 +69,18 @@ def _decide_hfit(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
         return "needs H-SEL control"
     if s["mean_lp"] > hsel["mean_lp"] + 1e-6:
         return "PROMOTE (beats H-SEL)"
+    return "KILL / hold (≤ H-SEL)"
+
+
+def _decide_hnic(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
+    rate = s.get("div_up_rate", float("nan"))
+    if rate == rate and rate < 1.0 - 1e-9:
+        return "KILL (no diversity↑)"
+    hsel = stats.get("H-SEL")
+    if hsel is None:
+        return "needs H-SEL control"
+    if s["mean_lp"] > hsel["mean_lp"] + 1e-6:
+        return "PROMOTE (beats H-SEL, diversity↑)"
     return "KILL / hold (≤ H-SEL)"
 
 
@@ -130,6 +144,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-LAM": _decide_hlam,
     "H-ELI": _decide_heli,
     "H-XOV": _decide_heli,
+    "H-NIC": _decide_hnic,
     "H-FIT": _decide_hfit,
     "H-TOU": _decide_hfit,
     "H-ENT": _decide_hent,
