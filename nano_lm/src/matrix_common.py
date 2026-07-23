@@ -43,6 +43,8 @@ def matrix_cfg() -> dict[str, Any]:
         "age_layers": 2,
         "immigrants_per_gen": 1,
         "mortality_fraction": 0.25,
+        "n_islands": 2,
+        "migrate_every": 2,
     }
 
 
