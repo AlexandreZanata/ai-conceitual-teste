@@ -34,23 +34,30 @@ def means_by_family(rows: Sequence[Mapping[str, Any]]) -> dict[str, dict[str, fl
     return out
 
 
-def decide_formal_vs_b2(
-    hyp: str, stats: Mapping[str, Mapping[str, float]]
+def decide_formal_vs_control(
+    hyp: str, control: str, stats: Mapping[str, Mapping[str, float]]
 ) -> str:
     """
-    GIVEN formal stats for hyp and B2
+    GIVEN formal stats for hyp and named control
     WHEN deciding claim
-    THEN KILL on collapse/overfit or ≤ B2; else PROMOTE confirmed.
+    THEN KILL on collapse/overfit or ≤ control; else PROMOTE confirmed.
     """
     if hyp not in stats:
         return f"needs {hyp} rows"
-    if "B2" not in stats:
-        return "needs B2 control"
+    if control not in stats:
+        return f"needs {control} control"
     if float(stats[hyp].get("collapsed", 0.0)) > 0.0:
         return f"KILL (collapse; {hyp})"
     if float(stats[hyp].get("overfit", 0.0)) > 0.0:
         return f"KILL (overfit; {hyp})"
-    delta = float(stats[hyp]["lp"]) - float(stats["B2"]["lp"])
+    delta = float(stats[hyp]["lp"]) - float(stats[control]["lp"])
     if delta > 0.0:
-        return f"PROMOTE confirmed ({hyp} > B2)"
-    return f"KILL / reverse smoke ({hyp} ≤ B2)"
+        return f"PROMOTE confirmed ({hyp} > {control})"
+    return f"KILL / reverse smoke ({hyp} ≤ {control})"
+
+
+def decide_formal_vs_b2(
+    hyp: str, stats: Mapping[str, Mapping[str, float]]
+) -> str:
+    """Claim gate vs B2 (wrapper)."""
+    return decide_formal_vs_control(hyp, "B2", stats)

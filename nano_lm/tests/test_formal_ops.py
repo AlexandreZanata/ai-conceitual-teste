@@ -14,7 +14,11 @@ SRC = Path(__file__).resolve().parents[1] / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
-from formal_ops import decide_formal_vs_b2, means_by_family
+from formal_ops import (
+    decide_formal_vs_b2,
+    decide_formal_vs_control,
+    means_by_family,
+)
 
 
 def test_given_rows_when_means_then_family_lp():
@@ -124,3 +128,37 @@ def test_given_worse_hsym_when_formal_then_reverse():
     assert decide_formal_vs_b2("H-SYM", stats) == (
         "KILL / reverse smoke (H-SYM ≤ B2)"
     )
+
+
+def test_given_better_hdec_when_formal_then_promote_vs_b4():
+    stats = {
+        "B4": {"lp": -17.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-DEC": {
+            "lp": -16.5, "wall": 90.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0
+        },
+    }
+    assert decide_formal_vs_control("H-DEC", "B4", stats) == (
+        "PROMOTE confirmed (H-DEC > B4)"
+    )
+
+
+def test_given_worse_hdec_when_formal_then_reverse_vs_b4():
+    stats = {
+        "B4": {"lp": -16.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-DEC": {
+            "lp": -17.0, "wall": 90.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0
+        },
+    }
+    assert decide_formal_vs_control("H-DEC", "B4", stats) == (
+        "KILL / reverse smoke (H-DEC ≤ B4)"
+    )
+
+
+def test_given_overfit_hdec_when_formal_then_kill():
+    stats = {
+        "B4": {"lp": -17.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-DEC": {
+            "lp": -16.0, "wall": 90.0, "n": 3.0, "overfit": 1.0, "collapsed": 0.0
+        },
+    }
+    assert decide_formal_vs_control("H-DEC", "B4", stats) == "KILL (overfit; H-DEC)"

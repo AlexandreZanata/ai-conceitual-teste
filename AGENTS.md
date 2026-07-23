@@ -52,7 +52,7 @@ npm run verify
 10. Nano student + teacher agenda / matrix (phase 11) — done (smoke matrix)  
 11. H-SPEC speculative decode vs B3/B4 — done (smoke **KILL**, no speedup)
 12. H-BAL Baldwin lifetime GD — done (smoke **KILL/hold**, ≤ B2)
-13. H-DEC evolve decode knobs — done (smoke **PROMOTE** vs B4, tentative)
+13. H-DEC evolve decode knobs — done (smoke **PROMOTE**; **formal PROMOTE** vs B4 Δ+2.43)
 14. H-LAM Lamarckian write-back — done (smoke **PROMOTE** vs H-BAL, tentative)
 15. H-ELI strong elitism — done (smoke **KILL/hold** vs H-SEL)
 16. H-ENT dual-head entanglement — done (smoke **KILL**, head collapse)
@@ -90,6 +90,7 @@ npm run verify
 48. Formal H-XOV vs B2 — done (**KILL** — reverse smoke; Δ−1.65; no collapse)
 49. Formal H-FIT vs B2 — done (**KILL** — overfit + reverse smoke; Δ−1.84)
 50. Formal H-SYM vs B2 — done (**KILL** — reverse smoke; Δ−1.66)
+51. Formal H-DEC vs B4 — done (**PROMOTE confirmed** — Δ+2.43; no overfit)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

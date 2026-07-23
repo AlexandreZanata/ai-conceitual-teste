@@ -73,7 +73,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-HOLD | Select on fit prompts; eval on disjoint claim prompts | Overfit train≫eval or ≤ B2 — **smoke PROMOTE**; **formal KILL** (overfit + ≤ B2) |
 | H-FXS | H-FIT fitness + H-XOV crossover + H-SHO shock | ≤ max(H-FIT,H-XOV) — **smoke KILL/hold** |
 | H-LOFI | CE-rank pop; teacher_lp rescore top-k only | Quality < H-FIT or no wall save — **smoke KILL** (wall save; quality↓) |
-| H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE** (beats B4; tentative) |
+| H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE**; **formal PROMOTE** vs B4 |
 
 ### B — Inference as learning
 
@@ -139,7 +139,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 4 | Kill/promote matrix |
 | 5 | B3/B4 decode controls + H-SPEC vs B3 (smoke KILL) |
 | 6 | H-BAL Baldwin vs B2 (smoke KILL/hold) |
-| 7 | H-DEC evolve decode knobs vs B4 (smoke PROMOTE, tentative) |
+| 7 | H-DEC evolve decode knobs vs B4 (smoke PROMOTE; **formal PROMOTE** Δ+2.43) |
 | 8 | H-LAM Lamarckian write-back vs H-BAL (smoke PROMOTE, tentative) |
 | 9 | H-ELI strong elitism vs H-SEL (smoke KILL/hold — ≤ H-SEL) |
 | 10 | H-ENT dual heads (smoke KILL — collapsed to one head) |
@@ -177,6 +177,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 42 | Formal H-XOV vs B2 (KILL — reverse smoke Δ−1.65; no collapse) |
 | 43 | Formal H-FIT vs B2 (KILL — overfit + reverse smoke Δ−1.84) |
 | 44 | Formal H-SYM vs B2 (KILL — reverse smoke Δ−1.66) |
+| 45 | Formal H-DEC vs B4 (PROMOTE confirmed — Δ+2.43; no overfit) |
 
 ## Success
 
