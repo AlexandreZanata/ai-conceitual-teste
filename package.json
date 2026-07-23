@@ -45,6 +45,8 @@
     "nano:beam:report": "nano_lm/.venv/bin/python nano_lm/src/write_hbeam_report.py",
     "nano:early": "nano_lm/.venv/bin/python nano_lm/src/run_early_smoke.py",
     "nano:early:report": "nano_lm/.venv/bin/python nano_lm/src/write_hearly_report.py",
+    "nano:stack": "nano_lm/.venv/bin/python nano_lm/src/run_stack_smoke.py",
+    "nano:stack:report": "nano_lm/.venv/bin/python nano_lm/src/write_hstack_report.py",
     "nano:deck": "nano_lm/.venv/bin/python nano_lm/src/run_deck_smoke.py",
     "nano:deck:report": "nano_lm/.venv/bin/python nano_lm/src/write_hdeck_report.py",
     "nano:deck2": "nano_lm/.venv/bin/python nano_lm/src/run_deck2_smoke.py",

@@ -79,6 +79,7 @@ npm run nano:hold            # H-HOLD holdout fitness vs B2
 npm run nano:formal:hhold    # formal H-HOLD vs B2 (claim check)
 npm run nano:formal:hhold:report
 npm run nano:fxs             # H-FXS FIT×XOV×SHO stack vs max(FIT,XOV)
+npm run nano:stack           # H-STACK EARLY×DECM early mixture vs tips
 npm run nano:lofi            # H-LOFI CE top-k + teacher rescore vs H-FIT
 npm run nano:ent2            # H-ENT2 dual-head TV floor vs B2
 npm run nano:ent3            # H-ENT3 max-TV + mix KD vs B2
@@ -95,6 +96,7 @@ H-LAM smoke: PROMOTE vs H-BAL (tentative) — see `docs/results/nano-lm/hlam-vs-
 H-ELI smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/heli-vs-hsel.md`.
 H-ENT smoke: KILL (head collapse) — see `docs/results/nano-lm/hent-vs-b2.md`.
 H-ANN: smoke/formal PROMOTE vs KD-cos (Δ+0.15 formal; ≪ B2) — `hann-vs-kdcos.md`, `formal-hann-vs-kdcos.md`.
+H-STACK smoke: KILL vs tips (≤ max tip quality) — see `docs/results/nano-lm/hstack-vs-tips.md`.
 H-FIT smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hfit-vs-hsel.md`.
 H-TOU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htou-vs-hsel.md`.
 H-XOV smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hxov-vs-hsel.md`.

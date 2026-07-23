@@ -110,6 +110,7 @@ npm run verify
 68. H-BEAM evolved beam search — done (smoke **KILL** — no wall win vs B4; lp↑)
 69. H-EARLY confidence early-exit — done (smoke/formal **PROMOTE** — Δ+2.66 vs B4 + wall win)
 70. Formal H-ANN vs KD-cos — done (**PROMOTE confirmed** — Δ+0.15; both still ≪ B2)
+71. H-STACK EARLY×DECM mixture claim — done (smoke **KILL** — ≤ max tip quality)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
