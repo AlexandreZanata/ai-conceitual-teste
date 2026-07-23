@@ -1,16 +1,13 @@
 # Nano Student + Teacher — Research Agenda
-
 > Lab-grade protocol. Side track under `nano_lm/`. Not C++ EvoGen Domain.  
 > Caps: ≤80 lines/function, ≤200 lines/file, cyclomatic ≤10.
 
 ## Honesty clause
-
 Mechanisms are math/code. Every H-ID has a null and a kill criterion.  
 Novelty = ultra-small student + TinyStories teacher + wild operators under one protocol — not “never tested in ML history.”  
 **No claims of literal quantum cognition.**
 
 ## Hardware lock
-
 | Resource | Cap |
 |----------|-----|
 | GPU | RTX 4060 Laptop **8 GiB** |
@@ -20,11 +17,9 @@ Novelty = ultra-small student + TinyStories teacher + wild operators under one p
 | Data | TinyStories (Eldan & Li, [arXiv:2305.07759](https://arxiv.org/abs/2305.07759)) |
 
 ## System
-
 Frozen teacher → soft labels / scores → hypothesis operator → trainable student → eval (teacher NLL + speed).
 
 ## Baselines (claim gate)
-
 | ID | Name |
 |----|------|
 | B0 | Random-init student AR (floor) |
@@ -37,7 +32,6 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 **H-SPEC gate:** tokens/s > B3 **and** teacher_lp ≥ B3 − ε (ε=0.05 smoke).
 
 ## Hypothesis catalog
-
 ### A — Selection / evolution
 
 | ID | Mechanism | Kill if |
@@ -82,6 +76,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-BAND | UCB1 over fixed gene arms (no mutate) | ≤ H-DECK/H-CASC — **smoke KILL** |
 | H-DECKL | DECK search; lat-aware claim (Pareto) | Dominated vs B4 — **smoke/formal PROMOTE** |
 | H-POOL | Warm-start pop from other seeds’ best genes | ≤ cold H-DECKL — **smoke/formal PROMOTE** |
+| H-PARE | Archive (lp, wall); claim knee of front | Empty front / ≤ B4 — **smoke/formal PROMOTE** |
 
 ### B — Inference as learning
 
@@ -126,15 +121,13 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-DEB | Dual student; teacher picks | No gain vs B2 |
 
 ## Out of scope
-
 Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; merge into C++ Domain.
 
 ## Eval (preregistered)
-
-- **Primary:** teacher length-normalized log-prob / NLL on student completions  
-- **Secondary:** distinct-1/2, wall-ms, token-evals, VRAM peak, tokens/s  
-- Smoke prompts: `nano_lm/prompts/smoke_prompts.yaml`; formal: `eval_prompts.yaml`  
-- Report paths under `results/nano-lm/` + `docs/results/nano-lm/`
+- **Primary:** teacher length-normalized log-prob / NLL on student completions
+- **Secondary:** distinct-1/2, wall-ms, token-evals, VRAM peak, tokens/s
+- Smoke: `nano_lm/prompts/smoke_prompts.yaml`; formal: `eval_prompts.yaml`
+- Reports: `results/nano-lm/` + `docs/results/nano-lm/`
 
 ## Waves
 
@@ -196,5 +189,6 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 53 | H-BAND UCB1 gene arms vs H-CASC/H-DECK (**smoke KILL**) |
 | 54 | H-DECKL DECK+lat claim vs B4 (**smoke/formal PROMOTE** — Pareto-dominates) |
 | 55 | H-POOL cross-seed warm-start (**smoke/formal PROMOTE** Δ+0.04 vs cold H-DECKL) |
+| 56 | H-PARE Pareto archive + knee claim (**smoke/formal PROMOTE** — dominates B4 Δ+2.14) |
 ## Success
 ≥1 non-baseline H-ID improves teacher-judged quality **or** tokens/s vs B2 at fixed budget, with ablation. Negatives are logged wins for science.
