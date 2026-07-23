@@ -13,7 +13,9 @@ from student_model import build_student, count_params
 from train_ce import ce_loss
 
 
-def _mutate(state: dict[str, torch.Tensor], scale: float) -> dict[str, torch.Tensor]:
+def mutate_state(
+    state: dict[str, torch.Tensor], scale: float
+) -> dict[str, torch.Tensor]:
     out = {}
     for k, v in state.items():
         if v.dtype.is_floating_point:
@@ -76,7 +78,7 @@ def run_h_sel(
         for i in range(pop_size):
             child = build_student(len(tok)).to(device)
             src = parents[i % len(parents)].state_dict()
-            child.load_state_dict(_mutate(src, mutate_scale))
+            child.load_state_dict(mutate_state(src, mutate_scale))
             child.eval()
             new_pop.append(child)
         pop = new_pop

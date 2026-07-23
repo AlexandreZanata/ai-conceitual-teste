@@ -45,6 +45,7 @@ Agenda: [docs/NANO-STUDENT-AGENDA.md](../docs/NANO-STUDENT-AGENDA.md)
 npm run nano:matrix          # B0–B2 + B3/B4/H-SPEC + H-SEL/BON/MAE + H-SUP/INT
 npm run nano:matrix:report   # kill/promote table → docs/results/nano-lm/
 npm run nano:spec            # B3/B4/H-SPEC only (reuses B2 ckpts when present)
+npm run nano:bal             # H-BAL Baldwin smoke (merge into matrix.json)
 npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
 npm run nano:formal:hsel:report
 ```
@@ -52,6 +53,7 @@ npm run nano:formal:hsel:report
 Teacher: TinyStories-33M (frozen). Student: ≤5M GPT-Neo-tiny.
 Formal note: smoke H-SEL promote was reversed — see `docs/results/nano-lm/formal-hsel-vs-b2.md`.
 H-SPEC smoke: KILL vs B3 (no tokens/s speedup) — see kill/promote matrix.
+H-BAL smoke: KILL/hold vs B2 — see `docs/results/nano-lm/hbal-vs-b2.md`.
 
 ## Commands
 

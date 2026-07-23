@@ -15,6 +15,7 @@ H-SPEC gate: tokens/s > B3 and teacher_lp ≥ B3 − 0.05.
 | B4 | -17.0202 | +0.0716 | 55 | 585.9 | 3 | decode control (BoN) |
 | H-SPEC | -1.3358 | +15.7560 | 239 | 134.1 | 3 | KILL (no speedup vs B3) |
 | H-SEL | -17.0080 | +0.0838 | 51 | — | 3 | PROMOTE (beats B2) |
+| H-BAL | -17.3913 | -0.2996 | 54 | — | 3 | KILL / hold (≤ B2) |
 | H-BON | -17.2071 | -0.1153 | 143 | — | 3 | KILL / hold (≤ B2) |
 | H-MAE | -17.2136 | -0.1218 | 212 | — | 3 | KILL / hold (≤ B2) |
 | H-SUP | -0.5197 | +16.5721 | — | — | 1 | KILL (≤ uniform BoN) |
@@ -26,6 +27,7 @@ H-SPEC gate: tokens/s > B3 and teacher_lp ≥ B3 − 0.05.
 - Smoke budgets (few steps / small pop). Formal claims need longer runs.
 - B3/B4/H-SPEC decode on B2 checkpoints; H-SPEC vs B3 on speed+quality.
 - H-SPEC smoke detail: `docs/results/nano-lm/hspec-vs-b3.md`.
+- H-BAL smoke detail: `docs/results/nano-lm/hbal-vs-b2.md`.
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

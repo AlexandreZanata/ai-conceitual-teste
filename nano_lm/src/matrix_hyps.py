@@ -1,4 +1,4 @@
-"""Matrix wave 2: H-SEL, H-BON, H-MAE."""
+"""Matrix wave 2: H-SEL, H-BAL, H-BON, H-MAE."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ from typing import Any
 
 import torch
 
+from hyp_bal import run_h_bal
 from hyp_bon import run_h_bon
 from hyp_mae import run_h_mae
 from hyp_sel import run_h_sel
@@ -33,7 +34,37 @@ def run_hypotheses(c: dict[str, Any], device: torch.device, rows: list) -> None:
         )
         write_json(out / f"HSEL_seed{seed}_train.json", meta)
         rows.append(eval_ckpt(c, ckpt, seed, "H-SEL"))
+    _run_bal(c, device, rows)
+    _run_bon(c, device, rows)
+    _run_mae(c, device, rows)
 
+
+def _run_bal(c: dict[str, Any], device: torch.device, rows: list) -> None:
+    out: Path = c["out"]
+    life = int(c.get("lifetime_steps", 2))
+    for seed in c["seeds"]:
+        ckpt = out / f"HBAL_seed{seed}.pt"
+        meta = run_h_bal(
+            tokenizer_id=c["tokenizer_id"],
+            cache_dir=c["cache"],
+            device=device,
+            pop_size=4,
+            generations=3,
+            lifetime_steps=life,
+            mutate_scale=0.02,
+            seq_len=c["seq_len"],
+            batch_size=c["batch_size"],
+            max_examples=c["max_examples"],
+            lr=c["lr"],
+            seed=seed,
+            out_path=ckpt,
+        )
+        write_json(out / f"HBAL_seed{seed}_train.json", meta)
+        rows.append(eval_ckpt(c, ckpt, seed, "H-BAL"))
+
+
+def _run_bon(c: dict[str, Any], device: torch.device, rows: list) -> None:
+    out: Path = c["out"]
     for seed in c["seeds"]:
         ckpt = out / f"HBON_seed{seed}.pt"
         meta = run_h_bon(
@@ -53,8 +84,6 @@ def run_hypotheses(c: dict[str, Any], device: torch.device, rows: list) -> None:
         )
         write_json(out / f"HBON_seed{seed}_train.json", meta)
         rows.append(eval_ckpt(c, ckpt, seed, "H-BON"))
-
-    _run_mae(c, device, rows)
 
 
 def _run_mae(c: dict[str, Any], device: torch.device, rows: list) -> None:

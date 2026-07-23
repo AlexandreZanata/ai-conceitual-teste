@@ -43,7 +43,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | ID | Mechanism | Kill if |
 |----|-----------|---------|
 | H-SEL | Population; fitness = teacher NLL; tournament + mutate | Equal-FLOPs B2 wins |
-| H-BAL | Lifetime GD + Darwinian inherit | No faster than H-SEL/B2 |
+| H-BAL | Lifetime GD + Darwinian inherit | No faster than H-SEL/B2 — **smoke KILL/hold** (≤ B2) |
 | H-LAM | Phenotype → genotype write-back | Unstable or loses to H-BAL |
 | H-ELI | Strong elitism | Diversity collapse + worse OOD |
 | H-DEC | Evolve decode knobs | Fixed BoN better |
@@ -109,6 +109,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 3 | H-SUP (+ H-INT) vs uniform BoN |
 | 4 | Kill/promote matrix |
 | 5 | B3/B4 decode controls + H-SPEC vs B3 (smoke KILL) |
+| 6 | H-BAL Baldwin vs B2 (smoke KILL/hold) |
 
 ## Success
 

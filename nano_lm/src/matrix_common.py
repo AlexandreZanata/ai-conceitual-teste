@@ -29,6 +29,7 @@ def matrix_cfg() -> dict[str, Any]:
         "max_new_eval": 32,
         "draft_len": 4,
         "bon_n_eval": 4,
+        "lifetime_steps": 2,
     }
 
 
