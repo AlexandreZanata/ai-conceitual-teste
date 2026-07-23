@@ -97,7 +97,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-ENT | Dual heads, shared noise | Collapses to one head — **smoke KILL** (TV≈0.005) |
 | H-ENT2 | Dual heads + TV floor loss (punish TV < τ) | Collapses again or ≤ B2 — **smoke KILL** (collapsed again) |
 | H-ENT3 | Maximize TV (disagreement) + KD on mix | Mode chaos / ≤ B2 — **smoke KILL** (collapsed) |
-| H-ANN | Annealing schedule vs cosine | Cosine wins — **smoke PROMOTE** (beats KD-cos by ~0.008; tentative) |
+| H-ANN | Annealing schedule vs cosine | Cosine wins — **smoke/formal PROMOTE** (Δ+0.15 vs KD-cos; still ≪ B2) |
 
 ### D — Plasticity
 | ID | Mechanism | Kill if |
@@ -143,7 +143,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 8 | H-LAM Lamarckian write-back vs H-BAL (smoke PROMOTE; **formal KILL** — Δ−0.12) |
 | 9 | H-ELI strong elitism vs H-SEL (smoke KILL/hold — ≤ H-SEL) |
 | 10 | H-ENT dual heads (smoke KILL — collapsed to one head) |
-| 11 | H-ANN anneal vs cosine KD (smoke PROMOTE tentative) |
+| 11 | H-ANN anneal vs cosine KD (smoke/formal PROMOTE Δ+0.15; ≪ B2) |
 | 12 | H-FIT teacher_lp fitness vs H-SEL (smoke PROMOTE; **formal KILL** — overfit + Δ−1.84) |
 | 13 | H-TOU tournament vs H-SEL truncation (smoke KILL/hold) |
 | 14 | H-XOV weight crossover vs H-SEL (smoke PROMOTE; **formal KILL** — Δ−1.65 vs B2) |

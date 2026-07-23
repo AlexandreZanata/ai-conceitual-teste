@@ -94,7 +94,7 @@ H-DEC smoke: PROMOTE vs B4 (tentative) — see `docs/results/nano-lm/hdec-vs-b4.
 H-LAM smoke: PROMOTE vs H-BAL (tentative) — see `docs/results/nano-lm/hlam-vs-hbal.md`.
 H-ELI smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/heli-vs-hsel.md`.
 H-ENT smoke: KILL (head collapse) — see `docs/results/nano-lm/hent-vs-b2.md`.
-H-ANN smoke: PROMOTE vs KD-cos (tentative) — see `docs/results/nano-lm/hann-vs-kdcos.md`.
+H-ANN: smoke/formal PROMOTE vs KD-cos (Δ+0.15 formal; ≪ B2) — `hann-vs-kdcos.md`, `formal-hann-vs-kdcos.md`.
 H-FIT smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hfit-vs-hsel.md`.
 H-TOU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htou-vs-hsel.md`.
 H-XOV smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hxov-vs-hsel.md`.

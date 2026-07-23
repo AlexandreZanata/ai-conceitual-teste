@@ -5,7 +5,7 @@ NOTES = [
     "- Smoke budgets (few steps / small pop). Formal claims need longer runs.",
     "- B3/B4/H-SPEC decode on B2 checkpoints; H-SPEC vs B3 on speed+quality.",
     "- Per-hypothesis smoke detail: `docs/results/nano-lm/h*-vs-*.md`.",
-    "- Decode trunk H-DEC…H-EARLY: see `h*-vs-*.md` under `docs/results/nano-lm/`.",
+    "- Decode trunk H-DEC…H-EARLY; formal H-ANN: `formal-hann-vs-kdcos.md`.",
     "- H-SUP/H-INT rows are decode selection scores on teacher, not trained students.",
     "- H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",

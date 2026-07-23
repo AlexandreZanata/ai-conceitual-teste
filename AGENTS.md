@@ -56,7 +56,7 @@ npm run verify
 14. H-LAM Lamarckian write-back — done (smoke **PROMOTE**; **formal KILL** vs H-BAL Δ−0.12)
 15. H-ELI strong elitism — done (smoke **KILL/hold** vs H-SEL)
 16. H-ENT dual-head entanglement — done (smoke **KILL**, head collapse)
-17. H-ANN anneal vs cosine KD — done (smoke **PROMOTE** vs KD-cos, tentative)
+17. H-ANN anneal vs cosine KD — done (smoke **PROMOTE**; **formal PROMOTE** vs KD-cos Δ+0.15; still ≪ B2)
 18. H-FIT teacher_lp fitness — done (smoke **PROMOTE**; **formal KILL** vs B2 — overfit + Δ−1.84)
 19. H-TOU tournament selection — done (smoke **KILL/hold** vs H-SEL)
 20. H-XOV weight crossover — done (smoke **PROMOTE**; **formal KILL** vs B2 Δ−1.65)
@@ -109,6 +109,7 @@ npm run verify
 67. H-DRAFT evolved speculative draft knobs — done (smoke **KILL** — no wall win vs B4)
 68. H-BEAM evolved beam search — done (smoke **KILL** — no wall win vs B4; lp↑)
 69. H-EARLY confidence early-exit — done (smoke/formal **PROMOTE** — Δ+2.66 vs B4 + wall win)
+70. Formal H-ANN vs KD-cos — done (**PROMOTE confirmed** — Δ+0.15; both still ≪ B2)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
