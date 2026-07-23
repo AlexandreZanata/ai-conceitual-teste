@@ -39,6 +39,7 @@
     "nano:nic": "nano_lm/.venv/bin/python nano_lm/src/run_nic_smoke.py",
     "nano:mut": "nano_lm/.venv/bin/python nano_lm/src/run_mut_smoke.py",
     "nano:ran": "nano_lm/.venv/bin/python nano_lm/src/run_ran_smoke.py",
+    "nano:age": "nano_lm/.venv/bin/python nano_lm/src/run_age_smoke.py",
     "nano:formal:hsel": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hsel.py",
     "nano:formal:hsel:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hsel_report.py",
     "lint": "node --check web/app.js"

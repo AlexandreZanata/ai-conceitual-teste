@@ -40,6 +40,8 @@ def matrix_cfg() -> dict[str, Any]:
         "tournament_k": 3,
         "niche_alpha": 1e-3,
         "mut_adapt_factor": 1.2,
+        "age_layers": 2,
+        "immigrants_per_gen": 1,
     }
 
 
