@@ -78,6 +78,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-DECKL | DECK search; lat-aware claim (Pareto) | Dominated vs B4 — **smoke/formal PROMOTE** |
 | H-POOL | Warm-start pop from other seeds’ best genes | ≤ cold H-DECKL — **smoke/formal PROMOTE** |
 | H-PARE | Archive (lp, wall); claim knee of front | Empty front / ≤ B4 — **smoke/formal PROMOTE** |
+| H-DECP | Per-prompt gene bank; proxy pick at claim | ≤ global / B4 — **smoke PROMOTE**; **formal KILL** |
 
 ### B — Inference as learning
 | ID | Mechanism | Kill if |
@@ -187,5 +188,6 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 55 | H-POOL cross-seed warm-start (**smoke/formal PROMOTE** Δ+0.04 vs cold H-DECKL) |
 | 56 | H-PARE Pareto archive + knee claim (**smoke/formal PROMOTE** — dominates B4 Δ+2.14) |
 | 57 | H-LAT2 λ≥0.4 + n≤2 vs B4 (**smoke/formal PROMOTE** — Δ+2.39 + wall win) |
+| 58 | H-DECP per-prompt gene bank (**smoke PROMOTE**; **formal KILL** — ≤ GLOBAL) |
 ## Success
 ≥1 non-baseline H-ID improves teacher-judged quality **or** tokens/s vs B2 at fixed budget, with ablation. Negatives are logged wins for science.
