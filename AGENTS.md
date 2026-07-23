@@ -79,6 +79,7 @@ npm run verify
 37. H-SEA seasonal fitness — done (smoke **KILL/hold** vs H-FIT)
 38. H-RPS RPS niches — done (smoke **KILL** — niche collapse)
 39. H-CAT catastrophe — done (smoke **KILL/hold** vs H-SEL)
+40. H-HIB hibernation — done (smoke **KILL/hold** vs H-SEL)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

@@ -68,6 +68,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-SEA | Seasons: odd gens CE, even gens teacher_lp | ≤ fixed H-FIT — **smoke KILL/hold** |
 | H-RPS | RPS niches: cyclic dominance over 3 niches | Collapse to 1 niche — **smoke KILL** |
 | H-CAT | Catastrophe: wipe all but top-1 + immigrants | ≤ steady H-SEL — **smoke KILL/hold** |
+| H-HIB | Hibernation: skip eval; inherit parent fit × decay | Cheating / ≤ H-SEL — **smoke KILL/hold** |
 | H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE** (beats B4; tentative) |
 
 ### B — Inference as learning
@@ -159,6 +160,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 31 | H-SEA seasonal fitness vs H-FIT (smoke KILL/hold) |
 | 32 | H-RPS RPS niches vs H-SEL (smoke KILL — niche collapse) |
 | 33 | H-CAT catastrophe vs H-SEL (smoke KILL/hold) |
+| 34 | H-HIB hibernation vs H-SEL (smoke KILL/hold) |
 
 ## Success
 

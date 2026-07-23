@@ -73,6 +73,7 @@ npm run nano:gld             # H-GLD Goldilocks fitness vs H-FIT
 npm run nano:sea             # H-SEA seasonal fitness vs H-FIT
 npm run nano:rps             # H-RPS RPS niches vs H-SEL
 npm run nano:cat             # H-CAT catastrophe vs H-SEL
+npm run nano:hib             # H-HIB hibernation vs H-SEL
 npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
 npm run nano:formal:hsel:report
 ```
@@ -108,6 +109,7 @@ H-GLD smoke: KILL/hold vs H-FIT — see `docs/results/nano-lm/hgld-vs-hfit.md`.
 H-SEA smoke: KILL/hold vs H-FIT — see `docs/results/nano-lm/hsea-vs-hfit.md`.
 H-RPS smoke: KILL (niche collapse) — see `docs/results/nano-lm/hrps-vs-hsel.md`.
 H-CAT smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hcat-vs-hsel.md`.
+H-HIB smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hhib-vs-hsel.md`.
 
 ## Commands
 
