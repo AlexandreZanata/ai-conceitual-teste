@@ -117,7 +117,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | ID | Mechanism | Kill if |
 |----|-----------|---------|
 | H-ADV | Discriminator + teacher judge | Mode collapse — **smoke KILL** (≤ B2; no collapse) |
-| H-DEB | Dual student; teacher picks | No gain vs B2 |
+| H-DEB | Dual student; teacher picks | No gain vs B2 — **smoke PROMOTE**; **formal KILL** |
 
 ## Out of scope
 Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; merge into C++ Domain.
@@ -194,6 +194,6 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 59 | H-DECM elite gene mixture (**smoke/formal PROMOTE** — > H-LAT2 Δ+0.34) |
 | 60 | H-DECQ quantized gene codes (**smoke PROMOTE**; **formal KILL** — ≤ H-DECM) |
 | 61 | H-DRAFT/H-BEAM KILL; H-EARLY formal PROMOTE (Δ+2.66); H-STACK KILL |
-| 62 | HEB…DIF KILL; H-ADV smoke **KILL** (≤ B2; no collapse) |
+| 62 | ADV KILL; H-DEB smoke↑ / **formal KILL** (Δ−0.01 vs B2) |
 ## Success
 ≥1 non-baseline H-ID improves teacher-judged quality **or** tokens/s vs B2 at fixed budget, with ablation. Negatives are logged wins for science.
