@@ -159,24 +159,18 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-ELI": _decide_heli,
     "H-XOV": _decide_heli,
     "H-NIC": _decide_hnic,
-    "H-FIT": _decide_hfit,
-    "H-TOU": _decide_hfit,
-    "H-MUT": _decide_hfit,
-    "H-RAN": _decide_hfit,
-    "H-AGE": _decide_hfit,
-    "H-MOR": _decide_hfit,
-    "H-SPE": _decide_hfit,
-    "H-SEX": _decide_hfit,
-    "H-ANTI": _decide_hfit,
-    "H-TAX": _decide_hfit,
     "H-CAN": _decide_hcan,
+    "H-ZOM": _decide_hcan,
     "H-PAR": _decide_hpar,
-    "H-SYM": _decide_hfit,
-    "H-FOS": _decide_hfit,
     "H-ENT": _decide_hent,
     "H-ANN": _decide_hann,
     "H-SPEC": _decide_hspec,
 }
+for _fam in (
+    "H-FIT", "H-TOU", "H-MUT", "H-RAN", "H-AGE", "H-MOR", "H-SPE",
+    "H-SEX", "H-ANTI", "H-TAX", "H-SYM", "H-FOS",
+):
+    _SPECIAL[_fam] = _decide_hfit
 
 
 def decision(fam: str, s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
