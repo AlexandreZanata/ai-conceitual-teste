@@ -81,7 +81,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-DRAFT/H-BEAM | Evolved draft / beam knobs | No wall win — **smoke KILL** |
 | H-EARLY | Confidence early-exit / adaptive length | ≤ B4 / no wall — **smoke/formal PROMOTE** |
 | H-STACK/ROUT/ORAC | Tip dual / conf / oracle | no dual — **smoke KILL** |
-| H-REP | Grid HF repetition-penalty decode | ≤ B4 / no wall — **smoke KILL** (lp↑) |
+| H-REP / H-NGRAM | Rep-penalty / no-repeat n-gram | REP **KILL**; NGRAM **smoke/formal PROMOTE** |
 
 ### B — Inference as learning
 | ID | Mechanism | Kill if |
@@ -195,6 +195,6 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 58 | H-DECP per-prompt gene bank (**smoke PROMOTE**; **formal KILL** — ≤ GLOBAL) |
 | 59 | H-DECM elite gene mixture (**smoke/formal PROMOTE** — > H-LAT2 Δ+0.34) |
 | 60 | H-DECQ quantized gene codes (**smoke PROMOTE**; **formal KILL** — ≤ H-DECM) |
-| 61 | REP/CLIP/LS smoke **KILL**; TKD formal KILL |
+| 61 | REP/CLIP/LS **KILL**; NGRAM **formal PROMOTE**; TKD formal KILL |
 ## Success
 ≥1 H-ID beats B2 quality **or** tokens/s at budget (+ ablation). Negatives logged.
