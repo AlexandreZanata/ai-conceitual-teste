@@ -168,7 +168,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 33 | H-CAT catastrophe vs H-SEL (smoke KILL/hold) |
 | 34 | H-HIB hibernation vs H-SEL (smoke KILL/hold) |
 | 35 | H-SHO layer shock vs H-SEL (smoke PROMOTE tentative) |
-| 36 | H-HOLD holdout fitness vs B2 (smoke PROMOTE tentative; no overfit) |
+| 36 | H-HOLD holdout fitness vs B2 (smoke PROMOTE; **formal KILL** — overfit + Δ−1.84) |
 | 37 | H-FXS FIT×XOV×SHO stack vs max(FIT,XOV) (smoke KILL/hold) |
 | 38 | H-LOFI CE top-k + teacher rescore vs H-FIT (smoke KILL — quality↓) |
 | 39 | H-ENT2 dual-head TV floor vs B2 (smoke KILL — collapsed again) |
