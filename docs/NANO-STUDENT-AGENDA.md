@@ -64,6 +64,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-FOS | Fossil vault: resurrect extinct lineage every K gens | ≤ no-resurrect — **smoke KILL/hold** (tie vs H-SEL) |
 | H-ZOM | Zombie: reinject dead weights with sign-flipped noise | Diverges / ≤ H-SEL — **smoke KILL/hold** |
 | H-LOTU | Underdog lottery: worst gets one free elite clone | ≤ H-SEL — **smoke KILL/hold** |
+| H-GLD | Goldilocks: reward mid teacher_lp band | ≤ max-lp fitness — **smoke KILL/hold** (tie vs H-FIT) |
 | H-DEC | Evolve decode knobs | Fixed BoN better — **smoke PROMOTE** (beats B4; tentative) |
 
 ### B — Inference as learning
@@ -151,6 +152,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 27 | H-FOS fossil vault vs H-SEL (smoke KILL/hold — tie) |
 | 28 | H-ZOM zombie reinject vs H-SEL (smoke KILL/hold) |
 | 29 | H-LOTU underdog lottery vs H-SEL (smoke KILL/hold) |
+| 30 | H-GLD Goldilocks vs H-FIT (smoke KILL/hold — tie) |
 
 ## Success
 

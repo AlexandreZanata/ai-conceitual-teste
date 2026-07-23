@@ -51,6 +51,7 @@
     "nano:fos": "nano_lm/.venv/bin/python nano_lm/src/run_fos_smoke.py",
     "nano:zom": "nano_lm/.venv/bin/python nano_lm/src/run_zom_smoke.py",
     "nano:lotu": "nano_lm/.venv/bin/python nano_lm/src/run_lotu_smoke.py",
+    "nano:gld": "nano_lm/.venv/bin/python nano_lm/src/run_gld_smoke.py",
     "nano:formal:hsel": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hsel.py",
     "nano:formal:hsel:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hsel_report.py",
     "lint": "node --check web/app.js"

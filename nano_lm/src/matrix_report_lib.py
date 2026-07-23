@@ -78,14 +78,17 @@ def _decide_hcan(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
     if s.get("nan", 0.0) > 0.0:
         return "KILL (NaN)"
     return _decide_hfit(s, stats)
-
-
 def _decide_hpar(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     if s.get("parasite_dominates", 0.0) > 0.0:
         return "KILL (parasite dominates)"
     return _decide_hfit(s, stats)
-
-
+def _decide_hgld(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
+    c = stats.get("H-FIT")
+    if c is None:
+        return "needs H-FIT control"
+    if s["mean_lp"] > c["mean_lp"] + 1e-6:
+        return "PROMOTE (beats max-lp / H-FIT)"
+    return "KILL / hold (≤ max-lp fitness)"
 def _decide_hnic(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     rate = s.get("div_up_rate", float("nan"))
     if rate == rate and rate < 1.0 - 1e-9:
@@ -96,8 +99,6 @@ def _decide_hnic(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
     if s["mean_lp"] > hsel["mean_lp"] + 1e-6:
         return "PROMOTE (beats H-SEL, diversity↑)"
     return "KILL / hold (≤ H-SEL)"
-
-
 def _decide_hann(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     cos = stats.get("KD-cos")
     if cos is None:
@@ -105,8 +106,6 @@ def _decide_hann(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
     if s["mean_lp"] > cos["mean_lp"] + 1e-6:
         return "PROMOTE (beats cosine KD)"
     return "KILL (cosine wins)"
-
-
 def _decide_hent(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     if s.get("collapsed", 0.0) > 0.0:
         return "KILL (collapsed to one head)"
@@ -116,8 +115,6 @@ def _decide_hent(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
     if s["mean_lp"] > b2 + 1e-6:
         return "PROMOTE (beats B2, heads distinct)"
     return "KILL / hold (≤ B2)"
-
-
 def _decide_hdec(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     b4 = stats.get("B4")
     if b4 is None:
@@ -125,8 +122,6 @@ def _decide_hdec(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str
     if s["mean_lp"] > b4["mean_lp"] + 1e-6:
         return "PROMOTE (beats fixed BoN/B4)"
     return "KILL (≤ fixed BoN/B4)"
-
-
 def _decide_hspec(s: dict[str, float], stats: dict[str, dict[str, float]]) -> str:
     b3 = stats.get("B3")
     if b3 is None:
@@ -138,8 +133,6 @@ def _decide_hspec(s: dict[str, float], stats: dict[str, dict[str, float]]) -> st
     if not faster:
         return "KILL (no speedup vs B3)"
     return "KILL (quality drop vs B3)"
-
-
 def _decide_quantum(
     fam: str, s: dict[str, float], stats: dict[str, dict[str, float]]
 ) -> str:
@@ -152,7 +145,6 @@ def _decide_quantum(
         return "PROMOTE (vs uniform BoN)"
     return "KILL (≤ uniform BoN)"
 
-
 _SPECIAL: dict[str, Callable[..., str]] = {
     "H-DEC": _decide_hdec,
     "H-LAM": _decide_hlam,
@@ -162,6 +154,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-CAN": _decide_hcan,
     "H-ZOM": _decide_hcan,
     "H-PAR": _decide_hpar,
+    "H-GLD": _decide_hgld,
     "H-ENT": _decide_hent,
     "H-ANN": _decide_hann,
     "H-SPEC": _decide_hspec,
