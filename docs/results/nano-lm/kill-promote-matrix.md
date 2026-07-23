@@ -26,6 +26,7 @@ H-PAR gate: parasite does not dominate and teacher_lp > H-SEL.
 H-SYM gate: teacher_lp > H-SEL (obligate pair vs truncation).
 H-FOS gate: teacher_lp > H-SEL (fossil resurrect vs no-resurrect).
 H-ZOM gate: no diverge and teacher_lp > H-SEL (zombie reinject).
+H-LOTU gate: teacher_lp > H-SEL (underdog lottery vs truncation).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -57,6 +58,7 @@ H-ZOM gate: no diverge and teacher_lp > H-SEL (zombie reinject).
 | H-SYM | -16.8181 | +0.2737 | 72 | — | 3 | PROMOTE (beats H-SEL) |
 | H-FOS | -17.0080 | +0.0838 | 61 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-ZOM | -17.4219 | -0.3301 | 52 | — | 3 | KILL / hold (≤ H-SEL) |
+| H-LOTU | -17.2746 | -0.1828 | 54 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-ENT | -16.9916 | +0.1002 | 57 | — | 3 | KILL (collapsed to one head) |
 | KD-cos | -17.3873 | -0.2955 | 63 | — | 3 | schedule control (cosine KD) |
 | H-ANN | -17.3793 | -0.2876 | 41 | — | 3 | PROMOTE (beats cosine KD) |
@@ -94,6 +96,7 @@ H-ZOM gate: no diverge and teacher_lp > H-SEL (zombie reinject).
 - H-SYM smoke detail: `docs/results/nano-lm/hsym-vs-hsel.md`.
 - H-FOS smoke detail: `docs/results/nano-lm/hfos-vs-hsel.md`.
 - H-ZOM smoke detail: `docs/results/nano-lm/hzom-vs-hsel.md`.
+- H-LOTU smoke detail: `docs/results/nano-lm/hlotu-vs-hsel.md`.
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
