@@ -53,9 +53,10 @@ npm run verify
 11. H-SPEC speculative decode vs B3/B4 — done (smoke **KILL**, no speedup)
 12. H-BAL Baldwin lifetime GD — done (smoke **KILL/hold**, ≤ B2)
 13. H-DEC evolve decode knobs — done (smoke **PROMOTE** vs B4, tentative)
+14. H-LAM Lamarckian write-back — done (smoke **PROMOTE** vs H-BAL, tentative)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
-**Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + H-SPEC / H-BAL / H-DEC result notes under `docs/results/nano-lm/`.  
+**Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
 
 ---

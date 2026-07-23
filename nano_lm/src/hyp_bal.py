@@ -1,8 +1,9 @@
-"""H-BAL: lifetime GD on phenotype; Darwinian inherit genotype only."""
+"""H-BAL / shared plastic evo: lifetime GD + selectable inherit mode."""
 
 from __future__ import annotations
 
 import copy
+import math
 import time
 from pathlib import Path
 from typing import Any
@@ -38,7 +39,7 @@ def _lifetime_gd(
         return -float(ce_loss(model(batches[0]).logits, batches[0]).item())
 
 
-def run_h_bal(
+def run_plastic_evo(
     *,
     tokenizer_id: str,
     cache_dir: Path,
@@ -53,6 +54,8 @@ def run_h_bal(
     lr: float,
     seed: int,
     out_path: Path,
+    inherit_mode: str,
+    hypothesis: str,
 ) -> dict[str, Any]:
     torch.manual_seed(seed)
     if device.type == "cuda":
@@ -71,33 +74,27 @@ def run_h_bal(
         )
     )
     if not data:
-        raise RuntimeError("H-BAL: no training batches")
+        raise RuntimeError(f"{hypothesis}: no training batches")
     best_pheno = None
     best_fit = float("-inf")
     history: list[float] = []
+    unstable = False
     t0 = time.perf_counter()
     for _gen in range(generations):
-        fits: list[float] = []
-        phenos: list[dict[str, torch.Tensor]] = []
-        for geno in genotypes:
-            model = build_student(vocab).to(device)
-            model.load_state_dict(copy.deepcopy(geno))
-            fit = _lifetime_gd(model, data, steps=lifetime_steps, lr=lr)
-            pheno = copy.deepcopy(model.state_dict())
-            fits.append(fit)
-            phenos.append(pheno)
-            if fit > best_fit:
-                best_fit = fit
-                best_pheno = pheno
+        fits, phenos = _eval_pop(
+            genotypes, vocab, data, device, lifetime_steps, lr
+        )
+        if any(not math.isfinite(f) for f in fits):
+            unstable = True
         ranked = sorted(range(pop_size), key=lambda i: fits[i], reverse=True)
         history.append(fits[ranked[0]])
+        if fits[ranked[0]] > best_fit and math.isfinite(fits[ranked[0]]):
+            best_fit = fits[ranked[0]]
+            best_pheno = phenos[ranked[0]]
         parents = ranked[: max(1, pop_size // 2)]
-        new_genos: list[dict[str, torch.Tensor]] = []
-        for i in range(pop_size):
-            p = parents[i % len(parents)]
-            src = inherit_weights(genotypes[p], phenos[p])
-            new_genos.append(mutate_state(src, mutate_scale))
-        genotypes = new_genos
+        genotypes = _next_gen(
+            genotypes, phenos, parents, pop_size, mutate_scale, inherit_mode
+        )
         if device.type == "cuda":
             torch.cuda.empty_cache()
     wall_s = time.perf_counter() - t0
@@ -105,11 +102,54 @@ def run_h_bal(
     assert best_pheno is not None
     torch.save({"model": best_pheno, "seed": seed}, out_path)
     return {
-        "hypothesis": "H-BAL",
+        "hypothesis": hypothesis,
+        "inherit_mode": inherit_mode,
         "params": count_params(build_student(vocab)),
         "best_fit": best_fit,
         "history": history,
         "lifetime_steps": lifetime_steps,
+        "unstable": unstable,
         "wall_s": wall_s,
         "out_path": str(out_path),
     }
+
+
+def _eval_pop(
+    genotypes: list,
+    vocab: int,
+    data: list,
+    device: torch.device,
+    lifetime_steps: int,
+    lr: float,
+) -> tuple[list[float], list[dict[str, torch.Tensor]]]:
+    fits: list[float] = []
+    phenos: list[dict[str, torch.Tensor]] = []
+    for geno in genotypes:
+        model = build_student(vocab).to(device)
+        model.load_state_dict(copy.deepcopy(geno))
+        fit = _lifetime_gd(model, data, steps=lifetime_steps, lr=lr)
+        fits.append(fit)
+        phenos.append(copy.deepcopy(model.state_dict()))
+    return fits, phenos
+
+
+def _next_gen(
+    genotypes: list,
+    phenos: list,
+    parents: list[int],
+    pop_size: int,
+    mutate_scale: float,
+    inherit_mode: str,
+) -> list[dict[str, torch.Tensor]]:
+    new_genos: list[dict[str, torch.Tensor]] = []
+    for i in range(pop_size):
+        p = parents[i % len(parents)]
+        src = inherit_weights(genotypes[p], phenos[p], mode=inherit_mode)
+        new_genos.append(mutate_state(src, mutate_scale))
+    return new_genos
+
+
+def run_h_bal(**kwargs: Any) -> dict[str, Any]:
+    return run_plastic_evo(
+        inherit_mode="baldwin", hypothesis="H-BAL", **kwargs
+    )

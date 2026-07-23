@@ -47,6 +47,7 @@ npm run nano:matrix:report   # kill/promote table → docs/results/nano-lm/
 npm run nano:spec            # B3/B4/H-SPEC only (reuses B2 ckpts when present)
 npm run nano:bal             # H-BAL Baldwin smoke (merge into matrix.json)
 npm run nano:dec             # H-DEC evolve decode knobs vs B4
+npm run nano:lam             # H-LAM Lamarckian write-back vs H-BAL
 npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
 npm run nano:formal:hsel:report
 ```
@@ -56,6 +57,7 @@ Formal note: smoke H-SEL promote was reversed — see `docs/results/nano-lm/form
 H-SPEC smoke: KILL vs B3 (no tokens/s speedup) — see kill/promote matrix.
 H-BAL smoke: KILL/hold vs B2 — see `docs/results/nano-lm/hbal-vs-b2.md`.
 H-DEC smoke: PROMOTE vs B4 (tentative) — see `docs/results/nano-lm/hdec-vs-b4.md`.
+H-LAM smoke: PROMOTE vs H-BAL (tentative) — see `docs/results/nano-lm/hlam-vs-hbal.md`.
 
 ## Commands
 
