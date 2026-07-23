@@ -79,6 +79,8 @@
     "nano:blk:report": "nano_lm/.venv/bin/python nano_lm/src/write_hblk_report.py",
     "nano:dif": "nano_lm/.venv/bin/python nano_lm/src/run_dif_smoke.py",
     "nano:dif:report": "nano_lm/.venv/bin/python nano_lm/src/write_hdif_report.py",
+    "nano:adv": "nano_lm/.venv/bin/python nano_lm/src/run_adv_smoke.py",
+    "nano:adv:report": "nano_lm/.venv/bin/python nano_lm/src/write_hadv_report.py",
     "nano:formal:hhop": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hhop.py",
     "nano:formal:hhop:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hhop_report.py",
     "nano:formal:hlot": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hlot.py",

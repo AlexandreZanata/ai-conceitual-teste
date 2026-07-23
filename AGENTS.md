@@ -117,6 +117,7 @@ npm run verify
 75. H-HOP tiny Hopfield prior — done (smoke **PROMOTE**; **formal KILL** — Δ−0.40 vs B2)
 76. H-BLK block-parallel decode — done (smoke **KILL** — no wall win vs B3; Δ−0.04)
 77. H-DIF discrete diffusion nano — done (smoke **KILL** — ≤ B2 Δ−0.72; VRAM OK)
+78. H-ADV weak discriminator + teacher judge — done (smoke **KILL** — ≤ B2; no collapse)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

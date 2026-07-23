@@ -5,14 +5,12 @@ from __future__ import annotations
 from collections import defaultdict
 from typing import Any, Callable
 
-from hold_ops import decide_hhold
-from fxs_ops import decide_hfxs
-from heb_ops import decide_hheb
-from epi_ops import decide_hepi
+from hold_ops import decide_hhold; from fxs_ops import decide_hfxs
+from heb_ops import decide_hheb; from epi_ops import decide_hepi
 from lot_ops import decide_hlot
-from hop_ops import decide_hhop; from blk_ops import decide_hblk; from dif_ops import decide_hdif
-from lofi_ops import decide_hlofi
-from ent2_ops import decide_hent2
+from hop_ops import decide_hhop; from blk_ops import decide_hblk
+from dif_ops import decide_hdif; from adv_ops import decide_hadv
+from lofi_ops import decide_hlofi; from ent2_ops import decide_hent2
 from ent3_ops import decide_hent3
 EPS_LP = 0.05
 def _mean_optional(items: list[dict[str, Any]], key: str) -> float:
@@ -28,10 +26,8 @@ def mean_by_family(rows: list[dict[str, Any]]) -> dict[str, dict[str, float]]:
 def _family_stats(items: list[dict[str, Any]]) -> dict[str, float]:
     lps = [float(x["teacher_mean_logprob"]) for x in items]
     ups = [float(bool(x["diversity_up"])) for x in items if "diversity_up" in x]
-    col = max(
-        _flag_any(items, k)
-        for k in ("diversity_collapsed", "heads_collapsed", "niche_collapsed")
-    )
+    keys = ("diversity_collapsed", "heads_collapsed", "niche_collapsed", "mode_collapsed")
+    col = max(_flag_any(items, k) for k in keys)
     return {
         "mean_lp": sum(lps) / len(lps),
         "mean_wall": _mean_optional(items, "mean_wall_ms"),
@@ -152,26 +148,15 @@ def _decide_quantum(
     return "KILL (≤ uniform BoN)"
 
 _SPECIAL: dict[str, Callable[..., str]] = {
-    "H-DEC": _decide_hdec,
-    "H-LAM": _decide_hlam,
-    "H-ELI": _decide_heli,
-    "H-XOV": _decide_heli,
-    "H-NIC": _decide_hnic,
-    "H-CAN": _decide_hcan,
-    "H-ZOM": _decide_hcan,
-    "H-PAR": _decide_hpar,
-    "H-GLD": _decide_hgld,
-    "H-SEA": _decide_hgld,
-    "H-RPS": _decide_hrps,
-    "H-ENT": _decide_hent,
-    "H-ANN": _decide_hann,
-    "H-SPEC": _decide_hspec,
-    "H-HOLD": decide_hhold,
-    "H-FXS": decide_hfxs,
-    "H-LOFI": decide_hlofi,
-    "H-ENT2": decide_hent2,
+    "H-DEC": _decide_hdec, "H-LAM": _decide_hlam, "H-ELI": _decide_heli,
+    "H-XOV": _decide_heli, "H-NIC": _decide_hnic, "H-CAN": _decide_hcan,
+    "H-ZOM": _decide_hcan, "H-PAR": _decide_hpar, "H-GLD": _decide_hgld,
+    "H-SEA": _decide_hgld, "H-RPS": _decide_hrps, "H-ENT": _decide_hent,
+    "H-ANN": _decide_hann, "H-SPEC": _decide_hspec, "H-HOLD": decide_hhold,
+    "H-FXS": decide_hfxs, "H-LOFI": decide_hlofi, "H-ENT2": decide_hent2,
     "H-ENT3": decide_hent3, "H-HEB": decide_hheb, "H-EPI": decide_hepi,
-    "H-LOT": decide_hlot, "H-HOP": decide_hhop, "H-BLK": decide_hblk, "H-DIF": decide_hdif,
+    "H-LOT": decide_hlot, "H-HOP": decide_hhop, "H-BLK": decide_hblk,
+    "H-DIF": decide_hdif, "H-ADV": decide_hadv,
 }
 for _fam in (
     "H-FIT", "H-TOU", "H-MUT", "H-RAN", "H-AGE", "H-MOR", "H-SPE",

@@ -57,6 +57,7 @@ npm run nano:lot             # H-LOT sparse lottery ticket vs B2
 npm run nano:hop             # H-HOP tiny Hopfield prior vs B2
 npm run nano:blk             # H-BLK block-parallel decode vs B3
 npm run nano:dif             # H-DIF discrete diffusion vs B2
+npm run nano:adv             # H-ADV weak discriminator vs B2
 npm run nano:fit             # H-FIT teacher_lp fitness vs H-SEL
 npm run nano:tou             # H-TOU tournament selection vs H-SEL
 npm run nano:xov             # H-XOV weight crossover vs H-SEL
@@ -108,6 +109,7 @@ H-LOT: smoke PROMOTE / formal KILL (cliff Δ−1.52) — `hlot-vs-b2.md`, `forma
 H-HOP: smoke PROMOTE / formal KILL (Δ−0.40) — `hhop-vs-b2.md`, `formal-hhop-vs-b2.md`.
 H-BLK smoke: KILL vs B3 (no speedup; Δ−0.04) — see `docs/results/nano-lm/hblk-vs-b3.md`.
 H-DIF smoke: KILL vs B2 (≤ B2 Δ−0.72; VRAM OK) — see `docs/results/nano-lm/hdif-vs-b2.md`.
+H-ADV smoke: KILL vs B2 (≤ B2; no mode collapse) — see `docs/results/nano-lm/hadv-vs-b2.md`.
 H-STACK smoke: KILL vs tips (≤ max tip quality) — see `docs/results/nano-lm/hstack-vs-tips.md`.
 H-FIT smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hfit-vs-hsel.md`.
 H-TOU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htou-vs-hsel.md`.
