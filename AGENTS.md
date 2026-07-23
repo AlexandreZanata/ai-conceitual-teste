@@ -108,6 +108,7 @@ npm run verify
 66. H-DECQ quantized gene codes — done (smoke **PROMOTE**; **formal KILL** — ≤ H-DECM on eval)
 67. H-DRAFT evolved speculative draft knobs — done (smoke **KILL** — no wall win vs B4)
 68. H-BEAM evolved beam search — done (smoke **KILL** — no wall win vs B4; lp↑)
+69. H-EARLY confidence early-exit — done (smoke/formal **PROMOTE** — Δ+2.66 vs B4 + wall win)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
