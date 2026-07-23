@@ -123,6 +123,7 @@ npm run verify
 81. H-ORAC teacher-oracle tip pick — done (smoke **KILL** — quality↑ but no dual wall)
 82. H-TKD top-k sparse KD — done (smoke **PROMOTE**; **formal KILL** — Δ−2.03 vs B2)
 83. H-REP repetition-penalty decode — done (smoke **KILL** — lp↑ vs B4; no wall win)
+84. H-CLIP logit-clipped KD — done (smoke **KILL** — ≤ B2 Δ−0.34)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
