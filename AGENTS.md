@@ -128,6 +128,7 @@ npm run verify
 86. H-NGRAM no-repeat n-gram decode — done (smoke **PROMOTE**; **formal PROMOTE** — dual vs B4)
 87. H-NGE evolve ngram gene — done (smoke **KILL** — quality drop vs H-NGRAM Δ−0.08)
 88. H-NGRE NGRAM×EARLY tip stack — done (smoke **KILL** — no dual wall vs tips)
+89. H-NGDM NGRAM×DECM tip stack — done (smoke **KILL** — no dual wall vs tips)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
