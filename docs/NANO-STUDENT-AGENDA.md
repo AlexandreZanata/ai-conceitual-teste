@@ -48,7 +48,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-ELI | Strong elitism | Diversity collapse + worse OOD — **smoke KILL/hold** (≤ H-SEL; no collapse) |
 | H-FIT | Fitness = teacher_lp on completions (not probe CE) | ≤ H-SEL — **smoke PROMOTE** (beats H-SEL; tentative) |
 | H-TOU | Tournament selection (k=3) vs truncation | ≤ H-SEL — **smoke KILL/hold** |
-| H-XOV | Uniform weight crossover then mutate | ≤ H-SEL / collapse — **smoke PROMOTE** (beats H-SEL; tentative) |
+| H-XOV | Uniform weight crossover then mutate | ≤ H-SEL / collapse — **smoke PROMOTE**; **formal KILL** (≤ B2) |
 | H-NIC | Fitness sharing by weight-space crowding | No diversity↑ or quality↓ — **smoke KILL/hold** (tie vs H-SEL; diversity↑) |
 | H-MUT | Adaptive mutate scale (1/5 success rule) | Fixed scale wins — **smoke KILL/hold** |
 | H-RAN | Linear rank selection vs truncation | ≤ H-SEL — **smoke KILL/hold** |
@@ -146,7 +146,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 11 | H-ANN anneal vs cosine KD (smoke PROMOTE tentative) |
 | 12 | H-FIT teacher_lp fitness vs H-SEL (smoke PROMOTE tentative) |
 | 13 | H-TOU tournament vs H-SEL truncation (smoke KILL/hold) |
-| 14 | H-XOV weight crossover vs H-SEL (smoke PROMOTE tentative) |
+| 14 | H-XOV weight crossover vs H-SEL (smoke PROMOTE; **formal KILL** — Δ−1.65 vs B2) |
 | 15 | H-NIC fitness sharing vs H-SEL (smoke KILL/hold — tie) |
 | 16 | H-MUT adaptive mutate vs H-SEL (smoke KILL/hold) |
 | 17 | H-RAN rank selection vs H-SEL (smoke KILL/hold) |
@@ -174,6 +174,7 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 39 | H-ENT2 dual-head TV floor vs B2 (smoke KILL — collapsed again) |
 | 40 | H-ENT3 max-TV + mix KD vs B2 (smoke KILL — collapsed) |
 | 41 | Formal H-HOLD vs B2 (KILL — overfit + reverse smoke Δ−1.84) |
+| 42 | Formal H-XOV vs B2 (KILL — reverse smoke Δ−1.65; no collapse) |
 
 ## Success
 

@@ -54,7 +54,7 @@ H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).
 | H-ELI | -17.4219 | -0.3301 | 52 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-FIT | -16.8318 | +0.2600 | 38 | — | 3 | PROMOTE (beats H-SEL) |
 | H-TOU | -17.4219 | -0.3301 | 56 | — | 3 | KILL / hold (≤ H-SEL) |
-| H-XOV | -16.2818 | +0.8100 | 53 | — | 3 | PROMOTE (beats H-SEL, diversity ok) |
+| H-XOV | -16.2818 | +0.8100 | 53 | — | 3 | PROMOTE smoke; formal KILL vs B2 |
 | H-NIC | -17.0080 | +0.0838 | 62 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-MUT | -17.4219 | -0.3301 | 53 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-RAN | -17.6331 | -0.5414 | 54 | — | 3 | KILL / hold (≤ H-SEL) |
@@ -130,4 +130,6 @@ H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).
 - H-ENT3 smoke detail: `docs/results/nano-lm/hent3-vs-b2.md`.
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
+- H-HOLD smoke PROMOTE was reversed on formal — see `formal-hhold-vs-b2.md`.
+- H-XOV smoke PROMOTE was reversed on formal — see `formal-hxov-vs-b2.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

@@ -30,8 +30,10 @@ def test_given_rows_when_means_then_family_lp():
 
 def test_given_better_when_formal_then_promote():
     stats = {
-        "B2": {"lp": -15.0, "wall": 100.0, "n": 3.0, "overfit": 0.0},
-        "H-HOLD": {"lp": -14.5, "wall": 90.0, "n": 3.0, "overfit": 0.0},
+        "B2": {"lp": -15.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-HOLD": {
+            "lp": -14.5, "wall": 90.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0
+        },
     }
     assert decide_formal_vs_b2("H-HOLD", stats) == (
         "PROMOTE confirmed (H-HOLD > B2)"
@@ -40,8 +42,10 @@ def test_given_better_when_formal_then_promote():
 
 def test_given_worse_when_formal_then_reverse():
     stats = {
-        "B2": {"lp": -14.0, "wall": 100.0, "n": 3.0, "overfit": 0.0},
-        "H-HOLD": {"lp": -16.0, "wall": 90.0, "n": 3.0, "overfit": 0.0},
+        "B2": {"lp": -14.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-HOLD": {
+            "lp": -16.0, "wall": 90.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0
+        },
     }
     assert decide_formal_vs_b2("H-HOLD", stats) == (
         "KILL / reverse smoke (H-HOLD ≤ B2)"
@@ -50,7 +54,29 @@ def test_given_worse_when_formal_then_reverse():
 
 def test_given_overfit_when_formal_then_kill():
     stats = {
-        "B2": {"lp": -15.0, "wall": 100.0, "n": 3.0, "overfit": 0.0},
-        "H-HOLD": {"lp": -14.0, "wall": 90.0, "n": 3.0, "overfit": 1.0},
+        "B2": {"lp": -15.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-HOLD": {
+            "lp": -14.0, "wall": 90.0, "n": 3.0, "overfit": 1.0, "collapsed": 0.0
+        },
     }
     assert decide_formal_vs_b2("H-HOLD", stats) == "KILL (overfit; H-HOLD)"
+
+
+def test_given_collapse_when_formal_hxov_then_kill():
+    stats = {
+        "B2": {"lp": -15.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-XOV": {
+            "lp": -14.0, "wall": 90.0, "n": 3.0, "overfit": 0.0, "collapsed": 1.0
+        },
+    }
+    assert decide_formal_vs_b2("H-XOV", stats) == "KILL (collapse; H-XOV)"
+
+
+def test_given_better_hxov_when_formal_then_promote():
+    stats = {
+        "B2": {"lp": -15.0, "wall": 100.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0},
+        "H-XOV": {
+            "lp": -14.5, "wall": 90.0, "n": 3.0, "overfit": 0.0, "collapsed": 0.0
+        },
+    }
+    assert decide_formal_vs_b2("H-XOV", stats) == "PROMOTE confirmed (H-XOV > B2)"

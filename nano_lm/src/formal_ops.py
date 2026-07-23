@@ -24,6 +24,12 @@ def means_by_family(rows: Sequence[Mapping[str, Any]]) -> dict[str, dict[str, fl
             "wall": sum(walls) / len(walls),
             "n": float(len(items)),
             "overfit": 1.0 if any(bool(x.get("overfit")) for x in items) else 0.0,
+            "collapsed": 1.0
+            if any(
+                bool(x.get("diversity_collapsed") or x.get("heads_collapsed"))
+                for x in items
+            )
+            else 0.0,
         }
     return out
 
@@ -34,12 +40,14 @@ def decide_formal_vs_b2(
     """
     GIVEN formal stats for hyp and B2
     WHEN deciding claim
-    THEN KILL on overfit or ≤ B2; else PROMOTE confirmed.
+    THEN KILL on collapse/overfit or ≤ B2; else PROMOTE confirmed.
     """
     if hyp not in stats:
         return f"needs {hyp} rows"
     if "B2" not in stats:
         return "needs B2 control"
+    if float(stats[hyp].get("collapsed", 0.0)) > 0.0:
+        return f"KILL (collapse; {hyp})"
     if float(stats[hyp].get("overfit", 0.0)) > 0.0:
         return f"KILL (overfit; {hyp})"
     delta = float(stats[hyp]["lp"]) - float(stats["B2"]["lp"])
