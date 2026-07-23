@@ -6,6 +6,26 @@ from collections import defaultdict
 from typing import Any, Mapping, Sequence
 
 
+def _flag(items: Sequence[Mapping[str, Any]], *keys: str) -> float:
+    for x in items:
+        if any(bool(x.get(k)) for k in keys):
+            return 1.0
+    return 0.0
+
+
+def _family_means(items: Sequence[Mapping[str, Any]]) -> dict[str, float]:
+    lps = [float(x["teacher_mean_logprob"]) for x in items]
+    walls = [float(x.get("mean_wall_ms", float("nan"))) for x in items]
+    return {
+        "lp": sum(lps) / len(lps),
+        "wall": sum(walls) / len(walls),
+        "n": float(len(items)),
+        "overfit": _flag(items, "overfit"),
+        "collapsed": _flag(items, "diversity_collapsed", "heads_collapsed"),
+        "unstable": _flag(items, "unstable"),
+    }
+
+
 def means_by_family(rows: Sequence[Mapping[str, Any]]) -> dict[str, dict[str, float]]:
     """
     GIVEN formal eval rows with family + teacher_mean_logprob
@@ -15,23 +35,7 @@ def means_by_family(rows: Sequence[Mapping[str, Any]]) -> dict[str, dict[str, fl
     buckets: dict[str, list[Mapping[str, Any]]] = defaultdict(list)
     for r in rows:
         buckets[str(r["family"])].append(r)
-    out: dict[str, dict[str, float]] = {}
-    for fam, items in buckets.items():
-        lps = [float(x["teacher_mean_logprob"]) for x in items]
-        walls = [float(x.get("mean_wall_ms", float("nan"))) for x in items]
-        out[fam] = {
-            "lp": sum(lps) / len(lps),
-            "wall": sum(walls) / len(walls),
-            "n": float(len(items)),
-            "overfit": 1.0 if any(bool(x.get("overfit")) for x in items) else 0.0,
-            "collapsed": 1.0
-            if any(
-                bool(x.get("diversity_collapsed") or x.get("heads_collapsed"))
-                for x in items
-            )
-            else 0.0,
-        }
-    return out
+    return {fam: _family_means(items) for fam, items in buckets.items()}
 
 
 def decide_formal_vs_control(
@@ -40,7 +44,7 @@ def decide_formal_vs_control(
     """
     GIVEN formal stats for hyp and named control
     WHEN deciding claim
-    THEN KILL on collapse/overfit or ≤ control; else PROMOTE confirmed.
+    THEN KILL on collapse/overfit/unstable or ≤ control; else PROMOTE.
     """
     if hyp not in stats:
         return f"needs {hyp} rows"
@@ -50,6 +54,8 @@ def decide_formal_vs_control(
         return f"KILL (collapse; {hyp})"
     if float(stats[hyp].get("overfit", 0.0)) > 0.0:
         return f"KILL (overfit; {hyp})"
+    if float(stats[hyp].get("unstable", 0.0)) > 0.0:
+        return f"KILL (unstable; {hyp})"
     delta = float(stats[hyp]["lp"]) - float(stats[control]["lp"])
     if delta > 0.0:
         return f"PROMOTE confirmed ({hyp} > {control})"

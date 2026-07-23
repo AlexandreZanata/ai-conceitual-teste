@@ -50,7 +50,7 @@ H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).
 | H-DEC | -16.9235 | +0.1683 | — | — | 3 | PROMOTE smoke; formal PROMOTE vs B4 |
 | H-SEL | -17.0080 | +0.0838 | 51 | — | 3 | PROMOTE (beats B2) |
 | H-BAL | -17.3913 | -0.2996 | 54 | — | 3 | KILL / hold (≤ B2) |
-| H-LAM | -17.0049 | +0.0869 | 54 | — | 3 | PROMOTE (beats H-BAL) |
+| H-LAM | -17.0049 | +0.0869 | 54 | — | 3 | PROMOTE smoke; formal KILL vs H-BAL |
 | H-ELI | -17.4219 | -0.3301 | 52 | — | 3 | KILL / hold (≤ H-SEL) |
 | H-FIT | -16.8318 | +0.2600 | 38 | — | 3 | PROMOTE smoke; formal KILL vs B2 |
 | H-TOU | -17.4219 | -0.3301 | 56 | — | 3 | KILL / hold (≤ H-SEL) |
@@ -136,4 +136,5 @@ H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).
 - H-SYM smoke PROMOTE was reversed on formal — see `formal-hsym-vs-b2.md`.
 - H-DEC smoke PROMOTE confirmed on formal — see `formal-hdec-vs-b4.md`.
 - H-SHO smoke PROMOTE was reversed on formal — see `formal-hsho-vs-b2.md`.
+- H-LAM smoke PROMOTE was reversed on formal — see `formal-hlam-vs-hbal.md`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

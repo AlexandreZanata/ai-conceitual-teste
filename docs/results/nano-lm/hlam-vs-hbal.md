@@ -10,5 +10,9 @@ Lamarckian write-back: same lifetime CE GD as H-BAL, but inherit **phenotype** (
 
 **Decision: PROMOTE (smoke)** — stable and beats H-BAL on teacher mean log-prob. Also edges B2 on this smoke slice (tentative; small pop/gens).
 
-Probe fitness histories improve across gens (Lamarck accumulates learning). Commands: `npm run nano:lam` → `npm run nano:matrix:report`.  
-Artifacts: `results/nano-lm/student-matrix/lam_smoke.json`, `HLAM_seed*_train.json`.
+**Formal reverse:** `docs/results/nano-lm/formal-hlam-vs-hbal.md` — **KILL**
+(Δ−0.12 vs H-BAL; also ≤ B2; stable).
+
+Commands: `npm run nano:lam` → `npm run nano:formal:hlam` → report.  
+Artifacts: `results/nano-lm/student-matrix/lam_smoke.json`; formal under
+`results/nano-lm/formal-hlam-b2/`.

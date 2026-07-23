@@ -76,6 +76,8 @@
     "nano:formal:hdec:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hdec_report.py",
     "nano:formal:hsho": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hsho.py",
     "nano:formal:hsho:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hsho_report.py",
+    "nano:formal:hlam": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hlam.py",
+    "nano:formal:hlam:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hlam_report.py",
     "lint": "node --check web/app.js"
   },
   "devDependencies": {
