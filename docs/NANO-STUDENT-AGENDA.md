@@ -82,6 +82,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-DECM | Elite gene mixture; proxy pick completion | ≤ H-LAT2 / B4 — **smoke/formal PROMOTE** |
 | H-DECQ | Quantized T/top_p codebook + mixture claim | ≤ H-DECM / B4 — **smoke PROMOTE**; **formal KILL** |
 | H-DRAFT | Evolve speculative draft_len/temp/top_p | No wall win / ≤ B4 — **smoke KILL** (no speedup) |
+| H-BEAM | Evolve beam_width + length_penalty | ≤ B4 / no wall win — **smoke KILL** (no speedup) |
 
 ### B — Inference as learning
 | ID | Mechanism | Kill if |
@@ -195,5 +196,6 @@ Literal quantum claims; teacher >33M in wave 1; GPT-4 judge as required gate; me
 | 59 | H-DECM elite gene mixture (**smoke/formal PROMOTE** — > H-LAT2 Δ+0.34) |
 | 60 | H-DECQ quantized gene codes (**smoke PROMOTE**; **formal KILL** — ≤ H-DECM) |
 | 61 | H-DRAFT evolved speculative draft vs B4 (**smoke KILL** — no speedup) |
+| 62 | H-BEAM evolved beam search vs B4 (**smoke KILL** — no speedup; lp↑) |
 ## Success
 ≥1 non-baseline H-ID improves teacher-judged quality **or** tokens/s vs B2 at fixed budget, with ablation. Negatives are logged wins for science.
