@@ -29,6 +29,7 @@ NOTES = [
     "- H-SHORT smoke: `docs/results/nano-lm/hshort-vs-hearly.md` (PROMOTE wall↓; GFLOPs tie; formal deferred).",
     "- H-SOFT smoke: `docs/results/nano-lm/hsoft-vs-hstag.md` (KILL — no train ms/step win; H2D logits).",
     "- H-BAT smoke: `docs/results/nano-lm/hbat-vs-hearly.md` (PROMOTE tok/s↑; formal deferred).",
+    "- H-BAT formal: `docs/results/nano-lm/formal-hbat-vs-hearly.md` (PROMOTE tok/s↑; tip EARLY unchanged).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

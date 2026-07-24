@@ -60,7 +60,7 @@ npm run verify
 18. H-WIN local sliding-window attn — done (smoke **KILL** — quality < STAG−ε; FLOPs↓)
 19. H-SHORT two-phase short draft — done (smoke **PROMOTE** wall↓ tiny; GFLOPs tie; formal deferred)
 20. H-SOFT offline soft-label cache — done (smoke **KILL** — equal lp; train ms/step↑)
-21. H-BAT batched multi-prompt EARLY — done (smoke **PROMOTE** tok/s↑; formal deferred)
+21. H-BAT batched multi-prompt EARLY — done (smoke **PROMOTE**; **formal PROMOTE** tok/s↑; tip unchanged)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  

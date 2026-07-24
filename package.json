@@ -52,6 +52,8 @@
     "nano:soft:report": "nano_lm/.venv/bin/python nano_lm/src/write_hsoft_report.py",
     "nano:bat": "nano_lm/.venv/bin/python nano_lm/src/run_bat_smoke.py",
     "nano:bat:report": "nano_lm/.venv/bin/python nano_lm/src/write_hbat_report.py",
+    "nano:formal:hbat": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hbat.py",
+    "nano:formal:hbat:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hbat_report.py",
     "nano:cur": "nano_lm/.venv/bin/python nano_lm/src/run_cur_smoke.py",
     "nano:cur:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcur_report.py",
     "nano:curl": "nano_lm/.venv/bin/python nano_lm/src/run_curl_smoke.py",
