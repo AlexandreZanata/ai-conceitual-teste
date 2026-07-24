@@ -1,17 +1,20 @@
-# Archived nano-lm results (non-champion / KILL history)
+# Archived nano-lm results (KILL / non-champion history)
 
-These smoke/formal markdown files were moved out of the active results tree during the champion-stack purge. The scientific record is preserved here.
+Scientific record for purged hypotheses. Active tips live one level up.
 
-## Active champions (still at `docs/results/nano-lm/`)
+## Active champions (`docs/results/nano-lm/`)
 
-- Train: H-CURL / H-CUR
-- Decode: H-EARLY / H-POOL / H-DECKL / H-DECK / H-DEC
+- Train: **H-STAG** ← H-CURL2 ← H-CURL ← H-CUR
+- Decode: **H-EARLY** / **H-POOL** ← H-DECKL ← H-DECK ← H-DEC
+- Metrics: H-FLOP instrumentation
 
-## Moved files (103)
+## Archived files (128)
 
 - `formal-hann-vs-kdcos.md`
 - `formal-hcasc-vs-b4.md`
 - `formal-hcur2-vs-hcur.md`
+- `formal-hcurd-vs-hcurl2.md`
+- `formal-hcurl3-vs-hcurl2.md`
 - `formal-hdeb-vs-b2.md`
 - `formal-hdeck2-vs-hdeck.md`
 - `formal-hdecm-vs-b4.md`
@@ -23,32 +26,40 @@ These smoke/formal markdown files were moved out of the active results tree duri
 - `formal-hlam-vs-hbal.md`
 - `formal-hlat2-vs-b4.md`
 - `formal-hlot-vs-b2.md`
+- `formal-hmid-vs-hearly.md`
 - `formal-hminp-vs-b4.md`
 - `formal-hmpe-vs-hminp.md`
 - `formal-hngram-vs-b4.md`
 - `formal-hpare-vs-b4.md`
+- `formal-hpoolf-vs-hpool.md`
 - `formal-hproxy2-vs-hdeck.md`
 - `formal-hsel-vs-b2.md`
 - `formal-hsho-vs-b2.md`
 - `formal-hsym-vs-b2.md`
+- `formal-hthin-vs-hcurl.md`
 - `formal-htkd-vs-b2.md`
 - `formal-htyp-vs-b4.md`
 - `formal-hxov-vs-b2.md`
 - `hadv-vs-b2.md`
 - `hage-vs-hsel.md`
+- `halat-vs-hcurl2.md`
 - `hann-vs-kdcos.md`
 - `hanti-vs-hsel.md`
 - `hbal-vs-b2.md`
 - `hband-vs-hcasc.md`
 - `hbeam-vs-b4.md`
 - `hblk-vs-b3.md`
+- `hbud-vs-hearly.md`
 - `hcache-vs-early.md`
 - `hcan-vs-hsel.md`
 - `hcap-vs-hpool.md`
 - `hcasc-vs-b4.md`
 - `hcat-vs-hsel.md`
 - `hclip-vs-b2.md`
+- `hcomp-vs-hearly.md`
 - `hcur2-vs-hcur.md`
+- `hcurd-vs-hcurl2.md`
+- `hcurl3-vs-hcurl2.md`
 - `hcurt-vs-hcur.md`
 - `hdeb-vs-b2.md`
 - `hdeck2-vs-hdeck.md`
@@ -57,11 +68,15 @@ These smoke/formal markdown files were moved out of the active results tree duri
 - `hdecq-vs-b4.md`
 - `hdif-vs-b2.md`
 - `hdraft-vs-b4.md`
+- `hear2-vs-hearly.md`
+- `hearf-vs-hearly.md`
+- `hears-vs-hearly.md`
 - `heli-vs-hsel.md`
 - `hent-vs-b2.md`
 - `hent2-vs-b2.md`
 - `hent3-vs-b2.md`
 - `hepi-vs-b2.md`
+- `hexit-vs-hearly.md`
 - `hfit-vs-hsel.md`
 - `hfos-vs-hsel.md`
 - `hfxs-vs-fit-xov.md`
@@ -70,6 +85,7 @@ These smoke/formal markdown files were moved out of the active results tree duri
 - `hhib-vs-hsel.md`
 - `hhold-vs-b2.md`
 - `hhop-vs-b2.md`
+- `hhor-vs-hpool.md`
 - `hjoint-vs-tips.md`
 - `hlam-vs-hbal.md`
 - `hlat-vs-b4.md`
@@ -78,6 +94,7 @@ These smoke/formal markdown files were moved out of the active results tree duri
 - `hlot-vs-b2.md`
 - `hlotu-vs-hsel.md`
 - `hls-vs-b2.md`
+- `hmid-vs-hearly.md`
 - `hminp-vs-b4.md`
 - `hmng-vs-tips.md`
 - `hmor-vs-hsel.md`
@@ -91,7 +108,13 @@ These smoke/formal markdown files were moved out of the active results tree duri
 - `horac-vs-tips.md`
 - `hpar-vs-hsel.md`
 - `hpare-vs-b4.md`
+- `hpool2-vs-hpool.md`
+- `hpool3-vs-hpool.md`
+- `hpoolf-vs-hpool.md`
+- `hprox-vs-hpool.md`
 - `hproxy2-vs-hdeck.md`
+- `hq8-vs-hcurl.md`
+- `hqg-vs-hearly.md`
 - `hran-vs-hsel.md`
 - `hrep-vs-b4.md`
 - `hrout-vs-tips.md`
@@ -102,13 +125,16 @@ These smoke/formal markdown files were moved out of the active results tree duri
 - `hspe-vs-hsel.md`
 - `hspec-vs-b3.md`
 - `hstack-vs-tips.md`
+- `hstep-vs-hcurl2.md`
 - `hsym-vs-hsel.md`
 - `hsys-vs-tips.md`
 - `htax-vs-hsel.md`
+- `hthin-vs-hcurl.md`
 - `htkd-vs-b2.md`
 - `htmn-vs-tips.md`
 - `htou-vs-hsel.md`
 - `htpe-vs-htyp.md`
+- `htrim-vs-hpool.md`
 - `htyp-vs-b4.md`
 - `hxov-vs-hsel.md`
 - `hzom-vs-hsel.md`

@@ -51,33 +51,12 @@ npm run verify
 9. Nano-LM track TinyStories AR vs BoN vs MAE (phase 10) — done (smoke)  
 10. Nano student + teacher agenda / matrix (phase 11) — done (smoke matrix)  
 11. Nano champion stack frozen — **H-STAG** (train `seq_lo=6`, `n_stages=4`), **H-EARLY** / **H-POOL** (decode); parents H-CURL2←H-CURL←H-CUR / H-DECKL←H-DECK←H-DEC  
-12. Dead hyp code purged — kill/non-champion markdown in `docs/results/nano-lm/archive/`
-13. H-EAR2 widened early-exit gene — done (smoke **KILL** — quality < EARLY−ε)
-14. H-BUD max_new + EARLY exit gene — done (smoke **KILL** — quality < EARLY−ε)
-15. H-THIN thin CURL student + EARLY genes — done (smoke PROMOTE; formal **KILL** vs CURL Δ−0.33)
-16. H-Q8 INT8 dynamic quant on CURL + EARLY — done (smoke **KILL** — no wall win vs tip)
-17. H-EARS scheduled early-exit thr — done (smoke **KILL** — quality < EARLY−ε)
-18. H-CURL2 fine seq_lo grid — done (smoke PROMOTE lo=12; formal **PROMOTE** lo=6 vs tip)
-19. H-COMP torch.compile on EARLY tip — done (smoke **KILL** — no wall win; CUDAGraph overhead)
-20. H-PROX CE-only fit proxy vs H-POOL — done (smoke **KILL** — claim quality < POOL−ε)
-21. H-POOL2 tighter POOL search — done (smoke **KILL** — quality < POOL−ε; fit-fwd↓)
-22. H-CURD teacher-NLL difficulty curriculum — done (smoke PROMOTE; formal **KILL** vs CURL2 Δ−1.16)
-23. H-STEP early-stop KD under CURL2 — done (smoke **KILL** — worse lp than tip; steps↓)
-24. H-ALAT (αT) KD α/T schedule under CURL2 — done (smoke **KILL** — ≤ tip Δ−0.23)
-25. H-FLOP decode FLOP/tps instrumentation — done (smoke **PROMOTE** — metrics live; EARLY wall↓≠GFLOPs↓)
-26. H-EARF FLOP-aware early-exit search — done (smoke **KILL** — no FLOP win vs EARLY tip)
-27. H-EXIT earlier min_new + n=1 — done (smoke **KILL** — quality < EARLY−ε; GFLOPs↓)
-28. H-MID mid min_new + tip warm-start — done (smoke PROMOTE; formal **KILL** vs EARLY Δ−0.51)
-29. H-POOLF FLOP-aware POOL n≤2 — done (smoke PROMOTE; formal **KILL** vs H-POOL Δ−0.27; GFLOPs↓)
-30. H-POOL3 FLOP-aware POOL n≤3 — done (smoke **KILL** — no FLOP win; GFLOPs↑)
-31. H-QG quality-gated FLOP min on EARLY — done (smoke **KILL** — quality Δ−0.36; GFLOPs↓)
-32. H-TRIM freeze tip n + FLOP search — done (smoke **KILL** — no FLOP win; GFLOPs↑)
-33. H-CURL3 micro seq_lo {5,6,7} — done (smoke PROMOTE lo=7; formal **KILL** — tip stays lo=6)
-34. H-STAG n_stages∈{2,3,4} under lo=6 — done (smoke PROMOTE stages=2; formal **PROMOTE** stages=4; tip updated)
-35. H-HOR freeze tip n + horizon≤2 — done (smoke **KILL** — no FLOP win; GFLOPs tie)
+12. Dead hyp code purged (weight-evo + Waves A–H deepeners) — markdown in `docs/results/nano-lm/archive/`  
+13. Wave I queue (faster/efficient new parents) — see `.local/pesquisa.md`
+14. H-LAY layer early-exit — done (smoke **PROMOTE** wall↓; GFLOPs tie; formal deferred)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
-**Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + parked [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
+**Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
 
 ---

@@ -28,34 +28,33 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | B3 | B2 + AR decode |
 | B4 | B2 + Best-of-N |
 
-**Claim rule:** beat B2 (train) or B4 dual-gate (decode: quality ≥ B4−ε **and** wall < B4) on formal seeds `{0,1,2}` with fit≠eval.
+**Claim rule:** beat B2 (train) or B4 dual-gate (decode) on formal seeds `{0,1,2}` with fit≠eval.
 
 ## Champion tips (active code)
 
 | Role | ID | Formal | Notes |
 |------|-----|--------|-------|
-| Train | **H-STAG** | PROMOTE (`n_stages=4` > CURL2 stages=3 @ lo=6) | Official train tip |
-| Train deepeners | H-CURD / H-STEP / H-ALAT / H-CURL3 | formal/smoke **KILL** | NLL bins; early-stop; α/T; micro lo |
-| Train parents | H-CURL2 / H-CURL / H-CUR | PROMOTE lineage | lo=6 stages=3 / lo=8 / curriculum |
-| Decode speed | **H-EARLY** (+ EAR2/BUD/…/EXIT/MID/QG) | EARLY★; deepeners smoke/formal **KILL** | QG quality cliff |
-| Decode quality@wall | **H-POOL** (+ POOL2/PROX/POOLF/POOL3/TRIM/HOR) | POOL★; deepeners smoke/formal **KILL** | freeze-n / n-clamp / horizon≤2 fail |
-| Decode parents | H-DECKL / H-DECK / H-DEC | PROMOTE vs B4 | Search lineage |
-| Instrumentation | **H-FLOP** | smoke **PROMOTE** | wall + tok/s + est GFLOPs |
+| Train | **H-STAG** | PROMOTE (`n_stages=4` @ lo=6) | Official train tip |
+| Train parents | H-CURL2 ← H-CURL ← H-CUR | PROMOTE lineage | Keep for ablations |
+| Decode speed | **H-EARLY** | PROMOTE vs B4 | Official fast |
+| Decode quality@wall | **H-POOL** | PROMOTE vs H-DECKL | Official quality@wall |
+| Decode parents | H-DECKL ← H-DECK ← H-DEC | PROMOTE vs B4 | Search lineage |
+| Metrics | **H-FLOP** | smoke PROMOTE | wall + tok/s + est GFLOPs |
+| Wave I | **H-LAY** | smoke PROMOTE (formal deferred) | layer skip; GFLOPs tie |
 
-Protocol: train with **H-STAG** (`seq_lo=6`, `n_stages=4`), decode with **H-EARLY** (speed) or **H-POOL** (quality@wall). Compose H-IDs smoke **KILL**.  
-H-EAR2 / H-BUD / H-Q8 / H-EARS / H-COMP / H-PROX / H-POOL2 / H-POOL3 / H-TRIM / H-HOR / H-STEP / H-ALAT / H-EARF / H-EXIT / H-QG smoke **KILL**; H-MID / H-POOLF / H-CURL3 smoke PROMOTE / formal **KILL**; H-THIN / H-CURD formal **KILL**. H-STAG formal **PROMOTE**. H-FLOP instrumentation **PROMOTE**. Queue: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+Protocol: train **H-STAG**, decode **H-EARLY** or **H-POOL**. Never paste tips (SYS/JOINT/CACHE/CAP KILL).  
+Wave I: **H-LAY** smoke PROMOTE (wall↓; GFLOPs tie — formal deferred). Next: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived hypotheses
 
-Weight-evo, ENT*, absurd selection ops, KD cosmetics, compose kills, and non-champion decode siblings were **purged from active `nano_lm/` code**. Result markdown lives under [`docs/results/nano-lm/archive/`](results/nano-lm/archive/).
+Weight-evo, compose kills, and Waves A–H deepeners (EAR2/BUD/THIN/…/HOR/CURL3) were **purged** from active `nano_lm/` code. Markdown: [`docs/results/nano-lm/archive/`](results/nano-lm/archive/).
 
 ## Eval
 
-- Primary: teacher length-normalized log-prob on student completions  
+- Primary: teacher length-normalized log-prob  
 - Secondary: wall-ms, token-evals, VRAM, tokens/s, **est. GFLOPs** (`npm run nano:flop`)  
-- Fit: `nano_lm/prompts/fit_prompts.yaml`; formal: `eval_prompts.yaml`  
 - Matrix: `npm run nano:matrix` / `npm run nano:matrix:report`
 
 ## Success
 
-Frozen tips beat B2 (train) and B4 (decode dual gate) under the protocol above. Negatives archived as science wins.
+Frozen tips beat B2 / B4 under the protocol. Negatives archived as science wins.

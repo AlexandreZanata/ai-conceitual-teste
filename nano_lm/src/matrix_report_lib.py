@@ -64,7 +64,9 @@ def decision(fam: str, s: dict[str, float], stats: dict[str, dict[str, float]]) 
     if fam == "H-CURL":
         return "prior train tip (lo=8; see formal-hcurl)"
     if fam == "H-CURL2":
-        return "official train tip (see formal-hcurl2)"
+        return "prior train tip (lo=6, stages=3; see formal-hcurl2)"
+    if fam == "H-STAG":
+        return "official train tip (lo=6, stages=4; see formal-hstag)"
     if fam in _SPECIAL:
         return _SPECIAL[fam](s, stats)
     b2 = stats.get("B2", {}).get("mean_lp")

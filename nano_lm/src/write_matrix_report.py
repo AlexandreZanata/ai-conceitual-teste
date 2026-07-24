@@ -23,6 +23,8 @@ ORDER = [
     "H-EARLY",
     "H-CUR",
     "H-CURL",
+    "H-CURL2",
+    "H-STAG",
 ]
 
 

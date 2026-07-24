@@ -52,7 +52,7 @@ npm run nano:formal:hpool && npm run nano:formal:hpool:report
 
 ## Park status
 
-**PARKED.** Deepen STAG / EARLY / POOL separately if needed. No new compose H-ID until a formal-PROMOTE parent outside this tree.
+**PARKED** on Waves A–H. **Next:** Wave I in `.local/pesquisa.md` (start **H-LAY**). Deepen only with a formal-PROMOTE parent outside the closed gene-widen / compose trees.
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
 Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).

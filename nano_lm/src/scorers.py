@@ -13,6 +13,7 @@ class DecodeResult:
     mean_logprob: float
     wall_ms: float
     token_evals: int
+    layer_evals: int | None = None
 
 
 def mean_logprob(logprobs: Sequence[float]) -> float:
