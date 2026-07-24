@@ -61,6 +61,7 @@ npm run verify
 19. H-COMP torch.compile on EARLY tip — done (smoke **KILL** — no wall win; CUDAGraph overhead)
 20. H-PROX CE-only fit proxy vs H-POOL — done (smoke **KILL** — claim quality < POOL−ε)
 21. H-POOL2 tighter POOL search — done (smoke **KILL** — quality < POOL−ε; fit-fwd↓)
+22. H-CURD teacher-NLL difficulty curriculum — done (smoke PROMOTE; formal **KILL** vs CURL2 Δ−1.16)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + parked [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
