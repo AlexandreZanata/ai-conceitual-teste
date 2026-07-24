@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from collections.abc import Callable
+
 from decode_early import decode_early
 from early_ops import EarlyGene, clamp_early_gene
 from eval_student import teacher_mean_logprob
@@ -18,13 +20,14 @@ def fitness_earf_detail(
     prompts: list[str],
     max_new: int,
     seed: int,
+    clamp_fn: Callable[[EarlyGene], EarlyGene] = clamp_early_gene,
 ) -> tuple[float, float, float]:
     """
     GIVEN an early-exit gene and prompts
     WHEN decoding with confidence stop
     THEN return (mean teacher_lp, mean wall_ms, mean est_gflops).
     """
-    g = clamp_early_gene(gene)
+    g = clamp_fn(gene)
     tok = teacher.tokenizer
     device = teacher.device
     n_params = count_params(student)

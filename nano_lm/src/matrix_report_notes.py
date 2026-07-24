@@ -18,6 +18,7 @@ GATES = [
     "H-ALAT gate: teacher_lp > H-CURL2 tip (α/T schedule under CURL stages).",
     "H-FLOP gate: finite mean_tokens_per_s + mean_est_gflops on scored families.",
     "H-EARF gate: lp ≥ EARLY−ε and est_gflops < EARLY (FLOP-aware search).",
+    "H-EXIT gate: lp ≥ EARLY−ε and est_gflops < EARLY (min_new↓ + n=1).",
 ]
 
 NOTES = [
@@ -37,6 +38,7 @@ NOTES = [
     "- H-ALAT (αT) smoke: `docs/results/nano-lm/halat-vs-hcurl2.md` (KILL — ≤ tip).",
     "- H-FLOP smoke: `docs/results/nano-lm/hflop-instrumentation.md` (PROMOTE — metrics live).",
     "- H-EARF smoke: `docs/results/nano-lm/hearf-vs-hearly.md` (KILL — no FLOP win vs tip).",
+    "- H-EXIT smoke: `docs/results/nano-lm/hexit-vs-hearly.md` (KILL — quality < EARLY−ε; FLOP↓).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

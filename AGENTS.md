@@ -66,6 +66,7 @@ npm run verify
 24. H-ALAT (αT) KD α/T schedule under CURL2 — done (smoke **KILL** — ≤ tip Δ−0.23)
 25. H-FLOP decode FLOP/tps instrumentation — done (smoke **PROMOTE** — metrics live; EARLY wall↓≠GFLOPs↓)
 26. H-EARF FLOP-aware early-exit search — done (smoke **KILL** — no FLOP win vs EARLY tip)
+27. H-EXIT earlier min_new + n=1 — done (smoke **KILL** — quality < EARLY−ε; GFLOPs↓)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + parked [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
