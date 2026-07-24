@@ -16,6 +16,7 @@ H-EARS gate: lp ≥ EARLY−ε and wall < EARLY (scheduled thr).
 H-CURL2 gate: best seq_lo on {4,6,8,10,12} > tip lo=8.
 H-COMP gate: lp ≥ EARLY−ε and wall < EARLY (torch.compile).
 H-PROX gate: claim lp ≥ POOL−ε (CE-only fit; teacher claim).
+H-POOL2 gate: lp ≥ POOL−ε and fit teacher_fwd < POOL (tighter search).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -39,5 +40,6 @@ H-PROX gate: claim lp ≥ POOL−ε (CE-only fit; teacher claim).
 - H-CURL2: smoke PROMOTE (`hcurl2-vs-hcurl.md` lo=12); formal **PROMOTE** (`formal-hcurl2-vs-hcurl.md` lo=6).
 - H-COMP smoke: `docs/results/nano-lm/hcomp-vs-hearly.md` (KILL — no wall win; CUDAGraph re-record).
 - H-PROX smoke: `docs/results/nano-lm/hprox-vs-hpool.md` (KILL — claim quality < POOL−ε).
+- H-POOL2 smoke: `docs/results/nano-lm/hpool2-vs-hpool.md` (KILL — quality < POOL−ε; fit-fwd↓).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

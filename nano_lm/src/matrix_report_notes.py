@@ -12,6 +12,7 @@ GATES = [
     "H-CURL2 gate: best seq_lo on {4,6,8,10,12} > tip lo=8.",
     "H-COMP gate: lp ≥ EARLY−ε and wall < EARLY (torch.compile).",
     "H-PROX gate: claim lp ≥ POOL−ε (CE-only fit; teacher claim).",
+    "H-POOL2 gate: lp ≥ POOL−ε and fit teacher_fwd < POOL (tighter search).",
 ]
 
 NOTES = [
@@ -25,6 +26,7 @@ NOTES = [
     "- H-CURL2: smoke PROMOTE (`hcurl2-vs-hcurl.md`); formal **PROMOTE** lo=6 (`formal-hcurl2-vs-hcurl.md`).",
     "- H-COMP smoke: `docs/results/nano-lm/hcomp-vs-hearly.md` (KILL — no wall win vs EARLY).",
     "- H-PROX smoke: `docs/results/nano-lm/hprox-vs-hpool.md` (KILL — claim quality < POOL−ε).",
+    "- H-POOL2 smoke: `docs/results/nano-lm/hpool2-vs-hpool.md` (KILL — quality < POOL−ε).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]
