@@ -79,7 +79,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-DECM | Elite gene mixture; proxy pick completion | ≤ H-LAT2 / B4 — **smoke/formal PROMOTE** |
 | H-DECQ | Quantized T/top_p codebook + mixture claim | ≤ H-DECM / B4 — **smoke PROMOTE**; **formal KILL** |
 | H-DRAFT/H-BEAM | Evolved draft / beam knobs | No wall win — **smoke KILL** |
-| H-EARLY | Confidence early-exit / adaptive length | ≤ B4 / no wall — **smoke/formal PROMOTE** |
+| H-EARLY / H-CACHE | Early-exit★; KV on tip | EARLY★; CACHE **smoke KILL** |
 | H-STACK/ROUT/ORAC | Tip dual / conf / oracle | no dual — **smoke KILL** |
 | H-NGRAM★ / H-MINP★ / H-TYP★ / H-TMN / H-TPE | Tips★; TMN/TPE **smoke KILL** |
 

@@ -53,6 +53,7 @@ GATES = [
     "H-CURT gate: teacher_lp > H-CUR (adopted n=5, lo=8).",
     "H-SYS gate: arm lp > CURL default and > tip@B2 (free lunch).",
     "H-JOINT gate: lp > CURL default and > H-EARLY@B2 (joint search).",
+    "H-CACHE gate: lp ≥ EARLY−ε and wall < EARLY and B4 dual (KV cache).",
     "H-DECK gate: teacher_lp ≥ H-DEC−ε and wall_save (proxy+top-k search).",
     "H-DECK2 gate: best top_k∈{1,2,3} > H-DECK (k=2) equal pop×gens.",
     "H-PROXY2 gate: teacher_lp > H-DECK @ ≤ teacher_forwards (CE vs self-lp).",

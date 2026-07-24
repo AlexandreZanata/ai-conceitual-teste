@@ -45,6 +45,8 @@
     "nano:beam:report": "nano_lm/.venv/bin/python nano_lm/src/write_hbeam_report.py",
     "nano:early": "nano_lm/.venv/bin/python nano_lm/src/run_early_smoke.py",
     "nano:early:report": "nano_lm/.venv/bin/python nano_lm/src/write_hearly_report.py",
+    "nano:cache": "nano_lm/.venv/bin/python nano_lm/src/run_cache_smoke.py",
+    "nano:cache:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcache_report.py",
     "nano:stack": "nano_lm/.venv/bin/python nano_lm/src/run_stack_smoke.py",
     "nano:stack:report": "nano_lm/.venv/bin/python nano_lm/src/write_hstack_report.py",
     "nano:deck": "nano_lm/.venv/bin/python nano_lm/src/run_deck_smoke.py",
@@ -246,6 +248,8 @@
     "nano:formal:hbeam:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hbeam_report.py",
     "nano:formal:hearly": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hearly.py",
     "nano:formal:hearly:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hearly_report.py",
+    "nano:formal:hcache": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hcache.py",
+    "nano:formal:hcache:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hcache_report.py",
     "lint": "node --check web/app.js"
   },
   "devDependencies": {
