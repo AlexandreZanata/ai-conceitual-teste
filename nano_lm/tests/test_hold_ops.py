@@ -26,7 +26,6 @@ from hold_ops import (
     load_prompt_ids,
     overfit_gap,
 )
-from matrix_report_lib import decision
 
 
 def test_given_fit_eval_files_when_ids_then_disjoint():
@@ -58,16 +57,15 @@ def test_given_overfit_when_hhold_then_kill():
     stats = {"B2": {"mean_lp": -17.1}}
     s = {"mean_lp": -16.0, "overfit": 1.0}
     assert decide_hhold(s, stats) == "KILL (overfit train≫eval)"
-    assert decision("H-HOLD", s, stats) == "KILL (overfit train≫eval)"
 
 
 def test_given_better_b2_no_overfit_when_hhold_then_promote():
     stats = {"B2": {"mean_lp": -17.1}}
     s = {"mean_lp": -16.9, "overfit": 0.0}
-    assert decision("H-HOLD", s, stats) == "PROMOTE (beats B2, holdout ok)"
+    assert decide_hhold(s, stats) == "PROMOTE (beats B2, holdout ok)"
 
 
 def test_given_worse_b2_when_hhold_then_hold():
     stats = {"B2": {"mean_lp": -17.0}}
     s = {"mean_lp": -17.2, "overfit": 0.0}
-    assert decision("H-HOLD", s, stats) == "KILL / hold (≤ B2)"
+    assert decide_hhold(s, stats) == "KILL / hold (≤ B2)"

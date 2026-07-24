@@ -22,7 +22,6 @@ from lofi_ops import (
     top_k_indices,
     wall_saved,
 )
-from matrix_report_lib import decision
 
 
 def test_given_scores_when_top_k_then_highest():
@@ -47,16 +46,15 @@ def test_given_quality_and_save_when_hlofi_then_promote():
     stats = {"H-FIT": {"mean_lp": -16.8}}
     s = {"mean_lp": -16.7, "wall_save": 1.0}
     assert decide_hlofi(s, stats) == "PROMOTE (quality@wall vs H-FIT)"
-    assert decision("H-LOFI", s, stats) == "PROMOTE (quality@wall vs H-FIT)"
 
 
 def test_given_worse_quality_when_hlofi_then_kill():
     stats = {"H-FIT": {"mean_lp": -16.8}}
     s = {"mean_lp": -17.0, "wall_save": 1.0}
-    assert decision("H-LOFI", s, stats) == "KILL (worse quality than H-FIT)"
+    assert decide_hlofi(s, stats) == "KILL (worse quality than H-FIT)"
 
 
 def test_given_no_wall_save_when_hlofi_then_kill():
     stats = {"H-FIT": {"mean_lp": -16.8}}
     s = {"mean_lp": -16.7, "wall_save": 0.0}
-    assert decision("H-LOFI", s, stats) == "KILL (no wall save)"
+    assert decide_hlofi(s, stats) == "KILL (no wall save)"

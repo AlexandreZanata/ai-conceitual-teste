@@ -1,4 +1,4 @@
-"""Build kill/promote matrix markdown from matrix.json."""
+"""Build slim kill/promote matrix markdown (champions + baselines)."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from matrix_report_lib import decision, mean_by_family
+from matrix_report_notes import GATES, NOTES
 
 ORDER = [
     "B0",
@@ -16,92 +17,12 @@ ORDER = [
     "B4",
     "H-SPEC",
     "H-DEC",
-    "H-SEL",
-    "H-BAL",
-    "H-LAM",
-    "H-ELI",
-    "H-FIT",
-    "H-TOU",
-    "H-XOV",
-    "H-NIC",
-    "H-MUT",
-    "H-RAN",
-    "H-AGE",
-    "H-MOR",
-    "H-SPE",
-    "H-SEX",
-    "H-ANTI",
-    "H-TAX",
-    "H-CAN",
-    "H-PAR",
-    "H-SYM",
-    "H-FOS",
-    "H-ZOM",
-    "H-LOTU",
-    "H-GLD",
-    "H-SEA",
-    "H-RPS",
-    "H-CAT",
-    "H-HIB",
-    "H-SHO",
-    "H-HOLD",
-    "H-FXS",
-    "H-LOFI",
-    "H-ENT2",
-    "H-ENT3",
-    "H-ENT",
-    "KD-cos",
-    "H-ANN",
-    "H-BON",
-    "H-MAE",
-    "H-SUP",
-    "H-INT",
-    "BoN-uniform",
-]
-
-NOTES = [
-    "## Notes",
-    "- Smoke budgets (few steps / small pop). Formal claims need longer runs.",
-    "- B3/B4/H-SPEC decode on B2 checkpoints; H-SPEC vs B3 on speed+quality.",
-    "- H-SPEC smoke detail: `docs/results/nano-lm/hspec-vs-b3.md`.",
-    "- H-BAL smoke detail: `docs/results/nano-lm/hbal-vs-b2.md`.",
-    "- H-DEC smoke detail: `docs/results/nano-lm/hdec-vs-b4.md`.",
-    "- H-LAM smoke detail: `docs/results/nano-lm/hlam-vs-hbal.md`.",
-    "- H-ELI smoke detail: `docs/results/nano-lm/heli-vs-hsel.md`.",
-    "- H-ENT smoke detail: `docs/results/nano-lm/hent-vs-b2.md`.",
-    "- H-ANN smoke detail: `docs/results/nano-lm/hann-vs-kdcos.md`.",
-    "- H-FIT smoke detail: `docs/results/nano-lm/hfit-vs-hsel.md`.",
-    "- H-TOU smoke detail: `docs/results/nano-lm/htou-vs-hsel.md`.",
-    "- H-XOV smoke detail: `docs/results/nano-lm/hxov-vs-hsel.md`.",
-    "- H-NIC smoke detail: `docs/results/nano-lm/hnic-vs-hsel.md`.",
-    "- H-MUT smoke detail: `docs/results/nano-lm/hmut-vs-hsel.md`.",
-    "- H-RAN smoke detail: `docs/results/nano-lm/hran-vs-hsel.md`.",
-    "- H-AGE smoke detail: `docs/results/nano-lm/hage-vs-hsel.md`.",
-    "- H-MOR smoke detail: `docs/results/nano-lm/hmor-vs-hsel.md`.",
-    "- H-SPE smoke detail: `docs/results/nano-lm/hspe-vs-hsel.md`.",
-    "- H-SEX smoke detail: `docs/results/nano-lm/hsex-vs-hsel.md`.",
-    "- H-ANTI smoke detail: `docs/results/nano-lm/hanti-vs-hsel.md`.",
-    "- H-TAX smoke detail: `docs/results/nano-lm/htax-vs-hsel.md`.",
-    "- H-CAN smoke detail: `docs/results/nano-lm/hcan-vs-hsel.md`.",
-    "- H-PAR smoke detail: `docs/results/nano-lm/hpar-vs-hsel.md`.",
-    "- H-SYM smoke detail: `docs/results/nano-lm/hsym-vs-hsel.md`.",
-    "- H-FOS smoke detail: `docs/results/nano-lm/hfos-vs-hsel.md`.",
-    "- H-ZOM smoke detail: `docs/results/nano-lm/hzom-vs-hsel.md`.",
-    "- H-LOTU smoke detail: `docs/results/nano-lm/hlotu-vs-hsel.md`.",
-    "- H-GLD smoke detail: `docs/results/nano-lm/hgld-vs-hfit.md`.",
-    "- H-SEA smoke detail: `docs/results/nano-lm/hsea-vs-hfit.md`.",
-    "- H-RPS smoke detail: `docs/results/nano-lm/hrps-vs-hsel.md`.",
-    "- H-CAT smoke detail: `docs/results/nano-lm/hcat-vs-hsel.md`.",
-    "- H-HIB smoke detail: `docs/results/nano-lm/hhib-vs-hsel.md`.",
-    "- H-SHO smoke detail: `docs/results/nano-lm/hsho-vs-hsel.md`.",
-    "- H-HOLD smoke detail: `docs/results/nano-lm/hhold-vs-b2.md`.",
-    "- H-FXS smoke detail: `docs/results/nano-lm/hfxs-vs-fit-xov.md`.",
-    "- H-LOFI smoke detail: `docs/results/nano-lm/hlofi-vs-hfit.md`.",
-    "- H-ENT2 smoke detail: `docs/results/nano-lm/hent2-vs-b2.md`.",
-    "- H-ENT3 smoke detail: `docs/results/nano-lm/hent3-vs-b2.md`.",
-    "- H-SUP/H-INT rows are decode selection scores on teacher, not trained students.",
-    "- H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.",
-    "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
+    "H-DECK",
+    "H-DECKL",
+    "H-POOL",
+    "H-EARLY",
+    "H-CUR",
+    "H-CURL",
 ]
 
 
@@ -116,47 +37,14 @@ def render(matrix_path: Path) -> str:
         else f"Wall clock (matrix): {wall_s}"
     )
     lines = [
-        "# Nano student — kill / promote matrix",
+        "# Nano student — kill / promote matrix (champions)",
         "",
         f"Source: `{matrix_path}`",
         wall_line,
         "",
-        "Primary metric: teacher (TinyStories-33M) mean log-prob of student "
-        "completions (higher / less negative is better).",
-        "H-SPEC gate: tokens/s > B3 and teacher_lp ≥ B3 − 0.05.",
-        "H-LAM gate: stable and teacher_lp > H-BAL.",
-        "H-ELI gate: no diversity collapse and teacher_lp > H-SEL.",
-        "H-ENT gate: heads not collapsed and teacher_lp > B2.",
-        "H-ANN gate: teacher_lp > KD-cos (cosine schedule control).",
-        "H-FIT gate: teacher_lp > H-SEL (claim-aligned fitness).",
-        "H-TOU gate: teacher_lp > H-SEL (tournament vs truncation).",
-        "H-XOV gate: no diversity collapse and teacher_lp > H-SEL.",
-        "H-NIC gate: diversity↑ and teacher_lp > H-SEL.",
-        "H-MUT gate: teacher_lp > H-SEL (adaptive vs fixed mutate).",
-        "H-RAN gate: teacher_lp > H-SEL (rank vs truncation).",
-        "H-AGE gate: teacher_lp > H-SEL (ALPS vs flat).",
-        "H-MOR gate: teacher_lp > H-SEL (mortality vs no cull).",
-        "H-SPE gate: teacher_lp > H-SEL (islands vs single).",
-        "H-SEX gate: teacher_lp > H-SEL (mate choice vs truncation).",
-        "H-ANTI gate: teacher_lp > H-SEL (anti-selection vs truncation).",
-        "H-TAX gate: teacher_lp > H-SEL (wealth tax vs no tax).",
-        "H-CAN gate: no NaN and teacher_lp > H-SEL (LN cannibalism).",
-        "H-PAR gate: parasite does not dominate and teacher_lp > H-SEL.",
-        "H-SYM gate: teacher_lp > H-SEL (obligate pair vs truncation).",
-        "H-FOS gate: teacher_lp > H-SEL (fossil resurrect vs no-resurrect).",
-        "H-ZOM gate: no diverge and teacher_lp > H-SEL (zombie reinject).",
-        "H-LOTU gate: teacher_lp > H-SEL (underdog lottery vs truncation).",
-        "H-GLD gate: teacher_lp > H-FIT (Goldilocks vs max-lp fitness).",
-        "H-SEA gate: teacher_lp > H-FIT (seasonal vs fixed H-FIT).",
-        "H-RPS gate: ≥2 niches and teacher_lp > H-SEL (RPS niches).",
-        "H-CAT gate: teacher_lp > H-SEL (catastrophe vs steady).",
-        "H-HIB gate: teacher_lp > H-SEL (hibernate vs full eval).",
-        "H-SHO gate: teacher_lp > H-SEL (shock vs plain mutate).",
-        "H-HOLD gate: no overfit and teacher_lp > B2 (holdout fit≠eval).",
-        "H-FXS gate: teacher_lp > max(H-FIT, H-XOV) (FIT×XOV×SHO stack).",
-        "H-LOFI gate: teacher_lp ≥ H-FIT−ε and wall_save (fewer teacher forwards).",
-        "H-ENT2 gate: heads not collapsed and teacher_lp > B2 (TV floor).",
-        "H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).",
+        "Primary metric: teacher mean log-prob of student completions.",
+        "Full historical rows: `docs/results/nano-lm/archive/`.",
+        *GATES,
         "",
         "| family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |",
         "|--------|-----------------|---------|--------------|-------|---|-----------|",
@@ -172,7 +60,7 @@ def render(matrix_path: Path) -> str:
             f"| {fam} | {s['mean_lp']:.4f} | {delta or '—'} | {wall} | {tps} | "
             f"{int(s['n'])} | {decision(fam, s, stats)} |"
         )
-    lines.extend(NOTES)
+    lines.extend(["", *NOTES, ""])
     return "\n".join(lines)
 
 

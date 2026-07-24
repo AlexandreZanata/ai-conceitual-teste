@@ -1,0 +1,114 @@
+# Archived nano-lm results (non-champion / KILL history)
+
+These smoke/formal markdown files were moved out of the active results tree during the champion-stack purge. The scientific record is preserved here.
+
+## Active champions (still at `docs/results/nano-lm/`)
+
+- Train: H-CURL / H-CUR
+- Decode: H-EARLY / H-POOL / H-DECKL / H-DECK / H-DEC
+
+## Moved files (103)
+
+- `formal-hann-vs-kdcos.md`
+- `formal-hcasc-vs-b4.md`
+- `formal-hcur2-vs-hcur.md`
+- `formal-hdeb-vs-b2.md`
+- `formal-hdeck2-vs-hdeck.md`
+- `formal-hdecm-vs-b4.md`
+- `formal-hdecp-vs-b4.md`
+- `formal-hdecq-vs-b4.md`
+- `formal-hfit-vs-b2.md`
+- `formal-hhold-vs-b2.md`
+- `formal-hhop-vs-b2.md`
+- `formal-hlam-vs-hbal.md`
+- `formal-hlat2-vs-b4.md`
+- `formal-hlot-vs-b2.md`
+- `formal-hminp-vs-b4.md`
+- `formal-hmpe-vs-hminp.md`
+- `formal-hngram-vs-b4.md`
+- `formal-hpare-vs-b4.md`
+- `formal-hproxy2-vs-hdeck.md`
+- `formal-hsel-vs-b2.md`
+- `formal-hsho-vs-b2.md`
+- `formal-hsym-vs-b2.md`
+- `formal-htkd-vs-b2.md`
+- `formal-htyp-vs-b4.md`
+- `formal-hxov-vs-b2.md`
+- `hadv-vs-b2.md`
+- `hage-vs-hsel.md`
+- `hann-vs-kdcos.md`
+- `hanti-vs-hsel.md`
+- `hbal-vs-b2.md`
+- `hband-vs-hcasc.md`
+- `hbeam-vs-b4.md`
+- `hblk-vs-b3.md`
+- `hcache-vs-early.md`
+- `hcan-vs-hsel.md`
+- `hcap-vs-hpool.md`
+- `hcasc-vs-b4.md`
+- `hcat-vs-hsel.md`
+- `hclip-vs-b2.md`
+- `hcur2-vs-hcur.md`
+- `hcurt-vs-hcur.md`
+- `hdeb-vs-b2.md`
+- `hdeck2-vs-hdeck.md`
+- `hdecm-vs-b4.md`
+- `hdecp-vs-b4.md`
+- `hdecq-vs-b4.md`
+- `hdif-vs-b2.md`
+- `hdraft-vs-b4.md`
+- `heli-vs-hsel.md`
+- `hent-vs-b2.md`
+- `hent2-vs-b2.md`
+- `hent3-vs-b2.md`
+- `hepi-vs-b2.md`
+- `hfit-vs-hsel.md`
+- `hfos-vs-hsel.md`
+- `hfxs-vs-fit-xov.md`
+- `hgld-vs-hfit.md`
+- `hheb-vs-b2.md`
+- `hhib-vs-hsel.md`
+- `hhold-vs-b2.md`
+- `hhop-vs-b2.md`
+- `hjoint-vs-tips.md`
+- `hlam-vs-hbal.md`
+- `hlat-vs-b4.md`
+- `hlat2-vs-b4.md`
+- `hlofi-vs-hfit.md`
+- `hlot-vs-b2.md`
+- `hlotu-vs-hsel.md`
+- `hls-vs-b2.md`
+- `hminp-vs-b4.md`
+- `hmng-vs-tips.md`
+- `hmor-vs-hsel.md`
+- `hmpe-vs-hminp.md`
+- `hmut-vs-hsel.md`
+- `hngdm-vs-tips.md`
+- `hnge-vs-hngram.md`
+- `hngram-vs-b4.md`
+- `hngre-vs-tips.md`
+- `hnic-vs-hsel.md`
+- `horac-vs-tips.md`
+- `hpar-vs-hsel.md`
+- `hpare-vs-b4.md`
+- `hproxy2-vs-hdeck.md`
+- `hran-vs-hsel.md`
+- `hrep-vs-b4.md`
+- `hrout-vs-tips.md`
+- `hrps-vs-hsel.md`
+- `hsea-vs-hfit.md`
+- `hsex-vs-hsel.md`
+- `hsho-vs-hsel.md`
+- `hspe-vs-hsel.md`
+- `hspec-vs-b3.md`
+- `hstack-vs-tips.md`
+- `hsym-vs-hsel.md`
+- `hsys-vs-tips.md`
+- `htax-vs-hsel.md`
+- `htkd-vs-b2.md`
+- `htmn-vs-tips.md`
+- `htou-vs-hsel.md`
+- `htpe-vs-htyp.md`
+- `htyp-vs-b4.md`
+- `hxov-vs-hsel.md`
+- `hzom-vs-hsel.md`

@@ -1,20 +1,12 @@
-# nano_lm — TinyStories decode comparison track
+# nano_lm — TinyStories student + teacher track
 
 Isolated Python/PyTorch research track (not part of the C++ EvoGen domain).
 
-## Baseline
+## Champion tip-stack (parked)
 
-- Model: [`roneneldan/TinyStories-1M`](https://huggingface.co/roneneldan/TinyStories-1M) (&lt;50M params)
-- Tokenizer: `EleutherAI/gpt-neo-125M`
-- Paper: Eldan & Li, [arXiv:2305.07759](https://arxiv.org/abs/2305.07759)
-
-## Methods
-
-| ID | Behavior |
-|----|----------|
-| `ar` | Temperature + top-p next-token sampling |
-| `bon` | Best-of-N full completions; pick max length-normalized log-prob |
-| `mae` | Lookahead multi-attempt evaluate: K candidate blocks, score by H-token future mean log-prob, commit winner |
+Protocol: train **H-CURL**, decode **H-EARLY** (speed) or **H-POOL** (quality@wall).  
+Card: [`docs/results/nano-lm/champion-card.md`](../docs/results/nano-lm/champion-card.md).  
+Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../docs/NANO-STUDENT-AGENDA.md).
 
 ## Setup
 
@@ -24,182 +16,39 @@ source nano_lm/.venv/bin/activate
 pip install -r nano_lm/requirements.txt
 ```
 
-## Terminal lab (live progress + GPU charts + comparison)
+## Phase-10 lab (AR / BoN / MAE)
 
 ```bash
-npm run nano:lab          # GPU-heavy config (batched BoN/MAE, fp16, live charts)
-npm run nano:lab:smoke    # lighter smoke config + live charts
-npm run nano:lab:bench    # formal bench + live charts
+npm run nano:lab          # GPU-heavy + live charts
+npm run nano:lab:smoke
+npm run nano:lab:bench
+npm run nano:test
 ```
 
-Dashboard shows: SM util / mem controller / VRAM / power bars, util+VRAM sparklines,
-per-CPU-core busy %, live AR vs BoN vs MAE table. Requires CUDA.
-
-Outputs under `results/nano-lm/<name>-lab/`.
-
-## Student + teacher matrix (phase 11)
-
-Agenda: [docs/NANO-STUDENT-AGENDA.md](../docs/NANO-STUDENT-AGENDA.md)
+## Champion matrix + tips
 
 ```bash
-npm run nano:matrix          # B0–B2 + B3/B4/H-SPEC + H-SEL/BON/MAE + H-SUP/INT
-npm run nano:matrix:report   # kill/promote table → docs/results/nano-lm/
-npm run nano:spec            # B3/B4/H-SPEC only (reuses B2 ckpts when present)
-npm run nano:bal             # H-BAL Baldwin smoke (merge into matrix.json)
-npm run nano:dec             # H-DEC evolve decode knobs vs B4
-npm run nano:lam             # H-LAM Lamarckian write-back vs H-BAL
-npm run nano:eli             # H-ELI strong elitism vs H-SEL
-npm run nano:ent             # H-ENT dual-head entanglement vs B2
-npm run nano:ann             # H-ANN anneal vs cosine KD
-npm run nano:heb             # H-HEB local Hebbian vs B2
-npm run nano:epi             # H-EPI context LR/masks vs B2
-npm run nano:lot             # H-LOT sparse lottery ticket vs B2
-npm run nano:hop             # H-HOP tiny Hopfield prior vs B2
-npm run nano:blk             # H-BLK block-parallel decode vs B3
-npm run nano:dif             # H-DIF discrete diffusion vs B2
-npm run nano:adv             # H-ADV weak discriminator vs B2
-npm run nano:deb             # H-DEB dual student teacher-pick vs B2
-npm run nano:rout            # H-ROUT conf-route EARLY vs DECM tips
-npm run nano:orac            # H-ORAC teacher-oracle tip pick (bound)
-npm run nano:tkd             # H-TKD top-k sparse KD vs B2
-npm run nano:rep             # H-REP rep-penalty decode vs B4
-npm run nano:clip            # H-CLIP logit-clipped KD vs B2
-npm run nano:ls              # H-LS label-smoothed KD vs B2
-npm run nano:ngram           # H-NGRAM no-repeat n-gram decode vs B4
-npm run nano:nge             # H-NGE evolve ngram gene vs H-NGRAM
-npm run nano:ngre            # H-NGRE NGRAM×EARLY tip stack vs tips
-npm run nano:ngdm            # H-NGDM NGRAM×DECM tip stack vs tips
-npm run nano:minp            # H-MINP min-p sampling vs B4
-npm run nano:mng             # H-MNG MINP×NGRAM tip stack vs tips
-npm run nano:mpe             # H-MPE evolve min_p gene vs H-MINP
-npm run nano:typ             # H-TYP typical sampling vs B4
-npm run nano:tmn             # H-TMN TYP×MINP tip stack vs tips
-npm run nano:tpe             # H-TPE evolve typ_mass gene vs H-TYP
-npm run nano:cur             # H-CUR length-curriculum KD vs B2
-npm run nano:cur2            # H-CUR2 n_stages ablation vs H-CUR
-npm run nano:curl            # H-CURL seq_lo ablation vs H-CUR
-npm run nano:curt            # H-CURT adopted tip (n=5, lo=8) vs H-CUR
-npm run nano:sys             # H-SYS CURL×EARLY|POOL system compose
-npm run nano:joint           # H-JOINT curriculum∪early joint search
-npm run nano:cache           # H-CACHE KV on EARLY tip genes
-npm run nano:cache:report    # H-CACHE vs EARLY + B4
-npm run nano:cap             # H-CAP hard max_new/n on POOL tip
-npm run nano:cap:report      # H-CAP vs H-POOL
-npm run nano:fit             # H-FIT teacher_lp fitness vs H-SEL
-npm run nano:tou             # H-TOU tournament selection vs H-SEL
-npm run nano:xov             # H-XOV weight crossover vs H-SEL
-npm run nano:nic             # H-NIC fitness sharing vs H-SEL
-npm run nano:mut             # H-MUT adaptive mutate vs H-SEL
-npm run nano:ran             # H-RAN rank selection vs H-SEL
-npm run nano:age             # H-AGE age layers vs H-SEL
-npm run nano:mor             # H-MOR soft mortality vs H-SEL
-npm run nano:spe             # H-SPE island migration vs H-SEL
-npm run nano:sex             # H-SEX mate choice vs H-SEL
-npm run nano:anti            # H-ANTI anti-selection vs H-SEL
-npm run nano:tax             # H-TAX wealth tax vs H-SEL
-npm run nano:can             # H-CAN LN cannibalism vs H-SEL
-npm run nano:par             # H-PAR parasite genome vs H-SEL
-npm run nano:sym             # H-SYM obligate pair vs H-SEL
-npm run nano:fos             # H-FOS fossil vault vs H-SEL
-npm run nano:zom             # H-ZOM zombie reinject vs H-SEL
-npm run nano:lotu            # H-LOTU underdog lottery vs H-SEL
-npm run nano:gld             # H-GLD Goldilocks fitness vs H-FIT
-npm run nano:sea             # H-SEA seasonal fitness vs H-FIT
-npm run nano:rps             # H-RPS RPS niches vs H-SEL
-npm run nano:cat             # H-CAT catastrophe vs H-SEL
-npm run nano:hib             # H-HIB hibernation vs H-SEL
-npm run nano:sho             # H-SHO layer shock vs H-SEL
-npm run nano:hold            # H-HOLD holdout fitness vs B2
-npm run nano:formal:hhold    # formal H-HOLD vs B2 (claim check)
-npm run nano:formal:hhold:report
-npm run nano:fxs             # H-FXS FIT×XOV×SHO stack vs max(FIT,XOV)
-npm run nano:stack           # H-STACK EARLY×DECM early mixture vs tips
-npm run nano:lofi            # H-LOFI CE top-k + teacher rescore vs H-FIT
-npm run nano:ent2            # H-ENT2 dual-head TV floor vs B2
-npm run nano:ent3            # H-ENT3 max-TV + mix KD vs B2
-npm run nano:formal:hsel     # longer B2 vs H-SEL (8 prompts, 3 seeds)
-npm run nano:formal:hsel:report
+npm run nano:matrix && npm run nano:matrix:report
+npm run nano:cur && npm run nano:cur:report
+npm run nano:curl && npm run nano:curl:report
+npm run nano:dec
+npm run nano:deck && npm run nano:deck:report
+npm run nano:deckl && npm run nano:deckl:report
+npm run nano:pool && npm run nano:pool:report
+npm run nano:early && npm run nano:early:report
+npm run nano:spec
 ```
 
-Teacher: TinyStories-33M (frozen). Student: ≤5M GPT-Neo-tiny.
-Formal note: smoke H-SEL promote was reversed — see `docs/results/nano-lm/formal-hsel-vs-b2.md`.
-H-SPEC smoke: KILL vs B3 (no tokens/s speedup) — see kill/promote matrix.
-H-BAL smoke: KILL/hold vs B2 — see `docs/results/nano-lm/hbal-vs-b2.md`.
-H-DEC smoke: PROMOTE vs B4 (tentative) — see `docs/results/nano-lm/hdec-vs-b4.md`.
-H-LAM smoke: PROMOTE vs H-BAL (tentative) — see `docs/results/nano-lm/hlam-vs-hbal.md`.
-H-ELI smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/heli-vs-hsel.md`.
-H-ENT smoke: KILL (head collapse) — see `docs/results/nano-lm/hent-vs-b2.md`.
-H-ANN: smoke/formal PROMOTE vs KD-cos (Δ+0.15 formal; ≪ B2) — `hann-vs-kdcos.md`, `formal-hann-vs-kdcos.md`.
-H-HEB smoke: KILL vs B2 (≤ B2; stable) — see `docs/results/nano-lm/hheb-vs-b2.md`.
-H-EPI smoke: KILL vs B2 (≤ fixed LR) — see `docs/results/nano-lm/hepi-vs-b2.md`.
-H-LOT: smoke PROMOTE / formal KILL (cliff Δ−1.52) — `hlot-vs-b2.md`, `formal-hlot-vs-b2.md`.
-H-HOP: smoke PROMOTE / formal KILL (Δ−0.40) — `hhop-vs-b2.md`, `formal-hhop-vs-b2.md`.
-H-BLK smoke: KILL vs B3 (no speedup; Δ−0.04) — see `docs/results/nano-lm/hblk-vs-b3.md`.
-H-DIF smoke: KILL vs B2 (≤ B2 Δ−0.72; VRAM OK) — see `docs/results/nano-lm/hdif-vs-b2.md`.
-H-ADV smoke: KILL vs B2 (≤ B2; no mode collapse) — see `docs/results/nano-lm/hadv-vs-b2.md`.
-H-DEB: smoke PROMOTE / formal KILL (Δ−0.01) — `hdeb-vs-b2.md`, `formal-hdeb-vs-b2.md`.
-H-ROUT smoke: KILL vs tips (≤ max tip Δ−0.29) — see `docs/results/nano-lm/hrout-vs-tips.md`.
-H-ORAC smoke: KILL vs tips (lp↑ but no dual wall) — see `docs/results/nano-lm/horac-vs-tips.md`.
-H-TKD: smoke PROMOTE / formal KILL (Δ−2.03) — `htkd-vs-b2.md`, `formal-htkd-vs-b2.md`.
-H-REP smoke: KILL vs B4 (lp↑ +0.53; no wall win) — see `docs/results/nano-lm/hrep-vs-b4.md`.
-H-CLIP smoke: KILL vs B2 (≤ B2 Δ−0.34) — see `docs/results/nano-lm/hclip-vs-b2.md`.
-H-LS smoke: KILL vs B2 (≤ B2 Δ+0.00) — see `docs/results/nano-lm/hls-vs-b2.md`.
-H-NGRAM smoke/formal: PROMOTE vs B4 (dual gate) — see `docs/results/nano-lm/hngram-vs-b4.md`.
-H-NGE smoke: KILL vs H-NGRAM (quality Δ−0.08) — see `docs/results/nano-lm/hnge-vs-hngram.md`.
-H-NGRE smoke: KILL vs tips (no dual wall) — see `docs/results/nano-lm/hngre-vs-tips.md`.
-H-NGDM smoke: KILL vs tips (no dual wall) — see `docs/results/nano-lm/hngdm-vs-tips.md`.
-H-MINP smoke/formal: PROMOTE vs B4 (dual; Δ+1.17 formal) — see `docs/results/nano-lm/hminp-vs-b4.md`.
-H-MNG smoke: KILL vs tips (no dual wall) — see `docs/results/nano-lm/hmng-vs-tips.md`.
-H-MPE smoke/formal: smoke PROMOTE; formal KILL (no wall) — see `docs/results/nano-lm/hmpe-vs-hminp.md`.
-H-TYP smoke/formal: PROMOTE vs B4 (dual) — see `docs/results/nano-lm/htyp-vs-b4.md`.
-H-TPE smoke: KILL vs H-TYP (quality drop) — see `docs/results/nano-lm/htpe-vs-htyp.md`.
-H-CUR smoke/formal: PROMOTE vs B2 (Δ+1.19 formal) — see `docs/results/nano-lm/hcur-vs-b2.md`.
-H-CUR2 smoke/formal: PROMOTE vs H-CUR n=3 (formal best n=5) — see `docs/results/nano-lm/hcur2-vs-hcur.md`.
-H-CURL smoke/formal: PROMOTE vs H-CUR lo=16 (formal best lo=8) — see `docs/results/nano-lm/hcurl-vs-hcur.md`.
-H-CURT smoke: KILL vs H-CUR (joint n=5,lo=8 ≤ tip) — see `docs/results/nano-lm/hcurt-vs-hcur.md`.
-H-SYS smoke: KILL (CURL×EARLY|POOL paste) — see `docs/results/nano-lm/hsys-vs-tips.md`.
-H-STACK smoke: KILL vs tips (≤ max tip quality) — see `docs/results/nano-lm/hstack-vs-tips.md`.
-H-FIT smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hfit-vs-hsel.md`.
-H-TOU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htou-vs-hsel.md`.
-H-XOV smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hxov-vs-hsel.md`.
-H-NIC smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hnic-vs-hsel.md`.
-H-MUT smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hmut-vs-hsel.md`.
-H-RAN smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hran-vs-hsel.md`.
-H-AGE smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hage-vs-hsel.md`.
-H-MOR smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hmor-vs-hsel.md`.
-H-SPE smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hspe-vs-hsel.md`.
-H-SEX smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hsex-vs-hsel.md`.
-H-ANTI smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hanti-vs-hsel.md`.
-H-TAX smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htax-vs-hsel.md`.
-H-CAN smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hcan-vs-hsel.md`.
-H-PAR smoke: KILL (parasite dominates) — see `docs/results/nano-lm/hpar-vs-hsel.md`.
-H-SYM smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hsym-vs-hsel.md`.
-H-FOS smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hfos-vs-hsel.md`.
-H-ZOM smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hzom-vs-hsel.md`.
-H-LOTU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hlotu-vs-hsel.md`.
-H-GLD smoke: KILL/hold vs H-FIT — see `docs/results/nano-lm/hgld-vs-hfit.md`.
-H-SEA smoke: KILL/hold vs H-FIT — see `docs/results/nano-lm/hsea-vs-hfit.md`.
-H-RPS smoke: KILL (niche collapse) — see `docs/results/nano-lm/hrps-vs-hsel.md`.
-H-CAT smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hcat-vs-hsel.md`.
-H-HIB smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/hhib-vs-hsel.md`.
-H-SHO smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hsho-vs-hsel.md`.
-
-## Commands
+## Formal (fit≠eval, 3 seeds)
 
 ```bash
-# Contract tests (no model download)
-cd nano_lm && .venv/bin/pytest tests/ -q
-
-# Smoke bench (downloads TinyStories-1M on first run)
-python src/run_bench.py configs/smoke.json
-
-# Aggregate
-python src/aggregate.py --runs ../results/nano-lm/smoke/runs.jsonl \
-  --out-md ../docs/results/nano-lm/smoke-summary.md
+npm run nano:formal:cur && npm run nano:formal:cur:report
+npm run nano:formal:curl && npm run nano:formal:curl:report
+npm run nano:formal:hdec && npm run nano:formal:hdec:report
+npm run nano:formal:hdeck && npm run nano:formal:hdeck:report
+npm run nano:formal:hdeckl && npm run nano:formal:hdeckl:report
+npm run nano:formal:hpool && npm run nano:formal:hpool:report
+npm run nano:formal:hearly && npm run nano:formal:hearly:report
 ```
 
-From repo root: `npm run nano:test`, `npm run nano:smoke`, `npm run nano:aggregate`, `npm run nano:lab`.
-
-## Protocol
-
-See [docs/NANO-LM-TRACK.md](../docs/NANO-LM-TRACK.md).
+KILL / non-champion markdown: [`docs/results/nano-lm/archive/`](../docs/results/nano-lm/archive/).
