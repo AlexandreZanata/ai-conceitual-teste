@@ -55,6 +55,7 @@ npm run verify
 13. Wave I queue (faster/efficient new parents) — see `.local/pesquisa.md`
 14. H-LAY layer early-exit — done (smoke **PROMOTE** wall↓; GFLOPs tie; formal deferred)
 15. H-AMP CUDA autocast bf16 — done (smoke **KILL** — quality < EARLY−ε; wall↑)
+16. H-TIE tied+shared block under STAG — done (smoke **KILL** — quality < STAG−ε; params↓)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  

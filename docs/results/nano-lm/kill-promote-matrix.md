@@ -11,6 +11,7 @@ H-CUR / H-CURL / H-CURL2 / H-STAG: curriculum train (official = H-STAG lo=6, sta
 H-FLOP: report tokens/s + est. GFLOPs with wall (instrumentation).
 H-LAY gate: lp ≥ EARLY−ε and (wall < EARLY or est_gflops < EARLY) (layer skip).
 H-AMP gate: lp ≥ EARLY−ε and wall < EARLY (CUDA autocast bf16/fp16).
+H-TIE gate: lp ≥ STAG−ε and (params < STAG or est_gflops < STAG) (UT-lite share).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -31,5 +32,6 @@ H-AMP gate: lp ≥ EARLY−ε and wall < EARLY (CUDA autocast bf16/fp16).
 - Waves A–H deepeners purged from code; see archive + `.local/pesquisa.md`.
 - H-LAY smoke: `docs/results/nano-lm/hlay-vs-hearly.md` (PROMOTE wall↓; GFLOPs tie; formal deferred).
 - H-AMP smoke: `docs/results/nano-lm/hamp-vs-hearly.md` (KILL — quality < EARLY−ε; wall↑).
+- H-TIE smoke: `docs/results/nano-lm/htie-vs-hstag.md` (KILL — quality < STAG−ε; params↓).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
