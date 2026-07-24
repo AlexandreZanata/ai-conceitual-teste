@@ -23,6 +23,7 @@ GATES = [
     "H-POOLF gate: lp ≥ POOL−ε and est_gflops < POOL (n≤2 + tip warm-start).",
     "H-POOL3 gate: lp ≥ POOL−ε and est_gflops < POOL (n≤3 + tip warm-start).",
     "H-QG gate: lp ≥ EARLY−ε and est_gflops < EARLY (hard quality gate + min GFLOPs).",
+    "H-TRIM gate: lp ≥ POOL−ε and est_gflops < POOL (freeze tip n + FLOP search).",
 ]
 
 NOTES = [
@@ -47,6 +48,7 @@ NOTES = [
     "- H-POOLF: smoke PROMOTE (`hpoolf-vs-hpool.md`); formal **KILL** (`formal-hpoolf-vs-hpool.md`).",
     "- H-POOL3 smoke: `docs/results/nano-lm/hpool3-vs-hpool.md` (KILL — no FLOP win; GFLOPs↑).",
     "- H-QG smoke: `docs/results/nano-lm/hqg-vs-hearly.md` (KILL — quality < EARLY−ε; FLOP↓).",
+    "- H-TRIM smoke: `docs/results/nano-lm/htrim-vs-hpool.md` (KILL — no FLOP win; GFLOPs↑).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

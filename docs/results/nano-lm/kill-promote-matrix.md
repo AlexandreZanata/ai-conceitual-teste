@@ -27,6 +27,7 @@ H-MID gate: lp ≥ EARLY−ε and est_gflops < EARLY (min_new∈{4,8} + warm-sta
 H-POOLF gate: lp ≥ POOL−ε and est_gflops < POOL (n≤2 + tip warm-start).
 H-POOL3 gate: lp ≥ POOL−ε and est_gflops < POOL (n≤3 + tip warm-start).
 H-QG gate: lp ≥ EARLY−ε and est_gflops < EARLY (hard quality gate + min GFLOPs).
+H-TRIM gate: lp ≥ POOL−ε and est_gflops < POOL (freeze tip n + FLOP search).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -61,5 +62,6 @@ H-QG gate: lp ≥ EARLY−ε and est_gflops < EARLY (hard quality gate + min GFL
 - H-POOLF: smoke PROMOTE (`hpoolf-vs-hpool.md`); formal **KILL** (`formal-hpoolf-vs-hpool.md` — quality Δ−0.27; GFLOPs↓).
 - H-POOL3 smoke: `docs/results/nano-lm/hpool3-vs-hpool.md` (KILL — no FLOP win; GFLOPs↑).
 - H-QG smoke: `docs/results/nano-lm/hqg-vs-hearly.md` (KILL — quality Δ−0.36; GFLOPs↓).
+- H-TRIM smoke: `docs/results/nano-lm/htrim-vs-hpool.md` (KILL — no FLOP win; GFLOPs↑).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

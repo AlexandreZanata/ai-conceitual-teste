@@ -71,6 +71,7 @@ npm run verify
 29. H-POOLF FLOP-aware POOL n≤2 — done (smoke PROMOTE; formal **KILL** vs H-POOL Δ−0.27; GFLOPs↓)
 30. H-POOL3 FLOP-aware POOL n≤3 — done (smoke **KILL** — no FLOP win; GFLOPs↑)
 31. H-QG quality-gated FLOP min on EARLY — done (smoke **KILL** — quality Δ−0.36; GFLOPs↓)
+32. H-TRIM freeze tip n + FLOP search — done (smoke **KILL** — no FLOP win; GFLOPs↑)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + parked [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
