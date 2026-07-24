@@ -12,19 +12,15 @@ from decode_ar import decode_ar
 from decode_bon import decode_bon
 from decode_spec import decode_spec
 from eval_student import load_student_ckpt, teacher_mean_logprob
+from flop_ops import est_decode_flops, to_gflops, tokens_per_s
 from load_model import LoadedModel, load_causal_lm
 from scorers import DecodeResult
+from student_model import count_params
 
 
 def _load_prompts(path: Path) -> list[dict[str, Any]]:
     with path.open(encoding="utf-8") as f:
         return yaml.safe_load(f)["prompts"]
-
-
-def _tokens_per_s(result: DecodeResult) -> float:
-    if result.wall_ms <= 0 or not result.token_ids:
-        return 0.0
-    return len(result.token_ids) / (result.wall_ms / 1000.0)
 
 
 def score_decode_run(
@@ -44,9 +40,11 @@ def score_decode_run(
     tok = teacher.tokenizer
     device = teacher.device
     kw = dict(decode_kwargs or {})
+    n_params = count_params(student)
     scores: list[float] = []
     walls: list[float] = []
     speeds: list[float] = []
+    gflops: list[float] = []
     for i, p in enumerate(prompts):
         result = _call_decode(
             family,
@@ -67,13 +65,23 @@ def score_decode_run(
             teacher_mean_logprob(teacher, prompt_ids, list(result.token_ids))
         )
         walls.append(result.wall_ms)
-        speeds.append(_tokens_per_s(result))
+        n_new = len(result.token_ids)
+        speeds.append(tokens_per_s(n_new=n_new, wall_ms=result.wall_ms))
+        fl = est_decode_flops(
+            n_params=n_params,
+            prompt_len=int(prompt_ids.shape[1]),
+            n_new=n_new,
+            token_evals=result.token_evals,
+        )
+        gflops.append(to_gflops(fl))
+    n = max(len(scores), 1)
     return {
         "label": label,
         "family": family,
-        "teacher_mean_logprob": sum(scores) / len(scores),
-        "mean_wall_ms": sum(walls) / len(walls),
-        "mean_tokens_per_s": sum(speeds) / len(speeds),
+        "teacher_mean_logprob": sum(scores) / n,
+        "mean_wall_ms": sum(walls) / n,
+        "mean_tokens_per_s": sum(speeds) / n,
+        "mean_est_gflops": sum(gflops) / n,
         "n_prompts": len(prompts),
         "seed": seed,
     }

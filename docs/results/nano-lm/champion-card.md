@@ -24,6 +24,8 @@ Parents kept for lineage: **H-CURL** (`seq_lo=8`) ← **H-CUR** (train), **H-DEC
 | **H-EARLY** | decode | **−11.83** | **65** | official fast decode |
 | **H-POOL** | decode | **−11.69** | **70** | official quality decode |
 
+Decode efficiency also reports **tokens/s + est. GFLOPs** (`npm run nano:flop` → [hflop-instrumentation.md](hflop-instrumentation.md)); wall alone can mislead (EARLY smoke: wall↓, GFLOPs↑).
+
 Smoke numbers never enter this table. Full KILL history: [`archive/`](archive/).
 
 ## Commands
@@ -32,6 +34,7 @@ Smoke numbers never enter this table. Full KILL history: [`archive/`](archive/).
 npm run nano:curl2 && npm run nano:curl2:report
 npm run nano:early && npm run nano:early:report
 npm run nano:pool && npm run nano:pool:report
+npm run nano:flop && npm run nano:flop:report
 npm run nano:formal:curl2 && npm run nano:formal:curl2:report
 npm run nano:formal:hearly && npm run nano:formal:hearly:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report

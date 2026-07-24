@@ -16,6 +16,7 @@ GATES = [
     "H-CURD gate: teacher_lp > H-CURL2 tip @ equal steps (NLL bins; xor length).",
     "H-STEP gate: claim lp ≥ H-CURL2 tip (early-stop on fit teacher_lp plateau).",
     "H-ALAT gate: teacher_lp > H-CURL2 tip (α/T schedule under CURL stages).",
+    "H-FLOP gate: finite mean_tokens_per_s + mean_est_gflops on scored families.",
 ]
 
 NOTES = [
@@ -33,6 +34,7 @@ NOTES = [
     "- H-CURD: smoke PROMOTE (`hcurd-vs-hcurl2.md`); formal **KILL** (`formal-hcurd-vs-hcurl2.md`).",
     "- H-STEP smoke: `docs/results/nano-lm/hstep-vs-hcurl2.md` (KILL — worse lp than tip).",
     "- H-ALAT (αT) smoke: `docs/results/nano-lm/halat-vs-hcurl2.md` (KILL — ≤ tip).",
+    "- H-FLOP smoke: `docs/results/nano-lm/hflop-instrumentation.md` (PROMOTE — metrics live).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

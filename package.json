@@ -60,6 +60,8 @@
     "nano:step:report": "nano_lm/.venv/bin/python nano_lm/src/write_hstep_report.py",
     "nano:alat": "nano_lm/.venv/bin/python nano_lm/src/run_alat_smoke.py",
     "nano:alat:report": "nano_lm/.venv/bin/python nano_lm/src/write_halat_report.py",
+    "nano:flop": "nano_lm/.venv/bin/python nano_lm/src/run_flop_smoke.py",
+    "nano:flop:report": "nano_lm/.venv/bin/python nano_lm/src/write_hflop_report.py",
     "nano:comp": "nano_lm/.venv/bin/python nano_lm/src/run_comp_smoke.py",
     "nano:comp:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcomp_report.py",
     "nano:prox": "nano_lm/.venv/bin/python nano_lm/src/run_prox_smoke.py",
