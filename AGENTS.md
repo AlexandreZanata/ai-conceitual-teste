@@ -135,6 +135,7 @@ npm run verify
 93. H-TYP typical sampling — done (smoke **PROMOTE**; **formal PROMOTE** — dual vs B4)
 94. H-TMN TYP×MINP tip stack — done (smoke **KILL** — no dual wall vs tips)
 95. H-TPE evolve typ_mass gene — done (smoke **KILL** — quality drop vs H-TYP)
+96. H-CUR length-curriculum KD — done (smoke **PROMOTE**; **formal PROMOTE** — Δ+1.19 vs B2)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
