@@ -74,6 +74,7 @@ npm run verify
 32. H-TRIM freeze tip n + FLOP search — done (smoke **KILL** — no FLOP win; GFLOPs↑)
 33. H-CURL3 micro seq_lo {5,6,7} — done (smoke PROMOTE lo=7; formal **KILL** — tip stays lo=6)
 34. H-STAG n_stages∈{2,3,4} under lo=6 — done (smoke PROMOTE stages=2; formal **PROMOTE** stages=4; tip updated)
+35. H-HOR freeze tip n + horizon≤2 — done (smoke **KILL** — no FLOP win; GFLOPs tie)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + parked [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  

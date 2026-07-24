@@ -80,6 +80,8 @@
     "nano:pool3:report": "nano_lm/.venv/bin/python nano_lm/src/write_hpool3_report.py",
     "nano:trim": "nano_lm/.venv/bin/python nano_lm/src/run_trim_smoke.py",
     "nano:trim:report": "nano_lm/.venv/bin/python nano_lm/src/write_htrim_report.py",
+    "nano:hor": "nano_lm/.venv/bin/python nano_lm/src/run_hor_smoke.py",
+    "nano:hor:report": "nano_lm/.venv/bin/python nano_lm/src/write_hhor_report.py",
     "nano:comp": "nano_lm/.venv/bin/python nano_lm/src/run_comp_smoke.py",
     "nano:comp:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcomp_report.py",
     "nano:prox": "nano_lm/.venv/bin/python nano_lm/src/run_prox_smoke.py",

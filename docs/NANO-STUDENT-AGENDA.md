@@ -38,12 +38,12 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Train deepeners | H-CURD / H-STEP / H-ALAT / H-CURL3 | formal/smoke **KILL** | NLL bins; early-stop; α/T; micro lo |
 | Train parents | H-CURL2 / H-CURL / H-CUR | PROMOTE lineage | lo=6 stages=3 / lo=8 / curriculum |
 | Decode speed | **H-EARLY** (+ EAR2/BUD/…/EXIT/MID/QG) | EARLY★; deepeners smoke/formal **KILL** | QG quality cliff |
-| Decode quality@wall | **H-POOL** (+ POOL2/PROX/POOLF/POOL3/TRIM) | POOL★; deepeners smoke/formal **KILL** | freeze-n / n-clamp fail |
+| Decode quality@wall | **H-POOL** (+ POOL2/PROX/POOLF/POOL3/TRIM/HOR) | POOL★; deepeners smoke/formal **KILL** | freeze-n / n-clamp / horizon≤2 fail |
 | Decode parents | H-DECKL / H-DECK / H-DEC | PROMOTE vs B4 | Search lineage |
 | Instrumentation | **H-FLOP** | smoke **PROMOTE** | wall + tok/s + est GFLOPs |
 
 Protocol: train with **H-STAG** (`seq_lo=6`, `n_stages=4`), decode with **H-EARLY** (speed) or **H-POOL** (quality@wall). Compose H-IDs smoke **KILL**.  
-H-EAR2 / H-BUD / H-Q8 / H-EARS / H-COMP / H-PROX / H-POOL2 / H-POOL3 / H-TRIM / H-STEP / H-ALAT / H-EARF / H-EXIT / H-QG smoke **KILL**; H-MID / H-POOLF / H-CURL3 smoke PROMOTE / formal **KILL**; H-THIN / H-CURD formal **KILL**. H-STAG formal **PROMOTE**. H-FLOP instrumentation **PROMOTE**. Queue: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+H-EAR2 / H-BUD / H-Q8 / H-EARS / H-COMP / H-PROX / H-POOL2 / H-POOL3 / H-TRIM / H-HOR / H-STEP / H-ALAT / H-EARF / H-EXIT / H-QG smoke **KILL**; H-MID / H-POOLF / H-CURL3 smoke PROMOTE / formal **KILL**; H-THIN / H-CURD formal **KILL**. H-STAG formal **PROMOTE**. H-FLOP instrumentation **PROMOTE**. Queue: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived hypotheses
 
