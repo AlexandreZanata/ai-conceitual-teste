@@ -15,9 +15,12 @@ from student_model import build_student
 
 
 def load_student_ckpt(
-    path: Path, tokenizer, device: torch.device
+    path: Path,
+    tokenizer,
+    device: torch.device,
+    build_fn=build_student,
 ) -> object:
-    student = build_student(len(tokenizer)).to(device)
+    student = build_fn(len(tokenizer)).to(device)
     blob = torch.load(path, map_location=device, weights_only=True)
     student.load_state_dict(blob["model"])
     student.eval()

@@ -6,6 +6,7 @@ GATES = [
     "H-CUR / H-CURL: curriculum train tips (official train = H-CURL seq_lo=8).",
     "H-EAR2 gate: lp ≥ EARLY−ε and wall < EARLY (widened early gene).",
     "H-BUD gate: not dominated by EARLY on (lp, wall); quality ≥ EARLY−ε.",
+    "H-THIN gate: lp ≥ CURL−ε and wall < CURL on same EARLY decode.",
 ]
 
 NOTES = [

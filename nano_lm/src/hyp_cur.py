@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import torch
 
@@ -50,6 +50,8 @@ def run_h_cur(
     out_path: Path,
     seq_lo: int = DEFAULT_SEQ_LO,
     n_stages: int = N_STAGES,
+    build_fn: Callable[[int], object] = build_student,
+    hypothesis: str = "H-CUR",
 ) -> dict[str, Any]:
     torch.manual_seed(seed)
     if device.type == "cuda":
@@ -58,7 +60,7 @@ def run_h_cur(
     teacher = load_causal_lm(
         teacher_id, tokenizer_id, cache_dir=cache_dir, use_fp16=True
     )
-    student = build_student(len(tok)).to(device)
+    student = build_fn(len(tok)).to(device)
     student.train()
     opt = torch.optim.AdamW(student.parameters(), lr=lr)
     losses: list[float] = []
@@ -91,9 +93,12 @@ def run_h_cur(
         if device.type == "cuda" and (step + 1) % 10 == 0:
             torch.cuda.empty_cache()
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    torch.save({"model": student.state_dict(), "seed": seed}, out_path)
+    torch.save(
+        {"model": student.state_dict(), "seed": seed, "hypothesis": hypothesis},
+        out_path,
+    )
     return {
-        "hypothesis": "H-CUR",
+        "hypothesis": hypothesis,
         "params": count_params(student),
         "steps": steps,
         "n_stages": int(n_stages),

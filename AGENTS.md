@@ -54,6 +54,7 @@ npm run verify
 12. Dead hyp code purged — kill/non-champion markdown in `docs/results/nano-lm/archive/`
 13. H-EAR2 widened early-exit gene — done (smoke **KILL** — quality < EARLY−ε)
 14. H-BUD max_new + EARLY exit gene — done (smoke **KILL** — quality < EARLY−ε)
+15. H-THIN thin CURL student + EARLY genes — done (smoke PROMOTE; formal **KILL** vs CURL Δ−0.33)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + parked [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
