@@ -24,6 +24,7 @@ H-FLOP gate: finite mean_tokens_per_s + mean_est_gflops on scored families.
 H-EARF gate: lp ≥ EARLY−ε and est_gflops < EARLY (FLOP-aware search).
 H-EXIT gate: lp ≥ EARLY−ε and est_gflops < EARLY (min_new↓ + n=1).
 H-MID gate: lp ≥ EARLY−ε and est_gflops < EARLY (min_new∈{4,8} + warm-start).
+H-POOLF gate: lp ≥ POOL−ε and est_gflops < POOL (n≤2 + tip warm-start).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -55,5 +56,6 @@ H-MID gate: lp ≥ EARLY−ε and est_gflops < EARLY (min_new∈{4,8} + warm-sta
 - H-EARF smoke: `docs/results/nano-lm/hearf-vs-hearly.md` (KILL — no FLOP win; same est GFLOPs as tip).
 - H-EXIT smoke: `docs/results/nano-lm/hexit-vs-hearly.md` (KILL — quality Δ−0.44; GFLOPs↓).
 - H-MID: smoke PROMOTE (`hmid-vs-hearly.md`); formal **KILL** (`formal-hmid-vs-hearly.md` — quality Δ−0.51).
+- H-POOLF: smoke PROMOTE (`hpoolf-vs-hpool.md`); formal **KILL** (`formal-hpoolf-vs-hpool.md` — quality Δ−0.27; GFLOPs↓).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
