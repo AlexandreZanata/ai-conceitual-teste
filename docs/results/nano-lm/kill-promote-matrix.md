@@ -12,6 +12,7 @@ H-EAR2 gate: lp ≥ EARLY−ε and wall < EARLY (widened early gene).
 H-BUD gate: not dominated by EARLY on (lp, wall); quality ≥ EARLY−ε.
 H-THIN gate: lp ≥ CURL−ε and wall < CURL on same EARLY decode.
 H-Q8 gate: lp ≥ CURL−ε and wall < CURL (INT8 dynamic on same EARLY).
+H-EARS gate: lp ≥ EARLY−ε and wall < EARLY (scheduled thr).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -31,5 +32,6 @@ H-Q8 gate: lp ≥ CURL−ε and wall < CURL (INT8 dynamic on same EARLY).
 - H-BUD smoke: `docs/results/nano-lm/hbud-vs-hearly.md` (KILL — quality < EARLY−ε).
 - H-THIN: smoke PROMOTE (`hthin-vs-hcurl.md`); formal **KILL** (`formal-hthin-vs-hcurl.md` — Δ−0.33 vs CURL; wall↓).
 - H-Q8 smoke: `docs/results/nano-lm/hq8-vs-hcurl.md` (KILL — no wall win vs CUDA tip; CPU dynamic INT8).
+- H-EARS smoke: `docs/results/nano-lm/hears-vs-hearly.md` (KILL — quality < EARLY−ε).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

@@ -56,6 +56,7 @@ npm run verify
 14. H-BUD max_new + EARLY exit gene — done (smoke **KILL** — quality < EARLY−ε)
 15. H-THIN thin CURL student + EARLY genes — done (smoke PROMOTE; formal **KILL** vs CURL Δ−0.33)
 16. H-Q8 INT8 dynamic quant on CURL + EARLY — done (smoke **KILL** — no wall win vs tip)
+17. H-EARS scheduled early-exit thr — done (smoke **KILL** — quality < EARLY−ε)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + parked [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
