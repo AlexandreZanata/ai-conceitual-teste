@@ -37,13 +37,13 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Train | **H-CURL2** | PROMOTE (`seq_lo=6` > H-CURL lo=8) | Official train tip |
 | Train deepeners | H-CURD / H-STEP / H-ALAT | formal/smoke **KILL** | NLL bins; early-stop; α/T |
 | Train parents | H-CURL / H-CUR | PROMOTE lineage | lo=8 / curriculum KD |
-| Decode speed | **H-EARLY** (+ EAR2/BUD/THIN/Q8/EARS/COMP) | EARLY★; deepeners/systems smoke **KILL** | COMP wall↑ |
+| Decode speed | **H-EARLY** (+ EAR2/BUD/THIN/Q8/EARS/COMP/EARF) | EARLY★; deepeners smoke **KILL** | EARF no FLOP win |
 | Decode quality@wall | **H-POOL** (+ POOL2/PROX) | POOL★; POOL2/PROX smoke **KILL** | Tighter search fails |
 | Decode parents | H-DECKL / H-DECK / H-DEC | PROMOTE vs B4 | Search lineage |
 | Instrumentation | **H-FLOP** | smoke **PROMOTE** | wall + tok/s + est GFLOPs |
 
 Protocol: train with **H-CURL2** (`seq_lo=6`), decode with **H-EARLY** (speed) or **H-POOL** (quality@wall). Compose H-IDs smoke **KILL**.  
-H-EAR2 / H-BUD / H-Q8 / H-EARS / H-COMP / H-PROX / H-POOL2 / H-STEP / H-ALAT smoke **KILL**; H-THIN / H-CURD formal **KILL**. H-FLOP instrumentation **PROMOTE**. Queue A–D complete — deepen tips only via `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+H-EAR2 / H-BUD / H-Q8 / H-EARS / H-COMP / H-PROX / H-POOL2 / H-STEP / H-ALAT / H-EARF smoke **KILL**; H-THIN / H-CURD formal **KILL**. H-FLOP instrumentation **PROMOTE**. Queue: deepen tips via `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived hypotheses
 

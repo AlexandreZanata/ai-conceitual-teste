@@ -21,6 +21,7 @@ H-CURD gate: teacher_lp > H-CURL2 tip @ equal steps (NLL bins; xor length).
 H-STEP gate: claim lp ≥ H-CURL2 tip (early-stop on fit teacher_lp plateau).
 H-ALAT gate: teacher_lp > H-CURL2 tip (α/T schedule under CURL stages).
 H-FLOP gate: finite mean_tokens_per_s + mean_est_gflops on scored families.
+H-EARF gate: lp ≥ EARLY−ε and est_gflops < EARLY (FLOP-aware search).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -49,5 +50,6 @@ H-FLOP gate: finite mean_tokens_per_s + mean_est_gflops on scored families.
 - H-STEP smoke: `docs/results/nano-lm/hstep-vs-hcurl2.md` (KILL — Δ−0.23 vs tip; steps↓).
 - H-ALAT (αT) smoke: `docs/results/nano-lm/halat-vs-hcurl2.md` (KILL — Δ−0.23 vs tip).
 - H-FLOP smoke: `docs/results/nano-lm/hflop-instrumentation.md` (PROMOTE — tps+GFLOPs live; EARLY wall↓ but GFLOPs↑).
+- H-EARF smoke: `docs/results/nano-lm/hearf-vs-hearly.md` (KILL — no FLOP win; same est GFLOPs as tip).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
