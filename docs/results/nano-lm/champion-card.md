@@ -11,6 +11,7 @@
 | 1′. Train util | Mag prune + recovery | **H-PRUN** (util) | [formal-hprun-vs-hstag.md](formal-hprun-vs-hstag.md) |
 | 1″. Train util | Top-k soft-label cache | **H-TOP** (util) | [formal-htop-vs-hstag.md](formal-htop-vs-hstag.md) |
 | 1‴. Train util | 1-layer STAG + PRUN recover | **H-DEPTH** (util) | [formal-hdepth-vs-hstag.md](formal-hdepth-vs-hstag.md) |
+| 1⁗. Train util | Pinned + non_blocking H2D | **H-PIN** (util) | [formal-hpin-vs-htop.md](formal-hpin-vs-htop.md) |
 | 2a. Decode (speed) | Early-exit gene | **H-EARLY** | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) |
 | 2a′. Decode util | Layer early-exit | **H-LAY** (util) | [formal-hlay-vs-hearly.md](formal-hlay-vs-hearly.md) |
 | 2a″. Decode util | Short draft stop | **H-SHORT** (util) | [formal-hshort-vs-hearly.md](formal-hshort-vs-hearly.md) |
@@ -58,6 +59,8 @@ npm run nano:poolb && npm run nano:poolb:report
 npm run nano:formal:hpoolb && npm run nano:formal:hpoolb:report
 npm run nano:formal:hbat && npm run nano:formal:hbat:report
 npm run nano:formal:htop && npm run nano:formal:htop:report
+npm run nano:pin && npm run nano:pin:report
+npm run nano:formal:hpin && npm run nano:formal:hpin:report
 npm run nano:topk && npm run nano:topk:report
 npm run nano:formal:htopk && npm run nano:formal:htopk:report
 npm run nano:formal:hflash && npm run nano:formal:hflash:report
@@ -79,8 +82,8 @@ npm run nano:fuse && npm run nano:fuse:report
 ## Park status
 
 **PARKED** (tips). Utils through Wave J + post-J complete.  
-**Wave K ACTIVE** — **H-POOLB** formal **PROMOTE** ([formal-hpoolb-vs-hpool.md](formal-hpoolb-vs-hpool.md)); next **H-PIN**.  
-**H-FUSE** / **H-MIX** PROTOCOL-only. **H-TOPK** formal **KILL**.
+**Wave K ACTIVE** — **H-PIN** formal **PROMOTE** ([formal-hpin-vs-htop.md](formal-hpin-vs-htop.md)); next **H-CHUNK**.  
+**H-POOLB** formal PROMOTE; **H-FUSE** / **H-MIX** PROTOCOL; **H-TOPK** formal KILL.
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
 Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).

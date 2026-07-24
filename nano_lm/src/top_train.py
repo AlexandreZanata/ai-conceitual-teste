@@ -11,6 +11,7 @@ import torch
 from student_model import build_student, count_params
 from top_ops import expand_topk_logits, ms_per_step
 from train_kd import kd_loss
+from pin_ops import pin_records
 
 
 def _train_loop(
@@ -101,6 +102,8 @@ def train_topk_cache(
     temperature: float,
     alpha: float,
     out_path: Path,
+    pinned: bool = False,
+    hypothesis: str = "H-TOP",
 ) -> dict[str, Any]:
     torch.manual_seed(seed)
     if device.type == "cuda":
@@ -108,12 +111,16 @@ def train_topk_cache(
     student = build_student(vocab_size).to(device)
     student.train()
     opt = torch.optim.AdamW(student.parameters(), lr=lr)
+    use_pin = bool(pinned) and device.type == "cuda"
+    recs = pin_records(records) if use_pin else records
 
     def steps_fn():
-        for rec in records:
-            ids = rec["ids"].to(device)
-            idx = rec["topk_idx"].to(device)
-            val = rec["topk_val"].to(device=device, dtype=torch.float32)
+        for rec in recs:
+            ids = rec["ids"].to(device, non_blocking=use_pin)
+            idx = rec["topk_idx"].to(device, non_blocking=use_pin)
+            val = rec["topk_val"].to(
+                device=device, dtype=torch.float32, non_blocking=use_pin
+            )
             t_logits = expand_topk_logits(idx, val, vocab_size=vocab_size)
             yield ids, t_logits
 
@@ -127,16 +134,17 @@ def train_topk_cache(
     )
     out_path.parent.mkdir(parents=True, exist_ok=True)
     torch.save(
-        {"model": student.state_dict(), "seed": seed, "hypothesis": "H-TOP"},
+        {"model": student.state_dict(), "seed": seed, "hypothesis": hypothesis},
         out_path,
     )
     steps = len(records)
     return {
-        "hypothesis": "H-TOP",
+        "hypothesis": hypothesis,
         "params": count_params(student),
         "steps": steps,
         "mean_loss": sum(losses) / max(len(losses), 1),
         "train_wall_s": wall_s,
         "ms_per_step": ms_per_step(wall_s=wall_s, steps=steps),
         "out_path": str(out_path),
+        "pinned": use_pin,
     }

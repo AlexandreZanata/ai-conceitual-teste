@@ -73,7 +73,8 @@ npm run verify
 31. Wave K / H-TOPK top-k sweep — done (smoke **PROMOTE** / formal **KILL** — tip k=64 stands)
 32. Wave K / H-FUSE FLASH⊕KVSEL — done (smoke **PROTOCOL** — wall < min(FLASH,KVSEL); not a tip)
 33. Wave K / H-POOLB batched POOL — done (smoke+formal **PROMOTE** — tok/s↑; lp=serial; tip POOL unchanged)
-34. Next — **H-PIN** (pinned H2D for TOP cache) — see `.local/pesquisa.md`
+34. Wave K / H-PIN pinned TOP H2D — done (smoke+formal **PROMOTE** — ms/step↓ vs TOP; lp=TOP)
+35. Next — **H-CHUNK** (chunked prefill under FLASH) — see `.local/pesquisa.md`
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  

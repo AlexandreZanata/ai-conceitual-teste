@@ -12,6 +12,7 @@ Frozen baseline track: TinyStories teacher + ≤5M student. Protocol: [`docs/NAN
 | [kill-promote-matrix.md](kill-promote-matrix.md) | Slim matrix |
 | [formal-hstag-vs-hcurl2.md](formal-hstag-vs-hcurl2.md) … train parents | H-STAG lineage |
 | [formal-htop-vs-hstag.md](formal-htop-vs-hstag.md) / [formal-hprun-vs-hstag.md](formal-hprun-vs-hstag.md) / [formal-hdepth-vs-hstag.md](formal-hdepth-vs-hstag.md) | Train utils |
+| [formal-hpin-vs-htop.md](formal-hpin-vs-htop.md) / [hpin-vs-htop.md](hpin-vs-htop.md) | Util H-PIN |
 | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) / [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) | Decode tips |
 | [formal-hlay-vs-hearly.md](formal-hlay-vs-hearly.md) … [formal-hbat-vs-hearly.md](formal-hbat-vs-hearly.md) | Decode utils |
 | [formal-hflash-vs-hearly.md](formal-hflash-vs-hearly.md) / [formal-hkvsel-vs-hearly.md](formal-hkvsel-vs-hearly.md) | Systems decode utils |
