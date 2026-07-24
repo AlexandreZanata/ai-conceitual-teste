@@ -133,6 +133,7 @@ npm run verify
 91. H-MNG MINP×NGRAM tip stack — done (smoke **KILL** — no dual wall vs tips)
 92. H-MPE evolve min_p gene — done (smoke **PROMOTE**; **formal KILL** — no wall vs H-MINP)
 93. H-TYP typical sampling — done (smoke **PROMOTE**; **formal PROMOTE** — dual vs B4)
+94. H-TMN TYP×MINP tip stack — done (smoke **KILL** — no dual wall vs tips)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

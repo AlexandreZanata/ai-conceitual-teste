@@ -38,6 +38,7 @@ H-FXS gate: teacher_lp > max(H-FIT, H-XOV) (FIT×XOV×SHO stack).
 H-LOFI gate: teacher_lp ≥ H-FIT−ε and wall_save (fewer teacher forwards).
 H-ENT2 gate: heads not collapsed and teacher_lp > B2 (TV floor).
 H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).
+H-TMN gate: lp ≥ max(H-TYP,H-MINP)−ε and wall < min tips (TYP×MINP stack).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -128,6 +129,7 @@ H-ENT3 gate: no collapse/chaos and teacher_lp > B2 (max TV + mix KD).
 - H-LOFI smoke detail: `docs/results/nano-lm/hlofi-vs-hfit.md`.
 - H-ENT2 smoke detail: `docs/results/nano-lm/hent2-vs-b2.md`.
 - H-ENT3 smoke detail: `docs/results/nano-lm/hent3-vs-b2.md`.
+- H-TMN smoke detail: `docs/results/nano-lm/htmn-vs-tips.md` (KILL — wall ≥ tips).
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - H-HOLD smoke PROMOTE was reversed on formal — see `formal-hhold-vs-b2.md`.

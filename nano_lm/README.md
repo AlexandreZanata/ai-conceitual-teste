@@ -73,6 +73,7 @@ npm run nano:minp            # H-MINP min-p sampling vs B4
 npm run nano:mng             # H-MNG MINP×NGRAM tip stack vs tips
 npm run nano:mpe             # H-MPE evolve min_p gene vs H-MINP
 npm run nano:typ             # H-TYP typical sampling vs B4
+npm run nano:tmn             # H-TMN TYP×MINP tip stack vs tips
 npm run nano:fit             # H-FIT teacher_lp fitness vs H-SEL
 npm run nano:tou             # H-TOU tournament selection vs H-SEL
 npm run nano:xov             # H-XOV weight crossover vs H-SEL
