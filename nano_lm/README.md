@@ -80,6 +80,9 @@ npm run nano:cur2            # H-CUR2 n_stages ablation vs H-CUR
 npm run nano:curl            # H-CURL seq_lo ablation vs H-CUR
 npm run nano:curt            # H-CURT adopted tip (n=5, lo=8) vs H-CUR
 npm run nano:sys             # H-SYS CURL×EARLY|POOL system compose
+npm run nano:joint           # H-JOINT curriculum∪early joint search
+npm run nano:joint:report    # H-JOINT vs CURL + EARLY@B2
+npm run nano:formal:joint    # formal H-JOINT (if smoke PROMOTE)
 npm run nano:fit             # H-FIT teacher_lp fitness vs H-SEL
 npm run nano:tou             # H-TOU tournament selection vs H-SEL
 npm run nano:xov             # H-XOV weight crossover vs H-SEL

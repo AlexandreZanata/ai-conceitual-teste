@@ -140,6 +140,7 @@ npm run verify
 98. H-CURL seq_lo ablation — done (smoke **PROMOTE** best lo=32; **formal PROMOTE** best lo=8)
 99. H-CURT adopted tip (n=5, lo=8) — done (smoke **KILL** — ≤ H-CUR tip Δ−0.05)
 100. H-SYS CURL×EARLY|POOL compose — done (smoke **KILL** — free lunch / paste)
+101. H-JOINT curriculum∪early joint search — done (smoke **KILL** — ≤ CURL default)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
