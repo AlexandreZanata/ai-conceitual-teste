@@ -14,6 +14,7 @@ H-PRUN: train util (prune; tip STAG unchanged).
 H-TOP gate: lp ≥ STAG−ε and train ms/step < live STAG (top-k soft cache).
 H-BUCKET gate: |Δlp| ≤ ε vs H-BAT/serial and tok/s > H-BAT (length-banded pad).
 H-REP gate: lp > EARLY and wall ≤ EARLY (rep-penalty / no-repeat under tip).
+H-ALT gate: lp ≥ EARLY−ε and (wall < EARLY or gflops < EARLY) (alt full/shallow).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -31,6 +32,6 @@ H-REP gate: lp > EARLY and wall ≤ EARLY (rep-penalty / no-repeat under tip).
 - Champion stack only. Purged H-ID history: `docs/results/nano-lm/archive/`.
 - Official: **H-STAG** train / **H-EARLY** speed / **H-POOL** quality@wall.
 - Utils kept: H-LAY, H-PRUN, H-SHORT, H-BAT, H-TOP, H-FLOP.
-- Wave I KILLs purged (WIN/TIE/AMP/SOFT). Wave J: H-TOP formal PROMOTE; BUCKET+REP smoke KILL; next H-ALT.
+- Wave I KILLs purged (WIN/TIE/AMP/SOFT). Wave J done: H-TOP formal PROMOTE; BUCKET+REP+ALT smoke KILL.
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

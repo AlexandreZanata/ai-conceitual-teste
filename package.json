@@ -50,6 +50,8 @@
     "nano:bucket:report": "nano_lm/.venv/bin/python nano_lm/src/write_hbucket_report.py",
     "nano:rep": "nano_lm/.venv/bin/python nano_lm/src/run_rep_smoke.py",
     "nano:rep:report": "nano_lm/.venv/bin/python nano_lm/src/write_hrep_report.py",
+    "nano:alt": "nano_lm/.venv/bin/python nano_lm/src/run_alt_smoke.py",
+    "nano:alt:report": "nano_lm/.venv/bin/python nano_lm/src/write_halt_report.py",
     "nano:formal:hlay": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hlay.py",
     "nano:formal:hlay:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hlay_report.py",
     "nano:formal:hprun": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hprun.py",
