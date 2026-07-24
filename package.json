@@ -42,6 +42,8 @@
     "nano:amp:report": "nano_lm/.venv/bin/python nano_lm/src/write_hamp_report.py",
     "nano:tie": "nano_lm/.venv/bin/python nano_lm/src/run_tie_smoke.py",
     "nano:tie:report": "nano_lm/.venv/bin/python nano_lm/src/write_htie_report.py",
+    "nano:prun": "nano_lm/.venv/bin/python nano_lm/src/run_prun_smoke.py",
+    "nano:prun:report": "nano_lm/.venv/bin/python nano_lm/src/write_hprun_report.py",
     "nano:cur": "nano_lm/.venv/bin/python nano_lm/src/run_cur_smoke.py",
     "nano:cur:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcur_report.py",
     "nano:curl": "nano_lm/.venv/bin/python nano_lm/src/run_curl_smoke.py",

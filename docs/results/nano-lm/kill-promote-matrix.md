@@ -12,6 +12,7 @@ H-FLOP: report tokens/s + est. GFLOPs with wall (instrumentation).
 H-LAY gate: lp ≥ EARLY−ε and (wall < EARLY or est_gflops < EARLY) (layer skip).
 H-AMP gate: lp ≥ EARLY−ε and wall < EARLY (CUDA autocast bf16/fp16).
 H-TIE gate: lp ≥ STAG−ε and (params < STAG or est_gflops < STAG) (UT-lite share).
+H-PRUN gate: lp ≥ STAG−ε and est_gflops < STAG (magnitude prune; density FLOPs).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -33,5 +34,6 @@ H-TIE gate: lp ≥ STAG−ε and (params < STAG or est_gflops < STAG) (UT-lite s
 - H-LAY smoke: `docs/results/nano-lm/hlay-vs-hearly.md` (PROMOTE wall↓; GFLOPs tie; formal deferred).
 - H-AMP smoke: `docs/results/nano-lm/hamp-vs-hearly.md` (KILL — quality < EARLY−ε; wall↑).
 - H-TIE smoke: `docs/results/nano-lm/htie-vs-hstag.md` (KILL — quality < STAG−ε; params↓).
+- H-PRUN smoke: `docs/results/nano-lm/hprun-vs-hstag.md` (PROMOTE; density FLOPs; formal deferred).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
