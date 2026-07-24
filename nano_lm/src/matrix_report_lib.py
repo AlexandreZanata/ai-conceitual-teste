@@ -17,6 +17,7 @@ from ls_ops import decide_hls; from ngram_ops import decide_hngram
 from nge_ops import decide_hnge; from ngre_ops import decide_hngre
 from ngdm_ops import decide_hngdm
 from minp_ops import decide_hminp
+from mng_ops import decide_hmng
 from lofi_ops import decide_hlofi; from ent2_ops import decide_hent2
 from ent3_ops import decide_hent3
 EPS_LP = 0.05
@@ -167,7 +168,7 @@ _SPECIAL: dict[str, Callable[..., str]] = {
     "H-ROUT": decide_hrout, "H-ORAC": decide_horac, "H-TKD": decide_htkd,
     "H-REP": decide_hrep, "H-CLIP": decide_hclip, "H-LS": decide_hls,
     "H-NGRAM": decide_hngram, "H-NGE": decide_hnge, "H-NGRE": decide_hngre,
-    "H-NGDM": decide_hngdm, "H-MINP": decide_hminp,
+    "H-NGDM": decide_hngdm, "H-MINP": decide_hminp, "H-MNG": decide_hmng,
 }
 for _fam in (
     "H-FIT", "H-TOU", "H-MUT", "H-RAN", "H-AGE", "H-MOR", "H-SPE",

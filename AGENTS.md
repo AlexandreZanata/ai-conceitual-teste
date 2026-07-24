@@ -130,6 +130,7 @@ npm run verify
 88. H-NGRE NGRAM×EARLY tip stack — done (smoke **KILL** — no dual wall vs tips)
 89. H-NGDM NGRAM×DECM tip stack — done (smoke **KILL** — no dual wall vs tips)
 90. H-MINP min-p sampling — done (smoke **PROMOTE**; **formal PROMOTE** — dual vs B4 Δ+1.17)
+91. H-MNG MINP×NGRAM tip stack — done (smoke **KILL** — no dual wall vs tips)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
