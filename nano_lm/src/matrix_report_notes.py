@@ -5,6 +5,7 @@ GATES = [
     "H-DEC / H-DECK / H-DECKL / H-POOL / H-EARLY: decode tips (see formal docs).",
     "H-CUR / H-CURL: curriculum train tips (official train = H-CURL seq_lo=8).",
     "H-EAR2 gate: lp ≥ EARLY−ε and wall < EARLY (widened early gene).",
+    "H-BUD gate: not dominated by EARLY on (lp, wall); quality ≥ EARLY−ε.",
 ]
 
 NOTES = [

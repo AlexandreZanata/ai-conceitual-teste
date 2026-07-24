@@ -9,6 +9,7 @@ H-SPEC gate: tokens/s > B3 and teacher_lp ≥ B3 − 0.05.
 H-DEC / H-DECK / H-DECKL / H-POOL / H-EARLY: decode tips (see formal docs).
 H-CUR / H-CURL: curriculum train tips (official train = H-CURL seq_lo=8).
 H-EAR2 gate: lp ≥ EARLY−ε and wall < EARLY (widened early gene).
+H-BUD gate: not dominated by EARLY on (lp, wall); quality ≥ EARLY−ε.
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -25,5 +26,6 @@ H-EAR2 gate: lp ≥ EARLY−ε and wall < EARLY (widened early gene).
 ## Notes
 - Champion stack only. Purged H-ID history: `docs/results/nano-lm/archive/`.
 - H-EAR2 smoke: `docs/results/nano-lm/hear2-vs-hearly.md` (KILL — quality < EARLY−ε).
+- H-BUD smoke: `docs/results/nano-lm/hbud-vs-hearly.md` (KILL — quality < EARLY−ε).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

@@ -37,6 +37,7 @@ npm run nano:deckl && npm run nano:deckl:report
 npm run nano:pool && npm run nano:pool:report
 npm run nano:early && npm run nano:early:report
 npm run nano:ear2 && npm run nano:ear2:report
+npm run nano:bud && npm run nano:bud:report
 npm run nano:spec
 ```
 
@@ -51,6 +52,7 @@ npm run nano:formal:hdeckl && npm run nano:formal:hdeckl:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report
 npm run nano:formal:hearly && npm run nano:formal:hearly:report
 npm run nano:formal:hear2 && npm run nano:formal:hear2:report
+npm run nano:formal:hbud && npm run nano:formal:hbud:report
 ```
 
 KILL / non-champion markdown: [`docs/results/nano-lm/archive/`](../docs/results/nano-lm/archive/).
