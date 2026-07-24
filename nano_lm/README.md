@@ -83,6 +83,8 @@ npm run nano:sys             # H-SYS CURL×EARLY|POOL system compose
 npm run nano:joint           # H-JOINT curriculum∪early joint search
 npm run nano:cache           # H-CACHE KV on EARLY tip genes
 npm run nano:cache:report    # H-CACHE vs EARLY + B4
+npm run nano:cap             # H-CAP hard max_new/n on POOL tip
+npm run nano:cap:report      # H-CAP vs H-POOL
 npm run nano:fit             # H-FIT teacher_lp fitness vs H-SEL
 npm run nano:tou             # H-TOU tournament selection vs H-SEL
 npm run nano:xov             # H-XOV weight crossover vs H-SEL

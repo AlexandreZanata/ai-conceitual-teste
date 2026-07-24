@@ -73,7 +73,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-CASC | Proxy → short mid teacher → full top-k | No save or ≤ B4 — **smoke PROMOTE**; **formal PROMOTE** |
 | H-BAND | UCB1 over fixed gene arms (no mutate) | ≤ H-DECK/H-CASC — **smoke KILL** |
 | H-DECKL | DECK search; lat-aware claim (Pareto) | Dominated vs B4 — **smoke/formal PROMOTE** |
-| H-POOL | Warm-start pop from other seeds’ best genes | ≤ cold H-DECKL — **smoke/formal PROMOTE** |
+| H-POOL / H-CAP | Warm-start★; hard caps | POOL★; CAP **smoke KILL** |
 | H-PARE | Archive (lp, wall); claim knee of front | Empty front / ≤ B4 — **smoke/formal PROMOTE** |
 | H-DECP | Per-prompt gene bank; proxy pick at claim | ≤ global / B4 — **smoke PROMOTE**; **formal KILL** |
 | H-DECM | Elite gene mixture; proxy pick completion | ≤ H-LAT2 / B4 — **smoke/formal PROMOTE** |

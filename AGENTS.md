@@ -142,6 +142,7 @@ npm run verify
 100. H-SYS CURL×EARLY|POOL compose — done (smoke **KILL** — free lunch / paste)
 101. H-JOINT curriculum∪early joint search — done (smoke **KILL** — ≤ CURL default)
 102. H-CACHE KV on EARLY tip genes — done (smoke **KILL** — no wall save vs EARLY)
+103. H-CAP hard max_new/n on POOL tip — done (smoke **KILL** — quality < POOL−ε)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  

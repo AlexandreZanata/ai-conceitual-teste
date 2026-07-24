@@ -47,6 +47,7 @@ H-CURT gate: teacher_lp > H-CUR (adopted n=5, lo=8).
 H-SYS gate: arm lp > CURL default and > tip@B2 (free lunch).
 H-JOINT gate: lp > CURL default and > H-EARLY@B2 (joint search).
 H-CACHE gate: lp ≥ EARLY−ε and wall < EARLY and B4 dual (KV cache).
+H-CAP gate: lp ≥ POOL−ε and wall < POOL (hard max_new/n caps).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -146,6 +147,7 @@ H-CACHE gate: lp ≥ EARLY−ε and wall < EARLY and B4 dual (KV cache).
 - H-SYS smoke: `docs/results/nano-lm/hsys-vs-tips.md` (KILL — paste free lunch).
 - H-JOINT smoke: `docs/results/nano-lm/hjoint-vs-tips.md` (KILL — ≤ CURL default).
 - H-CACHE smoke: `docs/results/nano-lm/hcache-vs-early.md` (KILL — no wall save vs EARLY).
+- H-CAP smoke: `docs/results/nano-lm/hcap-vs-hpool.md` (KILL — quality < POOL−ε).
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - H-HOLD smoke PROMOTE was reversed on formal — see `formal-hhold-vs-b2.md`.
