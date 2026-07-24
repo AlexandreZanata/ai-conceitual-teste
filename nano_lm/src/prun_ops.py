@@ -10,6 +10,7 @@ __all__ = [
     "DEFAULT_SPARSITY",
     "scale_flops_by_density",
     "decide_hprun",
+    "decide_hprun_formal",
     "EPS_LP",
 ]
 
@@ -33,7 +34,7 @@ def decide_hprun(
 ) -> str:
     """
     GIVEN H-PRUN vs H-STAG tip (same EARLY decode)
-    WHEN deciding
+    WHEN deciding (smoke)
     THEN PROMOTE iff lp ≥ STAG−ε and est_gflops < STAG; else KILL.
     """
     tip = stats.get("H-STAG")
@@ -44,3 +45,22 @@ def decide_hprun(
     if not (float(s["mean_gflops"]) < float(tip["mean_gflops"])):
         return "KILL (no FLOP win vs H-STAG)"
     return "PROMOTE (prune+recover vs STAG)"
+
+
+def decide_hprun_formal(
+    s: Mapping[str, float], stats: Mapping[str, Mapping[str, float]]
+) -> str:
+    """
+    GIVEN H-PRUN vs H-STAG on formal claim
+    WHEN deciding
+    THEN PROMOTE iff lp ≥ STAG−ε and wall < STAG
+    (density FLOPs alone are not a real dual gate under dense kernels).
+    """
+    tip = stats.get("H-STAG")
+    if tip is None:
+        return "needs H-STAG control"
+    if float(s["mean_lp"]) < float(tip["mean_lp"]) - EPS_LP:
+        return "KILL (quality drop vs H-STAG)"
+    if not (float(s["mean_wall"]) < float(tip["mean_wall"])):
+        return "KILL (no wall win; density FLOPs alone insufficient)"
+    return "PROMOTE (prune+recover wall vs STAG)"

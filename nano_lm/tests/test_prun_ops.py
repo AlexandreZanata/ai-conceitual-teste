@@ -5,7 +5,7 @@ Contract: magnitude prune zeros Linear weights; dual gate vs H-STAG.
 from __future__ import annotations
 
 from prun_mask import density_of, magnitude_prune, sparsity_of
-from prun_ops import decide_hprun, scale_flops_by_density
+from prun_ops import decide_hprun, decide_hprun_formal, scale_flops_by_density
 from student_model import build_student
 
 
@@ -29,3 +29,17 @@ def test_given_dual_gate_when_decide_then_promote_or_kill():
     )
     assert "quality" in decide_hprun({"mean_lp": -16.2, "mean_gflops": 8.0}, stats)
     assert "FLOP" in decide_hprun({"mean_lp": -15.9, "mean_gflops": 12.5}, stats)
+
+
+def test_given_formal_gate_when_decide_then_require_wall():
+    tip = {"mean_lp": -16.0, "mean_wall": 70.0, "mean_gflops": 12.0}
+    stats = {"H-STAG": tip}
+    assert decide_hprun_formal(
+        {"mean_lp": -15.9, "mean_wall": 50.0, "mean_gflops": 8.0}, stats
+    ).startswith("PROMOTE")
+    assert "wall" in decide_hprun_formal(
+        {"mean_lp": -15.9, "mean_wall": 70.0, "mean_gflops": 8.0}, stats
+    )
+    assert "quality" in decide_hprun_formal(
+        {"mean_lp": -16.2, "mean_wall": 40.0, "mean_gflops": 8.0}, stats
+    )

@@ -40,6 +40,7 @@ H-BAT gate: |Δlp| ≤ ε vs serial EARLY and tok/s > serial (batched prompts).
 - H-AMP smoke: `docs/results/nano-lm/hamp-vs-hearly.md` (KILL — quality < EARLY−ε; wall↑).
 - H-TIE smoke: `docs/results/nano-lm/htie-vs-hstag.md` (KILL — quality < STAG−ε; params↓).
 - H-PRUN smoke: `docs/results/nano-lm/hprun-vs-hstag.md` (PROMOTE; density FLOPs; formal deferred).
+- H-PRUN formal: `docs/results/nano-lm/formal-hprun-vs-hstag.md` (PROMOTE wall↓; quality↑; tip STAG unchanged).
 - H-WIN smoke: `docs/results/nano-lm/hwin-vs-hstag.md` (KILL — quality < STAG−ε; FLOPs↓).
 - H-SHORT smoke: `docs/results/nano-lm/hshort-vs-hearly.md` (PROMOTE wall↓; GFLOPs tie; formal deferred).
 - H-SOFT smoke: `docs/results/nano-lm/hsoft-vs-hstag.md` (KILL — no train ms/step win; H2D logits).
