@@ -72,6 +72,7 @@ npm run nano:ngdm            # H-NGDM NGRAM×DECM tip stack vs tips
 npm run nano:minp            # H-MINP min-p sampling vs B4
 npm run nano:mng             # H-MNG MINP×NGRAM tip stack vs tips
 npm run nano:mpe             # H-MPE evolve min_p gene vs H-MINP
+npm run nano:typ             # H-TYP typical sampling vs B4
 npm run nano:fit             # H-FIT teacher_lp fitness vs H-SEL
 npm run nano:tou             # H-TOU tournament selection vs H-SEL
 npm run nano:xov             # H-XOV weight crossover vs H-SEL
@@ -138,6 +139,7 @@ H-NGDM smoke: KILL vs tips (no dual wall) — see `docs/results/nano-lm/hngdm-vs
 H-MINP smoke/formal: PROMOTE vs B4 (dual; Δ+1.17 formal) — see `docs/results/nano-lm/hminp-vs-b4.md`.
 H-MNG smoke: KILL vs tips (no dual wall) — see `docs/results/nano-lm/hmng-vs-tips.md`.
 H-MPE smoke/formal: smoke PROMOTE; formal KILL (no wall) — see `docs/results/nano-lm/hmpe-vs-hminp.md`.
+H-TYP smoke/formal: PROMOTE vs B4 (dual) — see `docs/results/nano-lm/htyp-vs-b4.md`.
 H-STACK smoke: KILL vs tips (≤ max tip quality) — see `docs/results/nano-lm/hstack-vs-tips.md`.
 H-FIT smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hfit-vs-hsel.md`.
 H-TOU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htou-vs-hsel.md`.
