@@ -35,7 +35,7 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Role | ID | Formal | Notes |
 |------|-----|--------|-------|
 | Train | **H-CURL2** | PROMOTE (`seq_lo=6` > H-CURL lo=8) | Official train tip |
-| Train deepeners | H-CURD / H-STEP / H-ALAT | formal/smoke **KILL** | NLL bins; early-stop; α/T |
+| Train deepeners | H-CURD / H-STEP / H-ALAT / H-CURL3 | formal/smoke **KILL** | NLL bins; early-stop; α/T; micro lo |
 | Train parents | H-CURL / H-CUR | PROMOTE lineage | lo=8 / curriculum KD |
 | Decode speed | **H-EARLY** (+ EAR2/BUD/…/EXIT/MID/QG) | EARLY★; deepeners smoke/formal **KILL** | QG quality cliff |
 | Decode quality@wall | **H-POOL** (+ POOL2/PROX/POOLF/POOL3/TRIM) | POOL★; deepeners smoke/formal **KILL** | freeze-n / n-clamp fail |
@@ -43,7 +43,7 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Instrumentation | **H-FLOP** | smoke **PROMOTE** | wall + tok/s + est GFLOPs |
 
 Protocol: train with **H-CURL2** (`seq_lo=6`), decode with **H-EARLY** (speed) or **H-POOL** (quality@wall). Compose H-IDs smoke **KILL**.  
-H-EAR2 / H-BUD / H-Q8 / H-EARS / H-COMP / H-PROX / H-POOL2 / H-POOL3 / H-TRIM / H-STEP / H-ALAT / H-EARF / H-EXIT / H-QG smoke **KILL**; H-MID / H-POOLF smoke PROMOTE / formal **KILL**; H-THIN / H-CURD formal **KILL**. H-FLOP instrumentation **PROMOTE**. Queue: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+H-EAR2 / H-BUD / H-Q8 / H-EARS / H-COMP / H-PROX / H-POOL2 / H-POOL3 / H-TRIM / H-STEP / H-ALAT / H-EARF / H-EXIT / H-QG smoke **KILL**; H-MID / H-POOLF / H-CURL3 smoke PROMOTE / formal **KILL**; H-THIN / H-CURD formal **KILL**. H-FLOP instrumentation **PROMOTE**. Queue: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived hypotheses
 
