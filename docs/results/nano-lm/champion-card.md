@@ -9,6 +9,7 @@
 |------|--------|-----|-----------------|
 | 1. Train | Curriculum KD | **H-STAG** (`seq_lo=6`, `n_stages=4`) | [formal-hstag-vs-hcurl2.md](formal-hstag-vs-hcurl2.md) |
 | 1′. Train util | Mag prune + recovery | **H-PRUN** (util) | [formal-hprun-vs-hstag.md](formal-hprun-vs-hstag.md) |
+| 1″. Train util | Top-k soft-label cache | **H-TOP** (util) | [formal-htop-vs-hstag.md](formal-htop-vs-hstag.md) |
 | 2a. Decode (speed) | Early-exit gene | **H-EARLY** | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) |
 | 2a′. Decode util | Layer early-exit | **H-LAY** (util) | [formal-hlay-vs-hearly.md](formal-hlay-vs-hearly.md) |
 | 2a″. Decode util | Short draft stop | **H-SHORT** (util) | [formal-hshort-vs-hearly.md](formal-hshort-vs-hearly.md) |
@@ -48,6 +49,7 @@ npm run nano:formal:hlay && npm run nano:formal:hlay:report
 npm run nano:formal:hshort && npm run nano:formal:hshort:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report
 npm run nano:formal:hbat && npm run nano:formal:hbat:report
+npm run nano:formal:htop && npm run nano:formal:htop:report
 ```
 
 ## Closed compose branch (do not reopen without new parent)
@@ -62,7 +64,7 @@ npm run nano:formal:hbat && npm run nano:formal:hbat:report
 ## Park status
 
 **PARKED** on Waves A–H. **Wave I complete** (smoke + formal deepeners BAT/LAY/PRUN/SHORT).  
-Wave J: **H-TOP** smoke **PROMOTE** ([htop-vs-hstag.md](htop-vs-hstag.md)); formal deferred. Next: formal H-TOP (`.local/pesquisa.md`).
+Wave J: **H-TOP** formal **PROMOTE** ([formal-htop-vs-hstag.md](formal-htop-vs-hstag.md)); next **H-BUCKET** (`.local/pesquisa.md`).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
 Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).

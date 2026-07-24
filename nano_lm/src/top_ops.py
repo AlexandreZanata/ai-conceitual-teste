@@ -5,11 +5,17 @@ from __future__ import annotations
 from typing import Mapping
 
 from lat_ops import EPS_LP
-from soft_ops import ms_per_step
 
 __all__ = ["DEFAULT_TOP_K", "decide_htop", "ms_per_step", "expand_topk_logits"]
 
 DEFAULT_TOP_K = 64
+
+
+def ms_per_step(*, wall_s: float, steps: int) -> float:
+    """Milliseconds per train step (0 if steps < 1)."""
+    if int(steps) < 1:
+        return 0.0
+    return 1000.0 * float(wall_s) / float(steps)
 
 
 def expand_topk_logits(

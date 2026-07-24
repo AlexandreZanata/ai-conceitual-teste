@@ -1,14 +1,13 @@
 # Archived nano-lm results (KILL / non-champion history)
 
-Scientific record for purged hypotheses. Active tips live one level up.
+## Active keep (`docs/results/nano-lm/`)
 
-## Active champions (`docs/results/nano-lm/`)
+- Train tip: **H-STAG** (+ parents CURL2/CURL/CUR)
+- Decode tips: **H-EARLY** / **H-POOL** (+ DECKL/DECK/DEC)
+- Utils: **H-LAY** / **H-PRUN** / **H-SHORT** / **H-BAT** / **H-TOP** / **H-FLOP**
+- Wave J: **H-TOP** formal PROMOTE; next **H-BUCKET**
 
-- Train: **H-STAG** ← H-CURL2 ← H-CURL ← H-CUR
-- Decode: **H-EARLY** / **H-POOL** ← H-DECKL ← H-DECK ← H-DEC
-- Metrics: H-FLOP instrumentation
-
-## Archived files (128)
+## Archived files (132)
 
 - `formal-hann-vs-kdcos.md`
 - `formal-hcasc-vs-b4.md`
@@ -43,6 +42,7 @@ Scientific record for purged hypotheses. Active tips live one level up.
 - `hadv-vs-b2.md`
 - `hage-vs-hsel.md`
 - `halat-vs-hcurl2.md`
+- `hamp-vs-hearly.md`
 - `hann-vs-kdcos.md`
 - `hanti-vs-hsel.md`
 - `hbal-vs-b2.md`
@@ -122,6 +122,7 @@ Scientific record for purged hypotheses. Active tips live one level up.
 - `hsea-vs-hfit.md`
 - `hsex-vs-hsel.md`
 - `hsho-vs-hsel.md`
+- `hsoft-vs-hstag.md`
 - `hspe-vs-hsel.md`
 - `hspec-vs-b3.md`
 - `hstack-vs-tips.md`
@@ -130,11 +131,13 @@ Scientific record for purged hypotheses. Active tips live one level up.
 - `hsys-vs-tips.md`
 - `htax-vs-hsel.md`
 - `hthin-vs-hcurl.md`
+- `htie-vs-hstag.md`
 - `htkd-vs-b2.md`
 - `htmn-vs-tips.md`
 - `htou-vs-hsel.md`
 - `htpe-vs-htyp.md`
 - `htrim-vs-hpool.md`
 - `htyp-vs-b4.md`
+- `hwin-vs-hstag.md`
 - `hxov-vs-hsel.md`
 - `hzom-vs-hsel.md`

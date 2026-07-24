@@ -1,4 +1,4 @@
-"""Render H-SOFT smoke vs live H-STAG (offline soft-label cache)."""
+"""Render formal H-TOP vs live H-STAG (top-k soft-label cache)."""
 
 from __future__ import annotations
 
@@ -7,7 +7,7 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-from soft_ops import decide_hsoft
+from top_ops import decide_htop
 
 
 def _means(rows: list[dict]) -> dict[str, dict[str, float]]:
@@ -31,16 +31,20 @@ def _means(rows: list[dict]) -> dict[str, dict[str, float]]:
 def render(path: Path) -> str:
     data = json.loads(path.read_text(encoding="utf-8"))
     stats = _means(data["rows"])
-    s = stats.get("H-SOFT", {})
-    decision = decide_hsoft(s, stats) if s else "needs H-SOFT rows"
+    s = stats.get("H-TOP", {})
+    decision = decide_htop(s, stats) if s else "needs H-TOP rows"
     tip = stats.get("H-STAG", {})
     d_lp = s.get("mean_lp", float("nan")) - tip.get("mean_lp", float("nan"))
     d_ms = s.get("mean_ms_step", float("nan")) - tip.get("mean_ms_step", float("nan"))
     lines = [
-        "# H-SOFT smoke — offline soft-label cache vs live STAG",
+        "# Formal H-TOP vs live H-STAG (top-k soft-label cache)",
         "",
-        "Precompute teacher logits once; STAG curriculum train reads cache only.",
-        "Kill if quality < STAG−ε or no train ms/step win (cache build excluded).",
+        f"Source: `{path}`",
+        f"Wall clock: {data.get('wall_s', float('nan')):.1f}s",
+        "",
+        f"Store teacher top-{data.get('top_k')} logits offline; STAG curriculum from cache.",
+        "Fit≠eval (`eval_prompts`). Gate: lp ≥ STAG−ε **and** train ms/step < live STAG",
+        "(cache build excluded from ms/step).",
         f"Recipe: `seq_lo={data.get('seq_lo')}`, `n_stages={data.get('n_stages')}`, "
         f"`steps={data.get('steps')}`.",
         "",
@@ -49,13 +53,12 @@ def render(path: Path) -> str:
         "|--------|-----------------|------|--------------|-----------|"
         "------------------|--------------------|---|",
     ]
-    for fam in ("H-STAG", "H-SOFT"):
+    for fam in ("H-STAG", "H-TOP"):
         if fam not in stats:
             continue
         st = stats[fam]
         if fam == "H-STAG":
-            d1, d2 = "—", "—"
-            cb = "—"
+            d1, d2, cb = "—", "—", "—"
         else:
             d1, d2 = f"{d_lp:+.4f}", f"{d_ms:+.1f}"
             cb = f"{st['mean_cache_build']:.2f}"
@@ -66,12 +69,12 @@ def render(path: Path) -> str:
     lines.extend(
         [
             "",
-            f"**Decision: {decision}**",
+            f"**Decision:** {decision}",
             "",
-            "Note: claim is train efficiency, not decode wall/GFLOPs.",
-            "Full-vocab soft logits over PCIe can lose to an in-GPU teacher forward on short T.",
+            "Note: claim is train efficiency (not decode). Tip H-STAG weights unchanged.",
             "",
-            "Commands: `npm run nano:soft` → `npm run nano:soft:report`.",
+            "Commands: `npm run nano:formal:htop` → "
+            "`npm run nano:formal:htop:report`.",
             "",
         ]
     )
@@ -81,17 +84,17 @@ def render(path: Path) -> str:
 def main() -> int:
     p = argparse.ArgumentParser()
     p.add_argument(
-        "--smoke",
+        "--formal",
         type=Path,
-        default=Path("results/nano-lm/student-matrix/soft_smoke.json"),
+        default=Path("results/nano-lm/formal-htop/formal.json"),
     )
     p.add_argument(
         "--out",
         type=Path,
-        default=Path("docs/results/nano-lm/hsoft-vs-hstag.md"),
+        default=Path("docs/results/nano-lm/formal-htop-vs-hstag.md"),
     )
     args = p.parse_args()
-    text = render(args.smoke)
+    text = render(args.formal)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(text, encoding="utf-8")
     print(f"wrote {args.out}")

@@ -61,7 +61,8 @@ npm run verify
 19. H-SHORT two-phase short draft — done (smoke **PROMOTE**; **formal PROMOTE** wall↓ tiny; GFLOPs tie)
 20. H-SOFT offline soft-label cache — done (smoke **KILL** — equal lp; train ms/step↑)
 21. H-BAT batched multi-prompt EARLY — done (smoke **PROMOTE**; **formal PROMOTE** tok/s↑; tip unchanged)
-22. Wave J / H-TOP top-k soft-label cache — done (smoke **PROMOTE** — ms/step↓ vs live STAG; lp↑; formal deferred)
+22. Wave J / H-TOP top-k soft-label cache — done (smoke+formal **PROMOTE** — ms/step↓ vs live STAG; lp↑)
+23. Wave J next — **H-BUCKET** (length-bucketed BAT) — see `.local/pesquisa.md`
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  

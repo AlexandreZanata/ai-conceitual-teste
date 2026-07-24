@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import torch
 
-from top_ops import decide_htop, expand_topk_logits
+from hold_ops import assert_disjoint, load_prompt_ids
+from run_formal_htop import formal_cfg
+from top_ops import decide_htop, expand_topk_logits, ms_per_step
 
 
 def test_given_topk_when_expand_then_scatter() -> None:
@@ -15,6 +17,11 @@ def test_given_topk_when_expand_then_scatter() -> None:
     assert float(out[0, 0, 1]) == 2.0
     assert float(out[0, 0, 3]) == 4.0
     assert float(out[0, 0, 0]) == -10.0
+
+
+def test_given_wall_when_ms_per_step_then_scale() -> None:
+    assert ms_per_step(wall_s=2.0, steps=100) == 20.0
+    assert ms_per_step(wall_s=1.0, steps=0) == 0.0
 
 
 def test_given_dual_gate_when_decide_then_promote_or_kill() -> None:
@@ -29,3 +36,11 @@ def test_given_dual_gate_when_decide_then_promote_or_kill() -> None:
     assert "step-time" in decide_htop(
         {"mean_lp": -15.9, "mean_ms_step": 40.0}, stats
     )
+
+
+def test_given_formal_cfg_when_load_then_fit_neq_eval() -> None:
+    c = formal_cfg()
+    assert "eval_prompts" in str(c["prompts"])
+    assert_disjoint(load_prompt_ids(c["fit_prompts"]), load_prompt_ids(c["prompts"]))
+    assert int(c["steps_kd"]) >= 120
+    assert c["seeds"] == [0, 1, 2]
