@@ -48,9 +48,10 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Wave I | **H-SHORT** | smoke+**formal PROMOTE** | short draft; wall↓ tiny; GFLOPs tie |
 | Wave I | **H-SOFT** | smoke **KILL** | soft cache; train ms/step↑ |
 | Wave I | **H-BAT** | smoke+**formal PROMOTE** | batched tok/s↑; tip EARLY unchanged |
+| Wave J | **H-TOP** | smoke **PROMOTE** | top-k soft cache; ms/step↓; formal deferred |
 
 Protocol: train **H-STAG**, decode **H-EARLY** or **H-POOL**. Never paste tips (SYS/JOINT/CACHE/CAP KILL).  
-Wave I complete. Formal deepeners: **H-BAT** / **H-LAY** / **H-PRUN** / **H-SHORT** PROMOTE. Next: Wave J (`.local/pesquisa.md`). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+Wave I complete. Wave J: **H-TOP** smoke PROMOTE (fix H-SOFT H2D). Next: formal H-TOP (`.local/pesquisa.md`). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived hypotheses
 

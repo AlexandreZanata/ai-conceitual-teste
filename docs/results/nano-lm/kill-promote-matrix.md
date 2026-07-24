@@ -16,6 +16,7 @@ H-PRUN gate: lp ≥ STAG−ε and est_gflops < STAG (magnitude prune; density FL
 H-WIN gate: lp ≥ STAG−ε and est_gflops < STAG (local window attn).
 H-SHORT gate: lp ≥ EARLY−ε and (wall < EARLY or est_gflops < EARLY) (short draft).
 H-SOFT gate: lp ≥ STAG−ε and train ms/step < live STAG (soft-label cache).
+H-TOP gate: lp ≥ STAG−ε and train ms/step < live STAG (top-k soft cache).
 H-BAT gate: |Δlp| ≤ ε vs serial EARLY and tok/s > serial (batched prompts).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
@@ -45,6 +46,7 @@ H-BAT gate: |Δlp| ≤ ε vs serial EARLY and tok/s > serial (batched prompts).
 - H-SHORT smoke: `docs/results/nano-lm/hshort-vs-hearly.md` (PROMOTE wall↓; GFLOPs tie; formal deferred).
 - H-SHORT formal: `docs/results/nano-lm/formal-hshort-vs-hearly.md` (PROMOTE wall↓ tiny; GFLOPs tie; tip unchanged).
 - H-SOFT smoke: `docs/results/nano-lm/hsoft-vs-hstag.md` (KILL — no train ms/step win; H2D logits).
+- H-TOP smoke: `docs/results/nano-lm/htop-vs-hstag.md` (PROMOTE ms/step↓; lp↑; formal deferred).
 - H-BAT smoke: `docs/results/nano-lm/hbat-vs-hearly.md` (PROMOTE tok/s↑; formal deferred).
 - H-BAT formal: `docs/results/nano-lm/formal-hbat-vs-hearly.md` (PROMOTE tok/s↑; tip EARLY unchanged).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.

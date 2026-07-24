@@ -61,7 +61,8 @@ npm run nano:formal:hbat && npm run nano:formal:hbat:report
 
 ## Park status
 
-**PARKED** on Waves A–H. **Wave I complete** (smoke + formal deepeners BAT/LAY/PRUN/SHORT). Next: **Wave J** (`.local/pesquisa.md`).
+**PARKED** on Waves A–H. **Wave I complete** (smoke + formal deepeners BAT/LAY/PRUN/SHORT).  
+Wave J: **H-TOP** smoke **PROMOTE** ([htop-vs-hstag.md](htop-vs-hstag.md)); formal deferred. Next: formal H-TOP (`.local/pesquisa.md`).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
 Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).
