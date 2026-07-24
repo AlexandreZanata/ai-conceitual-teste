@@ -67,7 +67,8 @@ npm run verify
 25. Wave J / H-ALT alternate full/shallow depth — done (smoke **KILL** — quality < EARLY−ε; wall/GFLOPs↓)
 26. Wave J complete — backlog opened
 27. H-FLASH SDPA backend on EARLY — done (smoke+formal **PROMOTE** — wall↓; lp=EARLY; tip unchanged)
-28. Next — **H-KVSEL** or **H-DEPTH** — see `.local/pesquisa.md`
+28. H-KVSEL gated KV (`max_new` > thr) — done (smoke+formal **PROMOTE** — dual-budget wall↓; lp≈EARLY; tip unchanged)
+29. Next — **H-DEPTH** — see `.local/pesquisa.md`
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  

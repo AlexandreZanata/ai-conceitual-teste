@@ -12,14 +12,15 @@ GATES = [
     "H-REP gate: lp > EARLY and wall ≤ EARLY (rep-penalty / no-repeat under tip).",
     "H-ALT gate: lp ≥ EARLY−ε and (wall < EARLY or gflops < EARLY) (alt full/shallow).",
     "H-FLASH gate: lp ≥ EARLY−ε and wall < EARLY (SDPA backend on tip).",
+    "H-KVSEL gate: lp ≥ EARLY−ε and wall < EARLY (gated KV when max_new > thr).",
 ]
 
 NOTES = [
     "## Notes",
     "- Champion stack only. Purged H-ID history: `docs/results/nano-lm/archive/`.",
     "- Official: **H-STAG** train / **H-EARLY** speed / **H-POOL** quality@wall.",
-    "- Utils kept: H-LAY, H-PRUN, H-SHORT, H-BAT, H-TOP, H-FLASH, H-FLOP.",
-    "- Wave J done (H-TOP PROMOTE; BUCKET+REP+ALT KILL). H-FLASH formal PROMOTE; next H-KVSEL/H-DEPTH.",
+    "- Utils kept: H-LAY, H-PRUN, H-SHORT, H-BAT, H-TOP, H-FLASH, H-KVSEL, H-FLOP.",
+    "- Wave J done (H-TOP PROMOTE; BUCKET+REP+ALT KILL). H-FLASH+H-KVSEL formal PROMOTE; next H-DEPTH.",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]
