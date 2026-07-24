@@ -54,6 +54,8 @@ npm run nano:formal:hshort && npm run nano:formal:hshort:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report
 npm run nano:formal:hbat && npm run nano:formal:hbat:report
 npm run nano:formal:htop && npm run nano:formal:htop:report
+npm run nano:topk && npm run nano:topk:report
+npm run nano:formal:htopk && npm run nano:formal:htopk:report
 npm run nano:formal:hflash && npm run nano:formal:hflash:report
 npm run nano:formal:hkvsel && npm run nano:formal:hkvsel:report
 npm run nano:formal:hdepth && npm run nano:formal:hdepth:report
@@ -71,8 +73,9 @@ npm run nano:mix && npm run nano:mix:report
 
 ## Park status
 
-**PARKED** — backlog empty. Wave J + post-J utils complete.  
-**H-MIX** smoke **PROTOCOL** ([hmix-protocol.md](hmix-protocol.md)): stack PRUN⊕LAY on separate axes; **not** a tip H-ID.
+**PARKED** (tips). Utils through Wave J + post-J complete.  
+**Wave K ACTIVE** — **H-TOPK** formal **KILL** ([formal-htopk-vs-htop.md](formal-htopk-vs-htop.md)); next **H-FUSE**.  
+**H-MIX** remains PROTOCOL-only ([hmix-protocol.md](hmix-protocol.md)).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
 Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).

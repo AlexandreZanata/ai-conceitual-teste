@@ -2,13 +2,13 @@
 
 ## Active keep (`docs/results/nano-lm/`)
 
-- Train tip: **H-STAG** (+ parents CURL2/CURL/CUR)
-- Decode tips: **H-EARLY** / **H-POOL** (+ DECKL/DECK/DEC)
-- Utils: **H-LAY** / **H-PRUN** / **H-SHORT** / **H-BAT** / **H-TOP** / **H-FLASH** / **H-KVSEL** / **H-DEPTH** / **H-FLOP**
-- Wave J done: **H-TOP** formal PROMOTE; **H-BUCKET** / **H-REP** / **H-ALT** smoke KILL
-- Post-J: **H-FLASH** + **H-KVSEL** + **H-DEPTH** formal PROMOTE; **H-MIX** protocol (not tip); backlog empty
+- Tips: **H-STAG** / **H-EARLY** / **H-POOL**
+- Train utils: H-PRUN / H-TOP / H-DEPTH
+- Decode utils: H-LAY / H-SHORT / H-FLASH / H-KVSEL / H-BAT
+- Protocol: H-MIX (PRUN⊕LAY)
+- Metrics: H-FLOP
 
-## Archived files (132)
+## Archived files (135)
 
 - `formal-hann-vs-kdcos.md`
 - `formal-hcasc-vs-b4.md`
@@ -43,6 +43,7 @@
 - `hadv-vs-b2.md`
 - `hage-vs-hsel.md`
 - `halat-vs-hcurl2.md`
+- `halt-vs-hearly.md`
 - `hamp-vs-hearly.md`
 - `hann-vs-kdcos.md`
 - `hanti-vs-hsel.md`
@@ -50,6 +51,7 @@
 - `hband-vs-hcasc.md`
 - `hbeam-vs-b4.md`
 - `hblk-vs-b3.md`
+- `hbucket-vs-hbat.md`
 - `hbud-vs-hearly.md`
 - `hcache-vs-early.md`
 - `hcan-vs-hsel.md`
@@ -118,6 +120,7 @@
 - `hqg-vs-hearly.md`
 - `hran-vs-hsel.md`
 - `hrep-vs-b4.md`
+- `hrep-vs-hearly.md`
 - `hrout-vs-tips.md`
 - `hrps-vs-hsel.md`
 - `hsea-vs-hfit.md`

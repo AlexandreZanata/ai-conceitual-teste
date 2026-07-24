@@ -7,28 +7,18 @@ Frozen baseline track: TinyStories teacher + ≤5M student. Protocol: [`docs/NAN
 | Doc | Role |
 |-----|------|
 | [champion-card.md](champion-card.md) | Tip-stack protocol |
+| [hmix-protocol.md](hmix-protocol.md) | PRUN⊕LAY protocol (not a tip) |
 | [kill-promote-matrix.md](kill-promote-matrix.md) | Slim matrix |
-| [formal-hstag-vs-hcurl2.md](formal-hstag-vs-hcurl2.md) / [hstag-vs-hcurl2.md](hstag-vs-hcurl2.md) | Train tip H-STAG |
-| [formal-hcurl2-vs-hcurl.md](formal-hcurl2-vs-hcurl.md) … [hcur-vs-b2.md](hcur-vs-b2.md) | Train parents |
-| [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) / [hearly-vs-b4.md](hearly-vs-b4.md) | Decode tip H-EARLY |
-| [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) / [hpool-vs-hdeckl.md](hpool-vs-hdeckl.md) | Decode tip H-POOL |
-| [formal-hlay-vs-hearly.md](formal-hlay-vs-hearly.md) / [hlay-vs-hearly.md](hlay-vs-hearly.md) | Util H-LAY |
-| [formal-hprun-vs-hstag.md](formal-hprun-vs-hstag.md) / [hprun-vs-hstag.md](hprun-vs-hstag.md) | Util H-PRUN |
-| [formal-hshort-vs-hearly.md](formal-hshort-vs-hearly.md) / [hshort-vs-hearly.md](hshort-vs-hearly.md) | Util H-SHORT |
-| [formal-hbat-vs-hearly.md](formal-hbat-vs-hearly.md) / [hbat-vs-hearly.md](hbat-vs-hearly.md) | Util H-BAT |
-| [formal-htop-vs-hstag.md](formal-htop-vs-hstag.md) / [htop-vs-hstag.md](htop-vs-hstag.md) | Util H-TOP |
-| [hbucket-vs-hbat.md](hbucket-vs-hbat.md) | Wave J H-BUCKET (smoke KILL) |
-| [hrep-vs-hearly.md](hrep-vs-hearly.md) | Wave J H-REP (smoke KILL) |
-| [halt-vs-hearly.md](halt-vs-hearly.md) | Wave J H-ALT (smoke KILL) |
-| [formal-hflash-vs-hearly.md](formal-hflash-vs-hearly.md) / [hflash-vs-hearly.md](hflash-vs-hearly.md) | Util H-FLASH |
-| [formal-hkvsel-vs-hearly.md](formal-hkvsel-vs-hearly.md) / [hkvsel-vs-hearly.md](hkvsel-vs-hearly.md) | Util H-KVSEL |
-| [formal-hdepth-vs-hstag.md](formal-hdepth-vs-hstag.md) / [hdepth-vs-hstag.md](hdepth-vs-hstag.md) | Util H-DEPTH |
-| [hmix-protocol.md](hmix-protocol.md) | Protocol H-MIX (PRUN⊕LAY; not tip) |
+| [formal-hstag-vs-hcurl2.md](formal-hstag-vs-hcurl2.md) … train parents | H-STAG lineage |
+| [formal-htop-vs-hstag.md](formal-htop-vs-hstag.md) / [formal-hprun-vs-hstag.md](formal-hprun-vs-hstag.md) / [formal-hdepth-vs-hstag.md](formal-hdepth-vs-hstag.md) | Train utils |
+| [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) / [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) | Decode tips |
+| [formal-hlay-vs-hearly.md](formal-hlay-vs-hearly.md) … [formal-hbat-vs-hearly.md](formal-hbat-vs-hearly.md) | Decode utils |
+| [formal-hflash-vs-hearly.md](formal-hflash-vs-hearly.md) / [formal-hkvsel-vs-hearly.md](formal-hkvsel-vs-hearly.md) | Systems decode utils |
 | [hflop-instrumentation.md](hflop-instrumentation.md) | FLOP/tps metrics |
 | [smoke-summary.md](smoke-summary.md) / [lab-vs-base.md](lab-vs-base.md) | Phase-10 / lab |
 
 ## Archive
 
-Kill notes (incl. WIN/TIE/AMP/SOFT): [`archive/`](archive/).
+Kill notes (BUCKET/REP/ALT + older): [`archive/`](archive/).
 
 Raw JSON under `results/nano-lm/` is gitignored and not purged.
