@@ -31,9 +31,10 @@ def recover_pruned_kd(
     alpha: float,
     sparsity: float,
     out_path: Path,
+    hypothesis: str = "H-PRUN",
 ) -> dict[str, Any]:
     """
-    GIVEN a loaded STAG student
+    GIVEN a loaded student
     WHEN magnitude-pruning then KD recovery
     THEN save pruned+recovered ckpt; return sparsity meta.
     """
@@ -87,14 +88,14 @@ def recover_pruned_kd(
         {
             "model": student.state_dict(),
             "seed": seed,
-            "hypothesis": "H-PRUN",
+            "hypothesis": hypothesis,
             "sparsity_target": sparsity,
             "sparsity": sparsity_of(student),
         },
         out_path,
     )
     return {
-        "hypothesis": "H-PRUN",
+        "hypothesis": hypothesis,
         "params": count_params(student),
         "steps": steps,
         "sparsity_target": sparsity,

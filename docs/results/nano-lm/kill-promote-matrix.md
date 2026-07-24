@@ -17,6 +17,7 @@ H-REP gate: lp > EARLY and wall ≤ EARLY (rep-penalty / no-repeat under tip).
 H-ALT gate: lp ≥ EARLY−ε and (wall < EARLY or gflops < EARLY) (alt full/shallow).
 H-FLASH gate: lp ≥ EARLY−ε and wall < EARLY (SDPA backend on tip).
 H-KVSEL gate: lp ≥ EARLY−ε and wall < EARLY (gated KV when max_new > thr).
+H-DEPTH gate: lp ≥ STAG−ε and wall < STAG (1-layer STAG + PRUN recover).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -33,7 +34,7 @@ H-KVSEL gate: lp ≥ EARLY−ε and wall < EARLY (gated KV when max_new > thr).
 ## Notes
 - Champion stack only. Purged H-ID history: `docs/results/nano-lm/archive/`.
 - Official: **H-STAG** train / **H-EARLY** speed / **H-POOL** quality@wall.
-- Utils kept: H-LAY, H-PRUN, H-SHORT, H-BAT, H-TOP, H-FLASH, H-KVSEL, H-FLOP.
-- Wave J done (H-TOP PROMOTE; BUCKET+REP+ALT KILL). H-FLASH+H-KVSEL formal PROMOTE; next H-DEPTH.
+- Utils kept: H-LAY, H-PRUN, H-SHORT, H-BAT, H-TOP, H-FLASH, H-KVSEL, H-DEPTH, H-FLOP.
+- Wave J done (H-TOP PROMOTE; BUCKET+REP+ALT KILL). FLASH+KVSEL+DEPTH formal PROMOTE; H-MIX deferred.
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

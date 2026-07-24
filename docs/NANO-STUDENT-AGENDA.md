@@ -39,17 +39,17 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Decode speed | **H-EARLY** | PROMOTE vs B4 | Official fast |
 | Decode quality@wall | **H-POOL** | PROMOTE vs H-DECKL | Official quality@wall |
 | Decode parents | H-DECKL ← H-DECK ← H-DEC | PROMOTE vs B4 | Search lineage |
-| Utils | H-LAY / H-PRUN / H-SHORT / H-BAT / **H-TOP** / **H-FLASH** / **H-KVSEL** | formal PROMOTE | tip unchanged |
+| Utils | H-LAY / H-PRUN / H-SHORT / H-BAT / **H-TOP** / **H-FLASH** / **H-KVSEL** / **H-DEPTH** | formal PROMOTE | tip unchanged |
 | Metrics | **H-FLOP** | smoke PROMOTE | wall + tok/s + GFLOPs |
 
 Protocol: train **H-STAG**, decode **H-EARLY** or **H-POOL**. Never paste tips.  
-Next queue: `.local/pesquisa.md` (backlog **H-DEPTH**). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+Next queue: `.local/pesquisa.md` (park / deferred **H-MIX**). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived hypotheses
 
 Waves A–H deepeners + Wave I KILLs (WIN/TIE/AMP/SOFT) purged from `nano_lm/`.  
 Wave J: **H-TOP** formal PROMOTE; smoke KILLs **H-BUCKET** / **H-REP** / **H-ALT**.  
-Post-J: **H-FLASH** + **H-KVSEL** formal PROMOTE (SDPA; gated KV).  
+Post-J: **H-FLASH** + **H-KVSEL** + **H-DEPTH** formal PROMOTE.  
 Markdown: [`docs/results/nano-lm/archive/`](results/nano-lm/archive/) + active smoke/formal notes.
 
 ## Eval

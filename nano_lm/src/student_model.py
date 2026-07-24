@@ -47,6 +47,26 @@ def thin_student_config(vocab_size: int = 50257) -> GPTNeoConfig:
     )
 
 
+def depth_student_config(vocab_size: int = 50257) -> GPTNeoConfig:
+    """H-DEPTH: tip width, one fewer transformer layer (2→1)."""
+    return GPTNeoConfig(
+        vocab_size=vocab_size,
+        hidden_size=64,
+        num_layers=1,
+        num_heads=4,
+        max_position_embeddings=512,
+        intermediate_size=256,
+        attention_types=[[["global"], 1]],
+        activation_function="gelu_new",
+        resid_dropout=0.0,
+        embed_dropout=0.0,
+        attention_dropout=0.0,
+        bos_token_id=50256,
+        eos_token_id=50256,
+        use_cache=False,
+    )
+
+
 def count_params(model: object) -> int:
     return sum(int(p.numel()) for p in model.parameters())
 
@@ -71,4 +91,18 @@ def build_thin_student(vocab_size: int = 50257) -> object:
     n = count_params(model)
     if n > THIN_MAX_PARAMS:
         raise RuntimeError(f"thin student has {n} params (>{THIN_MAX_PARAMS})")
+    return model
+
+
+def build_depth_student(vocab_size: int = 50257) -> object:
+    """
+    GIVEN vocab size
+    WHEN building H-DEPTH student (1 layer)
+    THEN params ≤ 5M tip cap.
+    """
+    cfg = depth_student_config(vocab_size)
+    model = AutoModelForCausalLM.from_config(cfg)
+    n = count_params(model)
+    if n > 5_000_000:
+        raise RuntimeError(f"depth student has {n} params (>5M cap)")
     return model

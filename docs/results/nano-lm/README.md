@@ -22,6 +22,7 @@ Frozen baseline track: TinyStories teacher + ≤5M student. Protocol: [`docs/NAN
 | [halt-vs-hearly.md](halt-vs-hearly.md) | Wave J H-ALT (smoke KILL) |
 | [formal-hflash-vs-hearly.md](formal-hflash-vs-hearly.md) / [hflash-vs-hearly.md](hflash-vs-hearly.md) | Util H-FLASH |
 | [formal-hkvsel-vs-hearly.md](formal-hkvsel-vs-hearly.md) / [hkvsel-vs-hearly.md](hkvsel-vs-hearly.md) | Util H-KVSEL |
+| [formal-hdepth-vs-hstag.md](formal-hdepth-vs-hstag.md) / [hdepth-vs-hstag.md](hdepth-vs-hstag.md) | Util H-DEPTH |
 | [hflop-instrumentation.md](hflop-instrumentation.md) | FLOP/tps metrics |
 | [smoke-summary.md](smoke-summary.md) / [lab-vs-base.md](lab-vs-base.md) | Phase-10 / lab |
 
