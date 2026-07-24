@@ -19,6 +19,7 @@
 | 2b. Decode (quality@wall) | Warm-start BoN gene | **H-POOL** (`top_k=1`) | [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) |
 | 2c. Eval throughput | Batched multi-prompt | **H-BAT** (util) | [formal-hbat-vs-hearly.md](formal-hbat-vs-hearly.md) |
 | — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
+| — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
 
 Parents kept for lineage: **H-CURL2** (`seq_lo=6`, `n_stages=3`) ← **H-CURL** ← **H-CUR** (train), **H-DECKL ← H-DECK ← H-DEC** (decode).
 
@@ -60,6 +61,7 @@ npm run nano:formal:hflash && npm run nano:formal:hflash:report
 npm run nano:formal:hkvsel && npm run nano:formal:hkvsel:report
 npm run nano:formal:hdepth && npm run nano:formal:hdepth:report
 npm run nano:mix && npm run nano:mix:report
+npm run nano:fuse && npm run nano:fuse:report
 ```
 
 ## Closed compose branch (do not reopen without new parent)
@@ -74,7 +76,8 @@ npm run nano:mix && npm run nano:mix:report
 ## Park status
 
 **PARKED** (tips). Utils through Wave J + post-J complete.  
-**Wave K ACTIVE** — **H-TOPK** formal **KILL** ([formal-htopk-vs-htop.md](formal-htopk-vs-htop.md)); next **H-FUSE**.  
+**Wave K ACTIVE** — **H-FUSE** smoke **PROTOCOL** ([hfuse-protocol.md](hfuse-protocol.md)); next **H-POOLB**.  
+**H-TOPK** formal **KILL** ([formal-htopk-vs-htop.md](formal-htopk-vs-htop.md)).  
 **H-MIX** remains PROTOCOL-only ([hmix-protocol.md](hmix-protocol.md)).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  

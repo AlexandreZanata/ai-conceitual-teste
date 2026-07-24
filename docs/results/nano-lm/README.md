@@ -8,6 +8,7 @@ Frozen baseline track: TinyStories teacher + ≤5M student. Protocol: [`docs/NAN
 |-----|------|
 | [champion-card.md](champion-card.md) | Tip-stack protocol |
 | [hmix-protocol.md](hmix-protocol.md) | PRUN⊕LAY protocol (not a tip) |
+| [hfuse-protocol.md](hfuse-protocol.md) | FLASH⊕KVSEL protocol (not a tip) |
 | [kill-promote-matrix.md](kill-promote-matrix.md) | Slim matrix |
 | [formal-hstag-vs-hcurl2.md](formal-hstag-vs-hcurl2.md) … train parents | H-STAG lineage |
 | [formal-htop-vs-hstag.md](formal-htop-vs-hstag.md) / [formal-hprun-vs-hstag.md](formal-hprun-vs-hstag.md) / [formal-hdepth-vs-hstag.md](formal-hdepth-vs-hstag.md) | Train utils |

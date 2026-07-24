@@ -8,6 +8,7 @@ GATES = [
     "Decode utils: H-LAY / H-SHORT / H-FLASH / H-KVSEL / H-BAT (tip EARLY unchanged).",
     "Train utils: H-PRUN / H-TOP / H-DEPTH (tip STAG unchanged).",
     "H-MIX: PROTOCOL only (PRUN⊕LAY; not a tip H-ID).",
+    "H-FUSE: PROTOCOL iff lp ≥ EARLY−ε and wall < min(FLASH,KVSEL) (not a tip).",
     "H-TOPK gate: some k≠64 with lp ≥ tip−ε and ms/step < tip (formal KILL; tip k=64 stands).",
 ]
 
@@ -16,7 +17,7 @@ NOTES = [
     "- Champion stack only. Purged H-ID history: `docs/results/nano-lm/archive/`.",
     "- Official: **H-STAG** train / **H-EARLY** speed / **H-POOL** quality@wall.",
     "- Utils: LAY, SHORT, FLASH, KVSEL, BAT, PRUN, TOP, DEPTH, FLOP.",
-    "- Wave K: **H-TOPK** formal **KILL**; next **H-FUSE** (`.local/pesquisa.md`).",
+    "- Wave K: **H-TOPK** formal **KILL**; **H-FUSE** PROTOCOL; next **H-POOLB**.",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]
