@@ -7,6 +7,7 @@ GATES = [
     "H-EAR2 gate: lp ≥ EARLY−ε and wall < EARLY (widened early gene).",
     "H-BUD gate: not dominated by EARLY on (lp, wall); quality ≥ EARLY−ε.",
     "H-THIN gate: lp ≥ CURL−ε and wall < CURL on same EARLY decode.",
+    "H-Q8 gate: lp ≥ CURL−ε and wall < CURL (INT8 dynamic on same EARLY).",
 ]
 
 NOTES = [
@@ -15,6 +16,7 @@ NOTES = [
     "- H-EAR2 smoke: `docs/results/nano-lm/hear2-vs-hearly.md` (KILL — quality < EARLY−ε).",
     "- H-BUD smoke: `docs/results/nano-lm/hbud-vs-hearly.md` (KILL — quality < EARLY−ε).",
     "- H-THIN: smoke PROMOTE (`hthin-vs-hcurl.md`); formal **KILL** (`formal-hthin-vs-hcurl.md`).",
+    "- H-Q8 smoke: `docs/results/nano-lm/hq8-vs-hcurl.md` (KILL — no wall win vs tip).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

@@ -18,6 +18,7 @@ def fitness_early_detail(
     prompts: list[str],
     max_new: int,
     seed: int,
+    student_device=None,
 ) -> tuple[float, float]:
     """
     GIVEN an early-exit gene and prompts
@@ -26,7 +27,7 @@ def fitness_early_detail(
     """
     g = clamp_early_gene(gene)
     tok = teacher.tokenizer
-    device = teacher.device
+    device = teacher.device if student_device is None else student_device
     scores: list[float] = []
     walls: list[float] = []
     for i, text in enumerate(prompts):
