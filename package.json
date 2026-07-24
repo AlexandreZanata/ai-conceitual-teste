@@ -50,6 +50,8 @@
     "nano:cur:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcur_report.py",
     "nano:curl": "nano_lm/.venv/bin/python nano_lm/src/run_curl_smoke.py",
     "nano:curl:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcurl_report.py",
+    "nano:curl2": "nano_lm/.venv/bin/python nano_lm/src/run_curl2_smoke.py",
+    "nano:curl2:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcurl2_report.py",
     "nano:formal:hdec": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hdec.py",
     "nano:formal:hdec:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hdec_report.py",
     "nano:formal:hdeck": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hdeck.py",
@@ -74,6 +76,8 @@
     "nano:formal:cur:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hcur_report.py",
     "nano:formal:curl": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hcurl.py",
     "nano:formal:curl:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hcurl_report.py",
+    "nano:formal:curl2": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hcurl2.py",
+    "nano:formal:curl2:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hcurl2_report.py",
     "lint": "node --check web/app.js"
   },
   "devDependencies": {

@@ -50,13 +50,14 @@ npm run verify
 8. Benchmark report (phase 09) — done  
 9. Nano-LM track TinyStories AR vs BoN vs MAE (phase 10) — done (smoke)  
 10. Nano student + teacher agenda / matrix (phase 11) — done (smoke matrix)  
-11. Nano champion stack frozen — **H-CURL** (train), **H-EARLY** / **H-POOL** (decode); parents H-CUR / H-DECKL←H-DECK←H-DEC  
+11. Nano champion stack frozen — **H-CURL2** (train `seq_lo=6`), **H-EARLY** / **H-POOL** (decode); parents H-CURL←H-CUR / H-DECKL←H-DECK←H-DEC  
 12. Dead hyp code purged — kill/non-champion markdown in `docs/results/nano-lm/archive/`
 13. H-EAR2 widened early-exit gene — done (smoke **KILL** — quality < EARLY−ε)
 14. H-BUD max_new + EARLY exit gene — done (smoke **KILL** — quality < EARLY−ε)
 15. H-THIN thin CURL student + EARLY genes — done (smoke PROMOTE; formal **KILL** vs CURL Δ−0.33)
 16. H-Q8 INT8 dynamic quant on CURL + EARLY — done (smoke **KILL** — no wall win vs tip)
 17. H-EARS scheduled early-exit thr — done (smoke **KILL** — quality < EARLY−ε)
+18. H-CURL2 fine seq_lo grid — done (smoke PROMOTE lo=12; formal **PROMOTE** lo=6 vs tip)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + parked [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
