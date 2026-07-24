@@ -67,6 +67,7 @@ def render(path: Path) -> str:
             f"**Decision: {decision}**",
             "",
             "Note: throughput util deepen of H-BAT; tip EARLY unchanged.",
+            "Lesson: sequential band launches can cost more than pad savings on nano packs.",
             "",
             "Commands: `npm run nano:bucket` → `npm run nano:bucket:report`.",
             "",
