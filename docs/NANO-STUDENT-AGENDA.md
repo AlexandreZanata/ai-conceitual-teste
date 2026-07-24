@@ -41,7 +41,7 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Decode parents | H-DECKL / H-DECK / H-DEC | PROMOTE vs B4 | Search lineage |
 
 Protocol: train with **H-CURL2** (`seq_lo=6`), decode with **H-EARLY** (speed) or **H-POOL** (quality@wall). Compose H-IDs smoke **KILL**.  
-H-EAR2 / H-BUD / H-Q8 / H-EARS / H-COMP smoke **KILL**; H-THIN formal **KILL**. Next: `.local/pesquisa.md` (**B4 H-PROX** or **A3 H-POOL2**). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+H-EAR2 / H-BUD / H-Q8 / H-EARS / H-COMP / H-PROX smoke **KILL**; H-THIN formal **KILL**. Next: `.local/pesquisa.md` (**A3 H-POOL2** or Wave C). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived hypotheses
 

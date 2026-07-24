@@ -54,6 +54,8 @@
     "nano:curl2:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcurl2_report.py",
     "nano:comp": "nano_lm/.venv/bin/python nano_lm/src/run_comp_smoke.py",
     "nano:comp:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcomp_report.py",
+    "nano:prox": "nano_lm/.venv/bin/python nano_lm/src/run_prox_smoke.py",
+    "nano:prox:report": "nano_lm/.venv/bin/python nano_lm/src/write_hprox_report.py",
     "nano:formal:hdec": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hdec.py",
     "nano:formal:hdec:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hdec_report.py",
     "nano:formal:hdeck": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hdeck.py",
@@ -82,6 +84,8 @@
     "nano:formal:curl2:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hcurl2_report.py",
     "nano:formal:hcomp": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hcomp.py",
     "nano:formal:hcomp:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hcomp_report.py",
+    "nano:formal:hprox": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hprox.py",
+    "nano:formal:hprox:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hprox_report.py",
     "lint": "node --check web/app.js"
   },
   "devDependencies": {
