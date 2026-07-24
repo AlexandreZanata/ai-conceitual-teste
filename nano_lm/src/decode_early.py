@@ -82,7 +82,10 @@ def decode_early(
             logits = top_p_filter(logits, top_p)
             probs = F.softmax(logits, dim=-1)
             max_p = probs.max(dim=-1).values
-            tok = torch.multinomial(probs, num_samples=1)
+            if temperature < 1e-5:
+                tok = probs.argmax(dim=-1, keepdim=True)
+            else:
+                tok = torch.multinomial(probs, num_samples=1)
             lp = torch.log(probs.gather(-1, tok).squeeze(-1) + 1e-12)
         token_evals += int(ids.shape[0])
         lps[:, step] = lp
