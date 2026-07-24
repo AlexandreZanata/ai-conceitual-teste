@@ -40,7 +40,7 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Decode quality@wall | **H-POOL** | PROMOTE vs H-DECKL | Official quality@wall |
 | Decode parents | H-DECKL ← H-DECK ← H-DEC | PROMOTE vs B4 | Search lineage |
 | Metrics | **H-FLOP** | smoke PROMOTE | wall + tok/s + est GFLOPs |
-| Wave I | **H-LAY** | smoke PROMOTE (formal deferred) | layer skip; GFLOPs tie |
+| Wave I | **H-LAY** | smoke+**formal PROMOTE** | layer skip; wall↓; GFLOPs tie |
 | Wave I | **H-AMP** | smoke **KILL** | CUDA bf16 autocast; quality+wall fail |
 | Wave I | **H-TIE** | smoke **KILL** | shared block; quality < STAG−ε |
 | Wave I | **H-PRUN** | smoke PROMOTE (formal deferred) | 30% mag prune; density FLOPs |
@@ -50,7 +50,7 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Wave I | **H-BAT** | smoke+**formal PROMOTE** | batched tok/s↑; tip EARLY unchanged |
 
 Protocol: train **H-STAG**, decode **H-EARLY** or **H-POOL**. Never paste tips (SYS/JOINT/CACHE/CAP KILL).  
-Wave I complete. Formal deepeners: **H-BAT** PROMOTE. Next: `.local/pesquisa.md` (formal LAY/PRUN/SHORT or Wave J). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+Wave I complete. Formal deepeners: **H-BAT** / **H-LAY** PROMOTE. Next: `.local/pesquisa.md` (formal PRUN/SHORT or Wave J). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived hypotheses
 

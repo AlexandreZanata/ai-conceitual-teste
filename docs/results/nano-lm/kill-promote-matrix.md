@@ -36,6 +36,7 @@ H-BAT gate: |Δlp| ≤ ε vs serial EARLY and tok/s > serial (batched prompts).
 - Official decode: **H-EARLY** (speed) / **H-POOL** (quality@wall).
 - Waves A–H deepeners purged from code; see archive + `.local/pesquisa.md`.
 - H-LAY smoke: `docs/results/nano-lm/hlay-vs-hearly.md` (PROMOTE wall↓; GFLOPs tie; formal deferred).
+- H-LAY formal: `docs/results/nano-lm/formal-hlay-vs-hearly.md` (PROMOTE wall↓; GFLOPs tie; tip unchanged).
 - H-AMP smoke: `docs/results/nano-lm/hamp-vs-hearly.md` (KILL — quality < EARLY−ε; wall↑).
 - H-TIE smoke: `docs/results/nano-lm/htie-vs-hstag.md` (KILL — quality < STAG−ε; params↓).
 - H-PRUN smoke: `docs/results/nano-lm/hprun-vs-hstag.md` (PROMOTE; density FLOPs; formal deferred).

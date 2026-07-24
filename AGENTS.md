@@ -53,7 +53,7 @@ npm run verify
 11. Nano champion stack frozen — **H-STAG** (train `seq_lo=6`, `n_stages=4`), **H-EARLY** / **H-POOL** (decode); parents H-CURL2←H-CURL←H-CUR / H-DECKL←H-DECK←H-DEC  
 12. Dead hyp code purged (weight-evo + Waves A–H deepeners) — markdown in `docs/results/nano-lm/archive/`  
 13. Wave I queue (faster/efficient new parents) — see `.local/pesquisa.md`
-14. H-LAY layer early-exit — done (smoke **PROMOTE** wall↓; GFLOPs tie; formal deferred)
+14. H-LAY layer early-exit — done (smoke **PROMOTE**; **formal PROMOTE** wall↓; GFLOPs tie)
 15. H-AMP CUDA autocast bf16 — done (smoke **KILL** — quality < EARLY−ε; wall↑)
 16. H-TIE tied+shared block under STAG — done (smoke **KILL** — quality < STAG−ε; params↓)
 17. H-PRUN magnitude prune STAG + recovery — done (smoke **PROMOTE**; density FLOPs; formal deferred)
