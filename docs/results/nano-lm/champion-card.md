@@ -11,6 +11,7 @@
 | 1′. Train util | Mag prune + recovery | **H-PRUN** (util) | [formal-hprun-vs-hstag.md](formal-hprun-vs-hstag.md) |
 | 2a. Decode (speed) | Early-exit gene | **H-EARLY** | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) |
 | 2a′. Decode util | Layer early-exit | **H-LAY** (util) | [formal-hlay-vs-hearly.md](formal-hlay-vs-hearly.md) |
+| 2a″. Decode util | Short draft stop | **H-SHORT** (util) | [formal-hshort-vs-hearly.md](formal-hshort-vs-hearly.md) |
 | 2b. Decode (quality@wall) | Warm-start BoN gene | **H-POOL** (`top_k=1`) | [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) |
 | 2c. Eval throughput | Batched multi-prompt | **H-BAT** (util) | [formal-hbat-vs-hearly.md](formal-hbat-vs-hearly.md) |
 
@@ -44,6 +45,7 @@ npm run nano:formal:hstag && npm run nano:formal:hstag:report
 npm run nano:formal:hprun && npm run nano:formal:hprun:report
 npm run nano:formal:hearly && npm run nano:formal:hearly:report
 npm run nano:formal:hlay && npm run nano:formal:hlay:report
+npm run nano:formal:hshort && npm run nano:formal:hshort:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report
 npm run nano:formal:hbat && npm run nano:formal:hbat:report
 ```
@@ -59,7 +61,7 @@ npm run nano:formal:hbat && npm run nano:formal:hbat:report
 
 ## Park status
 
-**PARKED** on Waves A–H. **Wave I complete.** Formal deepeners: **H-BAT** / **H-LAY** / **H-PRUN** PROMOTE (utils; core tips unchanged). Next: formal SHORT or Wave J (`.local/pesquisa.md`).
+**PARKED** on Waves A–H. **Wave I complete** (smoke + formal deepeners BAT/LAY/PRUN/SHORT). Next: **Wave J** (`.local/pesquisa.md`).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
 Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).

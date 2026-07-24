@@ -58,6 +58,8 @@
     "nano:formal:hlay:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hlay_report.py",
     "nano:formal:hprun": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hprun.py",
     "nano:formal:hprun:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hprun_report.py",
+    "nano:formal:hshort": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hshort.py",
+    "nano:formal:hshort:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hshort_report.py",
     "nano:cur": "nano_lm/.venv/bin/python nano_lm/src/run_cur_smoke.py",
     "nano:cur:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcur_report.py",
     "nano:curl": "nano_lm/.venv/bin/python nano_lm/src/run_curl_smoke.py",

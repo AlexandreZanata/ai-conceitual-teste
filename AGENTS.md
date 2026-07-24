@@ -58,7 +58,7 @@ npm run verify
 16. H-TIE tied+shared block under STAG — done (smoke **KILL** — quality < STAG−ε; params↓)
 17. H-PRUN magnitude prune STAG + recovery — done (smoke **PROMOTE**; **formal PROMOTE** wall↓)
 18. H-WIN local sliding-window attn — done (smoke **KILL** — quality < STAG−ε; FLOPs↓)
-19. H-SHORT two-phase short draft — done (smoke **PROMOTE** wall↓ tiny; GFLOPs tie; formal deferred)
+19. H-SHORT two-phase short draft — done (smoke **PROMOTE**; **formal PROMOTE** wall↓ tiny; GFLOPs tie)
 20. H-SOFT offline soft-label cache — done (smoke **KILL** — equal lp; train ms/step↑)
 21. H-BAT batched multi-prompt EARLY — done (smoke **PROMOTE**; **formal PROMOTE** tok/s↑; tip unchanged)
 

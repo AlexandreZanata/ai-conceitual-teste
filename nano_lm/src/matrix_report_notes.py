@@ -29,6 +29,7 @@ NOTES = [
     "- H-PRUN formal: `docs/results/nano-lm/formal-hprun-vs-hstag.md` (PROMOTE wall↓; quality↑; tip STAG unchanged).",
     "- H-WIN smoke: `docs/results/nano-lm/hwin-vs-hstag.md` (KILL — quality < STAG−ε; FLOPs↓).",
     "- H-SHORT smoke: `docs/results/nano-lm/hshort-vs-hearly.md` (PROMOTE wall↓; GFLOPs tie; formal deferred).",
+    "- H-SHORT formal: `docs/results/nano-lm/formal-hshort-vs-hearly.md` (PROMOTE wall↓ tiny; GFLOPs tie; tip unchanged).",
     "- H-SOFT smoke: `docs/results/nano-lm/hsoft-vs-hstag.md` (KILL — no train ms/step win; H2D logits).",
     "- H-BAT smoke: `docs/results/nano-lm/hbat-vs-hearly.md` (PROMOTE tok/s↑; formal deferred).",
     "- H-BAT formal: `docs/results/nano-lm/formal-hbat-vs-hearly.md` (PROMOTE tok/s↑; tip EARLY unchanged).",

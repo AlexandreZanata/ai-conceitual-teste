@@ -40,6 +40,7 @@ def run_h_short(
     out_meta: Path,
     lam: float = 0.4,
     eval_max_new: int | None = None,
+    eval_prompts_path: Path | None = None,
 ) -> dict[str, Any]:
     rng = random.Random(seed)
     teacher = load_causal_lm(
@@ -47,6 +48,8 @@ def run_h_short(
     )
     student = load_student_ckpt(student_ckpt, teacher.tokenizer, teacher.device)
     fit_prompts = _prompts(prompts_path)
+    claim_path = eval_prompts_path if eval_prompts_path is not None else prompts_path
+    claim_prompts = _prompts(claim_path)
     hold = int(eval_max_new) if eval_max_new is not None else max_new
     pop = [random_short_gene(rng, early_gene) for _ in range(pop_size)]
     history: list[dict[str, Any]] = []
@@ -93,7 +96,7 @@ def run_h_short(
         early_gene,
         teacher=teacher,
         student=student,
-        prompts=fit_prompts,
+        prompts=claim_prompts,
         max_new=hold,
         seed=seed + 7777,
     )
