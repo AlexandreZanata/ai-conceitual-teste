@@ -50,6 +50,7 @@ GATES = [
     "H-CUR gate: teacher_lp > B2 (length-curriculum KD).",
     "H-CUR2 gate: best n_stages∈{2,3,4,5} > H-CUR (n=3).",
     "H-CURL gate: best seq_lo∈{8,16,32} > H-CUR (lo=16).",
+    "H-CURT gate: teacher_lp > H-CUR (adopted n=5, lo=8).",
     "H-DECK gate: teacher_lp ≥ H-DEC−ε and wall_save (proxy+top-k search).",
     "H-DECK2 gate: best top_k∈{1,2,3} > H-DECK (k=2) equal pop×gens.",
     "H-PROXY2 gate: teacher_lp > H-DECK @ ≤ teacher_forwards (CE vs self-lp).",
