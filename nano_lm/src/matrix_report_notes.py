@@ -11,6 +11,7 @@ GATES = [
     "H-PRUN gate: lp ≥ STAG−ε and est_gflops < STAG (magnitude prune; density FLOPs).",
     "H-WIN gate: lp ≥ STAG−ε and est_gflops < STAG (local window attn).",
     "H-SHORT gate: lp ≥ EARLY−ε and (wall < EARLY or est_gflops < EARLY) (short draft).",
+    "H-SOFT gate: lp ≥ STAG−ε and train ms/step < live STAG (soft-label cache).",
 ]
 
 NOTES = [
@@ -25,6 +26,7 @@ NOTES = [
     "- H-PRUN smoke: `docs/results/nano-lm/hprun-vs-hstag.md` (PROMOTE; density FLOPs; formal deferred).",
     "- H-WIN smoke: `docs/results/nano-lm/hwin-vs-hstag.md` (KILL — quality < STAG−ε; FLOPs↓).",
     "- H-SHORT smoke: `docs/results/nano-lm/hshort-vs-hearly.md` (PROMOTE wall↓; GFLOPs tie; formal deferred).",
+    "- H-SOFT smoke: `docs/results/nano-lm/hsoft-vs-hstag.md` (KILL — no train ms/step win; H2D logits).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]
