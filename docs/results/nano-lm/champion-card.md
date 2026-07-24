@@ -17,6 +17,7 @@
 | 2a″. Decode util | Short draft stop | **H-SHORT** (util) | [formal-hshort-vs-hearly.md](formal-hshort-vs-hearly.md) |
 | 2a‴. Decode util | SDPA attention backend | **H-FLASH** (util) | [formal-hflash-vs-hearly.md](formal-hflash-vs-hearly.md) |
 | 2a⁗. Decode util | Gated KV (`max_new` > thr) | **H-KVSEL** (util) | [formal-hkvsel-vs-hearly.md](formal-hkvsel-vs-hearly.md) |
+| 2a⁗′. Decode util | Chunked KV prefill (B) under FLASH | **H-CHUNK** (util) | [formal-hchunk-vs-hflash.md](formal-hchunk-vs-hflash.md) |
 | 2b. Decode (quality@wall) | Warm-start BoN gene | **H-POOL** (`top_k=1`) | [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) |
 | 2c. Eval throughput | Batched multi-prompt | **H-BAT** (util) | [formal-hbat-vs-hearly.md](formal-hbat-vs-hearly.md) |
 | 2c′. Quality throughput | Batched multi-prompt POOL | **H-POOLB** (util) | [formal-hpoolb-vs-hpool.md](formal-hpoolb-vs-hpool.md) |
@@ -65,6 +66,8 @@ npm run nano:topk && npm run nano:topk:report
 npm run nano:formal:htopk && npm run nano:formal:htopk:report
 npm run nano:formal:hflash && npm run nano:formal:hflash:report
 npm run nano:formal:hkvsel && npm run nano:formal:hkvsel:report
+npm run nano:chunk && npm run nano:chunk:report
+npm run nano:formal:hchunk && npm run nano:formal:hchunk:report
 npm run nano:formal:hdepth && npm run nano:formal:hdepth:report
 npm run nano:mix && npm run nano:mix:report
 npm run nano:fuse && npm run nano:fuse:report
@@ -82,8 +85,8 @@ npm run nano:fuse && npm run nano:fuse:report
 ## Park status
 
 **PARKED** (tips). Utils through Wave J + post-J complete.  
-**Wave K ACTIVE** — **H-PIN** formal **PROMOTE** ([formal-hpin-vs-htop.md](formal-hpin-vs-htop.md)); next **H-CHUNK**.  
-**H-POOLB** formal PROMOTE; **H-FUSE** / **H-MIX** PROTOCOL; **H-TOPK** formal KILL.
+**Wave K ACTIVE** — **H-CHUNK** formal **PROMOTE** ([formal-hchunk-vs-hflash.md](formal-hchunk-vs-hflash.md)); next **H-Q4**.  
+**H-PIN** / **H-POOLB** formal PROMOTE; **H-FUSE** / **H-MIX** PROTOCOL; **H-TOPK** formal KILL.
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
 Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).

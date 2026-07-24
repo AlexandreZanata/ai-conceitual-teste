@@ -40,19 +40,19 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Decode quality@wall | **H-POOL** | PROMOTE vs H-DECKL | Official quality@wall |
 | Decode parents | H-DECKL ← H-DECK ← H-DEC | PROMOTE vs B4 | Search lineage |
 | Train utils | H-PRUN / H-TOP / H-DEPTH / **H-PIN** | formal PROMOTE | tip unchanged |
-| Decode utils | H-LAY / H-SHORT / H-FLASH / H-KVSEL / H-BAT / **H-POOLB** | formal PROMOTE | tip unchanged |
+| Decode utils | H-LAY / H-SHORT / H-FLASH / H-KVSEL / H-BAT / H-POOLB / **H-CHUNK** | formal PROMOTE | tip unchanged |
 | Metrics | **H-FLOP** | smoke PROMOTE | wall + tok/s + GFLOPs |
 | Protocol | **H-MIX** / **H-FUSE** | PROTOCOL | PRUN⊕LAY; FLASH⊕KVSEL — not tips |
 
 Protocol: train **H-STAG**, decode **H-EARLY** or **H-POOL**. Never paste tips.  
 Optional stacks: **H-MIX** / **H-FUSE** protocols — not tip H-IDs.  
-Next queue: `.local/pesquisa.md` (**Wave K** — next **H-CHUNK**; **H-PIN** formal PROMOTE).  
+Next queue: `.local/pesquisa.md` (**Wave K** — next **H-Q4**; **H-CHUNK** formal PROMOTE).  
 Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived hypotheses
 
 Waves A–H deepeners + Wave I KILLs (WIN/TIE/AMP/SOFT) + Wave J KILLs (BUCKET/REP/ALT) purged.  
-Wave K: **H-TOPK** formal **KILL**; **H-FUSE** PROTOCOL; **H-POOLB** / **H-PIN** formal **PROMOTE**.  
+Wave K: **H-TOPK** formal **KILL**; **H-FUSE** PROTOCOL; **H-POOLB** / **H-PIN** / **H-CHUNK** formal **PROMOTE**.  
 Markdown: [`docs/results/nano-lm/archive/`](results/nano-lm/archive/) + active smoke/formal notes.
 
 ## Eval
