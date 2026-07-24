@@ -42,6 +42,7 @@ H-TMN gate: lp ≥ max(H-TYP,H-MINP)−ε and wall < min tips (TYP×MINP stack).
 H-TPE gate: teacher_lp ≥ H-TYP−ε and wall < tip (evolved typ_mass).
 H-CUR gate: teacher_lp > B2 (length-curriculum KD).
 H-CUR2 gate: best n_stages∈{2,3,4,5} > H-CUR (n=3).
+H-CURL gate: best seq_lo∈{8,16,32} > H-CUR (lo=16).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -136,6 +137,7 @@ H-CUR2 gate: best n_stages∈{2,3,4,5} > H-CUR (n=3).
 - H-TPE smoke detail: `docs/results/nano-lm/htpe-vs-htyp.md` (KILL — quality < tip).
 - H-CUR smoke/formal: `docs/results/nano-lm/hcur-vs-b2.md`, `formal-hcur-vs-b2.md` (PROMOTE).
 - H-CUR2 smoke/formal: `docs/results/nano-lm/hcur2-vs-hcur.md`, `formal-hcur2-vs-hcur.md` (PROMOTE; best n=5).
+- H-CURL smoke/formal: `docs/results/nano-lm/hcurl-vs-hcur.md`, `formal-hcurl-vs-hcur.md` (PROMOTE; best lo=8).
 - H-SUP/H-INT rows are decode selection scores on teacher, not trained students.
 - H-SEL smoke PROMOTE was reversed on formal — see `formal-hsel-vs-b2.md`.
 - H-HOLD smoke PROMOTE was reversed on formal — see `formal-hhold-vs-b2.md`.

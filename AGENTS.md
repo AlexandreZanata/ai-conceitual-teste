@@ -137,6 +137,7 @@ npm run verify
 95. H-TPE evolve typ_mass gene — done (smoke **KILL** — quality drop vs H-TYP)
 96. H-CUR length-curriculum KD — done (smoke **PROMOTE**; **formal PROMOTE** — Δ+1.19 vs B2)
 97. H-CUR2 n_stages ablation — done (smoke **PROMOTE** best n=2; **formal PROMOTE** best n=5)
+98. H-CURL seq_lo ablation — done (smoke **PROMOTE** best lo=32; **formal PROMOTE** best lo=8)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + `docs/NANO-STUDENT-AGENDA.md` + kill/promote `docs/results/nano-lm/kill-promote-matrix.md` + result notes under `docs/results/nano-lm/`.  
