@@ -18,6 +18,7 @@
 | 2a⁗. Decode util | Gated KV (`max_new` > thr) | **H-KVSEL** (util) | [formal-hkvsel-vs-hearly.md](formal-hkvsel-vs-hearly.md) |
 | 2b. Decode (quality@wall) | Warm-start BoN gene | **H-POOL** (`top_k=1`) | [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) |
 | 2c. Eval throughput | Batched multi-prompt | **H-BAT** (util) | [formal-hbat-vs-hearly.md](formal-hbat-vs-hearly.md) |
+| — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
 
 Parents kept for lineage: **H-CURL2** (`seq_lo=6`, `n_stages=3`) ← **H-CURL** ← **H-CUR** (train), **H-DECKL ← H-DECK ← H-DEC** (decode).
 
@@ -56,6 +57,7 @@ npm run nano:formal:htop && npm run nano:formal:htop:report
 npm run nano:formal:hflash && npm run nano:formal:hflash:report
 npm run nano:formal:hkvsel && npm run nano:formal:hkvsel:report
 npm run nano:formal:hdepth && npm run nano:formal:hdepth:report
+npm run nano:mix && npm run nano:mix:report
 ```
 
 ## Closed compose branch (do not reopen without new parent)
@@ -69,9 +71,8 @@ npm run nano:formal:hdepth && npm run nano:formal:hdepth:report
 
 ## Park status
 
-**PARKED** on Waves A–H. **Wave I complete** (smoke + formal deepeners BAT/LAY/PRUN/SHORT).  
-Wave J **complete**: **H-TOP** formal **PROMOTE**; **H-BUCKET** / **H-REP** / **H-ALT** smoke **KILL**.  
-Post-J: **H-FLASH** + **H-KVSEL** + **H-DEPTH** formal **PROMOTE**; backlog deferred **H-MIX** only (`.local/pesquisa.md`).
+**PARKED** — backlog empty. Wave J + post-J utils complete.  
+**H-MIX** smoke **PROTOCOL** ([hmix-protocol.md](hmix-protocol.md)): stack PRUN⊕LAY on separate axes; **not** a tip H-ID.
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
 Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).

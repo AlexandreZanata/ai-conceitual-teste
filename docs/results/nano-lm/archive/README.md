@@ -6,7 +6,7 @@
 - Decode tips: **H-EARLY** / **H-POOL** (+ DECKL/DECK/DEC)
 - Utils: **H-LAY** / **H-PRUN** / **H-SHORT** / **H-BAT** / **H-TOP** / **H-FLASH** / **H-KVSEL** / **H-DEPTH** / **H-FLOP**
 - Wave J done: **H-TOP** formal PROMOTE; **H-BUCKET** / **H-REP** / **H-ALT** smoke KILL
-- Post-J: **H-FLASH** + **H-KVSEL** + **H-DEPTH** formal PROMOTE; deferred **H-MIX**
+- Post-J: **H-FLASH** + **H-KVSEL** + **H-DEPTH** formal PROMOTE; **H-MIX** protocol (not tip); backlog empty
 
 ## Archived files (132)
 

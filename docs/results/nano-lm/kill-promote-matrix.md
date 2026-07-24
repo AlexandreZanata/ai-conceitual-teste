@@ -18,6 +18,7 @@ H-ALT gate: lp ≥ EARLY−ε and (wall < EARLY or gflops < EARLY) (alt full/sha
 H-FLASH gate: lp ≥ EARLY−ε and wall < EARLY (SDPA backend on tip).
 H-KVSEL gate: lp ≥ EARLY−ε and wall < EARLY (gated KV when max_new > thr).
 H-DEPTH gate: lp ≥ STAG−ε and wall < STAG (1-layer STAG + PRUN recover).
+H-MIX gate: PROTOCOL iff lp ≥ PRUN−ε and wall < PRUN (PRUN⊕LAY; not a tip).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -35,6 +36,6 @@ H-DEPTH gate: lp ≥ STAG−ε and wall < STAG (1-layer STAG + PRUN recover).
 - Champion stack only. Purged H-ID history: `docs/results/nano-lm/archive/`.
 - Official: **H-STAG** train / **H-EARLY** speed / **H-POOL** quality@wall.
 - Utils kept: H-LAY, H-PRUN, H-SHORT, H-BAT, H-TOP, H-FLASH, H-KVSEL, H-DEPTH, H-FLOP.
-- Wave J done (H-TOP PROMOTE; BUCKET+REP+ALT KILL). FLASH+KVSEL+DEPTH formal PROMOTE; H-MIX deferred.
+- H-MIX is protocol-only (PRUN ckpt ⊕ LAY); compose tips stay closed. Backlog empty.
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

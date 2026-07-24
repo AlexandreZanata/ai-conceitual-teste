@@ -64,6 +64,8 @@
     "nano:depth:report": "nano_lm/.venv/bin/python nano_lm/src/write_hdepth_report.py",
     "nano:formal:hdepth": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hdepth.py",
     "nano:formal:hdepth:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hdepth_report.py",
+    "nano:mix": "nano_lm/.venv/bin/python nano_lm/src/run_mix_smoke.py",
+    "nano:mix:report": "nano_lm/.venv/bin/python nano_lm/src/write_hmix_report.py",
     "nano:formal:hlay": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hlay.py",
     "nano:formal:hlay:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hlay_report.py",
     "nano:formal:hprun": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hprun.py",
