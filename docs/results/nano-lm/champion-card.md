@@ -18,6 +18,7 @@
 | 2a⁗. Decode util | Gated KV (`max_new` > thr) | **H-KVSEL** (util) | [formal-hkvsel-vs-hearly.md](formal-hkvsel-vs-hearly.md) |
 | 2b. Decode (quality@wall) | Warm-start BoN gene | **H-POOL** (`top_k=1`) | [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) |
 | 2c. Eval throughput | Batched multi-prompt | **H-BAT** (util) | [formal-hbat-vs-hearly.md](formal-hbat-vs-hearly.md) |
+| 2c′. Quality throughput | Batched multi-prompt POOL | **H-POOLB** (util) | [formal-hpoolb-vs-hpool.md](formal-hpoolb-vs-hpool.md) |
 | — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
 | — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
 
@@ -53,6 +54,8 @@ npm run nano:formal:hearly && npm run nano:formal:hearly:report
 npm run nano:formal:hlay && npm run nano:formal:hlay:report
 npm run nano:formal:hshort && npm run nano:formal:hshort:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report
+npm run nano:poolb && npm run nano:poolb:report
+npm run nano:formal:hpoolb && npm run nano:formal:hpoolb:report
 npm run nano:formal:hbat && npm run nano:formal:hbat:report
 npm run nano:formal:htop && npm run nano:formal:htop:report
 npm run nano:topk && npm run nano:topk:report
@@ -76,9 +79,8 @@ npm run nano:fuse && npm run nano:fuse:report
 ## Park status
 
 **PARKED** (tips). Utils through Wave J + post-J complete.  
-**Wave K ACTIVE** — **H-FUSE** smoke **PROTOCOL** ([hfuse-protocol.md](hfuse-protocol.md)); next **H-POOLB**.  
-**H-TOPK** formal **KILL** ([formal-htopk-vs-htop.md](formal-htopk-vs-htop.md)).  
-**H-MIX** remains PROTOCOL-only ([hmix-protocol.md](hmix-protocol.md)).
+**Wave K ACTIVE** — **H-POOLB** formal **PROMOTE** ([formal-hpoolb-vs-hpool.md](formal-hpoolb-vs-hpool.md)); next **H-PIN**.  
+**H-FUSE** / **H-MIX** PROTOCOL-only. **H-TOPK** formal **KILL**.
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
 Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).

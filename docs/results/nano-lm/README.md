@@ -15,6 +15,7 @@ Frozen baseline track: TinyStories teacher + ≤5M student. Protocol: [`docs/NAN
 | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) / [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) | Decode tips |
 | [formal-hlay-vs-hearly.md](formal-hlay-vs-hearly.md) … [formal-hbat-vs-hearly.md](formal-hbat-vs-hearly.md) | Decode utils |
 | [formal-hflash-vs-hearly.md](formal-hflash-vs-hearly.md) / [formal-hkvsel-vs-hearly.md](formal-hkvsel-vs-hearly.md) | Systems decode utils |
+| [formal-hpoolb-vs-hpool.md](formal-hpoolb-vs-hpool.md) / [hpoolb-vs-hpool.md](hpoolb-vs-hpool.md) | Util H-POOLB |
 | [hflop-instrumentation.md](hflop-instrumentation.md) | FLOP/tps metrics |
 | [smoke-summary.md](smoke-summary.md) / [lab-vs-base.md](lab-vs-base.md) | Phase-10 / lab |
 
