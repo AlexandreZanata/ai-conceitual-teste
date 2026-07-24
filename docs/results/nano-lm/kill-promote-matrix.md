@@ -23,6 +23,7 @@ H-ALAT gate: teacher_lp > H-CURL2 tip (α/T schedule under CURL stages).
 H-FLOP gate: finite mean_tokens_per_s + mean_est_gflops on scored families.
 H-EARF gate: lp ≥ EARLY−ε and est_gflops < EARLY (FLOP-aware search).
 H-EXIT gate: lp ≥ EARLY−ε and est_gflops < EARLY (min_new↓ + n=1).
+H-MID gate: lp ≥ EARLY−ε and est_gflops < EARLY (min_new∈{4,8} + warm-start).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -53,5 +54,6 @@ H-EXIT gate: lp ≥ EARLY−ε and est_gflops < EARLY (min_new↓ + n=1).
 - H-FLOP smoke: `docs/results/nano-lm/hflop-instrumentation.md` (PROMOTE — tps+GFLOPs live; EARLY wall↓ but GFLOPs↑).
 - H-EARF smoke: `docs/results/nano-lm/hearf-vs-hearly.md` (KILL — no FLOP win; same est GFLOPs as tip).
 - H-EXIT smoke: `docs/results/nano-lm/hexit-vs-hearly.md` (KILL — quality Δ−0.44; GFLOPs↓).
+- H-MID: smoke PROMOTE (`hmid-vs-hearly.md`); formal **KILL** (`formal-hmid-vs-hearly.md` — quality Δ−0.51).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

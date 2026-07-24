@@ -19,6 +19,7 @@ GATES = [
     "H-FLOP gate: finite mean_tokens_per_s + mean_est_gflops on scored families.",
     "H-EARF gate: lp ≥ EARLY−ε and est_gflops < EARLY (FLOP-aware search).",
     "H-EXIT gate: lp ≥ EARLY−ε and est_gflops < EARLY (min_new↓ + n=1).",
+    "H-MID gate: lp ≥ EARLY−ε and est_gflops < EARLY (min_new∈{4,8} + warm-start).",
 ]
 
 NOTES = [
@@ -39,6 +40,7 @@ NOTES = [
     "- H-FLOP smoke: `docs/results/nano-lm/hflop-instrumentation.md` (PROMOTE — metrics live).",
     "- H-EARF smoke: `docs/results/nano-lm/hearf-vs-hearly.md` (KILL — no FLOP win vs tip).",
     "- H-EXIT smoke: `docs/results/nano-lm/hexit-vs-hearly.md` (KILL — quality < EARLY−ε; FLOP↓).",
+    "- H-MID: smoke PROMOTE (`hmid-vs-hearly.md`); formal **KILL** (`formal-hmid-vs-hearly.md`).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]
