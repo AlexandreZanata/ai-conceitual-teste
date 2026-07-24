@@ -58,6 +58,7 @@ npm run verify
 16. H-TIE tied+shared block under STAG — done (smoke **KILL** — quality < STAG−ε; params↓)
 17. H-PRUN magnitude prune STAG + recovery — done (smoke **PROMOTE**; density FLOPs; formal deferred)
 18. H-WIN local sliding-window attn — done (smoke **KILL** — quality < STAG−ε; FLOPs↓)
+19. H-SHORT two-phase short draft — done (smoke **PROMOTE** wall↓ tiny; GFLOPs tie; formal deferred)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  

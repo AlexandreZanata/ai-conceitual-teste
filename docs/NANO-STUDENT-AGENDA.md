@@ -45,9 +45,10 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Wave I | **H-TIE** | smoke **KILL** | shared block; quality < STAG−ε |
 | Wave I | **H-PRUN** | smoke PROMOTE (formal deferred) | 30% mag prune; density FLOPs |
 | Wave I | **H-WIN** | smoke **KILL** | local window=32; quality < STAG−ε |
+| Wave I | **H-SHORT** | smoke PROMOTE (formal deferred) | short draft; GFLOPs tie |
 
 Protocol: train **H-STAG**, decode **H-EARLY** or **H-POOL**. Never paste tips (SYS/JOINT/CACHE/CAP KILL).  
-Wave I: **H-LAY** / **H-PRUN** smoke PROMOTE (formal deferred); **H-AMP** / **H-TIE** / **H-WIN** smoke **KILL**. Next: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+Wave I: **H-LAY** / **H-PRUN** / **H-SHORT** smoke PROMOTE (formal deferred); **H-AMP** / **H-TIE** / **H-WIN** smoke **KILL**. Next: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived hypotheses
 

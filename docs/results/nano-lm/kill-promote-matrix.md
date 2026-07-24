@@ -14,6 +14,7 @@ H-AMP gate: lp ≥ EARLY−ε and wall < EARLY (CUDA autocast bf16/fp16).
 H-TIE gate: lp ≥ STAG−ε and (params < STAG or est_gflops < STAG) (UT-lite share).
 H-PRUN gate: lp ≥ STAG−ε and est_gflops < STAG (magnitude prune; density FLOPs).
 H-WIN gate: lp ≥ STAG−ε and est_gflops < STAG (local window attn).
+H-SHORT gate: lp ≥ EARLY−ε and (wall < EARLY or est_gflops < EARLY) (short draft).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -37,5 +38,6 @@ H-WIN gate: lp ≥ STAG−ε and est_gflops < STAG (local window attn).
 - H-TIE smoke: `docs/results/nano-lm/htie-vs-hstag.md` (KILL — quality < STAG−ε; params↓).
 - H-PRUN smoke: `docs/results/nano-lm/hprun-vs-hstag.md` (PROMOTE; density FLOPs; formal deferred).
 - H-WIN smoke: `docs/results/nano-lm/hwin-vs-hstag.md` (KILL — quality < STAG−ε; FLOPs↓).
+- H-SHORT smoke: `docs/results/nano-lm/hshort-vs-hearly.md` (PROMOTE wall↓; GFLOPs tie; formal deferred).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
