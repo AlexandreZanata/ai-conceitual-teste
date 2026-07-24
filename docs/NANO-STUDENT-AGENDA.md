@@ -43,12 +43,13 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Metrics | **H-FLOP** | smoke PROMOTE | wall + tok/s + GFLOPs |
 
 Protocol: train **H-STAG**, decode **H-EARLY** or **H-POOL**. Never paste tips.  
-Next queue: `.local/pesquisa.md` (Wave J → **H-BUCKET**). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+Next queue: `.local/pesquisa.md` (Wave J → **H-REP**). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived hypotheses
 
 Waves A–H deepeners + Wave I KILLs (WIN/TIE/AMP/SOFT) purged from `nano_lm/`.  
-Markdown: [`docs/results/nano-lm/archive/`](results/nano-lm/archive/).
+Wave J: **H-BUCKET** smoke **KILL** (tok/s↓ vs H-BAT).  
+Markdown: [`docs/results/nano-lm/archive/`](results/nano-lm/archive/) + [`hbucket-vs-hbat.md`](results/nano-lm/hbucket-vs-hbat.md).
 
 ## Eval
 

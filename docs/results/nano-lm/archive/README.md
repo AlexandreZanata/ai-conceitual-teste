@@ -5,7 +5,7 @@
 - Train tip: **H-STAG** (+ parents CURL2/CURL/CUR)
 - Decode tips: **H-EARLY** / **H-POOL** (+ DECKL/DECK/DEC)
 - Utils: **H-LAY** / **H-PRUN** / **H-SHORT** / **H-BAT** / **H-TOP** / **H-FLOP**
-- Wave J: **H-TOP** formal PROMOTE; next **H-BUCKET**
+- Wave J: **H-TOP** formal PROMOTE; **H-BUCKET** smoke KILL; next **H-REP**
 
 ## Archived files (132)
 
