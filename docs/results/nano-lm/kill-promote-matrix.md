@@ -29,6 +29,7 @@ H-POOL3 gate: lp ≥ POOL−ε and est_gflops < POOL (n≤3 + tip warm-start).
 H-QG gate: lp ≥ EARLY−ε and est_gflops < EARLY (hard quality gate + min GFLOPs).
 H-TRIM gate: lp ≥ POOL−ε and est_gflops < POOL (freeze tip n + FLOP search).
 H-CURL3 gate: best seq_lo on {5,6,7} > H-CURL2 tip lo=6.
+H-STAG gate: best n_stages on {2,3,4} > H-CURL2 tip stages=3 @ lo=6.
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -65,5 +66,6 @@ H-CURL3 gate: best seq_lo on {5,6,7} > H-CURL2 tip lo=6.
 - H-QG smoke: `docs/results/nano-lm/hqg-vs-hearly.md` (KILL — quality Δ−0.36; GFLOPs↓).
 - H-TRIM smoke: `docs/results/nano-lm/htrim-vs-hpool.md` (KILL — no FLOP win; GFLOPs↑).
 - H-CURL3: smoke PROMOTE (`hcurl3-vs-hcurl2.md` lo=7); formal **KILL** (`formal-hcurl3-vs-hcurl2.md` — tip lo=6).
+- H-STAG: smoke PROMOTE (`hstag-vs-hcurl2.md` stages=2); formal **PROMOTE** (`formal-hstag-vs-hcurl2.md` stages=4; tip updated).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
