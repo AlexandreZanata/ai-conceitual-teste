@@ -7,6 +7,7 @@ Frozen baseline track: TinyStories teacher + ≤5M student. Protocol: [`docs/NAN
 | Doc | Role |
 |-----|------|
 | [champion-card.md](champion-card.md) | **Parked tip-stack protocol** |
+| [hear2-vs-hearly.md](hear2-vs-hearly.md) | H-EAR2 deepen (smoke KILL) |
 | [kill-promote-matrix.md](kill-promote-matrix.md) | Slim matrix (B0–B4 + champions) |
 | [formal-hcurl-vs-hcur.md](formal-hcurl-vs-hcur.md) / [hcurl-vs-hcur.md](hcurl-vs-hcur.md) | Train tip H-CURL |
 | [formal-hcur-vs-b2.md](formal-hcur-vs-b2.md) / [hcur-vs-b2.md](hcur-vs-b2.md) | Train parent H-CUR |

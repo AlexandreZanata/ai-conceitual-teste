@@ -36,12 +36,12 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 |------|-----|--------|-------|
 | Train | **H-CURL** | PROMOTE (`seq_lo=8` > H-CUR) | Official train tip |
 | Train parent | H-CUR | PROMOTE vs B2 Δ+1.19 | Curriculum KD |
-| Decode speed | **H-EARLY** | PROMOTE vs B4 (−11.83 / 65ms) | Early-exit gene |
+| Decode speed | **H-EARLY** / H-EAR2 | EARLY★; EAR2 **smoke KILL** | Early-exit; widen gene |
 | Decode quality@wall | **H-POOL** | PROMOTE vs cold H-DECKL | Warm-start; `top_k=1` |
 | Decode parents | H-DECKL / H-DECK / H-DEC | PROMOTE vs B4 | Search lineage |
 
-Protocol: train with **H-CURL**, decode with **H-EARLY** (speed) or **H-POOL** (quality@wall). Compose H-IDs (H-SYS/JOINT/CACHE/CAP) smoke **KILL** — tips stay separate axes.  
-**Parked:** see [`docs/results/nano-lm/champion-card.md`](results/nano-lm/champion-card.md).
+Protocol: train with **H-CURL**, decode with **H-EARLY** (speed) or **H-POOL** (quality@wall). Compose H-IDs smoke **KILL**.  
+H-EAR2 smoke **KILL** (quality < EARLY−ε). Next deepen: see `.local/pesquisa.md` (B3 H-BUD). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived hypotheses
 

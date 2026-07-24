@@ -4,6 +4,7 @@ GATES = [
     "H-SPEC gate: tokens/s > B3 and teacher_lp ≥ B3 − 0.05.",
     "H-DEC / H-DECK / H-DECKL / H-POOL / H-EARLY: decode tips (see formal docs).",
     "H-CUR / H-CURL: curriculum train tips (official train = H-CURL seq_lo=8).",
+    "H-EAR2 gate: lp ≥ EARLY−ε and wall < EARLY (widened early gene).",
 ]
 
 NOTES = [
