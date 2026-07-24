@@ -10,6 +10,7 @@ H-DEC / H-DECK / H-DECKL / H-POOL / H-EARLY: decode tips (see formal docs).
 H-CUR / H-CURL / H-CURL2 / H-STAG: curriculum train (official = H-STAG lo=6, stages=4).
 H-FLOP: report tokens/s + est. GFLOPs with wall (instrumentation).
 H-LAY gate: lp ≥ EARLY−ε and (wall < EARLY or est_gflops < EARLY) (layer skip).
+H-AMP gate: lp ≥ EARLY−ε and wall < EARLY (CUDA autocast bf16/fp16).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -29,5 +30,6 @@ H-LAY gate: lp ≥ EARLY−ε and (wall < EARLY or est_gflops < EARLY) (layer sk
 - Official decode: **H-EARLY** (speed) / **H-POOL** (quality@wall).
 - Waves A–H deepeners purged from code; see archive + `.local/pesquisa.md`.
 - H-LAY smoke: `docs/results/nano-lm/hlay-vs-hearly.md` (PROMOTE wall↓; GFLOPs tie; formal deferred).
+- H-AMP smoke: `docs/results/nano-lm/hamp-vs-hearly.md` (KILL — quality < EARLY−ε; wall↑).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
