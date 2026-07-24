@@ -63,6 +63,7 @@ npm run verify
 21. H-POOL2 tighter POOL search — done (smoke **KILL** — quality < POOL−ε; fit-fwd↓)
 22. H-CURD teacher-NLL difficulty curriculum — done (smoke PROMOTE; formal **KILL** vs CURL2 Δ−1.16)
 23. H-STEP early-stop KD under CURL2 — done (smoke **KILL** — worse lp than tip; steps↓)
+24. H-ALAT (αT) KD α/T schedule under CURL2 — done (smoke **KILL** — ≤ tip Δ−0.23)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + parked [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  

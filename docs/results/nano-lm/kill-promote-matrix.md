@@ -19,6 +19,7 @@ H-PROX gate: claim lp ≥ POOL−ε (CE-only fit; teacher claim).
 H-POOL2 gate: lp ≥ POOL−ε and fit teacher_fwd < POOL (tighter search).
 H-CURD gate: teacher_lp > H-CURL2 tip @ equal steps (NLL bins; xor length).
 H-STEP gate: claim lp ≥ H-CURL2 tip (early-stop on fit teacher_lp plateau).
+H-ALAT gate: teacher_lp > H-CURL2 tip (α/T schedule under CURL stages).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -45,5 +46,6 @@ H-STEP gate: claim lp ≥ H-CURL2 tip (early-stop on fit teacher_lp plateau).
 - H-POOL2 smoke: `docs/results/nano-lm/hpool2-vs-hpool.md` (KILL — quality < POOL−ε; fit-fwd↓).
 - H-CURD: smoke PROMOTE (`hcurd-vs-hcurl2.md` Δ+0.01); formal **KILL** (`formal-hcurd-vs-hcurl2.md` Δ−1.16).
 - H-STEP smoke: `docs/results/nano-lm/hstep-vs-hcurl2.md` (KILL — Δ−0.23 vs tip; steps↓).
+- H-ALAT (αT) smoke: `docs/results/nano-lm/halat-vs-hcurl2.md` (KILL — Δ−0.23 vs tip).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
