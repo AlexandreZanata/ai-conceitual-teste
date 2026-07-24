@@ -81,7 +81,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-DRAFT/H-BEAM | Evolved draft / beam knobs | No wall win — **smoke KILL** |
 | H-EARLY | Confidence early-exit / adaptive length | ≤ B4 / no wall — **smoke/formal PROMOTE** |
 | H-STACK/ROUT/ORAC | Tip dual / conf / oracle | no dual — **smoke KILL** |
-| H-NGRAM★ / H-MINP★ / H-TYP★ / H-TMN | Tips★; TMN **smoke KILL** (wall≥tips) |
+| H-NGRAM★ / H-MINP★ / H-TYP★ / H-TMN / H-TPE | Tips★; TMN/TPE **smoke KILL** |
 
 ### B — Inference as learning
 | ID | Mechanism | Kill if |

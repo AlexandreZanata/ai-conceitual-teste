@@ -46,6 +46,7 @@ GATES = [
     "H-MPE gate: teacher_lp ≥ H-MINP−ε and wall < tip (evolved min_p).",
     "H-TYP gate: teacher_lp ≥ B4−ε and wall < B4 (typical sampling).",
     "H-TMN gate: lp ≥ max(TYP,MINP)−ε and wall < min tips (stack).",
+    "H-TPE gate: teacher_lp ≥ H-TYP−ε and wall < tip (evolved typ_mass).",
     "H-DECK gate: teacher_lp ≥ H-DEC−ε and wall_save (proxy+top-k search).",
     "H-DECK2 gate: best top_k∈{1,2,3} > H-DECK (k=2) equal pop×gens.",
     "H-PROXY2 gate: teacher_lp > H-DECK @ ≤ teacher_forwards (CE vs self-lp).",
