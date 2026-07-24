@@ -12,6 +12,9 @@ GATES = [
 NOTES = [
     "## Notes",
     "- Champion stack only. Purged H-ID history: `docs/results/nano-lm/archive/`.",
+    "- H-EAR2 smoke: `docs/results/nano-lm/hear2-vs-hearly.md` (KILL — quality < EARLY−ε).",
+    "- H-BUD smoke: `docs/results/nano-lm/hbud-vs-hearly.md` (KILL — quality < EARLY−ε).",
+    "- H-THIN: smoke PROMOTE (`hthin-vs-hcurl.md`); formal **KILL** (`formal-hthin-vs-hcurl.md`).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]
