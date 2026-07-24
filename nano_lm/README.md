@@ -76,6 +76,7 @@ npm run nano:typ             # H-TYP typical sampling vs B4
 npm run nano:tmn             # H-TMN TYP×MINP tip stack vs tips
 npm run nano:tpe             # H-TPE evolve typ_mass gene vs H-TYP
 npm run nano:cur             # H-CUR length-curriculum KD vs B2
+npm run nano:cur2            # H-CUR2 n_stages ablation vs H-CUR
 npm run nano:fit             # H-FIT teacher_lp fitness vs H-SEL
 npm run nano:tou             # H-TOU tournament selection vs H-SEL
 npm run nano:xov             # H-XOV weight crossover vs H-SEL
@@ -145,6 +146,7 @@ H-MPE smoke/formal: smoke PROMOTE; formal KILL (no wall) — see `docs/results/n
 H-TYP smoke/formal: PROMOTE vs B4 (dual) — see `docs/results/nano-lm/htyp-vs-b4.md`.
 H-TPE smoke: KILL vs H-TYP (quality drop) — see `docs/results/nano-lm/htpe-vs-htyp.md`.
 H-CUR smoke/formal: PROMOTE vs B2 (Δ+1.19 formal) — see `docs/results/nano-lm/hcur-vs-b2.md`.
+H-CUR2 smoke/formal: PROMOTE vs H-CUR n=3 (formal best n=5) — see `docs/results/nano-lm/hcur2-vs-hcur.md`.
 H-STACK smoke: KILL vs tips (≤ max tip quality) — see `docs/results/nano-lm/hstack-vs-tips.md`.
 H-FIT smoke: PROMOTE vs H-SEL (tentative) — see `docs/results/nano-lm/hfit-vs-hsel.md`.
 H-TOU smoke: KILL/hold vs H-SEL — see `docs/results/nano-lm/htou-vs-hsel.md`.

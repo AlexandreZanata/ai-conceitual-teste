@@ -89,7 +89,7 @@ Frozen teacher → soft labels / scores → hypothesis operator → trainable st
 | H-BON/H-MAE | Distill BoN / MAE winners | No gain vs B2 |
 | H-SPEC | Student draft; teacher accept/reject | No speedup — **smoke KILL** |
 | H-TKD | Top-k sparse KD (teacher mass on k) | ≤ B2 — **smoke PROMOTE**; **formal KILL** |
-| H-CLIP / H-LS / H-CUR★ | Clip/smooth KILL; CUR **formal PROMOTE** |
+| H-CLIP / H-LS / H-CUR★ / H-CUR2★ | CUR★; CUR2 **formal PROMOTE** (best n=5) |
 
 ### C — Quantum-inspired (classical only)
 | ID | Mechanism | Kill if |

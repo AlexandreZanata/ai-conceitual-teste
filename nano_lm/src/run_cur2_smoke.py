@@ -1,0 +1,68 @@
+"""Smoke H-CUR2: sweep n_stages∈{2,3,4,5} equal KD steps."""
+
+from __future__ import annotations
+
+import json
+import sys
+import time
+from pathlib import Path
+from typing import Any
+
+from cur2_ops import CUR2_STAGES
+from cur_ops import DEFAULT_SEQ_LO
+from hyp_cur import run_h_cur
+from load_model import resolve_device
+from matrix_common import eval_ckpt, matrix_cfg, write_json
+
+import torch
+
+
+def main() -> int:
+    c = matrix_cfg()
+    device = resolve_device(True)
+    if device.type != "cuda":
+        print("WARN: CUDA unavailable; smoke will be slow/CPU", file=sys.stderr)
+    out: Path = c["out"]
+    out.mkdir(parents=True, exist_ok=True)
+    rows: list[dict[str, Any]] = []
+    t0 = time.perf_counter()
+    steps = int(c.get("steps_cur", c["steps_kd"]))
+    seq_lo = int(c.get("cur_seq_lo", DEFAULT_SEQ_LO))
+    for seed in c["seeds"]:
+        for n_stages in CUR2_STAGES:
+            ckpt = out / f"HCUR2_n{n_stages}_seed{seed}.pt"
+            meta = run_h_cur(
+                teacher_id=c["teacher_id"],
+                tokenizer_id=c["tokenizer_id"],
+                cache_dir=c["cache"],
+                device=device,
+                steps=steps,
+                batch_size=c["batch_size"],
+                seq_len=c["seq_len"],
+                max_examples=c["max_examples"],
+                lr=c["lr"],
+                seed=seed + 17 * int(n_stages),
+                temperature=2.0,
+                alpha=0.5,
+                out_path=ckpt,
+                seq_lo=seq_lo,
+                n_stages=int(n_stages),
+            )
+            write_json(
+                out / f"HCUR2_n{n_stages}_seed{seed}_train.json", meta
+            )
+            ev = eval_ckpt(c, ckpt, seed, "H-CUR2")
+            ev["n_stages"] = int(n_stages)
+            ev["label"] = f"HCUR2_n{n_stages}_seed{seed}"
+            write_json(out / f"HCUR2_n{n_stages}_seed{seed}_eval.json", ev)
+            rows.append(ev)
+            if device.type == "cuda":
+                torch.cuda.empty_cache()
+    wall_s = time.perf_counter() - t0
+    write_json(out / "cur2_smoke.json", {"rows": rows, "wall_s": wall_s})
+    print(json.dumps({"n_rows": len(rows), "out": str(out / "cur2_smoke.json")}))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

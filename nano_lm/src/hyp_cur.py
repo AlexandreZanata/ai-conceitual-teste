@@ -7,7 +7,7 @@ from typing import Any
 
 import torch
 
-from cur_ops import DEFAULT_SEQ_LO, cur_seq_len
+from cur_ops import DEFAULT_SEQ_LO, N_STAGES, cur_seq_len
 from data_tiny import iter_token_batches, load_tokenizer
 from load_model import load_causal_lm
 from student_model import build_student, count_params
@@ -49,6 +49,7 @@ def run_h_cur(
     alpha: float,
     out_path: Path,
     seq_lo: int = DEFAULT_SEQ_LO,
+    n_stages: int = N_STAGES,
 ) -> dict[str, Any]:
     torch.manual_seed(seed)
     if device.type == "cuda":
@@ -62,10 +63,14 @@ def run_h_cur(
     opt = torch.optim.AdamW(student.parameters(), lr=lr)
     losses: list[float] = []
     lens: list[int] = []
-    cur = cur_seq_len(0, steps, seq_lo=seq_lo, seq_hi=seq_len)
+    cur = cur_seq_len(
+        0, steps, seq_lo=seq_lo, seq_hi=seq_len, n_stages=n_stages
+    )
     data = _make_data(tok, cache_dir, max_examples, cur, batch_size, device)
     for step in range(steps):
-        want = cur_seq_len(step, steps, seq_lo=seq_lo, seq_hi=seq_len)
+        want = cur_seq_len(
+            step, steps, seq_lo=seq_lo, seq_hi=seq_len, n_stages=n_stages
+        )
         if want != cur:
             cur = want
             data = _make_data(tok, cache_dir, max_examples, cur, batch_size, device)
@@ -91,6 +96,7 @@ def run_h_cur(
         "hypothesis": "H-CUR",
         "params": count_params(student),
         "steps": steps,
+        "n_stages": int(n_stages),
         "seq_lo": int(seq_lo),
         "seq_hi": int(seq_len),
         "mean_seq_len": sum(lens) / max(len(lens), 1),
