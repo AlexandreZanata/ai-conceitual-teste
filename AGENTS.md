@@ -58,6 +58,7 @@ npm run verify
 16. H-Q8 INT8 dynamic quant on CURL + EARLY — done (smoke **KILL** — no wall win vs tip)
 17. H-EARS scheduled early-exit thr — done (smoke **KILL** — quality < EARLY−ε)
 18. H-CURL2 fine seq_lo grid — done (smoke PROMOTE lo=12; formal **PROMOTE** lo=6 vs tip)
+19. H-COMP torch.compile on EARLY tip — done (smoke **KILL** — no wall win; CUDAGraph overhead)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + parked [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  

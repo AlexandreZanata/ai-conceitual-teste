@@ -10,6 +10,7 @@ GATES = [
     "H-Q8 gate: lp ≥ CURL−ε and wall < CURL (INT8 dynamic on same EARLY).",
     "H-EARS gate: lp ≥ EARLY−ε and wall < EARLY (scheduled thr).",
     "H-CURL2 gate: best seq_lo on {4,6,8,10,12} > tip lo=8.",
+    "H-COMP gate: lp ≥ EARLY−ε and wall < EARLY (torch.compile).",
 ]
 
 NOTES = [
@@ -21,6 +22,7 @@ NOTES = [
     "- H-Q8 smoke: `docs/results/nano-lm/hq8-vs-hcurl.md` (KILL — no wall win vs tip).",
     "- H-EARS smoke: `docs/results/nano-lm/hears-vs-hearly.md` (KILL — quality < EARLY−ε).",
     "- H-CURL2: smoke PROMOTE (`hcurl2-vs-hcurl.md`); formal **PROMOTE** lo=6 (`formal-hcurl2-vs-hcurl.md`).",
+    "- H-COMP smoke: `docs/results/nano-lm/hcomp-vs-hearly.md` (KILL — no wall win vs EARLY).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]
