@@ -25,6 +25,7 @@
 | **H-Q-INTERF** | Dual-teacher α-BoN score interference (smoke **KILL**; see archive) |
 | **H-ABS-REV** | Time-reversed KV prefill (smoke **KILL**; see archive) |
 | **H-Q-ANNEAL** | Per-token T(t)/conf(t) cooling on EARLY (smoke **KILL**; see archive) |
+| **H-ABS-SPIRAL** | Hilbert-curve absolute position remap (smoke **KILL**; see archive) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

@@ -167,3 +167,10 @@ def test_given_card_when_read_then_hqanneal_kill() -> None:
     assert "H-Q-ANNEAL" in text or "ANNEAL" in text
     assert "KILL" in text
     assert "hqanneal-anneal" in text
+
+
+def test_given_card_when_read_then_hspiral_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-ABS-SPIRAL" in text or "SPIRAL" in text
+    assert "KILL" in text
+    assert "habsspiral-spiral" in text
