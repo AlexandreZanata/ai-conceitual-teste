@@ -48,6 +48,7 @@
 | **H-ABS-QPFB2** | PFB K=2 on QT-int8 (smoke+formal **PROMOTE**; wall↓ vs QPFB k=4) |
 | **H-ABS-BPFB** | PFB K=2 on bitcoin pack (smoke+formal **PROMOTE**; domain transfer) |
 | **H-ABS-GPFB** | GENC∘PFB2 (smoke **KILL**; archive/hgpfb-gpfb.md) |
+| **H-ABS-GPFB4** | GENC∘PFB K=4 (smoke+formal **PROMOTE**; formal-hgpfb4-gpfb4.md) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

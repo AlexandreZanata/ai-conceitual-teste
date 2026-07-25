@@ -69,5 +69,7 @@
 | [hbpfb-bpfb.md](hbpfb-bpfb.md) | **H-ABS-BPFB** PFB K=2 on BTC smoke (**PROMOTE**) |
 | [formal-hbpfb-bpfb.md](formal-hbpfb-bpfb.md) | **H-ABS-BPFB** PFB K=2 on BTC formal (**PROMOTE**) |
 | [archive/hgpfb-gpfb.md](archive/hgpfb-gpfb.md) | **H-ABS-GPFB** GENC∘PFB2 smoke (**KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC/H-ABS-PFB/H-ABS-QPFB/H-ABS-PFB2/H-ABS-QPFB2/H-ABS-BPFB **PROMOTE** · E.1+CBON/CSAFE/GPFB **KILL** → HOLD/new H-ID (`.local/pesquisa.md`) |
+| [hgpfb4-gpfb4.md](hgpfb4-gpfb4.md) | **H-ABS-GPFB4** GENC∘PFB K=4 smoke (**PROMOTE**) |
+| [formal-hgpfb4-gpfb4.md](formal-hgpfb4-gpfb4.md) | **H-ABS-GPFB4** GENC∘PFB K=4 formal (**PROMOTE**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC/H-ABS-PFB/H-ABS-QPFB/H-ABS-PFB2/H-ABS-QPFB2/H-ABS-BPFB/H-ABS-GPFB4 **PROMOTE** · E.1+CBON/CSAFE/GPFB **KILL** → HOLD/new H-ID (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |
