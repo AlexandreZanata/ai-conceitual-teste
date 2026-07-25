@@ -74,7 +74,7 @@ for each generation:
 
 ## Size and complexity (mandatory)
 
-Every `.cpp` / `.hpp` must obey harness caps: **≤80 lines/function**, **≤200 lines/file**, **cyclomatic ≤10**. Prefer more files over larger files. Quality scanner must include C++ suffixes before the first C++ commit lands.
+Every `.cpp` / `.hpp` must obey harness cyclomatic ≤10 (file/function line caps waived). Prefer clear modules. Quality scanner must include C++ suffixes before the first C++ commit lands.
 
 ## Non-goals (C++ EvoGen product)
 

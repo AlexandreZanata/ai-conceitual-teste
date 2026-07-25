@@ -23,7 +23,7 @@ When rules conflict with existing code, **rules prevail** — unless the user ex
 ## Always load
 
 1. `agent-rules/AGENT-CORE-PRINCIPLES.md`
-2. `agent-rules/00-core/size-and-complexity-limits.md` — **80 / 200 / ≤10**
+2. `agent-rules/00-core/size-and-complexity-limits.md` — **cyclomatic ≤10** (file/function line caps waived)
 3. `docs/ARCHITECTURE.md` + `docs/GLOSSARY.md`
 4. Active `.local/phases/*/README.md` + `OFFICIAL-REFERENCE.md` + `TASKS.md`
 5. `docs/EXPERIMENTAL-DESIGN.md` before changing experiment semantics
@@ -81,16 +81,18 @@ npm run verify
 39. Wave L / H-CHB chunk_size sweep vs CHUNK — done (smoke+formal **PROMOTE** — B=256 wall↓)
 40. Wave L / H-ASYNC cache∩PIN overlap — done (smoke **KILL** — e2e wall↑ vs PIN; lp tie)
 41. Wave L focus queue complete (L6 skipped) — see `.local/pesquisa.md`
+42. Wave M / H-CPOOLB chunked prefill under POOLB — done (smoke+formal **PROMOTE** — tok/s↑; lp=POOLB)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
+**Next:** **H-CHBAT** — see `.local/pesquisa.md`
 
 ---
 
 ## Quality gates (Lefthook)
 
-Every commit (local included): file ≤200, function ≤80, cyclomatic ≤10, lint 0/0, system 0 errors.
+Every commit (local included): cyclomatic ≤10 (file/function line caps waived), lint 0/0, system 0 errors.
 
 Extend size scanner to `.cpp`/`.hpp` **before** the first C++ sources are committed.
 

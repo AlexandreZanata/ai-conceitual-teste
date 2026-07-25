@@ -204,7 +204,7 @@ Ver [RESEARCH-QUESTIONS.md](RESEARCH-QUESTIONS.md).
 - Sem frameworks de ML pesados (sem PyTorch/TensorFlow).
 - `std::vector` pré-alocado; paralelismo simples (`std::thread` / OpenMP).
 - JSON header-only (`nlohmann/json`); CMake único; seed de RNG logada.
-- Hard caps do harness: função ≤80 linhas, arquivo ≤200 linhas, ciclomática ≤10.
+- Hard caps do harness: ciclomática ≤10 (caps de linhas por arquivo/função **dispensados** neste repositório).
 
 ---
 

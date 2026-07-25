@@ -1,6 +1,6 @@
 # Nano-LM Track — Research Protocol
 
-> Side experiment track. Does **not** change EvoGen C++ Domain. Caps: ≤80 lines/function, ≤200 lines/file, cyclomatic ≤10.
+> Side experiment track. Does **not** change EvoGen C++ Domain. Caps: cyclomatic ≤10 (file/function line caps waived).
 
 ## Hypothesis
 

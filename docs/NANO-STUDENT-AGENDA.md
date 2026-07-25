@@ -1,7 +1,7 @@
 # Nano Student + Teacher — Research Agenda
 
 > Lab-grade protocol. Side track under `nano_lm/`. Not C++ EvoGen Domain.  
-> Caps: ≤80 lines/function, ≤200 lines/file, cyclomatic ≤10.
+> Caps: cyclomatic ≤10 (file/function line caps waived).
 
 ## Honesty clause
 
@@ -33,14 +33,14 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Train tip | **H-STAG** | formal PROMOTE |
 | Decode tips | **H-EARLY** / **H-POOL** | formal PROMOTE |
 | Systems decode | FLASH / KVSEL / **CHUNK** / **CHB** | formal PROMOTE |
-| Throughput | BAT / **POOLB** / **CBAT** | formal PROMOTE |
+| Throughput | BAT / POOLB / **CBAT** / **CPOOLB** | formal PROMOTE |
 | Train util | TOP / **PIN** / PRUN / DEPTH | formal PROMOTE |
 | Quant | **H-Q4** | smoke PROMOTE / formal **KILL** |
 | Protocol | MIX / FUSE / CFUSE | PROTOCOL / CFUSE smoke **KILL** |
 | Train I/O try | **H-ASYNC** | smoke **KILL** |
 
 **Do not** gene-widen EARLY/POOL or paste tips. Deepen systems/batch/TOP/DEPTH axes only.  
-Queue: `.local/pesquisa.md` (**Wave L** done — ASYNC smoke KILL; skip L6). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+Queue: `.local/pesquisa.md` (**Wave M** — M1 CPOOLB done; **next M2 H-CHBAT**). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived
 

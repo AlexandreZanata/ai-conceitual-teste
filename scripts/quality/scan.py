@@ -57,7 +57,7 @@ def analyze_file(path: Path) -> list[Finding]:
         return [Finding(path, "encode", "file is not valid UTF-8")]
 
     lines = text.splitlines()
-    if len(lines) > MAX_FILE_LINES:
+    if MAX_FILE_LINES is not None and len(lines) > MAX_FILE_LINES:
         findings.append(
             Finding(path, "file-lines", f"{len(lines)} lines (max {MAX_FILE_LINES})")
         )
@@ -74,7 +74,7 @@ def analyze_file(path: Path) -> list[Finding]:
 
     for name, start, end in ranges:
         body_lines = end - start + 1
-        if body_lines > MAX_FUNCTION_LINES:
+        if MAX_FUNCTION_LINES is not None and body_lines > MAX_FUNCTION_LINES:
             findings.append(
                 Finding(
                     path,

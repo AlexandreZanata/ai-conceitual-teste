@@ -54,4 +54,4 @@ python3 scripts/validate_benchmark_report.py
 
 ## Quality gates
 
-File ≤200 lines · function ≤80 · cyclomatic ≤10 · lint 0/0 · system 0 errors.
+Cyclomatic ≤10 · file/function line caps waived · lint 0/0 · system 0 errors.

@@ -9,6 +9,6 @@ alwaysApply: true
 - Delivery order: 03–09 done (PoC v1 survival-benchmark narrative). Plan: `.local/SURVIVAL-GAME-PLAN.md`.
 - Domain terms only from `docs/GLOSSARY.md` — never call evolutionary individuals “coding agents”.
 - Experiment semantics from `docs/EXPERIMENTAL-DESIGN.md` (A/B/C + technique matrix + TB-* budgets; T1 XOR/sine; T2 Trait Forge Arena).
-- Caps: ≤80 lines/function, ≤200 lines/file, cyclomatic ≤10; run `npm run verify`.
+- Caps: cyclomatic ≤10 (file/function line caps waived); run `npm run verify`.
 - Implementation checklists live in `.local/phases/*/TASKS.md` (gitignored).
 - Benchmark write-up: `docs/results/BENCHMARK-REPORT.md`.

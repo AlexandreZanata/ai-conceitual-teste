@@ -24,6 +24,7 @@
 | 2c. Eval throughput | Batched multi-prompt | **H-BAT** (util) | [formal-hbat-vs-hearly.md](formal-hbat-vs-hearly.md) |
 | 2c′. Quality throughput | Batched multi-prompt POOL | **H-POOLB** (util) | [formal-hpoolb-vs-hpool.md](formal-hpoolb-vs-hpool.md) |
 | 2c″. Eval throughput | Chunked prefill under BAT | **H-CBAT** (util) | [formal-hcbat-vs-hbat.md](formal-hcbat-vs-hbat.md) |
+| 2c‴. Quality throughput | Chunked prefill under POOLB | **H-CPOOLB** (util) | [formal-hcpoolb-vs-hpoolb.md](formal-hcpoolb-vs-hpoolb.md) |
 | — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
 | — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
 | — | Protocol stack (not a tip) | **H-CFUSE** = CHUNK ⊕ FUSE | [hcfuse-protocol.md](hcfuse-protocol.md) |
@@ -64,6 +65,8 @@ npm run nano:formal:hshort && npm run nano:formal:hshort:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report
 npm run nano:poolb && npm run nano:poolb:report
 npm run nano:formal:hpoolb && npm run nano:formal:hpoolb:report
+npm run nano:cpoolb && npm run nano:cpoolb:report
+npm run nano:formal:hcpoolb && npm run nano:formal:hcpoolb:report
 npm run nano:formal:hbat && npm run nano:formal:hbat:report
 npm run nano:formal:htop && npm run nano:formal:htop:report
 npm run nano:pin && npm run nano:pin:report
@@ -95,7 +98,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave L FOCUS** — queue done (L6 skipped); **next: open Wave M or park**.  
+**Wave M FOCUS** — M1 done; **next: M2 H-CHBAT**.  
+**H-CPOOLB** smoke+formal **PROMOTE** ([formal-hcpoolb-vs-hpoolb.md](formal-hcpoolb-vs-hpoolb.md) — tok/s↑; lp=POOLB).  
 **H-ASYNC** smoke **KILL** ([hasync-vs-hpin.md](hasync-vs-hpin.md) — e2e wall↑ vs PIN).  
 **H-CHB** smoke+formal **PROMOTE** ([formal-hchb-vs-hchunk.md](formal-hchb-vs-hchunk.md) — B=256).  
 **H-CBAT** smoke+formal **PROMOTE** ([formal-hcbat-vs-hbat.md](formal-hcbat-vs-hbat.md)).  

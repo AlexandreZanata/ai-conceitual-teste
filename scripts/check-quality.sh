@@ -8,7 +8,7 @@ cd "$ROOT"
 echo "=== ai-conceitual-teste quality gate ==="
 
 echo ""
-echo "1/4 Size + complexity (file≤200, function≤80, cyclomatic≤10)"
+echo "1/4 Size + complexity (cyclomatic≤10; file/function line caps waived)"
 python3 "$ROOT/scripts/check_size_complexity.py" --root "$ROOT" "$@"
 
 echo ""

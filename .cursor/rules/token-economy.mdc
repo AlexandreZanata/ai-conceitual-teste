@@ -12,7 +12,7 @@ Full rules: `{rules_dir}/09-ai-agent-specific/token-economy.md`
 ## MUST
 
 - Load rules by trigger/manifest — not all 50+ files.
-- Use imperatives and one-line limits (`Max function length: 80 lines`, `Max file: 200 lines`, `Cyclomatic ≤ 10`).
+- Use imperatives and one-line limits (`Cyclomatic ≤ 10`; file/function line caps waived).
 - Reference glossary once — never re-define domain terms.
 - Cite file paths — do not paste full file contents.
 

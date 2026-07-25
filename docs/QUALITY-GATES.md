@@ -2,14 +2,14 @@
 
 Commits and pushes are blocked until all gates pass — including local commits.
 
-Source of truth for caps: `agent-rules/00-core/size-and-complexity-limits.md`.
+Source of truth: `agent-rules/00-core/size-and-complexity-limits.md`.
 
-## Caps (Agent Harness)
+## Caps
 
 | Metric | Hard cap |
 |--------|----------|
-| File / module | ≤ 200 lines |
-| Function / method | ≤ 80 lines |
+| File / module lines | **waived** |
+| Function / method lines | **waived** |
 | Cyclomatic complexity | ≤ 10 |
 | Lint | 0 errors, 0 warnings |
 | System / compile | 0 errors (when typecheck/build exists) |
@@ -20,7 +20,7 @@ Source of truth for caps: `agent-rules/00-core/size-and-complexity-limits.md`.
 npm install              # installs Lefthook + git hooks (prepare)
 npx lefthook install     # re-wire hooks if needed
 npm run verify           # full gate
-npm run check:size       # size + complexity only
+npm run check:size       # cyclomatic (line caps waived)
 npm run check:lint       # lint only
 npm run check:system     # compile/check only
 ```

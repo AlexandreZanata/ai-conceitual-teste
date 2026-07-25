@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""CLI: enforce file ≤200, function ≤80, cyclomatic ≤10."""
+"""CLI: enforce cyclomatic ≤10 (file/function line caps waived)."""
 
 from __future__ import annotations
 
@@ -13,6 +13,12 @@ if str(_SCRIPT_DIR) not in sys.path:
 
 from quality.limits import MAX_CYCLOMATIC, MAX_FILE_LINES, MAX_FUNCTION_LINES
 from quality.scan import analyze_file, iter_source_files
+
+
+def _caps_msg() -> str:
+    file_c = "waived" if MAX_FILE_LINES is None else f"≤{MAX_FILE_LINES}"
+    fn_c = "waived" if MAX_FUNCTION_LINES is None else f"≤{MAX_FUNCTION_LINES}"
+    return f"file {file_c}, function {fn_c}, cyclomatic≤{MAX_CYCLOMATIC}"
 
 
 def main() -> int:
@@ -32,7 +38,7 @@ def main() -> int:
         findings.extend(analyze_file(path))
 
     if findings:
-        print("[size-complexity] FAILED — harness hard caps exceeded:")
+        print("[size-complexity] FAILED — harness caps exceeded:")
         for item in findings:
             rel = (
                 item.path.relative_to(root)
@@ -40,17 +46,10 @@ def main() -> int:
                 else item.path
             )
             print(f"  - [{item.kind}] {rel}: {item.detail}")
-        print(
-            f"\nCaps: file≤{MAX_FILE_LINES}, function≤{MAX_FUNCTION_LINES}, "
-            f"cyclomatic≤{MAX_CYCLOMATIC}"
-        )
+        print(f"\nCaps: {_caps_msg()}")
         return 1
 
-    print(
-        f"[size-complexity] OK — {len(files)} file(s) within "
-        f"file≤{MAX_FILE_LINES}, function≤{MAX_FUNCTION_LINES}, "
-        f"cyclomatic≤{MAX_CYCLOMATIC}"
-    )
+    print(f"[size-complexity] OK — {len(files)} file(s); caps: {_caps_msg()}")
     return 0
 
 

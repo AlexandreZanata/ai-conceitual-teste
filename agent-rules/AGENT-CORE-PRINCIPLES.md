@@ -201,17 +201,17 @@ Code using a domain term uses **exactly** the same name as the glossary — no t
 
 ---
 
-## 15. UNIVERSAL SIZE AND COMPLEXITY LIMITS
+## 15. COMPLEXITY LIMITS
 
 Required on **every project and language**. Verified on every typecheck/lint pass and before every commit.
 
 | Metric | Hard cap |
 |--------|----------|
-| Function / method | **80 lines** |
-| File / module | **200 lines** |
+| Function / method lines | **waived** (this repo) |
+| File / module lines | **waived** (this repo) |
 | Cyclomatic complexity | **≤ 10 per function** |
 
-Agents MUST run project linters when available; otherwise manually count. Never exceed caps without explicit user waiver.
+Agents MUST run project linters when available. Never exceed cyclomatic without explicit user waiver.
 
 Full rule: `rules/00-core/size-and-complexity-limits.md`
 

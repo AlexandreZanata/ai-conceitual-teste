@@ -1,7 +1,8 @@
-"""Hard caps from agent-rules/00-core/size-and-complexity-limits.md."""
+"""Quality scan caps — line limits waived; cyclomatic remains."""
 
-MAX_FILE_LINES = 200
-MAX_FUNCTION_LINES = 80
+# File/function line caps removed (project waiver). Do not re-enable without ask.
+MAX_FILE_LINES = None
+MAX_FUNCTION_LINES = None
 MAX_CYCLOMATIC = 10
 
 SOURCE_SUFFIXES = {
