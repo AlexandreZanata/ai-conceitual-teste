@@ -34,6 +34,7 @@
 | 2c⁗⁗′. Thin under LAYB | DEPTH_prun under LAYB | **H-DEPTHB** (KILL) | [hdepthb-vs-hlayb.md](hdepthb-vs-hlayb.md) |
 | 2c⁗⁗″. PRUN under LAYB | HPRUN under LAYB | **H-PRUNB** (KILL) | [hprunb-vs-hlayb.md](hprunb-vs-hlayb.md) |
 | 2c⁗⁗‴. PRUN under FLAYB | HPRUN under FLAYB | **H-PRUNF** (KILL) | [hprunf-vs-hflayb.md](hprunf-vs-hflayb.md) |
+| 2c⁗⁗⁗. Systems under LAYB | CUDA graph non-KV arm | **H-GRAPH** (util) | [formal-hgraph-vs-hlayb.md](formal-hgraph-vs-hlayb.md) |
 | — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
 | — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
 | — | Protocol stack (not a tip) | **H-CFUSE** = CHUNK ⊕ FUSE | [hcfuse-protocol.md](hcfuse-protocol.md) |
@@ -81,6 +82,8 @@ npm run nano:formal:hflayb && npm run nano:formal:hflayb:report
 npm run nano:depthb && npm run nano:depthb:report
 npm run nano:prunb && npm run nano:prunb:report
 npm run nano:prunf && npm run nano:prunf:report
+npm run nano:graph && npm run nano:graph:report
+npm run nano:formal:hgraph && npm run nano:formal:hgraph:report
 npm run nano:formal:hshort && npm run nano:formal:hshort:report
 npm run nano:shortb && npm run nano:shortb:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report
@@ -122,7 +125,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave P FOCUS** — P2 done; **next: P3 H-GRAPH**.  
+**Wave P FOCUS** — queue done; **next: open Wave Q or park**.  
+**H-GRAPH** smoke+formal **PROMOTE** ([formal-hgraph-vs-hlayb.md](formal-hgraph-vs-hlayb.md) — wall↓; lp=LAYB).  
 **H-PRUNF** smoke **KILL** ([hprunf-vs-hflayb.md](hprunf-vs-hflayb.md) — |Δlp| > ε vs FLAYB; skip formal).  
 **H-PRUNB** smoke **KILL** ([hprunb-vs-hlayb.md](hprunb-vs-hlayb.md) — |Δlp| > ε vs LAYB; skip formal).  
 **H-PINC** smoke **KILL** ([hpinc-vs-hpin.md](hpinc-vs-hpin.md) — ms/step↑ vs PIN; skip formal).  
