@@ -123,11 +123,13 @@ npm run verify
 81. Wave U / H-RETIP PRE3 train → capacity + frozen EARLY/POOL serve — done (smoke+formal **PROMOTE** — tips unchanged)
 82. Wave U / H-AMORT amortized soft-cache e2e @ n=4 — done (smoke+formal **PROMOTE** — e2e↓ vs live STAG; ETRAIN N=1 stays KILL)
 83. Wave U complete — park
+84. Wave V / V0 RECIPES.md deploy one-pager — done
+85. Wave V / H-XFER2 PACK-only OOD deepen — done (smoke **KILL** — PACK holds elongated+ood; fails ood_long SERVE |Δlp|>ε; BPACK report-only KILL; skip formal)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** park — new wave only with a fresh mechanism (see `.local/pesquisa.md`)
+**Next:** Wave V **H-TIPD** (RETIP tip decision) — see `.local/pesquisa.md`
 
 ---
 

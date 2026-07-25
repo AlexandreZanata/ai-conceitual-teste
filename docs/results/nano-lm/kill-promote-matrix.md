@@ -6,8 +6,8 @@ Wall clock (matrix): 154.6s
 Primary metric: teacher mean log-prob of student completions.
 Full historical rows: `docs/results/nano-lm/archive/`.
 Tips: H-STAG / H-EARLY / H-POOL.
-Recipes: H-PACK (serve-fast), H-QPACK (serve-quality), H-TPACK (train-step).
-H-FLOP: wall + tok/s + est. GFLOPs; H-PARETO flags dirty tok/s↑.
+Primary recipe: H-PACK (serve-fast; elongated+ood; not ood_long).
+Train: H-TPACK + H-AMORT + H-RETIP; quality serve H-QPACK in-harness only.
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -22,7 +22,6 @@ H-FLOP: wall + tok/s + est. GFLOPs; H-PARETO flags dirty tok/s↑.
 | H-CUR | -17.0133 | +0.0785 | 47 | — | 3 | PROMOTE (beats B2) |
 
 ## Notes
-- Official recipes only for public claims. Archive: `docs/results/nano-lm/archive/`.
-- Wave U complete: XFER **KILL** · BUD/RETIP/AMORT **PROMOTE** (amortized e2e @ n=4; ETRAIN N=1 stays KILL).
-- Formal = 3 seeds + fit≠eval.
+- Deploy: `docs/results/nano-lm/RECIPES.md`. Archive: `docs/results/nano-lm/archive/`.
+- Wave V: TIPD → DEPL (`.local/pesquisa.md`). XFER2 smoke KILL (ood_long).
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

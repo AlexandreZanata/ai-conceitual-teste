@@ -1,17 +1,12 @@
 # Nano-LM results
 
-Official tips + 3 recipes. Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).
-
 | Doc | Role |
 |-----|------|
-| [champion-card.md](champion-card.md) | Tips + PACK/QPACK/TPACK |
+| [RECIPES.md](RECIPES.md) | **Deploy one-pager** |
+| [champion-card.md](champion-card.md) | Tips + recipe priority |
 | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | Serve-fast |
-| [formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) | Serve-quality |
-| [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) | Train-step |
-| [formal-hbud-budget.md](formal-hbud-budget.md) | Budget survivors (Wave U) |
-| [formal-hretip-vs-hstag.md](formal-hretip-vs-hstag.md) | PRE3 retip capacity+serve |
-| [formal-hamort-vs-hstag.md](formal-hamort-vs-hstag.md) | Amortized e2e @ n=4 |
-| [hxfer-transfer.md](hxfer-transfer.md) | Transfer audit (KILL) |
-| [formal-hbpack-vs-hearly.md](formal-hbpack-vs-hearly.md) | Throughput support |
-| [kill-promote-matrix.md](kill-promote-matrix.md) | Matrix |
-| [archive/](archive/) | KILL history (incl. ETRAIN) |
+| [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) / [formal-hamort-vs-hstag.md](formal-hamort-vs-hstag.md) / [formal-hretip-vs-hstag.md](formal-hretip-vs-hstag.md) | Train |
+| [formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) | Quality (in-harness) |
+| [formal-hbud-budget.md](formal-hbud-budget.md) / [hxfer-transfer.md](hxfer-transfer.md) | Wave U |
+| [hxfer2-transfer.md](hxfer2-transfer.md) | Wave V PACK deepen (smoke KILL) |
+| [archive/](archive/) | KILL history |
