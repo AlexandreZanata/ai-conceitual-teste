@@ -43,6 +43,7 @@ npm run nano:btc && npm run nano:formal:hbtc
 npm run nano:eff && npm run nano:formal:heff
 npm run nano:e5
 npm run nano:tchr && npm run nano:formal:htchr
+npm run nano:qt && npm run nano:formal:hqt
 npm run nano:qpack && npm run nano:formal:hqpack
 npm run nano:bud && npm run nano:formal:hbud
 ```
@@ -50,7 +51,7 @@ npm run nano:bud && npm run nano:formal:hbud
 ## Wave W / X+
 
 Wave W **COMPLETE** — [wave-w-summary.md](wave-w-summary.md): **H-PROG** / **H-BTC** / **H-EFF** **PROMOTE**; **H-MIXD** **KILL** ([archive](archive/hmixd-mix.md)).  
-**Wave X+ ACTIVE** — **H-TCHR** smoke+formal **[PROMOTE](formal-htchr-code-teacher.md)** · **H-RAG** **[KILL](archive/hrag-retrieve.md)** · **H-CTX** **[KILL](archive/hctx-long-window.md)** → **H-QT** → QCTX/GENC/ABS (`.local/pesquisa.md`).  
+**Wave X+ ACTIVE** — **H-TCHR** / **H-QT** smoke+formal **[PROMOTE](formal-htchr-code-teacher.md)** / **[PROMOTE](formal-hqt-quantize.md)** · **H-RAG** / **H-CTX** **KILL** → [archive/hrag-retrieve.md](archive/hrag-retrieve.md) / [archive/hctx-long-window.md](archive/hctx-long-window.md) → **H-CKD** → QCTX/GENC/ABS (`.local/pesquisa.md`).  
 KILL history: [`archive/`](archive/).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

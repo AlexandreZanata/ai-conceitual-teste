@@ -6,7 +6,7 @@ Active lab (EvoGen C++ frozen). Caps: ≤80 / ≤200 / cyclo ≤10.
 
 **H-STAG′** train · **H-EARLY** / **H-POOL** decode · **H-PACK** serve-fast · **H-TPACK**+**AMORT** train cost · **H-QPACK** in-harness quality.
 
-Card: [`docs/results/nano-lm/champion-card.md`](../docs/results/nano-lm/champion-card.md) · Recipes: [`RECIPES.md`](../docs/results/nano-lm/RECIPES.md) · Lab: `.local/pesquisa.md` (**Wave X**: H-TCHR **PROMOTE**; H-RAG/H-CTX **KILL**; next H-QT).
+Card: [`docs/results/nano-lm/champion-card.md`](../docs/results/nano-lm/champion-card.md) · Recipes: [`RECIPES.md`](../docs/results/nano-lm/RECIPES.md) · Lab: `.local/pesquisa.md` (**Wave X**: H-TCHR/H-QT **PROMOTE**; H-RAG/H-CTX **KILL**; next H-CKD).
 
 ## Setup
 
@@ -25,6 +25,7 @@ npm run nano:prog && npm run nano:formal:hprog
 npm run nano:btc && npm run nano:formal:hbtc
 npm run nano:eff && npm run nano:formal:heff
 npm run nano:tchr && npm run nano:formal:htchr
+npm run nano:qt && npm run nano:formal:hqt
 npm run nano:tpack && npm run nano:amort
 ```
 

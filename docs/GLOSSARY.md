@@ -13,6 +13,7 @@
 | **Domain pack** | Held-out prompt set (howto, code, bitcoin, …) for capacity/transfer |
 | **Curated KB** | Public official corpora under `nano_lm/data/curated/` |
 | **Dual gate** | Quality (teacher_lp / domain metric) **and** wall/GFLOPs |
+| **H-QT** | Int8 weight-only quantized student serve (Linear; skip tied lm_head) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”
