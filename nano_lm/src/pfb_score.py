@@ -37,6 +37,8 @@ def collect_pfb_banks(
     seed: int,
     k: int = K_BEAMS,
     temperature: float = PFB_TEMP,
+    parent_family: str = "H-EARLY",
+    weight_bytes: int | None = None,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     """Decode parent n=1 + K beams; score story per beam (no code yet)."""
     g = _gene_base(gene)
@@ -62,23 +64,24 @@ def collect_pfb_banks(
         p_story = code_teacher_mean_logprob(
             story_teacher, text, parent.text
         )
-        parent_rows.append(
-            {
-                "family": "H-EARLY",
-                "prompt": text,
-                "continuation": parent.text,
-                "story_teacher_id": STORY_TEACHER_ID,
-                "story_teacher_lp": float(p_story),
-                "wall_ms": float(parent.wall_ms),
-                "n_new": len(parent.token_ids),
-                "seed": int(seed),
-                "unique": 1.0,
-                "k": 1.0,
-                "pick": 0.0,
-                "n_elig": 1.0,
-                "switched": 0.0,
-            }
-        )
+        row: dict[str, Any] = {
+            "family": parent_family,
+            "prompt": text,
+            "continuation": parent.text,
+            "story_teacher_id": STORY_TEACHER_ID,
+            "story_teacher_lp": float(p_story),
+            "wall_ms": float(parent.wall_ms),
+            "n_new": len(parent.token_ids),
+            "seed": int(seed),
+            "unique": 1.0,
+            "k": 1.0,
+            "pick": 0.0,
+            "n_elig": 1.0,
+            "switched": 0.0,
+        }
+        if weight_bytes is not None:
+            row["weight_bytes"] = int(weight_bytes)
+        parent_rows.append(row)
         beams = decode_early_beams(
             student,
             tok,
@@ -121,6 +124,9 @@ def commit_pfb_rows(
     code_teacher: LoadedModel,
     banks: list[dict[str, Any]],
     parent_code_by_key: dict[tuple[str, int], float] | None = None,
+    *,
+    family: str = "H-ABS-PFB",
+    weight_bytes: int | None = None,
 ) -> list[dict[str, Any]]:
     """Score code on beams; story-floor commit or parent fallback."""
     meta = code_teacher_meta()
@@ -162,28 +168,29 @@ def commit_pfb_rows(
             wall = float(bank["wall_ms"])
             switched = 1.0
             pick_f = float(pick)
-        rows.append(
-            {
-                "family": "H-ABS-PFB",
-                "prompt": bank["prompt"],
-                "continuation": cont,
-                "story_teacher_id": STORY_TEACHER_ID,
-                "story_teacher_lp": story_lp,
-                "wall_ms": wall,
-                "n_new": n_new,
-                "seed": int(bank["seed"]),
-                "unique": float(bank["unique"]),
-                "k": float(bank["k"]),
-                "pick": pick_f,
-                "n_elig": float(n_elig),
-                "switched": switched,
-                "floor": float(floor),
-                "code_teacher_id": meta["hf_id"],
-                "code_teacher_lp": code_lp,
-                "code_teacher_params": meta["params"],
-                "code_teacher_license": meta["license"],
-            }
-        )
+        row: dict[str, Any] = {
+            "family": family,
+            "prompt": bank["prompt"],
+            "continuation": cont,
+            "story_teacher_id": STORY_TEACHER_ID,
+            "story_teacher_lp": story_lp,
+            "wall_ms": wall,
+            "n_new": n_new,
+            "seed": int(bank["seed"]),
+            "unique": float(bank["unique"]),
+            "k": float(bank["k"]),
+            "pick": pick_f,
+            "n_elig": float(n_elig),
+            "switched": switched,
+            "floor": float(floor),
+            "code_teacher_id": meta["hf_id"],
+            "code_teacher_lp": code_lp,
+            "code_teacher_params": meta["params"],
+            "code_teacher_license": meta["license"],
+        }
+        if weight_bytes is not None:
+            row["weight_bytes"] = int(weight_bytes)
+        rows.append(row)
     return rows
 
 
@@ -216,6 +223,8 @@ def arm_means(rows: list[dict[str, Any]]) -> dict[str, float]:
         means["mean_elig"] = sum(float(r.get("n_elig", 0)) for r in rows) / n
         means["mean_switch"] = sum(float(r.get("switched", 0)) for r in rows) / n
         means["k"] = float(rows[0]["k"])
+        if "weight_bytes" in rows[0]:
+            means["weight_bytes"] = float(rows[0]["weight_bytes"])
     else:
         means["mean_unique"] = float("nan")
         means["mean_elig"] = float("nan")
