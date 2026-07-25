@@ -15,6 +15,7 @@
 | 1⁗′. Train util | Async cache∩PIN overlap | **H-ASYNC** (KILL) | [hasync-vs-hpin.md](hasync-vs-hpin.md) |
 | 1⁗″. Train util | torch.compile under PIN | **H-PINC** (KILL) | [hpinc-vs-hpin.md](hpinc-vs-hpin.md) |
 | 1⁗‴. Train util | Prefetch H2D under PIN | **H-PRE** (util) | [formal-hpre-vs-hpin.md](formal-hpre-vs-hpin.md) |
+| 1⁗⁗. Train util | fp16-wire H2D under PRE | **H-HALF** (util) | [formal-hhalf-vs-hpre.md](formal-hhalf-vs-hpre.md) |
 | 2a. Decode (speed) | Early-exit gene | **H-EARLY** | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) |
 | 2a′. Decode util | Layer early-exit | **H-LAY** (util) | [formal-hlay-vs-hearly.md](formal-hlay-vs-hearly.md) |
 | 2a″. Decode util | Short draft stop | **H-SHORT** (util) | [formal-hshort-vs-hearly.md](formal-hshort-vs-hearly.md) |
@@ -109,6 +110,8 @@ npm run nano:pinc && npm run nano:pinc:report
 npm run nano:formal:hpin && npm run nano:formal:hpin:report
 npm run nano:pre && npm run nano:pre:report
 npm run nano:formal:hpre && npm run nano:formal:hpre:report
+npm run nano:half && npm run nano:half:report
+npm run nano:formal:hhalf && npm run nano:formal:hhalf:report
 npm run nano:async && npm run nano:async:report
 npm run nano:formal:hflash && npm run nano:formal:hflash:report
 npm run nano:formal:hkvsel && npm run nano:formal:hkvsel:report
@@ -136,7 +139,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave Q FOCUS** — Q4 done; **next: continue Wave Q or park**.  
+**Wave Q FOCUS** — Q5 done; **next: continue Wave Q or park**.  
+**H-HALF** smoke+formal **PROMOTE** ([formal-hhalf-vs-hpre.md](formal-hhalf-vs-hpre.md) — ms/step↓; lp=PRE).  
 **H-PRE** smoke+formal **PROMOTE** ([formal-hpre-vs-hpin.md](formal-hpre-vs-hpin.md) — ms/step↓; lp=PIN).  
 **H-GALLF** smoke **KILL** ([hgallf-vs-hgraphf.md](hgallf-vs-hgraphf.md) — wall↑ vs GRAPHF; skip formal).  
 **H-GALL** smoke+formal **PROMOTE** ([formal-hgall-vs-hgraph.md](formal-hgall-vs-hgraph.md) — wall↓; lp=GRAPH).  

@@ -28,6 +28,7 @@ def train_topk_prefetch(
     alpha: float,
     out_path: Path,
     hypothesis: str = "H-PRE",
+    half_h2d: bool = False,
 ) -> dict[str, Any]:
     """
     GIVEN pinned top-k cache records on CUDA
@@ -44,11 +45,16 @@ def train_topk_prefetch(
     student.train()
     opt = torch.optim.AdamW(student.parameters(), lr=lr)
     recs = pin_records(records)
+    to_dev = _to_device_rec
+    if half_h2d:
+        from half_ops import to_device_rec_half
+
+        to_dev = to_device_rec_half
     copy_stream = torch.cuda.Stream()
     losses: list[float] = []
     t0 = time.perf_counter()
     with torch.cuda.stream(copy_stream):
-        cur = _to_device_rec(
+        cur = to_dev(
             recs[0], device=device, vocab_size=vocab_size, non_blocking=True
         )
     torch.cuda.current_stream().wait_stream(copy_stream)
@@ -57,7 +63,7 @@ def train_topk_prefetch(
         nxt = None
         if i + 1 < n:
             with torch.cuda.stream(copy_stream):
-                nxt = _to_device_rec(
+                nxt = to_dev(
                     recs[i + 1],
                     device=device,
                     vocab_size=vocab_size,
@@ -97,4 +103,5 @@ def train_topk_prefetch(
         "out_path": str(out_path),
         "pinned": True,
         "prefetch": True,
+        "half_h2d": bool(half_h2d),
     }

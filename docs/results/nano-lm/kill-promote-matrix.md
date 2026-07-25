@@ -10,11 +10,12 @@ H-DEC / H-DECK / H-DECKL / H-POOL / H-EARLY: decode tips (see formal docs).
 H-CUR / H-CURL / H-CURL2 / H-STAG: curriculum train (official = H-STAG lo=6, stages=4).
 H-FLOP: report tokens/s + est. GFLOPs with wall (instrumentation).
 Decode utils: LAY/LAYB/FLAYB/GRAPH/GRAPHF/GALL/GALLF/SHORT/FLASH/KVSEL/CHUNK/CHB/BAT/CBAT/CHBAT/FUSEB/POOLB/CPOOLB/FCPOOLB (tips unchanged).
-Train utils: PRUN/TOP/DEPTH/PIN/PRE (tip STAG/TOP/PIN unchanged).
+Train utils: PRUN/TOP/DEPTH/PIN/PRE/HALF (tip STAG/TOP/PIN/PRE unchanged).
 H-Q4 gate: lp ≥ DEPTH−ε and wall < DEPTH (formal KILL — quality cliff).
 H-ASYNC gate: lp ≥ PIN−ε and e2e_wall < PIN (smoke KILL — e2e↑).
 H-PINC gate: lp ≥ PIN−ε and ms/step < PIN (smoke KILL — compile tax).
 H-PRE gate: lp ≥ PIN−ε and ms/step < PIN (formal PROMOTE).
+H-HALF gate: lp ≥ PRE−ε and ms/step < PRE (formal PROMOTE).
 H-CPOOLB gate: lp ≥ POOLB−ε and tok/s > POOLB (formal PROMOTE).
 H-CHBAT gate: lp ≥ CBAT−ε and tok/s > CBAT (formal PROMOTE).
 H-FUSEB gate: lp ≥ CHBAT−ε and (tok/s > CHBAT or wall < CHBAT) (formal PROMOTE).
