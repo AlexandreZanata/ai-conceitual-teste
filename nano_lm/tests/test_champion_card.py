@@ -97,3 +97,10 @@ def test_given_card_when_read_then_hckd_kill() -> None:
     assert "H-CKD" in text or "CKD" in text
     assert "KILL" in text
     assert "hckd-code-kd" in text
+
+
+def test_given_card_when_read_then_hqctx_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-QCTX" in text or "QCTX" in text
+    assert "KILL" in text
+    assert "hqctx-born-attn" in text

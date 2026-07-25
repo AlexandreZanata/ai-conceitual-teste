@@ -52,8 +52,8 @@ Fit≠eval genes; seeds [0,1,2]; `cpu_threads=14`. TPACK/AMORT remain story-trai
 
 ## Wave X (F4)
 
-**ACTIVE** after Wave W close-out. Lab queue: `.local/pesquisa.md` (H-TCHR/H-QT **PROMOTE** → H-RAG/H-CTX/H-CKD **KILL** → H-QCTX).  
-[H-TCHR](formal-htchr-code-teacher.md) wires `bigcode/tiny_starcoder_py` as frozen **code teacher**. [H-QT](formal-hqt-quantize.md) int8 weight-only serve **PROMOTE**. [H-RAG](archive/hrag-retrieve.md) / [H-CTX](archive/hctx-long-window.md) / [H-CKD](archive/hckd-code-kd.md) **KILL**. Default mechanism must be **new** (not another pack letter). Corpus E1–E5 landed — see `CURATED-SOURCES.md` and [e5-eval-suites.md](e5-eval-suites.md).
+**ACTIVE** after Wave W close-out. Lab queue: `.local/pesquisa.md` (H-TCHR/H-QT **PROMOTE** → H-RAG/H-CTX/H-CKD/H-QCTX **KILL** → H-QCOMP).  
+[H-TCHR](formal-htchr-code-teacher.md) wires `bigcode/tiny_starcoder_py` as frozen **code teacher**. [H-QT](formal-hqt-quantize.md) int8 weight-only serve **PROMOTE**. [H-RAG](archive/hrag-retrieve.md) / [H-CTX](archive/hctx-long-window.md) / [H-CKD](archive/hckd-code-kd.md) / [H-QCTX](archive/hqctx-born-attn.md) **KILL**. Default mechanism must be **new** (not another pack letter). Corpus E1–E5 landed — see `CURATED-SOURCES.md` and [e5-eval-suites.md](e5-eval-suites.md).
 
 ## Commands (survivors)
 
