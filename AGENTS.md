@@ -109,11 +109,12 @@ npm run verify
 67. Wave R / H-PRE3 validated as R0 — done (same formal PROMOTE; Wave R opened)
 68. Wave R / H-SERVE full stack vs EARLY — done (smoke+formal **PROMOTE** — recipe=speed/GALL; wall↓ tok/s↑)
 69. Wave R / H-ETRAIN PRE3 e2e vs live STAG — done (smoke PROMOTE / formal **KILL** — e2e wall↑; cache tax)
+70. Wave R / H-ROUTE length-budget GALL/GRAPHF — done (smoke+formal **PROMOTE** — not dominated; tok/s↑)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** Wave R **H-ROUTE** — see `.local/pesquisa.md`
+**Next:** Wave R **H-PARETO** — see `.local/pesquisa.md`
 
 ---
 

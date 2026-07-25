@@ -19,7 +19,7 @@ Parents: H-CURL2←H-CURL←H-CUR; H-DECKL←H-DECK←H-DEC.
 |------|------------------------|
 | Train I/O | TOP → PIN → PRE → HALF → ADAMF → PRE2 → **PRE3** |
 | Thin solo | PRUN / DEPTH (never under batch/ADAMF) |
-| Systems | FLASH → CHUNK → **CHB**; KVSEL; GRAPH → GRAPHF; **GALL**; **SERVE** (speed=GALL) |
+| Systems | FLASH → CHUNK → **CHB**; KVSEL; GRAPH → GRAPHF; **GALL**; **SERVE** (speed=GALL); **ROUTE** |
 | Batch speed | BAT → CBAT → CHBAT → FUSEB → **LAYB** (+ GRAPH/GALL) |
 | Batch quality | POOLB → CPOOLB → FCPOOLB → **FLAYB** (+ GRAPHF) |
 | Protocol | MIX = PRUN⊕LAY; FUSE = FLASH⊕KVSEL (**not** tips) |
@@ -45,6 +45,7 @@ npm run nano:pre2 && npm run nano:formal:hpre2
 npm run nano:pre3 && npm run nano:formal:hpre3
 npm run nano:etrain && npm run nano:formal:hetrain
 npm run nano:serve && npm run nano:formal:hserve
+npm run nano:route && npm run nano:formal:hroute
 npm run nano:chb && npm run nano:layb && npm run nano:gall
 npm run nano:flayb && npm run nano:graphf
 npm run nano:mix && npm run nano:fuse
@@ -53,7 +54,8 @@ npm run nano:mix && npm run nano:fuse
 ## Park status
 
 **PARKED** (tips).  
-**Wave R FOCUS** — **R2 H-ETRAIN** formal **KILL**; next **H-ROUTE**.  
+**Wave R FOCUS** — **R3 H-ROUTE** smoke+formal **PROMOTE**; next **H-PARETO**.  
+**H-ROUTE** smoke+formal **PROMOTE** ([formal-hroute-vs-arms.md](formal-hroute-vs-arms.md) — not dominated by GALL/GRAPHF; tok/s↑).  
 **H-ETRAIN** smoke PROMOTE / formal **KILL** ([formal-hetrain-vs-hstag.md](formal-hetrain-vs-hstag.md) — e2e wall↑; cache tax).  
 **H-SERVE** smoke+formal **PROMOTE** ([formal-hserve-vs-hearly.md](formal-hserve-vs-hearly.md) — recipe=`speed`/GALL; wall↓ tok/s↑; lp≈EARLY).  
 **H-PRE3** smoke+formal **PROMOTE** ([formal-hpre3-vs-hpre2.md](formal-hpre3-vs-hpre2.md) — ms/step↓; lp=PRE2).  
