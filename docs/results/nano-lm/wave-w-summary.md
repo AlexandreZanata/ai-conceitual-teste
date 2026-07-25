@@ -52,7 +52,7 @@ Fit≠eval genes; seeds [0,1,2]; `cpu_threads=14`. TPACK/AMORT remain story-trai
 
 ## Wave X (F4)
 
-**PARKED.** Candidates (H-TCHR / H-TOK / H-RAG / H-QT / H-DIST) open only when data demands a **new mechanism**. Default: park; optional next work is corpus growth (Phase E) via registry PRs only.
+**PARKED.** Candidates (H-TCHR / H-TOK / H-RAG / H-QT / H-DIST) open only when data demands a **new mechanism**. Default: park. Phase E corpus growth (E1–E3) landed in `CURATED-SOURCES.md` / `curated_sources.py`.
 
 ## Commands (survivors)
 

@@ -4,6 +4,9 @@ from __future__ import annotations
 
 from typing import Any
 
+# Phase E session cap (pesquisa): ≤2MB per domain per expansion session.
+SESSION_DOMAIN_CAP_BYTES = 2_000_000
+
 # Official / widely cited public URLs only (raw text, MIT/BSD/CC where noted).
 SOURCES: list[dict[str, Any]] = [
     {
@@ -27,6 +30,16 @@ SOURCES: list[dict[str, Any]] = [
         "path": "bitcoin/developer-notes.md",
     },
     {
+        "id": "bitcoin-doc-bips",
+        "domain": "bitcoin",
+        "license": "MIT",
+        "url": (
+            "https://raw.githubusercontent.com/bitcoin/bitcoin/"
+            "master/doc/bips.md"
+        ),
+        "path": "bitcoin/bips.md",
+    },
+    {
         "id": "bip-0001",
         "domain": "bitcoin",
         "license": "BSD-2-Clause",
@@ -47,6 +60,36 @@ SOURCES: list[dict[str, Any]] = [
         "path": "bitcoin/bip-0032.mediawiki",
     },
     {
+        "id": "bip-0039",
+        "domain": "bitcoin",
+        "license": "BSD-2-Clause",
+        "url": (
+            "https://raw.githubusercontent.com/bitcoin/bips/"
+            "master/bip-0039.mediawiki"
+        ),
+        "path": "bitcoin/bip-0039.mediawiki",
+    },
+    {
+        "id": "bip-0141",
+        "domain": "bitcoin",
+        "license": "BSD-2-Clause",
+        "url": (
+            "https://raw.githubusercontent.com/bitcoin/bips/"
+            "master/bip-0141.mediawiki"
+        ),
+        "path": "bitcoin/bip-0141.mediawiki",
+    },
+    {
+        "id": "bip-0340",
+        "domain": "bitcoin",
+        "license": "BSD-2-Clause",
+        "url": (
+            "https://raw.githubusercontent.com/bitcoin/bips/"
+            "master/bip-0340.mediawiki"
+        ),
+        "path": "bitcoin/bip-0340.mediawiki",
+    },
+    {
         "id": "python-tutorial-intro",
         "domain": "programming",
         "license": "PSF",
@@ -61,6 +104,20 @@ SOURCES: list[dict[str, Any]] = [
         "path": "programming/python-tutorial-controlflow.html",
     },
     {
+        "id": "python-tutorial-datastructures",
+        "domain": "programming",
+        "license": "PSF",
+        "url": "https://docs.python.org/3/tutorial/datastructures.html",
+        "path": "programming/python-tutorial-datastructures.html",
+    },
+    {
+        "id": "python-tutorial-classes",
+        "domain": "programming",
+        "license": "PSF",
+        "url": "https://docs.python.org/3/tutorial/classes.html",
+        "path": "programming/python-tutorial-classes.html",
+    },
+    {
         "id": "rust-book-ch03",
         "domain": "programming",
         "license": "CC-BY-SA / MIT Apache-2.0",
@@ -69,6 +126,26 @@ SOURCES: list[dict[str, Any]] = [
             "main/src/ch03-01-variables-and-mutability.md"
         ),
         "path": "programming/rust-ch03-01-variables.md",
+    },
+    {
+        "id": "rust-book-ch03-02",
+        "domain": "programming",
+        "license": "CC-BY-SA / MIT Apache-2.0",
+        "url": (
+            "https://raw.githubusercontent.com/rust-lang/book/"
+            "main/src/ch03-02-data-types.md"
+        ),
+        "path": "programming/rust-ch03-02-data-types.md",
+    },
+    {
+        "id": "rust-book-ch04-01",
+        "domain": "programming",
+        "license": "CC-BY-SA / MIT Apache-2.0",
+        "url": (
+            "https://raw.githubusercontent.com/rust-lang/book/"
+            "main/src/ch04-01-what-is-ownership.md"
+        ),
+        "path": "programming/rust-ch04-01-ownership.md",
     },
     {
         "id": "rfc8446",
@@ -86,7 +163,28 @@ SOURCES: list[dict[str, Any]] = [
         "path": "frontier/rfc791.txt",
         "max_bytes": 120_000,
     },
+    {
+        "id": "rfc8949",
+        "domain": "frontier",
+        "license": "IETF Trust",
+        "url": "https://www.rfc-editor.org/rfc/rfc8949.txt",
+        "path": "frontier/rfc8949.txt",
+        "max_bytes": 150_000,
+    },
 ]
+
+# Phase E1–E3 expansion ids (2026-07-25 session).
+PHASE_E_IDS: tuple[str, ...] = (
+    "bitcoin-doc-bips",
+    "bip-0039",
+    "bip-0141",
+    "bip-0340",
+    "python-tutorial-datastructures",
+    "python-tutorial-classes",
+    "rust-book-ch03-02",
+    "rust-book-ch04-01",
+    "rfc8949",
+)
 
 
 def source_ids() -> list[str]:

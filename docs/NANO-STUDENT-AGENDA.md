@@ -34,7 +34,7 @@ Lab: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-c
 | W3 H-MIXD | STAG + curated train mix | formal **[KILL](results/nano-lm/hmixd-mix.md)** (tooling purged) |
 | W4 H-EFF | PACK efficiency re-measure | smoke+formal **[PROMOTE](results/nano-lm/formal-heff-efficiency.md)** |
 
-Wave X **PARKED** (new mechanism only). Optional next: corpus Phase E.
+Wave X **PARKED** (new mechanism only). Phase E corpus growth **DONE** (E1–E3; see `CURATED-SOURCES.md`).
 
 ## Archived
 
