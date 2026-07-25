@@ -19,6 +19,6 @@ Code↑ Δ≈+7.90 with unique@K=4, but mean n_elig≈0.75 (7/12 rows had **zero
 
 ## Lesson
 
-A per-beam story floor is not dual-gate safe if the beam bank rarely clears the floor: fallback to “best story among bad beams” ≠ parent HOLD. Next story-safe BoN (if any) must **fallback to the parent continuation** when n_elig=0 — or raise diversity/temp until elig≥1 — not max-story among ineligible. Do not revive unconstrained CBON/INTERF.
+A per-beam story floor is not dual-gate safe if the beam bank rarely clears the floor: fallback to “best story among bad beams” ≠ parent HOLD. Next story-safe BoN: **H-ABS-PFB** (parent fallback) — see [`formal-hpfb-pfb.md`](../formal-hpfb-pfb.md) (**PROMOTE**). Do not revive unconstrained CBON/INTERF or CSAFE max-story fallback.
 
 Commands (purged): were `npm run nano:csafe` / `nano:csafe:report`.

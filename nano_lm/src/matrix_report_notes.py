@@ -43,6 +43,7 @@ NOTES = [
     "- H-ABS-MIRROR KILL — anti-teacher margin formal story↓ (`archive/hmirror-mirror.md`).",
     "- H-ABS-CBON KILL — code-teacher BoN commit story↓ (`archive/hcbon-cbon.md`).",
     "- H-ABS-CSAFE KILL — story-floor code BoN low-elig story↓ (`archive/hcsafe-csafe.md`).",
+    "- H-ABS-PFB PROMOTE — parent-fallback story-floor BoN (`formal-hpfb-pfb.md`).",
     "- Matrix note: PROG/BTC/MIXD/EFF in wave-w-summary § Kill/promote.",
     "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",

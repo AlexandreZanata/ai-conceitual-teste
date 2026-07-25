@@ -58,5 +58,7 @@
 | [archive/hmirror-mirror.md](archive/hmirror-mirror.md) | **H-ABS-MIRROR** anti-teacher margin (Wave X formal **KILL**) |
 | [archive/hcbon-cbon.md](archive/hcbon-cbon.md) | **H-ABS-CBON** code-teacher BoN commit (Wave X smoke **KILL**) |
 | [archive/hcsafe-csafe.md](archive/hcsafe-csafe.md) | **H-ABS-CSAFE** story-constrained code BoN (Wave X smoke **KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · E.1 through MIRROR + CBON/CSAFE **KILL** → HOLD/new H-ID (`.local/pesquisa.md`) |
+| [hpfb-pfb.md](hpfb-pfb.md) | **H-ABS-PFB** parent-fallback BoN smoke (**PROMOTE**) |
+| [formal-hpfb-pfb.md](formal-hpfb-pfb.md) | **H-ABS-PFB** parent-fallback BoN formal (**PROMOTE**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · H-TCHR/H-QT/H-GENC/H-ABS-PFB **PROMOTE** · E.1+CBON/CSAFE **KILL** → HOLD/new H-ID (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |
