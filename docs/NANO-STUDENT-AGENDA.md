@@ -8,13 +8,13 @@
 |------|-----|-------|
 | Train tip | **H-STAG** | Curriculum `lo=6`, `stages=4` |
 | Decode tips | **H-EARLY** / **H-POOL** | Speed / quality@wall |
-| Serving systems | FLASH→CHUNK→**CHB**; GRAPH→GRAPHF; **GALL** | wall↓ |
+| Serving systems | FLASH→CHUNK→**CHB**; GRAPH→GRAPHF; **GALL** / **SERVE** | wall↓ |
 | Throughput | BAT…→**LAYB**; POOLB…→**FLAYB** | tok/s↑ |
 | Train I/O | TOP→…→**PRE3** | ms/step↓ |
 | Thin solo | DEPTH / PRUN | not under batch |
 | Protocol | MIX / FUSE | not tips |
 
-**Next:** Wave R in `.local/pesquisa.md` — **SERVE → ETRAIN → ROUTE** (PRE3 done).  
+**Next:** Wave R in `.local/pesquisa.md` — **ETRAIN → ROUTE** (PRE3 + SERVE done).  
 Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived KILLs

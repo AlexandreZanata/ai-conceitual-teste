@@ -107,11 +107,12 @@ npm run verify
 65. Wave Q / H-PRE2 2-deep prefetch under ADAMF — done (smoke+formal **PROMOTE** — ms/step↓; lp=ADAMF)
 66. Wave Q / H-PRE3 3-deep prefetch under PRE2 — done (smoke+formal **PROMOTE** — ms/step↓; lp=PRE2)
 67. Wave R / H-PRE3 validated as R0 — done (same formal PROMOTE; Wave R opened)
+68. Wave R / H-SERVE full stack vs EARLY — done (smoke+formal **PROMOTE** — recipe=speed/GALL; wall↓ tok/s↑)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** Wave R **H-SERVE** — see `.local/pesquisa.md`
+**Next:** Wave R **H-ETRAIN** — see `.local/pesquisa.md`
 
 ---
 

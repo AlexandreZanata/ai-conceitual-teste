@@ -11,7 +11,7 @@ Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).
 | [kill-promote-matrix.md](kill-promote-matrix.md) | Slim matrix |
 | [hmix-protocol.md](hmix-protocol.md) / [hfuse-protocol.md](hfuse-protocol.md) | Protocols |
 | formal-hstag… / hearly… / hpool… | Tips |
-| formal-hpre2… / hadamf… / hchb… / hlayb… / hgall… | Hot utils |
+| formal-hpre2… / hpre3… / hadamf… / hchb… / hlayb… / hgall… / **hserve…** | Hot utils |
 | [hflop-instrumentation.md](hflop-instrumentation.md) | Metrics |
 
 ## Archive

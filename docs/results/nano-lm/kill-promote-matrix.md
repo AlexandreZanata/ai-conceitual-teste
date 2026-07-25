@@ -7,9 +7,10 @@ Primary metric: teacher mean log-prob of student completions.
 Full historical rows: `docs/results/nano-lm/archive/`.
 H-SPEC gate: tokens/s > B3 and teacher_lp ≥ B3 − 0.05.
 Tips: H-STAG train / H-EARLY speed / H-POOL quality@wall.
-Serving utils: FLASH/CHUNK/CHB + LAYB/FLAYB + GRAPH/GRAPHF/GALL.
+Serving utils: FLASH/CHUNK/CHB + LAYB/FLAYB + GRAPH/GRAPHF/GALL + SERVE.
 Batch utils: BAT→CBAT→CHBAT→FUSEB; POOLB→CPOOLB→FCPOOLB.
 Train I/O: TOP→PIN→PRE→HALF→ADAMF→PRE2→PRE3.
+H-SERVE gate: |Δlp|≤ε vs EARLY and (wall↓ or tok/s↑) (formal PROMOTE; recipe=speed).
 H-FLOP: wall + tok/s + est. GFLOPs.
 H-MIX / H-FUSE: PROTOCOL only (not tips).
 
@@ -27,6 +28,6 @@ H-MIX / H-FUSE: PROTOCOL only (not tips).
 
 ## Notes
 - Focus winners only. KILL code purged; history: `docs/results/nano-lm/archive/`.
-- Wave R: R0 PRE3 PROMOTE; next SERVE/ETRAIN — `.local/pesquisa.md`.
+- Wave R: R1 SERVE PROMOTE; next ETRAIN — `.local/pesquisa.md`.
 - Smoke budgets are tentative; formal = 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
