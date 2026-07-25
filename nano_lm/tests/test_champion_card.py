@@ -256,3 +256,11 @@ def test_given_card_when_read_then_htele_kill() -> None:
     assert "KILL" in text
     assert "htele-teleport" in text
     assert "H-Q-WIGNER" in text or "WIGNER" in text
+
+
+def test_given_card_when_read_then_hwigner_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-Q-WIGNER" in text or "WIGNER" in text
+    assert "KILL" in text
+    assert "hwigner-wigner" in text
+    assert "H-ABS-CHRONO" in text or "CHRONO" in text

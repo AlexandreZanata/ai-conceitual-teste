@@ -53,5 +53,6 @@
 | [archive/hentpos-entpos.md](archive/hentpos-entpos.md) | **H-Q-ENTPOS** pos⊗tok bilinear bias (Wave X smoke **KILL**) |
 | [archive/hmeasure-measure.md](archive/hmeasure-measure.md) | **H-Q-MEASURE** mid-decode commit (Wave X smoke **KILL**) |
 | [archive/htele-teleport.md](archive/htele-teleport.md) | **H-Q-TELE** mid-layer residual teleport (Wave X smoke **KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS/MEASURE/TELE **KILL** → H-Q-WIGNER (`.local/pesquisa.md`) |
+| [archive/hwigner-wigner.md](archive/hwigner-wigner.md) | **H-Q-WIGNER** signed top-k quasi-prob (Wave X smoke **KILL**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS/MEASURE/TELE/WIGNER **KILL** → H-ABS-CHRONO (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |

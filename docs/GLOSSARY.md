@@ -37,7 +37,8 @@
 | **H-Q-ENTPOS** | Low-rank bilinear pos⊗tok attn bias (smoke **KILL**; identity vs EARLY; see archive) |
 | **H-Q-MEASURE** | Mid-decode RAG slot measure/commit (smoke **KILL**; code↓ vs EARLY−ε; see archive) |
 | **H-Q-TELE** | Mid-layer residual RAG teleport (smoke **KILL**; identity vs EARLY; see archive) |
-| **H-Q-WIGNER** | Signed top-k logit quasi-prob (Wave X next; `.local/pesquisa.md`) |
+| **H-Q-WIGNER** | Signed top-k logit quasi-prob (smoke **KILL**; identity vs EARLY; see archive) |
+| **H-ABS-CHRONO** | Acausal KD soft-label shuffle (Wave X next; `.local/pesquisa.md`) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”
