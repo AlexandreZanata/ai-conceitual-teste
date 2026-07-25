@@ -45,6 +45,7 @@
 | **H-ABS-PFB** | Parent-fallback story-floor code BoN (smoke+formal **PROMOTE**) |
 | **H-ABS-QPFB** | PFB on QT-int8 student (smoke+formal **PROMOTE**) |
 | **H-ABS-PFB2** | PFB with K=2 (smoke+formal **PROMOTE**; wall↓ vs k=4) |
+| **H-ABS-QPFB2** | PFB K=2 on QT-int8 (smoke+formal **PROMOTE**; wall↓ vs QPFB k=4) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”
