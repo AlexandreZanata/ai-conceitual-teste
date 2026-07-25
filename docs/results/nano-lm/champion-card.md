@@ -43,6 +43,7 @@ npm run nano:early && npm run nano:formal:hearly
 npm run nano:pool && npm run nano:formal:hpool
 npm run nano:pre2 && npm run nano:formal:hpre2
 npm run nano:pre3 && npm run nano:formal:hpre3
+npm run nano:etrain && npm run nano:formal:hetrain
 npm run nano:serve && npm run nano:formal:hserve
 npm run nano:chb && npm run nano:layb && npm run nano:gall
 npm run nano:flayb && npm run nano:graphf
@@ -52,7 +53,8 @@ npm run nano:mix && npm run nano:fuse
 ## Park status
 
 **PARKED** (tips).  
-**Wave R FOCUS** — **R1 H-SERVE** formal **PROMOTE**; next **H-ETRAIN** → **H-ROUTE**.  
+**Wave R FOCUS** — **R2 H-ETRAIN** formal **KILL**; next **H-ROUTE**.  
+**H-ETRAIN** smoke PROMOTE / formal **KILL** ([formal-hetrain-vs-hstag.md](formal-hetrain-vs-hstag.md) — e2e wall↑; cache tax).  
 **H-SERVE** smoke+formal **PROMOTE** ([formal-hserve-vs-hearly.md](formal-hserve-vs-hearly.md) — recipe=`speed`/GALL; wall↓ tok/s↑; lp≈EARLY).  
 **H-PRE3** smoke+formal **PROMOTE** ([formal-hpre3-vs-hpre2.md](formal-hpre3-vs-hpre2.md) — ms/step↓; lp=PRE2).  
 KILL families purged from `nano_lm/` (ASYNC/PINC/GALLF/DEPTHA/B/PRUNB/F/SHORTB/CFUSE/Q4).

@@ -14,12 +14,12 @@
 | Thin solo | DEPTH / PRUN | not under batch |
 | Protocol | MIX / FUSE | not tips |
 
-**Next:** Wave R in `.local/pesquisa.md` — **ETRAIN → ROUTE** (PRE3 + SERVE done).  
+**Next:** Wave R in `.local/pesquisa.md` — **ROUTE** (PRE3 + SERVE done; ETRAIN formal KILL).  
 Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived KILLs
 
-ASYNC, PINC, GALLF, DEPTHA/B, PRUNB/F, SHORTB, CFUSE, Q4, TOPK, compose, A–H deepeners — code purged; markdown in [`archive/`](results/nano-lm/archive/).
+ASYNC, PINC, GALLF, DEPTHA/B, PRUNB/F, SHORTB, CFUSE, Q4, **ETRAIN** (formal e2e), TOPK, compose, A–H deepeners — code kept for ETRAIN report; older KILL code purged; markdown in [`archive/`](results/nano-lm/archive/).
 
 ## Claim rule
 
