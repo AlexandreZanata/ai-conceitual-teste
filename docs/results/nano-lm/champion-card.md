@@ -1,7 +1,7 @@
 # Champion card — tip-stack protocol (parked tips)
 
 > Compose tree closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** all **KILL**). Tips on **separate axes**.  
-> KILL history: [`archive/`](archive/). Lab queue: `.local/pesquisa.md` (**Wave T**).
+> KILL history: [`archive/`](archive/). Lab queue: `.local/pesquisa.md` (**Wave T complete — parked**).
 
 ## Official tips
 
@@ -17,12 +17,12 @@ Parents: H-CURL2←H-CURL←H-CUR; H-DECKL←H-DECK←H-DEC.
 
 | Axis | Chain (tip unchanged) |
 |------|------------------------|
-| Train I/O | TOP → PIN → PRE → HALF → ADAMF → PRE2 → **PRE3** |
+| Train I/O | TOP → … → **PRE3** via **TPACK** (ms/step; not e2e) |
 | Thin solo | PRUN / DEPTH (never under batch/ADAMF) |
 | Systems | FLASH → CHUNK → **CHB**; KVSEL; GRAPH → GRAPHF; **GALL**; **SERVE** (min-wall); **SROUTE**/ROUTE (Pareto); **PACK** (both vs EARLY) |
 | Batch speed | **SKIP** + **LAYB** via **BPACK** (BAT→SKIP→LAYB; CBAT demoted) |
 | Batch quality | **FLAYB** via **QPACK** (POOLB→…→FLAYB; + GRAPHF) |
-| Protocol | MIX / FUSE / PARETO / PACK / BPACK / **QPACK** (**not** tips) |
+| Protocol | MIX / FUSE / PARETO / PACK / BPACK / QPACK / **TPACK** (**not** tips) |
 
 ## Formal tip scoreboard
 
@@ -52,6 +52,7 @@ npm run nano:skip && npm run nano:formal:hskip
 npm run nano:pack && npm run nano:formal:hpack
 npm run nano:bpack && npm run nano:formal:hbpack
 npm run nano:qpack && npm run nano:formal:hqpack
+npm run nano:tpack && npm run nano:formal:htpack
 npm run nano:chb && npm run nano:layb && npm run nano:gall
 npm run nano:flayb && npm run nano:graphf
 npm run nano:mix && npm run nano:fuse
@@ -59,8 +60,8 @@ npm run nano:mix && npm run nano:fuse
 
 ## Park status
 
-**PARKED** (tips).  
-**Wave T FOCUS** — **T1 H-QPACK** smoke+formal **PROMOTE**; next **H-TPACK**.  
+**PARKED** (tips + Wave T pack hygiene).  
+**H-TPACK** smoke+formal **PROMOTE** ([formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) — PRE3 ms/step↓ vs live STAG; lp≥STAG−ε; not e2e).  
 **H-QPACK** smoke+formal **PROMOTE** ([formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) — FLAYB beats POOL; lp≈POOL; wall↓ tok/s↑).  
 **H-BPACK** smoke+formal **PROMOTE** ([formal-hbpack-vs-hearly.md](formal-hbpack-vs-hearly.md) — SKIP+LAYB both beat EARLY; GFLOPs=EARLY).  
 **H-PACK** / **H-SKIP** / **H-SROUTE** prior PROMOTEs stand.  

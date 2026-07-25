@@ -11,11 +11,11 @@
 | Serving systems | **SERVE** (min-wall) / **SROUTE** (Pareto) via **PACK** | wall↓ / quality@tok/s |
 | Throughput | **SKIP**+**LAYB** via **BPACK** | tok/s↑ (CBAT demoted) |
 | Quality | **FLAYB** via **QPACK** | tok/s↑ vs POOL |
-| Train I/O | TOP→…→**PRE3** | ms/step↓ |
+| Train I/O | TOP→…→**PRE3** via **TPACK** | ms/step↓ (not e2e) |
 | Thin solo | DEPTH / PRUN | not under batch |
-| Protocol | MIX / FUSE / PARETO / PACK / BPACK / **QPACK** | not tips |
+| Protocol | MIX / FUSE / PARETO / PACK / BPACK / QPACK / **TPACK** | not tips |
 
-**Next:** Wave T in `.local/pesquisa.md` — **TPACK** (QPACK smoke+formal PROMOTE).  
+**Status:** Wave T complete (BPACK / QPACK / TPACK all formal PROMOTE) — parked.  
 Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived KILLs

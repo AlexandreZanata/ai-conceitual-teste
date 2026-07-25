@@ -18,9 +18,10 @@ H-SKIP gate: wall↓ or tok/s↑ vs BAT and GFLOPs ≤ BAT·(1+δ) (formal PROMO
 H-PACK gate: SERVE |Δlp|≤ε + win; SROUTE lp≥EARLY−ε + win (formal PROMOTE; packs frozen).
 H-BPACK gate: SKIP+LAYB |Δlp|≤ε + win; SKIP GFLOPs≤EARLY·(1+δ) (formal PROMOTE).
 H-QPACK gate: FLAYB lp≥POOL−ε + wall/tok/s win (formal PROMOTE; quality pack).
+H-TPACK gate: PRE3 lp≥STAG−ε + ms/step < STAG (formal PROMOTE; not e2e).
 H-ETRAIN gate: lp ≥ STAG−ε and e2e_wall < STAG (smoke PROMOTE / formal KILL — cache tax).
 H-FLOP: wall + tok/s + est. GFLOPs.
-H-MIX / H-FUSE / H-PARETO / H-PACK / H-BPACK / H-QPACK: PROTOCOL/audit only (not tips).
+H-MIX / H-FUSE / H-PARETO / H-PACK / H-BPACK / H-QPACK / H-TPACK: PROTOCOL/audit only (not tips).
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -36,6 +37,6 @@ H-MIX / H-FUSE / H-PARETO / H-PACK / H-BPACK / H-QPACK: PROTOCOL/audit only (not
 
 ## Notes
 - Focus winners only. KILL code purged; history: `docs/results/nano-lm/archive/`.
-- Wave T: T1 QPACK formal PROMOTE; next TPACK — `.local/pesquisa.md`.
+- Wave T complete (BPACK/QPACK/TPACK formal PROMOTE) — parked; `.local/pesquisa.md`.
 - Smoke budgets are tentative; formal = 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

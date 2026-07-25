@@ -116,11 +116,13 @@ npm run verify
 74. Wave S / H-PACK SERVE+SROUTE vs EARLY — done (smoke+formal **PROMOTE** — both packs beat EARLY)
 75. Wave T / H-BPACK SKIP+LAYB vs EARLY — done (smoke+formal **PROMOTE** — both packs beat EARLY; GFLOPs honest)
 76. Wave T / H-QPACK FLAYB vs POOL — done (smoke+formal **PROMOTE** — wall↓ tok/s↑; lp≈POOL)
+77. Wave T / H-TPACK PRE3 ms/step vs STAG — done (smoke+formal **PROMOTE** — ms/step↓; lp≥STAG−ε; not e2e)
+78. Wave T complete — pack hygiene parked (BPACK / QPACK / TPACK)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** Wave T **H-TPACK** — see `.local/pesquisa.md`
+**Next:** park — new wave only with a fresh mechanism (see `.local/pesquisa.md`)
 
 ---
 
