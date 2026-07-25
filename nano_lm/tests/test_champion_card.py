@@ -153,3 +153,10 @@ def test_given_card_when_read_then_hqinterf_kill() -> None:
     assert "H-Q-INTERF" in text or "INTERF" in text
     assert "KILL" in text
     assert "hqinterf-interference" in text
+
+
+def test_given_card_when_read_then_habsrev_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-ABS-REV" in text or "ABS-REV" in text
+    assert "KILL" in text
+    assert "habsrev-reverse" in text
