@@ -13,6 +13,7 @@ NOTES = [
     "- H-PROG smoke+formal PROMOTE (`formal-hprog-programming.md`).",
     "- H-BTC smoke+formal PROMOTE (`formal-hbtc-bitcoin.md`).",
     "- H-MIXD formal KILL (`hmixd-mix.md`) — story regress; no train-mix claim.",
+    "- H-EFF smoke PROMOTE (`heff-efficiency.md`); formal pending.",
     "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

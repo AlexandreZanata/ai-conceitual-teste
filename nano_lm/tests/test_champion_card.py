@@ -46,3 +46,9 @@ def test_given_card_when_read_then_hmixd_smoke() -> None:
     assert "H-MIXD" in text or "MIXD" in text
     assert "KILL" in text
     assert "hmixd-mix" in text or "formal-hmixd" in text
+
+
+def test_given_card_when_read_then_heff_smoke() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-EFF" in text or "EFF" in text
+    assert "heff-efficiency" in text

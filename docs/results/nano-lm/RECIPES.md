@@ -26,8 +26,9 @@
 ## Policy (budget + deploy)
 
 Under tip wall/GFLOPs ceilings ([BUD](formal-hbud-budget.md)): PACK + QPACK + TPACK **SURVIVE**.  
-Runnable routes ([DEPL](formal-hdepl-policy.md)): speed→PACK; quality→QPACK iff in-dist; train→TPACK; REJECT ood_long / QPACK-OOD.  
+Runnable routes ([DEPL](formal-hdepl-policy.md)): speed→PACK (incl. prog/btc @128); quality→QPACK iff in-dist; train→TPACK; REJECT ood_long / QPACK-OOD.  
 Domain probe ([DOM](formal-hdom-howto.md)): PACK tip gate holds on procedural howto @128.  
 Wave W programming ([H-PROG formal](formal-hprog-programming.md)): PACK tip gate holds on prog @128.  
 Wave W bitcoin ([H-BTC formal](formal-hbtc-bitcoin.md)): PACK tip gate holds on btc @128.  
-Wave W mix ([H-MIXD](hmixd-mix.md)): formal **KILL** (story teacher_lp regress vs STAG−ε; prog PPL ↓ alone insufficient).
+Wave W mix ([H-MIXD](hmixd-mix.md)): formal **KILL** (story teacher_lp regress vs STAG−ε; prog PPL ↓ alone insufficient).  
+Wave W efficiency ([H-EFF smoke](heff-efficiency.md)): PACK SERVE wall↓ and tok/s↑ vs Phase B on prog+btc at quality floor (formal pending).

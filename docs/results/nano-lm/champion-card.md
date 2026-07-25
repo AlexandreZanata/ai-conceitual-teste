@@ -41,6 +41,7 @@ npm run nano:dom && npm run nano:formal:hdom
 npm run nano:prog && npm run nano:formal:hprog
 npm run nano:btc && npm run nano:formal:hbtc
 npm run nano:mixd && npm run nano:formal:hmixd
+npm run nano:eff && npm run nano:formal:heff
 npm run nano:qpack && npm run nano:formal:hqpack
 npm run nano:bud && npm run nano:formal:hbud
 ```
@@ -50,7 +51,8 @@ npm run nano:bud && npm run nano:formal:hbud
 **ACTIVE** — curated programming/bitcoin/frontier KB + PROG/BTC domain gates + efficiency re-measure.  
 **H-PROG** smoke+formal **PROMOTE** ([formal](formal-hprog-programming.md)).  
 **H-BTC** smoke+formal **PROMOTE** ([formal](formal-hbtc-bitcoin.md)).  
-**H-MIXD** formal **KILL** ([hmixd-mix.md](hmixd-mix.md) · [archive](archive/formal-hmixd-mix.md)) — story teacher_lp regress; do not claim train-mix. Next: **H-EFF**.  
+**H-MIXD** formal **KILL** ([hmixd-mix.md](hmixd-mix.md)) — no train-mix claim.  
+**H-EFF** smoke **PROMOTE** ([heff-efficiency.md](heff-efficiency.md)) — PACK wall↓/tok/s↑ on prog+btc at quality floor; formal queued.  
 Wave V **COMPLETE** — DOM smoke+formal **PROMOTE** (PACK on howto); TIPD→STAG′; DEPL **PROMOTE**; XFER2 purged (**KILL** ood_long).  
 KILL history: [`archive/`](archive/). No new letter-packs without a new mechanism.
 
