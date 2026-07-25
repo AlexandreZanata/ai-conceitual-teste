@@ -19,7 +19,7 @@
 
 | Recipe | Doc | Wave U / V |
 |--------|-----|------------|
-| PACK | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | [DOM](formal-hdom-howto.md) **PROMOTE** howto; [PROG](formal-hprog-programming.md) **PROMOTE** prog; [BTC](formal-hbtc-bitcoin.md) **PROMOTE** btc; [XFER2](archive/hxfer2-transfer.md) **KILL** ood_long; [BUD](formal-hbud-budget.md); [DEPL](formal-hdepl-policy.md) |
+| PACK | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | [DOM](formal-hdom-howto.md) **PROMOTE** howto; [PROG](formal-hprog-programming.md) **PROMOTE** prog; [BTC](formal-hbtc-bitcoin.md) **PROMOTE** btc; [EFF](formal-heff-efficiency.md) **PROMOTE** wall↓/tok/s↑; [XFER2](archive/hxfer2-transfer.md) **KILL** ood_long; [BUD](formal-hbud-budget.md); [DEPL](formal-hdepl-policy.md) |
 | QPACK | [formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) | [XFER](hxfer-transfer.md) KILL; BUD; DEPL in-dist only |
 | TPACK / tip | [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) | [TIPD](formal-htipd-vs-hstag.md) **PROMOTE** STAG′; [AMORT](formal-hamort-vs-hstag.md) |
 
@@ -31,4 +31,5 @@ Domain probe ([DOM](formal-hdom-howto.md)): PACK tip gate holds on procedural ho
 Wave W programming ([H-PROG formal](formal-hprog-programming.md)): PACK tip gate holds on prog @128.  
 Wave W bitcoin ([H-BTC formal](formal-hbtc-bitcoin.md)): PACK tip gate holds on btc @128.  
 Wave W mix ([H-MIXD](hmixd-mix.md)): formal **KILL** (story teacher_lp regress vs STAG−ε; prog PPL ↓ alone insufficient).  
-Wave W efficiency ([H-EFF smoke](heff-efficiency.md)): PACK SERVE wall↓ and tok/s↑ vs Phase B on prog+btc at quality floor (formal pending).
+Wave W efficiency ([H-EFF formal](formal-heff-efficiency.md)): PACK SERVE wall↓ and tok/s↑ vs Phase B on prog+btc at quality floor (recipe freeze; no new genes). TPACK/AMORT remain story-train-only.  
+DEPL (D3): speed→PACK still covers prog/btc @128; REJECT unchanged for ood_long / QPACK-OOD.

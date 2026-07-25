@@ -31,7 +31,7 @@ Lab: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-c
 | W1 H-PROG | Programming domain PACK gate | smoke+formal **[PROMOTE](results/nano-lm/formal-hprog-programming.md)** |
 | W2 H-BTC | Bitcoin/docs domain PACK gate | smoke+formal **[PROMOTE](results/nano-lm/formal-hbtc-bitcoin.md)** |
 | W3 H-MIXD | STAG + curated train mix | formal **[KILL](results/nano-lm/hmixd-mix.md)** (story regress) |
-| W4 H-EFF | PACK efficiency re-measure | smoke [PROMOTE](results/nano-lm/heff-efficiency.md); formal next |
+| W4 H-EFF | PACK efficiency re-measure | smoke+formal **[PROMOTE](results/nano-lm/formal-heff-efficiency.md)** |
 
 ## Archived
 

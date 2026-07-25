@@ -11,7 +11,8 @@
 | [formal-hbtc-bitcoin.md](formal-hbtc-bitcoin.md) | **Bitcoin domain** (Wave W **PROMOTE**) |
 | [hmixd-mix.md](hmixd-mix.md) | **Train mix** (Wave W formal **KILL**) |
 | [archive/formal-hmixd-mix.md](archive/formal-hmixd-mix.md) | H-MIXD formal evidence (KILL) |
-| [heff-efficiency.md](heff-efficiency.md) | **Efficiency** smoke (Wave W; formal pending) |
+| [heff-efficiency.md](heff-efficiency.md) | Efficiency smoke (same claim) |
+| [formal-heff-efficiency.md](formal-heff-efficiency.md) | **Efficiency** (Wave W **PROMOTE**) |
 | [formal-hdepl-policy.md](formal-hdepl-policy.md) | Deploy policy |
 | [formal-htipd-vs-hstag.md](formal-htipd-vs-hstag.md) | Train tip STAG′ |
 | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | Serve-fast |
