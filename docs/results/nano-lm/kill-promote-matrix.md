@@ -22,8 +22,8 @@ Train: H-TPACK + H-AMORT; quality serve H-QPACK in-harness only.
 | H-CUR | -17.0133 | +0.0785 | 47 | — | 3 | PROMOTE (beats B2) |
 
 ## Notes
-- Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM formals.
+- Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM/PROG formals.
 - Wave V COMPLETE; Wave W ACTIVE — curated KB (`.local/pesquisa.md`).
-- H-PROG smoke PROMOTE (`hprog-programming.md`); formal pending.
+- H-PROG smoke+formal PROMOTE (`formal-hprog-programming.md`).
 - EvoGen survival archived: `docs/archive/evogen/`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

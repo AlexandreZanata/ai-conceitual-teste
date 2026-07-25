@@ -27,3 +27,9 @@ def test_given_card_when_read_then_wave_v_parked() -> None:
     assert "H-DOM" in text or "DOM" in text
     assert "COMPLETE" in text or "PARKED" in text
     assert "PROMOTE" in text
+
+
+def test_given_card_when_read_then_hprog_promote() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-PROG" in text or "PROG" in text
+    assert "formal-hprog-programming" in text

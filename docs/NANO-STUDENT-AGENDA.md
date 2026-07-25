@@ -12,11 +12,11 @@ Parent control: live **H-STAG**.
 
 | Priority | Recipe | Notes |
 |----------|--------|-------|
-| 1 | **H-PACK** | Primary speed; elongated+OOD@128+howto; **not** ood_long |
+| 1 | **H-PACK** | Primary speed; elongated+OOD@128+howto+prog; **not** ood_long |
 | 2 | **H-TPACK** + **AMORT** | Steps / e2e n≥4 (tip = STAG′) |
 | 3 | **H-QPACK** | Quality serve **in-harness only** (XFER KILL) |
 
-Deploy: [H-DEPL](results/nano-lm/formal-hdepl-policy.md). Domain: [H-DOM](results/nano-lm/formal-hdom-howto.md).  
+Deploy: [H-DEPL](results/nano-lm/formal-hdepl-policy.md). Domain: [H-DOM](results/nano-lm/formal-hdom-howto.md) · [H-PROG](results/nano-lm/formal-hprog-programming.md).  
 One-pager: [`RECIPES.md`](results/nano-lm/RECIPES.md).
 
 ## Wave W (ACTIVE)
@@ -28,8 +28,8 @@ Lab: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-c
 | ID | Focus | Status |
 |----|--------|--------|
 | W0 CURATED | Download + manifest | DONE |
-| W1 H-PROG | Programming domain PACK gate | smoke [PROMOTE](results/nano-lm/hprog-programming.md); formal next |
-| W2 H-BTC | Bitcoin/docs domain PACK gate | queued |
+| W1 H-PROG | Programming domain PACK gate | smoke+formal **[PROMOTE](results/nano-lm/formal-hprog-programming.md)** |
+| W2 H-BTC | Bitcoin/docs domain PACK gate | **NEXT** |
 | W3 H-MIXD | STAG′ + curated train mix | queued |
 | W4 H-EFF | Re-measure PACK/TPACK on new packs | queued |
 

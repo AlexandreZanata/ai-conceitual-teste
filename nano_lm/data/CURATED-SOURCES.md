@@ -19,5 +19,5 @@ Manifest after download: `nano_lm/data/curated/manifest.json`.
 - Public URLs only; record license in registry.
 - Cap large RFCs via `max_bytes`.
 - TinyStories remains the **story teacher**; domain packs use curated text for eval/train mix (Wave W).
-- Programming eval pack: `nano_lm/prompts/prog_prompts.yaml` → `npm run nano:prog` ([smoke report](../../docs/results/nano-lm/hprog-programming.md)).
+- Programming eval pack: `nano_lm/prompts/prog_prompts.yaml` → `npm run nano:prog` / `nano:formal:hprog` ([formal](../../docs/results/nano-lm/formal-hprog-programming.md)).
 - Do not commit multi-MB blobs — regenerate via `nano:curated`.

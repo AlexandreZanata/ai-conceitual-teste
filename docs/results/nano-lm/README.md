@@ -5,7 +5,8 @@
 | [RECIPES.md](RECIPES.md) | **Deploy one-pager** |
 | [champion-card.md](champion-card.md) | Tips + recipe priority |
 | [formal-hdom-howto.md](formal-hdom-howto.md) | **Howto domain** (Wave V) |
-| [hprog-programming.md](hprog-programming.md) | **Programming domain** smoke (Wave W; formal pending) |
+| [formal-hprog-programming.md](formal-hprog-programming.md) | **Programming domain** (Wave W **PROMOTE**) |
+| [hprog-programming.md](hprog-programming.md) | H-PROG smoke (same claim) |
 | [formal-hdepl-policy.md](formal-hdepl-policy.md) | Deploy policy |
 | [formal-htipd-vs-hstag.md](formal-htipd-vs-hstag.md) | Train tip STAG′ |
 | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | Serve-fast |

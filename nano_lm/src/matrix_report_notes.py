@@ -2,13 +2,15 @@
 
 GATES = [
     "Tips: H-STAG′ / H-EARLY / H-POOL (TIPD promoted train tip).",
-    "Primary recipe: H-PACK (harness/elongated/ood@128/howto; not ood_long).",
-    "Deploy: H-DEPL over BUD; QPACK in-harness only; Wave V COMPLETE.",
+    "Primary recipe: H-PACK (harness/elongated/ood@128/howto/prog; not ood_long).",
+    "Deploy: H-DEPL over BUD; QPACK in-harness only; Wave W ACTIVE.",
 ]
 
 NOTES = [
     "## Notes",
-    "- Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM formals.",
-    "- Wave V COMPLETE — park (`.local/pesquisa.md`).",
+    "- Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM/PROG formals.",
+    "- Wave V COMPLETE; Wave W ACTIVE — curated KB (`.local/pesquisa.md`).",
+    "- H-PROG smoke+formal PROMOTE (`formal-hprog-programming.md`).",
+    "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]
