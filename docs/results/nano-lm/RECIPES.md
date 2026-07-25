@@ -2,6 +2,7 @@
 
 > Tip-stack: **H-STAG′** / **H-EARLY** / **H-POOL** (TIPD promoted train tip).  
 > Packs are delivery envelopes — not tip replacements.  
+> Deploy gate: [H-DEPL](formal-hdepl-policy.md).  
 > Lab: `.local/pesquisa.md` · Card: [champion-card.md](champion-card.md)
 
 ## Deploy one-liners
@@ -18,11 +19,11 @@
 
 | Recipe | Doc | Wave U / V |
 |--------|-----|------------|
-| PACK | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | [XFER](hxfer-transfer.md) holds elongated+ood; [XFER2](hxfer2-transfer.md) **KILL** ood_long; [BUD](formal-hbud-budget.md) SURVIVE |
-| QPACK | [formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) | [XFER](hxfer-transfer.md) KILL; BUD SURVIVE |
+| PACK | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | [XFER2](hxfer2-transfer.md) **KILL** ood_long; [BUD](formal-hbud-budget.md); [DEPL](formal-hdepl-policy.md) |
+| QPACK | [formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) | [XFER](hxfer-transfer.md) KILL; BUD; DEPL in-dist only |
 | TPACK / tip | [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) | [TIPD](formal-htipd-vs-hstag.md) **PROMOTE** STAG′; [AMORT](formal-hamort-vs-hstag.md) |
 
-## Policy (budget)
+## Policy (budget + deploy)
 
 Under tip wall/GFLOPs ceilings ([BUD](formal-hbud-budget.md)): PACK + QPACK + TPACK **SURVIVE**.  
-Prefer **PACK** when robustness matters (harness / elongated / OOD@128); QPACK only in-distribution / harness packs.
+Runnable routes ([DEPL](formal-hdepl-policy.md)): speed→PACK; quality→QPACK iff in-dist; train→TPACK; REJECT ood_long / QPACK-OOD.

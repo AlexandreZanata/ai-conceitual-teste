@@ -15,9 +15,9 @@
 
 | # | Recipe | Pack | Evidence |
 |---|--------|------|----------|
-| 1 | **Serve-fast** (primary) | **H-PACK** | [formal](formal-hpack-vs-hearly.md) · transfer elongated+ood · [XFER2](hxfer2-transfer.md) **KILL** ood_long · [BUD](formal-hbud-budget.md) |
-| 2 | **Train-step / e2e** | **H-TPACK** + **AMORT** | [tpack](formal-htpack-vs-hstag.md) · [amort](formal-hamort-vs-hstag.md) · tip via [TIPD](formal-htipd-vs-hstag.md) |
-| 3 | **Serve-quality** (in-harness) | **H-QPACK** | [formal](formal-hqpack-vs-hpool.md) · OOD [XFER](hxfer-transfer.md) **KILL** |
+| 1 | **Serve-fast** (primary) | **H-PACK** | [formal](formal-hpack-vs-hearly.md) · [XFER2](hxfer2-transfer.md) **KILL** ood_long · [BUD](formal-hbud-budget.md) · [DEPL](formal-hdepl-policy.md) |
+| 2 | **Train-step / e2e** | **H-TPACK** + **AMORT** | [tpack](formal-htpack-vs-hstag.md) · [amort](formal-hamort-vs-hstag.md) · [TIPD](formal-htipd-vs-hstag.md) |
+| 3 | **Serve-quality** (in-harness) | **H-QPACK** | [formal](formal-hqpack-vs-hpool.md) · OOD [XFER](hxfer-transfer.md) **KILL** · [DEPL](formal-hdepl-policy.md) |
 
 ## Tip scoreboard
 
@@ -35,17 +35,17 @@ npm run nano:pack && npm run nano:formal:hpack
 npm run nano:tpack && npm run nano:formal:htpack
 npm run nano:amort && npm run nano:formal:hamort
 npm run nano:tipd && npm run nano:formal:htipd
+npm run nano:depl && npm run nano:formal:hdepl
 npm run nano:qpack && npm run nano:formal:hqpack
 npm run nano:bud && npm run nano:formal:hbud
-npm run nano:xfer && npm run nano:formal:hxfer
 npm run nano:xfer2 && npm run nano:xfer2:report
 ```
 
 ## Park status
 
-**Wave V ACTIVE** — next **H-DEPL** (BUD → deploy policy).  
-~~H-TIPD~~ smoke+formal **PROMOTE** — tip outcome `STAG_PRIME`.  
-~~H-XFER2~~ smoke **KILL** (ood_long).  
+**Wave V** — ~~DEPL~~ smoke+formal **PROMOTE** (policy ↔ BUD).  
+Optional next: **H-DOM**.  
+~~TIPD~~ `STAG_PRIME` · ~~XFER2~~ smoke **KILL** (ood_long).  
 KILL history: [`archive/`](archive/). No new letter-packs.
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

@@ -126,11 +126,12 @@ npm run verify
 84. Wave V / V0 RECIPES.md deploy one-pager — done
 85. Wave V / H-XFER2 PACK-only OOD deepen — done (smoke **KILL** — PACK holds elongated+ood; fails ood_long SERVE |Δlp|>ε; BPACK report-only KILL; skip formal)
 86. Wave V / H-TIPD RETIP tip decision — done (smoke+formal **PROMOTE** — tip outcome `STAG_PRIME`; STAG′ Δlp +0.78 formal; EARLY/POOL serve hold)
+87. Wave V / H-DEPL BUD deploy policy — done (smoke+formal **PROMOTE** — routes consistent with BUD survivors; REJECT ood_long / QPACK-OOD)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** Wave V **H-DEPL** (BUD deploy policy) — see `.local/pesquisa.md`
+**Next:** optional Wave V **H-DOM** (new domain) — see `.local/pesquisa.md`
 
 ---
 

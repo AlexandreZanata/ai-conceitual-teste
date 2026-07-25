@@ -22,6 +22,6 @@ Train: H-TPACK + H-AMORT; quality serve H-QPACK in-harness only.
 | H-CUR | -17.0133 | +0.0785 | 47 | — | 3 | PROMOTE (beats B2) |
 
 ## Notes
-- Deploy: `docs/results/nano-lm/RECIPES.md`. Archive: `docs/results/nano-lm/archive/`.
-- Wave V: DEPL next (`.local/pesquisa.md`). TIPD PROMOTE → STAG′.
+- Deploy: `docs/results/nano-lm/RECIPES.md` + `formal-hdepl-policy.md`.
+- Wave V: optional H-DOM (`.local/pesquisa.md`). DEPL/TIPD PROMOTE.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
