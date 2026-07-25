@@ -17,7 +17,8 @@
 | 1⁗‴. Train util | Prefetch H2D under PIN | **H-PRE** (util) | [formal-hpre-vs-hpin.md](formal-hpre-vs-hpin.md) |
 | 1⁗⁗. Train util | fp16-wire H2D under PRE | **H-HALF** (util) | [formal-hhalf-vs-hpre.md](formal-hhalf-vs-hpre.md) |
 | 1⁗⁗′. Train util | Fused AdamW under HALF | **H-ADAMF** (util) | [formal-hadamf-vs-hhalf.md](formal-hadamf-vs-hhalf.md) |
-| 1⁗⁗″. Train util | DEPTH student under ADAMF | **H-DEPTHA** (KILL) | [hdeptha-vs-hadamf.md](hdeptha-vs-hadamf.md) |
+| 1⁗⁗″. Train util | 2-deep prefetch under ADAMF | **H-PRE2** (util) | [formal-hpre2-vs-hadamf.md](formal-hpre2-vs-hadamf.md) |
+| 1⁗⁗‴. Train util | DEPTH student under ADAMF | **H-DEPTHA** (KILL) | [hdeptha-vs-hadamf.md](hdeptha-vs-hadamf.md) |
 | 2a. Decode (speed) | Early-exit gene | **H-EARLY** | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) |
 | 2a′. Decode util | Layer early-exit | **H-LAY** (util) | [formal-hlay-vs-hearly.md](formal-hlay-vs-hearly.md) |
 | 2a″. Decode util | Short draft stop | **H-SHORT** (util) | [formal-hshort-vs-hearly.md](formal-hshort-vs-hearly.md) |
@@ -143,7 +144,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave Q FOCUS** — Q7 done; **next: continue Wave Q or park**.  
+**Wave Q FOCUS** — Q8 done; **next: continue Wave Q or park**.  
+**H-PRE2** smoke+formal **PROMOTE** ([formal-hpre2-vs-hadamf.md](formal-hpre2-vs-hadamf.md) — ms/step↓; lp=ADAMF).  
 **H-DEPTHA** smoke **KILL** ([hdeptha-vs-hadamf.md](hdeptha-vs-hadamf.md) — quality < ADAMF−ε; skip formal).  
 **H-ADAMF** smoke+formal **PROMOTE** ([formal-hadamf-vs-hhalf.md](formal-hadamf-vs-hhalf.md) — ms/step↓; lp=HALF).  
 **H-HALF** smoke+formal **PROMOTE** ([formal-hhalf-vs-hpre.md](formal-hhalf-vs-hpre.md) — ms/step↓; lp=PRE).  

@@ -1,4 +1,4 @@
-"""H-PRE train: pinned TOP cache with 1-deep H2D prefetch stream."""
+"""H-PRE train: pinned TOP cache with 1- or 2-deep H2D prefetch."""
 
 from __future__ import annotations
 
@@ -18,6 +18,14 @@ from train_kd import kd_loss
 __all__ = ["train_topk_prefetch"]
 
 
+def _to_dev_fn(half_h2d: bool):
+    if half_h2d:
+        from half_ops import to_device_rec_half
+
+        return to_device_rec_half
+    return _to_device_rec
+
+
 def train_topk_prefetch(
     *,
     records: list[dict[str, torch.Tensor]],
@@ -32,16 +40,19 @@ def train_topk_prefetch(
     half_h2d: bool = False,
     fused_adam: bool = False,
     build_fn: Callable[[int], object] = build_student,
+    prefetch_depth: int = 1,
 ) -> dict[str, Any]:
     """
     GIVEN pinned top-k cache records on CUDA
-    WHEN H2D+expand of step i+1 overlaps compute of step i
-    THEN return PIN-quality ckpt and train ms/step.
+    WHEN H2D+expand of steps ahead overlaps compute
+    THEN return train ckpt and ms/step (depth 1 = PRE; depth 2 = PRE2).
     """
     if device.type != "cuda":
         raise ValueError("train_topk_prefetch requires CUDA")
     if not records:
         raise ValueError("records must be non-empty")
+    if prefetch_depth not in (1, 2):
+        raise ValueError("prefetch_depth must be 1 or 2")
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     student = build_fn(vocab_size).to(device)
@@ -51,30 +62,27 @@ def train_topk_prefetch(
     else:
         opt = torch.optim.AdamW(student.parameters(), lr=lr)
     recs = pin_records(records)
-    to_dev = _to_device_rec
-    if half_h2d:
-        from half_ops import to_device_rec_half
-
-        to_dev = to_device_rec_half
+    to_dev = _to_dev_fn(half_h2d)
     copy_stream = torch.cuda.Stream()
     losses: list[float] = []
     t0 = time.perf_counter()
+    n = len(recs)
+
+    def load_idx(idx: int):
+        with torch.cuda.stream(copy_stream):
+            return to_dev(
+                recs[idx], device=device, vocab_size=vocab_size, non_blocking=True
+            )
+
     with torch.cuda.stream(copy_stream):
         cur = to_dev(
             recs[0], device=device, vocab_size=vocab_size, non_blocking=True
         )
     torch.cuda.current_stream().wait_stream(copy_stream)
-    n = len(recs)
+    ahead: list = []
+    for j in range(1, min(prefetch_depth + 1, n)):
+        ahead.append(load_idx(j))
     for i in range(n):
-        nxt = None
-        if i + 1 < n:
-            with torch.cuda.stream(copy_stream):
-                nxt = to_dev(
-                    recs[i + 1],
-                    device=device,
-                    vocab_size=vocab_size,
-                    non_blocking=True,
-                )
         ids, t_logits = cur
         opt.zero_grad(set_to_none=True)
         loss = kd_loss(
@@ -87,9 +95,12 @@ def train_topk_prefetch(
         loss.backward()
         opt.step()
         losses.append(float(loss.item()))
-        if nxt is not None:
+        if ahead:
             torch.cuda.current_stream().wait_stream(copy_stream)
-            cur = nxt
+            cur = ahead.pop(0)
+            nxt = i + 1 + prefetch_depth
+            if nxt < n:
+                ahead.append(load_idx(nxt))
         if (i + 1) % 10 == 0:
             torch.cuda.empty_cache()
     torch.cuda.synchronize()
@@ -109,6 +120,7 @@ def train_topk_prefetch(
         "out_path": str(out_path),
         "pinned": True,
         "prefetch": True,
+        "prefetch_depth": int(prefetch_depth),
         "half_h2d": bool(half_h2d),
         "fused_adam": bool(fused_adam),
     }
