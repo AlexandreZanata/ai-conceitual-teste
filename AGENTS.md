@@ -41,7 +41,7 @@ npm run nano:test && npm run verify
 
 - Survival PoC v1 **closed** → archive.  
 - Nano Waves U–W **closed** (recipes frozen; XFER2 + MIXD purged).  
-- **Wave X ACTIVE** — H-TCHR/H-QT/H-GENC/H-ABS-PFB **PROMOTE**; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS/MEASURE/TELE/WIGNER/CHRONO/MIRROR/CBON/CSAFE **KILL**; next HOLD/new H-ID — see `.local/pesquisa.md` + [`formal-htchr-code-teacher.md`](docs/results/nano-lm/formal-htchr-code-teacher.md) · [`formal-hqt-quantize.md`](docs/results/nano-lm/formal-hqt-quantize.md) · [`formal-hgenc-genome.md`](docs/results/nano-lm/formal-hgenc-genome.md).
+- **Wave X ACTIVE** — H-TCHR/H-QT/H-GENC/H-ABS-PFB **PROMOTE**; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS/MEASURE/TELE/WIGNER/CHRONO/MIRROR/CBON/CSAFE **KILL**; next HOLD/new H-ID — see `.local/pesquisa.md` + [`formal-htchr-code-teacher.md`](docs/results/nano-lm/formal-htchr-code-teacher.md) · [`formal-hqt-quantize.md`](docs/results/nano-lm/formal-hqt-quantize.md) · [`formal-hgenc-genome.md`](docs/results/nano-lm/formal-hgenc-genome.md) · [`formal-hpfb-pfb.md`](docs/results/nano-lm/formal-hpfb-pfb.md).
 
 ---
 
