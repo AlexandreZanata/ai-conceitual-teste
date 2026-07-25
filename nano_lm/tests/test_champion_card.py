@@ -76,3 +76,10 @@ def test_given_card_when_read_then_hrag_kill() -> None:
     assert "H-RAG" in text or "RAG" in text
     assert "KILL" in text
     assert "hrag-retrieve" in text
+
+
+def test_given_card_when_read_then_hctx_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-CTX" in text or "CTX" in text
+    assert "KILL" in text
+    assert "hctx-long-window" in text

@@ -5,9 +5,9 @@ alwaysApply: true
 
 # Project rules (nano-first)
 
-- **Active:** nano generative student ≤5M — `docs/NANO-STUDENT-AGENDA.md`, `.local/pesquisa.md` (Wave W COMPLETE; Wave X ACTIVE — H-TCHR PROMOTE; H-RAG KILL; next H-CTX), `docs/ARCHITECTURE.md` / `GLOSSARY.md`.
+- **Active:** nano generative student ≤5M — `docs/NANO-STUDENT-AGENDA.md`, `.local/pesquisa.md` (Wave W COMPLETE; Wave X ACTIVE — H-TCHR PROMOTE; H-RAG/H-CTX KILL; next H-QT), `docs/ARCHITECTURE.md` / `GLOSSARY.md`.
 - **Frozen:** EvoGen survival PoC → `docs/archive/evogen/` (do not extend unless lab book re-opens).
 - Domain terms from `docs/GLOSSARY.md` — never call evolutionary individuals “coding agents”.
 - Curated public data: `nano_lm/data/CURATED-SOURCES.md` + `npm run nano:curated`.
 - Caps: ≤80 lines/function, ≤200 lines/file, cyclomatic ≤10; run `npm run verify`.
-- Recipes: `docs/results/nano-lm/RECIPES.md` · Wave W: `docs/results/nano-lm/wave-w-summary.md` · H-TCHR: `docs/results/nano-lm/formal-htchr-code-teacher.md` · H-RAG KILL: `docs/results/nano-lm/archive/hrag-retrieve.md`.
+- Recipes: `docs/results/nano-lm/RECIPES.md` · Wave W: `docs/results/nano-lm/wave-w-summary.md` · H-TCHR: `docs/results/nano-lm/formal-htchr-code-teacher.md` · KILLs: `archive/hrag-retrieve.md`, `archive/hctx-long-window.md`.

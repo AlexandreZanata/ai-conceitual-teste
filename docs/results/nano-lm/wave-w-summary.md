@@ -52,8 +52,8 @@ Fit≠eval genes; seeds [0,1,2]; `cpu_threads=14`. TPACK/AMORT remain story-trai
 
 ## Wave X (F4)
 
-**ACTIVE** after Wave W close-out. Lab queue: `.local/pesquisa.md` (H-TCHR **PROMOTE** → H-RAG **KILL** → H-CTX → H-QT).  
-[H-TCHR](formal-htchr-code-teacher.md) wires `bigcode/tiny_starcoder_py` as frozen **code teacher** (`code_teacher_lp`). [H-RAG](archive/hrag-retrieve.md) naive curated prepend **KILL** (tooling purged). Default mechanism must be **new** (not another pack letter). Corpus E1–E5 landed — see `CURATED-SOURCES.md` and [e5-eval-suites.md](e5-eval-suites.md).
+**ACTIVE** after Wave W close-out. Lab queue: `.local/pesquisa.md` (H-TCHR **PROMOTE** → H-RAG/H-CTX **KILL** → H-QT).  
+[H-TCHR](formal-htchr-code-teacher.md) wires `bigcode/tiny_starcoder_py` as frozen **code teacher** (`code_teacher_lp`). [H-RAG](archive/hrag-retrieve.md) / [H-CTX](archive/hctx-long-window.md) **KILL** (tooling purged). Default mechanism must be **new** (not another pack letter). Corpus E1–E5 landed — see `CURATED-SOURCES.md` and [e5-eval-suites.md](e5-eval-suites.md).
 
 ## Commands (survivors)
 
