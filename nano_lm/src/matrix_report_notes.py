@@ -12,15 +12,16 @@ GATES = [
     "H-SROUTE gate: not dominated by SERVE on (lp, wall) (formal PROMOTE; SERVE keeps min-wall).",
     "H-SKIP gate: wall↓ or tok/s↑ vs BAT and GFLOPs ≤ BAT·(1+δ) (formal PROMOTE; CBAT demoted).",
     "H-PACK gate: SERVE |Δlp|≤ε + win; SROUTE lp≥EARLY−ε + win (formal PROMOTE; packs frozen).",
+    "H-BPACK gate: SKIP+LAYB |Δlp|≤ε + win; SKIP GFLOPs≤EARLY·(1+δ) (formal PROMOTE).",
     "H-ETRAIN gate: lp ≥ STAG−ε and e2e_wall < STAG (smoke PROMOTE / formal KILL — cache tax).",
     "H-FLOP: wall + tok/s + est. GFLOPs.",
-    "H-MIX / H-FUSE / H-PARETO / H-PACK: PROTOCOL/audit only (not tips).",
+    "H-MIX / H-FUSE / H-PARETO / H-PACK / H-BPACK: PROTOCOL/audit only (not tips).",
 ]
 
 NOTES = [
     "## Notes",
     "- Focus winners only. KILL code purged; history: `docs/results/nano-lm/archive/`.",
-    "- Wave S complete (S2 PACK PROMOTE) — `.local/pesquisa.md`.",
+    "- Wave T: T0 BPACK formal PROMOTE; next QPACK — `.local/pesquisa.md`.",
     "- Smoke budgets are tentative; formal = 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

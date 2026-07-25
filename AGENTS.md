@@ -114,11 +114,12 @@ npm run verify
 72. Wave S / H-SROUTE ROUTE vs SERVE — done (smoke+formal **PROMOTE** — not dominated; SERVE keeps min-wall)
 73. Wave S / H-SKIP BAT→CHBAT skip CBAT — done (smoke+formal **PROMOTE** — wall↓ tok/s↑; GFLOPs=BAT; CBAT demoted)
 74. Wave S / H-PACK SERVE+SROUTE vs EARLY — done (smoke+formal **PROMOTE** — both packs beat EARLY)
+75. Wave T / H-BPACK SKIP+LAYB vs EARLY — done (smoke+formal **PROMOTE** — both packs beat EARLY; GFLOPs honest)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** Wave S parked — see `.local/pesquisa.md`
+**Next:** Wave T **H-QPACK** — see `.local/pesquisa.md`
 
 ---
 

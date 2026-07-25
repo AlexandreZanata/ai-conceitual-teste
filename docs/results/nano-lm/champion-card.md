@@ -1,7 +1,7 @@
 # Champion card — tip-stack protocol (parked tips)
 
 > Compose tree closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** all **KILL**). Tips on **separate axes**.  
-> KILL history: [`archive/`](archive/). Lab queue: `.local/pesquisa.md` (**Wave S** parked).
+> KILL history: [`archive/`](archive/). Lab queue: `.local/pesquisa.md` (**Wave T**).
 
 ## Official tips
 
@@ -20,9 +20,9 @@ Parents: H-CURL2←H-CURL←H-CUR; H-DECKL←H-DECK←H-DEC.
 | Train I/O | TOP → PIN → PRE → HALF → ADAMF → PRE2 → **PRE3** |
 | Thin solo | PRUN / DEPTH (never under batch/ADAMF) |
 | Systems | FLASH → CHUNK → **CHB**; KVSEL; GRAPH → GRAPHF; **GALL**; **SERVE** (min-wall); **SROUTE**/ROUTE (Pareto); **PACK** (both vs EARLY) |
-| Batch speed | BAT → **SKIP**/CHBAT → FUSEB → **LAYB** (+ GRAPH/GALL; CBAT demoted) |
+| Batch speed | **SKIP** + **LAYB** via **BPACK** (BAT→SKIP→LAYB; CBAT demoted) |
 | Batch quality | POOLB → CPOOLB → FCPOOLB → **FLAYB** (+ GRAPHF) |
-| Protocol | MIX = PRUN⊕LAY; FUSE = FLASH⊕KVSEL; **PARETO** / **PACK** (**not** tips) |
+| Protocol | MIX / FUSE / PARETO / PACK / **BPACK** (**not** tips) |
 
 ## Formal tip scoreboard
 
@@ -50,6 +50,7 @@ npm run nano:pareto && npm run nano:formal:hpareto
 npm run nano:sroute && npm run nano:formal:hsroute
 npm run nano:skip && npm run nano:formal:hskip
 npm run nano:pack && npm run nano:formal:hpack
+npm run nano:bpack && npm run nano:formal:hbpack
 npm run nano:chb && npm run nano:layb && npm run nano:gall
 npm run nano:flayb && npm run nano:graphf
 npm run nano:mix && npm run nano:fuse
@@ -58,12 +59,10 @@ npm run nano:mix && npm run nano:fuse
 ## Park status
 
 **PARKED** (tips).  
-**Wave S complete** — S2 **H-PACK** smoke+formal **PROMOTE**; park or open next wave.  
+**Wave T FOCUS** — **T0 H-BPACK** smoke+formal **PROMOTE**; next **H-QPACK**.  
+**H-BPACK** smoke+formal **PROMOTE** ([formal-hbpack-vs-hearly.md](formal-hbpack-vs-hearly.md) — SKIP+LAYB both beat EARLY; GFLOPs=EARLY).  
 **H-PACK** smoke+formal **PROMOTE** ([formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) — SERVE+SROUTE both beat EARLY).  
-**H-SKIP** smoke+formal **PROMOTE** ([formal-hskip-vs-hbat.md](formal-hskip-vs-hbat.md) — BAT→CHBAT; wall↓ tok/s↑; GFLOPs=BAT; CBAT demoted).  
-**H-SROUTE** smoke+formal **PROMOTE** ([formal-hsroute-vs-hserve.md](formal-hsroute-vs-hserve.md) — not dominated by SERVE; SERVE keeps min-wall).  
-**H-PARETO** smoke+formal **PROMOTE** ([formal-hpareto-audit.md](formal-hpareto-audit.md) — **H-CBAT** FLAG).  
-**H-ROUTE** / **H-SERVE** / **H-PRE3** prior PROMOTEs stand.  
+**H-SKIP** / **H-SROUTE** / **H-PARETO** prior PROMOTEs stand.  
 KILL families purged from `nano_lm/` (ASYNC/PINC/GALLF/DEPTHA/B/PRUNB/F/SHORTB/CFUSE/Q4).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
