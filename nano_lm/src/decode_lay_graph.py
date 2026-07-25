@@ -12,7 +12,7 @@ from bat_ops import left_pad_batch
 from decode_ar import top_p_filter
 from decode_bat import _update_alive
 from decode_lay_batch import decode_lay_batch
-from graph_ops import capture_seq_graphs
+from graph_ops import capture_one_seq_graph
 from layer_exit import n_transformer_layers
 from scorers import DecodeResult, mean_logprob, pick_argmax
 
@@ -36,7 +36,7 @@ def decode_lay_graph(
 ) -> tuple[list[DecodeResult], float]:
     """
     GIVEN many prompts + EARLY knobs on CUDA
-    WHEN left-pad batch and decode with pre-captured full-depth graphs
+    WHEN left-pad batch and decode with lazy full-depth graphs
     THEN return per-prompt results; capture wall excluded from timed region.
     """
     if device.type != "cuda":
@@ -60,6 +60,7 @@ def decode_lay_graph(
         raise ValueError("n must be >= 1")
     if not prompts:
         raise ValueError("prompts must be non-empty")
+    del max_skip, lay_conf  # full-depth graph path (parity with prior GRAPH)
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     pad_id = int(tokenizer.pad_token_id)
@@ -73,26 +74,34 @@ def decode_lay_graph(
     padded, masks, prompt_lens = left_pad_batch(expanded, pad_id=pad_id)
     ids = torch.tensor(padded, dtype=torch.long, device=device)
     mask = torch.tensor(masks, dtype=torch.long, device=device)
-    b, t0 = int(ids.shape[0]), int(ids.shape[1])
+    b = int(ids.shape[0])
     vocab = int(model.config.vocab_size)
     n_layers = n_transformer_layers(model)
-    # Capture outside timed wall (science: measure replay, not capture tax).
-    graphs = capture_seq_graphs(
-        model, batch=b, t0=t0, t_max=t0 + max_new_tokens, device=device, vocab=vocab
-    )
+    graphs: dict[int, tuple[Any, Any, Any, Any, Any]] = {}
     lps = torch.zeros(b, max_new_tokens, device=device)
     alive = torch.ones(b, dtype=torch.bool, device=device)
     streaks = [0] * b
     stop_at = [0] * b
     token_evals = 0
     layer_evals = 0
-    torch.cuda.synchronize()
-    t_wall = time.perf_counter()
+    wall_ms = 0.0
     gen = 0
+    prev_t: int | None = None
     for step in range(max_new_tokens):
         pos = (mask.cumsum(dim=-1) - 1).clamp(min=0)
         t = int(ids.shape[1])
+        if t not in graphs:
+            # Capture untimed; keep ≤1 prior graph to bound VRAM.
+            graphs[t] = capture_one_seq_graph(
+                model, batch=b, t=t, device=device, vocab=vocab
+            )
+            if prev_t is not None and prev_t in graphs and prev_t != t:
+                del graphs[prev_t]
+                torch.cuda.empty_cache()
+        prev_t = t
         graph, s_ids, s_mask, s_pos, s_out = graphs[t]
+        torch.cuda.synchronize()
+        t_step = time.perf_counter()
         s_ids.copy_(ids)
         s_mask.copy_(mask)
         s_pos.copy_(pos)
@@ -127,10 +136,12 @@ def decode_lay_graph(
         for i in range(b):
             if bool(prev[i]) and not bool(alive[i]) and stop_at[i] == 0:
                 stop_at[i] = gen
+        torch.cuda.synchronize()
+        wall_ms += (time.perf_counter() - t_step) * 1000.0
         if done:
             break
-    torch.cuda.synchronize()
-    wall_ms = (time.perf_counter() - t_wall) * 1000.0
+    del graphs
+    torch.cuda.empty_cache()
     for i in range(b):
         if stop_at[i] == 0:
             stop_at[i] = gen

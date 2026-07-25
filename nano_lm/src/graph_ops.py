@@ -7,7 +7,13 @@ from typing import Any, Mapping
 from lat_ops import EPS_LP
 from layb_ops import LAYB_CHUNK
 
-__all__ = ["decide_hgraph", "GRAPH_CHUNK", "EPS_LP", "capture_seq_graphs"]
+__all__ = [
+    "decide_hgraph",
+    "GRAPH_CHUNK",
+    "EPS_LP",
+    "capture_one_seq_graph",
+    "capture_seq_graphs",
+]
 
 GRAPH_CHUNK = LAYB_CHUNK
 
@@ -33,6 +39,47 @@ def decide_hgraph(
     return "PROMOTE (CUDA graph under LAYB decode)"
 
 
+def capture_one_seq_graph(
+    model: Any,
+    *,
+    batch: int,
+    t: int,
+    device: Any,
+    vocab: int,
+) -> tuple[Any, Any, Any, Any, Any]:
+    """
+    GIVEN CUDA model and fixed seq length T
+    WHEN capturing full-depth last-token forward graph
+    THEN return (graph, static_ids, static_mask, static_pos, static_logits).
+    """
+    import torch
+
+    if device.type != "cuda":
+        raise ValueError("capture_one_seq_graph requires CUDA")
+    s_ids = torch.zeros(batch, t, dtype=torch.long, device=device)
+    s_mask = torch.zeros(batch, t, dtype=torch.long, device=device)
+    s_pos = torch.zeros(batch, t, dtype=torch.long, device=device)
+    s_out = torch.zeros(batch, vocab, dtype=torch.float32, device=device)
+    stream = torch.cuda.Stream()
+    stream.wait_stream(torch.cuda.current_stream())
+    with torch.cuda.stream(stream):
+        for _ in range(2):
+            with torch.no_grad():
+                logits = model(
+                    s_ids, attention_mask=s_mask, position_ids=s_pos
+                ).logits[:, -1, :].float()
+                s_out.copy_(logits)
+    torch.cuda.current_stream().wait_stream(stream)
+    graph = torch.cuda.CUDAGraph()
+    with torch.cuda.graph(graph):
+        with torch.no_grad():
+            logits = model(
+                s_ids, attention_mask=s_mask, position_ids=s_pos
+            ).logits[:, -1, :].float()
+            s_out.copy_(logits)
+    return graph, s_ids, s_mask, s_pos, s_out
+
+
 def capture_seq_graphs(
     model: Any,
     *,
@@ -47,32 +94,9 @@ def capture_seq_graphs(
     WHEN capturing full-depth last-token forward graphs
     THEN return T → (graph, static_ids, static_mask, static_pos, static_logits).
     """
-    import torch
-
-    if device.type != "cuda":
-        raise ValueError("capture_seq_graphs requires CUDA")
     cache: dict[int, tuple[Any, Any, Any, Any, Any]] = {}
     for t in range(int(t0), int(t_max) + 1):
-        s_ids = torch.zeros(batch, t, dtype=torch.long, device=device)
-        s_mask = torch.zeros(batch, t, dtype=torch.long, device=device)
-        s_pos = torch.zeros(batch, t, dtype=torch.long, device=device)
-        s_out = torch.zeros(batch, vocab, dtype=torch.float32, device=device)
-        stream = torch.cuda.Stream()
-        stream.wait_stream(torch.cuda.current_stream())
-        with torch.cuda.stream(stream):
-            for _ in range(2):
-                with torch.no_grad():
-                    logits = model(
-                        s_ids, attention_mask=s_mask, position_ids=s_pos
-                    ).logits[:, -1, :].float()
-                    s_out.copy_(logits)
-        torch.cuda.current_stream().wait_stream(stream)
-        graph = torch.cuda.CUDAGraph()
-        with torch.cuda.graph(graph):
-            with torch.no_grad():
-                logits = model(
-                    s_ids, attention_mask=s_mask, position_ids=s_pos
-                ).logits[:, -1, :].float()
-                s_out.copy_(logits)
-        cache[t] = (graph, s_ids, s_mask, s_pos, s_out)
+        cache[t] = capture_one_seq_graph(
+            model, batch=batch, t=t, device=device, vocab=vocab
+        )
     return cache
