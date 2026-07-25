@@ -55,5 +55,6 @@
 | [archive/htele-teleport.md](archive/htele-teleport.md) | **H-Q-TELE** mid-layer residual teleport (Wave X smoke **KILL**) |
 | [archive/hwigner-wigner.md](archive/hwigner-wigner.md) | **H-Q-WIGNER** signed top-k quasi-prob (Wave X smoke **KILL**) |
 | [archive/hchrono-chrono.md](archive/hchrono-chrono.md) | **H-ABS-CHRONO** acausal soft-label shuffle (Wave X smoke **KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS/MEASURE/TELE/WIGNER/CHRONO **KILL** → H-ABS-MIRROR (`.local/pesquisa.md`) |
+| [archive/hmirror-mirror.md](archive/hmirror-mirror.md) | **H-ABS-MIRROR** anti-teacher margin (Wave X formal **KILL**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · E.1 through MIRROR **KILL** → HOLD/new H-ID (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |

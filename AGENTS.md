@@ -26,7 +26,7 @@ When rules conflict with existing code, **rules prevail** — unless the user ex
 2. `agent-rules/00-core/size-and-complexity-limits.md` — **80 / 200 / ≤10**
 3. `docs/ARCHITECTURE.md` + `docs/GLOSSARY.md`
 4. `docs/NANO-STUDENT-AGENDA.md` + `docs/results/nano-lm/champion-card.md` + `RECIPES.md`
-5. `.local/pesquisa.md` (Wave W COMPLETE; Wave X ACTIVE — H-TCHR/H-QT/H-GENC PROMOTE; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS/MEASURE/TELE/WIGNER/CHRONO KILL; next H-ABS-MIRROR) before new H-IDs
+5. `.local/pesquisa.md` (Wave W COMPLETE; Wave X ACTIVE — H-TCHR/H-QT/H-GENC PROMOTE; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS/MEASURE/TELE/WIGNER/CHRONO/MIRROR KILL; next HOLD/new H-ID) before new H-IDs
 6. `nano_lm/data/CURATED-SOURCES.md` before data work
 
 ```bash
@@ -41,7 +41,7 @@ npm run nano:test && npm run verify
 
 - Survival PoC v1 **closed** → archive.  
 - Nano Waves U–W **closed** (recipes frozen; XFER2 + MIXD purged).  
-- **Wave X ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE**; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS/MEASURE/TELE/WIGNER/CHRONO **KILL**; next H-ABS-MIRROR — see `.local/pesquisa.md` + [`formal-htchr-code-teacher.md`](docs/results/nano-lm/formal-htchr-code-teacher.md) · [`formal-hqt-quantize.md`](docs/results/nano-lm/formal-hqt-quantize.md) · [`formal-hgenc-genome.md`](docs/results/nano-lm/formal-hgenc-genome.md).
+- **Wave X ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE**; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS/MEASURE/TELE/WIGNER/CHRONO/MIRROR **KILL**; next HOLD/new H-ID — see `.local/pesquisa.md` + [`formal-htchr-code-teacher.md`](docs/results/nano-lm/formal-htchr-code-teacher.md) · [`formal-hqt-quantize.md`](docs/results/nano-lm/formal-hqt-quantize.md) · [`formal-hgenc-genome.md`](docs/results/nano-lm/formal-hgenc-genome.md).
 
 ---
 
