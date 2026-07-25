@@ -8,13 +8,13 @@
 |------|-----|-------|
 | Train tip | **H-STAG** | Curriculum `lo=6`, `stages=4` |
 | Decode tips | **H-EARLY** / **H-POOL** | Speed / quality@wall |
-| Serving systems | FLASH→CHUNK→**CHB**; GRAPH→GRAPHF; **SERVE** (min-wall) / **SROUTE** (Pareto) | wall↓ / quality@tok/s |
+| Serving systems | **SERVE** (min-wall) / **SROUTE** (Pareto) via **PACK** | wall↓ / quality@tok/s |
 | Throughput | BAT→**SKIP**/CHBAT→…→**LAYB**; POOLB…→**FLAYB** | tok/s↑ (CBAT demoted) |
 | Train I/O | TOP→…→**PRE3** | ms/step↓ |
 | Thin solo | DEPTH / PRUN | not under batch |
-| Protocol | MIX / FUSE / **PARETO** | not tips |
+| Protocol | MIX / FUSE / **PARETO** / **PACK** | not tips |
 
-**Next:** Wave S in `.local/pesquisa.md` — **PACK** (SKIP smoke+formal PROMOTE).  
+**Next:** Wave S complete — park (or open next wave in `.local/pesquisa.md`).  
 Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived KILLs
