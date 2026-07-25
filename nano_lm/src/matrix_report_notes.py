@@ -9,7 +9,7 @@ GATES = [
 NOTES = [
     "## Notes",
     "- Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM/PROG/BTC formals.",
-    "- Wave W COMPLETE — [wave-w-summary.md](wave-w-summary.md); Wave X ACTIVE (H-TCHR/H-QT/H-GENC PROMOTE; long-L/RAG/CKD/Q*/GENQ KILL).",
+    "- Wave W COMPLETE — [wave-w-summary.md](wave-w-summary.md); Wave X ACTIVE (H-TCHR/H-QT/H-GENC PROMOTE; long-L/RAG/CKD/Q*/GENQ/DIST KILL).",
     "- H-PROG / H-BTC / H-EFF PROMOTE; H-MIXD KILL (runners purged).",
     "- H-TCHR PROMOTE — code teacher wire (`formal-htchr-code-teacher.md`).",
     "- H-QT PROMOTE — int8 weight-only serve (`formal-hqt-quantize.md`).",
@@ -21,6 +21,7 @@ NOTES = [
     "- H-QCOMP KILL — shadow KV formal story regress (`archive/hqcomp-shadow-kv.md`).",
     "- H-Q-QUBITKV KILL — critical+sketch KV (`archive/hqubitkv-critical-kv.md`).",
     "- H-GENQ-ABS KILL — amplitude GA → identity (`archive/hgenq-amplitude.md`).",
+    "- H-DIST KILL — shared-vocab Neo KD (`archive/hdist-distill.md`).",
     "- Matrix note: PROG/BTC/MIXD/EFF in wave-w-summary § Kill/promote.",
     "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",

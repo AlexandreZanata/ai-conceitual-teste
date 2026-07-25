@@ -132,3 +132,10 @@ def test_given_card_when_read_then_hgenq_kill() -> None:
     assert "H-GENQ" in text or "GENQ" in text
     assert "KILL" in text
     assert "hgenq-amplitude" in text
+
+
+def test_given_card_when_read_then_hdist_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-DIST" in text or "DIST" in text
+    assert "KILL" in text
+    assert "hdist-distill" in text
