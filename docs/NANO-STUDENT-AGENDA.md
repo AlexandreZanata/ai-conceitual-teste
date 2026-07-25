@@ -6,21 +6,21 @@
 
 **H-STAG** (train) · **H-EARLY** (speed) · **H-POOL** (quality@wall)
 
-## Official recipes (faster / cheaper delivery)
+## Official recipes
 
-| Recipe | Pack | Claim | Transfer | Budget | Retip |
-|--------|------|-------|----------|--------|-------|
-| Serve-fast | **H-PACK** | vs EARLY | holds | SURVIVE | — |
-| Serve-quality | **H-QPACK** | vs POOL | OOD KILL | SURVIVE | — |
-| Train-step | **H-TPACK** | vs STAG ms/step | eval KILL | SURVIVE | **PROMOTE** capacity+serve |
+| Recipe | Pack | Claim | Wave U |
+|--------|------|-------|--------|
+| Serve-fast | **H-PACK** | vs EARLY | transfer holds; budget SURVIVE |
+| Serve-quality | **H-QPACK** | vs POOL | OOD transfer KILL; budget SURVIVE |
+| Train-step | **H-TPACK** | vs STAG ms/step | RETIP + **AMORT** e2e @ n=4 |
 
-## Next — Wave U
+## Wave U — complete
 
-~~XFER~~ KILL · ~~BUD~~ PROMOTE · ~~RETIP~~ PROMOTE  
-([formal-hretip-vs-hstag.md](results/nano-lm/formal-hretip-vs-hstag.md)).  
-Next: amortize (**H-AMORT**) — optional.  
+XFER **KILL** · BUD **PROMOTE** · RETIP **PROMOTE** · AMORT **PROMOTE**  
+([formal-hamort-vs-hstag.md](results/nano-lm/formal-hamort-vs-hstag.md)).  
+**Park** — new wave only with a fresh mechanism.  
 Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived
 
-KILL code purged (incl. ETRAIN). Markdown: [`archive/`](results/nano-lm/archive/).
+KILL code purged (incl. ETRAIN N=1). Markdown: [`archive/`](results/nano-lm/archive/).

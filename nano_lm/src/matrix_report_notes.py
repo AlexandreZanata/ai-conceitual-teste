@@ -9,7 +9,7 @@ GATES = [
 NOTES = [
     "## Notes",
     "- Official recipes only for public claims. Archive: `docs/results/nano-lm/archive/`.",
-    "- Wave U: XFER **KILL** → BUD **PROMOTE** → RETIP **PROMOTE** → AMORT (`.local/pesquisa.md`).",
-    "- ETRAIN e2e KILL purged. Formal = 3 seeds + fit≠eval.",
+    "- Wave U complete: XFER **KILL** · BUD/RETIP/AMORT **PROMOTE** (`.local/pesquisa.md`).",
+    "- ETRAIN N=1 e2e KILL purged; AMORT reopens e2e @ n=4. Formal = 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

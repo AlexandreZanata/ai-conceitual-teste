@@ -10,6 +10,7 @@ Official tips + 3 recipes. Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-ST
 | [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) | Train-step |
 | [formal-hbud-budget.md](formal-hbud-budget.md) | Budget survivors (Wave U) |
 | [formal-hretip-vs-hstag.md](formal-hretip-vs-hstag.md) | PRE3 retip capacity+serve |
+| [formal-hamort-vs-hstag.md](formal-hamort-vs-hstag.md) | Amortized e2e @ n=4 |
 | [hxfer-transfer.md](hxfer-transfer.md) | Transfer audit (KILL) |
 | [formal-hbpack-vs-hearly.md](formal-hbpack-vs-hearly.md) | Throughput support |
 | [kill-promote-matrix.md](kill-promote-matrix.md) | Matrix |

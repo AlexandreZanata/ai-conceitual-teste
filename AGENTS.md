@@ -121,11 +121,13 @@ npm run verify
 79. Wave U / H-XFER transfer packs vs tips — done (smoke **KILL** — PACK holds; QPACK OOD quality drop; TPACK lp drop on all packs; skip formal)
 80. Wave U / H-BUD hard wall/GFLOPs budget vs tip — done (smoke+formal **PROMOTE** — PACK+QPACK+TPACK survive)
 81. Wave U / H-RETIP PRE3 train → capacity + frozen EARLY/POOL serve — done (smoke+formal **PROMOTE** — tips unchanged)
+82. Wave U / H-AMORT amortized soft-cache e2e @ n=4 — done (smoke+formal **PROMOTE** — e2e↓ vs live STAG; ETRAIN N=1 stays KILL)
+83. Wave U complete — park
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** Wave U — **H-AMORT** optional or park (see `.local/pesquisa.md`)
+**Next:** park — new wave only with a fresh mechanism (see `.local/pesquisa.md`)
 
 ---
 
