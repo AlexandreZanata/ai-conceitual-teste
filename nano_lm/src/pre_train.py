@@ -45,14 +45,14 @@ def train_topk_prefetch(
     """
     GIVEN pinned top-k cache records on CUDA
     WHEN H2D+expand of steps ahead overlaps compute
-    THEN return train ckpt and ms/step (depth 1 = PRE; depth 2 = PRE2).
+    THEN return train ckpt and ms/step (depth 1–3 = PRE / PRE2 / PRE3).
     """
     if device.type != "cuda":
         raise ValueError("train_topk_prefetch requires CUDA")
     if not records:
         raise ValueError("records must be non-empty")
-    if prefetch_depth not in (1, 2):
-        raise ValueError("prefetch_depth must be 1 or 2")
+    if prefetch_depth not in (1, 2, 3):
+        raise ValueError("prefetch_depth must be 1, 2, or 3")
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     student = build_fn(vocab_size).to(device)

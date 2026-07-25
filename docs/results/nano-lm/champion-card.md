@@ -1,177 +1,58 @@
-# Champion card — tip-stack protocol (parked)
+# Champion card — tip-stack protocol (parked tips)
 
-> Nano-LM compose tree closed (SYS→JOINT→CACHE→CAP all smoke **KILL**).  
-> Official stack keeps **separate axes** — do not paste tips into one free-lunch H-ID.
+> Compose tree closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** all **KILL**). Tips on **separate axes**.  
+> KILL history: [`archive/`](archive/). Lab queue: `.local/pesquisa.md` (**Wave R**).
 
-## Protocol
+## Official tips
 
-| Step | Action | Tip | Formal evidence |
-|------|--------|-----|-----------------|
-| 1. Train | Curriculum KD | **H-STAG** (`seq_lo=6`, `n_stages=4`) | [formal-hstag-vs-hcurl2.md](formal-hstag-vs-hcurl2.md) |
-| 1′. Train util | Mag prune + recovery | **H-PRUN** (util) | [formal-hprun-vs-hstag.md](formal-hprun-vs-hstag.md) |
-| 1″. Train util | Top-k soft-label cache | **H-TOP** (util) | [formal-htop-vs-hstag.md](formal-htop-vs-hstag.md) |
-| 1‴. Train util | 1-layer STAG + PRUN recover | **H-DEPTH** (util) | [formal-hdepth-vs-hstag.md](formal-hdepth-vs-hstag.md) |
-| 1⁗. Train util | Pinned + non_blocking H2D | **H-PIN** (util) | [formal-hpin-vs-htop.md](formal-hpin-vs-htop.md) |
-| 1⁗′. Train util | Async cache∩PIN overlap | **H-ASYNC** (KILL) | [hasync-vs-hpin.md](hasync-vs-hpin.md) |
-| 1⁗″. Train util | torch.compile under PIN | **H-PINC** (KILL) | [hpinc-vs-hpin.md](hpinc-vs-hpin.md) |
-| 1⁗‴. Train util | Prefetch H2D under PIN | **H-PRE** (util) | [formal-hpre-vs-hpin.md](formal-hpre-vs-hpin.md) |
-| 1⁗⁗. Train util | fp16-wire H2D under PRE | **H-HALF** (util) | [formal-hhalf-vs-hpre.md](formal-hhalf-vs-hpre.md) |
-| 1⁗⁗′. Train util | Fused AdamW under HALF | **H-ADAMF** (util) | [formal-hadamf-vs-hhalf.md](formal-hadamf-vs-hhalf.md) |
-| 1⁗⁗″. Train util | 2-deep prefetch under ADAMF | **H-PRE2** (util) | [formal-hpre2-vs-hadamf.md](formal-hpre2-vs-hadamf.md) |
-| 1⁗⁗‴. Train util | DEPTH student under ADAMF | **H-DEPTHA** (KILL) | [hdeptha-vs-hadamf.md](hdeptha-vs-hadamf.md) |
-| 2a. Decode (speed) | Early-exit gene | **H-EARLY** | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) |
-| 2a′. Decode util | Layer early-exit | **H-LAY** (util) | [formal-hlay-vs-hearly.md](formal-hlay-vs-hearly.md) |
-| 2a″. Decode util | Short draft stop | **H-SHORT** (util) | [formal-hshort-vs-hearly.md](formal-hshort-vs-hearly.md) |
-| 2a‴. Decode util | SDPA attention backend | **H-FLASH** (util) | [formal-hflash-vs-hearly.md](formal-hflash-vs-hearly.md) |
-| 2a⁗. Decode util | Gated KV (`max_new` > thr) | **H-KVSEL** (util) | [formal-hkvsel-vs-hearly.md](formal-hkvsel-vs-hearly.md) |
-| 2a⁗′. Decode util | Chunked KV prefill (B) under FLASH | **H-CHUNK** (util) | [formal-hchunk-vs-hflash.md](formal-hchunk-vs-hflash.md) |
-| 2a⁗″. Decode util | Chunk size sweep B∈{32..256} | **H-CHB** (util) | [formal-hchb-vs-hchunk.md](formal-hchb-vs-hchunk.md) |
-| 2b. Decode (quality@wall) | Warm-start BoN gene | **H-POOL** (`top_k=1`) | [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) |
-| 2c. Eval throughput | Batched multi-prompt | **H-BAT** (util) | [formal-hbat-vs-hearly.md](formal-hbat-vs-hearly.md) |
-| 2c′. Quality throughput | Batched multi-prompt POOL | **H-POOLB** (util) | [formal-hpoolb-vs-hpool.md](formal-hpoolb-vs-hpool.md) |
-| 2c″. Eval throughput | Chunked prefill under BAT | **H-CBAT** (util) | [formal-hcbat-vs-hbat.md](formal-hcbat-vs-hbat.md) |
-| 2c‴. Quality throughput | Chunked prefill under POOLB | **H-CPOOLB** (util) | [formal-hcpoolb-vs-hpoolb.md](formal-hcpoolb-vs-hpoolb.md) |
-| 2c⁗. Eval throughput | CHB B=256 under CBAT | **H-CHBAT** (util) | [formal-hchbat-vs-hcbat.md](formal-hchbat-vs-hcbat.md) |
-| 2c⁗′. Eval throughput | FUSE (FLASH⊕KVSEL) under CHBAT | **H-FUSEB** (util) | [formal-hfuseb-vs-hchbat.md](formal-hfuseb-vs-hchbat.md) |
-| 2c⁗″. Quality throughput | FUSE under CPOOLB | **H-FCPOOLB** (util) | [formal-hfcpoolb-vs-hcpoolb.md](formal-hfcpoolb-vs-hcpoolb.md) |
-| 2c⁗‴. Eval throughput | LAY under FUSEB batch | **H-LAYB** (util) | [formal-hlayb-vs-hfuseb.md](formal-hlayb-vs-hfuseb.md) |
-| 2c⁗⁗. Quality throughput | LAY under FCPOOLB batch | **H-FLAYB** (util) | [formal-hflayb-vs-hfcpoolb.md](formal-hflayb-vs-hfcpoolb.md) |
-| 2c⁗⁗′. Thin under LAYB | DEPTH_prun under LAYB | **H-DEPTHB** (KILL) | [hdepthb-vs-hlayb.md](hdepthb-vs-hlayb.md) |
-| 2c⁗⁗″. PRUN under LAYB | HPRUN under LAYB | **H-PRUNB** (KILL) | [hprunb-vs-hlayb.md](hprunb-vs-hlayb.md) |
-| 2c⁗⁗‴. PRUN under FLAYB | HPRUN under FLAYB | **H-PRUNF** (KILL) | [hprunf-vs-hflayb.md](hprunf-vs-hflayb.md) |
-| 2c⁗⁗⁗. Systems under LAYB | CUDA graph non-KV arm | **H-GRAPH** (util) | [formal-hgraph-vs-hlayb.md](formal-hgraph-vs-hlayb.md) |
-| 2c⁗⁗⁗′. Systems under FLAYB | CUDA graph non-KV arm | **H-GRAPHF** (util) | [formal-hgraphf-vs-hflayb.md](formal-hgraphf-vs-hflayb.md) |
-| 2c⁗⁗⁗″. Systems under GRAPH | CUDA graph all budgets | **H-GALL** (util) | [formal-hgall-vs-hgraph.md](formal-hgall-vs-hgraph.md) |
-| 2c⁗⁗⁗‴. Systems under GRAPHF | graph-all budgets | **H-GALLF** (KILL) | [hgallf-vs-hgraphf.md](hgallf-vs-hgraphf.md) |
-| — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
-| — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
-| — | Protocol stack (not a tip) | **H-CFUSE** = CHUNK ⊕ FUSE | [hcfuse-protocol.md](hcfuse-protocol.md) |
+| Step | Tip | Formal |
+|------|-----|--------|
+| 1. Train | **H-STAG** (`seq_lo=6`, `n_stages=4`) | [formal-hstag-vs-hcurl2.md](formal-hstag-vs-hcurl2.md) |
+| 2a. Decode speed | **H-EARLY** | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) |
+| 2b. Decode quality@wall | **H-POOL** (`top_k=1`) | [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) |
 
-Parents kept for lineage: **H-CURL2** (`seq_lo=6`, `n_stages=3`) ← **H-CURL** ← **H-CUR** (train), **H-DECKL ← H-DECK ← H-DEC** (decode).
+Parents: H-CURL2←H-CURL←H-CUR; H-DECKL←H-DECK←H-DEC.
 
-## Formal scoreboard (claim table)
+## Winner utils (keep)
+
+| Axis | Chain (tip unchanged) |
+|------|------------------------|
+| Train I/O | TOP → PIN → PRE → HALF → ADAMF → **PRE2** → (PRE3) |
+| Thin solo | PRUN / DEPTH (never under batch/ADAMF) |
+| Systems | FLASH → CHUNK → **CHB**; KVSEL; GRAPH → GRAPHF; **GALL** |
+| Batch speed | BAT → CBAT → CHBAT → FUSEB → **LAYB** (+ GRAPH/GALL) |
+| Batch quality | POOLB → CPOOLB → FCPOOLB → **FLAYB** (+ GRAPHF) |
+| Protocol | MIX = PRUN⊕LAY; FUSE = FLASH⊕KVSEL (**not** tips) |
+
+## Formal tip scoreboard
 
 | ID | Axis | teacher_lp | wall_ms | Status |
 |----|------|------------|---------|--------|
-| B2 | train ctrl | −14.65 | ~70 | gate |
-| B4 | decode ctrl | −14.49 | ~80 | gate |
-| H-CURL | train parent | −13.36 | — | prior tip (lo=8) |
-| H-CURL2 | train parent | −13.34 | — | prior tip (lo=6, stages=3) |
-| **H-STAG** | train | **−13.28** | — | official train (lo=6, stages=4) |
-| **H-EARLY** | decode | **−11.83** | **65** | official fast decode |
-| **H-POOL** | decode | **−11.69** | **70** | official quality decode |
+| B2 / B4 | gates | −14.65 / −14.49 | ~70 / ~80 | control |
+| **H-STAG** | train | **−13.28** | — | official |
+| **H-EARLY** | decode | **−11.83** | **65** | official fast |
+| **H-POOL** | decode | **−11.69** | **70** | official quality |
 
-Decode efficiency also reports **tokens/s + est. GFLOPs** (`npm run nano:flop` → [hflop-instrumentation.md](hflop-instrumentation.md)); wall alone can mislead (EARLY smoke: wall↓, GFLOPs↑).
+Also report tok/s + est. GFLOPs (`npm run nano:flop`).
 
-Smoke numbers never enter this table. Full KILL history: [`archive/`](archive/).
-
-## Commands
+## Core commands
 
 ```bash
-npm run nano:stag && npm run nano:stag:report
-npm run nano:early && npm run nano:early:report
-npm run nano:pool && npm run nano:pool:report
-npm run nano:bat && npm run nano:bat:report
-npm run nano:cbat && npm run nano:cbat:report
-npm run nano:formal:hcbat && npm run nano:formal:hcbat:report
-npm run nano:chbat && npm run nano:chbat:report
-npm run nano:formal:hchbat && npm run nano:formal:hchbat:report
-npm run nano:fuseb && npm run nano:fuseb:report
-npm run nano:formal:hfuseb && npm run nano:formal:hfuseb:report
-npm run nano:flop && npm run nano:flop:report
-npm run nano:formal:hstag && npm run nano:formal:hstag:report
-npm run nano:formal:hprun && npm run nano:formal:hprun:report
-npm run nano:formal:hearly && npm run nano:formal:hearly:report
-npm run nano:formal:hlay && npm run nano:formal:hlay:report
-npm run nano:layb && npm run nano:layb:report
-npm run nano:formal:hlayb && npm run nano:formal:hlayb:report
-npm run nano:flayb && npm run nano:flayb:report
-npm run nano:formal:hflayb && npm run nano:formal:hflayb:report
-npm run nano:depthb && npm run nano:depthb:report
-npm run nano:prunb && npm run nano:prunb:report
-npm run nano:prunf && npm run nano:prunf:report
-npm run nano:graph && npm run nano:graph:report
-npm run nano:formal:hgraph && npm run nano:formal:hgraph:report
-npm run nano:graphf && npm run nano:graphf:report
-npm run nano:formal:hgraphf && npm run nano:formal:hgraphf:report
-npm run nano:gall && npm run nano:gall:report
-npm run nano:formal:hgall && npm run nano:formal:hgall:report
-npm run nano:gallf && npm run nano:gallf:report
-npm run nano:formal:hshort && npm run nano:formal:hshort:report
-npm run nano:shortb && npm run nano:shortb:report
-npm run nano:formal:hpool && npm run nano:formal:hpool:report
-npm run nano:poolb && npm run nano:poolb:report
-npm run nano:formal:hpoolb && npm run nano:formal:hpoolb:report
-npm run nano:cpoolb && npm run nano:cpoolb:report
-npm run nano:formal:hcpoolb && npm run nano:formal:hcpoolb:report
-npm run nano:fcpoolb && npm run nano:fcpoolb:report
-npm run nano:formal:hfcpoolb && npm run nano:formal:hfcpoolb:report
-npm run nano:formal:hbat && npm run nano:formal:hbat:report
-npm run nano:formal:htop && npm run nano:formal:htop:report
-npm run nano:pin && npm run nano:pin:report
-npm run nano:pinc && npm run nano:pinc:report
-npm run nano:formal:hpin && npm run nano:formal:hpin:report
-npm run nano:pre && npm run nano:pre:report
-npm run nano:formal:hpre && npm run nano:formal:hpre:report
-npm run nano:half && npm run nano:half:report
-npm run nano:formal:hhalf && npm run nano:formal:hhalf:report
-npm run nano:adamf && npm run nano:adamf:report
-npm run nano:formal:hadamf && npm run nano:formal:hadamf:report
-npm run nano:async && npm run nano:async:report
-npm run nano:formal:hflash && npm run nano:formal:hflash:report
-npm run nano:formal:hkvsel && npm run nano:formal:hkvsel:report
-npm run nano:chunk && npm run nano:chunk:report
-npm run nano:formal:hchunk && npm run nano:formal:hchunk:report
-npm run nano:chb && npm run nano:chb:report
-npm run nano:formal:hchb && npm run nano:formal:hchb:report
-npm run nano:q4 && npm run nano:q4:report
-npm run nano:formal:hq4 && npm run nano:formal:hq4:report
-npm run nano:formal:hdepth && npm run nano:formal:hdepth:report
-npm run nano:mix && npm run nano:mix:report
-npm run nano:fuse && npm run nano:fuse:report
-npm run nano:cfuse && npm run nano:cfuse:report
+npm run nano:stag && npm run nano:formal:hstag
+npm run nano:early && npm run nano:formal:hearly
+npm run nano:pool && npm run nano:formal:hpool
+npm run nano:pre2 && npm run nano:formal:hpre2
+npm run nano:pre3 && npm run nano:formal:hpre3
+npm run nano:chb && npm run nano:layb && npm run nano:gall
+npm run nano:flayb && npm run nano:graphf
+npm run nano:mix && npm run nano:fuse
 ```
-
-## Closed compose branch (do not reopen without new parent)
-
-| ID | Result | Lesson |
-|----|--------|--------|
-| H-SYS | smoke KILL | Tip paste is not free lunch |
-| H-JOINT | smoke KILL | Joint train∪decode ≤ CURL default |
-| H-CACHE | smoke KILL | Global KV raises wall on ≤5M student |
-| H-CAP | smoke KILL | Hard length caps cut wall but quality < POOL−ε |
 
 ## Park status
 
-**PARKED** (tips: STAG / EARLY / POOL).  
-**Wave Q FOCUS** — Q8 done; **next: continue Wave Q or park**.  
-**H-PRE2** smoke+formal **PROMOTE** ([formal-hpre2-vs-hadamf.md](formal-hpre2-vs-hadamf.md) — ms/step↓; lp=ADAMF).  
-**H-DEPTHA** smoke **KILL** ([hdeptha-vs-hadamf.md](hdeptha-vs-hadamf.md) — quality < ADAMF−ε; skip formal).  
-**H-ADAMF** smoke+formal **PROMOTE** ([formal-hadamf-vs-hhalf.md](formal-hadamf-vs-hhalf.md) — ms/step↓; lp=HALF).  
-**H-HALF** smoke+formal **PROMOTE** ([formal-hhalf-vs-hpre.md](formal-hhalf-vs-hpre.md) — ms/step↓; lp=PRE).  
-**H-PRE** smoke+formal **PROMOTE** ([formal-hpre-vs-hpin.md](formal-hpre-vs-hpin.md) — ms/step↓; lp=PIN).  
-**H-GALLF** smoke **KILL** ([hgallf-vs-hgraphf.md](hgallf-vs-hgraphf.md) — wall↑ vs GRAPHF; skip formal).  
-**H-GALL** smoke+formal **PROMOTE** ([formal-hgall-vs-hgraph.md](formal-hgall-vs-hgraph.md) — wall↓; lp=GRAPH).  
-**H-GRAPHF** smoke+formal **PROMOTE** ([formal-hgraphf-vs-hflayb.md](formal-hgraphf-vs-hflayb.md) — wall↓; lp=FLAYB).  
-**H-GRAPH** smoke+formal **PROMOTE** ([formal-hgraph-vs-hlayb.md](formal-hgraph-vs-hlayb.md) — wall↓; lp=LAYB).  
-**H-PRUNF** smoke **KILL** ([hprunf-vs-hflayb.md](hprunf-vs-hflayb.md) — |Δlp| > ε vs FLAYB; skip formal).  
-**H-PRUNB** smoke **KILL** ([hprunb-vs-hlayb.md](hprunb-vs-hlayb.md) — |Δlp| > ε vs LAYB; skip formal).  
-**H-PINC** smoke **KILL** ([hpinc-vs-hpin.md](hpinc-vs-hpin.md) — ms/step↑ vs PIN; skip formal).  
-**H-DEPTHB** smoke **KILL** ([hdepthb-vs-hlayb.md](hdepthb-vs-hlayb.md) — |Δlp| > ε vs LAYB; skip formal).  
-**H-FLAYB** smoke+formal **PROMOTE** ([formal-hflayb-vs-hfcpoolb.md](formal-hflayb-vs-hfcpoolb.md) — tok/s↑ + wall↓; lp=FCPOOLB).  
-**H-SHORTB** smoke **KILL** ([hshortb-vs-hfuseb.md](hshortb-vs-hfuseb.md) — lp change vs FUSEB; skip formal).  
-**H-LAYB** smoke+formal **PROMOTE** ([formal-hlayb-vs-hfuseb.md](formal-hlayb-vs-hfuseb.md) — tok/s↑ + wall↓; lp=FUSEB).  
-**H-FCPOOLB** smoke+formal **PROMOTE** ([formal-hfcpoolb-vs-hcpoolb.md](formal-hfcpoolb-vs-hcpoolb.md) — tok/s↑ + wall↓; lp=CPOOLB).  
-**H-FUSEB** smoke+formal **PROMOTE** ([formal-hfuseb-vs-hchbat.md](formal-hfuseb-vs-hchbat.md) — tok/s↑ + wall↓; lp=CHBAT).  
-**H-CHBAT** smoke+formal **PROMOTE** ([formal-hchbat-vs-hcbat.md](formal-hchbat-vs-hcbat.md) — tok/s↑; lp=CBAT).  
-**H-CPOOLB** smoke+formal **PROMOTE** ([formal-hcpoolb-vs-hpoolb.md](formal-hcpoolb-vs-hpoolb.md) — tok/s↑; lp=POOLB).  
-**H-ASYNC** smoke **KILL** ([hasync-vs-hpin.md](hasync-vs-hpin.md) — e2e wall↑ vs PIN).  
-**H-CHB** smoke+formal **PROMOTE** ([formal-hchb-vs-hchunk.md](formal-hchb-vs-hchunk.md) — B=256).  
-**H-CBAT** smoke+formal **PROMOTE** ([formal-hcbat-vs-hbat.md](formal-hcbat-vs-hbat.md)).  
-**H-CFUSE** smoke **KILL** ([hcfuse-protocol.md](hcfuse-protocol.md) — wall ≥ min(CHUNK,FUSE)).  
-**H-Q4** smoke PROMOTE / formal **KILL** ([archive/formal-hq4-vs-hdepth.md](archive/formal-hq4-vs-hdepth.md)).  
-H-CHUNK / PIN / POOLB formal PROMOTE; FUSE/MIX PROTOCOL; **H-TOPK** purged.
+**PARKED** (tips).  
+**Wave R FOCUS** — next **H-PRE3** → **H-SERVE** (full serving stack) → **H-ETRAIN** → **H-ROUTE**.  
+KILL families purged from `nano_lm/` (ASYNC/PINC/GALLF/DEPTHA/B/PRUNB/F/SHORTB/CFUSE/Q4).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
-Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).  
-Lab queue: `.local/pesquisa.md`.
+Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).

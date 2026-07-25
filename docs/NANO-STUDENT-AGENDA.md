@@ -1,56 +1,26 @@
 # Nano Student + Teacher — Research Agenda
 
-> Lab-grade protocol. Side track under `nano_lm/`. Not C++ EvoGen Domain.  
-> Caps: cyclomatic ≤10 (file/function line caps waived).
+> Lab-grade protocol. Side track under `nano_lm/`. Caps: ≤80 / ≤200 / cyclo ≤10.
 
-## Honesty clause
+## Focus (what works)
 
-Mechanisms are math/code. Every H-ID has a null and a kill criterion.  
-**No claims of literal quantum cognition.**
+| Role | ID | Notes |
+|------|-----|-------|
+| Train tip | **H-STAG** | Curriculum `lo=6`, `stages=4` |
+| Decode tips | **H-EARLY** / **H-POOL** | Speed / quality@wall |
+| Serving systems | FLASH→CHUNK→**CHB**; GRAPH→GRAPHF; **GALL** | wall↓ |
+| Throughput | BAT…→**LAYB**; POOLB…→**FLAYB** | tok/s↑ |
+| Train I/O | TOP→…→**PRE2** (+ **PRE3**) | ms/step↓ |
+| Thin solo | DEPTH / PRUN | not under batch |
+| Protocol | MIX / FUSE | not tips |
 
-## Hardware lock
+**Next:** Wave R in `.local/pesquisa.md` — **PRE3 → SERVE → ETRAIN → ROUTE**.  
+Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
-| Resource | Cap |
-|----------|-----|
-| GPU | RTX 4060 Laptop **8 GiB** |
-| Teacher (frozen) | `roneneldan/TinyStories-33M` (fp16) |
-| Student | **≤5M params**, context ≤512 |
-| VRAM stop | **7.0 GiB** peak |
-| Data | TinyStories (Eldan & Li, [arXiv:2305.07759](https://arxiv.org/abs/2305.07759)) |
+## Archived KILLs
 
-## Baselines (claim gate)
+ASYNC, PINC, GALLF, DEPTHA/B, PRUNB/F, SHORTB, CFUSE, Q4, TOPK, compose, A–H deepeners — code purged; markdown in [`archive/`](results/nano-lm/archive/).
 
-| ID | Name |
-|----|------|
-| B0–B4 | Floor / CE / KD / AR / BoN — see prior docs |
+## Claim rule
 
-**Claim rule:** beat B2 (train) or B4 dual-gate (decode) on formal seeds `{0,1,2}` with fit≠eval.
-
-## Focus stack (what works)
-
-| Role | ID | Status |
-|------|-----|--------|
-| Train tip | **H-STAG** | formal PROMOTE |
-| Decode tips | **H-EARLY** / **H-POOL** | formal PROMOTE |
-| Systems decode | FLASH / KVSEL / **CHUNK** / **CHB** | formal PROMOTE |
-| Throughput | BAT / POOLB / CBAT / CPOOLB / CHBAT / FUSEB / FCPOOLB / LAYB / FLAYB / GRAPH / GRAPHF / GALL | formal PROMOTE |
-| Train util | TOP / **PIN** / **PRE** / **HALF** / **ADAMF** / **PRE2** / PRUN / DEPTH | formal PROMOTE |
-| Quant | **H-Q4** | smoke PROMOTE / formal **KILL** |
-| Protocol | MIX / FUSE / CFUSE | PROTOCOL / CFUSE smoke **KILL** |
-| Train I/O try | **H-ASYNC** | smoke **KILL** |
-| Batch SHORT try | **H-SHORTB** | smoke **KILL** |
-| Thin under batch try | **H-DEPTHB** / **H-PRUNB** / **H-PRUNF** | smoke **KILL** |
-| Compile under PIN try | **H-PINC** | smoke **KILL** |
-| Graph-all under GRAPHF try | **H-GALLF** | smoke **KILL** |
-| DEPTH under ADAMF try | **H-DEPTHA** | smoke **KILL** |
-
-**Do not** gene-widen EARLY/POOL or paste tips. Deepen systems/batch/TOP/DEPTH axes only.  
-Queue: `.local/pesquisa.md` (**Wave Q** — Q8 PRE2 formal PROMOTE; continue or park). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
-
-## Archived
-
-A–H deepeners, I/J KILLs, **H-TOPK**, **H-Q4** formal KILL, **H-CFUSE** / **H-ASYNC** / **H-SHORTB** / **H-DEPTHB** / **H-PINC** / **H-PRUNB** / **H-PRUNF** / **H-GALLF** / **H-DEPTHA** smoke KILL. [`archive/`](results/nano-lm/archive/).
-
-## Eval
-
-teacher_lp + wall + tok/s + GFLOPs + train ms/step. Matrix: `npm run nano:matrix:report`.
+Formal: seeds `{0,1,2}`, fit≠eval; beat tip−ε on quality and win wall/tok/s/ms-step as gated.
