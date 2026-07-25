@@ -21,6 +21,7 @@
 | 2b. Decode (quality@wall) | Warm-start BoN gene | **H-POOL** (`top_k=1`) | [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) |
 | 2c. Eval throughput | Batched multi-prompt | **H-BAT** (util) | [formal-hbat-vs-hearly.md](formal-hbat-vs-hearly.md) |
 | 2c′. Quality throughput | Batched multi-prompt POOL | **H-POOLB** (util) | [formal-hpoolb-vs-hpool.md](formal-hpoolb-vs-hpool.md) |
+| 2c″. Eval throughput | Chunked prefill under BAT | **H-CBAT** (util) | [formal-hcbat-vs-hbat.md](formal-hcbat-vs-hbat.md) |
 | — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
 | — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
 | — | Protocol stack (not a tip) | **H-CFUSE** = CHUNK ⊕ FUSE | [hcfuse-protocol.md](hcfuse-protocol.md) |
@@ -50,6 +51,8 @@ npm run nano:stag && npm run nano:stag:report
 npm run nano:early && npm run nano:early:report
 npm run nano:pool && npm run nano:pool:report
 npm run nano:bat && npm run nano:bat:report
+npm run nano:cbat && npm run nano:cbat:report
+npm run nano:formal:hcbat && npm run nano:formal:hcbat:report
 npm run nano:flop && npm run nano:flop:report
 npm run nano:formal:hstag && npm run nano:formal:hstag:report
 npm run nano:formal:hprun && npm run nano:formal:hprun:report
@@ -87,7 +90,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave L FOCUS** — deepen winners; **next: H-CBAT**.  
+**Wave L FOCUS** — deepen winners; **next: H-CHB**.  
+**H-CBAT** smoke+formal **PROMOTE** ([formal-hcbat-vs-hbat.md](formal-hcbat-vs-hbat.md)).  
 **H-CFUSE** smoke **KILL** ([hcfuse-protocol.md](hcfuse-protocol.md) — wall ≥ min(CHUNK,FUSE)).  
 **H-Q4** smoke PROMOTE / formal **KILL** ([archive/formal-hq4-vs-hdepth.md](archive/formal-hq4-vs-hdepth.md)).  
 H-CHUNK / PIN / POOLB formal PROMOTE; FUSE/MIX PROTOCOL; **H-TOPK** purged.
