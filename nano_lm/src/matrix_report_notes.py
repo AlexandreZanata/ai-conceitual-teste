@@ -9,7 +9,7 @@ GATES = [
 NOTES = [
     "## Notes",
     "- Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM/PROG/BTC formals.",
-    "- Wave W COMPLETE — [wave-w-summary.md](wave-w-summary.md); Wave X ACTIVE (H-TCHR/H-QT/H-GENC PROMOTE; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS/MEASURE/TELE/WIGNER KILL).",
+    "- Wave W COMPLETE — [wave-w-summary.md](wave-w-summary.md); Wave X ACTIVE (H-TCHR/H-QT/H-GENC PROMOTE; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS/MEASURE/TELE/WIGNER/CHRONO KILL).",
     "- H-PROG / H-BTC / H-EFF PROMOTE; H-MIXD KILL (runners purged).",
     "- H-TCHR PROMOTE — code teacher wire (`formal-htchr-code-teacher.md`).",
     "- H-QT PROMOTE — int8 weight-only serve (`formal-hqt-quantize.md`).",
@@ -39,6 +39,7 @@ NOTES = [
     "- H-Q-MEASURE KILL — mid-decode commit code↓ (`archive/hmeasure-measure.md`).",
     "- H-Q-TELE KILL — mid-layer residual teleport identity (`archive/htele-teleport.md`).",
     "- H-Q-WIGNER KILL — signed top-k quasi-prob identity (`archive/hwigner-wigner.md`).",
+    "- H-ABS-CHRONO KILL — acausal soft-label shuffle code↓ (`archive/hchrono-chrono.md`).",
     "- Matrix note: PROG/BTC/MIXD/EFF in wave-w-summary § Kill/promote.",
     "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",

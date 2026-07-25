@@ -38,7 +38,8 @@
 | **H-Q-MEASURE** | Mid-decode RAG slot measure/commit (smoke **KILL**; code↓ vs EARLY−ε; see archive) |
 | **H-Q-TELE** | Mid-layer residual RAG teleport (smoke **KILL**; identity vs EARLY; see archive) |
 | **H-Q-WIGNER** | Signed top-k logit quasi-prob (smoke **KILL**; identity vs EARLY; see archive) |
-| **H-ABS-CHRONO** | Acausal KD soft-label shuffle (Wave X next; `.local/pesquisa.md`) |
+| **H-ABS-CHRONO** | Acausal KD soft-label shuffle (smoke **KILL**; code↓ vs EARLY; see archive) |
+| **H-ABS-MIRROR** | Anti-teacher (1−p) margin aux loss (Wave X next; `.local/pesquisa.md`) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

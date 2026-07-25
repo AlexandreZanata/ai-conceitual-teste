@@ -264,3 +264,11 @@ def test_given_card_when_read_then_hwigner_kill() -> None:
     assert "KILL" in text
     assert "hwigner-wigner" in text
     assert "H-ABS-CHRONO" in text or "CHRONO" in text
+
+
+def test_given_card_when_read_then_hchrono_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-ABS-CHRONO" in text or "CHRONO" in text
+    assert "KILL" in text
+    assert "hchrono-chrono" in text
+    assert "H-ABS-MIRROR" in text or "MIRROR" in text
