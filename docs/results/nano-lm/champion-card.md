@@ -28,6 +28,7 @@
 | 2c⁗. Eval throughput | CHB B=256 under CBAT | **H-CHBAT** (util) | [formal-hchbat-vs-hcbat.md](formal-hchbat-vs-hcbat.md) |
 | 2c⁗′. Eval throughput | FUSE (FLASH⊕KVSEL) under CHBAT | **H-FUSEB** (util) | [formal-hfuseb-vs-hchbat.md](formal-hfuseb-vs-hchbat.md) |
 | 2c⁗″. Quality throughput | FUSE under CPOOLB | **H-FCPOOLB** (util) | [formal-hfcpoolb-vs-hcpoolb.md](formal-hfcpoolb-vs-hcpoolb.md) |
+| 2c⁗‴. Eval throughput | LAY under FUSEB batch | **H-LAYB** (util) | [formal-hlayb-vs-hfuseb.md](formal-hlayb-vs-hfuseb.md) |
 | — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
 | — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
 | — | Protocol stack (not a tip) | **H-CFUSE** = CHUNK ⊕ FUSE | [hcfuse-protocol.md](hcfuse-protocol.md) |
@@ -68,6 +69,8 @@ npm run nano:formal:hstag && npm run nano:formal:hstag:report
 npm run nano:formal:hprun && npm run nano:formal:hprun:report
 npm run nano:formal:hearly && npm run nano:formal:hearly:report
 npm run nano:formal:hlay && npm run nano:formal:hlay:report
+npm run nano:layb && npm run nano:layb:report
+npm run nano:formal:hlayb && npm run nano:formal:hlayb:report
 npm run nano:formal:hshort && npm run nano:formal:hshort:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report
 npm run nano:poolb && npm run nano:poolb:report
@@ -107,7 +110,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave N FOCUS** — N1 done; **next: N2 H-LAYB**.  
+**Wave N FOCUS** — N2 done; **next: N3 H-SHORTB**.  
+**H-LAYB** smoke+formal **PROMOTE** ([formal-hlayb-vs-hfuseb.md](formal-hlayb-vs-hfuseb.md) — tok/s↑ + wall↓; lp=FUSEB).  
 **H-FCPOOLB** smoke+formal **PROMOTE** ([formal-hfcpoolb-vs-hcpoolb.md](formal-hfcpoolb-vs-hcpoolb.md) — tok/s↑ + wall↓; lp=CPOOLB).  
 **H-FUSEB** smoke+formal **PROMOTE** ([formal-hfuseb-vs-hchbat.md](formal-hfuseb-vs-hchbat.md) — tok/s↑ + wall↓; lp=CHBAT).  
 **H-CHBAT** smoke+formal **PROMOTE** ([formal-hchbat-vs-hcbat.md](formal-hchbat-vs-hcbat.md) — tok/s↑; lp=CBAT).  
