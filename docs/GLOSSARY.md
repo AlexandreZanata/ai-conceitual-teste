@@ -35,7 +35,8 @@
 | **H-ABS-HOLO** | 4-bit KV + RFF holographic checksum (smoke **KILL**; code↓ vs EARLY−ε; see archive) |
 | **H-ABS-PHASE** | 2D rotary / complex e^{iθ} on Q/K (smoke **KILL**; identity vs EARLY; see archive) |
 | **H-Q-ENTPOS** | Low-rank bilinear pos⊗tok attn bias (smoke **KILL**; identity vs EARLY; see archive) |
-| **H-Q-MEASURE** | Mid-decode RAG slot measurement/commit (Wave X next; `.local/pesquisa.md`) |
+| **H-Q-MEASURE** | Mid-decode RAG slot measure/commit (smoke **KILL**; code↓ vs EARLY−ε; see archive) |
+| **H-Q-TELE** | Inject retrieved vectors at mid-layer residual (Wave X next; `.local/pesquisa.md`) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”
