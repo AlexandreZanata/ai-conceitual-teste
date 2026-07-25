@@ -1,71 +1,53 @@
-# Champion card — tip-stack protocol (parked tips)
+# Champion card — tip-stack + official recipes
 
-> Compose tree closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** all **KILL**). Tips on **separate axes**.  
-> KILL history: [`archive/`](archive/). Lab queue: `.local/pesquisa.md` (**Wave T complete — parked**).
+> Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
+> KILL history: [`archive/`](archive/). Queue: `.local/pesquisa.md` (**Wave U**).
 
-## Official tips
+## Official tips (parked)
 
-| Step | Tip | Formal |
-|------|-----|--------|
-| 1. Train | **H-STAG** (`seq_lo=6`, `n_stages=4`) | [formal-hstag-vs-hcurl2.md](formal-hstag-vs-hcurl2.md) |
-| 2a. Decode speed | **H-EARLY** | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) |
-| 2b. Decode quality@wall | **H-POOL** (`top_k=1`) | [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) |
+| Tip | Role | Formal |
+|-----|------|--------|
+| **H-STAG** | Train | [formal-hstag-vs-hcurl2.md](formal-hstag-vs-hcurl2.md) |
+| **H-EARLY** | Decode speed | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) |
+| **H-POOL** | Decode quality@wall | [formal-hpool-vs-hdeckl.md](formal-hpool-vs-hdeckl.md) |
 
-Parents: H-CURL2←H-CURL←H-CUR; H-DECKL←H-DECK←H-DEC.
+## Official recipes (tip-relative packs)
 
-## Winner utils (keep)
+| Recipe | Pack | vs tip | Evidence | Transfer |
+|--------|------|--------|----------|----------|
+| Serve-fast | **H-PACK** | EARLY | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | holds ([hxfer](hxfer-transfer.md)) |
+| Serve-quality | **H-QPACK** | POOL | [formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) | OOD **KILL** |
+| Train-step | **H-TPACK** | STAG (ms/step only) | [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) | transfer eval **KILL** |
 
-| Axis | Chain (tip unchanged) |
-|------|------------------------|
-| Train I/O | TOP → … → **PRE3** via **TPACK** (ms/step; not e2e) |
-| Thin solo | PRUN / DEPTH (never under batch/ADAMF) |
-| Systems | FLASH → CHUNK → **CHB**; KVSEL; GRAPH → GRAPHF; **GALL**; **SERVE** (min-wall); **SROUTE**/ROUTE (Pareto); **PACK** (both vs EARLY) |
-| Batch speed | **SKIP** + **LAYB** via **BPACK** (BAT→SKIP→LAYB; CBAT demoted) |
-| Batch quality | **FLAYB** via **QPACK** (POOLB→…→FLAYB; + GRAPHF) |
-| Protocol | MIX / FUSE / PARETO / PACK / BPACK / QPACK / **TPACK** (**not** tips) |
+Also: **H-BPACK** (SKIP+LAYB vs EARLY). CBAT demoted. ETRAIN e2e **KILL** purged.  
+**H-XFER** smoke **KILL** — harness claims stay; do not advertise OOD/heldout transfer for QPACK/TPACK.
 
-## Formal tip scoreboard
+## Tip scoreboard
 
-| ID | Axis | teacher_lp | wall_ms | Status |
-|----|------|------------|---------|--------|
-| B2 / B4 | gates | −14.65 / −14.49 | ~70 / ~80 | control |
-| **H-STAG** | train | **−13.28** | — | official |
-| **H-EARLY** | decode | **−11.83** | **65** | official fast |
-| **H-POOL** | decode | **−11.69** | **70** | official quality |
+| ID | teacher_lp | wall_ms | Status |
+|----|------------|---------|--------|
+| **H-STAG** | **−13.28** | — | official train |
+| **H-EARLY** | **−11.83** | **65** | official fast |
+| **H-POOL** | **−11.69** | **70** | official quality |
 
-Also report tok/s + est. GFLOPs (`npm run nano:flop`).
+Report tok/s + GFLOPs (`npm run nano:flop`).
 
-## Core commands
+## Commands
 
 ```bash
-npm run nano:stag && npm run nano:formal:hstag
-npm run nano:early && npm run nano:formal:hearly
-npm run nano:pool && npm run nano:formal:hpool
-npm run nano:pre2 && npm run nano:formal:hpre2
-npm run nano:pre3 && npm run nano:formal:hpre3
-npm run nano:etrain && npm run nano:formal:hetrain
-npm run nano:serve && npm run nano:formal:hserve
-npm run nano:route && npm run nano:formal:hroute
-npm run nano:pareto && npm run nano:formal:hpareto
-npm run nano:sroute && npm run nano:formal:hsroute
-npm run nano:skip && npm run nano:formal:hskip
+npm run nano:formal:hstag && npm run nano:formal:hearly && npm run nano:formal:hpool
 npm run nano:pack && npm run nano:formal:hpack
-npm run nano:bpack && npm run nano:formal:hbpack
 npm run nano:qpack && npm run nano:formal:hqpack
 npm run nano:tpack && npm run nano:formal:htpack
-npm run nano:chb && npm run nano:layb && npm run nano:gall
-npm run nano:flayb && npm run nano:graphf
-npm run nano:mix && npm run nano:fuse
+npm run nano:xfer && npm run nano:xfer:report
+npm run nano:bpack && npm run nano:formal:hbpack
+npm run nano:pareto && npm run nano:flop
 ```
 
 ## Park status
 
-**PARKED** (tips + Wave T pack hygiene).  
-**H-TPACK** smoke+formal **PROMOTE** ([formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) — PRE3 ms/step↓ vs live STAG; lp≥STAG−ε; not e2e).  
-**H-QPACK** smoke+formal **PROMOTE** ([formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) — FLAYB beats POOL; lp≈POOL; wall↓ tok/s↑).  
-**H-BPACK** smoke+formal **PROMOTE** ([formal-hbpack-vs-hearly.md](formal-hbpack-vs-hearly.md) — SKIP+LAYB both beat EARLY; GFLOPs=EARLY).  
-**H-PACK** / **H-SKIP** / **H-SROUTE** prior PROMOTEs stand.  
-KILL families purged from `nano_lm/` (ASYNC/PINC/GALLF/DEPTHA/B/PRUNB/F/SHORTB/CFUSE/Q4).
+**PARKED** tips + Wave T packs.  
+**Wave U:** U1 H-XFER done (**KILL**); next **H-BUD**.  
+No more letter-packs without a new mechanism.
 
-Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
-Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).
+Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

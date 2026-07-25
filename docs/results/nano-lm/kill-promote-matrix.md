@@ -5,23 +5,9 @@ Wall clock (matrix): 154.6s
 
 Primary metric: teacher mean log-prob of student completions.
 Full historical rows: `docs/results/nano-lm/archive/`.
-H-SPEC gate: tokens/s > B3 and teacher_lp ≥ B3 − 0.05.
-Tips: H-STAG train / H-EARLY speed / H-POOL quality@wall.
-Serving utils: FLASH/CHUNK/CHB + LAYB/FLAYB + GRAPH/GRAPHF/GALL + SERVE + ROUTE.
-Batch utils: BAT→CBAT→CHBAT→FUSEB; POOLB→CPOOLB→FCPOOLB.
-Train I/O: TOP→PIN→PRE→HALF→ADAMF→PRE2→PRE3.
-H-SERVE gate: |Δlp|≤ε vs EARLY and (wall↓ or tok/s↑) (formal PROMOTE; recipe=speed).
-H-ROUTE gate: not dominated by GALL or GRAPHF on (lp, wall) (formal PROMOTE).
-H-PARETO gate: audit live (≥1 pair); FLAG tok/s↑ & GFLOPs>tip·(1+δ) (formal PROMOTE; CBAT FLAG).
-H-SROUTE gate: not dominated by SERVE on (lp, wall) (formal PROMOTE; SERVE keeps min-wall).
-H-SKIP gate: wall↓ or tok/s↑ vs BAT and GFLOPs ≤ BAT·(1+δ) (formal PROMOTE; CBAT demoted).
-H-PACK gate: SERVE |Δlp|≤ε + win; SROUTE lp≥EARLY−ε + win (formal PROMOTE; packs frozen).
-H-BPACK gate: SKIP+LAYB |Δlp|≤ε + win; SKIP GFLOPs≤EARLY·(1+δ) (formal PROMOTE).
-H-QPACK gate: FLAYB lp≥POOL−ε + wall/tok/s win (formal PROMOTE; quality pack).
-H-TPACK gate: PRE3 lp≥STAG−ε + ms/step < STAG (formal PROMOTE; not e2e).
-H-ETRAIN gate: lp ≥ STAG−ε and e2e_wall < STAG (smoke PROMOTE / formal KILL — cache tax).
-H-FLOP: wall + tok/s + est. GFLOPs.
-H-MIX / H-FUSE / H-PARETO / H-PACK / H-BPACK / H-QPACK / H-TPACK: PROTOCOL/audit only (not tips).
+Tips: H-STAG / H-EARLY / H-POOL.
+Recipes: H-PACK (serve-fast), H-QPACK (serve-quality), H-TPACK (train-step).
+H-FLOP: wall + tok/s + est. GFLOPs; H-PARETO flags dirty tok/s↑.
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
 |--------|-----------------|---------|--------------|-------|---|-----------|
@@ -36,7 +22,7 @@ H-MIX / H-FUSE / H-PARETO / H-PACK / H-BPACK / H-QPACK / H-TPACK: PROTOCOL/audit
 | H-CUR | -17.0133 | +0.0785 | 47 | — | 3 | PROMOTE (beats B2) |
 
 ## Notes
-- Focus winners only. KILL code purged; history: `docs/results/nano-lm/archive/`.
-- Wave T complete (BPACK/QPACK/TPACK formal PROMOTE) — parked; `.local/pesquisa.md`.
-- Smoke budgets are tentative; formal = 3 seeds + fit≠eval.
+- Official recipes only for public claims. Archive: `docs/results/nano-lm/archive/`.
+- Wave U: XFER **KILL** (smoke; PACK holds, QPACK/TPACK fail transfer) → BUD → RETIP → AMORT (`.local/pesquisa.md`).
+- ETRAIN e2e KILL purged. Formal = 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

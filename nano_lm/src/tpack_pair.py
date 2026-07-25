@@ -17,10 +17,10 @@ from top_ops import DEFAULT_TOP_K
 from top_pair import TIP_STAGES, row_htop
 from top_train import train_live_batches
 
-__all__ = ["run_seed_pair"]
+__all__ = ["run_seed_pair", "train_seed_pair", "eval_seed_rows"]
 
 
-def run_seed_pair(
+def train_seed_pair(
     c: dict[str, Any],
     out: Path,
     seed: int,
@@ -29,11 +29,11 @@ def run_seed_pair(
     steps: int,
     *,
     label_prefix: str = "HTPACK",
-) -> list[dict[str, Any]]:
+) -> tuple[dict[str, Any], dict[str, Any]]:
     """
     GIVEN shared STAG batches
-    WHEN training live STAG vs PRE3 stack (cache then depth-3 train)
-    THEN return eval rows gated on ms/step (cache_build reported, not gated).
+    WHEN training live STAG vs PRE3 stack
+    THEN return (live, tpack) train dicts with out_path / ms_per_step.
     """
     batches = plan_cur_batches(
         tokenizer_id=c["tokenizer_id"],
@@ -88,14 +88,31 @@ def run_seed_pair(
     )
     tpack["cache_build_s"] = cache_meta["cache_build_s"]
     write_json(out / f"{label_prefix}_seed{seed}_train.json", tpack)
-    ev_l = eval_ckpt(c, Path(live["out_path"]), seed, "H-STAG")
-    ev_t = eval_ckpt(c, Path(tpack["out_path"]), seed, "H-TPACK")
-    if device.type == "cuda":
-        torch.cuda.empty_cache()
+    return live, tpack
+
+
+def eval_seed_rows(
+    c: dict[str, Any],
+    live: dict[str, Any],
+    tpack: dict[str, Any],
+    seed: int,
+    *,
+    label_prefix: str = "HTPACK",
+    prompts_path: Path | None = None,
+    pack_tag: str = "",
+) -> list[dict[str, Any]]:
+    """Eval live STAG + TPACK on prompts_path (default c['prompts'])."""
+    cfg = dict(c)
+    if prompts_path is not None:
+        cfg["prompts"] = prompts_path
+    tag = f"_{pack_tag}" if pack_tag else ""
+    ev_l = eval_ckpt(cfg, Path(live["out_path"]), seed, "H-STAG")
+    ev_t = eval_ckpt(cfg, Path(tpack["out_path"]), seed, "H-TPACK")
+    cache_s = float(tpack.get("cache_build_s", 0.0))
     return [
         row_htop(
             "H-STAG",
-            f"{label_prefix}_live_seed{seed}",
+            f"{label_prefix}_live{tag}_seed{seed}",
             ev_l["teacher_mean_logprob"],
             live["ms_per_step"],
             live["train_wall_s"],
@@ -103,12 +120,36 @@ def run_seed_pair(
         ),
         row_htop(
             "H-TPACK",
-            f"{label_prefix}_seed{seed}",
+            f"{label_prefix}{tag}_seed{seed}",
             ev_t["teacher_mean_logprob"],
             tpack["ms_per_step"],
             tpack["train_wall_s"],
             seed,
-            cache_build_s=float(cache_meta["cache_build_s"]),
+            cache_build_s=cache_s,
             top_k=DEFAULT_TOP_K,
         ),
     ]
+
+
+def run_seed_pair(
+    c: dict[str, Any],
+    out: Path,
+    seed: int,
+    device,
+    vocab: int,
+    steps: int,
+    *,
+    label_prefix: str = "HTPACK",
+) -> list[dict[str, Any]]:
+    """
+    GIVEN shared STAG batches
+    WHEN training live STAG vs PRE3 stack (cache then depth-3 train)
+    THEN return eval rows gated on ms/step (cache_build reported, not gated).
+    """
+    live, tpack = train_seed_pair(
+        c, out, seed, device, vocab, steps, label_prefix=label_prefix
+    )
+    rows = eval_seed_rows(c, live, tpack, seed, label_prefix=label_prefix)
+    if device.type == "cuda":
+        torch.cuda.empty_cache()
+    return rows

@@ -1,9 +1,9 @@
 # Archived nano-lm KILL / non-champion history
 
-Active focus: STAG/EARLY/POOL + CHB/LAYB/FLAYB/GRAPH*/GALL + PRE2/PRE3.
-Purged code for ASYNC/PINC/GALLF/DEPTHA/DEPTHB/PRUNB/PRUNF/SHORTB/CFUSE/Q4.
+Official recipes: PACK (serve-fast), QPACK (serve-quality), TPACK (train-step).
+Includes ETRAIN e2e KILL, Q4, ASYNC, compose, etc.
 
-## Files (148)
+## Files (150)
 
 - `formal-hann-vs-kdcos.md`
 - `formal-hcasc-vs-b4.md`
@@ -15,6 +15,7 @@ Purged code for ASYNC/PINC/GALLF/DEPTHA/DEPTHB/PRUNB/PRUNF/SHORTB/CFUSE/Q4.
 - `formal-hdecm-vs-b4.md`
 - `formal-hdecp-vs-b4.md`
 - `formal-hdecq-vs-b4.md`
+- `formal-hetrain-vs-hstag.md`
 - `formal-hfit-vs-b2.md`
 - `formal-hhold-vs-b2.md`
 - `formal-hhop-vs-b2.md`
@@ -80,6 +81,7 @@ Purged code for ASYNC/PINC/GALLF/DEPTHA/DEPTHB/PRUNB/PRUNF/SHORTB/CFUSE/Q4.
 - `hent2-vs-b2.md`
 - `hent3-vs-b2.md`
 - `hepi-vs-b2.md`
+- `hetrain-vs-hstag.md`
 - `hexit-vs-hearly.md`
 - `hfit-vs-hsel.md`
 - `hfos-vs-hsel.md`

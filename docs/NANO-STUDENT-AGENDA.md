@@ -1,27 +1,25 @@
 # Nano Student + Teacher — Research Agenda
 
-> Lab-grade protocol. Side track under `nano_lm/`. Caps: ≤80 / ≤200 / cyclo ≤10.
+> Lab-grade protocol under `nano_lm/`. Caps: ≤80 / ≤200 / cyclo ≤10.
 
-## Focus (what works)
+## Official tips
 
-| Role | ID | Notes |
-|------|-----|-------|
-| Train tip | **H-STAG** | Curriculum `lo=6`, `stages=4` |
-| Decode tips | **H-EARLY** / **H-POOL** | Speed / quality@wall |
-| Serving systems | **SERVE** (min-wall) / **SROUTE** (Pareto) via **PACK** | wall↓ / quality@tok/s |
-| Throughput | **SKIP**+**LAYB** via **BPACK** | tok/s↑ (CBAT demoted) |
-| Quality | **FLAYB** via **QPACK** | tok/s↑ vs POOL |
-| Train I/O | TOP→…→**PRE3** via **TPACK** | ms/step↓ (not e2e) |
-| Thin solo | DEPTH / PRUN | not under batch |
-| Protocol | MIX / FUSE / PARETO / PACK / BPACK / QPACK / **TPACK** | not tips |
+**H-STAG** (train) · **H-EARLY** (speed) · **H-POOL** (quality@wall)
 
-**Status:** Wave T complete (BPACK / QPACK / TPACK all formal PROMOTE) — parked.  
+## Official recipes (faster / cheaper delivery)
+
+| Recipe | Pack | Claim | Transfer (H-XFER) |
+|--------|------|-------|-------------------|
+| Serve-fast | **H-PACK** | vs EARLY | holds (heldout/elongated/OOD) |
+| Serve-quality | **H-QPACK** | vs POOL | **KILL** on OOD |
+| Train-step | **H-TPACK** | vs STAG ms/step (not e2e) | **KILL** on transfer eval |
+
+## Next — Wave U
+
+~~Transfer (H-XFER)~~ smoke **KILL** — [`hxfer-transfer.md`](results/nano-lm/hxfer-transfer.md).  
+Next: budget (**H-BUD**), then retip (**H-RETIP**), amortize (**H-AMORT**).  
 Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
-## Archived KILLs
+## Archived
 
-ASYNC, PINC, GALLF, DEPTHA/B, PRUNB/F, SHORTB, CFUSE, Q4, **ETRAIN** (formal e2e), TOPK, compose, A–H deepeners — code kept for ETRAIN report; older KILL code purged; markdown in [`archive/`](results/nano-lm/archive/).
-
-## Claim rule
-
-Formal: seeds `{0,1,2}`, fit≠eval; beat tip−ε on quality and win wall/tok/s/ms-step as gated.
+KILL code purged (incl. ETRAIN). Markdown: [`archive/`](results/nano-lm/archive/).

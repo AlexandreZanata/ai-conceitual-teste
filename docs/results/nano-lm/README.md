@@ -1,19 +1,13 @@
 # Nano-LM results
 
-Focus: tips STAG/EARLY/POOL + serving/batch/train-I/O winners.  
-Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).
-
-## Active
+Official tips + 3 recipes. Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).
 
 | Doc | Role |
 |-----|------|
-| [champion-card.md](champion-card.md) | Frozen tips + winner util chains |
-| [kill-promote-matrix.md](kill-promote-matrix.md) | Slim matrix |
-| [hmix-protocol.md](hmix-protocol.md) / [hfuse-protocol.md](hfuse-protocol.md) | Protocols |
-| formal-hstag… / hearly… / hpool… | Tips |
-| formal-hpre2… / hpre3… / **hetrain…** / **htpack…** / hadamf… / hchb… / hlayb… / hgall… / **hserve…** / **hroute…** / **hsroute…** / **hskip…** / **hpack…** / **hbpack…** / **hqpack…** / **hpareto…** | Hot utils |
-| [hflop-instrumentation.md](hflop-instrumentation.md) / [hpareto-audit.md](hpareto-audit.md) | Metrics |
-
-## Archive
-
-All KILL markdown: [`archive/`](archive/).
+| [champion-card.md](champion-card.md) | Tips + PACK/QPACK/TPACK |
+| [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | Serve-fast |
+| [formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) | Serve-quality |
+| [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) | Train-step |
+| [formal-hbpack-vs-hearly.md](formal-hbpack-vs-hearly.md) | Throughput support |
+| [kill-promote-matrix.md](kill-promote-matrix.md) | Matrix |
+| [archive/](archive/) | KILL history (incl. ETRAIN) |
