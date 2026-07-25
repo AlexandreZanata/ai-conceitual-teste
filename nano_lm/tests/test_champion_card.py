@@ -224,3 +224,11 @@ def test_given_card_when_read_then_hholo_kill() -> None:
     assert "KILL" in text
     assert "hholo-holo" in text
     assert "H-ABS-PHASE" in text or "PHASE" in text
+
+
+def test_given_card_when_read_then_hphase_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-ABS-PHASE" in text or "PHASE" in text
+    assert "KILL" in text
+    assert "hphase-phase" in text
+    assert "H-Q-ENTPOS" in text or "ENTPOS" in text

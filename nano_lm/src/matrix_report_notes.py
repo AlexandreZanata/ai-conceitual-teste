@@ -9,7 +9,7 @@ GATES = [
 NOTES = [
     "## Notes",
     "- Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM/PROG/BTC formals.",
-    "- Wave W COMPLETE — [wave-w-summary.md](wave-w-summary.md); Wave X ACTIVE (H-TCHR/H-QT/H-GENC PROMOTE; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO KILL).",
+    "- Wave W COMPLETE — [wave-w-summary.md](wave-w-summary.md); Wave X ACTIVE (H-TCHR/H-QT/H-GENC PROMOTE; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE KILL).",
     "- H-PROG / H-BTC / H-EFF PROMOTE; H-MIXD KILL (runners purged).",
     "- H-TCHR PROMOTE — code teacher wire (`formal-htchr-code-teacher.md`).",
     "- H-QT PROMOTE — int8 weight-only serve (`formal-hqt-quantize.md`).",
@@ -34,6 +34,7 @@ NOTES = [
     "- H-ABS-DNA KILL — codon 3-mer packs (`archive/hdna-dna.md`).",
     "- H-ABS-DEBATE KILL — dual-half identity (`archive/hdebate-debate.md`).",
     "- H-ABS-HOLO KILL — 4-bit+RFF code↓ (`archive/hholo-holo.md`).",
+    "- H-ABS-PHASE KILL — 2D-rotary identity (`archive/hphase-phase.md`).",
     "- Matrix note: PROG/BTC/MIXD/EFF in wave-w-summary § Kill/promote.",
     "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
