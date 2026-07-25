@@ -85,11 +85,12 @@ npm run verify
 43. Wave M / H-CHBAT CHB B under CBAT — done (smoke+formal **PROMOTE** — tok/s↑; lp=CBAT)
 44. Wave M / H-FUSEB FUSE under CHBAT batch — done (smoke+formal **PROMOTE** — tok/s↑ + wall↓; lp=CHBAT)
 45. Wave M focus queue complete — see `.local/pesquisa.md`
+46. Wave N / H-FCPOOLB FUSE under CPOOLB — done (smoke+formal **PROMOTE** — tok/s↑ + wall↓; lp=CPOOLB)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** open Wave N or park — see `.local/pesquisa.md`
+**Next:** **H-LAYB** — see `.local/pesquisa.md`
 
 ---
 

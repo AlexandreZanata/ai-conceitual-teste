@@ -27,6 +27,7 @@
 | 2c‴. Quality throughput | Chunked prefill under POOLB | **H-CPOOLB** (util) | [formal-hcpoolb-vs-hpoolb.md](formal-hcpoolb-vs-hpoolb.md) |
 | 2c⁗. Eval throughput | CHB B=256 under CBAT | **H-CHBAT** (util) | [formal-hchbat-vs-hcbat.md](formal-hchbat-vs-hcbat.md) |
 | 2c⁗′. Eval throughput | FUSE (FLASH⊕KVSEL) under CHBAT | **H-FUSEB** (util) | [formal-hfuseb-vs-hchbat.md](formal-hfuseb-vs-hchbat.md) |
+| 2c⁗″. Quality throughput | FUSE under CPOOLB | **H-FCPOOLB** (util) | [formal-hfcpoolb-vs-hcpoolb.md](formal-hfcpoolb-vs-hcpoolb.md) |
 | — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
 | — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
 | — | Protocol stack (not a tip) | **H-CFUSE** = CHUNK ⊕ FUSE | [hcfuse-protocol.md](hcfuse-protocol.md) |
@@ -73,6 +74,8 @@ npm run nano:poolb && npm run nano:poolb:report
 npm run nano:formal:hpoolb && npm run nano:formal:hpoolb:report
 npm run nano:cpoolb && npm run nano:cpoolb:report
 npm run nano:formal:hcpoolb && npm run nano:formal:hcpoolb:report
+npm run nano:fcpoolb && npm run nano:fcpoolb:report
+npm run nano:formal:hfcpoolb && npm run nano:formal:hfcpoolb:report
 npm run nano:formal:hbat && npm run nano:formal:hbat:report
 npm run nano:formal:htop && npm run nano:formal:htop:report
 npm run nano:pin && npm run nano:pin:report
@@ -104,7 +107,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave M FOCUS** — queue done; **next: open Wave N or park**.  
+**Wave N FOCUS** — N1 done; **next: N2 H-LAYB**.  
+**H-FCPOOLB** smoke+formal **PROMOTE** ([formal-hfcpoolb-vs-hcpoolb.md](formal-hfcpoolb-vs-hcpoolb.md) — tok/s↑ + wall↓; lp=CPOOLB).  
 **H-FUSEB** smoke+formal **PROMOTE** ([formal-hfuseb-vs-hchbat.md](formal-hfuseb-vs-hchbat.md) — tok/s↑ + wall↓; lp=CHBAT).  
 **H-CHBAT** smoke+formal **PROMOTE** ([formal-hchbat-vs-hcbat.md](formal-hchbat-vs-hcbat.md) — tok/s↑; lp=CBAT).  
 **H-CPOOLB** smoke+formal **PROMOTE** ([formal-hcpoolb-vs-hpoolb.md](formal-hcpoolb-vs-hpoolb.md) — tok/s↑; lp=POOLB).  
