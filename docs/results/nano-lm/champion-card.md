@@ -21,8 +21,8 @@ Parents: H-CURL2←H-CURL←H-CUR; H-DECKL←H-DECK←H-DEC.
 | Thin solo | PRUN / DEPTH (never under batch/ADAMF) |
 | Systems | FLASH → CHUNK → **CHB**; KVSEL; GRAPH → GRAPHF; **GALL**; **SERVE** (min-wall); **SROUTE**/ROUTE (Pareto); **PACK** (both vs EARLY) |
 | Batch speed | **SKIP** + **LAYB** via **BPACK** (BAT→SKIP→LAYB; CBAT demoted) |
-| Batch quality | POOLB → CPOOLB → FCPOOLB → **FLAYB** (+ GRAPHF) |
-| Protocol | MIX / FUSE / PARETO / PACK / **BPACK** (**not** tips) |
+| Batch quality | **FLAYB** via **QPACK** (POOLB→…→FLAYB; + GRAPHF) |
+| Protocol | MIX / FUSE / PARETO / PACK / BPACK / **QPACK** (**not** tips) |
 
 ## Formal tip scoreboard
 
@@ -51,6 +51,7 @@ npm run nano:sroute && npm run nano:formal:hsroute
 npm run nano:skip && npm run nano:formal:hskip
 npm run nano:pack && npm run nano:formal:hpack
 npm run nano:bpack && npm run nano:formal:hbpack
+npm run nano:qpack && npm run nano:formal:hqpack
 npm run nano:chb && npm run nano:layb && npm run nano:gall
 npm run nano:flayb && npm run nano:graphf
 npm run nano:mix && npm run nano:fuse
@@ -59,10 +60,10 @@ npm run nano:mix && npm run nano:fuse
 ## Park status
 
 **PARKED** (tips).  
-**Wave T FOCUS** — **T0 H-BPACK** smoke+formal **PROMOTE**; next **H-QPACK**.  
+**Wave T FOCUS** — **T1 H-QPACK** smoke+formal **PROMOTE**; next **H-TPACK**.  
+**H-QPACK** smoke+formal **PROMOTE** ([formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) — FLAYB beats POOL; lp≈POOL; wall↓ tok/s↑).  
 **H-BPACK** smoke+formal **PROMOTE** ([formal-hbpack-vs-hearly.md](formal-hbpack-vs-hearly.md) — SKIP+LAYB both beat EARLY; GFLOPs=EARLY).  
-**H-PACK** smoke+formal **PROMOTE** ([formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) — SERVE+SROUTE both beat EARLY).  
-**H-SKIP** / **H-SROUTE** / **H-PARETO** prior PROMOTEs stand.  
+**H-PACK** / **H-SKIP** / **H-SROUTE** prior PROMOTEs stand.  
 KILL families purged from `nano_lm/` (ASYNC/PINC/GALLF/DEPTHA/B/PRUNB/F/SHORTB/CFUSE/Q4).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
