@@ -216,3 +216,11 @@ def test_given_card_when_read_then_hdebate_kill() -> None:
     assert "H-ABS-DEBATE" in text or "DEBATE" in text
     assert "KILL" in text
     assert "hdebate-debate" in text
+
+
+def test_given_card_when_read_then_hholo_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-ABS-HOLO" in text or "HOLO" in text
+    assert "KILL" in text
+    assert "hholo-holo" in text
+    assert "H-ABS-PHASE" in text or "PHASE" in text
