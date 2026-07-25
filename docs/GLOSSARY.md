@@ -19,6 +19,7 @@
 | **H-QCOMP** | Classical-shadow KV sketch (smoke PROMOTE → formal **KILL**; see archive) |
 | **H-Q-QUBITKV** | Critical KV + residual sketch (smoke **KILL**; see archive) |
 | **H-GENC** | Genetic context/serve genome under BUD (smoke+formal **PROMOTE**) |
+| **H-GENQ-ABS** | Amplitude/measurement genetics vs GENC (smoke+formal **KILL**; see archive) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

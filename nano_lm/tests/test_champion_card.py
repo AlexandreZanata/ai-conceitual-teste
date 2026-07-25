@@ -125,3 +125,10 @@ def test_given_card_when_read_then_hgenc_promote() -> None:
     assert "H-GENC" in text or "GENC" in text
     assert "formal-hgenc-genome" in text
     assert "PROMOTE" in text
+
+
+def test_given_card_when_read_then_hgenq_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-GENQ" in text or "GENQ" in text
+    assert "KILL" in text
+    assert "hgenq-amplitude" in text
