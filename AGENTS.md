@@ -111,11 +111,12 @@ npm run verify
 69. Wave R / H-ETRAIN PRE3 e2e vs live STAG — done (smoke PROMOTE / formal **KILL** — e2e wall↑; cache tax)
 70. Wave R / H-ROUTE length-budget GALL/GRAPHF — done (smoke+formal **PROMOTE** — not dominated; tok/s↑)
 71. Wave R / H-PARETO efficiency audit — done (smoke+formal **PROMOTE** — CBAT FLAG; report-only)
+72. Wave S / H-SROUTE ROUTE vs SERVE — done (smoke+formal **PROMOTE** — not dominated; SERVE keeps min-wall)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** Wave R parked — see `.local/pesquisa.md`
+**Next:** Wave S **H-SKIP** — see `.local/pesquisa.md`
 
 ---
 
