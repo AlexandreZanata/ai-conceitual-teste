@@ -21,6 +21,7 @@
 | **H-GENC** | Genetic context/serve genome under BUD (smoke+formal **PROMOTE**) |
 | **H-GENQ-ABS** | Amplitude/measurement genetics vs GENC (smoke+formal **KILL**; see archive) |
 | **H-DIST** | Shared-vocab Neo KD on curated prog (smoke **KILL**; see archive) |
+| **H-Q-SLOT** | K curated slots + measure commit (smoke **KILL**; see archive) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

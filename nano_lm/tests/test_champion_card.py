@@ -139,3 +139,10 @@ def test_given_card_when_read_then_hdist_kill() -> None:
     assert "H-DIST" in text or "DIST" in text
     assert "KILL" in text
     assert "hdist-distill" in text
+
+
+def test_given_card_when_read_then_hqslot_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-Q-SLOT" in text or "Q-SLOT" in text or "QSLOT" in text
+    assert "KILL" in text
+    assert "hqslot-slots" in text

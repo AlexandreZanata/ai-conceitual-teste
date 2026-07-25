@@ -37,5 +37,6 @@
 | [formal-hgenc-genome.md](formal-hgenc-genome.md) | **Genetic serve genome** (Wave X **PROMOTE**) |
 | [archive/hgenq-amplitude.md](archive/hgenq-amplitude.md) | **H-GENQ-ABS** amplitude genetics (Wave X **KILL**) |
 | [archive/hdist-distill.md](archive/hdist-distill.md) | **H-DIST** shared-vocab Neo KD (Wave X smoke **KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST **KILL** → H-Q-SLOT (`.local/pesquisa.md`) |
+| [archive/hqslot-slots.md](archive/hqslot-slots.md) | **H-Q-SLOT** K-slot measure (Wave X smoke **KILL**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT **KILL** → H-Q-INTERF (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |
