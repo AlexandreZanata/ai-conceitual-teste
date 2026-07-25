@@ -9,6 +9,7 @@ GATES = [
     "Train utils: PRUN/TOP/DEPTH/PIN (tip STAG/TOP unchanged).",
     "H-Q4 gate: lp ≥ DEPTH−ε and wall < DEPTH (formal KILL — quality cliff).",
     "H-ASYNC gate: lp ≥ PIN−ε and e2e_wall < PIN (smoke KILL — e2e↑).",
+    "H-PINC gate: lp ≥ PIN−ε and ms/step < PIN (smoke KILL — compile tax).",
     "H-CPOOLB gate: lp ≥ POOLB−ε and tok/s > POOLB (formal PROMOTE).",
     "H-CHBAT gate: lp ≥ CBAT−ε and tok/s > CBAT (formal PROMOTE).",
     "H-FUSEB gate: lp ≥ CHBAT−ε and (tok/s > CHBAT or wall < CHBAT) (formal PROMOTE).",
@@ -24,9 +25,10 @@ NOTES = [
     "## Notes",
     "- Focus stack: systems + batch + TOP/PIN + DEPTH. Archive: `docs/results/nano-lm/archive/`.",
     "- Official tips: **H-STAG** / **H-EARLY** / **H-POOL**.",
-    "- H-TOPK / H-Q4 formal KILL; H-CFUSE / **H-ASYNC** / **H-SHORTB** / **H-DEPTHB** smoke KILL; "
+    "- H-TOPK / H-Q4 formal KILL; H-CFUSE / **H-ASYNC** / **H-SHORTB** / **H-DEPTHB** / "
+    "**H-PINC** smoke KILL; "
     "**H-CBAT** / **H-CHB** / **H-CPOOLB** / **H-CHBAT** / **H-FUSEB** / **H-FCPOOLB** / "
-    "**H-LAYB** / **H-FLAYB** formal PROMOTE. Wave O O2 done (`.local/pesquisa.md`).",
+    "**H-LAYB** / **H-FLAYB** formal PROMOTE. Wave O complete (`.local/pesquisa.md`).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

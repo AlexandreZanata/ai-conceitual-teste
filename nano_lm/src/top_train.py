@@ -92,6 +92,46 @@ def train_live_batches(
     }
 
 
+def _to_device_rec(
+    rec: dict[str, torch.Tensor],
+    *,
+    device: torch.device,
+    vocab_size: int,
+    non_blocking: bool,
+) -> tuple[torch.Tensor, torch.Tensor]:
+    ids = rec["ids"].to(device, non_blocking=non_blocking)
+    idx = rec["topk_idx"].to(device, non_blocking=non_blocking)
+    val = rec["topk_val"].to(
+        device=device, dtype=torch.float32, non_blocking=non_blocking
+    )
+    return ids, expand_topk_logits(idx, val, vocab_size=vocab_size)
+
+
+def _warmup_compile(
+    *,
+    student: torch.nn.Module,
+    opt: torch.optim.Optimizer,
+    rec: dict[str, torch.Tensor],
+    device: torch.device,
+    vocab_size: int,
+    non_blocking: bool,
+    temperature: float,
+    alpha: float,
+) -> None:
+    """Untimed forward+backward to warm compile; discard grads (no opt.step)."""
+    ids, t_logits = _to_device_rec(
+        rec, device=device, vocab_size=vocab_size, non_blocking=non_blocking
+    )
+    opt.zero_grad(set_to_none=True)
+    loss = kd_loss(
+        student(ids).logits, t_logits, ids, temperature=temperature, alpha=alpha
+    )
+    loss.backward()
+    opt.zero_grad(set_to_none=True)
+    if device.type == "cuda":
+        torch.cuda.synchronize()
+
+
 def train_topk_cache(
     *,
     records: list[dict[str, torch.Tensor]],
@@ -103,26 +143,36 @@ def train_topk_cache(
     alpha: float,
     out_path: Path,
     pinned: bool = False,
+    compiled: bool = False,
     hypothesis: str = "H-TOP",
 ) -> dict[str, Any]:
     torch.manual_seed(seed)
     if device.type == "cuda":
         torch.cuda.manual_seed_all(seed)
     student = build_student(vocab_size).to(device)
+    if compiled:
+        student = torch.compile(student, mode="default")
     student.train()
     opt = torch.optim.AdamW(student.parameters(), lr=lr)
     use_pin = bool(pinned) and device.type == "cuda"
     recs = pin_records(records) if use_pin else records
+    if compiled and recs:
+        _warmup_compile(
+            student=student,
+            opt=opt,
+            rec=recs[0],
+            device=device,
+            vocab_size=vocab_size,
+            non_blocking=use_pin,
+            temperature=temperature,
+            alpha=alpha,
+        )
 
     def steps_fn():
         for rec in recs:
-            ids = rec["ids"].to(device, non_blocking=use_pin)
-            idx = rec["topk_idx"].to(device, non_blocking=use_pin)
-            val = rec["topk_val"].to(
-                device=device, dtype=torch.float32, non_blocking=use_pin
+            yield _to_device_rec(
+                rec, device=device, vocab_size=vocab_size, non_blocking=use_pin
             )
-            t_logits = expand_topk_logits(idx, val, vocab_size=vocab_size)
-            yield ids, t_logits
 
     losses, wall_s = _train_loop(
         student=student,
@@ -132,19 +182,21 @@ def train_topk_cache(
         alpha=alpha,
         steps_fn=steps_fn,
     )
+    bare = getattr(student, "_orig_mod", student)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     torch.save(
-        {"model": student.state_dict(), "seed": seed, "hypothesis": hypothesis},
+        {"model": bare.state_dict(), "seed": seed, "hypothesis": hypothesis},
         out_path,
     )
     steps = len(records)
     return {
         "hypothesis": hypothesis,
-        "params": count_params(student),
+        "params": count_params(bare),
         "steps": steps,
         "mean_loss": sum(losses) / max(len(losses), 1),
         "train_wall_s": wall_s,
         "ms_per_step": ms_per_step(wall_s=wall_s, steps=steps),
         "out_path": str(out_path),
         "pinned": use_pin,
+        "compiled": bool(compiled),
     }
