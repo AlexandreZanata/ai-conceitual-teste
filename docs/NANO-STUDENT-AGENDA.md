@@ -30,7 +30,7 @@ Lab: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-c
 | W0 CURATED | Download + manifest | DONE |
 | W1 H-PROG | Programming domain PACK gate | smoke+formal **[PROMOTE](results/nano-lm/formal-hprog-programming.md)** |
 | W2 H-BTC | Bitcoin/docs domain PACK gate | smoke+formal **[PROMOTE](results/nano-lm/formal-hbtc-bitcoin.md)** |
-| W3 H-MIXD | STAG′ + curated train mix | **NEXT** |
+| W3 H-MIXD | STAG + curated train mix | smoke [PROMOTE](results/nano-lm/hmixd-mix.md); formal next |
 | W4 H-EFF | Re-measure PACK/TPACK on new packs | queued |
 
 ## Archived

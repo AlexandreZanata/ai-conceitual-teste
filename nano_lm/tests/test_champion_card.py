@@ -39,3 +39,9 @@ def test_given_card_when_read_then_hbtc_smoke() -> None:
     text = CARD.read_text(encoding="utf-8")
     assert "H-BTC" in text or "BTC" in text
     assert "formal-hbtc-bitcoin" in text
+
+
+def test_given_card_when_read_then_hmixd_smoke() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-MIXD" in text or "MIXD" in text
+    assert "hmixd-mix" in text

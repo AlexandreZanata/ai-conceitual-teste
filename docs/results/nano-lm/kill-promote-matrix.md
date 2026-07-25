@@ -26,5 +26,6 @@ Train: H-TPACK + H-AMORT; quality serve H-QPACK in-harness only.
 - Wave V COMPLETE; Wave W ACTIVE — curated KB (`.local/pesquisa.md`).
 - H-PROG smoke+formal PROMOTE (`formal-hprog-programming.md`).
 - H-BTC smoke+formal PROMOTE (`formal-hbtc-bitcoin.md`).
+- H-MIXD smoke PROMOTE (`hmixd-mix.md`); formal pending.
 - EvoGen survival archived: `docs/archive/evogen/`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
