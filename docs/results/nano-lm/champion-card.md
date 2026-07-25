@@ -72,6 +72,8 @@ npm run nano:formal:hearly && npm run nano:formal:hearly:report
 npm run nano:formal:hlay && npm run nano:formal:hlay:report
 npm run nano:layb && npm run nano:layb:report
 npm run nano:formal:hlayb && npm run nano:formal:hlayb:report
+npm run nano:flayb && npm run nano:flayb:report
+npm run nano:formal:hflayb && npm run nano:formal:hflayb:report
 npm run nano:formal:hshort && npm run nano:formal:hshort:report
 npm run nano:shortb && npm run nano:shortb:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report
