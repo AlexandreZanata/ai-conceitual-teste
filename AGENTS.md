@@ -99,6 +99,7 @@ npm run verify
 57. Wave P focus queue complete — see `.local/pesquisa.md`
 58. Wave Q / H-GRAPHF CUDA graph under FLAYB — done (smoke+formal **PROMOTE** — wall↓; lp=FLAYB)
 59. Wave Q / H-GALL CUDA graph all budgets — done (smoke+formal **PROMOTE** — wall↓; lp=GRAPH)
+60. Wave Q / H-GALLF graph-all under GRAPHF — done (smoke **KILL** — wall↑ vs GRAPHF; skip formal)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
