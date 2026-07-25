@@ -44,5 +44,6 @@
 | [archive/habsspiral-spiral.md](archive/habsspiral-spiral.md) | **H-ABS-SPIRAL** Hilbert-pos (Wave X smoke **KILL**) |
 | [archive/hqgrover-grover.md](archive/hqgrover-grover.md) | **H-Q-GROVER** mass amplify (Wave X smoke **KILL**) |
 | [archive/hqtunnel-tunnel.md](archive/hqtunnel-tunnel.md) | **H-Q-TUNNEL** leaky causal (Wave X smoke **KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL **KILL** → H-Q-BELL (`.local/pesquisa.md`) |
+| [archive/hqbell-bell.md](archive/hqbell-bell.md) | **H-Q-BELL** distant K/V couple (Wave X smoke **KILL**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL **KILL** → H-ABS-ORACLE1 (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |
