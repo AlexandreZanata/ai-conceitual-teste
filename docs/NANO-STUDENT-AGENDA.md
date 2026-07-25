@@ -32,7 +32,7 @@ One-pager: [`RECIPES.md`](results/nano-lm/RECIPES.md).
 | W3 H-MIXD | STAG + curated train mix | formal **[KILL](results/nano-lm/archive/hmixd-mix.md)** (tooling purged) |
 | W4 H-EFF | PACK efficiency re-measure | smoke+formal **[PROMOTE](results/nano-lm/formal-heff-efficiency.md)** |
 
-Wave X+ **ACTIVE** — **H-TCHR** / **H-QT** / **H-GENC** **[PROMOTE](results/nano-lm/formal-htchr-code-teacher.md)** / **[PROMOTE](results/nano-lm/formal-hqt-quantize.md)** / **[PROMOTE](results/nano-lm/formal-hgenc-genome.md)** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER **KILL** (see [`archive/`](results/nano-lm/archive/)) → **H-Q-TUNNEL** (`.local/pesquisa.md`). Phase E corpus **DONE** ([e5-eval-suites.md](results/nano-lm/e5-eval-suites.md)).
+Wave X+ **ACTIVE** — **H-TCHR** / **H-QT** / **H-GENC** **[PROMOTE](results/nano-lm/formal-htchr-code-teacher.md)** / **[PROMOTE](results/nano-lm/formal-hqt-quantize.md)** / **[PROMOTE](results/nano-lm/formal-hgenc-genome.md)** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL **KILL** (see [`archive/`](results/nano-lm/archive/)) → **H-Q-BELL** (`.local/pesquisa.md`). Phase E corpus **DONE** ([e5-eval-suites.md](results/nano-lm/e5-eval-suites.md)).
 
 ## Archived
 

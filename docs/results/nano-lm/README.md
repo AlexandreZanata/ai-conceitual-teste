@@ -43,5 +43,6 @@
 | [archive/hqanneal-anneal.md](archive/hqanneal-anneal.md) | **H-Q-ANNEAL** T(t)/conf(t) cooling (Wave X smoke **KILL**) |
 | [archive/habsspiral-spiral.md](archive/habsspiral-spiral.md) | **H-ABS-SPIRAL** Hilbert-pos (Wave X smoke **KILL**) |
 | [archive/hqgrover-grover.md](archive/hqgrover-grover.md) | **H-Q-GROVER** mass amplify (Wave X smoke **KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER **KILL** → H-Q-TUNNEL (`.local/pesquisa.md`) |
+| [archive/hqtunnel-tunnel.md](archive/hqtunnel-tunnel.md) | **H-Q-TUNNEL** leaky causal (Wave X smoke **KILL**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL **KILL** → H-Q-BELL (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |

@@ -27,6 +27,7 @@
 | **H-Q-ANNEAL** | Per-token T(t)/conf(t) cooling on EARLY (smoke **KILL**; see archive) |
 | **H-ABS-SPIRAL** | Hilbert-curve absolute position remap (smoke **KILL**; see archive) |
 | **H-Q-GROVER** | R-round next-token mass amplify p∝p² (smoke **KILL**; see archive) |
+| **H-Q-TUNNEL** | Tiny ε leak past causal MASK (smoke **KILL**; identity vs EARLY; see archive) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”
