@@ -232,3 +232,11 @@ def test_given_card_when_read_then_hphase_kill() -> None:
     assert "KILL" in text
     assert "hphase-phase" in text
     assert "H-Q-ENTPOS" in text or "ENTPOS" in text
+
+
+def test_given_card_when_read_then_hentpos_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-Q-ENTPOS" in text or "ENTPOS" in text
+    assert "KILL" in text
+    assert "hentpos-entpos" in text
+    assert "H-Q-MEASURE" in text or "MEASURE" in text

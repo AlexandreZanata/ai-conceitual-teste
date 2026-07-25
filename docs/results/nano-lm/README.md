@@ -50,5 +50,6 @@
 | [archive/hdebate-debate.md](archive/hdebate-debate.md) | **H-ABS-DEBATE** dual-half BoN (Wave X smoke **KILL**) |
 | [archive/hholo-holo.md](archive/hholo-holo.md) | **H-ABS-HOLO** 4-bit+RFF checksum (Wave X smoke **KILL**) |
 | [archive/hphase-phase.md](archive/hphase-phase.md) | **H-ABS-PHASE** 2D-rotary e^{iθ} (Wave X smoke **KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE **KILL** → H-Q-ENTPOS (`.local/pesquisa.md`) |
+| [archive/hentpos-entpos.md](archive/hentpos-entpos.md) | **H-Q-ENTPOS** pos⊗tok bilinear bias (Wave X smoke **KILL**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS **KILL** → H-Q-MEASURE (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |
