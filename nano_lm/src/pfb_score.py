@@ -15,6 +15,7 @@ from tchr_score import code_teacher_mean_logprob, dual_means
 
 __all__ = [
     "collect_pfb_banks",
+    "collect_beam_banks",
     "commit_pfb_rows",
     "attach_code_teacher",
     "arm_means",
@@ -118,6 +119,66 @@ def collect_pfb_banks(
             }
         )
     return parent_rows, banks
+
+
+def collect_beam_banks(
+    *,
+    story_teacher: LoadedModel,
+    student: object,
+    parent_rows: list[dict[str, Any]],
+    gene: EarlyGene,
+    max_new: int,
+    beam_seed: int,
+    k: int,
+    temperature: float = PFB_TEMP,
+) -> list[dict[str, Any]]:
+    """
+    GIVEN parent rows (prompt + parent_story/cont)
+    WHEN decoding K beams only (no re-parent)
+    THEN return banks aligned to parent_rows for PFB commit.
+    """
+    g = _gene_base(gene)
+    tok = story_teacher.tokenizer
+    device = story_teacher.device
+    banks: list[dict[str, Any]] = []
+    for i, prow in enumerate(parent_rows):
+        text = str(prow["prompt"])
+        beams = decode_early_beams(
+            student,
+            tok,
+            text,
+            n=int(k),
+            max_new_tokens=max_new,
+            min_new=int(g["min_new"]),
+            conf_threshold=float(g["conf_threshold"]),
+            patience=int(g["patience"]),
+            temperature=float(temperature),
+            top_p=float(g["top_p"]),
+            seed=int(beam_seed) + i,
+            device=device,
+        )
+        conts = [b.text for b in beams]
+        stories = [
+            float(code_teacher_mean_logprob(story_teacher, text, c))
+            for c in conts
+        ]
+        banks.append(
+            {
+                "prompt": text,
+                "seed": int(prow["seed"]),
+                "parent_story": float(prow["story_teacher_lp"]),
+                "parent_cont": str(prow["continuation"]),
+                "parent_n_new": int(prow["n_new"]),
+                "parent_wall_ms": float(prow["wall_ms"]),
+                "conts": conts,
+                "story_lps": stories,
+                "wall_ms": float(beams[0].wall_ms) if beams else 0.0,
+                "n_news": [len(b.token_ids) for b in beams],
+                "unique": float(unique_texts(conts)),
+                "k": float(k),
+            }
+        )
+    return banks
 
 
 def commit_pfb_rows(

@@ -45,6 +45,7 @@ NOTES = [
     "- H-ABS-CSAFE KILL — story-floor code BoN low-elig story↓ (`archive/hcsafe-csafe.md`).",
     "- H-ABS-PFB PROMOTE — parent-fallback story-floor BoN (`formal-hpfb-pfb.md`).",
     "- H-ABS-QPFB PROMOTE — PFB on QT-int8 (`formal-hqpfb-qpfb.md`).",
+    "- H-ABS-PFB2 PROMOTE — PFB K=2 wall↓ vs k=4 (`formal-hpfb2-pfb2.md`).",
     "- Matrix note: PROG/BTC/MIXD/EFF in wave-w-summary § Kill/promote.",
     "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",

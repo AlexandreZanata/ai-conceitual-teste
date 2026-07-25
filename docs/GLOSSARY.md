@@ -44,6 +44,7 @@
 | **H-ABS-CSAFE** | Story-constrained code BoN (smoke **KILL**; low elig story↓; see archive) |
 | **H-ABS-PFB** | Parent-fallback story-floor code BoN (smoke+formal **PROMOTE**) |
 | **H-ABS-QPFB** | PFB on QT-int8 student (smoke+formal **PROMOTE**) |
+| **H-ABS-PFB2** | PFB with K=2 (smoke+formal **PROMOTE**; wall↓ vs k=4) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

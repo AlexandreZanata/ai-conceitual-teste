@@ -141,6 +141,13 @@ def test_given_card_when_read_then_hqpfb_promote() -> None:
     assert "PROMOTE" in text
 
 
+def test_given_card_when_read_then_hpfb2_promote() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-ABS-PFB2" in text or "PFB2" in text
+    assert "formal-hpfb2-pfb2" in text
+    assert "PROMOTE" in text
+
+
 def test_given_card_when_read_then_hgenq_kill() -> None:
     text = CARD.read_text(encoding="utf-8")
     assert "H-GENQ" in text or "GENQ" in text
