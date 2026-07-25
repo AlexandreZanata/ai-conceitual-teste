@@ -23,6 +23,10 @@ venv/
 nano_lm/.cache/
 nano_lm/.hf_cache/
 
+# Curated public downloads (regenerate: npm run nano:curated)
+nano_lm/data/curated/**
+!nano_lm/data/curated/.gitkeep
+
 # Node
 node_modules/
 dist/

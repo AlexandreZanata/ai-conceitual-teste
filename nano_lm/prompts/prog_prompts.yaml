@@ -1,0 +1,12 @@
+# H-PROG — programming domain (Python/Rust curated slices), disjoint from smoke/fit/ood/howto.
+# Sources: docs.python.org tutorial (PSF); Rust book ch03 (CC-BY-SA / MIT Apache-2.0).
+# Teacher stays TinyStories; probe whether PACK tip gate holds on code/docs English @128.
+prompts:
+  - id: g01
+    text: "In Python, to create a list of squares you can write squares = [x**2 for x in"
+  - id: g02
+    text: "The range function yields a sequence of numbers; for example range(5, 10) produces"
+  - id: g03
+    text: "In Rust, variables are immutable by default; to allow mutation you must declare"
+  - id: g04
+    text: "A Python function definition starts with def and may include default arguments such as"

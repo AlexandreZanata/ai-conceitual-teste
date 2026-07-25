@@ -8,9 +8,9 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-REPORT = ROOT / "docs" / "results" / "BENCHMARK-REPORT.md"
-SUMMARY = ROOT / "docs" / "results" / "survival-benchmark-summary.md"
-CURVES = ROOT / "docs" / "results" / "curves"
+REPORT = ROOT / "docs" / "archive" / "evogen" / "results" / "BENCHMARK-REPORT.md"
+SUMMARY = ROOT / "docs" / "archive" / "evogen" / "results" / "survival-benchmark-summary.md"
+CURVES = ROOT / "docs" / "archive" / "evogen" / "results" / "curves"
 RESULTS = ROOT / "results" / "survival"
 
 REQUIRED_HEADINGS = [

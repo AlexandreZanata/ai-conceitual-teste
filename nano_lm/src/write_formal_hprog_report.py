@@ -1,11 +1,11 @@
-"""Render formal H-XFER2 PACK-only transfer deepen."""
+"""Render formal H-PROG programming domain capacity report."""
 
 from __future__ import annotations
 
 import argparse
 from pathlib import Path
 
-from write_hxfer2_report import render
+from write_hprog_report import render
 
 
 def main() -> int:
@@ -13,12 +13,12 @@ def main() -> int:
     p.add_argument(
         "--formal",
         type=Path,
-        default=Path("results/nano-lm/formal-hxfer2/formal.json"),
+        default=Path("results/nano-lm/formal-hprog/formal.json"),
     )
     p.add_argument(
         "--out",
         type=Path,
-        default=Path("docs/results/nano-lm/formal-hxfer2-transfer.md"),
+        default=Path("docs/results/nano-lm/formal-hprog-programming.md"),
     )
     args = p.parse_args()
     text = render(args.formal, formal=True)

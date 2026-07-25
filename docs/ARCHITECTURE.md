@@ -1,87 +1,18 @@
-# EvoGen — Architecture
+# Architecture — nano generative LM (active)
 
-> Normative for agents. Product intent (PT): [plano-conceitual-evogen.md](plano-conceitual-evogen.md).
+> EvoGen C++ PoC docs: [`archive/evogen/`](archive/evogen/README.md).
 
-## Product
+## Active stack
 
-**EvoGen** is a lightweight research PoC that combines:
+| Layer | Location | Role |
+|-------|----------|------|
+| Student ≤5M | `nano_lm/` | Causal LM train / decode / recipes |
+| Teacher | TinyStories-33M (HF) | Log-prob judge (story harness) |
+| Tips | STAG′ / EARLY / POOL | Train + decode champions |
+| Recipes | PACK / TPACK+AMORT / QPACK | Speed / steps / in-harness quality |
+| Curated KB | `nano_lm/data/curated/` | Programming + frontier public corpora |
+| Lab book | `.local/pesquisa.md` | Wave queue (gitignored) |
 
-1. Genetic / population learning  
-2. Direct response learning (intra-lifetime / online)  
-3. Natural selection via an `Environment` fitness pressure  
+## Frozen (not active)
 
-Core language: **C++17/20**. One process: evolutionary engine + embedded HTTP/WebSocket server. Web UI is an observation tool, not a commercial product.
-
-## Layers
-
-| Layer | Responsibility | Location |
-|-------|----------------|----------|
-| **Interfaces** | REST/WebSocket JSON, static `web/` assets | `src/server/`, `web/` |
-| **Application** | Experiment control (start/pause/config), recording, A/B/C modes | `src/server/` (`ExperimentController`, `MetricsHub`) |
-| **Domain** | `Genome`, `Agent`, `Population`, selection, mutation, `DirectLearner`, `Environment` contracts | `src/core/`, `src/environments/` |
-| **Infrastructure** | RNG, JSON I/O, optional SQLite/JSON persistence, threading | thin adapters next to core |
-
-Dependency rule: Domain has **zero** knowledge of HTTP, HTML, or chart libraries. Server calls Domain directly in-process.
-
-## Aggregates and entities
-
-| Term | Kind | Root / notes |
-|------|------|--------------|
-| `Genome` | Value Object | `weights`, evolvable `mutation_rate`, `learning_rate` |
-| `Agent` | Entity | owns a `Genome` + lifetime state (`fitness`, short history) |
-| `Population` | Aggregate | collection of `Agent` + genetic operators |
-| `Environment` | Port (interface) | supplies stimuli + `evaluate(response, stimulus)` |
-| `Generation` | Value / record | generation index + metrics snapshot |
-| `Experiment` | Application aggregate | config, seed, condition A/B/C, run state |
-
-## Ports
-
-```text
-Environment          ← Domain depends on this port
-Recorder             ← Application writes GenerationMetrics
-ExperimentController ← Application starts/pauses loop
-```
-
-## Main loop (domain)
-
-```text
-for each generation:
-  for each agent:
-    begin_lifetime() unless condition B continuing online
-    if env.interactive():          # T2 SurvivalArenaEnv
-      reset_episode(seed)
-      while not done:
-        stimulus = observe()
-        response = agent.respond(stimulus)
-        reward   = step(response)   # move/eat/hazard; may end episode
-        if direct learning: phenotype += lr * (target - response) * stimulus
-        agent.fitness += reward
-    else:                          # T1 function approx
-      for each stimulus in environment.episode():
-        response = agent.respond(stimulus)
-        target   = environment.target_of(stimulus)
-        reward   = environment.evaluate(response, stimulus)
-        if direct learning:
-          phenotype += lr * (target - response) * stimulus
-        agent.fitness += reward
-  recorder.log_generation(... includes alive_mean, wall_ms_elapsed)
-  if budgets hit (τ / max_wall_ms / max_generations): stop; write meta.json
-  if drift due: flip season/hazard on Environment
-  if genetic reproduction enabled:
-    parents from genotype (Darwinian) or phenotype→genotype (Lamarckian)
-    population = crossover_and_mutate(parents)
-```
-
-## Size and complexity (mandatory)
-
-Every `.cpp` / `.hpp` must obey harness cyclomatic ≤10 (file/function line caps waived). Prefer clear modules. Quality scanner must include C++ suffixes before the first C++ commit lands.
-
-## Non-goals (C++ EvoGen product)
-
-- Generic ML framework  
-- Heavy ML libraries (PyTorch, TensorFlow, etc.) inside the evolutionary binary  
-- Microservices or mandatory external DB  
-
-## Side track — nano-LM (phases 10–11)
-
-[`nano_lm/`](../nano_lm/) is an **isolated** Python/PyTorch experiment: TinyStories decode comparison (AR / BoN / MAE) plus student≤5M + teacher-33M matrix (B0–B4, H-* including speculative H-SPEC). It is **not** part of Domain aggregates (`Genome`, `Population`, …). Protocol: [NANO-LM-TRACK.md](NANO-LM-TRACK.md), [NANO-STUDENT-AGENDA.md](NANO-STUDENT-AGENDA.md). 
+C++ binary `evogen`, survival arena, A/B/C TB benches — archived scientifically; code retained for reproducibility only.

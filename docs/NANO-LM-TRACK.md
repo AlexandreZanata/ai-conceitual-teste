@@ -1,10 +1,13 @@
 # Nano-LM Track — Research Protocol
 
-> Side experiment track. Does **not** change EvoGen C++ Domain. Caps: cyclomatic ≤10 (file/function line caps waived).
+> **Active lab.** Caps: ≤80 / ≤200 / cyclo ≤10.  
+> EvoGen C++ Domain is frozen (`docs/archive/evogen/`).
 
 ## Hypothesis
 
 Multi-attempt evaluate (many candidate futures scored, one committed) can match or beat sequential autoregressive (AR) quality on a tiny specialized LM, under comparable or better wall-clock / token-eval tradeoffs — without relying only on long purely sequential next-token chains.
+
+Wave W extends the track with **curated public programming + frontier corpora** and PACK efficiency on those domains (see `.local/pesquisa.md`).
 
 ## Academic baseline
 

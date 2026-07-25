@@ -66,4 +66,4 @@ Mode: `transfer PACK (+BPACK report) on elongated/ood/ood_long`; packs=`{'elonga
 
 Tips unchanged. Wave V PACK transfer deepen.
 
-Commands: `npm run nano:xfer2` → `npm run nano:xfer2:report`.
+Commands: tooling purged after KILL (`nano:xfer2*` removed). Report retained for evidence.

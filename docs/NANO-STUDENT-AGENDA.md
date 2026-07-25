@@ -1,6 +1,7 @@
 # Nano Student + Teacher — Research Agenda
 
-> Lab under `nano_lm/`. Caps: ≤80 / ≤200 / cyclo ≤10.
+> Lab under `nano_lm/`. Caps: ≤80 / ≤200 / cyclo ≤10.  
+> EvoGen survival: frozen [`archive/evogen/`](archive/evogen/README.md).
 
 ## Tips
 
@@ -18,12 +19,20 @@ Parent control: live **H-STAG**.
 Deploy: [H-DEPL](results/nano-lm/formal-hdepl-policy.md). Domain: [H-DOM](results/nano-lm/formal-hdom-howto.md).  
 One-pager: [`RECIPES.md`](results/nano-lm/RECIPES.md).
 
-## Wave V
+## Wave W (ACTIVE)
 
-**COMPLETE** — XFER2 · TIPD · DEPL · DOM.  
-Lab: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).  
-**Park** — new wave only with a fresh mechanism.
+**Mechanism:** curated public KB (programming + bitcoin/frontier) + PACK efficiency on new domains.  
+Data: [`nano_lm/data/CURATED-SOURCES.md`](../nano_lm/data/CURATED-SOURCES.md) · `npm run nano:curated`.  
+Lab: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+
+| ID | Focus | Status |
+|----|--------|--------|
+| W0 CURATED | Download + manifest | DONE |
+| W1 H-PROG | Programming domain PACK gate | smoke [PROMOTE](results/nano-lm/hprog-programming.md); formal next |
+| W2 H-BTC | Bitcoin/docs domain PACK gate | queued |
+| W3 H-MIXD | STAG′ + curated train mix | queued |
+| W4 H-EFF | Re-measure PACK/TPACK on new packs | queued |
 
 ## Archived
 
-KILL code purged (ETRAIN N=1, compose, …). [`archive/`](results/nano-lm/archive/).
+KILL code purged (incl. XFER2). [`results/nano-lm/archive/`](results/nano-lm/archive/).

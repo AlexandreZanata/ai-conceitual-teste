@@ -23,5 +23,7 @@ Train: H-TPACK + H-AMORT; quality serve H-QPACK in-harness only.
 
 ## Notes
 - Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM formals.
-- Wave V COMPLETE — park (`.local/pesquisa.md`).
+- Wave V COMPLETE; Wave W ACTIVE — curated KB (`.local/pesquisa.md`).
+- H-PROG smoke PROMOTE (`hprog-programming.md`); formal pending.
+- EvoGen survival archived: `docs/archive/evogen/`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

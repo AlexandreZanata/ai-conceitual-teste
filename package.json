@@ -2,7 +2,7 @@
   "name": "ai-conceitual-teste",
   "private": true,
   "version": "0.0.0",
-  "description": "EvoGen \u2014 lightweight genetic + direct + selection learning research PoC (C++).",
+  "description": "Nano generative LM research lab (\u22645M student); EvoGen C++ PoC frozen under docs/archive/evogen/",
   "scripts": {
     "prepare": "lefthook install || true",
     "verify": "bash scripts/check-quality.sh",
@@ -14,7 +14,7 @@
     "test": "ctest --test-dir build --output-on-failure",
     "evogen": "./build/evogen",
     "bench:smoke": "python3 scripts/run_survival_bench.py --bench TB-30 --technique R0 --technique C --seeds 2",
-    "bench:aggregate": "python3 scripts/aggregate_survival_bench.py --out-csv docs/results/survival-benchmark-summary.csv",
+    "bench:aggregate": "python3 scripts/aggregate_survival_bench.py --out-csv docs/archive/evogen/results/survival-benchmark-summary.csv",
     "bench:curves": "python3 scripts/export_survival_curves.py",
     "report:validate": "python3 scripts/validate_benchmark_report.py",
     "nano:test": "nano_lm/.venv/bin/python -m pytest nano_lm/tests -q",
@@ -178,10 +178,6 @@
     "nano:xfer:report": "nano_lm/.venv/bin/python nano_lm/src/write_hxfer_report.py",
     "nano:formal:hxfer": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hxfer.py",
     "nano:formal:hxfer:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hxfer_report.py",
-    "nano:xfer2": "nano_lm/.venv/bin/python nano_lm/src/run_xfer2_smoke.py",
-    "nano:xfer2:report": "nano_lm/.venv/bin/python nano_lm/src/write_hxfer2_report.py",
-    "nano:formal:hxfer2": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hxfer2.py",
-    "nano:formal:hxfer2:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hxfer2_report.py",
     "nano:bud": "nano_lm/.venv/bin/python nano_lm/src/run_bud_smoke.py",
     "nano:bud:report": "nano_lm/.venv/bin/python nano_lm/src/write_hbud_report.py",
     "nano:formal:hbud": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hbud.py",
@@ -194,6 +190,10 @@
     "nano:dom:report": "nano_lm/.venv/bin/python nano_lm/src/write_hdom_report.py",
     "nano:formal:hdom": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hdom.py",
     "nano:formal:hdom:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hdom_report.py",
+    "nano:prog": "nano_lm/.venv/bin/python nano_lm/src/run_prog_smoke.py",
+    "nano:prog:report": "nano_lm/.venv/bin/python nano_lm/src/write_hprog_report.py",
+    "nano:formal:hprog": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hprog.py",
+    "nano:formal:hprog:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hprog_report.py",
     "nano:retip": "nano_lm/.venv/bin/python nano_lm/src/run_retip_smoke.py",
     "nano:retip:report": "nano_lm/.venv/bin/python nano_lm/src/write_hretip_report.py",
     "nano:formal:hretip": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hretip.py",
@@ -244,7 +244,8 @@
     "nano:formal:curl2:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hcurl2_report.py",
     "nano:formal:hstag": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hstag.py",
     "nano:formal:hstag:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hstag_report.py",
-    "lint": "node --check web/app.js"
+    "lint": "node --check web/app.js",
+    "nano:curated": "nano_lm/.venv/bin/python nano_lm/src/download_curated.py --no-proxy"
   },
   "devDependencies": {
     "lefthook": "2.1.6"
