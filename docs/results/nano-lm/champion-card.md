@@ -23,6 +23,7 @@
 | 2c′. Quality throughput | Batched multi-prompt POOL | **H-POOLB** (util) | [formal-hpoolb-vs-hpool.md](formal-hpoolb-vs-hpool.md) |
 | — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
 | — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
+| — | Protocol stack (not a tip) | **H-CFUSE** = CHUNK ⊕ FUSE | [hcfuse-protocol.md](hcfuse-protocol.md) |
 
 Parents kept for lineage: **H-CURL2** (`seq_lo=6`, `n_stages=3`) ← **H-CURL** ← **H-CUR** (train), **H-DECKL ← H-DECK ← H-DEC** (decode).
 
@@ -71,6 +72,7 @@ npm run nano:formal:hq4 && npm run nano:formal:hq4:report
 npm run nano:formal:hdepth && npm run nano:formal:hdepth:report
 npm run nano:mix && npm run nano:mix:report
 npm run nano:fuse && npm run nano:fuse:report
+npm run nano:cfuse && npm run nano:cfuse:report
 ```
 
 ## Closed compose branch (do not reopen without new parent)
@@ -85,7 +87,8 @@ npm run nano:fuse && npm run nano:fuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave L FOCUS** — deepen winners; **next: H-CFUSE**.  
+**Wave L FOCUS** — deepen winners; **next: H-CBAT**.  
+**H-CFUSE** smoke **KILL** ([hcfuse-protocol.md](hcfuse-protocol.md) — wall ≥ min(CHUNK,FUSE)).  
 **H-Q4** smoke PROMOTE / formal **KILL** ([archive/formal-hq4-vs-hdepth.md](archive/formal-hq4-vs-hdepth.md)).  
 H-CHUNK / PIN / POOLB formal PROMOTE; FUSE/MIX PROTOCOL; **H-TOPK** purged.
 

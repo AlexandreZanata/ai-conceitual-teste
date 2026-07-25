@@ -7,7 +7,7 @@ Focus stack: tips STAG/EARLY/POOL + systems/batch/TOP/DEPTH utils. Protocol: [`d
 | Doc | Role |
 |-----|------|
 | [champion-card.md](champion-card.md) | Tip + util protocol |
-| [hmix-protocol.md](hmix-protocol.md) / [hfuse-protocol.md](hfuse-protocol.md) | Protocol stacks |
+| [hmix-protocol.md](hmix-protocol.md) / [hfuse-protocol.md](hfuse-protocol.md) / [hcfuse-protocol.md](hcfuse-protocol.md) | Protocol stacks |
 | [kill-promote-matrix.md](kill-promote-matrix.md) | Slim matrix |
 | Train tip/utils | formal-hstag… / htop… / hpin… / hdepth… / hprun… |
 | Decode tip/utils | formal-hearly… / hpool… / hflash… / hchunk… / hkvsel… / hpoolb… |

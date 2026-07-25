@@ -66,6 +66,8 @@
     "nano:mix:report": "nano_lm/.venv/bin/python nano_lm/src/write_hmix_report.py",
     "nano:fuse": "nano_lm/.venv/bin/python nano_lm/src/run_fuse_smoke.py",
     "nano:fuse:report": "nano_lm/.venv/bin/python nano_lm/src/write_hfuse_report.py",
+    "nano:cfuse": "nano_lm/.venv/bin/python nano_lm/src/run_cfuse_smoke.py",
+    "nano:cfuse:report": "nano_lm/.venv/bin/python nano_lm/src/write_hcfuse_report.py",
     "nano:formal:hlay": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hlay.py",
     "nano:formal:hlay:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hlay_report.py",
     "nano:formal:hprun": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hprun.py",
