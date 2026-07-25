@@ -15,7 +15,7 @@
 
 | # | Recipe | Pack | Evidence |
 |---|--------|------|----------|
-| 1 | **Serve-fast** (primary) | **H-PACK** | [formal](formal-hpack-vs-hearly.md) · [DOM](formal-hdom-howto.md) · [PROG](formal-hprog-programming.md) · [BUD](formal-hbud-budget.md) · [DEPL](formal-hdepl-policy.md) · XFER2 KILL → [archive](archive/hxfer2-transfer.md) |
+| 1 | **Serve-fast** (primary) | **H-PACK** | [formal](formal-hpack-vs-hearly.md) · [DOM](formal-hdom-howto.md) · [PROG](formal-hprog-programming.md) · [BTC](formal-hbtc-bitcoin.md) · [BUD](formal-hbud-budget.md) · [DEPL](formal-hdepl-policy.md) · XFER2 KILL → [archive](archive/hxfer2-transfer.md) |
 | 2 | **Train-step / e2e** | **H-TPACK** + **AMORT** | [tpack](formal-htpack-vs-hstag.md) · [amort](formal-hamort-vs-hstag.md) · [TIPD](formal-htipd-vs-hstag.md) |
 | 3 | **Serve-quality** (in-harness) | **H-QPACK** | [formal](formal-hqpack-vs-hpool.md) · OOD [XFER](hxfer-transfer.md) **KILL** · [DEPL](formal-hdepl-policy.md) |
 
@@ -48,7 +48,7 @@ npm run nano:bud && npm run nano:formal:hbud
 
 **ACTIVE** — curated programming/bitcoin/frontier KB + PROG/BTC domain gates + efficiency re-measure.  
 **H-PROG** smoke+formal **PROMOTE** ([formal](formal-hprog-programming.md)).  
-**H-BTC** smoke **PROMOTE** ([hbtc-bitcoin.md](hbtc-bitcoin.md)); formal queued.  
+**H-BTC** smoke+formal **PROMOTE** ([formal](formal-hbtc-bitcoin.md) · [smoke](hbtc-bitcoin.md)). Next: **H-MIXD**.  
 Wave V **COMPLETE** — DOM smoke+formal **PROMOTE** (PACK on howto); TIPD→STAG′; DEPL **PROMOTE**; XFER2 purged (**KILL** ood_long).  
 KILL history: [`archive/`](archive/). No new letter-packs without a new mechanism.
 

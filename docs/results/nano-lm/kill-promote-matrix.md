@@ -22,9 +22,9 @@ Train: H-TPACK + H-AMORT; quality serve H-QPACK in-harness only.
 | H-CUR | -17.0133 | +0.0785 | 47 | — | 3 | PROMOTE (beats B2) |
 
 ## Notes
-- Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM/PROG formals.
+- Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM/PROG/BTC formals.
 - Wave V COMPLETE; Wave W ACTIVE — curated KB (`.local/pesquisa.md`).
 - H-PROG smoke+formal PROMOTE (`formal-hprog-programming.md`).
-- H-BTC smoke PROMOTE (`hbtc-bitcoin.md`); formal pending.
+- H-BTC smoke+formal PROMOTE (`formal-hbtc-bitcoin.md`).
 - EvoGen survival archived: `docs/archive/evogen/`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

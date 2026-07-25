@@ -7,7 +7,8 @@
 | [formal-hdom-howto.md](formal-hdom-howto.md) | **Howto domain** (Wave V) |
 | [formal-hprog-programming.md](formal-hprog-programming.md) | **Programming domain** (Wave W **PROMOTE**) |
 | [hprog-programming.md](hprog-programming.md) | H-PROG smoke (same claim) |
-| [hbtc-bitcoin.md](hbtc-bitcoin.md) | **Bitcoin domain** smoke (Wave W; formal pending) |
+| [hbtc-bitcoin.md](hbtc-bitcoin.md) | H-BTC smoke (same claim) |
+| [formal-hbtc-bitcoin.md](formal-hbtc-bitcoin.md) | **Bitcoin domain** (Wave W **PROMOTE**) |
 | [formal-hdepl-policy.md](formal-hdepl-policy.md) | Deploy policy |
 | [formal-htipd-vs-hstag.md](formal-htipd-vs-hstag.md) | Train tip STAG′ |
 | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | Serve-fast |

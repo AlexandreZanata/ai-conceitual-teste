@@ -2,7 +2,7 @@
 
 > Tip-stack: **H-STAG′** / **H-EARLY** / **H-POOL**.  
 > Packs are delivery envelopes — not tip replacements.  
-> Deploy: [H-DEPL](formal-hdepl-policy.md) · Domain: [H-DOM](formal-hdom-howto.md) · [H-PROG](formal-hprog-programming.md).  
+> Deploy: [H-DEPL](formal-hdepl-policy.md) · Domain: [H-DOM](formal-hdom-howto.md) · [H-PROG](formal-hprog-programming.md) · [H-BTC](formal-hbtc-bitcoin.md).  
 > Lab: `.local/pesquisa.md` · Card: [champion-card.md](champion-card.md)
 
 ## Deploy one-liners
@@ -19,7 +19,7 @@
 
 | Recipe | Doc | Wave U / V |
 |--------|-----|------------|
-| PACK | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | [DOM](formal-hdom-howto.md) **PROMOTE** howto; [PROG](formal-hprog-programming.md) **PROMOTE** prog; [XFER2](archive/hxfer2-transfer.md) **KILL** ood_long; [BUD](formal-hbud-budget.md); [DEPL](formal-hdepl-policy.md) |
+| PACK | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | [DOM](formal-hdom-howto.md) **PROMOTE** howto; [PROG](formal-hprog-programming.md) **PROMOTE** prog; [BTC](formal-hbtc-bitcoin.md) **PROMOTE** btc; [XFER2](archive/hxfer2-transfer.md) **KILL** ood_long; [BUD](formal-hbud-budget.md); [DEPL](formal-hdepl-policy.md) |
 | QPACK | [formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) | [XFER](hxfer-transfer.md) KILL; BUD; DEPL in-dist only |
 | TPACK / tip | [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) | [TIPD](formal-htipd-vs-hstag.md) **PROMOTE** STAG′; [AMORT](formal-hamort-vs-hstag.md) |
 
@@ -29,4 +29,4 @@ Under tip wall/GFLOPs ceilings ([BUD](formal-hbud-budget.md)): PACK + QPACK + TP
 Runnable routes ([DEPL](formal-hdepl-policy.md)): speed→PACK; quality→QPACK iff in-dist; train→TPACK; REJECT ood_long / QPACK-OOD.  
 Domain probe ([DOM](formal-hdom-howto.md)): PACK tip gate holds on procedural howto @128.  
 Wave W programming ([H-PROG formal](formal-hprog-programming.md)): PACK tip gate holds on prog @128.  
-Wave W bitcoin ([H-BTC smoke](hbtc-bitcoin.md)): PACK tip gate holds on btc @128 (formal pending).
+Wave W bitcoin ([H-BTC formal](formal-hbtc-bitcoin.md)): PACK tip gate holds on btc @128.
