@@ -33,14 +33,14 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Train tip | **H-STAG** | formal PROMOTE |
 | Decode tips | **H-EARLY** / **H-POOL** | formal PROMOTE |
 | Systems decode | FLASH / KVSEL / **CHUNK** / **CHB** | formal PROMOTE |
-| Throughput | BAT / POOLB / CBAT / CPOOLB / **CHBAT** | formal PROMOTE |
+| Throughput | BAT / POOLB / CBAT / CPOOLB / CHBAT / **FUSEB** | formal PROMOTE |
 | Train util | TOP / **PIN** / PRUN / DEPTH | formal PROMOTE |
 | Quant | **H-Q4** | smoke PROMOTE / formal **KILL** |
 | Protocol | MIX / FUSE / CFUSE | PROTOCOL / CFUSE smoke **KILL** |
 | Train I/O try | **H-ASYNC** | smoke **KILL** |
 
 **Do not** gene-widen EARLY/POOL or paste tips. Deepen systems/batch/TOP/DEPTH axes only.  
-Queue: `.local/pesquisa.md` (**Wave M** — M2 CHBAT done; **next M3 H-FUSEB**). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+Queue: `.local/pesquisa.md` (**Wave M** complete — M3 FUSEB PROMOTE; open Wave N or park). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived
 

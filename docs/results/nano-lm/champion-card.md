@@ -26,6 +26,7 @@
 | 2c″. Eval throughput | Chunked prefill under BAT | **H-CBAT** (util) | [formal-hcbat-vs-hbat.md](formal-hcbat-vs-hbat.md) |
 | 2c‴. Quality throughput | Chunked prefill under POOLB | **H-CPOOLB** (util) | [formal-hcpoolb-vs-hpoolb.md](formal-hcpoolb-vs-hpoolb.md) |
 | 2c⁗. Eval throughput | CHB B=256 under CBAT | **H-CHBAT** (util) | [formal-hchbat-vs-hcbat.md](formal-hchbat-vs-hcbat.md) |
+| 2c⁗′. Eval throughput | FUSE (FLASH⊕KVSEL) under CHBAT | **H-FUSEB** (util) | [formal-hfuseb-vs-hchbat.md](formal-hfuseb-vs-hchbat.md) |
 | — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
 | — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
 | — | Protocol stack (not a tip) | **H-CFUSE** = CHUNK ⊕ FUSE | [hcfuse-protocol.md](hcfuse-protocol.md) |
@@ -59,6 +60,8 @@ npm run nano:cbat && npm run nano:cbat:report
 npm run nano:formal:hcbat && npm run nano:formal:hcbat:report
 npm run nano:chbat && npm run nano:chbat:report
 npm run nano:formal:hchbat && npm run nano:formal:hchbat:report
+npm run nano:fuseb && npm run nano:fuseb:report
+npm run nano:formal:hfuseb && npm run nano:formal:hfuseb:report
 npm run nano:flop && npm run nano:flop:report
 npm run nano:formal:hstag && npm run nano:formal:hstag:report
 npm run nano:formal:hprun && npm run nano:formal:hprun:report
@@ -101,7 +104,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave M FOCUS** — M2 done; **next: M3 H-FUSEB**.  
+**Wave M FOCUS** — queue done; **next: open Wave N or park**.  
+**H-FUSEB** smoke+formal **PROMOTE** ([formal-hfuseb-vs-hchbat.md](formal-hfuseb-vs-hchbat.md) — tok/s↑ + wall↓; lp=CHBAT).  
 **H-CHBAT** smoke+formal **PROMOTE** ([formal-hchbat-vs-hcbat.md](formal-hchbat-vs-hcbat.md) — tok/s↑; lp=CBAT).  
 **H-CPOOLB** smoke+formal **PROMOTE** ([formal-hcpoolb-vs-hpoolb.md](formal-hcpoolb-vs-hpoolb.md) — tok/s↑; lp=POOLB).  
 **H-ASYNC** smoke **KILL** ([hasync-vs-hpin.md](hasync-vs-hpin.md) — e2e wall↑ vs PIN).  
