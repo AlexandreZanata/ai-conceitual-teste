@@ -174,3 +174,10 @@ def test_given_card_when_read_then_hspiral_kill() -> None:
     assert "H-ABS-SPIRAL" in text or "SPIRAL" in text
     assert "KILL" in text
     assert "habsspiral-spiral" in text
+
+
+def test_given_card_when_read_then_hqgrover_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-Q-GROVER" in text or "GROVER" in text
+    assert "KILL" in text
+    assert "hqgrover-grover" in text
