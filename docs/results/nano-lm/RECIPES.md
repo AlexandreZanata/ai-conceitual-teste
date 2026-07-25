@@ -1,37 +1,33 @@
 # Official nano-LM recipes (frozen claims)
 
 > Tip-stack: **H-STAG′** / **H-EARLY** / **H-POOL**.  
-> Packs are delivery envelopes — not tip replacements.  
-> Deploy: [H-DEPL](formal-hdepl-policy.md) · Domain: [H-DOM](formal-hdom-howto.md) · [H-PROG](formal-hprog-programming.md) · [H-BTC](formal-hbtc-bitcoin.md).  
-> Lab: `.local/pesquisa.md` · Card: [champion-card.md](champion-card.md)
+> Deploy: [H-DEPL](formal-hdepl-policy.md) · Domains: [DOM](formal-hdom-howto.md) / [PROG](formal-hprog-programming.md) / [BTC](formal-hbtc-bitcoin.md).  
+> Lab: `.local/pesquisa.md` (**Wave Y**) · Card: [champion-card.md](champion-card.md) · Y: [wave-y-summary.md](wave-y-summary.md) · X+: [wave-x-summary.md](wave-x-summary.md)
 
 ## Deploy one-liners
 
 | Goal | Use | Do not claim |
 |------|-----|----------------|
-| **Fastest serve** | **H-PACK** (SERVE/SROUTE path) | OOD elongated to 256 ([XFER2](archive/hxfer2-transfer.md) **KILL**) |
-| **Quality@wall serve** | **H-QPACK** (FLAYB) | OOD / transfer (XFER **KILL**) |
-| **Cheaper train steps** | **H-TPACK** (PRE3) | e2e without **H-AMORT** n≥4 |
-| **Official train tip** | **H-STAG′** (PRE3 via [TIPD](formal-htipd-vs-hstag.md)) | Revert without new formal |
-| **E2E train wall** | **H-AMORT** (cache/n + PRE3) | ETRAIN N=1 (purged KILL) |
+| **Fastest serve** | **H-PACK** + **H-QT** int8 n=1 | ood_long / OOD@256 without Wave Y formal |
+| **Code-smart serve (prog)** | **H-ABS-QPFB2** + **H-BEAMKV** (shared KV) | CBON / CSAFE-max-story / GPFB K=2 |
+| **Code-smart serve (btc)** | **H-ABS-BPFB** | — |
+| **GENC ∘ PFB** | **H-ABS-GPFB4** (K=4 only) | GPFB K=2 (**KILL**) |
+| **Cheaper train steps** | **H-TPACK** + **H-AMORT** | ETRAIN N=1 |
+| **Quality@wall (in-harness)** | **H-QPACK** | QPACK OOD (XFER **KILL**) |
 
-## Formal evidence
+## Formal evidence (survivors)
 
-| Recipe | Doc | Wave U / V |
-|--------|-----|------------|
-| PACK | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | [DOM](formal-hdom-howto.md) **PROMOTE** howto; [PROG](formal-hprog-programming.md) **PROMOTE** prog; [BTC](formal-hbtc-bitcoin.md) **PROMOTE** btc; [EFF](formal-heff-efficiency.md) **PROMOTE** wall↓/tok/s↑; [XFER2](archive/hxfer2-transfer.md) **KILL** ood_long; [BUD](formal-hbud-budget.md); [DEPL](formal-hdepl-policy.md) |
-| QPACK | [formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) | [XFER](archive/hxfer-transfer.md) KILL; BUD; DEPL in-dist only |
-| TPACK / tip | [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) | [TIPD](formal-htipd-vs-hstag.md) **PROMOTE** STAG′; [AMORT](formal-hamort-vs-hstag.md) |
+| Recipe | Formal |
+|--------|--------|
+| PACK / domains / EFF | [hpack](formal-hpack-vs-hearly.md) · [prog](formal-hprog-programming.md) · [btc](formal-hbtc-bitcoin.md) · [eff](formal-heff-efficiency.md) |
+| QT | [formal-hqt-quantize.md](formal-hqt-quantize.md) |
+| PFB family | [pfb](formal-hpfb-pfb.md) · [pfb2](formal-hpfb2-pfb2.md) · [qpfb2](formal-hqpfb2-qpfb2.md) · [bpfb](formal-hbpfb-bpfb.md) · [gpfb4](formal-hgpfb4-gpfb4.md) |
+| Wave Y cache | [beamkv](formal-hbeamkv-beamkv.md) |
+| TCHR / GENC | [tchr](formal-htchr-code-teacher.md) · [genc](formal-hgenc-genome.md) |
+| Train | [tpack](formal-htpack-vs-hstag.md) · [amort](formal-hamort-vs-hstag.md) · [TIPD](formal-htipd-vs-hstag.md) |
 
-## Policy (budget + deploy)
+## Policy
 
-Under tip wall/GFLOPs ceilings ([BUD](formal-hbud-budget.md)): PACK + QPACK + TPACK **SURVIVE**.  
-Runnable routes ([DEPL](formal-hdepl-policy.md)): speed→PACK (incl. prog/btc @128); quality→QPACK iff in-dist; train→TPACK; REJECT ood_long / QPACK-OOD.  
-Domain probe ([DOM](formal-hdom-howto.md)): PACK tip gate holds on procedural howto @128.  
-Wave W programming ([H-PROG formal](formal-hprog-programming.md)): PACK tip gate holds on prog @128.  
-Wave W bitcoin ([H-BTC formal](formal-hbtc-bitcoin.md)): PACK tip gate holds on btc @128.  
-Wave W mix ([H-MIXD](archive/hmixd-mix.md)): formal **KILL** (story teacher_lp regress; tooling purged).  
-Wave W efficiency ([H-EFF formal](formal-heff-efficiency.md)): PACK SERVE wall↓ and tok/s↑ vs Phase B on prog+btc at quality floor (recipe freeze; no new genes). TPACK/AMORT remain story-train-only.  
-DEPL (D3): speed→PACK still covers prog/btc @128; REJECT unchanged for ood_long / QPACK-OOD.  
-Wave W close-out: [wave-w-summary.md](wave-w-summary.md) (**COMPLETE**).  
-Wave X+: [H-TCHR formal](formal-htchr-code-teacher.md) / [H-QT formal](formal-hqt-quantize.md) / [H-GENC formal](formal-hgenc-genome.md) / [H-ABS-PFB formal](formal-hpfb-pfb.md) / [H-ABS-QPFB formal](formal-hqpfb-qpfb.md) / [H-ABS-PFB2 formal](formal-hpfb2-pfb2.md) / [H-ABS-QPFB2 formal](formal-hqpfb2-qpfb2.md) / [H-ABS-BPFB formal](formal-hbpfb-bpfb.md) / [H-ABS-GPFB4 formal](formal-hgpfb4-gpfb4.md) **PROMOTE**; [H-RAG](archive/hrag-retrieve.md) / [H-CTX](archive/hctx-long-window.md) / [H-CKD](archive/hckd-code-kd.md) / [H-QCTX](archive/hqctx-born-attn.md) / [H-QCOMP](archive/hqcomp-shadow-kv.md) / [H-Q-QUBITKV](archive/hqubitkv-critical-kv.md) / [H-GENQ-ABS](archive/hgenq-amplitude.md) / [H-DIST](archive/hdist-distill.md) / [H-Q-SLOT](archive/hqslot-slots.md) / [H-Q-INTERF](archive/hqinterf-interference.md) / [H-ABS-REV](archive/habsrev-reverse.md) / [H-Q-ANNEAL](archive/hqanneal-anneal.md) / [H-ABS-SPIRAL](archive/habsspiral-spiral.md) / [H-Q-GROVER](archive/hqgrover-grover.md) / [H-Q-TUNNEL](archive/hqtunnel-tunnel.md) / [H-Q-BELL](archive/hqbell-bell.md) / [H-ABS-ORACLE1](archive/horacle1-oracle.md) / [H-ABS-DNA](archive/hdna-dna.md) / [H-ABS-DEBATE](archive/hdebate-debate.md) / [H-ABS-HOLO](archive/hholo-holo.md) / [H-ABS-PHASE](archive/hphase-phase.md) / [H-Q-ENTPOS](archive/hentpos-entpos.md) / [H-Q-MEASURE](archive/hmeasure-measure.md) / [H-Q-TELE](archive/htele-teleport.md) / [H-Q-WIGNER](archive/hwigner-wigner.md) / [H-ABS-CHRONO](archive/hchrono-chrono.md) / [H-ABS-MIRROR](archive/hmirror-mirror.md) / [H-ABS-CBON](archive/hcbon-cbon.md) / [H-ABS-CSAFE](archive/hcsafe-csafe.md) / [H-ABS-GPFB](archive/hgpfb-gpfb.md) **KILL**; GPFB4 **PROMOTE**; next **HOLD**/new H-ID (`.local/pesquisa.md`).
+DEPL: speed→PACK/QT; code-smart→QPFB2/BPFB (+BEAMKV); GENC∘PFB→GPFB4; quality→QPACK in-dist; **REJECT** ood_long / QPACK-OOD / revived X+ KILLs.  
+Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.md](wave-x-summary.md) → [`archive/`](archive/).  
+**Wave Y:** [wave-y-summary.md](wave-y-summary.md) — **H-BEAMKV PROMOTE**; next H-TCACHE.

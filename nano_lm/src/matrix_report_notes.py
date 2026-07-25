@@ -50,6 +50,7 @@ NOTES = [
     "- H-ABS-BPFB PROMOTE — PFB K=2 on BTC (`formal-hbpfb-bpfb.md`).",
     "- H-ABS-GPFB4 PROMOTE — GENC∘PFB K=4 (`formal-hgpfb4-gpfb4.md`).",
     "- H-ABS-GPFB KILL — GENC∘PFB2 K=2 (`archive/hgpfb-gpfb.md`).",
+    "- H-BEAMKV PROMOTE — shared prompt KV across PFB beams (`formal-hbeamkv-beamkv.md`).",
     "- Matrix note: PROG/BTC/MIXD/EFF in wave-w-summary § Kill/promote.",
     "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",

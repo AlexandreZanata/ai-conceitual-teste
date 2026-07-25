@@ -5,9 +5,9 @@ alwaysApply: true
 
 # Project rules (nano-first)
 
-- **Active:** nano generative student ≤5M — `docs/NANO-STUDENT-AGENDA.md`, `.local/pesquisa.md` (Wave W COMPLETE; Wave X ACTIVE — H-TCHR/H-QT/H-GENC/H-ABS-PFB/H-ABS-QPFB/H-ABS-PFB2/H-ABS-QPFB2/H-ABS-BPFB/H-ABS-GPFB4 PROMOTE; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA/DEBATE/HOLO/PHASE/ENTPOS/MEASURE/TELE/WIGNER/CHRONO/MIRROR/CBON/CSAFE/GPFB KILL; next HOLD/new H-ID), `docs/ARCHITECTURE.md` / `GLOSSARY.md`.
+- **Active:** nano generative student ≤5M — `docs/NANO-STUDENT-AGENDA.md`, `.local/pesquisa.md` (Wave Y ACTIVE — **H-BEAMKV PROMOTE**; next **H-TCACHE**), `docs/ARCHITECTURE.md` / `GLOSSARY.md`.
 - **Frozen:** EvoGen survival PoC → `docs/archive/evogen/` (do not extend unless lab book re-opens).
 - Domain terms from `docs/GLOSSARY.md` — never call evolutionary individuals “coding agents”.
 - Curated public data: `nano_lm/data/CURATED-SOURCES.md` + `npm run nano:curated`.
 - Caps: ≤80 lines/function, ≤200 lines/file, cyclomatic ≤10; run `npm run verify`.
-- Recipes: `docs/results/nano-lm/RECIPES.md` · Wave W: `docs/results/nano-lm/wave-w-summary.md` · H-TCHR: `formal-htchr-code-teacher.md` · H-QT: `formal-hqt-quantize.md` · H-ABS-QPFB2: `formal-hqpfb2-qpfb2.md` · H-ABS-BPFB: `formal-hbpfb-bpfb.md` · H-ABS-GPFB4: `formal-hgpfb4-gpfb4.md`.
+- Recipes: `docs/results/nano-lm/RECIPES.md` · Wave W: `docs/results/nano-lm/wave-w-summary.md` · Wave Y: `wave-y-summary.md` · H-BEAMKV: `formal-hbeamkv-beamkv.md` · H-TCHR: `formal-htchr-code-teacher.md` · H-QT: `formal-hqt-quantize.md` · H-ABS-QPFB2: `formal-hqpfb2-qpfb2.md` · H-ABS-BPFB: `formal-hbpfb-bpfb.md` · H-ABS-GPFB4: `formal-hgpfb4-gpfb4.md`.

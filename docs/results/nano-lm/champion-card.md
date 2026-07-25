@@ -1,7 +1,8 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy: [RECIPES.md](RECIPES.md). Lab: `.local/pesquisa.md` (**Wave X+** — code teacher · long ctx · QCTX/GEN).
+> Deploy: [RECIPES.md](RECIPES.md). Lab: `.local/pesquisa.md` (**Wave Y ACTIVE** — **H-BEAMKV PROMOTE**; next H-TCACHE).  
+> Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md).
 
 ## Official tips
 
@@ -15,9 +16,10 @@
 
 | # | Recipe | Pack | Evidence |
 |---|--------|------|----------|
-| 1 | **Serve-fast** (primary) | **H-PACK** | [formal](formal-hpack-vs-hearly.md) · [DOM](formal-hdom-howto.md) · [PROG](formal-hprog-programming.md) · [BTC](formal-hbtc-bitcoin.md) · [EFF](formal-heff-efficiency.md) · [BUD](formal-hbud-budget.md) · [DEPL](formal-hdepl-policy.md) · XFER2 KILL → [archive](archive/hxfer2-transfer.md) |
-| 2 | **Train-step / e2e** | **H-TPACK** + **AMORT** | [tpack](formal-htpack-vs-hstag.md) · [amort](formal-hamort-vs-hstag.md) · [TIPD](formal-htipd-vs-hstag.md) |
-| 3 | **Serve-quality** (in-harness) | **H-QPACK** | [formal](formal-hqpack-vs-hpool.md) · OOD [XFER](archive/hxfer-transfer.md) **KILL** · [DEPL](formal-hdepl-policy.md) |
+| 1 | **Serve-fast** | **H-PACK** (+ **H-QT** int8) | [PACK](formal-hpack-vs-hearly.md) · [DOM](formal-hdom-howto.md) · [PROG](formal-hprog-programming.md) · [BTC](formal-hbtc-bitcoin.md) · [EFF](formal-heff-efficiency.md) · [QT](formal-hqt-quantize.md) · [DEPL](formal-hdepl-policy.md) |
+| 2 | **Code-smart serve** | **H-ABS-QPFB2** (PFB K=2 ∘ QT) (+ **H-BEAMKV** shared KV) | [PFB](formal-hpfb-pfb.md) · [PFB2](formal-hpfb2-pfb2.md) · [QPFB2](formal-hqpfb2-qpfb2.md) · [BPFB](formal-hbpfb-bpfb.md) · [GPFB4](formal-hgpfb4-gpfb4.md) · [BEAMKV](formal-hbeamkv-beamkv.md) |
+| 3 | **Train-step / e2e** | **H-TPACK** + **AMORT** | [tpack](formal-htpack-vs-hstag.md) · [amort](formal-hamort-vs-hstag.md) · [TIPD](formal-htipd-vs-hstag.md) |
+| 4 | **Serve-quality** (in-harness) | **H-QPACK** | [formal](formal-hqpack-vs-hpool.md) · OOD XFER **KILL** → [archive](archive/hxfer-transfer.md) |
 
 ## Tip scoreboard
 
@@ -28,31 +30,31 @@
 | **H-EARLY** | **−11.83** | **65** | official fast |
 | **H-POOL** | **−11.69** | **70** | official quality |
 
+## Teachers / genetics
+
+| ID | Role | Formal |
+|----|------|--------|
+| **H-TCHR** | Dual teacher (story + `tiny_starcoder_py`) | [formal-htchr-code-teacher.md](formal-htchr-code-teacher.md) **PROMOTE** |
+| **H-GENC** | Serve genome under BUD | [formal-hgenc-genome.md](formal-hgenc-genome.md) **PROMOTE** |
+
 ## Commands
 
 ```bash
 npm run nano:curated
 npm run nano:pack && npm run nano:formal:hpack
-npm run nano:tpack && npm run nano:formal:htpack
-npm run nano:amort && npm run nano:formal:hamort
-npm run nano:tipd && npm run nano:formal:htipd
-npm run nano:depl && npm run nano:formal:hdepl
-npm run nano:dom && npm run nano:formal:hdom
-npm run nano:prog && npm run nano:formal:hprog
-npm run nano:btc && npm run nano:formal:hbtc
-npm run nano:eff && npm run nano:formal:heff
-npm run nano:e5
-npm run nano:tchr && npm run nano:formal:htchr
 npm run nano:qt && npm run nano:formal:hqt
+npm run nano:qpfb2 && npm run nano:formal:hqpfb2
+npm run nano:beamkv && npm run nano:formal:hbeamkv
+npm run nano:bpfb && npm run nano:formal:hbpfb
+npm run nano:gpfb4 && npm run nano:formal:hgpfb4
+npm run nano:tchr && npm run nano:formal:htchr
 npm run nano:genc && npm run nano:formal:hgenc
-npm run nano:qpack && npm run nano:formal:hqpack
-npm run nano:bud && npm run nano:formal:hbud
 ```
 
-## Wave W / X+
+## Waves
 
-Wave W **COMPLETE** — [wave-w-summary.md](wave-w-summary.md): **H-PROG** / **H-BTC** / **H-EFF** **PROMOTE**; **H-MIXD** **KILL** ([archive](archive/hmixd-mix.md)).  
-**Wave X+ ACTIVE** — **H-TCHR** / **H-QT** / **H-GENC** / **H-ABS-PFB** / **H-ABS-QPFB** / **H-ABS-PFB2** / **H-ABS-QPFB2** / **H-ABS-BPFB** / **H-ABS-GPFB4** smoke+formal **[PROMOTE](formal-htchr-code-teacher.md)** / **[PROMOTE](formal-hqt-quantize.md)** / **[PROMOTE](formal-hgenc-genome.md)** / **[PROMOTE](formal-hpfb-pfb.md)** / **[PROMOTE](formal-hqpfb-qpfb.md)** / **[PROMOTE](formal-hpfb2-pfb2.md)** / **[PROMOTE](formal-hqpfb2-qpfb2.md)** / **[PROMOTE](formal-hbpfb-bpfb.md)** / **[PROMOTE](formal-hgpfb4-gpfb4.md)** · **H-RAG** / **H-CTX** / **H-CKD** / **H-QCTX** / **H-QCOMP** / **H-Q-QUBITKV** / **H-GENQ-ABS** / **H-DIST** / **H-Q-SLOT** / **H-Q-INTERF** / **H-ABS-REV** / **H-Q-ANNEAL** / **H-ABS-SPIRAL** / **H-Q-GROVER** / **H-Q-TUNNEL** / **H-Q-BELL** / **H-ABS-ORACLE1** / **H-ABS-DNA** / **H-ABS-DEBATE** / **H-ABS-HOLO** / **H-ABS-PHASE** / **H-Q-ENTPOS** / **H-Q-MEASURE** / **H-Q-TELE** / **H-Q-WIGNER** / **H-ABS-CHRONO** / **H-ABS-MIRROR** / **H-ABS-CBON** / **H-ABS-CSAFE** / **H-ABS-GPFB** **KILL** → [archive/hrag-retrieve.md](archive/hrag-retrieve.md) / [archive/hctx-long-window.md](archive/hctx-long-window.md) / [archive/hckd-code-kd.md](archive/hckd-code-kd.md) / [archive/hqctx-born-attn.md](archive/hqctx-born-attn.md) / [archive/hqcomp-shadow-kv.md](archive/hqcomp-shadow-kv.md) / [archive/hqubitkv-critical-kv.md](archive/hqubitkv-critical-kv.md) / [archive/hgenq-amplitude.md](archive/hgenq-amplitude.md) / [archive/hdist-distill.md](archive/hdist-distill.md) / [archive/hqslot-slots.md](archive/hqslot-slots.md) / [archive/hqinterf-interference.md](archive/hqinterf-interference.md) / [archive/habsrev-reverse.md](archive/habsrev-reverse.md) / [archive/hqanneal-anneal.md](archive/hqanneal-anneal.md) / [archive/habsspiral-spiral.md](archive/habsspiral-spiral.md) / [archive/hqgrover-grover.md](archive/hqgrover-grover.md) / [archive/hqtunnel-tunnel.md](archive/hqtunnel-tunnel.md) / [archive/hqbell-bell.md](archive/hqbell-bell.md) / [archive/horacle1-oracle.md](archive/horacle1-oracle.md) / [archive/hdna-dna.md](archive/hdna-dna.md) / [archive/hdebate-debate.md](archive/hdebate-debate.md) / [archive/hholo-holo.md](archive/hholo-holo.md) / [archive/hphase-phase.md](archive/hphase-phase.md) / [archive/hentpos-entpos.md](archive/hentpos-entpos.md) / [archive/hmeasure-measure.md](archive/hmeasure-measure.md) / [archive/htele-teleport.md](archive/htele-teleport.md) / [archive/hwigner-wigner.md](archive/hwigner-wigner.md) / [archive/hchrono-chrono.md](archive/hchrono-chrono.md) / [archive/hmirror-mirror.md](archive/hmirror-mirror.md) / [archive/hcbon-cbon.md](archive/hcbon-cbon.md) / [archive/hcsafe-csafe.md](archive/hcsafe-csafe.md) / [archive/hgpfb-gpfb.md](archive/hgpfb-gpfb.md) → **HOLD** / new H-ID (`.local/pesquisa.md`; GPFB4 PROMOTE).  
-KILL history: [`archive/`](archive/).
+Wave W **COMPLETE** — [wave-w-summary.md](wave-w-summary.md) (PROG/BTC/EFF **PROMOTE**; MIXD **KILL**).  
+Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PROMOTE**; RAG/CTX/Q*/… **KILL** → [`archive/`](archive/)).  
+**Wave Y ACTIVE** — [wave-y-summary.md](wave-y-summary.md) (**H-BEAMKV PROMOTE**; next H-TCACHE).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

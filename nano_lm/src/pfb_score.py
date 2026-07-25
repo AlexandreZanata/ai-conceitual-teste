@@ -131,19 +131,21 @@ def collect_beam_banks(
     beam_seed: int,
     k: int,
     temperature: float = PFB_TEMP,
+    decode_beams_fn: Any | None = None,
 ) -> list[dict[str, Any]]:
     """
     GIVEN parent rows (prompt + parent_story/cont)
     WHEN decoding K beams only (no re-parent)
     THEN return banks aligned to parent_rows for PFB commit.
     """
+    decode_fn = decode_beams_fn or decode_early_beams
     g = _gene_base(gene)
     tok = story_teacher.tokenizer
     device = story_teacher.device
     banks: list[dict[str, Any]] = []
     for i, prow in enumerate(parent_rows):
         text = str(prow["prompt"])
-        beams = decode_early_beams(
+        beams = decode_fn(
             student,
             tok,
             text,
@@ -173,6 +175,7 @@ def collect_beam_banks(
                 "conts": conts,
                 "story_lps": stories,
                 "wall_ms": float(beams[0].wall_ms) if beams else 0.0,
+                "token_evals": float(beams[0].token_evals) if beams else 0.0,
                 "n_news": [len(b.token_ids) for b in beams],
                 "unique": float(unique_texts(conts)),
                 "k": float(k),
@@ -249,6 +252,8 @@ def commit_pfb_rows(
             "code_teacher_params": meta["params"],
             "code_teacher_license": meta["license"],
         }
+        if "token_evals" in bank:
+            row["token_evals"] = float(bank["token_evals"])
         if weight_bytes is not None:
             row["weight_bytes"] = int(weight_bytes)
         rows.append(row)
@@ -286,6 +291,10 @@ def arm_means(rows: list[dict[str, Any]]) -> dict[str, float]:
         means["k"] = float(rows[0]["k"])
         if "weight_bytes" in rows[0]:
             means["weight_bytes"] = float(rows[0]["weight_bytes"])
+        if "token_evals" in rows[0]:
+            means["mean_token_evals"] = (
+                sum(float(r["token_evals"]) for r in rows) / n
+            )
     else:
         means["mean_unique"] = float("nan")
         means["mean_elig"] = float("nan")
