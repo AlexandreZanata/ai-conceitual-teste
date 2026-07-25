@@ -6,7 +6,7 @@ Wall clock (matrix): 154.6s
 Primary metric: teacher mean log-prob of student completions.
 Full historical rows: `docs/results/nano-lm/archive/`.
 Tips: H-STAG′ / H-EARLY / H-POOL (TIPD promoted train tip).
-Primary recipe: H-PACK (serve-fast; elongated+ood+howto; not ood_long).
+Primary recipe: H-PACK (serve-fast; elongated+ood+howto+prog; not ood_long).
 Train: H-TPACK + H-AMORT; quality serve H-QPACK in-harness only.
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
