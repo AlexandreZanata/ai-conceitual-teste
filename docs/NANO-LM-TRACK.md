@@ -7,7 +7,7 @@
 
 Multi-attempt evaluate (many candidate futures scored, one committed) can match or beat sequential autoregressive (AR) quality on a tiny specialized LM, under comparable or better wall-clock / token-eval tradeoffs — without relying only on long purely sequential next-token chains.
 
-Wave W extends the track with **curated public programming + frontier corpora** and PACK efficiency on those domains (see `.local/pesquisa.md`).
+Wave W **COMPLETE** — curated public programming + frontier corpora and PACK efficiency on those domains ([wave-w-summary.md](results/nano-lm/wave-w-summary.md)). Wave X **PARKED**. Lab: `.local/pesquisa.md`.
 
 ## Academic baseline
 

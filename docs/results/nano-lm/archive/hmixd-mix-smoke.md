@@ -12,4 +12,4 @@ Mode: `MIXD smoke: live STAG curriculum + curated prog mix_frac vs story-only; T
 | H-STAG-CTRL | -17.0327 | 34143.300 |
 | H-MIXD | -16.8221 | 31988.407 |
 
-Commands: `npm run nano:mixd` → `npm run nano:mixd:report`.
+Commands: tooling purged after KILL (`nano:mixd*` removed). Report retained for evidence.

@@ -30,6 +30,7 @@ Runnable routes ([DEPL](formal-hdepl-policy.md)): speed→PACK (incl. prog/btc @
 Domain probe ([DOM](formal-hdom-howto.md)): PACK tip gate holds on procedural howto @128.  
 Wave W programming ([H-PROG formal](formal-hprog-programming.md)): PACK tip gate holds on prog @128.  
 Wave W bitcoin ([H-BTC formal](formal-hbtc-bitcoin.md)): PACK tip gate holds on btc @128.  
-Wave W mix ([H-MIXD](hmixd-mix.md)): formal **KILL** (story teacher_lp regress vs STAG−ε; prog PPL ↓ alone insufficient).  
+Wave W mix ([H-MIXD](hmixd-mix.md)): formal **KILL** (story teacher_lp regress; tooling purged).  
 Wave W efficiency ([H-EFF formal](formal-heff-efficiency.md)): PACK SERVE wall↓ and tok/s↑ vs Phase B on prog+btc at quality floor (recipe freeze; no new genes). TPACK/AMORT remain story-train-only.  
-DEPL (D3): speed→PACK still covers prog/btc @128; REJECT unchanged for ood_long / QPACK-OOD.
+DEPL (D3): speed→PACK still covers prog/btc @128; REJECT unchanged for ood_long / QPACK-OOD.  
+Wave W close-out: [wave-w-summary.md](wave-w-summary.md) (**COMPLETE**; Wave X **PARKED**).

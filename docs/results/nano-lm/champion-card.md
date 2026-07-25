@@ -1,7 +1,7 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy: [RECIPES.md](RECIPES.md). Lab: `.local/pesquisa.md` (**Wave W ACTIVE**).
+> Deploy: [RECIPES.md](RECIPES.md). Lab: `.local/pesquisa.md` (**Wave W COMPLETE**).
 
 ## Official tips
 
@@ -40,7 +40,6 @@ npm run nano:depl && npm run nano:formal:hdepl
 npm run nano:dom && npm run nano:formal:hdom
 npm run nano:prog && npm run nano:formal:hprog
 npm run nano:btc && npm run nano:formal:hbtc
-npm run nano:mixd && npm run nano:formal:hmixd
 npm run nano:eff && npm run nano:formal:heff
 npm run nano:qpack && npm run nano:formal:hqpack
 npm run nano:bud && npm run nano:formal:hbud
@@ -48,12 +47,9 @@ npm run nano:bud && npm run nano:formal:hbud
 
 ## Wave W
 
-**ACTIVE** — curated programming/bitcoin/frontier KB + PROG/BTC domain gates + efficiency re-measure.  
-**H-PROG** smoke+formal **PROMOTE** ([formal](formal-hprog-programming.md)).  
-**H-BTC** smoke+formal **PROMOTE** ([formal](formal-hbtc-bitcoin.md)).  
-**H-MIXD** formal **KILL** ([hmixd-mix.md](hmixd-mix.md)) — no train-mix claim.  
-**H-EFF** smoke+formal **PROMOTE** ([formal](formal-heff-efficiency.md)) — PACK wall↓/tok/s↑ on prog+btc at quality floor; recipe frozen.  
-Wave V **COMPLETE** — DOM smoke+formal **PROMOTE** (PACK on howto); TIPD→STAG′; DEPL **PROMOTE**; XFER2 purged (**KILL** ood_long).  
-KILL history: [`archive/`](archive/). No new letter-packs without a new mechanism.
+**COMPLETE** — see [wave-w-summary.md](wave-w-summary.md).  
+**H-PROG** / **H-BTC** / **H-EFF** smoke+formal **PROMOTE**; **H-MIXD** formal **KILL** (tooling purged; [hmixd-mix.md](hmixd-mix.md)).  
+Wave X **PARKED** (new mechanism only). Wave V **COMPLETE**.  
+KILL history: [`archive/`](archive/).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

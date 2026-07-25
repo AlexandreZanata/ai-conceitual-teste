@@ -26,7 +26,7 @@ When rules conflict with existing code, **rules prevail** — unless the user ex
 2. `agent-rules/00-core/size-and-complexity-limits.md` — **80 / 200 / ≤10**
 3. `docs/ARCHITECTURE.md` + `docs/GLOSSARY.md`
 4. `docs/NANO-STUDENT-AGENDA.md` + `docs/results/nano-lm/champion-card.md` + `RECIPES.md`
-5. `.local/pesquisa.md` (Wave W) before new H-IDs
+5. `.local/pesquisa.md` (Wave W COMPLETE; Wave X PARKED) before new H-IDs
 6. `nano_lm/data/CURATED-SOURCES.md` before data work
 
 ```bash
@@ -40,8 +40,8 @@ npm run nano:test && npm run verify
 ## Delivery posture
 
 - Survival PoC v1 **closed** → archive.  
-- Nano Waves U–V **closed** (recipes frozen; XFER2 purged).  
-- **Wave W ACTIVE:** curated KB + PROG/BTC domains + efficiency on those packs — see `.local/pesquisa.md`.
+- Nano Waves U–W **closed** (recipes frozen; XFER2 + MIXD purged).  
+- **Wave X PARKED** — open only with a new mechanism; optional corpus E — see `.local/pesquisa.md` + [`wave-w-summary.md`](docs/results/nano-lm/wave-w-summary.md).
 
 ---
 

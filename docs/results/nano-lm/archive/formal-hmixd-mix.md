@@ -15,4 +15,4 @@ Mode: `MIXD formal: live STAG curriculum + curated prog mix_frac vs story-only; 
 | H-STAG-CTRL | -13.2775 | 45927.336 |
 | H-MIXD | -13.6013 | 14737.158 |
 
-Commands: `npm run nano:formal:hmixd` → `npm run nano:formal:hmixd:report`.
+Commands: tooling purged after KILL (`nano:mixd*` / `nano:formal:hmixd*` removed). Report retained for evidence.

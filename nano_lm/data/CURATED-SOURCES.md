@@ -18,8 +18,9 @@ Manifest after download: `nano_lm/data/curated/manifest.json`.
 
 - Public URLs only; record license in registry.
 - Cap large RFCs via `max_bytes`.
-- TinyStories remains the **story teacher**; domain packs use curated text for eval/train mix (Wave W).
+- TinyStories remains the **story teacher**; domain packs use curated text for eval (Wave W).
 - Programming eval pack: `nano_lm/prompts/prog_prompts.yaml` → `npm run nano:prog` / `nano:formal:hprog` ([formal](../../docs/results/nano-lm/formal-hprog-programming.md)).
 - Bitcoin eval pack: `nano_lm/prompts/btc_prompts.yaml` → `npm run nano:btc` / `nano:formal:hbtc` ([formal](../../docs/results/nano-lm/formal-hbtc-bitcoin.md); MIT + BSD-2-Clause).
-- Train mix: curated programming + TinyStories via `npm run nano:mixd` — formal **KILL** ([note](../../docs/results/nano-lm/hmixd-mix.md)); never train on eval YAML ids.
+- Train mix (**H-MIXD**): formal **KILL** — tooling purged (`nano:mixd*` removed); see [hmixd-mix.md](../../docs/results/nano-lm/hmixd-mix.md). Never train on eval YAML ids.
 - Do not commit multi-MB blobs — regenerate via `nano:curated`.
+- Wave W close-out: [wave-w-summary.md](../../docs/results/nano-lm/wave-w-summary.md).

@@ -13,4 +13,4 @@ Archived evidence:
 
 Gate: story ≥ control−ε **and** prog PPL ↓. Prog PPL improved, but story fell below control−0.05 → **KILL**. No ε soften; no gene widen; TinyStories teacher unchanged.
 
-Commands (repro): `npm run nano:formal:hmixd` → `npm run nano:formal:hmixd:report`.
+Commands: tooling purged after KILL (`nano:mixd*` removed). Report retained for evidence.

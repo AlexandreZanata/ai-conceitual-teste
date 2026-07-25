@@ -13,6 +13,7 @@
 | [archive/formal-hmixd-mix.md](archive/formal-hmixd-mix.md) | H-MIXD formal evidence (KILL) |
 | [heff-efficiency.md](heff-efficiency.md) | Efficiency smoke (same claim) |
 | [formal-heff-efficiency.md](formal-heff-efficiency.md) | **Efficiency** (Wave W **PROMOTE**) |
+| [wave-w-summary.md](wave-w-summary.md) | **Wave W close-out** (COMPLETE) |
 | [formal-hdepl-policy.md](formal-hdepl-policy.md) | Deploy policy |
 | [formal-htipd-vs-hstag.md](formal-htipd-vs-hstag.md) | Train tip STAG′ |
 | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | Serve-fast |
@@ -21,4 +22,4 @@
 | [formal-hbud-budget.md](formal-hbud-budget.md) / [hxfer-transfer.md](hxfer-transfer.md) | Wave U |
 | [archive/hxfer2-transfer.md](archive/hxfer2-transfer.md) | Wave V PACK deepen (KILL; tooling purged) |
 | [archive/](archive/) | KILL history |
-| Wave W | Curated KB — `npm run nano:curated` · `nano_lm/data/CURATED-SOURCES.md` |
+| Wave W | **COMPLETE** — [wave-w-summary.md](wave-w-summary.md) · curated KB · Wave X PARKED |
