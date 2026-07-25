@@ -29,6 +29,7 @@
 | 2c⁗′. Eval throughput | FUSE (FLASH⊕KVSEL) under CHBAT | **H-FUSEB** (util) | [formal-hfuseb-vs-hchbat.md](formal-hfuseb-vs-hchbat.md) |
 | 2c⁗″. Quality throughput | FUSE under CPOOLB | **H-FCPOOLB** (util) | [formal-hfcpoolb-vs-hcpoolb.md](formal-hfcpoolb-vs-hcpoolb.md) |
 | 2c⁗‴. Eval throughput | LAY under FUSEB batch | **H-LAYB** (util) | [formal-hlayb-vs-hfuseb.md](formal-hlayb-vs-hfuseb.md) |
+| 2c⁗⁗. Quality throughput | LAY under FCPOOLB batch | **H-FLAYB** (util) | [formal-hflayb-vs-hfcpoolb.md](formal-hflayb-vs-hfcpoolb.md) |
 | — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
 | — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
 | — | Protocol stack (not a tip) | **H-CFUSE** = CHUNK ⊕ FUSE | [hcfuse-protocol.md](hcfuse-protocol.md) |
@@ -111,7 +112,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave N FOCUS** — queue done; **next: open Wave O or park**.  
+**Wave O FOCUS** — O1 done; **next: O2 H-DEPTHB**.  
+**H-FLAYB** smoke+formal **PROMOTE** ([formal-hflayb-vs-hfcpoolb.md](formal-hflayb-vs-hfcpoolb.md) — tok/s↑ + wall↓; lp=FCPOOLB).  
 **H-SHORTB** smoke **KILL** ([hshortb-vs-hfuseb.md](hshortb-vs-hfuseb.md) — lp change vs FUSEB; skip formal).  
 **H-LAYB** smoke+formal **PROMOTE** ([formal-hlayb-vs-hfuseb.md](formal-hlayb-vs-hfuseb.md) — tok/s↑ + wall↓; lp=FUSEB).  
 **H-FCPOOLB** smoke+formal **PROMOTE** ([formal-hfcpoolb-vs-hcpoolb.md](formal-hfcpoolb-vs-hcpoolb.md) — tok/s↑ + wall↓; lp=CPOOLB).  

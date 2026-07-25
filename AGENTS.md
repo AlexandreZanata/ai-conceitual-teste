@@ -89,11 +89,13 @@ npm run verify
 47. Wave N / H-LAYB LAY under FUSEB — done (smoke+formal **PROMOTE** — tok/s↑ + wall↓; lp=FUSEB)
 48. Wave N / H-SHORTB SHORT under FUSEB — done (smoke **KILL** — lp change vs FUSEB; skip formal)
 49. Wave N focus queue complete — see `.local/pesquisa.md`
+50. Wave O / H-FLAYB LAY under FCPOOLB — done (smoke+formal **PROMOTE** — tok/s↑ + wall↓; lp=FCPOOLB)
+51. Next — **H-DEPTHB** — see `.local/pesquisa.md`
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** open Wave O or park — see `.local/pesquisa.md`
+**Next:** Wave O **O2 H-DEPTHB** — see `.local/pesquisa.md`
 
 ---
 
