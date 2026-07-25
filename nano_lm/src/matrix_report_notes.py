@@ -18,6 +18,7 @@ GATES = [
     "H-FLAYB gate: lp ≥ FCPOOLB−ε and (tok/s > FCPOOLB or wall < FCPOOLB) (formal PROMOTE).",
     "H-DEPTHB gate: lp ≥ LAYB−ε and (wall < LAYB or GFLOPs < LAYB) (smoke KILL — |Δlp|>ε).",
     "H-PRUNB gate: lp ≥ LAYB−ε and (wall < LAYB or GFLOPs < LAYB) (smoke KILL — |Δlp|>ε).",
+    "H-PRUNF gate: lp ≥ FLAYB−ε and (wall < FLAYB or GFLOPs < FLAYB) (smoke KILL — |Δlp|>ε).",
     "H-SHORTB gate: lp ≥ FUSEB−ε and (tok/s > FUSEB or wall < FUSEB) (smoke KILL — lp cliff).",
     "H-MIX / H-FUSE / H-CFUSE: PROTOCOL only (not tip H-IDs); CFUSE smoke KILL.",
 ]
@@ -27,9 +28,9 @@ NOTES = [
     "- Focus stack: systems + batch + TOP/PIN + DEPTH. Archive: `docs/results/nano-lm/archive/`.",
     "- Official tips: **H-STAG** / **H-EARLY** / **H-POOL**.",
     "- H-TOPK / H-Q4 formal KILL; H-CFUSE / **H-ASYNC** / **H-SHORTB** / **H-DEPTHB** / "
-    "**H-PINC** / **H-PRUNB** smoke KILL; "
+    "**H-PINC** / **H-PRUNB** / **H-PRUNF** smoke KILL; "
     "**H-CBAT** / **H-CHB** / **H-CPOOLB** / **H-CHBAT** / **H-FUSEB** / **H-FCPOOLB** / "
-    "**H-LAYB** / **H-FLAYB** formal PROMOTE. Wave P P1 done (`.local/pesquisa.md`).",
+    "**H-LAYB** / **H-FLAYB** formal PROMOTE. Wave P P2 done (`.local/pesquisa.md`).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

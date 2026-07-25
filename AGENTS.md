@@ -94,12 +94,13 @@ npm run verify
 52. Wave O / H-PINC torch.compile under PIN — done (smoke **KILL** — ms/step↑ vs PIN; skip formal)
 53. Wave O focus queue complete — see `.local/pesquisa.md`
 54. Wave P / H-PRUNB PRUN under LAYB — done (smoke **KILL** — |Δlp| > ε vs LAYB; skip formal)
-55. Next — **H-PRUNF** — see `.local/pesquisa.md`
+55. Wave P / H-PRUNF PRUN under FLAYB — done (smoke **KILL** — |Δlp| > ε vs FLAYB; skip formal)
+56. Next — **H-GRAPH** — see `.local/pesquisa.md`
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** Wave P **P2 H-PRUNF** — see `.local/pesquisa.md`
+**Next:** Wave P **P3 H-GRAPH** — see `.local/pesquisa.md`
 
 ---
 
