@@ -20,4 +20,5 @@ Manifest after download: `nano_lm/data/curated/manifest.json`.
 - Cap large RFCs via `max_bytes`.
 - TinyStories remains the **story teacher**; domain packs use curated text for eval/train mix (Wave W).
 - Programming eval pack: `nano_lm/prompts/prog_prompts.yaml` → `npm run nano:prog` / `nano:formal:hprog` ([formal](../../docs/results/nano-lm/formal-hprog-programming.md)).
+- Bitcoin eval pack: `nano_lm/prompts/btc_prompts.yaml` → `npm run nano:btc` ([smoke](../../docs/results/nano-lm/hbtc-bitcoin.md); MIT + BSD-2-Clause).
 - Do not commit multi-MB blobs — regenerate via `nano:curated`.

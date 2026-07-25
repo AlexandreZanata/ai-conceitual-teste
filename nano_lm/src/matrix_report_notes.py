@@ -2,7 +2,7 @@
 
 GATES = [
     "Tips: H-STAG′ / H-EARLY / H-POOL (TIPD promoted train tip).",
-    "Primary recipe: H-PACK (harness/elongated/ood@128/howto/prog; not ood_long).",
+    "Primary recipe: H-PACK (harness/elongated/ood@128/howto/prog/btc; not ood_long).",
     "Deploy: H-DEPL over BUD; QPACK in-harness only; Wave W ACTIVE.",
 ]
 
@@ -11,6 +11,7 @@ NOTES = [
     "- Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM/PROG formals.",
     "- Wave V COMPLETE; Wave W ACTIVE — curated KB (`.local/pesquisa.md`).",
     "- H-PROG smoke+formal PROMOTE (`formal-hprog-programming.md`).",
+    "- H-BTC smoke PROMOTE (`hbtc-bitcoin.md`); formal pending.",
     "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

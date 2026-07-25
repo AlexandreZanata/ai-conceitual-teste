@@ -6,7 +6,7 @@ Wall clock (matrix): 154.6s
 Primary metric: teacher mean log-prob of student completions.
 Full historical rows: `docs/results/nano-lm/archive/`.
 Tips: H-STAG′ / H-EARLY / H-POOL (TIPD promoted train tip).
-Primary recipe: H-PACK (serve-fast; elongated+ood+howto+prog; not ood_long).
+Primary recipe: H-PACK (serve-fast; elongated+ood+howto+prog+btc; not ood_long).
 Train: H-TPACK + H-AMORT; quality serve H-QPACK in-harness only.
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
@@ -25,5 +25,6 @@ Train: H-TPACK + H-AMORT; quality serve H-QPACK in-harness only.
 - Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM/PROG formals.
 - Wave V COMPLETE; Wave W ACTIVE — curated KB (`.local/pesquisa.md`).
 - H-PROG smoke+formal PROMOTE (`formal-hprog-programming.md`).
+- H-BTC smoke PROMOTE (`hbtc-bitcoin.md`); formal pending.
 - EvoGen survival archived: `docs/archive/evogen/`.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

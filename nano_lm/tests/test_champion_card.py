@@ -33,3 +33,9 @@ def test_given_card_when_read_then_hprog_promote() -> None:
     text = CARD.read_text(encoding="utf-8")
     assert "H-PROG" in text or "PROG" in text
     assert "formal-hprog-programming" in text
+
+
+def test_given_card_when_read_then_hbtc_smoke() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-BTC" in text or "BTC" in text
+    assert "hbtc-bitcoin" in text

@@ -28,4 +28,5 @@
 Under tip wall/GFLOPs ceilings ([BUD](formal-hbud-budget.md)): PACK + QPACK + TPACK **SURVIVE**.  
 Runnable routes ([DEPL](formal-hdepl-policy.md)): speed→PACK; quality→QPACK iff in-dist; train→TPACK; REJECT ood_long / QPACK-OOD.  
 Domain probe ([DOM](formal-hdom-howto.md)): PACK tip gate holds on procedural howto @128.  
-Wave W programming ([H-PROG formal](formal-hprog-programming.md)): PACK tip gate holds on prog @128.
+Wave W programming ([H-PROG formal](formal-hprog-programming.md)): PACK tip gate holds on prog @128.  
+Wave W bitcoin ([H-BTC smoke](hbtc-bitcoin.md)): PACK tip gate holds on btc @128 (formal pending).
