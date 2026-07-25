@@ -30,6 +30,7 @@
 | 2c⁗″. Quality throughput | FUSE under CPOOLB | **H-FCPOOLB** (util) | [formal-hfcpoolb-vs-hcpoolb.md](formal-hfcpoolb-vs-hcpoolb.md) |
 | 2c⁗‴. Eval throughput | LAY under FUSEB batch | **H-LAYB** (util) | [formal-hlayb-vs-hfuseb.md](formal-hlayb-vs-hfuseb.md) |
 | 2c⁗⁗. Quality throughput | LAY under FCPOOLB batch | **H-FLAYB** (util) | [formal-hflayb-vs-hfcpoolb.md](formal-hflayb-vs-hfcpoolb.md) |
+| 2c⁗⁗′. Thin under LAYB | DEPTH_prun under LAYB | **H-DEPTHB** (KILL) | [hdepthb-vs-hlayb.md](hdepthb-vs-hlayb.md) |
 | — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
 | — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
 | — | Protocol stack (not a tip) | **H-CFUSE** = CHUNK ⊕ FUSE | [hcfuse-protocol.md](hcfuse-protocol.md) |
@@ -74,6 +75,7 @@ npm run nano:layb && npm run nano:layb:report
 npm run nano:formal:hlayb && npm run nano:formal:hlayb:report
 npm run nano:flayb && npm run nano:flayb:report
 npm run nano:formal:hflayb && npm run nano:formal:hflayb:report
+npm run nano:depthb && npm run nano:depthb:report
 npm run nano:formal:hshort && npm run nano:formal:hshort:report
 npm run nano:shortb && npm run nano:shortb:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report
@@ -114,7 +116,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave O FOCUS** — O1 done; **next: O2 H-DEPTHB**.  
+**Wave O FOCUS** — O2 done; **next: O3 H-PINC**.  
+**H-DEPTHB** smoke **KILL** ([hdepthb-vs-hlayb.md](hdepthb-vs-hlayb.md) — |Δlp| > ε vs LAYB; skip formal).  
 **H-FLAYB** smoke+formal **PROMOTE** ([formal-hflayb-vs-hfcpoolb.md](formal-hflayb-vs-hfcpoolb.md) — tok/s↑ + wall↓; lp=FCPOOLB).  
 **H-SHORTB** smoke **KILL** ([hshortb-vs-hfuseb.md](hshortb-vs-hfuseb.md) — lp change vs FUSEB; skip formal).  
 **H-LAYB** smoke+formal **PROMOTE** ([formal-hlayb-vs-hfuseb.md](formal-hlayb-vs-hfuseb.md) — tok/s↑ + wall↓; lp=FUSEB).  
