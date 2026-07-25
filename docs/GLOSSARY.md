@@ -41,6 +41,7 @@
 | **H-ABS-CHRONO** | Acausal KD soft-label shuffle (smoke **KILL**; code↓ vs EARLY; see archive) |
 | **H-ABS-MIRROR** | Anti-teacher (1−p) margin (smoke PROMOTE / formal **KILL** story↓; see archive) |
 | **H-ABS-CBON** | Code-teacher BoN commit (smoke **KILL**; code↑ story↓; see archive) |
+| **H-ABS-CSAFE** | Story-constrained code BoN (smoke **KILL**; low elig story↓; see archive) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

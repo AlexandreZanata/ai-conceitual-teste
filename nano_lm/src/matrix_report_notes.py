@@ -42,6 +42,7 @@ NOTES = [
     "- H-ABS-CHRONO KILL — acausal soft-label shuffle code↓ (`archive/hchrono-chrono.md`).",
     "- H-ABS-MIRROR KILL — anti-teacher margin formal story↓ (`archive/hmirror-mirror.md`).",
     "- H-ABS-CBON KILL — code-teacher BoN commit story↓ (`archive/hcbon-cbon.md`).",
+    "- H-ABS-CSAFE KILL — story-floor code BoN low-elig story↓ (`archive/hcsafe-csafe.md`).",
     "- Matrix note: PROG/BTC/MIXD/EFF in wave-w-summary § Kill/promote.",
     "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",

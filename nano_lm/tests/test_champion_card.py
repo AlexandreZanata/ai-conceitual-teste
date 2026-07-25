@@ -287,3 +287,12 @@ def test_given_card_when_read_then_hcbon_kill() -> None:
     assert "H-ABS-CBON" in text or "CBON" in text
     assert "KILL" in text
     assert "hcbon-cbon" in text
+
+    assert "H-ABS-CSAFE" in text or "CSAFE" in text
+
+
+def test_given_card_when_read_then_hcsafe_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-ABS-CSAFE" in text or "CSAFE" in text
+    assert "KILL" in text
+    assert "hcsafe-csafe" in text
