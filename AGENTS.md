@@ -78,7 +78,8 @@ npm run verify
 36. Wave L / H-Q4 int4 CUDA on DEPTH — done (smoke **PROMOTE** / formal **KILL** — quality < DEPTH−ε)
 37. Wave L / H-CFUSE CHUNK⊕FUSE protocol — done (smoke **KILL** — wall ≥ min(CHUNK,FUSE); not a tip)
 38. Wave L / H-CBAT chunked prefill under BAT — done (smoke+formal **PROMOTE** — tok/s↑; lp=BAT)
-39. Next — **H-CHB** — see `.local/pesquisa.md`
+39. Wave L / H-CHB chunk_size sweep vs CHUNK — done (smoke+formal **PROMOTE** — B=256 wall↓)
+40. Next — **H-ASYNC** — see `.local/pesquisa.md`
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
