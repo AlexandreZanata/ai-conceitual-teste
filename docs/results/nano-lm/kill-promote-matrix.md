@@ -23,6 +23,6 @@ H-FLOP: wall + tok/s + est. GFLOPs; H-PARETO flags dirty tok/s↑.
 
 ## Notes
 - Official recipes only for public claims. Archive: `docs/results/nano-lm/archive/`.
-- Wave U: XFER **KILL** → BUD **PROMOTE** (PACK+QPACK+TPACK survive tip budgets) → RETIP → AMORT (`.local/pesquisa.md`).
+- Wave U: XFER **KILL** → BUD **PROMOTE** → RETIP **PROMOTE** (PRE3 capacity+serve; tips stay) → AMORT (`.local/pesquisa.md`).
 - ETRAIN e2e KILL purged. Formal = 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.
