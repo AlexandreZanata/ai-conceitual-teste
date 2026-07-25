@@ -41,6 +41,7 @@ npm run nano:dom && npm run nano:formal:hdom
 npm run nano:prog && npm run nano:formal:hprog
 npm run nano:btc && npm run nano:formal:hbtc
 npm run nano:eff && npm run nano:formal:heff
+npm run nano:e5
 npm run nano:qpack && npm run nano:formal:hqpack
 npm run nano:bud && npm run nano:formal:hbud
 ```

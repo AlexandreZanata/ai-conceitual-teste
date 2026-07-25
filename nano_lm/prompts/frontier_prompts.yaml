@@ -1,0 +1,12 @@
+# Phase E5 — frontier / systems eval suite (RFC English @128 elongation target).
+# Sources: RFC 791, RFC 8446, RFC 8949 (IETF Trust); disjoint from prog/btc/howto/fit.
+# Ids use r* prefix (not f* — fit_prompts already owns f01/f02).
+prompts:
+  - id: r01
+    text: "RFC 791 defines the Internet Protocol datagram header fields including version, IHL, type of service, and"
+  - id: r02
+    text: "TLS 1.3 as specified in RFC 8446 removes several legacy features and requires forward secrecy using"
+  - id: r03
+    text: "RFC 8949 Concise Binary Object Representation encodes major types such as unsigned integers, byte strings, and"
+  - id: r04
+    text: "An IP datagram may be fragmented when it exceeds the maximum transmission unit; the identification field helps the receiver"

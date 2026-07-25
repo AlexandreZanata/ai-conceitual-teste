@@ -1,0 +1,11 @@
+# Phase E5 — programming heldout eval (not wired into H-PROG formal).
+# Drawn from Phase E curated Python/Rust slices; ids disjoint from g01–g04.
+prompts:
+  - id: g05
+    text: "Python lists support methods such as append and extend; to remove an item by value you typically call"
+  - id: g06
+    text: "A Python class defines methods with a first parameter conventionally named self; the constructor is"
+  - id: g07
+    text: "In Rust ownership, when a value is moved into a function the caller can no longer use the original binding unless the type implements"
+  - id: g08
+    text: "Rust data types include scalars such as i32 and f64; compound types include tuples and"

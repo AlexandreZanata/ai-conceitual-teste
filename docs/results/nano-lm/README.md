@@ -23,4 +23,4 @@
 | [archive/hxfer2-transfer.md](archive/hxfer2-transfer.md) | Wave V PACK deepen (KILL; tooling purged) |
 | [archive/](archive/) | KILL history |
 | Wave W | **COMPLETE** — [wave-w-summary.md](wave-w-summary.md) · curated KB · Wave X PARKED |
-| Phase E | Corpus E1–E3 **DONE** — `nano_lm/data/CURATED-SOURCES.md` · `npm run nano:curated` (18 sources) |
+| Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |

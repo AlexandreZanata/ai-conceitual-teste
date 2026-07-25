@@ -40,6 +40,26 @@ SOURCES: list[dict[str, Any]] = [
         "path": "bitcoin/bips.md",
     },
     {
+        "id": "bitcoin-json-rpc",
+        "domain": "bitcoin",
+        "license": "MIT",
+        "url": (
+            "https://raw.githubusercontent.com/bitcoin/bitcoin/"
+            "master/doc/JSON-RPC-interface.md"
+        ),
+        "path": "bitcoin/JSON-RPC-interface.md",
+    },
+    {
+        "id": "bitcoin-rest",
+        "domain": "bitcoin",
+        "license": "MIT",
+        "url": (
+            "https://raw.githubusercontent.com/bitcoin/bitcoin/"
+            "master/doc/REST-interface.md"
+        ),
+        "path": "bitcoin/REST-interface.md",
+    },
+    {
         "id": "bip-0001",
         "domain": "bitcoin",
         "license": "BSD-2-Clause",
@@ -148,6 +168,23 @@ SOURCES: list[dict[str, Any]] = [
         "path": "programming/rust-ch04-01-ownership.md",
     },
     {
+        "id": "python-tutorial-io",
+        "domain": "programming",
+        "license": "PSF",
+        "url": "https://docs.python.org/3/tutorial/inputoutput.html",
+        "path": "programming/python-tutorial-inputoutput.html",
+    },
+    {
+        "id": "rust-book-ch05-01",
+        "domain": "programming",
+        "license": "CC-BY-SA / MIT Apache-2.0",
+        "url": (
+            "https://raw.githubusercontent.com/rust-lang/book/"
+            "main/src/ch05-01-defining-structs.md"
+        ),
+        "path": "programming/rust-ch05-01-structs.md",
+    },
+    {
         "id": "rfc8446",
         "domain": "frontier",
         "license": "IETF Trust",
@@ -184,6 +221,14 @@ PHASE_E_IDS: tuple[str, ...] = (
     "rust-book-ch03-02",
     "rust-book-ch04-01",
     "rfc8949",
+)
+
+# Phase E4: Core docs / small language samples (no full repo dumps).
+PHASE_E4_IDS: tuple[str, ...] = (
+    "bitcoin-json-rpc",
+    "bitcoin-rest",
+    "python-tutorial-io",
+    "rust-book-ch05-01",
 )
 
 

@@ -1,0 +1,11 @@
+# Phase E5 — bitcoin heldout eval (not wired into H-BTC formal).
+# Drawn from BIP-39/141/340 and Core RPC/REST docs; ids disjoint from b01–b04.
+prompts:
+  - id: b05
+    text: "BIP-0039 defines a mnemonic sentence of words that encodes entropy for generating a hierarchical deterministic"
+  - id: b06
+    text: "BIP-0141 introduces segregated witness so that signature data can be moved to a separate witness structure and the transaction id"
+  - id: b07
+    text: "BIP-0340 specifies Schnorr signatures for the secp256k1 curve, improving verification batching and enabling"
+  - id: b08
+    text: "Bitcoin Core exposes a JSON-RPC interface over HTTP; authentication typically relies on a cookie or rpcuser and"

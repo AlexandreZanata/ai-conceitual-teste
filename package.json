@@ -202,6 +202,7 @@
     "nano:eff:report": "nano_lm/.venv/bin/python nano_lm/src/write_heff_report.py",
     "nano:formal:heff": "nano_lm/.venv/bin/python nano_lm/src/run_formal_heff.py",
     "nano:formal:heff:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_heff_report.py",
+    "nano:e5": "nano_lm/.venv/bin/python nano_lm/src/run_e5_smoke.py",
     "nano:retip": "nano_lm/.venv/bin/python nano_lm/src/run_retip_smoke.py",
     "nano:retip:report": "nano_lm/.venv/bin/python nano_lm/src/write_hretip_report.py",
     "nano:formal:hretip": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hretip.py",

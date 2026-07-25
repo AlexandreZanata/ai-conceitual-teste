@@ -7,22 +7,22 @@
 
 | Domain | Sources (official / public) | Use |
 |--------|----------------------------|-----|
-| **bitcoin** | Core README + developer-notes + `doc/bips.md`; BIPs 1, 32, 39, 141, 340 | Frontier money/protocol text |
-| **programming** | Python tutorial (intro, control, datastructures, classes); Rust book ch03–04 | Code/docs language |
+| **bitcoin** | Core README + developer-notes + `doc/bips.md` + JSON-RPC/REST docs; BIPs 1, 32, 39, 141, 340 | Frontier money/protocol text |
+| **programming** | Python tutorial (intro, control, datastructures, classes, I/O); Rust book ch03–05 | Code/docs language |
 | **frontier** | IETF RFC 791, RFC 8446 (TLS 1.3), RFC 8949 (CBOR, truncated) | Systems / crypto protocol English |
 
 Registry: `nano_lm/src/curated_sources.py` (URL + license + path).  
 Manifest after download: `nano_lm/data/curated/manifest.json`.
 
-## Phase E expansion (2026-07-25)
+## Phase E expansion
 
-| Step | Added ids | Cap |
-|------|-----------|-----|
-| E1 | `python-tutorial-datastructures`, `python-tutorial-classes`, `rust-book-ch03-02`, `rust-book-ch04-01` | ≤2MB/domain |
-| E2 | `bitcoin-doc-bips`, `bip-0039`, `bip-0141`, `bip-0340` | license in registry |
-| E3 | `rfc8949` (`max_bytes=150000`) | truncate; do not mirror whole IETF |
+| Step | Added | Cap / note |
+|------|-------|------------|
+| E1–E3 | See prior session (+9 ids) | ≤2MB/domain |
+| E4 | `bitcoin-json-rpc`, `bitcoin-rest`, `python-tutorial-io`, `rust-book-ch05-01` | Core **docs** + small language samples; no git dumps |
+| E5 | Eval YAML: `e5_prog_heldout.yaml`, `e5_btc_heldout.yaml`, `frontier_prompts.yaml` | Prompts in git; H-PROG/H-BTC claim packs **unchanged** |
 
-Eval YAML packs (prog/btc) unchanged this session — E5 deferred.
+E5 smoke: `npm run nano:e5` (build heldout/frontier; one-seed PACK serve on frontier).
 
 ## Rules
 

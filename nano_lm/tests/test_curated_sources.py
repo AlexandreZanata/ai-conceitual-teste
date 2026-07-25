@@ -3,6 +3,7 @@
 from pathlib import Path
 
 from curated_sources import (
+    PHASE_E4_IDS,
     PHASE_E_IDS,
     SESSION_DOMAIN_CAP_BYTES,
     SOURCES,
@@ -15,7 +16,7 @@ CURATED = Path("nano_lm/data/curated")
 
 def test_given_registry_when_list_ids_then_unique_nonempty() -> None:
     ids = source_ids()
-    assert len(ids) >= 15
+    assert len(ids) >= 20
     assert len(ids) == len(set(ids))
 
 
@@ -36,6 +37,12 @@ def test_given_phase_e_when_registry_then_ids_present() -> None:
     ids = set(source_ids())
     missing = set(PHASE_E_IDS) - ids
     assert not missing, f"missing Phase E ids: {sorted(missing)}"
+
+
+def test_given_phase_e4_when_registry_then_ids_present() -> None:
+    ids = set(source_ids())
+    missing = set(PHASE_E4_IDS) - ids
+    assert not missing, f"missing Phase E4 ids: {sorted(missing)}"
 
 
 def test_given_rfc8949_when_registry_then_max_bytes() -> None:
