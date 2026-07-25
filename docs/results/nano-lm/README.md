@@ -25,5 +25,6 @@
 | Wave W | **COMPLETE** — [wave-w-summary.md](wave-w-summary.md) · curated KB |
 | [htchr-code-teacher.md](htchr-code-teacher.md) | H-TCHR smoke (code teacher wire) |
 | [formal-htchr-code-teacher.md](formal-htchr-code-teacher.md) | **Code teacher** (Wave X **PROMOTE**) |
-| Wave X | **ACTIVE** — H-TCHR **PROMOTE** → H-RAG → H-QT (`.local/pesquisa.md`) |
+| [archive/hrag-retrieve.md](archive/hrag-retrieve.md) | **H-RAG** curated prepend (Wave X smoke **KILL**) |
+| Wave X | **ACTIVE** — H-TCHR **PROMOTE** · H-RAG **KILL** → H-CTX → H-QT (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |

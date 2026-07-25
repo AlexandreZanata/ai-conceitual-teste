@@ -50,7 +50,7 @@ npm run nano:bud && npm run nano:formal:hbud
 ## Wave W / X+
 
 Wave W **COMPLETE** — [wave-w-summary.md](wave-w-summary.md): **H-PROG** / **H-BTC** / **H-EFF** **PROMOTE**; **H-MIXD** **KILL** ([archive](archive/hmixd-mix.md)).  
-**Wave X+ ACTIVE** — **H-TCHR** smoke+formal **[PROMOTE](formal-htchr-code-teacher.md)** (`bigcode/tiny_starcoder_py` / `code_teacher_lp`) → **H-RAG** → CTX → QT/QCTX → GENC/ABS (`.local/pesquisa.md`).  
+**Wave X+ ACTIVE** — **H-TCHR** smoke+formal **[PROMOTE](formal-htchr-code-teacher.md)** · **H-RAG** **[KILL](archive/hrag-retrieve.md)** (naive prepend purged) → **H-CTX** → QT/QCTX → GENC/ABS (`.local/pesquisa.md`).  
 KILL history: [`archive/`](archive/).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

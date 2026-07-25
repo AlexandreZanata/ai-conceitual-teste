@@ -34,3 +34,4 @@ E5 smoke: `npm run nano:e5` (build heldout/frontier; one-seed PACK serve on fron
 - Train mix (**H-MIXD**): formal **KILL** — tooling purged; see [archive/hmixd-mix.md](../../docs/results/nano-lm/archive/hmixd-mix.md). Never train on eval YAML ids.
 - Do not commit multi-MB blobs — regenerate via `nano:curated`.
 - Wave W close-out: [wave-w-summary.md](../../docs/results/nano-lm/wave-w-summary.md).
+- Wave X **H-RAG** (naive curated prepend @ decode): smoke **KILL** — [archive/hrag-retrieve.md](../../docs/results/nano-lm/archive/hrag-retrieve.md); tooling purged.

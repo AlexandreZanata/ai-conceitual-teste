@@ -69,3 +69,10 @@ def test_given_card_when_read_then_htchr_promote() -> None:
     assert "H-TCHR" in text or "TCHR" in text
     assert "formal-htchr-code-teacher" in text
     assert "PROMOTE" in text
+
+
+def test_given_card_when_read_then_hrag_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-RAG" in text or "RAG" in text
+    assert "KILL" in text
+    assert "hrag-retrieve" in text

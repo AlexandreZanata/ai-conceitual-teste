@@ -26,7 +26,7 @@ When rules conflict with existing code, **rules prevail** — unless the user ex
 2. `agent-rules/00-core/size-and-complexity-limits.md` — **80 / 200 / ≤10**
 3. `docs/ARCHITECTURE.md` + `docs/GLOSSARY.md`
 4. `docs/NANO-STUDENT-AGENDA.md` + `docs/results/nano-lm/champion-card.md` + `RECIPES.md`
-5. `.local/pesquisa.md` (Wave W COMPLETE; Wave X ACTIVE — H-TCHR PROMOTE; next H-RAG) before new H-IDs
+5. `.local/pesquisa.md` (Wave W COMPLETE; Wave X ACTIVE — H-TCHR PROMOTE; H-RAG KILL; next H-CTX) before new H-IDs
 6. `nano_lm/data/CURATED-SOURCES.md` before data work
 
 ```bash
@@ -41,7 +41,7 @@ npm run nano:test && npm run verify
 
 - Survival PoC v1 **closed** → archive.  
 - Nano Waves U–W **closed** (recipes frozen; XFER2 + MIXD purged).  
-- **Wave X ACTIVE** — H-TCHR **PROMOTE**; next H-RAG — see `.local/pesquisa.md` + [`formal-htchr-code-teacher.md`](docs/results/nano-lm/formal-htchr-code-teacher.md).
+- **Wave X ACTIVE** — H-TCHR **PROMOTE**; H-RAG **KILL**; next H-CTX — see `.local/pesquisa.md` + [`formal-htchr-code-teacher.md`](docs/results/nano-lm/formal-htchr-code-teacher.md) · [`archive/hrag-retrieve.md`](docs/results/nano-lm/archive/hrag-retrieve.md).
 
 ---
 
