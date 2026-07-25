@@ -209,3 +209,10 @@ def test_given_card_when_read_then_hdna_kill() -> None:
     assert "H-ABS-DNA" in text or "DNA" in text
     assert "KILL" in text
     assert "hdna-dna" in text
+
+
+def test_given_card_when_read_then_hdebate_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-ABS-DEBATE" in text or "DEBATE" in text
+    assert "KILL" in text
+    assert "hdebate-debate" in text
