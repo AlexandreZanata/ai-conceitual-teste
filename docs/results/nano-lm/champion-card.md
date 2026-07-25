@@ -1,7 +1,7 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy one-pager: [RECIPES.md](RECIPES.md). Queue: `.local/pesquisa.md` (**Wave V**).
+> Deploy one-pager: [RECIPES.md](RECIPES.md). Lab: `.local/pesquisa.md` (**Wave V COMPLETE**).
 
 ## Official tips
 
@@ -15,7 +15,7 @@
 
 | # | Recipe | Pack | Evidence |
 |---|--------|------|----------|
-| 1 | **Serve-fast** (primary) | **H-PACK** | [formal](formal-hpack-vs-hearly.md) · [XFER2](hxfer2-transfer.md) **KILL** ood_long · [BUD](formal-hbud-budget.md) · [DEPL](formal-hdepl-policy.md) |
+| 1 | **Serve-fast** (primary) | **H-PACK** | [formal](formal-hpack-vs-hearly.md) · [XFER2](hxfer2-transfer.md) · [DOM](formal-hdom-howto.md) · [BUD](formal-hbud-budget.md) · [DEPL](formal-hdepl-policy.md) |
 | 2 | **Train-step / e2e** | **H-TPACK** + **AMORT** | [tpack](formal-htpack-vs-hstag.md) · [amort](formal-hamort-vs-hstag.md) · [TIPD](formal-htipd-vs-hstag.md) |
 | 3 | **Serve-quality** (in-harness) | **H-QPACK** | [formal](formal-hqpack-vs-hpool.md) · OOD [XFER](hxfer-transfer.md) **KILL** · [DEPL](formal-hdepl-policy.md) |
 
@@ -36,16 +36,16 @@ npm run nano:tpack && npm run nano:formal:htpack
 npm run nano:amort && npm run nano:formal:hamort
 npm run nano:tipd && npm run nano:formal:htipd
 npm run nano:depl && npm run nano:formal:hdepl
+npm run nano:dom && npm run nano:formal:hdom
 npm run nano:qpack && npm run nano:formal:hqpack
 npm run nano:bud && npm run nano:formal:hbud
-npm run nano:xfer2 && npm run nano:xfer2:report
 ```
 
 ## Park status
 
-**Wave V** — ~~DEPL~~ smoke+formal **PROMOTE** (policy ↔ BUD).  
-Optional next: **H-DOM**.  
-~~TIPD~~ `STAG_PRIME` · ~~XFER2~~ smoke **KILL** (ood_long).  
+**Wave V COMPLETE** — DOM smoke+formal **PROMOTE** (PACK on howto).  
+~~DEPL~~ · ~~TIPD~~ `STAG_PRIME` · ~~XFER2~~ smoke **KILL** (ood_long).  
+**PARKED** — new wave only with a fresh mechanism.  
 KILL history: [`archive/`](archive/). No new letter-packs.
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

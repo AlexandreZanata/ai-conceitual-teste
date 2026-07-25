@@ -1,8 +1,8 @@
 # Official nano-LM recipes (frozen claims)
 
-> Tip-stack: **H-STAG′** / **H-EARLY** / **H-POOL** (TIPD promoted train tip).  
+> Tip-stack: **H-STAG′** / **H-EARLY** / **H-POOL**.  
 > Packs are delivery envelopes — not tip replacements.  
-> Deploy gate: [H-DEPL](formal-hdepl-policy.md).  
+> Deploy: [H-DEPL](formal-hdepl-policy.md) · Domain: [H-DOM](formal-hdom-howto.md).  
 > Lab: `.local/pesquisa.md` · Card: [champion-card.md](champion-card.md)
 
 ## Deploy one-liners
@@ -12,18 +12,19 @@
 | **Fastest serve** | **H-PACK** (SERVE/SROUTE path) | OOD elongated to 256 ([XFER2](hxfer2-transfer.md) **KILL**) |
 | **Quality@wall serve** | **H-QPACK** (FLAYB) | OOD / transfer (XFER **KILL**) |
 | **Cheaper train steps** | **H-TPACK** (PRE3) | e2e without **H-AMORT** n≥4 |
-| **Official train tip** | **H-STAG′** (PRE3 via [TIPD](formal-htipd-vs-hstag.md)) | Revert to live STAG without new formal |
+| **Official train tip** | **H-STAG′** (PRE3 via [TIPD](formal-htipd-vs-hstag.md)) | Revert without new formal |
 | **E2E train wall** | **H-AMORT** (cache/n + PRE3) | ETRAIN N=1 (purged KILL) |
 
 ## Formal evidence
 
 | Recipe | Doc | Wave U / V |
 |--------|-----|------------|
-| PACK | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | [XFER2](hxfer2-transfer.md) **KILL** ood_long; [BUD](formal-hbud-budget.md); [DEPL](formal-hdepl-policy.md) |
+| PACK | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | [DOM](formal-hdom-howto.md) **PROMOTE** howto; [XFER2](hxfer2-transfer.md) **KILL** ood_long; [BUD](formal-hbud-budget.md); [DEPL](formal-hdepl-policy.md) |
 | QPACK | [formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) | [XFER](hxfer-transfer.md) KILL; BUD; DEPL in-dist only |
 | TPACK / tip | [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) | [TIPD](formal-htipd-vs-hstag.md) **PROMOTE** STAG′; [AMORT](formal-hamort-vs-hstag.md) |
 
 ## Policy (budget + deploy)
 
 Under tip wall/GFLOPs ceilings ([BUD](formal-hbud-budget.md)): PACK + QPACK + TPACK **SURVIVE**.  
-Runnable routes ([DEPL](formal-hdepl-policy.md)): speed→PACK; quality→QPACK iff in-dist; train→TPACK; REJECT ood_long / QPACK-OOD.
+Runnable routes ([DEPL](formal-hdepl-policy.md)): speed→PACK; quality→QPACK iff in-dist; train→TPACK; REJECT ood_long / QPACK-OOD.  
+Domain probe ([DOM](formal-hdom-howto.md)): PACK tip gate holds on procedural howto @128.

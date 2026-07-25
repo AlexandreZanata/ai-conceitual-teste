@@ -4,7 +4,8 @@
 |-----|------|
 | [RECIPES.md](RECIPES.md) | **Deploy one-pager** |
 | [champion-card.md](champion-card.md) | Tips + recipe priority |
-| [formal-hdepl-policy.md](formal-hdepl-policy.md) | **Deploy policy** (Wave V) |
+| [formal-hdom-howto.md](formal-hdom-howto.md) | **Howto domain** (Wave V) |
+| [formal-hdepl-policy.md](formal-hdepl-policy.md) | Deploy policy |
 | [formal-htipd-vs-hstag.md](formal-htipd-vs-hstag.md) | Train tip STAG′ |
 | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | Serve-fast |
 | [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) / [formal-hamort-vs-hstag.md](formal-hamort-vs-hstag.md) | Train steps / e2e |

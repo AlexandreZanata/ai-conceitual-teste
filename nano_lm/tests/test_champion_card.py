@@ -22,7 +22,8 @@ def test_given_card_when_read_then_compose_kills_listed() -> None:
         assert hid in text
 
 
-def test_given_card_when_read_then_depl_documented() -> None:
+def test_given_card_when_read_then_wave_v_parked() -> None:
     text = CARD.read_text(encoding="utf-8")
-    assert "H-DEPL" in text or "DEPL" in text
+    assert "H-DOM" in text or "DOM" in text
+    assert "COMPLETE" in text or "PARKED" in text
     assert "PROMOTE" in text

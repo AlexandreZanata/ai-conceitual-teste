@@ -11,16 +11,18 @@ Parent control: live **H-STAG**.
 
 | Priority | Recipe | Notes |
 |----------|--------|-------|
-| 1 | **H-PACK** | Primary speed; transfers elongated+OOD@128; **not** ood_long |
+| 1 | **H-PACK** | Primary speed; elongated+OOD@128+howto; **not** ood_long |
 | 2 | **H-TPACK** + **AMORT** | Steps / e2e n≥4 (tip = STAG′) |
 | 3 | **H-QPACK** | Quality serve **in-harness only** (XFER KILL) |
 
-Deploy gate: [H-DEPL](results/nano-lm/formal-hdepl-policy.md). One-pager: [`RECIPES.md`](results/nano-lm/RECIPES.md).
+Deploy: [H-DEPL](results/nano-lm/formal-hdepl-policy.md). Domain: [H-DOM](results/nano-lm/formal-hdom-howto.md).  
+One-pager: [`RECIPES.md`](results/nano-lm/RECIPES.md).
 
-## Wave V (next)
+## Wave V
 
-~~XFER2~~ · ~~TIPD~~ · ~~DEPL~~ → optional **H-DOM** (new domain).  
-Lab: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+**COMPLETE** — XFER2 · TIPD · DEPL · DOM.  
+Lab: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).  
+**Park** — new wave only with a fresh mechanism.
 
 ## Archived
 
