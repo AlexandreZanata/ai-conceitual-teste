@@ -1,14 +1,9 @@
 # Archived nano-lm results (KILL / non-champion history)
 
-## Active keep (`docs/results/nano-lm/`)
+Active tips+utils live one level up. Focus stack: STAG/EARLY/POOL + FLASH/CHUNK/KVSEL/TOP/PIN/DEPTH/PRUN/BAT/POOLB + MIX/FUSE protocols.  
+H-Q4 formal KILL archived here (`hq4-vs-hdepth.md`, `formal-hq4-vs-hdepth.md`).
 
-- Tips: **H-STAG** / **H-EARLY** / **H-POOL**
-- Train utils: H-PRUN / H-TOP / H-DEPTH
-- Decode utils: H-LAY / H-SHORT / H-FLASH / H-KVSEL / H-BAT
-- Protocol: H-MIX (PRUN⊕LAY)
-- Metrics: H-FLOP
-
-## Archived files (135)
+## Archived files (137)
 
 - `formal-hann-vs-kdcos.md`
 - `formal-hcasc-vs-b4.md`
@@ -38,6 +33,7 @@
 - `formal-hsym-vs-b2.md`
 - `formal-hthin-vs-hcurl.md`
 - `formal-htkd-vs-b2.md`
+- `formal-htopk-vs-htop.md`
 - `formal-htyp-vs-b4.md`
 - `formal-hxov-vs-b2.md`
 - `hadv-vs-b2.md`
@@ -138,6 +134,7 @@
 - `htie-vs-hstag.md`
 - `htkd-vs-b2.md`
 - `htmn-vs-tips.md`
+- `htopk-vs-htop.md`
 - `htou-vs-hsel.md`
 - `htpe-vs-htyp.md`
 - `htrim-vs-hpool.md`

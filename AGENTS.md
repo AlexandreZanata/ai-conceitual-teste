@@ -75,7 +75,8 @@ npm run verify
 33. Wave K / H-POOLB batched POOL — done (smoke+formal **PROMOTE** — tok/s↑; lp=serial; tip POOL unchanged)
 34. Wave K / H-PIN pinned TOP H2D — done (smoke+formal **PROMOTE** — ms/step↓ vs TOP; lp=TOP)
 35. Wave K / H-CHUNK chunked prefill under FLASH — done (smoke+formal **PROMOTE** — wall↓ vs FLASH; lp=EARLY; tip unchanged)
-36. Next — **H-Q4** — see `.local/pesquisa.md`
+36. Wave L / H-Q4 int4 CUDA on DEPTH — done (smoke **PROMOTE** / formal **KILL** — quality < DEPTH−ε)
+37. Next — **H-CFUSE** — see `.local/pesquisa.md`
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  

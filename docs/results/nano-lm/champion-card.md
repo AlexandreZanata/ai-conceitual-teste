@@ -62,12 +62,12 @@ npm run nano:formal:hbat && npm run nano:formal:hbat:report
 npm run nano:formal:htop && npm run nano:formal:htop:report
 npm run nano:pin && npm run nano:pin:report
 npm run nano:formal:hpin && npm run nano:formal:hpin:report
-npm run nano:topk && npm run nano:topk:report
-npm run nano:formal:htopk && npm run nano:formal:htopk:report
 npm run nano:formal:hflash && npm run nano:formal:hflash:report
 npm run nano:formal:hkvsel && npm run nano:formal:hkvsel:report
 npm run nano:chunk && npm run nano:chunk:report
 npm run nano:formal:hchunk && npm run nano:formal:hchunk:report
+npm run nano:q4 && npm run nano:q4:report
+npm run nano:formal:hq4 && npm run nano:formal:hq4:report
 npm run nano:formal:hdepth && npm run nano:formal:hdepth:report
 npm run nano:mix && npm run nano:mix:report
 npm run nano:fuse && npm run nano:fuse:report
@@ -84,9 +84,11 @@ npm run nano:fuse && npm run nano:fuse:report
 
 ## Park status
 
-**PARKED** (tips). Utils through Wave J + post-J complete.  
-**Wave K ACTIVE** — **H-CHUNK** formal **PROMOTE** ([formal-hchunk-vs-hflash.md](formal-hchunk-vs-hflash.md)); next **H-Q4**.  
-**H-PIN** / **H-POOLB** formal PROMOTE; **H-FUSE** / **H-MIX** PROTOCOL; **H-TOPK** formal KILL.
+**PARKED** (tips: STAG / EARLY / POOL).  
+**Wave L FOCUS** — deepen winners; **next: H-CFUSE**.  
+**H-Q4** smoke PROMOTE / formal **KILL** ([archive/formal-hq4-vs-hdepth.md](archive/formal-hq4-vs-hdepth.md)).  
+H-CHUNK / PIN / POOLB formal PROMOTE; FUSE/MIX PROTOCOL; **H-TOPK** purged.
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  
-Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).
+Matrix: [`kill-promote-matrix.md`](kill-promote-matrix.md).  
+Lab queue: `.local/pesquisa.md`.

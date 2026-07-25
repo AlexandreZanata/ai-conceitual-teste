@@ -22,45 +22,29 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 
 | ID | Name |
 |----|------|
-| B0 | Random-init student AR (floor) |
-| B1 | Supervised CE on TinyStories |
-| B2 | KD (KL to teacher logits) |
-| B3 | B2 + AR decode |
-| B4 | B2 + Best-of-N |
+| B0–B4 | Floor / CE / KD / AR / BoN — see prior docs |
 
 **Claim rule:** beat B2 (train) or B4 dual-gate (decode) on formal seeds `{0,1,2}` with fit≠eval.
 
-## Champion tips (active code)
+## Focus stack (what works)
 
-| Role | ID | Formal | Notes |
-|------|-----|--------|-------|
-| Train | **H-STAG** | PROMOTE | Official train (`lo=6`, `stages=4`) |
-| Train parents | H-CURL2 ← H-CURL ← H-CUR | PROMOTE lineage | Ablations |
-| Decode speed | **H-EARLY** | PROMOTE vs B4 | Official fast |
-| Decode quality@wall | **H-POOL** | PROMOTE vs H-DECKL | Official quality@wall |
-| Decode parents | H-DECKL ← H-DECK ← H-DEC | PROMOTE vs B4 | Search lineage |
-| Train utils | H-PRUN / H-TOP / H-DEPTH / **H-PIN** | formal PROMOTE | tip unchanged |
-| Decode utils | H-LAY / H-SHORT / H-FLASH / H-KVSEL / H-BAT / H-POOLB / **H-CHUNK** | formal PROMOTE | tip unchanged |
-| Metrics | **H-FLOP** | smoke PROMOTE | wall + tok/s + GFLOPs |
-| Protocol | **H-MIX** / **H-FUSE** | PROTOCOL | PRUN⊕LAY; FLASH⊕KVSEL — not tips |
+| Role | ID | Status |
+|------|-----|--------|
+| Train tip | **H-STAG** | formal PROMOTE |
+| Decode tips | **H-EARLY** / **H-POOL** | formal PROMOTE |
+| Systems decode | FLASH / KVSEL / **CHUNK** | formal PROMOTE |
+| Throughput | BAT / **POOLB** | formal PROMOTE |
+| Train util | TOP / **PIN** / PRUN / DEPTH | formal PROMOTE |
+| Quant | **H-Q4** | smoke PROMOTE / formal **KILL** |
+| Protocol | MIX / FUSE | PROTOCOL (not tips) |
 
-Protocol: train **H-STAG**, decode **H-EARLY** or **H-POOL**. Never paste tips.  
-Optional stacks: **H-MIX** / **H-FUSE** protocols — not tip H-IDs.  
-Next queue: `.local/pesquisa.md` (**Wave K** — next **H-Q4**; **H-CHUNK** formal PROMOTE).  
-Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+**Do not** gene-widen EARLY/POOL or paste tips. Deepen systems/batch/TOP/DEPTH axes only.  
+Queue: `.local/pesquisa.md` (**Wave L** — next **H-CFUSE**; Q4 formal KILL). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
-## Archived hypotheses
+## Archived
 
-Waves A–H deepeners + Wave I KILLs (WIN/TIE/AMP/SOFT) + Wave J KILLs (BUCKET/REP/ALT) purged.  
-Wave K: **H-TOPK** formal **KILL**; **H-FUSE** PROTOCOL; **H-POOLB** / **H-PIN** / **H-CHUNK** formal **PROMOTE**.  
-Markdown: [`docs/results/nano-lm/archive/`](results/nano-lm/archive/) + active smoke/formal notes.
+A–H deepeners, I/J KILLs, **H-TOPK**, **H-Q4** formal KILL. [`archive/`](results/nano-lm/archive/).
 
 ## Eval
 
-- Primary: teacher length-normalized log-prob  
-- Secondary: wall-ms, tokens/s, **est. GFLOPs**, train ms/step (H-TOP)  
-- Matrix: `npm run nano:matrix` / `npm run nano:matrix:report`
-
-## Success
-
-Frozen tips beat B2 / B4. Utils may win wall/tok/s without replacing tip. Negatives archived.
+teacher_lp + wall + tok/s + GFLOPs + train ms/step. Matrix: `npm run nano:matrix:report`.
