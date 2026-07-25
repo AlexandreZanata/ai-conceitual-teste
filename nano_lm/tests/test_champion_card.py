@@ -195,3 +195,10 @@ def test_given_card_when_read_then_hqbell_kill() -> None:
     assert "H-Q-BELL" in text or "BELL" in text
     assert "KILL" in text
     assert "hqbell-bell" in text
+
+
+def test_given_card_when_read_then_horacle1_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-ABS-ORACLE1" in text or "ORACLE1" in text
+    assert "KILL" in text
+    assert "horacle1-oracle" in text

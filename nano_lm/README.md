@@ -6,7 +6,7 @@ Active lab (EvoGen C++ frozen). Caps: ≤80 / ≤200 / cyclo ≤10.
 
 **H-STAG′** train · **H-EARLY** / **H-POOL** decode · **H-PACK** serve-fast · **H-TPACK**+**AMORT** train cost · **H-QPACK** in-harness quality.
 
-Card: [`docs/results/nano-lm/champion-card.md`](../docs/results/nano-lm/champion-card.md) · Recipes: [`RECIPES.md`](../docs/results/nano-lm/RECIPES.md) · Lab: `.local/pesquisa.md` (**Wave X**: H-TCHR/H-QT/H-GENC **PROMOTE**; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL **KILL**; next H-ABS-ORACLE1).
+Card: [`docs/results/nano-lm/champion-card.md`](../docs/results/nano-lm/champion-card.md) · Recipes: [`RECIPES.md`](../docs/results/nano-lm/RECIPES.md) · Lab: `.local/pesquisa.md` (**Wave X**: H-TCHR/H-QT/H-GENC **PROMOTE**; long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1 **KILL**; next H-ABS-DNA).
 
 ## Setup
 

@@ -29,6 +29,7 @@
 | **H-Q-GROVER** | R-round next-token mass amplify p∝p² (smoke **KILL**; see archive) |
 | **H-Q-TUNNEL** | Tiny ε leak past causal MASK (smoke **KILL**; identity vs EARLY; see archive) |
 | **H-Q-BELL** | Distant (i,i+τ) K/V mean couple (smoke **KILL**; identity vs EARLY; see archive) |
+| **H-ABS-ORACLE1** | 1-bit sha256 parity marker vs RAG prepend (smoke **KILL**; code↓ vs EARLY; see archive) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”
