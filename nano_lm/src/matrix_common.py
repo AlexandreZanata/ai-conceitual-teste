@@ -58,19 +58,29 @@ def write_json(path: Path, obj: Any) -> None:
     path.write_text(json.dumps(obj, indent=2), encoding="utf-8")
 
 
-def eval_ckpt(c: dict[str, Any], ckpt: Path | None, seed: int, family: str) -> dict:
+def eval_ckpt(
+    c: dict[str, Any],
+    ckpt: Path | None,
+    seed: int,
+    family: str,
+    *,
+    build_fn=None,
+) -> dict:
     from eval_student import eval_student_vs_teacher
 
-    ev = eval_student_vs_teacher(
-        student_ckpt=ckpt,
-        teacher_id=c["teacher_id"],
-        tokenizer_id=c["tokenizer_id"],
-        prompts_path=c["prompts"],
-        cache_dir=c["cache"],
-        max_new_tokens=c["max_new_eval"],
-        seed=seed,
-        temperature=0.8,
-        top_p=0.9,
-    )
+    kwargs: dict[str, Any] = {
+        "student_ckpt": ckpt,
+        "teacher_id": c["teacher_id"],
+        "tokenizer_id": c["tokenizer_id"],
+        "prompts_path": c["prompts"],
+        "cache_dir": c["cache"],
+        "max_new_tokens": c["max_new_eval"],
+        "seed": seed,
+        "temperature": 0.8,
+        "top_p": 0.9,
+    }
+    if build_fn is not None:
+        kwargs["build_fn"] = build_fn
+    ev = eval_student_vs_teacher(**kwargs)
     ev["family"] = family
     return ev

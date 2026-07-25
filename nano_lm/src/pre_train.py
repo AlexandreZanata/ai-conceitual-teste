@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import time
+from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
@@ -30,6 +31,7 @@ def train_topk_prefetch(
     hypothesis: str = "H-PRE",
     half_h2d: bool = False,
     fused_adam: bool = False,
+    build_fn: Callable[[int], object] = build_student,
 ) -> dict[str, Any]:
     """
     GIVEN pinned top-k cache records on CUDA
@@ -42,7 +44,7 @@ def train_topk_prefetch(
         raise ValueError("records must be non-empty")
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
-    student = build_student(vocab_size).to(device)
+    student = build_fn(vocab_size).to(device)
     student.train()
     if fused_adam:
         opt = torch.optim.AdamW(student.parameters(), lr=lr, fused=True)

@@ -103,6 +103,7 @@ npm run verify
 61. Wave Q / H-PRE prefetch H2D under PIN — done (smoke+formal **PROMOTE** — ms/step↓; lp=PIN)
 62. Wave Q / H-HALF fp16-wire H2D under PRE — done (smoke+formal **PROMOTE** — ms/step↓; lp=PRE)
 63. Wave Q / H-ADAMF fused AdamW under HALF — done (smoke+formal **PROMOTE** — ms/step↓; lp=HALF)
+64. Wave Q / H-DEPTHA DEPTH under ADAMF — done (smoke **KILL** — quality < ADAMF−ε; skip formal)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  

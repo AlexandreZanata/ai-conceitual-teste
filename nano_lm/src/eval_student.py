@@ -58,6 +58,7 @@ def eval_student_vs_teacher(
     seed: int,
     temperature: float,
     top_p: float,
+    build_fn=build_student,
 ) -> dict[str, Any]:
     teacher = load_causal_lm(
         teacher_id, tokenizer_id, cache_dir=cache_dir, use_fp16=True
@@ -65,11 +66,11 @@ def eval_student_vs_teacher(
     tok = teacher.tokenizer
     device = teacher.device
     if student_ckpt is None:
-        student = build_student(len(tok)).to(device)
+        student = build_fn(len(tok)).to(device)
         student.eval()
         label = "B0"
     else:
-        student = load_student_ckpt(student_ckpt, tok, device)
+        student = load_student_ckpt(student_ckpt, tok, device, build_fn=build_fn)
         label = student_ckpt.stem
     with prompts_path.open(encoding="utf-8") as f:
         prompts = yaml.safe_load(f)["prompts"]
