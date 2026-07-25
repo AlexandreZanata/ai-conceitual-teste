@@ -12,9 +12,9 @@
 | Throughput | BAT…→**LAYB**; POOLB…→**FLAYB** | tok/s↑ |
 | Train I/O | TOP→…→**PRE3** | ms/step↓ |
 | Thin solo | DEPTH / PRUN | not under batch |
-| Protocol | MIX / FUSE | not tips |
+| Protocol | MIX / FUSE / **PARETO** | not tips |
 
-**Next:** Wave R in `.local/pesquisa.md` — **PARETO** (ROUTE smoke+formal PROMOTE).  
+**Next:** Wave R complete — park (or open next wave in `.local/pesquisa.md`).  
 Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived KILLs
