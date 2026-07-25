@@ -82,11 +82,12 @@ npm run verify
 40. Wave L / H-ASYNC cache∩PIN overlap — done (smoke **KILL** — e2e wall↑ vs PIN; lp tie)
 41. Wave L focus queue complete (L6 skipped) — see `.local/pesquisa.md`
 42. Wave M / H-CPOOLB chunked prefill under POOLB — done (smoke+formal **PROMOTE** — tok/s↑; lp=POOLB)
+43. Wave M / H-CHBAT CHB B under CBAT — done (smoke+formal **PROMOTE** — tok/s↑; lp=CBAT)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** **H-CHBAT** — see `.local/pesquisa.md`
+**Next:** **H-FUSEB** — see `.local/pesquisa.md`
 
 ---
 
