@@ -9,8 +9,9 @@ GATES = [
 NOTES = [
     "## Notes",
     "- Deploy: `docs/results/nano-lm/RECIPES.md` + DEPL/DOM/PROG/BTC formals.",
-    "- Wave W COMPLETE — [wave-w-summary.md](wave-w-summary.md); Wave X PARKED.",
+    "- Wave W COMPLETE — [wave-w-summary.md](wave-w-summary.md); Wave X ACTIVE (H-TCHR PROMOTE).",
     "- H-PROG / H-BTC / H-EFF PROMOTE; H-MIXD KILL (runners purged).",
+    "- H-TCHR PROMOTE — code teacher wire (`formal-htchr-code-teacher.md`).",
     "- Matrix note: PROG/BTC/MIXD/EFF in wave-w-summary § Kill/promote.",
     "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",

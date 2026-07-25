@@ -19,22 +19,20 @@ Parent control: live **H-STAG**.
 Deploy: [H-DEPL](results/nano-lm/formal-hdepl-policy.md). Domain: [H-DOM](results/nano-lm/formal-hdom-howto.md) · [H-PROG](results/nano-lm/formal-hprog-programming.md) · [H-BTC](results/nano-lm/formal-hbtc-bitcoin.md).  
 One-pager: [`RECIPES.md`](results/nano-lm/RECIPES.md).
 
-## Wave W (COMPLETE)
+## Wave W (COMPLETE) → Wave X (ACTIVE)
 
-**Mechanism:** curated public KB (programming + bitcoin/frontier) + PACK efficiency on new domains.  
-Summary: [`wave-w-summary.md`](results/nano-lm/wave-w-summary.md).  
-Data: [`nano_lm/data/CURATED-SOURCES.md`](../nano_lm/data/CURATED-SOURCES.md) · `npm run nano:curated`.  
-Lab: `.local/pesquisa.md`. Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+**W mechanism:** curated KB + PACK on prog/btc + EFF. Summary: [`wave-w-summary.md`](results/nano-lm/wave-w-summary.md).  
+**X mechanism:** dual teacher (story + **tiny code LM**) · long context · RAG/QT · quantum-*inspired* context · genetic context knobs · absurd sandbox. Lab: `.local/pesquisa.md`.
 
 | ID | Focus | Status |
 |----|--------|--------|
 | W0 CURATED | Download + manifest | DONE |
 | W1 H-PROG | Programming domain PACK gate | smoke+formal **[PROMOTE](results/nano-lm/formal-hprog-programming.md)** |
 | W2 H-BTC | Bitcoin/docs domain PACK gate | smoke+formal **[PROMOTE](results/nano-lm/formal-hbtc-bitcoin.md)** |
-| W3 H-MIXD | STAG + curated train mix | formal **[KILL](results/nano-lm/hmixd-mix.md)** (tooling purged) |
+| W3 H-MIXD | STAG + curated train mix | formal **[KILL](results/nano-lm/archive/hmixd-mix.md)** (tooling purged) |
 | W4 H-EFF | PACK efficiency re-measure | smoke+formal **[PROMOTE](results/nano-lm/formal-heff-efficiency.md)** |
 
-Wave X **PARKED** (new mechanism only). Phase E corpus **DONE** (E1–E5; see `CURATED-SOURCES.md` · [e5-eval-suites.md](results/nano-lm/e5-eval-suites.md)).
+Wave X+ **ACTIVE** — **H-TCHR** smoke+formal **[PROMOTE](results/nano-lm/formal-htchr-code-teacher.md)** → RAG/CTX → QT/QCTX → GENC (see `.local/pesquisa.md`). Phase E corpus **DONE** ([e5-eval-suites.md](results/nano-lm/e5-eval-suites.md)).
 
 ## Archived
 

@@ -1,58 +1,31 @@
-# nano_lm — TinyStories student + teacher track
+# nano_lm — ≤5M generative student track
 
-Isolated Python/PyTorch research track (not part of the C++ EvoGen domain).
+Active lab (EvoGen C++ frozen). Caps: ≤80 / ≤200 / cyclo ≤10.
 
-## Champion tip-stack (parked)
+## Stack
 
-Protocol: train **H-CURL**, decode **H-EARLY** (speed) or **H-POOL** (quality@wall).  
-Card: [`docs/results/nano-lm/champion-card.md`](../docs/results/nano-lm/champion-card.md).  
-Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../docs/NANO-STUDENT-AGENDA.md).
+**H-STAG′** train · **H-EARLY** / **H-POOL** decode · **H-PACK** serve-fast · **H-TPACK**+**AMORT** train cost · **H-QPACK** in-harness quality.
+
+Card: [`docs/results/nano-lm/champion-card.md`](../docs/results/nano-lm/champion-card.md) · Recipes: [`RECIPES.md`](../docs/results/nano-lm/RECIPES.md) · Lab: `.local/pesquisa.md` (**Wave X**: H-TCHR **PROMOTE** → H-RAG).
 
 ## Setup
 
 ```bash
 python3 -m venv nano_lm/.venv
-source nano_lm/.venv/bin/activate
-pip install -r nano_lm/requirements.txt
-```
-
-## Phase-10 lab (AR / BoN / MAE)
-
-```bash
-npm run nano:lab          # GPU-heavy + live charts
-npm run nano:lab:smoke
-npm run nano:lab:bench
+nano_lm/.venv/bin/pip install -r nano_lm/requirements.txt
 npm run nano:test
+npm run nano:curated
 ```
 
-## Champion matrix + tips
+## Survivors (repro)
 
 ```bash
-npm run nano:matrix && npm run nano:matrix:report
-npm run nano:cur && npm run nano:cur:report
-npm run nano:curl && npm run nano:curl:report
-npm run nano:dec
-npm run nano:deck && npm run nano:deck:report
-npm run nano:deckl && npm run nano:deckl:report
-npm run nano:pool && npm run nano:pool:report
-npm run nano:early && npm run nano:early:report
-npm run nano:ear2 && npm run nano:ear2:report
-npm run nano:bud && npm run nano:bud:report
-npm run nano:spec
+npm run nano:pack && npm run nano:formal:hpack
+npm run nano:prog && npm run nano:formal:hprog
+npm run nano:btc && npm run nano:formal:hbtc
+npm run nano:eff && npm run nano:formal:heff
+npm run nano:tchr && npm run nano:formal:htchr
+npm run nano:tpack && npm run nano:amort
 ```
 
-## Formal (fit≠eval, 3 seeds)
-
-```bash
-npm run nano:formal:cur && npm run nano:formal:cur:report
-npm run nano:formal:curl && npm run nano:formal:curl:report
-npm run nano:formal:hdec && npm run nano:formal:hdec:report
-npm run nano:formal:hdeck && npm run nano:formal:hdeck:report
-npm run nano:formal:hdeckl && npm run nano:formal:hdeckl:report
-npm run nano:formal:hpool && npm run nano:formal:hpool:report
-npm run nano:formal:hearly && npm run nano:formal:hearly:report
-npm run nano:formal:hear2 && npm run nano:formal:hear2:report
-npm run nano:formal:hbud && npm run nano:formal:hbud:report
-```
-
-KILL / non-champion markdown: [`docs/results/nano-lm/archive/`](../docs/results/nano-lm/archive/).
+KILL history: `docs/results/nano-lm/archive/` (XFER/MIXD/SPEC runners purged).

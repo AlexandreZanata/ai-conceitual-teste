@@ -53,11 +53,19 @@ def test_given_card_when_read_then_wave_w_complete() -> None:
     assert "Wave W" in text
     assert "COMPLETE" in text
     assert "wave-w-summary" in text
-    assert "PARKED" in text
+    assert "Wave X" in text
+    assert "ACTIVE" in text or "PARKED" in text
 
 
 def test_given_card_when_read_then_heff_formal() -> None:
     text = CARD.read_text(encoding="utf-8")
     assert "H-EFF" in text or "EFF" in text
     assert "formal-heff-efficiency" in text
+    assert "PROMOTE" in text
+
+
+def test_given_card_when_read_then_htchr_promote() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-TCHR" in text or "TCHR" in text
+    assert "formal-htchr-code-teacher" in text
     assert "PROMOTE" in text

@@ -3,7 +3,7 @@
 > Public science report for Wave W (curated KB + domain PACK gates + efficiency).  
 > Lab book: `.local/pesquisa.md`. Deploy: [RECIPES.md](RECIPES.md) · [champion-card.md](champion-card.md).
 
-**Status: COMPLETE** · Wave X: **PARKED** (open only with a new mechanism — not another pack letter).
+**Status: COMPLETE** · Wave X: **ACTIVE** (H-RAG → H-QT — see `.local/pesquisa.md`).
 
 ## Mission
 
@@ -17,7 +17,7 @@ Ship a faster + more efficient ≤5M generative student with a **curated public*
 | B1 | **H-PROG** | smoke+formal **PROMOTE** | [formal-hprog-programming.md](formal-hprog-programming.md) |
 | B2 | **H-BTC** | smoke+formal **PROMOTE** | [formal-hbtc-bitcoin.md](formal-hbtc-bitcoin.md) |
 | B3 | H-FRONT | **SKIPPED** | BTC covers frontier protocol English |
-| C | **H-MIXD** | formal **KILL** | [hmixd-mix.md](hmixd-mix.md) · [archive](archive/formal-hmixd-mix.md) |
+| C | **H-MIXD** | formal **KILL** | [archive/hmixd-mix.md](archive/hmixd-mix.md) · [formal](archive/formal-hmixd-mix.md) |
 | D | **H-EFF** | smoke+formal **PROMOTE** | [formal-heff-efficiency.md](formal-heff-efficiency.md) |
 
 ## Kill / promote matrix (Wave W)
@@ -52,7 +52,8 @@ Fit≠eval genes; seeds [0,1,2]; `cpu_threads=14`. TPACK/AMORT remain story-trai
 
 ## Wave X (F4)
 
-**PARKED.** Candidates (H-TCHR / H-TOK / H-RAG / H-QT / H-DIST) open only when data demands a **new mechanism**. Default: park. Phase E corpus growth (E1–E5) landed — see `CURATED-SOURCES.md` and [e5-eval-suites.md](e5-eval-suites.md).
+**ACTIVE** after Wave W close-out. Lab queue: `.local/pesquisa.md` (H-TCHR **PROMOTE** → H-RAG → H-QT).  
+[H-TCHR](formal-htchr-code-teacher.md) wires `bigcode/tiny_starcoder_py` as frozen **code teacher** (`code_teacher_lp`). Default mechanism must be **new** (not another pack letter). Corpus E1–E5 landed — see `CURATED-SOURCES.md` and [e5-eval-suites.md](e5-eval-suites.md).
 
 ## Commands (survivors)
 
