@@ -5,7 +5,7 @@ GATES = [
     "H-DEC / H-DECK / H-DECKL / H-POOL / H-EARLY: decode tips (see formal docs).",
     "H-CUR / H-CURL / H-CURL2 / H-STAG: curriculum train (official = H-STAG lo=6, stages=4).",
     "H-FLOP: report tokens/s + est. GFLOPs with wall (instrumentation).",
-    "Decode utils: LAY/LAYB/FLAYB/GRAPH/SHORT/FLASH/KVSEL/CHUNK/CHB/BAT/CBAT/CHBAT/FUSEB/POOLB/CPOOLB/FCPOOLB (tips unchanged).",
+    "Decode utils: LAY/LAYB/FLAYB/GRAPH/GRAPHF/SHORT/FLASH/KVSEL/CHUNK/CHB/BAT/CBAT/CHBAT/FUSEB/POOLB/CPOOLB/FCPOOLB (tips unchanged).",
     "Train utils: PRUN/TOP/DEPTH/PIN (tip STAG/TOP unchanged).",
     "H-Q4 gate: lp ≥ DEPTH−ε and wall < DEPTH (formal KILL — quality cliff).",
     "H-ASYNC gate: lp ≥ PIN−ε and e2e_wall < PIN (smoke KILL — e2e↑).",
@@ -17,6 +17,7 @@ GATES = [
     "H-LAYB gate: lp ≥ FUSEB−ε and (tok/s > FUSEB or wall < FUSEB) (formal PROMOTE).",
     "H-FLAYB gate: lp ≥ FCPOOLB−ε and (tok/s > FCPOOLB or wall < FCPOOLB) (formal PROMOTE).",
     "H-GRAPH gate: lp ≥ LAYB−ε and wall < LAYB (formal PROMOTE).",
+    "H-GRAPHF gate: lp ≥ FLAYB−ε and wall < FLAYB (formal PROMOTE).",
     "H-DEPTHB gate: lp ≥ LAYB−ε and (wall < LAYB or GFLOPs < LAYB) (smoke KILL — |Δlp|>ε).",
     "H-PRUNB gate: lp ≥ LAYB−ε and (wall < LAYB or GFLOPs < LAYB) (smoke KILL — |Δlp|>ε).",
     "H-PRUNF gate: lp ≥ FLAYB−ε and (wall < FLAYB or GFLOPs < FLAYB) (smoke KILL — |Δlp|>ε).",
@@ -31,7 +32,8 @@ NOTES = [
     "- H-TOPK / H-Q4 formal KILL; H-CFUSE / **H-ASYNC** / **H-SHORTB** / **H-DEPTHB** / "
     "**H-PINC** / **H-PRUNB** / **H-PRUNF** smoke KILL; "
     "**H-CBAT** / **H-CHB** / **H-CPOOLB** / **H-CHBAT** / **H-FUSEB** / **H-FCPOOLB** / "
-    "**H-LAYB** / **H-FLAYB** / **H-GRAPH** formal PROMOTE. Wave P complete (`.local/pesquisa.md`).",
+    "**H-LAYB** / **H-FLAYB** / **H-GRAPH** / **H-GRAPHF** formal PROMOTE. "
+    "Wave Q Q1 done (`.local/pesquisa.md`).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

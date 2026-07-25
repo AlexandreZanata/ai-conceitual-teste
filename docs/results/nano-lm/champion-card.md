@@ -35,6 +35,7 @@
 | 2c⁗⁗″. PRUN under LAYB | HPRUN under LAYB | **H-PRUNB** (KILL) | [hprunb-vs-hlayb.md](hprunb-vs-hlayb.md) |
 | 2c⁗⁗‴. PRUN under FLAYB | HPRUN under FLAYB | **H-PRUNF** (KILL) | [hprunf-vs-hflayb.md](hprunf-vs-hflayb.md) |
 | 2c⁗⁗⁗. Systems under LAYB | CUDA graph non-KV arm | **H-GRAPH** (util) | [formal-hgraph-vs-hlayb.md](formal-hgraph-vs-hlayb.md) |
+| 2c⁗⁗⁗′. Systems under FLAYB | CUDA graph non-KV arm | **H-GRAPHF** (util) | [formal-hgraphf-vs-hflayb.md](formal-hgraphf-vs-hflayb.md) |
 | — | Protocol stack (not a tip) | **H-MIX** = PRUN ckpt ⊕ LAY | [hmix-protocol.md](hmix-protocol.md) |
 | — | Protocol stack (not a tip) | **H-FUSE** = FLASH ⊕ KVSEL | [hfuse-protocol.md](hfuse-protocol.md) |
 | — | Protocol stack (not a tip) | **H-CFUSE** = CHUNK ⊕ FUSE | [hcfuse-protocol.md](hcfuse-protocol.md) |
@@ -84,6 +85,8 @@ npm run nano:prunb && npm run nano:prunb:report
 npm run nano:prunf && npm run nano:prunf:report
 npm run nano:graph && npm run nano:graph:report
 npm run nano:formal:hgraph && npm run nano:formal:hgraph:report
+npm run nano:graphf && npm run nano:graphf:report
+npm run nano:formal:hgraphf && npm run nano:formal:hgraphf:report
 npm run nano:formal:hshort && npm run nano:formal:hshort:report
 npm run nano:shortb && npm run nano:shortb:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report
@@ -125,7 +128,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave P FOCUS** — queue done; **next: open Wave Q or park**.  
+**Wave Q FOCUS** — Q1 done; **next: continue Wave Q or park**.  
+**H-GRAPHF** smoke+formal **PROMOTE** ([formal-hgraphf-vs-hflayb.md](formal-hgraphf-vs-hflayb.md) — wall↓; lp=FLAYB).  
 **H-GRAPH** smoke+formal **PROMOTE** ([formal-hgraph-vs-hlayb.md](formal-hgraph-vs-hlayb.md) — wall↓; lp=LAYB).  
 **H-PRUNF** smoke **KILL** ([hprunf-vs-hflayb.md](hprunf-vs-hflayb.md) — |Δlp| > ε vs FLAYB; skip formal).  
 **H-PRUNB** smoke **KILL** ([hprunb-vs-hlayb.md](hprunb-vs-hlayb.md) — |Δlp| > ε vs LAYB; skip formal).  

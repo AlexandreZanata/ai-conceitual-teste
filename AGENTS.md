@@ -97,11 +97,12 @@ npm run verify
 55. Wave P / H-PRUNF PRUN under FLAYB — done (smoke **KILL** — |Δlp| > ε vs FLAYB; skip formal)
 56. Wave P / H-GRAPH CUDA graph under LAYB — done (smoke+formal **PROMOTE** — wall↓; lp=LAYB)
 57. Wave P focus queue complete — see `.local/pesquisa.md`
+58. Wave Q / H-GRAPHF CUDA graph under FLAYB — done (smoke+formal **PROMOTE** — wall↓; lp=FLAYB)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** open Wave Q or park — see `.local/pesquisa.md`
+**Next:** continue Wave Q or park — see `.local/pesquisa.md`
 
 ---
 
