@@ -16,6 +16,7 @@
 | **H-QT** | Int8 weight-only quantized student serve (Linear; skip tied lm_head) |
 | **H-CKD** | Soft-KD from code teacher (smoke **KILL**; see archive) |
 | **H-QCTX** | Born-rule amplitude attention @ long L (smoke **KILL**; see archive) |
+| **H-QCOMP** | Classical-shadow KV sketch (smoke PROMOTE → formal **KILL**; see archive) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

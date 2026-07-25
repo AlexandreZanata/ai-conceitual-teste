@@ -31,5 +31,6 @@
 | [formal-hqt-quantize.md](formal-hqt-quantize.md) | **Quantized serve** (Wave X **PROMOTE**) |
 | [archive/hckd-code-kd.md](archive/hckd-code-kd.md) | **H-CKD** cross-tok soft-KD (Wave X smoke **KILL**) |
 | [archive/hqctx-born-attn.md](archive/hqctx-born-attn.md) | **H-QCTX** Born-rule attn@256 (Wave X smoke **KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT **PROMOTE** · H-RAG/H-CTX/H-CKD/H-QCTX **KILL** → H-QCOMP (`.local/pesquisa.md`) |
+| [archive/hqcomp-shadow-kv.md](archive/hqcomp-shadow-kv.md) | **H-QCOMP** shadow KV (smoke PROMOTE → formal **KILL**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT **PROMOTE** · H-RAG/H-CTX/H-CKD/H-QCTX/H-QCOMP **KILL** → H-Q-QUBITKV (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |

@@ -32,7 +32,7 @@ One-pager: [`RECIPES.md`](results/nano-lm/RECIPES.md).
 | W3 H-MIXD | STAG + curated train mix | formal **[KILL](results/nano-lm/archive/hmixd-mix.md)** (tooling purged) |
 | W4 H-EFF | PACK efficiency re-measure | smoke+formal **[PROMOTE](results/nano-lm/formal-heff-efficiency.md)** |
 
-Wave X+ **ACTIVE** — **H-TCHR** / **H-QT** **[PROMOTE](results/nano-lm/formal-htchr-code-teacher.md)** / **[PROMOTE](results/nano-lm/formal-hqt-quantize.md)** · **H-RAG** / **H-CTX** / **H-CKD** / **H-QCTX** **KILL** → QCOMP/QUBITKV (see `.local/pesquisa.md`). Phase E corpus **DONE** ([e5-eval-suites.md](results/nano-lm/e5-eval-suites.md)).
+Wave X+ **ACTIVE** — **H-TCHR** / **H-QT** **[PROMOTE](results/nano-lm/formal-htchr-code-teacher.md)** / **[PROMOTE](results/nano-lm/formal-hqt-quantize.md)** · **H-RAG** / **H-CTX** / **H-CKD** / **H-QCTX** / **H-QCOMP** **KILL** → QUBITKV (see `.local/pesquisa.md`). Phase E corpus **DONE** ([e5-eval-suites.md](results/nano-lm/e5-eval-suites.md)).
 
 ## Archived
 
