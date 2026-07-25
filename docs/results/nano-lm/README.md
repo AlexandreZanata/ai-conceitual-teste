@@ -56,5 +56,6 @@
 | [archive/hwigner-wigner.md](archive/hwigner-wigner.md) | **H-Q-WIGNER** signed top-k quasi-prob (Wave X smoke **KILL**) |
 | [archive/hchrono-chrono.md](archive/hchrono-chrono.md) | **H-ABS-CHRONO** acausal soft-label shuffle (Wave X smoke **KILL**) |
 | [archive/hmirror-mirror.md](archive/hmirror-mirror.md) | **H-ABS-MIRROR** anti-teacher margin (Wave X formal **KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · E.1 through MIRROR **KILL** → HOLD/new H-ID (`.local/pesquisa.md`) |
+| [archive/hcbon-cbon.md](archive/hcbon-cbon.md) | **H-ABS-CBON** code-teacher BoN commit (Wave X smoke **KILL**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · E.1 through MIRROR + CBON **KILL** → HOLD/new H-ID (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |

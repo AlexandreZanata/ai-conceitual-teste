@@ -279,3 +279,11 @@ def test_given_card_when_read_then_hmirror_kill() -> None:
     assert "H-ABS-MIRROR" in text or "MIRROR" in text
     assert "KILL" in text
     assert "hmirror-mirror" in text
+    assert "H-ABS-CBON" in text or "CBON" in text
+
+
+def test_given_card_when_read_then_hcbon_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-ABS-CBON" in text or "CBON" in text
+    assert "KILL" in text
+    assert "hcbon-cbon" in text
