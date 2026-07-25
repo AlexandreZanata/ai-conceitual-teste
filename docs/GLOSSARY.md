@@ -17,6 +17,8 @@
 | **H-CKD** | Soft-KD from code teacher (smoke **KILL**; see archive) |
 | **H-QCTX** | Born-rule amplitude attention @ long L (smoke **KILL**; see archive) |
 | **H-QCOMP** | Classical-shadow KV sketch (smoke PROMOTE → formal **KILL**; see archive) |
+| **H-Q-QUBITKV** | Critical KV + residual sketch (smoke **KILL**; see archive) |
+| **H-GENC** | Genetic context/serve genome under BUD (smoke+formal **PROMOTE**) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

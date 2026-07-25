@@ -44,6 +44,7 @@ npm run nano:eff && npm run nano:formal:heff
 npm run nano:e5
 npm run nano:tchr && npm run nano:formal:htchr
 npm run nano:qt && npm run nano:formal:hqt
+npm run nano:genc && npm run nano:formal:hgenc
 npm run nano:qpack && npm run nano:formal:hqpack
 npm run nano:bud && npm run nano:formal:hbud
 ```
@@ -51,7 +52,7 @@ npm run nano:bud && npm run nano:formal:hbud
 ## Wave W / X+
 
 Wave W **COMPLETE** — [wave-w-summary.md](wave-w-summary.md): **H-PROG** / **H-BTC** / **H-EFF** **PROMOTE**; **H-MIXD** **KILL** ([archive](archive/hmixd-mix.md)).  
-**Wave X+ ACTIVE** — **H-TCHR** / **H-QT** smoke+formal **[PROMOTE](formal-htchr-code-teacher.md)** / **[PROMOTE](formal-hqt-quantize.md)** · **H-RAG** / **H-CTX** / **H-CKD** / **H-QCTX** / **H-QCOMP** **KILL** → [archive/hrag-retrieve.md](archive/hrag-retrieve.md) / [archive/hctx-long-window.md](archive/hctx-long-window.md) / [archive/hckd-code-kd.md](archive/hckd-code-kd.md) / [archive/hqctx-born-attn.md](archive/hqctx-born-attn.md) / [archive/hqcomp-shadow-kv.md](archive/hqcomp-shadow-kv.md) → **H-Q-QUBITKV** (`.local/pesquisa.md`).  
+**Wave X+ ACTIVE** — **H-TCHR** / **H-QT** / **H-GENC** smoke+formal **[PROMOTE](formal-htchr-code-teacher.md)** / **[PROMOTE](formal-hqt-quantize.md)** / **[PROMOTE](formal-hgenc-genome.md)** · **H-RAG** / **H-CTX** / **H-CKD** / **H-QCTX** / **H-QCOMP** / **H-Q-QUBITKV** **KILL** → [archive/hrag-retrieve.md](archive/hrag-retrieve.md) / [archive/hctx-long-window.md](archive/hctx-long-window.md) / [archive/hckd-code-kd.md](archive/hckd-code-kd.md) / [archive/hqctx-born-attn.md](archive/hqctx-born-attn.md) / [archive/hqcomp-shadow-kv.md](archive/hqcomp-shadow-kv.md) / [archive/hqubitkv-critical-kv.md](archive/hqubitkv-critical-kv.md) → **H-GENQ-ABS** (`.local/pesquisa.md`).  
 KILL history: [`archive/`](archive/).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

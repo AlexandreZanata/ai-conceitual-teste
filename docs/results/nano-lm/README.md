@@ -32,5 +32,8 @@
 | [archive/hckd-code-kd.md](archive/hckd-code-kd.md) | **H-CKD** cross-tok soft-KD (Wave X smoke **KILL**) |
 | [archive/hqctx-born-attn.md](archive/hqctx-born-attn.md) | **H-QCTX** Born-rule attn@256 (Wave X smoke **KILL**) |
 | [archive/hqcomp-shadow-kv.md](archive/hqcomp-shadow-kv.md) | **H-QCOMP** shadow KV (smoke PROMOTE → formal **KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT **PROMOTE** · H-RAG/H-CTX/H-CKD/H-QCTX/H-QCOMP **KILL** → H-Q-QUBITKV (`.local/pesquisa.md`) |
+| [archive/hqubitkv-critical-kv.md](archive/hqubitkv-critical-kv.md) | **H-Q-QUBITKV** critical+sketch (Wave X smoke **KILL**) |
+| [hgenc-genome.md](hgenc-genome.md) | H-GENC smoke (genetic serve genome) |
+| [formal-hgenc-genome.md](formal-hgenc-genome.md) | **Genetic serve genome** (Wave X **PROMOTE**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q* **KILL** → H-GENQ-ABS (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |

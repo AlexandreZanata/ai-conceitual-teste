@@ -111,3 +111,17 @@ def test_given_card_when_read_then_hqcomp_kill() -> None:
     assert "H-QCOMP" in text or "QCOMP" in text
     assert "KILL" in text
     assert "hqcomp-shadow-kv" in text
+
+
+def test_given_card_when_read_then_hqubitkv_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-Q-QUBITKV" in text or "QUBITKV" in text
+    assert "KILL" in text
+    assert "hqubitkv-critical-kv" in text
+
+
+def test_given_card_when_read_then_hgenc_promote() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-GENC" in text or "GENC" in text
+    assert "formal-hgenc-genome" in text
+    assert "PROMOTE" in text
