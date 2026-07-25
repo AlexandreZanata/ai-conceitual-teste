@@ -13,7 +13,7 @@ GATES = [
 NOTES = [
     "## Notes",
     "- Focus winners only. KILL code purged; history: `docs/results/nano-lm/archive/`.",
-    "- Wave R: consolidate full-stack claims (SERVE/ETRAIN) — `.local/pesquisa.md`.",
+    "- Wave R: R0 PRE3 PROMOTE; next SERVE/ETRAIN — `.local/pesquisa.md`.",
     "- Smoke budgets are tentative; formal = 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

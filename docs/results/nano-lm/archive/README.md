@@ -1,9 +1,9 @@
-# Archived nano-lm results (KILL / non-champion history)
+# Archived nano-lm KILL / non-champion history
 
-Active tips+utils live one level up. Focus stack: STAG/EARLY/POOL + FLASH/CHUNK/KVSEL/TOP/PIN/DEPTH/PRUN/BAT/POOLB + MIX/FUSE protocols.  
-H-Q4 formal KILL archived here (`hq4-vs-hdepth.md`, `formal-hq4-vs-hdepth.md`).
+Active focus: STAG/EARLY/POOL + CHB/LAYB/FLAYB/GRAPH*/GALL + PRE2/PRE3.
+Purged code for ASYNC/PINC/GALLF/DEPTHA/DEPTHB/PRUNB/PRUNF/SHORTB/CFUSE/Q4.
 
-## Archived files (137)
+## Files (148)
 
 - `formal-hann-vs-kdcos.md`
 - `formal-hcasc-vs-b4.md`
@@ -28,6 +28,7 @@ H-Q4 formal KILL archived here (`hq4-vs-hdepth.md`, `formal-hq4-vs-hdepth.md`).
 - `formal-hpare-vs-b4.md`
 - `formal-hpoolf-vs-hpool.md`
 - `formal-hproxy2-vs-hdeck.md`
+- `formal-hq4-vs-hdepth.md`
 - `formal-hsel-vs-b2.md`
 - `formal-hsho-vs-b2.md`
 - `formal-hsym-vs-b2.md`
@@ -43,6 +44,7 @@ H-Q4 formal KILL archived here (`hq4-vs-hdepth.md`, `formal-hq4-vs-hdepth.md`).
 - `hamp-vs-hearly.md`
 - `hann-vs-kdcos.md`
 - `hanti-vs-hsel.md`
+- `hasync-vs-hpin.md`
 - `hbal-vs-b2.md`
 - `hband-vs-hcasc.md`
 - `hbeam-vs-b4.md`
@@ -54,6 +56,7 @@ H-Q4 formal KILL archived here (`hq4-vs-hdepth.md`, `formal-hq4-vs-hdepth.md`).
 - `hcap-vs-hpool.md`
 - `hcasc-vs-b4.md`
 - `hcat-vs-hsel.md`
+- `hcfuse-protocol.md`
 - `hclip-vs-b2.md`
 - `hcomp-vs-hearly.md`
 - `hcur2-vs-hcur.md`
@@ -65,6 +68,8 @@ H-Q4 formal KILL archived here (`hq4-vs-hdepth.md`, `formal-hq4-vs-hdepth.md`).
 - `hdecm-vs-b4.md`
 - `hdecp-vs-b4.md`
 - `hdecq-vs-b4.md`
+- `hdeptha-vs-hadamf.md`
+- `hdepthb-vs-hlayb.md`
 - `hdif-vs-b2.md`
 - `hdraft-vs-b4.md`
 - `hear2-vs-hearly.md`
@@ -79,6 +84,7 @@ H-Q4 formal KILL archived here (`hq4-vs-hdepth.md`, `formal-hq4-vs-hdepth.md`).
 - `hfit-vs-hsel.md`
 - `hfos-vs-hsel.md`
 - `hfxs-vs-fit-xov.md`
+- `hgallf-vs-hgraphf.md`
 - `hgld-vs-hfit.md`
 - `hheb-vs-b2.md`
 - `hhib-vs-hsel.md`
@@ -107,11 +113,15 @@ H-Q4 formal KILL archived here (`hq4-vs-hdepth.md`, `formal-hq4-vs-hdepth.md`).
 - `horac-vs-tips.md`
 - `hpar-vs-hsel.md`
 - `hpare-vs-b4.md`
+- `hpinc-vs-hpin.md`
 - `hpool2-vs-hpool.md`
 - `hpool3-vs-hpool.md`
 - `hpoolf-vs-hpool.md`
 - `hprox-vs-hpool.md`
 - `hproxy2-vs-hdeck.md`
+- `hprunb-vs-hlayb.md`
+- `hprunf-vs-hflayb.md`
+- `hq4-vs-hdepth.md`
 - `hq8-vs-hcurl.md`
 - `hqg-vs-hearly.md`
 - `hran-vs-hsel.md`
@@ -122,6 +132,7 @@ H-Q4 formal KILL archived here (`hq4-vs-hdepth.md`, `formal-hq4-vs-hdepth.md`).
 - `hsea-vs-hfit.md`
 - `hsex-vs-hsel.md`
 - `hsho-vs-hsel.md`
+- `hshortb-vs-hfuseb.md`
 - `hsoft-vs-hstag.md`
 - `hspe-vs-hsel.md`
 - `hspec-vs-b3.md`

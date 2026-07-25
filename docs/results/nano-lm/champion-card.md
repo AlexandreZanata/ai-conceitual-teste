@@ -17,7 +17,7 @@ Parents: H-CURL2←H-CURL←H-CUR; H-DECKL←H-DECK←H-DEC.
 
 | Axis | Chain (tip unchanged) |
 |------|------------------------|
-| Train I/O | TOP → PIN → PRE → HALF → ADAMF → **PRE2** → (PRE3) |
+| Train I/O | TOP → PIN → PRE → HALF → ADAMF → PRE2 → **PRE3** |
 | Thin solo | PRUN / DEPTH (never under batch/ADAMF) |
 | Systems | FLASH → CHUNK → **CHB**; KVSEL; GRAPH → GRAPHF; **GALL** |
 | Batch speed | BAT → CBAT → CHBAT → FUSEB → **LAYB** (+ GRAPH/GALL) |
@@ -51,7 +51,8 @@ npm run nano:mix && npm run nano:fuse
 ## Park status
 
 **PARKED** (tips).  
-**Wave R FOCUS** — next **H-PRE3** → **H-SERVE** (full serving stack) → **H-ETRAIN** → **H-ROUTE**.  
+**Wave R FOCUS** — **R0 H-PRE3** formal **PROMOTE**; next **H-SERVE** → **H-ETRAIN** → **H-ROUTE**.  
+**H-PRE3** smoke+formal **PROMOTE** ([formal-hpre3-vs-hpre2.md](formal-hpre3-vs-hpre2.md) — ms/step↓; lp=PRE2).  
 KILL families purged from `nano_lm/` (ASYNC/PINC/GALLF/DEPTHA/B/PRUNB/F/SHORTB/CFUSE/Q4).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).  

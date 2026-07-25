@@ -106,11 +106,12 @@ npm run verify
 64. Wave Q / H-DEPTHA DEPTH under ADAMF — done (smoke **KILL** — quality < ADAMF−ε; skip formal)
 65. Wave Q / H-PRE2 2-deep prefetch under ADAMF — done (smoke+formal **PROMOTE** — ms/step↓; lp=ADAMF)
 66. Wave Q / H-PRE3 3-deep prefetch under PRE2 — done (smoke+formal **PROMOTE** — ms/step↓; lp=PRE2)
+67. Wave R / H-PRE3 validated as R0 — done (same formal PROMOTE; Wave R opened)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** continue Wave Q or park — see `.local/pesquisa.md`
+**Next:** Wave R **H-SERVE** — see `.local/pesquisa.md`
 
 ---
 
