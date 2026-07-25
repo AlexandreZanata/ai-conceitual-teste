@@ -46,5 +46,6 @@
 | [archive/hqtunnel-tunnel.md](archive/hqtunnel-tunnel.md) | **H-Q-TUNNEL** leaky causal (Wave X smoke **KILL**) |
 | [archive/hqbell-bell.md](archive/hqbell-bell.md) | **H-Q-BELL** distant K/V couple (Wave X smoke **KILL**) |
 | [archive/horacle1-oracle.md](archive/horacle1-oracle.md) | **H-ABS-ORACLE1** 1-bit hash vs RAG (Wave X smoke **KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1 **KILL** → H-ABS-DNA (`.local/pesquisa.md`) |
+| [archive/hdna-dna.md](archive/hdna-dna.md) | **H-ABS-DNA** codon 3-mer packs (Wave X smoke **KILL**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL/SPIRAL/GROVER/TUNNEL/BELL/ORACLE1/DNA **KILL** → H-ABS-DEBATE (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |
