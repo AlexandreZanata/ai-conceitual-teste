@@ -18,6 +18,7 @@ H-CHBAT gate: lp ≥ CBAT−ε and tok/s > CBAT (formal PROMOTE).
 H-FUSEB gate: lp ≥ CHBAT−ε and (tok/s > CHBAT or wall < CHBAT) (formal PROMOTE).
 H-FCPOOLB gate: lp ≥ CPOOLB−ε and (tok/s > CPOOLB or wall < CPOOLB) (formal PROMOTE).
 H-LAYB gate: lp ≥ FUSEB−ε and (tok/s > FUSEB or wall < FUSEB) (formal PROMOTE).
+H-SHORTB gate: lp ≥ FUSEB−ε and (tok/s > FUSEB or wall < FUSEB) (smoke KILL — lp cliff).
 H-MIX / H-FUSE / H-CFUSE: PROTOCOL only (not tip H-IDs); CFUSE smoke KILL.
 
 | family | mean teacher_lp | Δ vs B2 | mean wall_ms | tok/s | n | decision |
@@ -35,6 +36,6 @@ H-MIX / H-FUSE / H-CFUSE: PROTOCOL only (not tip H-IDs); CFUSE smoke KILL.
 ## Notes
 - Focus stack: systems + batch + TOP/PIN + DEPTH. Archive: `docs/results/nano-lm/archive/`.
 - Official tips: **H-STAG** / **H-EARLY** / **H-POOL**.
-- H-TOPK / H-Q4 formal KILL; H-CFUSE / **H-ASYNC** smoke KILL; **H-CBAT** / **H-CHB** / **H-CPOOLB** / **H-CHBAT** / **H-FUSEB** / **H-FCPOOLB** / **H-LAYB** formal PROMOTE. Wave N: N2 done; next N3 (`.local/pesquisa.md`).
+- H-TOPK / H-Q4 formal KILL; H-CFUSE / **H-ASYNC** / **H-SHORTB** smoke KILL; **H-CBAT** / **H-CHB** / **H-CPOOLB** / **H-CHBAT** / **H-FUSEB** / **H-FCPOOLB** / **H-LAYB** formal PROMOTE. Wave N complete (`.local/pesquisa.md`).
 - Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

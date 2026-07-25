@@ -72,6 +72,7 @@ npm run nano:formal:hlay && npm run nano:formal:hlay:report
 npm run nano:layb && npm run nano:layb:report
 npm run nano:formal:hlayb && npm run nano:formal:hlayb:report
 npm run nano:formal:hshort && npm run nano:formal:hshort:report
+npm run nano:shortb && npm run nano:shortb:report
 npm run nano:formal:hpool && npm run nano:formal:hpool:report
 npm run nano:poolb && npm run nano:poolb:report
 npm run nano:formal:hpoolb && npm run nano:formal:hpoolb:report
@@ -110,7 +111,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave N FOCUS** — N2 done; **next: N3 H-SHORTB**.  
+**Wave N FOCUS** — queue done; **next: open Wave O or park**.  
+**H-SHORTB** smoke **KILL** ([hshortb-vs-hfuseb.md](hshortb-vs-hfuseb.md) — lp change vs FUSEB; skip formal).  
 **H-LAYB** smoke+formal **PROMOTE** ([formal-hlayb-vs-hfuseb.md](formal-hlayb-vs-hfuseb.md) — tok/s↑ + wall↓; lp=FUSEB).  
 **H-FCPOOLB** smoke+formal **PROMOTE** ([formal-hfcpoolb-vs-hcpoolb.md](formal-hfcpoolb-vs-hcpoolb.md) — tok/s↑ + wall↓; lp=CPOOLB).  
 **H-FUSEB** smoke+formal **PROMOTE** ([formal-hfuseb-vs-hchbat.md](formal-hfuseb-vs-hchbat.md) — tok/s↑ + wall↓; lp=CHBAT).  
