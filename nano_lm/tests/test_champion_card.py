@@ -90,3 +90,10 @@ def test_given_card_when_read_then_hqt_promote() -> None:
     assert "H-QT" in text or "QT" in text
     assert "formal-hqt-quantize" in text
     assert "PROMOTE" in text
+
+
+def test_given_card_when_read_then_hckd_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-CKD" in text or "CKD" in text
+    assert "KILL" in text
+    assert "hckd-code-kd" in text

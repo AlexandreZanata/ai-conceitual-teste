@@ -35,3 +35,4 @@ E5 smoke: `npm run nano:e5` (build heldout/frontier; one-seed PACK serve on fron
 - Do not commit multi-MB blobs — regenerate via `nano:curated`.
 - Wave W close-out: [wave-w-summary.md](../../docs/results/nano-lm/wave-w-summary.md).
 - Wave X **H-RAG** (naive curated prepend @ decode): smoke **KILL** — [archive/hrag-retrieve.md](../../docs/results/nano-lm/archive/hrag-retrieve.md); tooling purged.
+- Wave X **H-CKD** (cross-tok soft-KD on curated prog): smoke **KILL** — [archive/hckd-code-kd.md](../../docs/results/nano-lm/archive/hckd-code-kd.md); tooling purged.

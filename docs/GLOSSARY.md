@@ -14,6 +14,7 @@
 | **Curated KB** | Public official corpora under `nano_lm/data/curated/` |
 | **Dual gate** | Quality (teacher_lp / domain metric) **and** wall/GFLOPs |
 | **H-QT** | Int8 weight-only quantized student serve (Linear; skip tied lm_head) |
+| **H-CKD** | Soft-KD from code teacher (smoke **KILL**; see archive) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

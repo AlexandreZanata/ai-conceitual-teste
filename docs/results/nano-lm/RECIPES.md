@@ -34,4 +34,4 @@ Wave W mix ([H-MIXD](archive/hmixd-mix.md)): formal **KILL** (story teacher_lp r
 Wave W efficiency ([H-EFF formal](formal-heff-efficiency.md)): PACK SERVE wall↓ and tok/s↑ vs Phase B on prog+btc at quality floor (recipe freeze; no new genes). TPACK/AMORT remain story-train-only.  
 DEPL (D3): speed→PACK still covers prog/btc @128; REJECT unchanged for ood_long / QPACK-OOD.  
 Wave W close-out: [wave-w-summary.md](wave-w-summary.md) (**COMPLETE**).  
-Wave X+: [H-TCHR formal](formal-htchr-code-teacher.md) / [H-QT formal](formal-hqt-quantize.md) **PROMOTE**; [H-RAG](archive/hrag-retrieve.md) / [H-CTX](archive/hctx-long-window.md) **KILL**; next **H-CKD** (`.local/pesquisa.md`).
+Wave X+: [H-TCHR formal](formal-htchr-code-teacher.md) / [H-QT formal](formal-hqt-quantize.md) **PROMOTE**; [H-RAG](archive/hrag-retrieve.md) / [H-CTX](archive/hctx-long-window.md) / [H-CKD](archive/hckd-code-kd.md) **KILL**; next **H-QCTX** (`.local/pesquisa.md`).
