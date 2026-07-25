@@ -1,6 +1,6 @@
 # Official nano-LM recipes (frozen claims)
 
-> Tip-stack: **H-STAG** / **H-EARLY** / **H-POOL** (unchanged).  
+> Tip-stack: **H-STAG′** / **H-EARLY** / **H-POOL** (TIPD promoted train tip).  
 > Packs are delivery envelopes — not tip replacements.  
 > Lab: `.local/pesquisa.md` · Card: [champion-card.md](champion-card.md)
 
@@ -11,7 +11,7 @@
 | **Fastest serve** | **H-PACK** (SERVE/SROUTE path) | OOD elongated to 256 ([XFER2](hxfer2-transfer.md) **KILL**) |
 | **Quality@wall serve** | **H-QPACK** (FLAYB) | OOD / transfer (XFER **KILL**) |
 | **Cheaper train steps** | **H-TPACK** (PRE3) | e2e without **H-AMORT** n≥4 |
-| **Capacity + serve** | **H-RETIP** ckpt + frozen EARLY/POOL genes | Auto-replace parked tips |
+| **Official train tip** | **H-STAG′** (PRE3 via [TIPD](formal-htipd-vs-hstag.md)) | Revert to live STAG without new formal |
 | **E2E train wall** | **H-AMORT** (cache/n + PRE3) | ETRAIN N=1 (purged KILL) |
 
 ## Formal evidence
@@ -20,7 +20,7 @@
 |--------|-----|------------|
 | PACK | [formal-hpack-vs-hearly.md](formal-hpack-vs-hearly.md) | [XFER](hxfer-transfer.md) holds elongated+ood; [XFER2](hxfer2-transfer.md) **KILL** ood_long; [BUD](formal-hbud-budget.md) SURVIVE |
 | QPACK | [formal-hqpack-vs-hpool.md](formal-hqpack-vs-hpool.md) | [XFER](hxfer-transfer.md) KILL; BUD SURVIVE |
-| TPACK | [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) | [RETIP](formal-hretip-vs-hstag.md); [AMORT](formal-hamort-vs-hstag.md) |
+| TPACK / tip | [formal-htpack-vs-hstag.md](formal-htpack-vs-hstag.md) | [TIPD](formal-htipd-vs-hstag.md) **PROMOTE** STAG′; [AMORT](formal-hamort-vs-hstag.md) |
 
 ## Policy (budget)
 

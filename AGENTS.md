@@ -50,7 +50,7 @@ npm run verify
 8. Benchmark report (phase 09) — done  
 9. Nano-LM track TinyStories AR vs BoN vs MAE (phase 10) — done (smoke)  
 10. Nano student + teacher agenda / matrix (phase 11) — done (smoke matrix)  
-11. Nano champion stack frozen — **H-STAG** (train `seq_lo=6`, `n_stages=4`), **H-EARLY** / **H-POOL** (decode); parents H-CURL2←H-CURL←H-CUR / H-DECKL←H-DECK←H-DEC  
+11. Nano champion stack frozen — **H-STAG′** train tip (PRE3 via TIPD; parent H-STAG `seq_lo=6`, `n_stages=4`), **H-EARLY** / **H-POOL** (decode); parents H-CURL2←H-CURL←H-CUR / H-DECKL←H-DECK←H-DEC  
 12. Dead hyp code purged (weight-evo + Waves A–H deepeners) — markdown in `docs/results/nano-lm/archive/`  
 13. Wave I queue (faster/efficient new parents) — see `.local/pesquisa.md`
 14. H-LAY layer early-exit — done (smoke **PROMOTE**; **formal PROMOTE** wall↓; GFLOPs tie)
@@ -125,11 +125,12 @@ npm run verify
 83. Wave U complete — park
 84. Wave V / V0 RECIPES.md deploy one-pager — done
 85. Wave V / H-XFER2 PACK-only OOD deepen — done (smoke **KILL** — PACK holds elongated+ood; fails ood_long SERVE |Δlp|>ε; BPACK report-only KILL; skip formal)
+86. Wave V / H-TIPD RETIP tip decision — done (smoke+formal **PROMOTE** — tip outcome `STAG_PRIME`; STAG′ Δlp +0.78 formal; EARLY/POOL serve hold)
 
 **Research PoC v1** (survival-benchmark narrative): complete — see `docs/results/BENCHMARK-REPORT.md`.  
 **Nano-LM side track:** `docs/NANO-LM-TRACK.md` + slim `docs/NANO-STUDENT-AGENDA.md` + [`champion-card.md`](docs/results/nano-lm/champion-card.md) + `docs/results/nano-lm/kill-promote-matrix.md` (KILL history in `archive/`).  
 Private plan: `.local/SURVIVAL-GAME-PLAN.md`. Keep T1 unit/contract suite green.
-**Next:** Wave V **H-TIPD** (RETIP tip decision) — see `.local/pesquisa.md`
+**Next:** Wave V **H-DEPL** (BUD deploy policy) — see `.local/pesquisa.md`
 
 ---
 
