@@ -29,6 +29,7 @@ def train_topk_prefetch(
     out_path: Path,
     hypothesis: str = "H-PRE",
     half_h2d: bool = False,
+    fused_adam: bool = False,
 ) -> dict[str, Any]:
     """
     GIVEN pinned top-k cache records on CUDA
@@ -43,7 +44,10 @@ def train_topk_prefetch(
     torch.cuda.manual_seed_all(seed)
     student = build_student(vocab_size).to(device)
     student.train()
-    opt = torch.optim.AdamW(student.parameters(), lr=lr)
+    if fused_adam:
+        opt = torch.optim.AdamW(student.parameters(), lr=lr, fused=True)
+    else:
+        opt = torch.optim.AdamW(student.parameters(), lr=lr)
     recs = pin_records(records)
     to_dev = _to_device_rec
     if half_h2d:
@@ -104,4 +108,5 @@ def train_topk_prefetch(
         "pinned": True,
         "prefetch": True,
         "half_h2d": bool(half_h2d),
+        "fused_adam": bool(fused_adam),
     }

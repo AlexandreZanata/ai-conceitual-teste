@@ -16,6 +16,7 @@
 | 1⁗″. Train util | torch.compile under PIN | **H-PINC** (KILL) | [hpinc-vs-hpin.md](hpinc-vs-hpin.md) |
 | 1⁗‴. Train util | Prefetch H2D under PIN | **H-PRE** (util) | [formal-hpre-vs-hpin.md](formal-hpre-vs-hpin.md) |
 | 1⁗⁗. Train util | fp16-wire H2D under PRE | **H-HALF** (util) | [formal-hhalf-vs-hpre.md](formal-hhalf-vs-hpre.md) |
+| 1⁗⁗′. Train util | Fused AdamW under HALF | **H-ADAMF** (util) | [formal-hadamf-vs-hhalf.md](formal-hadamf-vs-hhalf.md) |
 | 2a. Decode (speed) | Early-exit gene | **H-EARLY** | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) |
 | 2a′. Decode util | Layer early-exit | **H-LAY** (util) | [formal-hlay-vs-hearly.md](formal-hlay-vs-hearly.md) |
 | 2a″. Decode util | Short draft stop | **H-SHORT** (util) | [formal-hshort-vs-hearly.md](formal-hshort-vs-hearly.md) |
@@ -112,6 +113,8 @@ npm run nano:pre && npm run nano:pre:report
 npm run nano:formal:hpre && npm run nano:formal:hpre:report
 npm run nano:half && npm run nano:half:report
 npm run nano:formal:hhalf && npm run nano:formal:hhalf:report
+npm run nano:adamf && npm run nano:adamf:report
+npm run nano:formal:hadamf && npm run nano:formal:hadamf:report
 npm run nano:async && npm run nano:async:report
 npm run nano:formal:hflash && npm run nano:formal:hflash:report
 npm run nano:formal:hkvsel && npm run nano:formal:hkvsel:report
@@ -139,7 +142,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave Q FOCUS** — Q5 done; **next: continue Wave Q or park**.  
+**Wave Q FOCUS** — Q6 done; **next: continue Wave Q or park**.  
+**H-ADAMF** smoke+formal **PROMOTE** ([formal-hadamf-vs-hhalf.md](formal-hadamf-vs-hhalf.md) — ms/step↓; lp=HALF).  
 **H-HALF** smoke+formal **PROMOTE** ([formal-hhalf-vs-hpre.md](formal-hhalf-vs-hpre.md) — ms/step↓; lp=PRE).  
 **H-PRE** smoke+formal **PROMOTE** ([formal-hpre-vs-hpin.md](formal-hpre-vs-hpin.md) — ms/step↓; lp=PIN).  
 **H-GALLF** smoke **KILL** ([hgallf-vs-hgraphf.md](hgallf-vs-hgraphf.md) — wall↑ vs GRAPHF; skip formal).  
