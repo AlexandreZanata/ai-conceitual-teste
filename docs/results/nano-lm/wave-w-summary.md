@@ -52,8 +52,8 @@ Fit≠eval genes; seeds [0,1,2]; `cpu_threads=14`. TPACK/AMORT remain story-trai
 
 ## Wave X (F4)
 
-**ACTIVE** after Wave W close-out. Lab queue: `.local/pesquisa.md` (H-TCHR/H-QT/H-GENC **PROMOTE** → long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT **KILL** → H-Q-INTERF).  
-[H-TCHR](formal-htchr-code-teacher.md) wires `bigcode/tiny_starcoder_py` as frozen **code teacher**. [H-QT](formal-hqt-quantize.md) int8 weight-only serve **PROMOTE**. [H-GENC](formal-hgenc-genome.md) genetic serve genome under BUD **PROMOTE**. [H-RAG](archive/hrag-retrieve.md) / [H-CTX](archive/hctx-long-window.md) / [H-CKD](archive/hckd-code-kd.md) / [H-QCTX](archive/hqctx-born-attn.md) / [H-QCOMP](archive/hqcomp-shadow-kv.md) / [H-Q-QUBITKV](archive/hqubitkv-critical-kv.md) / [H-GENQ-ABS](archive/hgenq-amplitude.md) / [H-DIST](archive/hdist-distill.md) / [H-Q-SLOT](archive/hqslot-slots.md) **KILL**. Default mechanism must be **new** (not another pack letter). Corpus E1–E5 landed — see `CURATED-SOURCES.md` and [e5-eval-suites.md](e5-eval-suites.md).
+**ACTIVE** after Wave W close-out. Lab queue: `.local/pesquisa.md` (H-TCHR/H-QT/H-GENC **PROMOTE** → long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF **KILL** → H-ABS-REV).
+[H-TCHR](formal-htchr-code-teacher.md) wires `bigcode/tiny_starcoder_py` as frozen **code teacher**. [H-QT](formal-hqt-quantize.md) int8 weight-only serve **PROMOTE**. [H-GENC](formal-hgenc-genome.md) genetic serve genome under BUD **PROMOTE**. [H-RAG](archive/hrag-retrieve.md) / [H-CTX](archive/hctx-long-window.md) / [H-CKD](archive/hckd-code-kd.md) / [H-QCTX](archive/hqctx-born-attn.md) / [H-QCOMP](archive/hqcomp-shadow-kv.md) / [H-Q-QUBITKV](archive/hqubitkv-critical-kv.md) / [H-GENQ-ABS](archive/hgenq-amplitude.md) / [H-DIST](archive/hdist-distill.md) / [H-Q-SLOT](archive/hqslot-slots.md) / [H-Q-INTERF](archive/hqinterf-interference.md) **KILL**. Default mechanism must be **new** (not another pack letter). Corpus E1–E5 landed — see `CURATED-SOURCES.md` and [e5-eval-suites.md](e5-eval-suites.md).
 
 ## Commands (survivors)
 
