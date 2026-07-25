@@ -37,13 +37,14 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Train util | TOP / **PIN** / PRUN / DEPTH | formal PROMOTE |
 | Quant | **H-Q4** | smoke PROMOTE / formal **KILL** |
 | Protocol | MIX / FUSE / CFUSE | PROTOCOL / CFUSE smoke **KILL** |
+| Train I/O try | **H-ASYNC** | smoke **KILL** |
 
 **Do not** gene-widen EARLY/POOL or paste tips. Deepen systems/batch/TOP/DEPTH axes only.  
-Queue: `.local/pesquisa.md` (**Wave L** — next **H-ASYNC**; CHB formal PROMOTE B=256). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+Queue: `.local/pesquisa.md` (**Wave L** done — ASYNC smoke KILL; skip L6). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived
 
-A–H deepeners, I/J KILLs, **H-TOPK**, **H-Q4** formal KILL, **H-CFUSE** smoke KILL. [`archive/`](results/nano-lm/archive/).
+A–H deepeners, I/J KILLs, **H-TOPK**, **H-Q4** formal KILL, **H-CFUSE** / **H-ASYNC** smoke KILL. [`archive/`](results/nano-lm/archive/).
 
 ## Eval
 

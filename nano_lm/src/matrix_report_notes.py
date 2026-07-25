@@ -8,6 +8,7 @@ GATES = [
     "Decode utils: LAY/SHORT/FLASH/KVSEL/CHUNK/CHB/BAT/CBAT/POOLB (tips unchanged).",
     "Train utils: PRUN/TOP/DEPTH/PIN (tip STAG/TOP unchanged).",
     "H-Q4 gate: lp ≥ DEPTH−ε and wall < DEPTH (formal KILL — quality cliff).",
+    "H-ASYNC gate: lp ≥ PIN−ε and e2e_wall < PIN (smoke KILL — e2e↑).",
     "H-MIX / H-FUSE / H-CFUSE: PROTOCOL only (not tip H-IDs); CFUSE smoke KILL.",
 ]
 
@@ -15,8 +16,8 @@ NOTES = [
     "## Notes",
     "- Focus stack: systems + batch + TOP/PIN + DEPTH. Archive: `docs/results/nano-lm/archive/`.",
     "- Official tips: **H-STAG** / **H-EARLY** / **H-POOL**.",
-    "- H-TOPK / H-Q4 formal KILL; H-CFUSE smoke KILL; **H-CBAT** / **H-CHB** formal PROMOTE. "
-    "Wave L next **H-ASYNC** (`.local/pesquisa.md`).",
+    "- H-TOPK / H-Q4 formal KILL; H-CFUSE / **H-ASYNC** smoke KILL; "
+    "**H-CBAT** / **H-CHB** formal PROMOTE. Wave L focus done (`.local/pesquisa.md`).",
     "- Smoke budgets are tentative; formal claims need 3 seeds + fit≠eval.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",
 ]

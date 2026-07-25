@@ -84,6 +84,8 @@
     "nano:formal:htop:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_htop_report.py",
     "nano:pin": "nano_lm/.venv/bin/python nano_lm/src/run_pin_smoke.py",
     "nano:pin:report": "nano_lm/.venv/bin/python nano_lm/src/write_hpin_report.py",
+    "nano:async": "nano_lm/.venv/bin/python nano_lm/src/run_async_smoke.py",
+    "nano:async:report": "nano_lm/.venv/bin/python nano_lm/src/write_hasync_report.py",
     "nano:formal:hpin": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hpin.py",
     "nano:formal:hpin:report": "nano_lm/.venv/bin/python nano_lm/src/write_formal_hpin_report.py",
     "nano:chunk": "nano_lm/.venv/bin/python nano_lm/src/run_chunk_smoke.py",

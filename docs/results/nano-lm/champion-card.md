@@ -12,6 +12,7 @@
 | 1″. Train util | Top-k soft-label cache | **H-TOP** (util) | [formal-htop-vs-hstag.md](formal-htop-vs-hstag.md) |
 | 1‴. Train util | 1-layer STAG + PRUN recover | **H-DEPTH** (util) | [formal-hdepth-vs-hstag.md](formal-hdepth-vs-hstag.md) |
 | 1⁗. Train util | Pinned + non_blocking H2D | **H-PIN** (util) | [formal-hpin-vs-htop.md](formal-hpin-vs-htop.md) |
+| 1⁗′. Train util | Async cache∩PIN overlap | **H-ASYNC** (KILL) | [hasync-vs-hpin.md](hasync-vs-hpin.md) |
 | 2a. Decode (speed) | Early-exit gene | **H-EARLY** | [formal-hearly-vs-b4.md](formal-hearly-vs-b4.md) |
 | 2a′. Decode util | Layer early-exit | **H-LAY** (util) | [formal-hlay-vs-hearly.md](formal-hlay-vs-hearly.md) |
 | 2a″. Decode util | Short draft stop | **H-SHORT** (util) | [formal-hshort-vs-hearly.md](formal-hshort-vs-hearly.md) |
@@ -67,6 +68,7 @@ npm run nano:formal:hbat && npm run nano:formal:hbat:report
 npm run nano:formal:htop && npm run nano:formal:htop:report
 npm run nano:pin && npm run nano:pin:report
 npm run nano:formal:hpin && npm run nano:formal:hpin:report
+npm run nano:async && npm run nano:async:report
 npm run nano:formal:hflash && npm run nano:formal:hflash:report
 npm run nano:formal:hkvsel && npm run nano:formal:hkvsel:report
 npm run nano:chunk && npm run nano:chunk:report
@@ -93,7 +95,8 @@ npm run nano:cfuse && npm run nano:cfuse:report
 ## Park status
 
 **PARKED** (tips: STAG / EARLY / POOL).  
-**Wave L FOCUS** — deepen winners; **next: H-ASYNC**.  
+**Wave L FOCUS** — queue done (L6 skipped); **next: open Wave M or park**.  
+**H-ASYNC** smoke **KILL** ([hasync-vs-hpin.md](hasync-vs-hpin.md) — e2e wall↑ vs PIN).  
 **H-CHB** smoke+formal **PROMOTE** ([formal-hchb-vs-hchunk.md](formal-hchb-vs-hchunk.md) — B=256).  
 **H-CBAT** smoke+formal **PROMOTE** ([formal-hcbat-vs-hbat.md](formal-hcbat-vs-hbat.md)).  
 **H-CFUSE** smoke **KILL** ([hcfuse-protocol.md](hcfuse-protocol.md) — wall ≥ min(CHUNK,FUSE)).  
