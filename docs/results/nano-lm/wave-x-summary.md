@@ -4,7 +4,7 @@
 > Lab: `.local/pesquisa.md` (**Wave Y** = cache + long context next).  
 > Deploy: [RECIPES.md](RECIPES.md) · [champion-card.md](champion-card.md).
 
-**Status: COMPLETE** (sandbox saturated) · **Wave Y ACTIVE** — [wave-y-summary.md](wave-y-summary.md) (**H-BEAMKV PROMOTE**; next H-TCACHE).
+**Status: COMPLETE** (sandbox saturated) · **Wave Y ACTIVE** — [wave-y-summary.md](wave-y-summary.md) (**H-BEAMKV** + **H-TCACHE PROMOTE**; next H-SCORERAM).
 
 ## PROMOTE (keep)
 
@@ -33,4 +33,4 @@ PFB = code-BoN + story floor + **parent fallback**. Long context / QI sketches w
 
 ## Next
 
-**Wave Y** — [wave-y-summary.md](wave-y-summary.md) (**H-BEAMKV PROMOTE**; next H-TCACHE). See `.local/pesquisa.md`.
+**Wave Y** — [wave-y-summary.md](wave-y-summary.md) (**H-BEAMKV** + **H-TCACHE PROMOTE**; next H-SCORERAM). See `.local/pesquisa.md`.

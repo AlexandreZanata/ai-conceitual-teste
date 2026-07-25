@@ -51,6 +51,7 @@ NOTES = [
     "- H-ABS-GPFB4 PROMOTE — GENC∘PFB K=4 (`formal-hgpfb4-gpfb4.md`).",
     "- H-ABS-GPFB KILL — GENC∘PFB2 K=2 (`archive/hgpfb-gpfb.md`).",
     "- H-BEAMKV PROMOTE — shared prompt KV across PFB beams (`formal-hbeamkv-beamkv.md`).",
+    "- H-TCACHE PROMOTE — teacher LP memo + elig-only code (`formal-htcache-tcache.md`).",
     "- Matrix note: PROG/BTC/MIXD/EFF in wave-w-summary § Kill/promote.",
     "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",

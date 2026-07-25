@@ -53,7 +53,7 @@ Fit≠eval genes; seeds [0,1,2]; `cpu_threads=14`. TPACK/AMORT remain story-trai
 ## Wave X / Y (F4)
 
 Wave X+ **COMPLETE** — full matrix: [wave-x-summary.md](wave-x-summary.md) (PFB family **PROMOTE**; QI/ABS **KILL** → [`archive/`](archive/)).  
-**Wave Y ACTIVE** — [wave-y-summary.md](wave-y-summary.md) (**H-BEAMKV PROMOTE**; next H-TCACHE). Corpus E1–E5: `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md).
+**Wave Y ACTIVE** — [wave-y-summary.md](wave-y-summary.md) (**H-BEAMKV** + **H-TCACHE PROMOTE**; next H-SCORERAM). Corpus E1–E5: `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md).
 
 ## Commands (survivors)
 

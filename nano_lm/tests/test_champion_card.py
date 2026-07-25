@@ -53,6 +53,7 @@ def test_given_card_when_read_then_xplus_promotes() -> None:
         "formal-hbpfb-bpfb",
         "formal-hgpfb4-gpfb4",
         "formal-hbeamkv-beamkv",
+        "formal-htcache-tcache",
     ):
         assert needle in text, f"missing {needle}"
     assert "PROMOTE" in text
