@@ -85,4 +85,4 @@ Mode: `transfer PACK/QPACK/TPACK on heldout/elongated/ood`; packs=`{'heldout': {
 
 Tips unchanged. Wave U transfer hygiene.
 
-Commands: `npm run nano:xfer` → `npm run nano:xfer:report`.
+Commands: tooling purged after KILL (`nano:xfer*` removed). Report retained for evidence.

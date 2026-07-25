@@ -3,8 +3,8 @@
 > Smoke tentatively PROMOTE; **formal KILL** (story teacher_lp regress). Do not claim train-mix.
 
 Archived evidence:
-- Formal: [`archive/formal-hmixd-mix.md`](archive/formal-hmixd-mix.md)
-- Smoke (superseded): [`archive/hmixd-mix-smoke.md`](archive/hmixd-mix-smoke.md)
+- Formal: [`formal-hmixd-mix.md`](formal-hmixd-mix.md)
+- Smoke (superseded): [`hmixd-mix-smoke.md`](hmixd-mix-smoke.md)
 
 | Arm | Formal mean story teacher_lp | Formal mean prog PPL |
 |-----|------------------------------|----------------------|

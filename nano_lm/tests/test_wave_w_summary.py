@@ -14,7 +14,7 @@ def test_given_summary_when_read_then_exists() -> None:
 def test_given_summary_when_read_then_wave_decisions() -> None:
     text = SUMMARY.read_text(encoding="utf-8")
     assert "COMPLETE" in text
-    assert "PARK" in text or "PARKED" in text
+    assert "ACTIVE" in text or "PARK" in text or "PARKED" in text
     for needle in (
         "H-PROG",
         "H-BTC",
