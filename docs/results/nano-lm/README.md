@@ -40,5 +40,6 @@
 | [archive/hqslot-slots.md](archive/hqslot-slots.md) | **H-Q-SLOT** K-slot measure (Wave X smoke **KILL**) |
 | [archive/hqinterf-interference.md](archive/hqinterf-interference.md) | **H-Q-INTERF** dual-teacher α-BoN (Wave X smoke **KILL**) |
 | [archive/habsrev-reverse.md](archive/habsrev-reverse.md) | **H-ABS-REV** reverse-prefill (Wave X smoke **KILL**) |
-| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV **KILL** → H-Q-ANNEAL (`.local/pesquisa.md`) |
+| [archive/hqanneal-anneal.md](archive/hqanneal-anneal.md) | **H-Q-ANNEAL** T(t)/conf(t) cooling (Wave X smoke **KILL**) |
+| Wave X | **ACTIVE** — H-TCHR/H-QT/H-GENC **PROMOTE** · long-L/RAG/CKD/Q*/GENQ/DIST/Q-SLOT/INTERF/ABS-REV/ANNEAL **KILL** → H-ABS-SPIRAL (`.local/pesquisa.md`) |
 | Phase E | Corpus E1–E5 **DONE** — `CURATED-SOURCES.md` · [e5-eval-suites.md](e5-eval-suites.md) · `npm run nano:curated` / `nano:e5` |

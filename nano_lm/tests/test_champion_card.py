@@ -160,3 +160,10 @@ def test_given_card_when_read_then_habsrev_kill() -> None:
     assert "H-ABS-REV" in text or "ABS-REV" in text
     assert "KILL" in text
     assert "habsrev-reverse" in text
+
+
+def test_given_card_when_read_then_hqanneal_kill() -> None:
+    text = CARD.read_text(encoding="utf-8")
+    assert "H-Q-ANNEAL" in text or "ANNEAL" in text
+    assert "KILL" in text
+    assert "hqanneal-anneal" in text
