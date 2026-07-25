@@ -1,15 +1,16 @@
-# H-MIXD smoke — STAG + curated programming mix
+# H-MIXD — STAG + curated programming mix (**KILL**)
 
-Wave W knowledge-in-training: TinyStories **STAG** curriculum + **mix_frac=0.1** curated programming tokens (PSF / Rust book licenses). Teacher remains TinyStories. Hold-out: curated source ids ∩ prog eval prompt ids = ∅. PROMOTE iff story teacher_lp ≥ control−ε **and** prog PPL ↓.
-Mode: `MIXD smoke: live STAG curriculum + curated prog mix_frac vs story-only; TinyStories teacher; prog PPL on hold-out YAML`; steps=`30`; cpu_threads=`14`; licenses=`['PSF', 'CC-BY-SA / MIT Apache-2.0']`.
+> Smoke tentatively PROMOTE; **formal KILL** (story teacher_lp regress). Do not claim train-mix.
 
-**Decision: PROMOTE (story ≥ STAG−ε and prog PPL ↓ vs story-only; mix_frac=0.1)**
+Archived evidence:
+- Formal: [`archive/formal-hmixd-mix.md`](archive/formal-hmixd-mix.md)
+- Smoke (superseded): [`archive/hmixd-mix-smoke.md`](archive/hmixd-mix-smoke.md)
 
-## Means
+| Arm | Formal mean story teacher_lp | Formal mean prog PPL |
+|-----|------------------------------|----------------------|
+| H-STAG-CTRL | −13.2775 | 45927 |
+| H-MIXD | −13.6013 | 14737 |
 
-| arm | mean story teacher_lp | mean prog PPL |
-|-----|----------------------|---------------|
-| H-STAG-CTRL | -17.0327 | 34143.300 |
-| H-MIXD | -16.8221 | 31988.407 |
+Gate: story ≥ control−ε **and** prog PPL ↓. Prog PPL improved, but story fell below control−0.05 → **KILL**. No ε soften; no gene widen; TinyStories teacher unchanged.
 
-Commands: `npm run nano:mixd` → `npm run nano:mixd:report`.
+Commands (repro): `npm run nano:formal:hmixd` → `npm run nano:formal:hmixd:report`.

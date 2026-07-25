@@ -50,7 +50,7 @@ npm run nano:bud && npm run nano:formal:hbud
 **ACTIVE** — curated programming/bitcoin/frontier KB + PROG/BTC domain gates + efficiency re-measure.  
 **H-PROG** smoke+formal **PROMOTE** ([formal](formal-hprog-programming.md)).  
 **H-BTC** smoke+formal **PROMOTE** ([formal](formal-hbtc-bitcoin.md)).  
-**H-MIXD** smoke **PROMOTE** ([hmixd-mix.md](hmixd-mix.md)); formal queued.  
+**H-MIXD** formal **KILL** ([hmixd-mix.md](hmixd-mix.md) · [archive](archive/formal-hmixd-mix.md)) — story teacher_lp regress; do not claim train-mix. Next: **H-EFF**.  
 Wave V **COMPLETE** — DOM smoke+formal **PROMOTE** (PACK on howto); TIPD→STAG′; DEPL **PROMOTE**; XFER2 purged (**KILL** ood_long).  
 KILL history: [`archive/`](archive/). No new letter-packs without a new mechanism.
 

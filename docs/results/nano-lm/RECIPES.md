@@ -30,4 +30,4 @@ Runnable routes ([DEPL](formal-hdepl-policy.md)): speed→PACK; quality→QPACK 
 Domain probe ([DOM](formal-hdom-howto.md)): PACK tip gate holds on procedural howto @128.  
 Wave W programming ([H-PROG formal](formal-hprog-programming.md)): PACK tip gate holds on prog @128.  
 Wave W bitcoin ([H-BTC formal](formal-hbtc-bitcoin.md)): PACK tip gate holds on btc @128.  
-Wave W mix ([H-MIXD smoke](hmixd-mix.md)): STAG + 10% curated prog mix — story ≥ control−ε and prog PPL ↓ (formal pending).
+Wave W mix ([H-MIXD](hmixd-mix.md)): formal **KILL** (story teacher_lp regress vs STAG−ε; prog PPL ↓ alone insufficient).
