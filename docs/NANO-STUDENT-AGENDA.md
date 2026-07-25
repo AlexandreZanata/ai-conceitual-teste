@@ -39,15 +39,15 @@ Mechanisms are math/code. Every H-ID has a null and a kill criterion.
 | Protocol | MIX / FUSE / CFUSE | PROTOCOL / CFUSE smoke **KILL** |
 | Train I/O try | **H-ASYNC** | smoke **KILL** |
 | Batch SHORT try | **H-SHORTB** | smoke **KILL** |
-| Thin under batch try | **H-DEPTHB** | smoke **KILL** |
+| Thin under batch try | **H-DEPTHB** / **H-PRUNB** | smoke **KILL** |
 | Compile under PIN try | **H-PINC** | smoke **KILL** |
 
 **Do not** gene-widen EARLY/POOL or paste tips. Deepen systems/batch/TOP/DEPTH axes only.  
-Queue: `.local/pesquisa.md` (**Wave O** complete — O3 PINC smoke KILL; open Wave P or park). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
+Queue: `.local/pesquisa.md` (**Wave P** — P1 PRUNB smoke KILL; next P2). Card: [`champion-card.md`](results/nano-lm/champion-card.md).
 
 ## Archived
 
-A–H deepeners, I/J KILLs, **H-TOPK**, **H-Q4** formal KILL, **H-CFUSE** / **H-ASYNC** / **H-SHORTB** / **H-DEPTHB** / **H-PINC** smoke KILL. [`archive/`](results/nano-lm/archive/).
+A–H deepeners, I/J KILLs, **H-TOPK**, **H-Q4** formal KILL, **H-CFUSE** / **H-ASYNC** / **H-SHORTB** / **H-DEPTHB** / **H-PINC** / **H-PRUNB** smoke KILL. [`archive/`](results/nano-lm/archive/).
 
 ## Eval
 
