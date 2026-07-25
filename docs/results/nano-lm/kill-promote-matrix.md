@@ -14,6 +14,7 @@ H-SERVE gate: |Δlp|≤ε vs EARLY and (wall↓ or tok/s↑) (formal PROMOTE; re
 H-ROUTE gate: not dominated by GALL or GRAPHF on (lp, wall) (formal PROMOTE).
 H-PARETO gate: audit live (≥1 pair); FLAG tok/s↑ & GFLOPs>tip·(1+δ) (formal PROMOTE; CBAT FLAG).
 H-SROUTE gate: not dominated by SERVE on (lp, wall) (formal PROMOTE; SERVE keeps min-wall).
+H-SKIP gate: wall↓ or tok/s↑ vs BAT and GFLOPs ≤ BAT·(1+δ) (formal PROMOTE; CBAT demoted).
 H-ETRAIN gate: lp ≥ STAG−ε and e2e_wall < STAG (smoke PROMOTE / formal KILL — cache tax).
 H-FLOP: wall + tok/s + est. GFLOPs.
 H-MIX / H-FUSE / H-PARETO: PROTOCOL/audit only (not tips).
@@ -32,6 +33,6 @@ H-MIX / H-FUSE / H-PARETO: PROTOCOL/audit only (not tips).
 
 ## Notes
 - Focus winners only. KILL code purged; history: `docs/results/nano-lm/archive/`.
-- Wave S: S0 SROUTE formal PROMOTE; next SKIP — `.local/pesquisa.md`.
+- Wave S: S1 SKIP formal PROMOTE; next PACK — `.local/pesquisa.md`.
 - Smoke budgets are tentative; formal = 3 seeds + fit≠eval.
 - Agenda: `docs/NANO-STUDENT-AGENDA.md`.

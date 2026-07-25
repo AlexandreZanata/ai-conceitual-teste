@@ -20,7 +20,7 @@ Parents: H-CURL2←H-CURL←H-CUR; H-DECKL←H-DECK←H-DEC.
 | Train I/O | TOP → PIN → PRE → HALF → ADAMF → PRE2 → **PRE3** |
 | Thin solo | PRUN / DEPTH (never under batch/ADAMF) |
 | Systems | FLASH → CHUNK → **CHB**; KVSEL; GRAPH → GRAPHF; **GALL**; **SERVE** (min-wall=GALL); **SROUTE**/ROUTE (Pareto) |
-| Batch speed | BAT → CBAT → CHBAT → FUSEB → **LAYB** (+ GRAPH/GALL) |
+| Batch speed | BAT → **SKIP**/CHBAT → FUSEB → **LAYB** (+ GRAPH/GALL; CBAT demoted) |
 | Batch quality | POOLB → CPOOLB → FCPOOLB → **FLAYB** (+ GRAPHF) |
 | Protocol | MIX = PRUN⊕LAY; FUSE = FLASH⊕KVSEL; **PARETO** = GFLOPs honesty audit (**not** tips) |
 
@@ -48,6 +48,7 @@ npm run nano:serve && npm run nano:formal:hserve
 npm run nano:route && npm run nano:formal:hroute
 npm run nano:pareto && npm run nano:formal:hpareto
 npm run nano:sroute && npm run nano:formal:hsroute
+npm run nano:skip && npm run nano:formal:hskip
 npm run nano:chb && npm run nano:layb && npm run nano:gall
 npm run nano:flayb && npm run nano:graphf
 npm run nano:mix && npm run nano:fuse
@@ -56,7 +57,8 @@ npm run nano:mix && npm run nano:fuse
 ## Park status
 
 **PARKED** (tips).  
-**Wave S FOCUS** — **S0 H-SROUTE** smoke+formal **PROMOTE**; next **H-SKIP**.  
+**Wave S FOCUS** — **S1 H-SKIP** smoke+formal **PROMOTE**; next **H-PACK**.  
+**H-SKIP** smoke+formal **PROMOTE** ([formal-hskip-vs-hbat.md](formal-hskip-vs-hbat.md) — BAT→CHBAT; wall↓ tok/s↑; GFLOPs=BAT; CBAT demoted).  
 **H-SROUTE** smoke+formal **PROMOTE** ([formal-hsroute-vs-hserve.md](formal-hsroute-vs-hserve.md) — not dominated by SERVE; lp↑ tok/s↑; wall↑; SERVE keeps min-wall).  
 **H-PARETO** smoke+formal **PROMOTE** ([formal-hpareto-audit.md](formal-hpareto-audit.md) — audit live; **H-CBAT** FLAG tok/s↑ GFLOPs↑).  
 **H-ROUTE** smoke+formal **PROMOTE** ([formal-hroute-vs-arms.md](formal-hroute-vs-arms.md) — not dominated by GALL/GRAPHF; tok/s↑).  
