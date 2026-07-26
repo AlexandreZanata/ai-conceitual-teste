@@ -1,7 +1,7 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy: [RECIPES.md](RECIPES.md). Lab: `.local/pesquisa.md` (**Wave Y ACTIVE** — PFB256/ROLL/SUMCACHE **PROMOTE**; STREAM **KILL**; next H-KVCACHE-Q).  
+> Deploy: [RECIPES.md](RECIPES.md). Lab: `.local/pesquisa.md` (**Wave Y ACTIVE** — PFB256/ROLL/SUMCACHE **PROMOTE**; STREAM/KVCACHE-Q **KILL**; next H-GENCACHE).  
 > Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md).
 
 ## Official tips
@@ -60,6 +60,6 @@ npm run nano:genc && npm run nano:formal:hgenc
 
 Wave W **COMPLETE** — [wave-w-summary.md](wave-w-summary.md) (PROG/BTC/EFF **PROMOTE**; MIXD **KILL**).  
 Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PROMOTE**; RAG/CTX/Q*/… **KILL** → [`archive/`](archive/)).  
-**Wave Y ACTIVE** — [wave-y-summary.md](wave-y-summary.md) (PFB256/ROLL/SUMCACHE **PROMOTE**; STREAM **KILL**; next H-KVCACHE-Q).
+**Wave Y ACTIVE** — [wave-y-summary.md](wave-y-summary.md) (PFB256/ROLL/SUMCACHE **PROMOTE**; STREAM/KVCACHE-Q **KILL**; next H-GENCACHE).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

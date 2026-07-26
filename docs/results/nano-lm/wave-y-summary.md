@@ -21,11 +21,12 @@
 | ID | Lesson | Archive |
 |----|--------|---------|
 | **H-STREAM** | parent=prev commit lifts code but story collapses across T (formal) | [archive](archive/hstream-stream.md) |
+| **H-KVCACHE-Q** | QT∘PFB2 quality ok; session prefix KV did not cut TTFT vs cold | [archive](archive/hkvcache-kvcache.md) |
 
 ## Queued
 
-H-KVCACHE-Q · H-GENCACHE / H-GPFB4-LONG.
+H-GENCACHE · H-GPFB4-LONG.
 
 ## Doctrine reminder
 
-Every long-context hyp inherits PFB dual gate. Cache = measurable hit-rate / wall↓ / teacher_forwards↓. Do not revive X+ KILL catalog. Do not claim infinite stream via parent=prev alone.
+Every long-context hyp inherits PFB dual gate. Cache = measurable hit-rate / wall↓ / teacher_forwards↓. Do not revive X+ KILL catalog. Do not claim infinite stream or session TTFT↓ without evidence.

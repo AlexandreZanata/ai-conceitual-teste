@@ -6,7 +6,7 @@
 | [champion-card.md](champion-card.md) | Tips + recipe priority |
 | [wave-w-summary.md](wave-w-summary.md) | Wave W **COMPLETE** |
 | [wave-x-summary.md](wave-x-summary.md) | Wave X+ **COMPLETE** (PFB **PROMOTE**; QI/ABS **KILL**) |
-| [wave-y-summary.md](wave-y-summary.md) | Wave Y **ACTIVE** (PFB256/ROLL/SUMCACHE **PROMOTE**; STREAM **KILL**; next H-KVCACHE-Q) |
+| [wave-y-summary.md](wave-y-summary.md) | Wave Y **ACTIVE** (PFB256/ROLL/SUMCACHE **PROMOTE**; STREAM/KVCACHE-Q **KILL**; next H-GENCACHE) |
 | [archive/](archive/) | All KILL evidence (tooling purged) |
 
 ## Survivors (formal)
@@ -19,4 +19,4 @@
 | Wave Y cache / long | [beamkv](formal-hbeamkv-beamkv.md) · [tcache](formal-htcache-tcache.md) · [scoreram](formal-hscoreram-scoreram.md) · [pfb256](formal-hpfb256-pfb256.md) · [roll](formal-hroll-roll.md) · [sumcache](formal-hsumcache-sumcache.md) |
 | Train | [TIPD](formal-htipd-vs-hstag.md) · [tpack](formal-htpack-vs-hstag.md) · [amort](formal-hamort-vs-hstag.md) |
 
-**Wave Y ACTIVE** — [wave-y-summary.md](wave-y-summary.md). Next: **H-KVCACHE-Q**.
+**Wave Y ACTIVE** — [wave-y-summary.md](wave-y-summary.md). Next: **H-GENCACHE**.
