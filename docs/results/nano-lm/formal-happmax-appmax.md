@@ -47,4 +47,4 @@ npm run nano:appmax -- --app app-route
 - Trials: `AE-APPMAX-{KNOWN,LONGDOC,HOWTO,ROUTE}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_appmax.py`
 
-Next: **AE5 AE-HITL-10**.
+Next: **AE5 AE-HITL-10** (**DONE** — see [wave-ae-hitl.md](wave-ae-hitl.md)). Next wave stage: **AE6 AE-REPORT**.

@@ -80,6 +80,7 @@
 | **H-SMARTMAX** | Multi-hop para + primary cite beyond HARDPARA/COMPOSE; AE2 **PROMOTE** (mean 9.0; cite 10/10) |
 | **H-FASTMAX** | ASKFAST+cache hot serve; e2e ↓ vs FASTPLUS; AE3 **PROMOTE** (mean 9.0; hot e2e ≪ 0.29 ms) |
 | **H-APPMAX** | Packaged apps + howto↑ + **app-route** + DEPL-AE; AE4 **PROMOTE** (4/4 apps; mean 8.725) |
+| **AE-HITL-10** | Final AE pack verify; AE5 **PROMOTE** (mean 9.0; errors 0; held-out ok) |
 | **H-ASKSMART** | Anti-period QPFB2+BEAMKV + constrained SEMWRAP FIX; AB4 **PROMOTE** (mean 8.7 > SERVEALIGN 3.4) |
 | **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **AB-HITL-10** | Final Wave AB pack verify on declared stack; AB6 **PROMOTE** (mean 9.0 · errors 0/10) |
