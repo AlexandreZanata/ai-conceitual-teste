@@ -1,0 +1,542 @@
+"""Wave AI2 H-CTXPUSH runner: hexa-doc dual-arm ASK→EVAL→FIX×10."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+from typing import Any
+
+from ai_session_ops import AI0_PACK
+from askfast_ops import AskCompletionCache
+from curated_sources import SOURCES
+from ctxpush_ops import (
+    CTXPUSH_ID,
+    CTXPUSH_N,
+    ctxpush_doc_meta,
+    ctxpush_stats,
+    decide_ctxpush,
+    quaternary_for,
+    quinary_for,
+    score_ctxpush_gen,
+    score_ctxpush_lookup,
+    secondary_for,
+    senary_for,
+    tertiary_for,
+)
+from data_tiny import load_tokenizer
+from matrix_common import REPO, matrix_cfg, write_json
+from run_z_ask import ask_many
+from semwrap_ops import alias_bank_row, classify_semwrap, semantic_lookup
+from tipd_pair import tune_cpu_threads
+from z_error_bank import append_error_row
+from z_wrap import load_bank_rows
+
+_Z_BANK = REPO / "results/nano-lm/wave-z/error_bank.jsonl"
+_AI_BANK = REPO / "results/nano-lm/wave-ai/error_bank.jsonl"
+_TRIALS = REPO / "results/nano-lm/wave-ai/trials"
+_SUMMARY = REPO / "results/nano-lm/wave-ai/ctxpush_summary.json"
+_CHAMPION = REPO / "results/nano-lm/wave-z/models/champion"
+_CURATED = REPO / "nano_lm/data/curated"
+_JUDGE = "cursor-composer-frontier-chat"
+_BY_ID = {str(s["id"]): s for s in SOURCES}
+
+
+def _clear_proxy() -> None:
+    for key in (
+        "http_proxy",
+        "https_proxy",
+        "HTTP_PROXY",
+        "HTTPS_PROXY",
+        "ALL_PROXY",
+        "all_proxy",
+    ):
+        os.environ.pop(key, None)
+
+
+def _load_doc(source_id: str, curated: Path) -> str:
+    meta = _BY_ID.get(source_id)
+    if meta is None:
+        raise ValueError(f"unknown source_id: {source_id}")
+    path = curated / str(meta["path"])
+    if not path.is_file():
+        raise FileNotFoundError(str(path))
+    return path.read_text(encoding="utf-8", errors="ignore")
+
+
+def _seed_pack_golds(bank_path: Path, ai_bank: Path) -> int:
+    bank_path.parent.mkdir(parents=True, exist_ok=True)
+    ai_bank.parent.mkdir(parents=True, exist_ok=True)
+    if not ai_bank.is_file():
+        ai_bank.write_text("", encoding="utf-8")
+    existing = {
+        str(r.get("question", "")).strip() for r in load_bank_rows(bank_path)
+    }
+    n = 0
+    for i, item in enumerate(AI0_PACK, start=1):
+        q = str(item["question"]).strip()
+        if q in existing:
+            continue
+        row = alias_bank_row(
+            trial_id=f"AI-CTXPUSH-SEED-{i:02d}",
+            question=q,
+            source_id=item["source_id"],
+            gold=item["gold"],
+        )
+        row["hyp_id"] = CTXPUSH_ID
+        row["judge_notes"] = [
+            "CTXPUSH seed alias for held-out AI ask",
+            "LOOKUP product path — not generative IQ",
+            "no student weight update",
+        ]
+        append_error_row(bank_path, row)
+        append_error_row(ai_bank, row)
+        existing.add(q)
+        n += 1
+    return n
+
+
+def _classify_lookup(
+    item: dict[str, str],
+    payload: dict[str, Any],
+    bank: list[dict[str, Any]],
+    curated: Path,
+) -> tuple[str, dict[str, Any]]:
+    mode = str(payload.get("mode", ""))
+    _g, meta = semantic_lookup(
+        item["question"], bank, curated_root=curated
+    )
+    looked = (
+        str(payload.get("completion"))
+        if mode in {"SEMWRAP_LOOKUP", "WRAP_LOOKUP", "ASKFAST_CACHE"}
+        else _g
+    )
+    kind = classify_semwrap(
+        looked,
+        expected_gold=item["gold"],
+        expected_source_id=item["source_id"],
+        hit_source_id=str(meta.get("source_id") or "") or None,
+    )
+    return kind, meta
+
+
+def _build_ctxs(
+    *, curated_root: Path, workers: int, tok: Any
+) -> list[dict[str, Any]]:
+    def _read(
+        item: dict[str, str],
+    ) -> tuple[dict[str, str], str, str, str, str, str, str]:
+        primary = item["source_id"]
+        return (
+            item,
+            _load_doc(primary, curated_root),
+            _load_doc(secondary_for(primary), curated_root),
+            _load_doc(tertiary_for(primary), curated_root),
+            _load_doc(quaternary_for(primary), curated_root),
+            _load_doc(quinary_for(primary), curated_root),
+            _load_doc(senary_for(primary), curated_root),
+        )
+
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+        rows = list(pool.map(_read, [dict(p) for p in AI0_PACK]))
+    ctxs: list[dict[str, Any]] = []
+    for item, p_text, s_text, t_text, q_text, n_text, x_text in rows:
+        p_ids = list(tok.encode(p_text, add_special_tokens=False))
+        s_ids = list(tok.encode(s_text, add_special_tokens=False))
+        t_ids = list(tok.encode(t_text, add_special_tokens=False))
+        u_ids = list(tok.encode(q_text, add_special_tokens=False))
+        v_ids = list(tok.encode(n_text, add_special_tokens=False))
+        w_ids = list(tok.encode(x_text, add_special_tokens=False))
+        q_ids = list(tok.encode(item["question"], add_special_tokens=False))
+        sid = item["source_id"]
+        meta = ctxpush_doc_meta(
+            p_ids,
+            s_ids,
+            t_ids,
+            u_ids,
+            v_ids,
+            w_ids,
+            q_ids,
+            primary_source=sid,
+            secondary_source=secondary_for(sid),
+            tertiary_source=tertiary_for(sid),
+            quaternary_source=quaternary_for(sid),
+            quinary_source=quinary_for(sid),
+            senary_source=senary_for(sid),
+        )
+        ctxs.append(meta)
+    return ctxs
+
+
+def _fix_lookup(
+    *,
+    i: int,
+    item: dict[str, str],
+    bank_path: Path,
+    ai_bank: Path,
+    root: Path,
+    curated_root: Path,
+    seed: int,
+) -> tuple[dict[str, Any], list[dict[str, Any]], int]:
+    row = alias_bank_row(
+        trial_id=f"AI-CTXPUSH-FIX-{i:02d}",
+        question=item["question"],
+        source_id=item["source_id"],
+        gold=item["gold"],
+    )
+    row["hyp_id"] = CTXPUSH_ID
+    append_error_row(bank_path, row)
+    append_error_row(ai_bank, row)
+    bank = load_bank_rows(bank_path)
+    re_payloads = ask_many(
+        questions=[item["question"]],
+        root=root,
+        seed=seed,
+        askfast=True,
+        bank_path=bank_path,
+        curated_root=curated_root,
+        ask_cache=AskCompletionCache(),
+    )
+    return re_payloads[0], bank, 1
+
+
+def _lookup_trial(
+    *,
+    i: int,
+    item: dict[str, str],
+    payload: dict[str, Any],
+    kind: str,
+    sem_meta: dict[str, Any],
+    ctx: dict[str, Any],
+    fix_pass: int,
+) -> dict[str, Any]:
+    tid = f"AI-CTXPUSH-LOOKUP-HITL-{i:02d}"
+    mode = str(payload.get("mode", ""))
+    score, err, notes, usable = score_ctxpush_lookup(
+        mode=mode,
+        completion=str(payload.get("completion", "")),
+        expected_gold=str(item["gold"]),
+        lookup_kind=kind,
+        meta=ctx,
+        payload=payload,
+    )
+    return {
+        "trial_id": tid,
+        "stage": "AI2",
+        "hyp_id": CTXPUSH_ID,
+        "arm": "LOOKUP",
+        "app_id": item["app_id"],
+        "question": item["question"],
+        "source_id": item["source_id"],
+        "secondary_source": ctx.get("secondary_source"),
+        "tertiary_source": ctx.get("tertiary_source"),
+        "quaternary_source": ctx.get("quaternary_source"),
+        "quinary_source": ctx.get("quinary_source"),
+        "senary_source": ctx.get("senary_source"),
+        "completion": payload.get("completion"),
+        "wall_ms": payload.get("wall_ms"),
+        "n_new": payload.get("n_new"),
+        "mode": mode,
+        "lookup_kind": kind,
+        "semwrap": sem_meta,
+        "ctxpush": ctx,
+        "usable": usable,
+        "score": score,
+        "error": err,
+        "fix_pass": int(fix_pass),
+        "judge_model_name": _JUDGE,
+        "judge_notes": notes,
+        "gold": str(item["gold"]).strip(),
+        "weight_update": False,
+    }
+
+
+def _gen_trial(
+    *,
+    i: int,
+    item: dict[str, str],
+    payload: dict[str, Any],
+    ctx: dict[str, Any],
+) -> dict[str, Any]:
+    tid = f"AI-CTXPUSH-GEN-HITL-{i:02d}"
+    score, err, notes, usable = score_ctxpush_gen(
+        completion=str(payload.get("completion", "")),
+        expected_gold=str(item["gold"]),
+        meta=ctx,
+        payload=payload,
+    )
+    return {
+        "trial_id": tid,
+        "stage": "AI2",
+        "hyp_id": CTXPUSH_ID,
+        "arm": "GENERATE",
+        "app_id": item["app_id"],
+        "question": item["question"],
+        "source_id": item["source_id"],
+        "secondary_source": ctx.get("secondary_source"),
+        "tertiary_source": ctx.get("tertiary_source"),
+        "quaternary_source": ctx.get("quaternary_source"),
+        "quinary_source": ctx.get("quinary_source"),
+        "senary_source": ctx.get("senary_source"),
+        "completion": payload.get("completion"),
+        "wall_ms": payload.get("wall_ms"),
+        "n_new": payload.get("n_new"),
+        "mode": payload.get("mode"),
+        "ctxpush": ctx,
+        "usable": usable,
+        "score": score,
+        "error": err,
+        "fix_pass": 0,
+        "judge_model_name": _JUDGE,
+        "judge_notes": notes,
+        "gold": str(item["gold"]).strip(),
+        "weight_update": False,
+    }
+
+
+def run_ctxpush(
+    *,
+    bank_path: Path,
+    ai_bank: Path,
+    root: Path,
+    out: Path,
+    trials_dir: Path,
+    curated_root: Path,
+    seed: int = 0,
+    workers: int = 8,
+) -> dict[str, Any]:
+    """
+    GIVEN AI0 held-out asks + hexa curated docs
+    WHEN K=13 ROLL/SUMCACHE + LOOKUP askfast + GENERATE raw
+    THEN L_eff↑ vs CTXLIFT · gen usable≥5 → PROMOTE|HOLD|KILL.
+    """
+    if len(AI0_PACK) != CTXPUSH_N:
+        raise ValueError("AI0 pack must be 10")
+    trials_dir.mkdir(parents=True, exist_ok=True)
+    seeded = _seed_pack_golds(bank_path, ai_bank)
+    cfg = matrix_cfg()
+    tok = load_tokenizer(str(cfg["tokenizer_id"]), cfg["cache"])
+    bank = load_bank_rows(bank_path)
+    ctxs = _build_ctxs(curated_root=curated_root, workers=workers, tok=tok)
+    questions = [p["question"] for p in AI0_PACK]
+
+    lookup_payloads = ask_many(
+        questions=questions,
+        root=root,
+        seed=seed,
+        askfast=True,
+        bank_path=bank_path,
+        curated_root=curated_root,
+        ask_cache=AskCompletionCache(),
+    )
+    gen_payloads = ask_many(
+        questions=questions,
+        root=root,
+        seed=seed,
+        wrap=False,
+        bank_path=bank_path,
+        curated_root=curated_root,
+    )
+
+    lookup_trials: list[dict[str, Any]] = []
+    gen_trials: list[dict[str, Any]] = []
+    fix_count = 0
+    for i, (item, lp, gp, ctx) in enumerate(
+        zip(AI0_PACK, lookup_payloads, gen_payloads, ctxs, strict=True),
+        start=1,
+    ):
+        kind, sem_meta = _classify_lookup(
+            dict(item), lp, bank, curated_root
+        )
+        fix_pass = 0
+        if kind != "TRUE_HIT":
+            lp, bank, fix_pass = _fix_lookup(
+                i=i,
+                item=dict(item),
+                bank_path=bank_path,
+                ai_bank=ai_bank,
+                root=root,
+                curated_root=curated_root,
+                seed=seed,
+            )
+            fix_count += 1
+            kind, sem_meta = _classify_lookup(
+                dict(item), lp, bank, curated_root
+            )
+        lt = _lookup_trial(
+            i=i,
+            item=dict(item),
+            payload=lp,
+            kind=kind,
+            sem_meta=sem_meta,
+            ctx=ctx,
+            fix_pass=fix_pass,
+        )
+        gt = _gen_trial(i=i, item=dict(item), payload=gp, ctx=ctx)
+        if gt["error"]:
+            append_error_row(
+                ai_bank,
+                {
+                    "trial_id": gt["trial_id"],
+                    "question": item["question"],
+                    "source_id": item["source_id"],
+                    "model_raw": str(gt.get("completion") or ""),
+                    "score": float(gt["score"]),
+                    "error": True,
+                    "recipe_id": "champion-qt-early-v0",
+                    "hyp_id": CTXPUSH_ID,
+                    "arm": "GENERATE",
+                    "fix": "before",
+                    "judge_notes": gt["judge_notes"],
+                    "gold": item["gold"],
+                },
+            )
+        write_json(trials_dir / f"{lt['trial_id']}.json", lt)
+        write_json(trials_dir / f"{gt['trial_id']}.json", gt)
+        lookup_trials.append(lt)
+        gen_trials.append(gt)
+
+    mean_l = float(sum(float(c["l_eff"]) for c in ctxs) / CTXPUSH_N)
+    mean_a = float(
+        sum(float(c["sumcache_active"]) for c in ctxs) / CTXPUSH_N
+    )
+    mean_s = float(sum(float(c["n_slices"]) for c in ctxs) / CTXPUSH_N)
+    mean_src = float(sum(float(c["n_sources"]) for c in ctxs) / CTXPUSH_N)
+    n_true = sum(1 for t in lookup_trials if t["lookup_kind"] == "TRUE_HIT")
+    n_false = sum(
+        1 for t in lookup_trials if t["lookup_kind"] == "FALSE_HIT"
+    )
+    stats = ctxpush_stats(
+        lookup_scores=[float(t["score"]) for t in lookup_trials],
+        lookup_errors=[bool(t["error"]) for t in lookup_trials],
+        lookup_usables=[bool(t["usable"]) for t in lookup_trials],
+        gen_scores=[float(t["score"]) for t in gen_trials],
+        gen_errors=[bool(t["error"]) for t in gen_trials],
+        gen_usables=[bool(t["usable"]) for t in gen_trials],
+        n_true_hit=n_true,
+        n_false_hit=n_false,
+        mean_l_eff=mean_l,
+        mean_active=mean_a,
+        mean_slices=mean_s,
+        mean_sources=mean_src,
+        n_fix=fix_count,
+    )
+    decision = decide_ctxpush(stats)
+    summary: dict[str, Any] = {
+        "hyp_id": CTXPUSH_ID,
+        "stage": "AI2",
+        "decision": decision,
+        "compose": [
+            "SUMCACHE",
+            "ROLL-multi-K13",
+            "hexa-doc",
+            "SEMWRAP/ASKFAST LOOKUP",
+            "GENERATE raw",
+        ],
+        "forbidden": ["STREAM", "KVCACHE-Q", "GENCACHE", "naive CTX"],
+        "seeded_golds": int(seeded),
+        "fix_count": int(fix_count),
+        "cpu_threads": int(os.environ.get("OMP_NUM_THREADS") or 0),
+        "workers": int(workers),
+        "stats": stats,
+        "lookup_trials": [
+            {
+                "trial_id": t["trial_id"],
+                "mode": t["mode"],
+                "wall_ms": t["wall_ms"],
+                "n_new": t["n_new"],
+                "score": t["score"],
+                "usable": t["usable"],
+                "lookup_kind": t["lookup_kind"],
+                "l_eff": t["ctxpush"]["l_eff"],
+            }
+            for t in lookup_trials
+        ],
+        "gen_trials": [
+            {
+                "trial_id": t["trial_id"],
+                "mode": t["mode"],
+                "wall_ms": t["wall_ms"],
+                "n_new": t["n_new"],
+                "score": t["score"],
+                "usable": t["usable"],
+                "l_eff": t["ctxpush"]["l_eff"],
+                "completion": str(t.get("completion") or "")[:120],
+            }
+            for t in gen_trials
+        ],
+        "finding": (
+            f"{CTXPUSH_ID}: L_lookup={stats['lookup_mean']:.1f} "
+            f"L_gen={stats['gen_mean']:.1f} "
+            f"usable_L={stats['n_lookup_usable']}/10 "
+            f"usable_G={stats['n_gen_usable']}/10 "
+            f"L_eff={mean_l:.0f} (>CTXLIFT {stats['ctxlift_mean_leff']:.0f}) "
+            f"sources={mean_src:.1f} slices={mean_s:.1f} "
+            f"false_hit={n_false} fix={fix_count} decision={decision}."
+        ),
+        "public_note": "docs/results/nano-lm/formal-hctxpush-ctxpush.md",
+        "ship_claim": "AF packaged stack until AI6 gen bar",
+        "claim": (
+            "hexa-doc longer usable ctx beyond CTXLIFT — "
+            "not open chat / LOOKUP≠gen IQ"
+        ),
+    }
+    write_json(out, summary)
+    return summary
+
+
+def main() -> int:
+    _clear_proxy()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--bank", type=Path, default=_Z_BANK)
+    ap.add_argument("--ai-bank", type=Path, default=_AI_BANK)
+    ap.add_argument("--root", type=Path, default=_CHAMPION)
+    ap.add_argument("--out", type=Path, default=_SUMMARY)
+    ap.add_argument("--trials-dir", type=Path, default=_TRIALS)
+    ap.add_argument("--curated", type=Path, default=_CURATED)
+    ap.add_argument("--seed", type=int, default=0)
+    args = ap.parse_args()
+    cpus = int(os.cpu_count() or 4)
+    threads = tune_cpu_threads(max(4, cpus - 4))
+    workers = min(12, max(4, cpus - 4))
+    try:
+        summary = run_ctxpush(
+            bank_path=Path(args.bank),
+            ai_bank=Path(args.ai_bank),
+            root=Path(args.root),
+            out=Path(args.out),
+            trials_dir=Path(args.trials_dir),
+            curated_root=Path(args.curated),
+            seed=int(args.seed),
+            workers=workers,
+        )
+    except (OSError, RuntimeError, ValueError) as exc:
+        print(json.dumps({"ok": False, "error": str(exc)}), file=sys.stderr)
+        return 2
+    decision = str(summary["decision"])
+    print(
+        json.dumps(
+            {
+                "ok": True,
+                "hyp_id": CTXPUSH_ID,
+                "decision": decision,
+                "lookup_mean": summary["stats"]["lookup_mean"],
+                "gen_mean": summary["stats"]["gen_mean"],
+                "n_lookup_usable": summary["stats"]["n_lookup_usable"],
+                "n_gen_usable": summary["stats"]["n_gen_usable"],
+                "mean_l_eff": summary["stats"]["mean_l_eff"],
+                "pass_leff_up": summary["stats"]["pass_leff_up"],
+                "cpu_threads": threads,
+                "workers": workers,
+                "out": str(args.out),
+            }
+        )
+    )
+    return 0 if decision in {"PROMOTE", "HOLD"} else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

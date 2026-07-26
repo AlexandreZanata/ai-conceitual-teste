@@ -75,4 +75,4 @@ npm run nano:test && npm run verify
 - Trials: `AI-CAPRENEG-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_capreneg.py`
 
-Next: **AI2 H-CTXPUSH**.
+Next: **AI2 H-CTXPUSH** (**DONE — PROMOTE** — see [formal-hctxpush-ctxpush.md](formal-hctxpush-ctxpush.md)). Next: **AI3 H-SMARTPUSH**.

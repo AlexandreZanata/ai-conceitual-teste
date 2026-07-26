@@ -344,6 +344,8 @@
     "nano:genpush": "nano_lm/.venv/bin/python nano_lm/src/run_genplus.py",
     "nano:capreneg": "nano_lm/.venv/bin/python nano_lm/src/run_capreneg.py",
     "nano:ai:capreneg": "nano_lm/.venv/bin/python nano_lm/src/run_capreneg.py",
+    "nano:ctxpush": "nano_lm/.venv/bin/python nano_lm/src/run_ctxpush.py",
+    "nano:ai:ctxpush": "nano_lm/.venv/bin/python nano_lm/src/run_ctxpush.py",
     "nano:ai-session": "nano_lm/.venv/bin/python nano_lm/src/run_ai_session.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
