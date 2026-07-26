@@ -53,6 +53,8 @@
 | [formal-hfastultra-fastultra.md](formal-hfastultra-fastultra.md) | Wave AF3 H-FASTULTRA **PROMOTE** |
 | [formal-happultra-appultra.md](formal-happultra-appultra.md) | Wave AF4 H-APPULTRA **PROMOTE** |
 | [wave-af-hitl.md](wave-af-hitl.md) | Wave AF5 AF-HITL-10 **PROMOTE** |
+| [wave-af-summary.md](wave-af-summary.md) | Wave AF6 AF-REPORT **PROMOTE** |
+| [paper-lab-wave-af.md](paper-lab-wave-af.md) | Wave AF paper-lab (AF6) |
 | [depl-af.md](depl-af.md) | AF packaged deploy routes (APPULTRA) |
 | [depl-ad.md](depl-ad.md) | AC+AD deploy overview (H-DEPLPLUS) |
 | [wave-ab-summary.md](wave-ab-summary.md) | Wave AB **COMPLETE** public closeout |

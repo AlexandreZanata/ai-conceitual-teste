@@ -8,7 +8,7 @@
 
 **PROMOTE** — Wave AE outcomes locked; scoped product remains **AE packaged stack** (CTXMAX · SMARTMAX · FASTMAX · APPMAX); **no Wave AF** without explicit lab-book reopen.
 
-**Reopen (2026-07-26):** Wave AF opened via `.local/pesquisa.md` §5 — AF0 [wave-af-session.md](wave-af-session.md) **PROMOTE**; AF1 [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md) **PROMOTE**; AF2 [formal-hsmartultra-smartultra.md](formal-hsmartultra-smartultra.md) **PROMOTE**; AF3 [formal-hfastultra-fastultra.md](formal-hfastultra-fastultra.md) **PROMOTE**; AF4 [formal-happultra-appultra.md](formal-happultra-appultra.md) **PROMOTE**; AF5 [wave-af-hitl.md](wave-af-hitl.md) **PROMOTE**; next **AF-REPORT**. AE freeze outcomes stay locked.
+**Reopen (2026-07-26):** Wave AF opened via `.local/pesquisa.md` §5 — AF0 [wave-af-session.md](wave-af-session.md) **PROMOTE**; AF1 [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md) **PROMOTE**; AF2 [formal-hsmartultra-smartultra.md](formal-hsmartultra-smartultra.md) **PROMOTE**; AF3 [formal-hfastultra-fastultra.md](formal-hfastultra-fastultra.md) **PROMOTE**; AF4 [formal-happultra-appultra.md](formal-happultra-appultra.md) **PROMOTE**; AF5 [wave-af-hitl.md](wave-af-hitl.md) **PROMOTE**; AF6 [wave-af-summary.md](wave-af-summary.md) **PROMOTE**; next **AF-FREEZE**. AE freeze outcomes stay locked.
 
 **Status: COMPLETE** (freeze gate).
 

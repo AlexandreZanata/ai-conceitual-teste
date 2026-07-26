@@ -59,4 +59,4 @@ npm run nano:af:hitl
 - Trials: `AF-FINAL-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_af_hitl.py`
 
-Next: **AF6 AF-REPORT** (public `wave-af-summary.md` + paper-lab). Then **AF7 AF-FREEZE**.
+Next: **AF6 AF-REPORT** (**DONE** — see [wave-af-summary.md](wave-af-summary.md) · [paper-lab-wave-af.md](paper-lab-wave-af.md)). Next wave stage: **AF7 AF-FREEZE**.
