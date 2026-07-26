@@ -38,4 +38,5 @@ npm run nano:z:ask -- --wrap --question "…"
 - Judge = frontier chat model (not ≤5M self-grade).  
 - **Known-ask product** = **H-ZWRAP** LOOKUP; **H-ZERR** = story-safe CE only.  
 - Forbidden: STREAM / KVCACHE-Q / GENCACHE / GPFB K=2 / MIXD retrain.  
-- Live checklist: `.local/wave-z/SESSION.md` (archive of HITL block).
+- Live checklist: `.local/wave-z/SESSION.md` (archive of HITL block).  
+- Lab freeze: [lab-freeze.md](lab-freeze.md) (`npm run nano:lab-freeze`).

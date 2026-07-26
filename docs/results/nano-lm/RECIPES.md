@@ -34,4 +34,4 @@
 
 **DEPL-Y:** speed@128→PACK/QT; code@128→QPFB2+BEAMKV/TCACHE/SCORERAM; long→ROLL/SUMCACHE/GPFB4-LONG; HITL→H-ZWRAP; CE→H-ZERR≠chat; **REJECT** STREAM / KVCACHE-Q / GENCACHE / GPFB-K=2 / ood_long PACK / MIXD.  
 Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.md](wave-x-summary.md) → [`archive/`](archive/).  
-**Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md). **Wave Z COMPLETE:** [wave-z-hitl.md](wave-z-hitl.md) — PFB ≠ interactive LM; wrap + error-bank.
+**Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md). **Wave Z COMPLETE:** [wave-z-hitl.md](wave-z-hitl.md) — PFB ≠ interactive LM; wrap + error-bank. **NO-REOPEN:** [lab-freeze.md](lab-freeze.md).
