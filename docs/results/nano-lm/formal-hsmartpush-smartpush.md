@@ -66,4 +66,4 @@ npm run nano:test && npm run verify
 - Trials: `AI-SMARTPUSH-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_smartpush.py`
 
-Next: **AI4 H-FASTPUSH**.
+Next: **AI4 H-FASTPUSH** (**DONE — PROMOTE** — [formal-hfastpush-fastpush.md](formal-hfastpush-fastpush.md)). Next: **AI5 H-APPPUSH**.

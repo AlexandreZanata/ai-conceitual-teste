@@ -61,4 +61,4 @@ Contract: `nano_lm/tests/test_ai_session.py`.
 - Default ship claim until AI6 still **AF packaged stack**.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AJ · PROMOTE LOOKUP-only as generative IQ.
 
-Next: **AI1b H-CAPRENEG** (**DONE — HOLD** — [formal-hcapreneg-capreneg.md](formal-hcapreneg-capreneg.md)). **AI2 H-CTXPUSH** (**DONE — PROMOTE** — [formal-hctxpush-ctxpush.md](formal-hctxpush-ctxpush.md)). **AI3 H-SMARTPUSH** (**DONE — HOLD** — [formal-hsmartpush-smartpush.md](formal-hsmartpush-smartpush.md)). Next: **AI4 H-FASTPUSH**.
+Next: **AI1b–AI3** done (see formals). **AI4 H-FASTPUSH** (**DONE — PROMOTE** — [formal-hfastpush-fastpush.md](formal-hfastpush-fastpush.md)). Next: **AI5 H-APPPUSH**.
