@@ -76,4 +76,4 @@ npm run nano:test && npm run verify
 - Trials: `AK-SMARTMORE-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_smartmore.py`
 
-Next: **AK4 H-FASTMORE**.
+Next: **AK4 H-FASTMORE** — **DONE PROMOTE** → [formal-hfastmore-fastmore.md](formal-hfastmore-fastmore.md).
