@@ -45,7 +45,7 @@ npm run nano:test && npm run verify
 - Wave X+ **COMPLETE** — PFB family **PROMOTE**; QI/ABS **KILL** → [`wave-x-summary.md`](docs/results/nano-lm/wave-x-summary.md).  
 - **Wave Y COMPLETE** — GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**.  
 - **Wave Z COMPLETE** — [wave-z-hitl.md](docs/results/nano-lm/wave-z-hitl.md) · **LAB-FREEZE** [lab-freeze.md](docs/results/nano-lm/lab-freeze.md).  
-- **Wave AA COMPLETE** — AA0 [WRAPBANK PROMOTE](docs/results/nano-lm/formal-hwrapbank-wrapbank.md); AA1 [PARA HOLD](docs/results/nano-lm/formal-hpara-para.md); AA3 [ZPREF KILL](docs/results/nano-lm/formal-hzpref-zpref.md); AA4 [DEPL-DOC PROMOTE](docs/results/nano-lm/formal-hdepldoc-depl-doc.md).
+- **Wave AA COMPLETE** — AA0 [WRAPBANK PROMOTE](docs/results/nano-lm/formal-hwrapbank-wrapbank.md); AA1 [PARA HOLD](docs/results/nano-lm/formal-hpara-para.md); AA2 [SERVEALIGN HOLD](docs/results/nano-lm/formal-hservealign-servealign.md); AA3 [ZPREF KILL](docs/results/nano-lm/formal-hzpref-zpref.md); AA4 [DEPL-DOC PROMOTE](docs/results/nano-lm/formal-hdepldoc-depl-doc.md).
 
 ---
 

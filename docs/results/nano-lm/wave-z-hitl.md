@@ -47,6 +47,7 @@ npm run nano:wrapbank
 npm run nano:para
 npm run nano:zpref
 npm run nano:depl-doc
+npm run nano:servealign
 npm run nano:z:z4 -- --arms A,B,C
 npm run nano:z:depl-y
 npm run nano:z:z6
@@ -60,6 +61,7 @@ QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZERR-a
 
 AA0 **H-WRAPBANK PROMOTE** — [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md).  
 AA1 **H-PARA HOLD** — [formal-hpara-para.md](formal-hpara-para.md).  
+AA2 **H-SERVEALIGN HOLD** — mean 3.4 beats Z1; not pass bar — [formal-hservealign-servealign.md](formal-hservealign-servealign.md).  
 AA3 **H-ZPREF KILL** — [formal-hzpref-zpref.md](formal-hzpref-zpref.md).  
 AA4 **H-DEPL-DOC PROMOTE** — [formal-hdepldoc-depl-doc.md](formal-hdepldoc-depl-doc.md).  
-**Wave AA COMPLETE** (SERVEALIGN optional only).
+**Wave AA COMPLETE**.
