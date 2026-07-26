@@ -63,6 +63,7 @@
 | **H-CTXPLUS** | Multi-slice ROLL/SUMCACHE on held-out docs; AC1 **PROMOTE** (L_eff 20523>AB; usable 10/10) |
 | **H-SMARTPLUS** | Hard-paraphrase SEMWRAP+ASKSMART; AC2 **PROMOTE** (mean 9.0; false-hit 0) |
 | **H-FASTPLUS** | ASKFAST+cache on held-out asks; AC3 **PROMOTE** (e2e≪AB; wall_drop 100%) |
+| **H-APPPLUS** | Packaged apps + **app-howto**; AC4 **PROMOTE** (3/3 apps; mean 8.6) |
 | **H-ASKSMART** | Anti-period QPFB2+BEAMKV + constrained SEMWRAP FIX; AB4 **PROMOTE** (mean 8.7 > SERVEALIGN 3.4) |
 | **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **AB-HITL-10** | Final Wave AB pack verify on declared stack; AB6 **PROMOTE** (mean 9.0 · errors 0/10) |

@@ -1,16 +1,16 @@
 # app-known — scoped nano app
 
-> Wave AB5 **H-REALAPP** · Spine: `H-ZWRAP → H-SEMWRAP → H-ASKFAST`
-> Claim: scoped known / near-known lab ask via SEMWRAP — not open chat LM
+> Wave AC4 **H-APPPLUS** · Spine: `H-ZWRAP → H-SEMWRAP → H-ASKFAST → H-FASTPLUS`
+> Claim: scoped known / near-known held-out ask via SEMWRAP — not open chat LM
 
 ## Job
 
-Surface `known-ask` — runnable path for lab HITL asks.
+Surface `known-ask` — runnable path for held-out HITL asks.
 
 ## Run
 
 ```bash
-npm run nano:realapp -- --app app-known
+npm run nano:appplus -- --app app-known
 ```
 
 ## Honesty

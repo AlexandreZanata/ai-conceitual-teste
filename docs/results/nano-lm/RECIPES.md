@@ -49,6 +49,7 @@
 | Wave AC1 CTXPLUS | [formal-hctxplus-ctxplus.md](formal-hctxplus-ctxplus.md) **PROMOTE** (`npm run nano:ctxplus`) — L_eff 20523>AB; usable 10/10 |
 | Wave AC2 SMARTPLUS | [formal-hsmartplus-smartplus.md](formal-hsmartplus-smartplus.md) **PROMOTE** (`npm run nano:smartplus`) — hard paraphrase; false-hit 0 |
 | Wave AC3 FASTPLUS | [formal-hfastplus-fastplus.md](formal-hfastplus-fastplus.md) **PROMOTE** (`npm run nano:fastplus`) — e2e≪AB; wall_drop 100% |
+| Wave AC4 APPPLUS | [formal-happplus-appplus.md](formal-happplus-appplus.md) **PROMOTE** (`npm run nano:appplus`) — app-howto + known/longdoc green |
 
 ## Policy
 
@@ -57,4 +58,4 @@ Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.m
 **Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md). **Wave Z COMPLETE:** [wave-z-hitl.md](wave-z-hitl.md) — PFB ≠ interactive LM; wrap + error-bank. **NO-REOPEN:** [lab-freeze.md](lab-freeze.md).  
 **Wave AA COMPLETE:** AA0 [H-WRAPBANK PROMOTE](formal-hwrapbank-wrapbank.md); AA1 [H-PARA HOLD](formal-hpara-para.md); AA2 [H-SERVEALIGN HOLD](formal-hservealign-servealign.md); AA3 [H-ZPREF KILL](formal-hzpref-zpref.md); AA4 [H-DEPL-DOC PROMOTE](formal-hdepldoc-depl-doc.md); AA5 [AA-REPORT PROMOTE](wave-aa-summary.md); AA6 [AA-FREEZE PROMOTE](aa-freeze.md).  
 **Wave AB COMPLETE + FROZEN:** AB0–AB7 **PROMOTE** · AB-FREEZE — [wave-ab-summary.md](wave-ab-summary.md) · [ab-freeze.md](ab-freeze.md).  
-**Wave AC OPEN:** AC0 [SESSION](wave-ac-session.md) · AC1 [H-CTXPLUS](formal-hctxplus-ctxplus.md) · AC2 [H-SMARTPLUS](formal-hsmartplus-smartplus.md) · AC3 [H-FASTPLUS](formal-hfastplus-fastplus.md) — held-out ASK→EVAL→FIX (§8.5 · §12).
+**Wave AC OPEN:** AC0 [SESSION](wave-ac-session.md) · AC1 [H-CTXPLUS](formal-hctxplus-ctxplus.md) · AC2 [H-SMARTPLUS](formal-hsmartplus-smartplus.md) · AC3 [H-FASTPLUS](formal-hfastplus-fastplus.md) · AC4 [H-APPPLUS](formal-happplus-appplus.md) — held-out ASK→EVAL→FIX (§8.5 · §12).
