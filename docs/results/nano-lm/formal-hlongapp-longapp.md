@@ -40,4 +40,4 @@ npm run nano:longapp
 - Trials: `results/nano-lm/wave-ab/trials/AB-LONGAPP-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_longapp.py`
 
-Next: **AB4 H-ASKSMART**.
+Next: **AB5 H-REALAPP**.

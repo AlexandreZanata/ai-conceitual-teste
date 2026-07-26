@@ -7,7 +7,7 @@
 ## Decision
 
 **PROMOTE** — Freeze **10 real HITL questions** (source_id + app_id + gold) for every AB model/stack.  
-**Status: COMPLETE** (AB0). **AB1–AB3 PROMOTE** — SEMWRAP · ASKFAST · LONGAPP ([formal-hlongapp-longapp.md](formal-hlongapp-longapp.md)). Next: **AB4 H-ASKSMART**.
+**Status: COMPLETE** (AB0). **AB1–AB4 PROMOTE** — SEMWRAP · ASKFAST · LONGAPP · ASKSMART ([formal-hasksmart-asksmart.md](formal-hasksmart-asksmart.md)). Next: **AB5 H-REALAPP**.
 
 ## Mix (§11.5)
 

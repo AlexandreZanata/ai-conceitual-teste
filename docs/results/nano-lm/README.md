@@ -14,6 +14,7 @@
 | [formal-hsemwrap-semwrap.md](formal-hsemwrap-semwrap.md) | Wave AB1 H-SEMWRAP **PROMOTE** (fuzzy near-known) |
 | [formal-haskfast-askfast.md](formal-haskfast-askfast.md) | Wave AB2 H-ASKFAST **PROMOTE** (wall↓ compose) |
 | [formal-hlongapp-longapp.md](formal-hlongapp-longapp.md) | Wave AB3 H-LONGAPP **PROMOTE** (L_eff≫W curated) |
+| [formal-hasksmart-asksmart.md](formal-hasksmart-asksmart.md) | Wave AB4 H-ASKSMART **PROMOTE** (>SERVEALIGN 3.4) |
 | [paper-lab-wave-aa.md](paper-lab-wave-aa.md) | Paper-lab one-pager for Wave AA |
 | [wave-z-hitl.md](wave-z-hitl.md) | **Z6 public HITL report** (PFB ≠ interactive LM; H-ZWRAP) |
 | [lab-freeze.md](lab-freeze.md) | §8 #6 NO-REOPEN lab freeze |
@@ -36,4 +37,4 @@
 | Wave Y cache / long | [beamkv](formal-hbeamkv-beamkv.md) · [tcache](formal-htcache-tcache.md) · [scoreram](formal-hscoreram-scoreram.md) · [pfb256](formal-hpfb256-pfb256.md) · [roll](formal-hroll-roll.md) · [sumcache](formal-hsumcache-sumcache.md) · [gpfb4long](formal-hgpfb4long-gpfb4long.md) |
 | Train | [TIPD](formal-htipd-vs-hstag.md) · [tpack](formal-htpack-vs-hstag.md) · [amort](formal-hamort-vs-hstag.md) |
 
-**Wave Y COMPLETE** — [wave-y-summary.md](wave-y-summary.md). **Wave Z COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md). **Wave AA COMPLETE + FROZEN** — [wave-aa-summary.md](wave-aa-summary.md) · [aa-freeze.md](aa-freeze.md). **Wave AB OPEN** — AB0–AB3 [formal-hlongapp-longapp.md](formal-hlongapp-longapp.md). **Lab freeze** — [lab-freeze.md](lab-freeze.md).
+**Wave Y COMPLETE** — [wave-y-summary.md](wave-y-summary.md). **Wave Z COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md). **Wave AA COMPLETE + FROZEN** — [wave-aa-summary.md](wave-aa-summary.md) · [aa-freeze.md](aa-freeze.md). **Wave AB OPEN** — AB0–AB4 [formal-hasksmart-asksmart.md](formal-hasksmart-asksmart.md). **Lab freeze** — [lab-freeze.md](lab-freeze.md).

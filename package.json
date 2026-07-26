@@ -267,6 +267,8 @@
     "nano:semwrap": "nano_lm/.venv/bin/python nano_lm/src/run_semwrap.py",
     "nano:askfast": "nano_lm/.venv/bin/python nano_lm/src/run_askfast.py",
     "nano:longapp": "nano_lm/.venv/bin/python nano_lm/src/run_longapp.py",
+    "nano:asksmart": "nano_lm/.venv/bin/python nano_lm/src/run_asksmart.py",
+    "nano:realapp": "nano_lm/.venv/bin/python nano_lm/src/run_realapp.py",
     "nano:zpref": "nano_lm/.venv/bin/python nano_lm/src/run_zpref.py",
     "nano:depl-doc": "nano_lm/.venv/bin/python nano_lm/src/run_depl_doc.py",
     "nano:servealign": "nano_lm/.venv/bin/python nano_lm/src/run_servealign.py",
