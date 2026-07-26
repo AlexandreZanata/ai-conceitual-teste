@@ -79,4 +79,4 @@ npm run nano:test && npm run verify
 - Trials: `AM-FASTNEXT-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_fastnext.py`
 
-Next: **AM5 H-APPNEXT** — real apps + DEPL dual-arm.
+Next: **AM5 H-APPNEXT** — **DONE PROMOTE** → [formal-happnext-appnext.md](formal-happnext-appnext.md).
