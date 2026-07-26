@@ -61,4 +61,4 @@ Contract: `nano_lm/tests/test_ah_session.py`.
 - Default ship claim until AH6 still **AF packaged stack**.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AI · PROMOTE LOOKUP-only as generative IQ.
 
-Next: **AH1–AH6 done** (see formals + [wave-ah-hitl.md](wave-ah-hitl.md)). **AH7 AH-REPORT** (**DONE — PROMOTE** — [wave-ah-summary.md](wave-ah-summary.md) · [paper-lab-wave-ah.md](paper-lab-wave-ah.md)). Next: **AH8 AH-FREEZE**.
+Next: **AH1–AH7 done**. **AH8 AH-FREEZE** (**DONE — PROMOTE** — [ah-freeze.md](ah-freeze.md) · [formal-hahfreeze-ah-freeze.md](formal-hahfreeze-ah-freeze.md)). No Wave AI invent without reopen.

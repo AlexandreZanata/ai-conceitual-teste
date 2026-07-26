@@ -65,4 +65,4 @@ npm run nano:test && npm run verify
 - Trials: `AH-FINAL-LOOKUP-HITL-01…10` · `AH-FINAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ah_hitl.py`
 
-Next: **AH7 AH-REPORT** → [wave-ah-summary.md](wave-ah-summary.md) **PROMOTE**. Next: **AH8 AH-FREEZE**.
+Next: **AH7 AH-REPORT** → [wave-ah-summary.md](wave-ah-summary.md) **PROMOTE**. **AH8 AH-FREEZE** → [ah-freeze.md](ah-freeze.md) **PROMOTE**.
