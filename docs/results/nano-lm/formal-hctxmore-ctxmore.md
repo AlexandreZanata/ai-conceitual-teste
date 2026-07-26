@@ -70,4 +70,4 @@ npm run nano:test && npm run verify
 - Trials: `AK-CTXMORE-LOOKUP-HITL-01…10` · `AK-CTXMORE-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ctxmore.py`
 
-Next: **AK3 H-SMARTMORE** — smarter cite+answer; kill SEMWRAP FPs.
+Next: **AK3 H-SMARTMORE** — **DONE PROMOTE** → [formal-hsmartmore-smartmore.md](formal-hsmartmore-smartmore.md).
