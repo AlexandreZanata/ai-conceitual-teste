@@ -62,4 +62,4 @@ npm run nano:test && npm run verify
 - Trials: `AK-APPMORE-{KNOWN,HOWTO,LONGDOC}-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_appmore.py`
 
-Next: **AK6 AK-HITL-10**.
+Next: **AK6 AK-HITL-10** — **DONE PROMOTE** → [wave-ak-hitl.md](wave-ak-hitl.md).
