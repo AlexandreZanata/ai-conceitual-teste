@@ -1,0 +1,159 @@
+"""Contract: Wave AL2 H-CTXFRESH — nona-doc dual-arm (pesquisa §3)."""
+
+from __future__ import annotations
+
+from ctxfresh_ops import (
+    CTXFRESH_COMPANIONS,
+    CTXFRESH_ID,
+    CTXFRESH_N,
+    CTXMORE_MEAN_LEFF,
+    MIN_GEN_USABLE,
+    MIN_LOOKUP_USABLE,
+    MIN_SOURCES,
+    TOP_K_SLICES_FRESH,
+    companions_for,
+    ctxfresh_doc_meta,
+    ctxfresh_stats,
+    decide_ctxfresh,
+    score_ctxfresh_gen,
+    score_ctxfresh_lookup,
+)
+from ctxmore_ops import TOP_K_SLICES_MORE
+
+
+def test_given_contract_when_constants_then_match_gate() -> None:
+    # GIVEN/WHEN/THEN: pesquisa §3 AL2 H-CTXFRESH
+    assert CTXFRESH_ID == "H-CTXFRESH"
+    assert CTXFRESH_N == 10
+    assert MIN_LOOKUP_USABLE == 7
+    assert MIN_GEN_USABLE == 5
+    assert MIN_SOURCES == 9
+    assert TOP_K_SLICES_FRESH == 19
+    assert TOP_K_SLICES_FRESH > TOP_K_SLICES_MORE
+    assert CTXMORE_MEAN_LEFF == 188984.0
+
+
+def test_given_al0_sources_when_pair_then_all_mapped_distinct() -> None:
+    from al_session_ops import AL0_PACK
+
+    for item in AL0_PACK:
+        primary = item["source_id"]
+        comps = companions_for(primary)
+        assert len(comps) == 8
+        assert len({primary, *comps}) == 9
+        assert CTXFRESH_COMPANIONS[primary] == comps
+
+
+def test_given_nona_docs_when_meta_then_multi_source_and_deeper_k() -> None:
+    docs = [list(range(i * 6000, i * 6000 + 5000)) for i in range(9)]
+    q = [10, 20, 400, 800]
+    sources = [f"s{i}" for i in range(9)]
+    meta = ctxfresh_doc_meta(docs, q, source_ids=sources)
+    assert meta["n_sources"] == 9
+    assert meta["k_slices"] == 19
+    assert meta["deeper_than_ctxmore_k"] is True
+    assert meta["l_eff"] >= 0
+    assert meta["multi_source"] is True
+
+
+def test_given_lookup_true_hit_when_score_then_usable() -> None:
+    meta = {
+        "l_eff_ok": True,
+        "ratio_ok": True,
+        "ctx_bounded": True,
+        "n_sources": 9,
+        "n_slices": 30,
+        "l_eff": 250000,
+        "k_slices": 19,
+    }
+    payload = {"mode": "WRAP_LOOKUP", "wall_ms": 0.0, "n_new": 0}
+    score, err, notes, usable = score_ctxfresh_lookup(
+        mode="WRAP_LOOKUP",
+        completion="gold",
+        expected_gold="gold",
+        lookup_kind="TRUE_HIT",
+        meta=meta,
+        payload=payload,
+    )
+    assert score >= 8.0 and err is False and usable is True
+    assert any("LOOKUP product path" in n for n in notes)
+
+
+def test_given_gen_telemetry_when_ctx_ok_then_usable() -> None:
+    meta = {
+        "l_eff_ok": True,
+        "ratio_ok": True,
+        "ctx_bounded": True,
+        "n_sources": 9,
+        "n_slices": 30,
+        "l_eff": 250000,
+        "k_slices": 19,
+    }
+    payload = {"mode": "DECODE", "wall_ms": 40.0, "n_new": 16}
+    _score, _err, notes, usable = score_ctxfresh_gen(
+        completion="........",
+        expected_gold="anything",
+        meta=meta,
+        payload=payload,
+    )
+    assert usable is True
+    assert any("long-ctx" in n for n in notes)
+
+
+def test_given_ready_stats_when_decide_then_promote() -> None:
+    stats = ctxfresh_stats(
+        lookup_scores=[9.0] * 10,
+        lookup_errors=[False] * 10,
+        lookup_usables=[True] * 10,
+        gen_scores=[1.0] * 10,
+        gen_errors=[True] * 10,
+        gen_usables=[True] * 10,
+        n_true_hit=10,
+        n_false_hit=0,
+        mean_l_eff=250000.0,
+        mean_active=352.0,
+        mean_slices=150.0,
+        mean_sources=9.0,
+        n_fix=0,
+    )
+    assert stats["pass_leff_up"] is True
+    assert decide_ctxfresh(stats) == "PROMOTE"
+
+
+def test_given_low_leff_when_decide_then_hold() -> None:
+    stats = ctxfresh_stats(
+        lookup_scores=[9.0] * 10,
+        lookup_errors=[False] * 10,
+        lookup_usables=[True] * 10,
+        gen_scores=[1.0] * 10,
+        gen_errors=[True] * 10,
+        gen_usables=[True] * 10,
+        n_true_hit=10,
+        n_false_hit=0,
+        mean_l_eff=100000.0,
+        mean_active=352.0,
+        mean_slices=150.0,
+        mean_sources=9.0,
+        n_fix=0,
+    )
+    assert stats["pass_leff_up"] is False
+    assert decide_ctxfresh(stats) == "HOLD"
+
+
+def test_given_false_hit_when_decide_then_kill() -> None:
+    stats = ctxfresh_stats(
+        lookup_scores=[9.0] * 10,
+        lookup_errors=[False] * 10,
+        lookup_usables=[True] * 10,
+        gen_scores=[1.0] * 10,
+        gen_errors=[True] * 10,
+        gen_usables=[True] * 10,
+        n_true_hit=9,
+        n_false_hit=1,
+        mean_l_eff=250000.0,
+        mean_active=352.0,
+        mean_slices=150.0,
+        mean_sources=9.0,
+        n_fix=0,
+    )
+    assert decide_ctxfresh(stats) == "KILL"

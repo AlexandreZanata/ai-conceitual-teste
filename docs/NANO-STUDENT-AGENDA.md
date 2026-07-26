@@ -29,7 +29,7 @@ HITL: **H-ZWRAP** (+ **H-WRAPBANK** + **H-SEMWRAP**). Story-CE: **H-ZERR** ≠ c
 | **AI** | **COMPLETE + FROZEN** | [ai-freeze.md](results/nano-lm/ai-freeze.md) · [wave-ai-summary.md](results/nano-lm/wave-ai-summary.md) |
 | **AJ** | **COMPLETE + FROZEN** | AJ0–AJ8 **PROMOTE** · [aj-freeze.md](results/nano-lm/aj-freeze.md) · [wave-aj-summary.md](results/nano-lm/wave-aj-summary.md) · [formal-hajfreeze-aj-freeze.md](results/nano-lm/formal-hajfreeze-aj-freeze.md) |
 | **AK** | **COMPLETE + FROZEN** | AK0…AK7 DONE · AK8 [AK-FREEZE PROMOTE](results/nano-lm/ak-freeze.md) (`npm run nano:ak:freeze`) — ship remains **AF packaged stack**; ≤5M stays; Wave AL reopened via lab-book |
-| **AL** | **OPEN** | AL0 [SESSION PROMOTE](results/nano-lm/wave-al-session.md) · AL1 [H-GENFRESH HOLD](results/nano-lm/formal-hgenfresh-genfresh.md) (`npm run nano:genfresh`) · next **AL2 H-CTXFRESH** — ship remains **AF packaged stack**; ≤5M stays |
+| **AL** | **OPEN** | AL0 [SESSION PROMOTE](results/nano-lm/wave-al-session.md) · AL1 [H-GENFRESH HOLD](results/nano-lm/formal-hgenfresh-genfresh.md) · AL2 [H-CTXFRESH PROMOTE](results/nano-lm/formal-hctxfresh-ctxfresh.md) (`npm run nano:ctxfresh`) · next **AL3 H-SMARTFRESH** — ship remains **AF packaged stack**; ≤5M stays |
 
 Teachers: TinyStories-33M + `bigcode/tiny_starcoder_py` ([TCHR](results/nano-lm/formal-htchr-code-teacher.md)).  
 KILL tooling purged → [`results/nano-lm/archive/`](results/nano-lm/archive/).

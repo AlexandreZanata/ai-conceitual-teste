@@ -386,6 +386,8 @@
     "nano:al-session": "nano_lm/.venv/bin/python nano_lm/src/run_al_session.py",
     "nano:genfresh": "nano_lm/.venv/bin/python nano_lm/src/run_genfresh.py",
     "nano:al:genfresh": "nano_lm/.venv/bin/python nano_lm/src/run_genfresh.py",
+    "nano:ctxfresh": "nano_lm/.venv/bin/python nano_lm/src/run_ctxfresh.py",
+    "nano:al:ctxfresh": "nano_lm/.venv/bin/python nano_lm/src/run_ctxfresh.py",
     "nano:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:aj:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:fastpeak": "nano_lm/.venv/bin/python nano_lm/src/run_fastpeak.py",
