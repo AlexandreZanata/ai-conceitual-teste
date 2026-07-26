@@ -384,6 +384,8 @@
     "nano:ak-freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ak_freeze.py",
     "nano:al:session": "nano_lm/.venv/bin/python nano_lm/src/run_al_session.py",
     "nano:al-session": "nano_lm/.venv/bin/python nano_lm/src/run_al_session.py",
+    "nano:genfresh": "nano_lm/.venv/bin/python nano_lm/src/run_genfresh.py",
+    "nano:al:genfresh": "nano_lm/.venv/bin/python nano_lm/src/run_genfresh.py",
     "nano:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:aj:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:fastpeak": "nano_lm/.venv/bin/python nano_lm/src/run_fastpeak.py",

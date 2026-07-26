@@ -61,4 +61,4 @@ Contract: `nano_lm/tests/test_al_session.py`.
 - Default ship claim until proven otherwise still **AF packaged stack**.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AM · PROMOTE LOOKUP-only as generative IQ.
 
-Next: **AL1 H-GENFRESH** — smarter usable gen under anti-FP (peak ablation / stricter gen label).
+Next: **AL1 H-GENFRESH** — **DONE HOLD** → [formal-hgenfresh-genfresh.md](formal-hgenfresh-genfresh.md). Next: **AL2 H-CTXFRESH**.
