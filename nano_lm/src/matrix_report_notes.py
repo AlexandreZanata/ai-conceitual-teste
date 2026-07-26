@@ -55,6 +55,7 @@ NOTES = [
     "- H-SCORERAM PROMOTE — disk/RAM pack score cache (`formal-hscoreram-scoreram.md`).",
     "- H-PFB256 PROMOTE — PFB2 on prog@256 vs EARLY@256 (`formal-hpfb256-pfb256.md`).",
     "- H-ROLL PROMOTE — rolling W+summary; PFB2/segment (`formal-hroll-roll.md`).",
+    "- H-SUMCACHE PROMOTE — hierarchical summary+tail L_eff≥512 (`formal-hsumcache-sumcache.md`).",
     "- Matrix note: PROG/BTC/MIXD/EFF in wave-w-summary § Kill/promote.",
     "- EvoGen survival archived: `docs/archive/evogen/`.",
     "- Agenda: `docs/NANO-STUDENT-AGENDA.md`.",

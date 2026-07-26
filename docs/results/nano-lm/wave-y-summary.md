@@ -14,6 +14,7 @@
 | **H-SCORERAM** | Disk/RAM pack teacher score cache; warm wall↓; lp unchanged; hit_rate=1.0 | [smoke](hscoreram-scoreram.md) · [formal](formal-hscoreram-scoreram.md) |
 | **H-PFB256** | PFB2 on prog@256 (DOM elongate; not CTX); dual gate vs EARLY@256; wall≈@128 | [smoke](hpfb256-pfb256.md) · [formal](formal-hpfb256-pfb256.md) |
 | **H-ROLL** | Rolling W=128 + S=32 summary; PFB2/segment; L_eff≫W; active≤W+S | [smoke](hroll-roll.md) · [formal](formal-hroll-roll.md) |
+| **H-SUMCACHE** | Hierarchical coarse‖fine‖tail; L_eff≥512; dual gate; wall≤full+slack | [smoke](hsumcache-sumcache.md) · [formal](formal-hsumcache-sumcache.md) |
 
 ## KILL (this wave)
 
@@ -23,7 +24,7 @@
 
 ## Queued
 
-H-SUMCACHE / H-KVCACHE-Q · H-GENCACHE / H-GPFB4-LONG.
+H-KVCACHE-Q · H-GENCACHE / H-GPFB4-LONG.
 
 ## Doctrine reminder
 
