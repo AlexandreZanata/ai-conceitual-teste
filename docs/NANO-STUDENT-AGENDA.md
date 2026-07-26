@@ -23,6 +23,11 @@ HITL: **H-ZWRAP** (+ **H-WRAPBANK** + **H-SEMWRAP**). Story-CE: **H-ZERR** ≠ c
 | **AC** | **COMPLETE + FROZEN** | [ac-freeze.md](results/nano-lm/ac-freeze.md) · [wave-ac-summary.md](results/nano-lm/wave-ac-summary.md) |
 | **AD** | **COMPLETE + FROZEN** | [ad-freeze.md](results/nano-lm/ad-freeze.md) · [wave-ad-summary.md](results/nano-lm/wave-ad-summary.md) |
 | **AE** | **COMPLETE + FROZEN** | [wave-ae-summary.md](results/nano-lm/wave-ae-summary.md) · [ae-freeze.md](results/nano-lm/ae-freeze.md) · [paper-lab-wave-ae.md](results/nano-lm/paper-lab-wave-ae.md) |
+| **AF** | **COMPLETE + FROZEN** | ship claim **AF packaged stack** · [af-freeze.md](results/nano-lm/af-freeze.md) · [wave-af-summary.md](results/nano-lm/wave-af-summary.md) |
+| **AG** | **COMPLETE + FROZEN** | [ag-freeze.md](results/nano-lm/ag-freeze.md) · [wave-ag-summary.md](results/nano-lm/wave-ag-summary.md) |
+| **AH** | **COMPLETE + FROZEN** | [ah-freeze.md](results/nano-lm/ah-freeze.md) · [wave-ah-summary.md](results/nano-lm/wave-ah-summary.md) |
+| **AI** | **COMPLETE + FROZEN** | [ai-freeze.md](results/nano-lm/ai-freeze.md) · [wave-ai-summary.md](results/nano-lm/wave-ai-summary.md) |
+| **AJ** | **COMPLETE + FROZEN** | AJ0–AJ8 **PROMOTE** · [aj-freeze.md](results/nano-lm/aj-freeze.md) · [wave-aj-summary.md](results/nano-lm/wave-aj-summary.md) · [formal-hajfreeze-aj-freeze.md](results/nano-lm/formal-hajfreeze-aj-freeze.md) — no Wave AK invent |
 
 Teachers: TinyStories-33M + `bigcode/tiny_starcoder_py` ([TCHR](results/nano-lm/formal-htchr-code-teacher.md)).  
 KILL tooling purged → [`results/nano-lm/archive/`](results/nano-lm/archive/).

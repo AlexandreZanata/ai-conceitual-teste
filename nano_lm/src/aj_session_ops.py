@@ -32,8 +32,7 @@ AJ0_ID = "AJ0-SESSION"
 AJ0_N = 10
 AJ0_THESIS = (
     "Wave AJ OPEN: freeze 10 held-out HITL asks "
-    "(≠ AB · ≠ AC · ≠ AD · ≠ AE · ≠ AF · ≠ AG · ≠ AH · ≠ AI); "
-    "AJ1–AJ7 PROMOTE; next AJ8 AJ-FREEZE"
+    "(≠ AB · ≠ AC · ≠ AD · ≠ AE · ≠ AF · ≠ AG · ≠ AH · ≠ AI); next AJ1 H-GENPEAK"
 )
 
 AJ0_APP_IDS: frozenset[str] = frozenset(
