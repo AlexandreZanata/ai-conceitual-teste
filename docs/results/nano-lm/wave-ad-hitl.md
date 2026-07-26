@@ -40,4 +40,4 @@ npm run nano:ad:hitl
 - Trials: `AD-FINAL-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_ad_hitl.py`
 
-Next: **AD6 AD-REPORT**.
+Next: **AD6 AD-REPORT** (**DONE** — see [wave-ad-summary.md](wave-ad-summary.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md)). Next wave stage: **AD7 AD-FREEZE**.
