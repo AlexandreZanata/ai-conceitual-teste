@@ -70,4 +70,4 @@ npm run nano:test && npm run verify
 - Trials: `AM-CTXNEXT-LOOKUP-HITL-01…10` · `AM-CTXNEXT-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ctxnext.py`
 
-Next: **AM3 H-SMARTNEXT** — smarter cite+answer; kill SEMWRAP FPs.
+Next: **AM3 H-SMARTNEXT** — **DONE PROMOTE** → [formal-hsmartnext-smartnext.md](formal-hsmartnext-smartnext.md).
