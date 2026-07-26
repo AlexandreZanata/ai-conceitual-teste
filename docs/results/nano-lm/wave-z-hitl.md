@@ -44,6 +44,7 @@ Automated dual-gate / `teacher_lp` wins (Waves X+/Y) **do not** transfer to prod
 ```bash
 npm run nano:z:ask -- --wrap --question "…"
 npm run nano:wrapbank
+npm run nano:para
 npm run nano:z:z4 -- --arms A,B,C
 npm run nano:z:depl-y
 npm run nano:z:z6
@@ -55,4 +56,5 @@ QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZERR-a
 
 ## Wave AA (post-freeze)
 
-AA0 **H-WRAPBANK PROMOTE** — bank 10→20; HITL mean **9.0** — [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md). Next: **H-PARA**.
+AA0 **H-WRAPBANK PROMOTE** — bank 10→20; HITL mean **9.0** — [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md).  
+AA1 **H-PARA HOLD** — paraphrase miss 10/10; false-hit **0**; mean 4.0 — [formal-hpara-para.md](formal-hpara-para.md). Next: **H-ZPREF**.

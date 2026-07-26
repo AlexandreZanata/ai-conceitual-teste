@@ -263,6 +263,7 @@
     "nano:z:z6": "nano_lm/.venv/bin/python nano_lm/src/run_z6_report.py",
     "nano:lab-freeze": "nano_lm/.venv/bin/python nano_lm/src/run_lab_freeze.py",
     "nano:wrapbank": "nano_lm/.venv/bin/python nano_lm/src/run_wrapbank.py",
+    "nano:para": "nano_lm/.venv/bin/python nano_lm/src/run_para.py",
     "nano:btc": "nano_lm/.venv/bin/python nano_lm/src/run_btc_smoke.py",
     "nano:btc:report": "nano_lm/.venv/bin/python nano_lm/src/write_hbtc_report.py",
     "nano:formal:hbtc": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hbtc.py",

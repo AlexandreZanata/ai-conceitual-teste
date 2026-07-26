@@ -51,6 +51,7 @@
 | **H-ABS-GPFB4** | GENC∘PFB K=4 (smoke+formal **PROMOTE**; formal-hgpfb4-gpfb4.md) |
 | **H-ZWRAP** | Known-ask HITL via `--wrap` **WRAP_LOOKUP** over error_bank golds (not open chat) |
 | **H-WRAPBANK** | Expand wrap/error_bank golds + HITL×10; no weight update (Wave AA0 **PROMOTE**) |
+| **H-PARA** | Paraphrase stress on wrap; no false-hit; HOLD documents exact-match brittleness (AA1) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

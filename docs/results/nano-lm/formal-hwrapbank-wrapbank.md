@@ -52,4 +52,4 @@ npm run nano:z:ask -- --wrap --question "…"
 - Trials: `results/nano-lm/wave-aa/trials/AA0-01.json` … `AA0-10.json`
 - Contract: `nano_lm/tests/test_wrapbank.py`
 
-Next allowed: **H-PARA** (AA1) or **H-ZPREF** if bank≥20 after this PROMOTE.
+Next allowed: **H-PARA** (AA1) — **DONE HOLD** → [formal-hpara-para.md](formal-hpara-para.md). Then **H-ZPREF** if bank≥20.
