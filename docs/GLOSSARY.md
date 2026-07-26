@@ -53,6 +53,7 @@
 | **H-WRAPBANK** | Expand wrap/error_bank golds + HITL×10; no weight update (Wave AA0 **PROMOTE**) |
 | **H-PARA** | Paraphrase stress on wrap; no false-hit; HOLD documents exact-match brittleness (AA1) |
 | **H-ZPREF** | Prefer gold≻raw (DPO-lite); AA3 **KILL** — story < parent−ε (wrap still ok) |
+| **H-DEPL-DOC** | One-pager sync to DEPL-Y + Wave AA outcomes (AA4 **PROMOTE**) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

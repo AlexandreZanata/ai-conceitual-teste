@@ -46,6 +46,7 @@ npm run nano:z:ask -- --wrap --question "…"
 npm run nano:wrapbank
 npm run nano:para
 npm run nano:zpref
+npm run nano:depl-doc
 npm run nano:z:z4 -- --arms A,B,C
 npm run nano:z:depl-y
 npm run nano:z:z6
@@ -59,4 +60,6 @@ QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZERR-a
 
 AA0 **H-WRAPBANK PROMOTE** — [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md).  
 AA1 **H-PARA HOLD** — [formal-hpara-para.md](formal-hpara-para.md).  
-AA3 **H-ZPREF KILL** — story −15.41 < parent−ε; wrap verify ok — [formal-hzpref-zpref.md](formal-hzpref-zpref.md). Next: **H-DEPL-DOC**.
+AA3 **H-ZPREF KILL** — [formal-hzpref-zpref.md](formal-hzpref-zpref.md).  
+AA4 **H-DEPL-DOC PROMOTE** — [formal-hdepldoc-depl-doc.md](formal-hdepldoc-depl-doc.md).  
+**Wave AA COMPLETE** (SERVEALIGN optional only).

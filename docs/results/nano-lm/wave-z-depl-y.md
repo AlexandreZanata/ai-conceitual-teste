@@ -15,7 +15,7 @@
 | Code-smart @128 | **H-ABS-QPFB2** + **BEAMKV / TCACHE / SCORERAM** | GPFB K=2 · STREAM |
 | Code-smart @btc | **H-ABS-BPFB** | — |
 | Long ctx (L>128) | **H-ROLL / H-SUMCACHE / H-GPFB4-LONG** (+ **H-PFB256**) | STREAM · KVCACHE-Q · GENCACHE · naive CTX |
-| Known-ask HITL | **`--wrap` LOOKUP** (`champion-wrap-v0`) — **H-ZWRAP** | open chat LM |
+| Known-ask HITL | **`--wrap` LOOKUP** (`champion-wrap-v0`) — **H-ZWRAP** + **H-WRAPBANK** | open chat LM |
 | Story-safe CE | **H-ZERR** (`zerr-qpfb2-v0`) | ZERR-as-chat |
 | Train steps | **H-TPACK** + **H-AMORT** | MIXD |
 | Quality@wall | **H-QPACK** in-dist only | QPACK OOD |
@@ -44,4 +44,5 @@ Wrap smoke: Z1-01 question → `WRAP_LOOKUP` with `def add` (product path).
 Artifact: `results/nano-lm/wave-z/depl_y_freeze.json` (gitignored).  
 Contract: `nano_lm/tests/test_depl_y.py`.
 
-Next: **Z6 REPORT** — **DONE** → [`wave-z-hitl.md`](wave-z-hitl.md). Wave Z **COMPLETE**.
+Next: **Z6 REPORT** — **DONE** → [`wave-z-hitl.md`](wave-z-hitl.md). Wave Z **COMPLETE**.  
+Wave AA doc sync: [formal-hdepldoc-depl-doc.md](formal-hdepldoc-depl-doc.md) (**H-DEPL-DOC**).

@@ -1,8 +1,8 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Z COMPLETE** · WRAPBANK **PROMOTE** · PARA **HOLD** · ZPREF **KILL**).  
-> Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md) · HITL: [wave-z-hitl.md](wave-z-hitl.md) · WRAPBANK: [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md) · PARA: [formal-hpara-para.md](formal-hpara-para.md) · ZPREF: [formal-hzpref-zpref.md](formal-hzpref-zpref.md).
+> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Z COMPLETE** · **Wave AA COMPLETE**).  
+> Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md) · HITL: [wave-z-hitl.md](wave-z-hitl.md) · WRAPBANK: [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md) · PARA: [formal-hpara-para.md](formal-hpara-para.md) · ZPREF: [formal-hzpref-zpref.md](formal-hzpref-zpref.md) · DEPL-DOC: [formal-hdepldoc-depl-doc.md](formal-hdepldoc-depl-doc.md).
 
 ## Official tips
 
@@ -57,6 +57,7 @@ npm run nano:z:export && npm run nano:z:ask -- --wrap --question "…"
 npm run nano:wrapbank
 npm run nano:para
 npm run nano:zpref
+npm run nano:depl-doc
 npm run nano:z:z4 -- --arms A,B,C
 npm run nano:z:depl-y
 npm run nano:z:z6
@@ -70,7 +71,7 @@ npm run nano:genc && npm run nano:formal:hgenc
 
 | Goal | Use | Never claim |
 |------|-----|-------------|
-| Known-ask HITL demo | **`--wrap` LOOKUP** (`champion-wrap-v0`) — **H-ZWRAP** | Open generative chat LM |
+| Known-ask HITL demo | **`--wrap` LOOKUP** (`champion-wrap-v0`) — **H-ZWRAP** + **H-WRAPBANK** | Open generative chat LM |
 | Story-safe CE ckpt | **H-ZERR** (`zerr-qpfb2-v0`) | ZERR fixes interactive Q&A (Z4 arm C FAIL) |
 
 Evidence: [wave-z-hitl.md](wave-z-hitl.md) · [wave-z-hitl-z4.md](wave-z-hitl-z4.md) · [wave-z-depl-y.md](wave-z-depl-y.md).
@@ -81,6 +82,6 @@ Wave W **COMPLETE** — [wave-w-summary.md](wave-w-summary.md) (PROG/BTC/EFF **P
 Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PROMOTE**; RAG/CTX/Q*/… **KILL** → [`archive/`](archive/)).  
 **Wave Y COMPLETE** — [wave-y-summary.md](wave-y-summary.md) (GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**).  
 **Wave Z COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md) (PFB ≠ interactive LM; **H-ZWRAP** + error-bank) · [wave-z-summary.md](wave-z-summary.md) · [paper-lab-wave-z.md](paper-lab-wave-z.md) · [lab-freeze.md](lab-freeze.md).  
-**Wave AA** — AA0 **H-WRAPBANK PROMOTE** — [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md); AA1 **H-PARA HOLD** — [formal-hpara-para.md](formal-hpara-para.md); AA3 **H-ZPREF KILL** — [formal-hzpref-zpref.md](formal-hzpref-zpref.md); next **H-DEPL-DOC**.
+**Wave AA COMPLETE** — AA0 **H-WRAPBANK PROMOTE** · AA1 **H-PARA HOLD** · AA3 **H-ZPREF KILL** · AA4 **H-DEPL-DOC PROMOTE** — [wrapbank](formal-hwrapbank-wrapbank.md) · [para](formal-hpara-para.md) · [zpref](formal-hzpref-zpref.md) · [depl-doc](formal-hdepldoc-depl-doc.md).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

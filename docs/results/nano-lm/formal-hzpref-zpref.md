@@ -43,4 +43,4 @@ npm run nano:z:ask -- --wrap --root results/nano-lm/wave-aa/models/zpref --quest
 - Ckpt (KILL evidence): `results/nano-lm/wave-aa/models/zpref/`
 - Contract: `nano_lm/tests/test_zpref.py`
 
-Next allowed: **H-DEPL-DOC** (AA4) or **H-SERVEALIGN** only if open decode is explicitly desired.
+Next allowed: **H-DEPL-DOC** (AA4) — **DONE PROMOTE** → [formal-hdepldoc-depl-doc.md](formal-hdepldoc-depl-doc.md).

@@ -265,6 +265,7 @@
     "nano:wrapbank": "nano_lm/.venv/bin/python nano_lm/src/run_wrapbank.py",
     "nano:para": "nano_lm/.venv/bin/python nano_lm/src/run_para.py",
     "nano:zpref": "nano_lm/.venv/bin/python nano_lm/src/run_zpref.py",
+    "nano:depl-doc": "nano_lm/.venv/bin/python nano_lm/src/run_depl_doc.py",
     "nano:btc": "nano_lm/.venv/bin/python nano_lm/src/run_btc_smoke.py",
     "nano:btc:report": "nano_lm/.venv/bin/python nano_lm/src/write_hbtc_report.py",
     "nano:formal:hbtc": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hbtc.py",

@@ -23,7 +23,7 @@ DEPL_Y_ROUTES: dict[str, str] = {
     "code_128": "H-ABS-QPFB2 + H-BEAMKV / H-TCACHE / H-SCORERAM",
     "code_btc": "H-ABS-BPFB",
     "long_ctx": "H-ROLL / H-SUMCACHE / H-GPFB4-LONG (+ H-PFB256)",
-    "hitl_known": "--wrap LOOKUP (champion-wrap-v0) H-ZWRAP",
+    "hitl_known": "--wrap LOOKUP (champion-wrap-v0) H-ZWRAP + H-WRAPBANK",
     "story_ce": "H-ZERR (zerr-qpfb2-v0) story-safe CE only",
     "train": "H-TPACK + H-AMORT",
     "quality_in_dist": "H-QPACK (in-dist only)",
