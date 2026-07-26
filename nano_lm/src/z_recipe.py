@@ -11,8 +11,10 @@ from qt_ops import QT_BITS
 __all__ = [
     "RECIPE_ID",
     "ZERR_RECIPE_ID",
+    "ZPREF_RECIPE_ID",
     "FAMILY",
     "ZERR_FAMILY",
+    "ZPREF_FAMILY",
     "FORBIDDEN",
     "REQUIRED_KEYS",
     "champion_recipe",
@@ -21,8 +23,10 @@ __all__ = [
 
 RECIPE_ID = "champion-qpfb2-v0"
 ZERR_RECIPE_ID = "zerr-qpfb2-v0"
+ZPREF_RECIPE_ID = "zpref-qpfb2-v0"
 FAMILY = "H-ABS-QPFB2"
 ZERR_FAMILY = "H-ZERR"
+ZPREF_FAMILY = "H-ZPREF"
 FORBIDDEN = ("STREAM", "KVCACHE-Q", "GENCACHE", "GPFB_K2", "MIXD")
 REQUIRED_KEYS = (
     "recipe_id",
@@ -37,6 +41,14 @@ REQUIRED_KEYS = (
     "tokenizer_id",
     "forbidden",
 )
+
+_ALLOWED_IDS = (RECIPE_ID, ZERR_RECIPE_ID, ZPREF_RECIPE_ID)
+_ALLOWED_FAMS = (FAMILY, ZERR_FAMILY, ZPREF_FAMILY)
+_ID_FAMILY = {
+    RECIPE_ID: FAMILY,
+    ZERR_RECIPE_ID: ZERR_FAMILY,
+    ZPREF_RECIPE_ID: ZPREF_FAMILY,
+}
 
 
 def champion_recipe(*, seed: int = 0) -> dict[str, Any]:
@@ -84,16 +96,15 @@ def _field_errors(recipe: Mapping[str, Any]) -> list[str]:
     errs: list[str] = []
     rid = str(recipe["recipe_id"])
     fam = str(recipe["family"])
-    ok_id = rid in (RECIPE_ID, ZERR_RECIPE_ID)
-    ok_fam = fam in (FAMILY, ZERR_FAMILY)
-    if not ok_id:
-        errs.append(f"recipe_id must be {RECIPE_ID} or {ZERR_RECIPE_ID}")
-    if not ok_fam:
-        errs.append(f"family must be {FAMILY} or {ZERR_FAMILY}")
-    if rid == ZERR_RECIPE_ID and fam != ZERR_FAMILY:
-        errs.append("zerr recipe_id requires family H-ZERR")
-    if rid == RECIPE_ID and fam != FAMILY:
-        errs.append("champion recipe_id requires family H-ABS-QPFB2")
+    if rid not in _ALLOWED_IDS:
+        errs.append(
+            "recipe_id must be champion-qpfb2-v0, zerr-qpfb2-v0, or zpref-qpfb2-v0"
+        )
+    if fam not in _ALLOWED_FAMS:
+        errs.append("family must be H-ABS-QPFB2, H-ZERR, or H-ZPREF")
+    expect = _ID_FAMILY.get(rid)
+    if expect is not None and fam != expect:
+        errs.append(f"{rid} requires family {expect}")
     if int(recipe["pfb_k"]) != int(K2_BEAMS):
         errs.append(f"pfb_k must be {K2_BEAMS} (GPFB K=2 forbidden)")
     if int(recipe["qt_bits"]) != int(QT_BITS):

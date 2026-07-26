@@ -17,7 +17,7 @@ One-pager: [`RECIPES.md`](results/nano-lm/RECIPES.md) · Card: [`champion-card.m
 | X+ | **COMPLETE** | [wave-x-summary.md](results/nano-lm/wave-x-summary.md) — PFB family **PROMOTE**; QI/ABS **KILL** |
 | **Y** | **COMPLETE** | [wave-y-summary.md](results/nano-lm/wave-y-summary.md) — PFB256/ROLL/SUMCACHE/GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL** |
 | **Z** | **COMPLETE** | [wave-z-hitl.md](results/nano-lm/wave-z-hitl.md) — PFB ≠ interactive LM; **H-ZWRAP** · freeze [lab-freeze.md](results/nano-lm/lab-freeze.md) |
-| **AA** | **IN PROGRESS** | AA0 **H-WRAPBANK PROMOTE** · AA1 **H-PARA HOLD** — [wrapbank](results/nano-lm/formal-hwrapbank-wrapbank.md) · [para](results/nano-lm/formal-hpara-para.md); next **H-ZPREF** |
+| **AA** | **IN PROGRESS** | AA0 **WRAPBANK PROMOTE** · AA1 **PARA HOLD** · AA3 **ZPREF KILL** — [wrapbank](results/nano-lm/formal-hwrapbank-wrapbank.md) · [para](results/nano-lm/formal-hpara-para.md) · [zpref](results/nano-lm/formal-hzpref-zpref.md); next **H-DEPL-DOC** |
 
 Teachers: TinyStories-33M + `bigcode/tiny_starcoder_py` ([TCHR](results/nano-lm/formal-htchr-code-teacher.md)).  
 KILL tooling purged → [`results/nano-lm/archive/`](results/nano-lm/archive/).

@@ -45,7 +45,7 @@ npm run nano:test && npm run verify
 - Wave X+ **COMPLETE** — PFB family **PROMOTE**; QI/ABS **KILL** → [`wave-x-summary.md`](docs/results/nano-lm/wave-x-summary.md).  
 - **Wave Y COMPLETE** — GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**.  
 - **Wave Z COMPLETE** — [wave-z-hitl.md](docs/results/nano-lm/wave-z-hitl.md) · **LAB-FREEZE** [lab-freeze.md](docs/results/nano-lm/lab-freeze.md).  
-- **Wave AA** — AA0 [H-WRAPBANK PROMOTE](docs/results/nano-lm/formal-hwrapbank-wrapbank.md); AA1 [H-PARA HOLD](docs/results/nano-lm/formal-hpara-para.md); next **H-ZPREF**.
+- **Wave AA** — AA0 [H-WRAPBANK PROMOTE](docs/results/nano-lm/formal-hwrapbank-wrapbank.md); AA1 [H-PARA HOLD](docs/results/nano-lm/formal-hpara-para.md); AA3 [H-ZPREF KILL](docs/results/nano-lm/formal-hzpref-zpref.md); next **H-DEPL-DOC**.
 
 ---
 

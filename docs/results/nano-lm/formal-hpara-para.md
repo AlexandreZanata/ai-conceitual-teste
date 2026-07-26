@@ -44,4 +44,4 @@ npm run nano:z:ask -- --wrap --question "<paraphrase>"
 - Trials: `results/nano-lm/wave-aa/trials/AA1-01.json` … `AA1-10.json`
 - Contract: `nano_lm/tests/test_para.py`
 
-Next allowed: **H-ZPREF** (bank≥20) or **H-DEPL-DOC** / **H-SERVEALIGN** if open decode desired.
+Next allowed: **H-ZPREF** (AA3) — **DONE KILL** → [formal-hzpref-zpref.md](formal-hzpref-zpref.md). Then **H-DEPL-DOC**.
