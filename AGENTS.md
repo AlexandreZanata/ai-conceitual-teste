@@ -51,7 +51,7 @@ npm run nano:test && npm run verify
 - **Wave AD COMPLETE + FROZEN** — [ad-freeze.md](docs/results/nano-lm/ad-freeze.md) · [wave-ad-summary.md](docs/results/nano-lm/wave-ad-summary.md) · [paper-lab-wave-ad.md](docs/results/nano-lm/paper-lab-wave-ad.md) · [wave-ad-hitl.md](docs/results/nano-lm/wave-ad-hitl.md) (`npm run nano:ad:freeze`).
 - **Wave AE COMPLETE + FROZEN** — [wave-ae-summary.md](docs/results/nano-lm/wave-ae-summary.md) · [ae-freeze.md](docs/results/nano-lm/ae-freeze.md) · [paper-lab-wave-ae.md](docs/results/nano-lm/paper-lab-wave-ae.md) · [wave-ae-hitl.md](docs/results/nano-lm/wave-ae-hitl.md) (`npm run nano:ae:freeze`).
 - **Wave AF COMPLETE + FROZEN** — [wave-af-summary.md](docs/results/nano-lm/wave-af-summary.md) · [af-freeze.md](docs/results/nano-lm/af-freeze.md) · [paper-lab-wave-af.md](docs/results/nano-lm/paper-lab-wave-af.md) · [wave-af-hitl.md](docs/results/nano-lm/wave-af-hitl.md) (`npm run nano:af:freeze`); ship claim = **AF packaged stack**.
-- **Wave AG OPEN** — [wave-ag-session.md](docs/results/nano-lm/wave-ag-session.md) · [formal-hantifp-antifp.md](docs/results/nano-lm/formal-hantifp-antifp.md) (`npm run nano:ag:session` · `npm run nano:antifp`); next **AG2 H-CTXREAL**; no Wave AH invent without reopen.
+- **Wave AG OPEN** — [wave-ag-session.md](docs/results/nano-lm/wave-ag-session.md) · [formal-hantifp-antifp.md](docs/results/nano-lm/formal-hantifp-antifp.md) · [formal-hctxreal-ctxreal.md](docs/results/nano-lm/formal-hctxreal-ctxreal.md) (`npm run nano:ag:session` · `npm run nano:antifp` · `npm run nano:ctxreal`); next **AG3 H-SMARTREAL**; no Wave AH invent without reopen.
 
 ---
 
