@@ -48,7 +48,7 @@ Push **GENERATE** past AH **H-GENLIFT** (gen mean 4.0) via **QPFB2+BEAMKV + cura
 2. Grounding + context-prefer pick removes period risk but does **not** lift factual gen.  
 3. Gen still **&lt; 5.0** under honest Cursor → **HOLD** per §5 AI1.  
 4. Ship claim remains **AF packaged stack**.  
-5. Optional next: **AI1b H-CAPRENEG** (size renegotiation) — only if lab elects; else **AI2 H-CTXPUSH**.
+5. Optional next: **AI1b H-CAPRENEG** — **DONE HOLD** (keep ≤5M); then **AI2 H-CTXPUSH**.
 
 ## Reproduce
 
@@ -65,4 +65,4 @@ npm run nano:test && npm run verify
 - Trials: `AI-GENPLUS-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_genplus.py`
 
-Next: **AI1b H-CAPRENEG** (optional after HOLD) **or** **AI2 H-CTXPUSH**.
+Next: **AI1b H-CAPRENEG** (**DONE — HOLD** — [formal-hcapreneg-capreneg.md](formal-hcapreneg-capreneg.md)). Next: **AI2 H-CTXPUSH**.
