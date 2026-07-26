@@ -1,8 +1,8 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Wave Z COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md)).  
-> Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md) · HITL: [wave-z-hitl.md](wave-z-hitl.md).
+> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Wave Z COMPLETE** · **AA0 H-WRAPBANK PROMOTE**).  
+> Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md) · HITL: [wave-z-hitl.md](wave-z-hitl.md) · WRAPBANK: [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md).
 
 ## Official tips
 
@@ -21,7 +21,7 @@
 | 3 | **Long ctx (L>128)** | **ROLL / SUMCACHE / GPFB4-LONG** (+ **PFB256**) | [PFB256](formal-hpfb256-pfb256.md) · [ROLL](formal-hroll-roll.md) · [SUMCACHE](formal-hsumcache-sumcache.md) · [GPFB4-LONG](formal-hgpfb4long-gpfb4long.md) |
 | 4 | **Train-step / e2e** | **H-TPACK** + **AMORT** | [tpack](formal-htpack-vs-hstag.md) · [amort](formal-hamort-vs-hstag.md) · [TIPD](formal-htipd-vs-hstag.md) |
 | 5 | **Serve-quality** (in-harness) | **H-QPACK** | [formal](formal-hqpack-vs-hpool.md) · OOD XFER **KILL** → [archive](archive/hxfer-transfer.md) |
-| 6 | **Known-ask HITL** | **H-ZWRAP** (`--wrap`) | [Z4](wave-z-hitl-z4.md) · [DEPL-Y](wave-z-depl-y.md) |
+| 6 | **Known-ask HITL** | **H-ZWRAP** (`--wrap`) + **H-WRAPBANK** golds | [Z4](wave-z-hitl-z4.md) · [WRAPBANK](formal-hwrapbank-wrapbank.md) · [DEPL-Y](wave-z-depl-y.md) |
 
 ## Tip scoreboard
 
@@ -54,6 +54,7 @@ npm run nano:roll && npm run nano:formal:hroll
 npm run nano:sumcache && npm run nano:formal:hsumcache
 npm run nano:gpfb4long && npm run nano:formal:hgpfb4long
 npm run nano:z:export && npm run nano:z:ask -- --wrap --question "…"
+npm run nano:wrapbank
 npm run nano:z:z4 -- --arms A,B,C
 npm run nano:z:depl-y
 npm run nano:z:z6
@@ -77,6 +78,7 @@ Evidence: [wave-z-hitl.md](wave-z-hitl.md) · [wave-z-hitl-z4.md](wave-z-hitl-z4
 Wave W **COMPLETE** — [wave-w-summary.md](wave-w-summary.md) (PROG/BTC/EFF **PROMOTE**; MIXD **KILL**).  
 Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PROMOTE**; RAG/CTX/Q*/… **KILL** → [`archive/`](archive/)).  
 **Wave Y COMPLETE** — [wave-y-summary.md](wave-y-summary.md) (GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**).  
-**Wave Z COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md) (PFB ≠ interactive LM; **H-ZWRAP** + error-bank) · [wave-z-summary.md](wave-z-summary.md) · [paper-lab-wave-z.md](paper-lab-wave-z.md) · [lab-freeze.md](lab-freeze.md).
+**Wave Z COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md) (PFB ≠ interactive LM; **H-ZWRAP** + error-bank) · [wave-z-summary.md](wave-z-summary.md) · [paper-lab-wave-z.md](paper-lab-wave-z.md) · [lab-freeze.md](lab-freeze.md).  
+**Wave AA** — AA0 **H-WRAPBANK PROMOTE** (bank 20) — [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md); next **H-PARA**.
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

@@ -26,9 +26,9 @@ When rules conflict with existing code, **rules prevail** — unless the user ex
 2. `agent-rules/00-core/size-and-complexity-limits.md` — **80 / 200 / ≤10**
 3. `docs/ARCHITECTURE.md` + `docs/GLOSSARY.md`
 4. `docs/NANO-STUDENT-AGENDA.md` + `docs/results/nano-lm/champion-card.md` + `RECIPES.md`
-5. `.local/pesquisa.md` (lab **FROZEN** — Waves W–Z **COMPLETE** + NO-REOPEN; no new H-IDs without reopen)
+5. `.local/pesquisa.md` (lab **NO-REOPEN** KILLs; Waves W–Z **COMPLETE**; **Wave AA** product expansion — AA0 **H-WRAPBANK PROMOTE**)
 6. `nano_lm/data/CURATED-SOURCES.md` before data work
-7. Wave Z session: `.local/wave-z/SESSION.md` (HITL archive)
+7. Wave Z session: `.local/wave-z/SESSION.md` · Wave AA: `.local/wave-aa/SESSION.md`
 
 ```bash
 ./agent-harness/rules-path.sh
@@ -44,7 +44,8 @@ npm run nano:test && npm run verify
 - Nano Waves U–W **closed** (recipes frozen; XFER2 + MIXD purged).  
 - Wave X+ **COMPLETE** — PFB family **PROMOTE**; QI/ABS **KILL** → [`wave-x-summary.md`](docs/results/nano-lm/wave-x-summary.md).  
 - **Wave Y COMPLETE** — GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**.  
-- **Wave Z COMPLETE** — [wave-z-hitl.md](docs/results/nano-lm/wave-z-hitl.md) · **LAB-FREEZE** [lab-freeze.md](docs/results/nano-lm/lab-freeze.md).
+- **Wave Z COMPLETE** — [wave-z-hitl.md](docs/results/nano-lm/wave-z-hitl.md) · **LAB-FREEZE** [lab-freeze.md](docs/results/nano-lm/lab-freeze.md).  
+- **Wave AA** — AA0 [H-WRAPBANK PROMOTE](docs/results/nano-lm/formal-hwrapbank-wrapbank.md); next **H-PARA**.
 
 ---
 
