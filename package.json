@@ -312,6 +312,8 @@
     "nano:ag:antifp": "nano_lm/.venv/bin/python nano_lm/src/run_antifp.py",
     "nano:ctxreal": "nano_lm/.venv/bin/python nano_lm/src/run_ctxreal.py",
     "nano:ag:ctxreal": "nano_lm/.venv/bin/python nano_lm/src/run_ctxreal.py",
+    "nano:smartreal": "nano_lm/.venv/bin/python nano_lm/src/run_smartreal.py",
+    "nano:ag:smartreal": "nano_lm/.venv/bin/python nano_lm/src/run_smartreal.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
     "nano:routeplus": "nano_lm/.venv/bin/python nano_lm/src/run_routeplus.py",

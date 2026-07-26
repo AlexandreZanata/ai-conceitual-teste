@@ -60,4 +60,4 @@ Contract: `nano_lm/tests/test_ag_session.py`.
 - Default ship claim until AG6 still **AF packaged stack**.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AH · PROMOTE LOOKUP-only as generative IQ.
 
-Next: **AG1 H-ANTIFP** (**DONE** — see [formal-hantifp-antifp.md](formal-hantifp-antifp.md)). **AG2 H-CTXREAL** (**DONE** — see [formal-hctxreal-ctxreal.md](formal-hctxreal-ctxreal.md)). Next wave stage: **AG3 H-SMARTREAL**.
+Next: **AG1 H-ANTIFP** (**DONE** — see [formal-hantifp-antifp.md](formal-hantifp-antifp.md)). **AG2 H-CTXREAL** (**DONE** — see [formal-hctxreal-ctxreal.md](formal-hctxreal-ctxreal.md)). **AG3 H-SMARTREAL** (**DONE — HOLD** — see [formal-hsmartreal-smartreal.md](formal-hsmartreal-smartreal.md)). Next wave stage: **AG4 H-FASTREAL**.

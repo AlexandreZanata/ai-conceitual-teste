@@ -60,6 +60,7 @@
 | [wave-ag-session.md](wave-ag-session.md) | Wave AG0 SESSION **PROMOTE** (10 held-out HITL Qs; Wave AG OPEN) |
 | [formal-hantifp-antifp.md](formal-hantifp-antifp.md) | Wave AG1 H-ANTIFP **PROMOTE** |
 | [formal-hctxreal-ctxreal.md](formal-hctxreal-ctxreal.md) | Wave AG2 H-CTXREAL **PROMOTE** |
+| [formal-hsmartreal-smartreal.md](formal-hsmartreal-smartreal.md) | Wave AG3 H-SMARTREAL **HOLD** |
 | [depl-af.md](depl-af.md) | AF packaged deploy routes (APPULTRA) |
 | [depl-ad.md](depl-ad.md) | AC+AD deploy overview (H-DEPLPLUS) |
 | [wave-ab-summary.md](wave-ab-summary.md) | Wave AB **COMPLETE** public closeout |
