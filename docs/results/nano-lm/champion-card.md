@@ -1,8 +1,8 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy: [RECIPES.md](RECIPES.md). Lab: `.local/pesquisa.md` (**Wave Y COMPLETE** — GPFB4-LONG **PROMOTE**; next **Wave Z**).  
-> Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md).
+> Deploy: [RECIPES.md](RECIPES.md). Lab: `.local/pesquisa.md` (**Wave Z ACTIVE** — Z0 EXPORT **DONE**; next **Z1 HITL-10**).  
+> Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md).
 
 ## Official tips
 
@@ -51,6 +51,7 @@ npm run nano:pfb256 && npm run nano:formal:hpfb256
 npm run nano:roll && npm run nano:formal:hroll
 npm run nano:sumcache && npm run nano:formal:hsumcache
 npm run nano:gpfb4long && npm run nano:formal:hgpfb4long
+npm run nano:z:export && npm run nano:z:ask -- --question "…"
 npm run nano:bpfb && npm run nano:formal:hbpfb
 npm run nano:gpfb4 && npm run nano:formal:hgpfb4
 npm run nano:tchr && npm run nano:formal:htchr
@@ -61,6 +62,7 @@ npm run nano:genc && npm run nano:formal:hgenc
 
 Wave W **COMPLETE** — [wave-w-summary.md](wave-w-summary.md) (PROG/BTC/EFF **PROMOTE**; MIXD **KILL**).  
 Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PROMOTE**; RAG/CTX/Q*/… **KILL** → [`archive/`](archive/)).  
-**Wave Y COMPLETE** — [wave-y-summary.md](wave-y-summary.md) (GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**). Next: **Wave Z**.
+**Wave Y COMPLETE** — [wave-y-summary.md](wave-y-summary.md) (GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**).  
+**Wave Z ACTIVE** — [wave-z-summary.md](wave-z-summary.md) (Z0 EXPORT **DONE**; next Z1 HITL-10).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

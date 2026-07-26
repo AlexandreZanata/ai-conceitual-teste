@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Project rules (nano-first)
 
-- **Active:** nano generative student ≤5M — `docs/NANO-STUDENT-AGENDA.md`, `.local/pesquisa.md` (Wave Y **COMPLETE** — GPFB4-LONG **PROMOTE**; next **Wave Z**), `docs/ARCHITECTURE.md` / `GLOSSARY.md`.
+- **Active:** nano generative student ≤5M — `docs/NANO-STUDENT-AGENDA.md`, `.local/pesquisa.md` (Wave Z **ACTIVE** — Z0 EXPORT **DONE**; next **Z1 HITL-10**), `docs/ARCHITECTURE.md` / `GLOSSARY.md`.
 - **Frozen:** EvoGen survival PoC → `docs/archive/evogen/` (do not extend unless lab book re-opens).
 - Domain terms from `docs/GLOSSARY.md` — never call evolutionary individuals “coding agents”.
 - Curated public data: `nano_lm/data/CURATED-SOURCES.md` + `npm run nano:curated`.

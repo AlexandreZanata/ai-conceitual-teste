@@ -30,4 +30,4 @@
 
 DEPL: speed→PACK/QT; code-smart→QPFB2/BPFB (+BEAMKV/TCACHE/SCORERAM/PFB256/ROLL/SUMCACHE/GPFB4-LONG); GENC∘PFB→GPFB4; quality→QPACK in-dist; **REJECT** ood_long / QPACK-OOD / revived X+ KILLs / STREAM / KVCACHE-Q / GENCACHE.
 Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.md](wave-x-summary.md) → [`archive/`](archive/).
-**Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md) — next **Wave Z** (HITL).
+**Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md). **Wave Z ACTIVE:** [wave-z-summary.md](wave-z-summary.md) — Z0 export **DONE**; next Z1 HITL-10.
