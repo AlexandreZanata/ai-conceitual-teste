@@ -74,4 +74,5 @@ npm run nano:test && npm run verify
 - Trials: `AM-FINAL-LOOKUP-HITL-01…10` · `AM-FINAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_am_hitl.py`
 
-Next: **AM7 AM-REPORT** — public summary + paper-lab.
+Next: **AM8 AM-FREEZE** — lock; no Wave AN invent.  
+Report: [wave-am-summary.md](wave-am-summary.md) · [paper-lab-wave-am.md](paper-lab-wave-am.md) (**AM7 PROMOTE**).
