@@ -66,4 +66,4 @@ npm run nano:test && npm run verify
 - Trials: `AH-FASTLIFT-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_fastlift.py`
 
-Next: **AH5 H-APPLIFT**.
+Next: **AH6 AH-HITL-10**.
