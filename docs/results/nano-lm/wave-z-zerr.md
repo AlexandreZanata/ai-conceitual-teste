@@ -46,4 +46,4 @@ Greedy QT+EARLY ask on champion **and** zerr still emits period tokens on open Q
 - `results/nano-lm/wave-z/z3_zerr_summary.json`
 - Contract: `nano_lm/tests/test_z_zerr.py`
 
-Next: **Z4 HITL-10 verify** (zerr and/or wrap vs Z1).
+Next: **Z4 HITL-10 verify** — **DONE** → [wave-z-hitl-z4.md](wave-z-hitl-z4.md) (**PASS** · claim **H-ZWRAP**). Then DEPL→Z6.

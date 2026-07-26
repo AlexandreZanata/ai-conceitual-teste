@@ -12,6 +12,8 @@
 | **Code-smart serve (prog)** | **H-ABS-QPFB2** + cache stack (+ **H-PFB256** / **H-ROLL** / **H-SUMCACHE** long) | CBON / CSAFE-max-story / GPFB K=2 / STREAM |
 | **Code-smart serve (btc)** | **H-ABS-BPFB** | — |
 | **GENC ∘ PFB** | **H-ABS-GPFB4** (K=4 only) | GPFB K=2 (**KILL**) |
+| **Known-ask HITL demo** | **`--wrap` LOOKUP** (`champion-wrap-v0`) — **H-ZWRAP** | open chat LM / ZERR-as-chat |
+| **Story-safe CE** | **H-ZERR** (`zerr-qpfb2-v0`) | interactive Q&A without wrap (Z4C FAIL) |
 | **Cheaper train steps** | **H-TPACK** + **H-AMORT** | ETRAIN N=1 |
 | **Quality@wall (in-harness)** | **H-QPACK** | QPACK OOD (XFER **KILL**) |
 
@@ -30,4 +32,4 @@
 
 DEPL: speed→PACK/QT; code-smart→QPFB2/BPFB (+BEAMKV/TCACHE/SCORERAM/PFB256/ROLL/SUMCACHE/GPFB4-LONG); GENC∘PFB→GPFB4; quality→QPACK in-dist; **REJECT** ood_long / QPACK-OOD / revived X+ KILLs / STREAM / KVCACHE-Q / GENCACHE.
 Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.md](wave-x-summary.md) → [`archive/`](archive/).
-**Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md). **Wave Z ACTIVE:** [wave-z-summary.md](wave-z-summary.md) — Z3 H-ZERR **PROMOTE**; next Z4 — [wave-z-zerr.md](wave-z-zerr.md).
+**Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md). **Wave Z ACTIVE:** [wave-z-summary.md](wave-z-summary.md) — Z4 **PASS** claim **H-ZWRAP** — [wave-z-hitl-z4.md](wave-z-hitl-z4.md); next DEPL→Z6.

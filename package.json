@@ -258,6 +258,7 @@
     "nano:z:log-trial": "nano_lm/.venv/bin/python nano_lm/src/run_z_log_trial.py",
     "nano:z:error-bank": "nano_lm/.venv/bin/python nano_lm/src/run_z_error_bank.py",
     "nano:z:retrain": "nano_lm/.venv/bin/python nano_lm/src/run_z_retrain.py",
+    "nano:z:z4": "nano_lm/.venv/bin/python nano_lm/src/run_z4_hitl.py",
     "nano:btc": "nano_lm/.venv/bin/python nano_lm/src/run_btc_smoke.py",
     "nano:btc:report": "nano_lm/.venv/bin/python nano_lm/src/write_hbtc_report.py",
     "nano:formal:hbtc": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hbtc.py",

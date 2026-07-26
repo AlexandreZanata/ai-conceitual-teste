@@ -1,8 +1,8 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy: [RECIPES.md](RECIPES.md). Lab: `.local/pesquisa.md` (**Wave Z ACTIVE** — Z3 **PROMOTE**; next **Z4**).  
-> Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md).
+> Deploy: [RECIPES.md](RECIPES.md). Lab: `.local/pesquisa.md` (**Wave Z ACTIVE** — Z4 **PASS** · claim **H-ZWRAP**; next **DEPL→Z6**).  
+> Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md) · Z4: [wave-z-hitl-z4.md](wave-z-hitl-z4.md).
 
 ## Official tips
 
@@ -51,18 +51,28 @@ npm run nano:pfb256 && npm run nano:formal:hpfb256
 npm run nano:roll && npm run nano:formal:hroll
 npm run nano:sumcache && npm run nano:formal:hsumcache
 npm run nano:gpfb4long && npm run nano:formal:hgpfb4long
-npm run nano:z:export && npm run nano:z:ask -- --question "…"
+npm run nano:z:export && npm run nano:z:ask -- --wrap --question "…"
+npm run nano:z:z4 -- --arms A,B,C
 npm run nano:bpfb && npm run nano:formal:hbpfb
 npm run nano:gpfb4 && npm run nano:formal:hgpfb4
 npm run nano:tchr && npm run nano:formal:htchr
 npm run nano:genc && npm run nano:formal:hgenc
 ```
 
+## Wave Z product claims (honest)
+
+| Goal | Use | Never claim |
+|------|-----|-------------|
+| Known-ask HITL demo | **`--wrap` LOOKUP** (`champion-wrap-v0`) — **H-ZWRAP** | Open generative chat LM |
+| Story-safe CE ckpt | **H-ZERR** (`zerr-qpfb2-v0`) | ZERR fixes interactive Q&A (Z4 arm C FAIL) |
+
+Evidence: [wave-z-hitl-z4.md](wave-z-hitl-z4.md).
+
 ## Waves
 
 Wave W **COMPLETE** — [wave-w-summary.md](wave-w-summary.md) (PROG/BTC/EFF **PROMOTE**; MIXD **KILL**).  
 Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PROMOTE**; RAG/CTX/Q*/… **KILL** → [`archive/`](archive/)).  
 **Wave Y COMPLETE** — [wave-y-summary.md](wave-y-summary.md) (GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**).  
-**Wave Z ACTIVE** — [wave-z-summary.md](wave-z-summary.md) (Z3 PROMOTE; next Z4).
+**Wave Z ACTIVE** — Z4 **PASS** (claim **H-ZWRAP**); next **DEPL→Z6** — [wave-z-summary.md](wave-z-summary.md) · [wave-z-hitl-z4.md](wave-z-hitl-z4.md) · ladder `.local/pesquisa.md` §8.
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

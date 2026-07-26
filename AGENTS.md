@@ -26,7 +26,7 @@ When rules conflict with existing code, **rules prevail** — unless the user ex
 2. `agent-rules/00-core/size-and-complexity-limits.md` — **80 / 200 / ≤10**
 3. `docs/ARCHITECTURE.md` + `docs/GLOSSARY.md`
 4. `docs/NANO-STUDENT-AGENDA.md` + `docs/results/nano-lm/champion-card.md` + `RECIPES.md`
-5. `.local/pesquisa.md` (Wave Z **ACTIVE** — Z3 H-ZERR **PROMOTE**; next **Z4 HITL-10**) before new H-IDs
+5. `.local/pesquisa.md` (Wave Z **ACTIVE** — Z4 **PASS** · claim **H-ZWRAP**; next **DEPL→Z6**) before new H-IDs
 6. `nano_lm/data/CURATED-SOURCES.md` before data work
 7. Wave Z session: `.local/wave-z/SESSION.md` during HITL trials
 
@@ -44,7 +44,7 @@ npm run nano:test && npm run verify
 - Nano Waves U–W **closed** (recipes frozen; XFER2 + MIXD purged).  
 - Wave X+ **COMPLETE** — PFB family **PROMOTE**; QI/ABS **KILL** → [`wave-x-summary.md`](docs/results/nano-lm/wave-x-summary.md).  
 - **Wave Y COMPLETE** — GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**.  
-- **Wave Z ACTIVE** — Z3 H-ZERR **PROMOTE**; next **Z4** — see `.local/pesquisa.md` §9 + [`wave-z-summary.md`](docs/results/nano-lm/wave-z-summary.md) · [`wave-z-zerr.md`](docs/results/nano-lm/wave-z-zerr.md).
+- **Wave Z ACTIVE** — Z4 **PASS** (claim **H-ZWRAP**); next **DEPL→Z6** — see `.local/pesquisa.md` §8–§9 + [`wave-z-summary.md`](docs/results/nano-lm/wave-z-summary.md) · [`wave-z-hitl-z4.md`](docs/results/nano-lm/wave-z-hitl-z4.md).
 
 ---
 

@@ -3,7 +3,7 @@
 > Lab: `.local/pesquisa.md` §9.  
 > Champion export: `results/nano-lm/wave-z/models/champion/` (gitignored weights).
 
-**Status: ACTIVE** · Wave Y **COMPLETE** → [wave-y-summary.md](wave-y-summary.md).
+**Status: ACTIVE** · Focus: **DEPL-Y freeze** → **Z6 REPORT**. Z4 **PASS** (claim **H-ZWRAP**). See `.local/pesquisa.md` §8.
 
 ## Stage queue
 
@@ -13,23 +13,23 @@
 | Z1 | **HITL-10** | **DONE — FAIL** | mean **1.0**, errors **10**/10 → [wave-z-hitl-z1.md](wave-z-hitl-z1.md) |
 | Z2 | MANUAL×10 | **DONE — PASS** | mean **9.0**; `champion-wrap-v0` → [wave-z-hitl-z2.md](wave-z-hitl-z2.md) |
 | Z3 | **H-ZERR** | **DONE — PROMOTE** | bank CE; story −14.56 ≥ parent−ε → [wave-z-zerr.md](wave-z-zerr.md) |
-| Z4 | HITL-10 verify | **NEXT** | mean ≥ Z1 + 0.5; pass bar mean≥7, errors≤3 |
-| Z5 | LOOP≤3 | queued | — |
+| **Z4** | HITL-10 verify | **DONE — PASS** | A/B mean **9.0**; C mean **1.0**; claim **H-ZWRAP** → [wave-z-hitl-z4.md](wave-z-hitl-z4.md) |
+| Z5 | LOOP / SERVEALIGN | **SKIP** | Not needed for known-ask wrap product |
+| Z5c | **DEPL-Y** | **NEXT** | Freeze 128 vs long routes on card |
 | Z6 | REPORT | queued | `wave-z-hitl.md` |
 
-## Z3 evidence
+## Z4 evidence
 
-| Artifact | Path |
-|----------|------|
-| Ckpt | `results/nano-lm/wave-z/models/zerr/HZERR_seed0.pt` |
-| Recipe | `…/zerr/recipe.json` (`zerr-qpfb2-v0`) |
-| Summary | `results/nano-lm/wave-z/z3_zerr_summary.json` |
-| Public note | [wave-z-zerr.md](wave-z-zerr.md) |
+| Arm | Stack | mean | errors |
+|-----|-------|-----:|-------:|
+| A | zerr + `--wrap` | 9.0 | 0 |
+| B | champion + `--wrap` | 9.0 | 0 |
+| C | zerr raw | 1.0 | 10 |
 
 Commands:
 
 ```bash
-npm run nano:z:retrain -- --steps 40 --seed 0
+npm run nano:z:z4 -- --arms A,B,C
 npm run nano:z:ask -- --wrap --question "…"
 npm run nano:z:ask -- --root results/nano-lm/wave-z/models/zerr --question "…"
 ```
@@ -37,5 +37,6 @@ npm run nano:z:ask -- --root results/nano-lm/wave-z/models/zerr --question "…"
 ## Doctrine
 
 - Judge = frontier chat model (not ≤5M self-grade).  
+- **Known-ask product** = **H-ZWRAP** LOOKUP; **H-ZERR** = story-safe CE only.  
 - Forbidden: STREAM / KVCACHE-Q / GENCACHE / GPFB K=2 / MIXD retrain.  
 - Live checklist: `.local/wave-z/SESSION.md`.
