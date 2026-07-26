@@ -76,4 +76,4 @@ npm run nano:test && npm run verify
 - Trials: `AM-SMARTNEXT-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_smartnext.py`
 
-Next: **AM4 H-FASTNEXT** — faster than FASTFRESH at quality floor.
+Next: **AM4 H-FASTNEXT** — **DONE PROMOTE** → [formal-hfastnext-fastnext.md](formal-hfastnext-fastnext.md).

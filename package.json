@@ -408,6 +408,8 @@
     "nano:am:ctxnext": "nano_lm/.venv/bin/python nano_lm/src/run_ctxnext.py",
     "nano:smartnext": "nano_lm/.venv/bin/python nano_lm/src/run_smartnext.py",
     "nano:am:smartnext": "nano_lm/.venv/bin/python nano_lm/src/run_smartnext.py",
+    "nano:fastnext": "nano_lm/.venv/bin/python nano_lm/src/run_fastnext.py",
+    "nano:am:fastnext": "nano_lm/.venv/bin/python nano_lm/src/run_fastnext.py",
     "nano:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:aj:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:fastpeak": "nano_lm/.venv/bin/python nano_lm/src/run_fastpeak.py",
