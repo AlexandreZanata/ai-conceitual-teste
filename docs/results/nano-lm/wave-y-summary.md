@@ -15,10 +15,16 @@
 | **H-PFB256** | PFB2 on prog@256 (DOM elongate; not CTX); dual gate vs EARLY@256; wall≈@128 | [smoke](hpfb256-pfb256.md) · [formal](formal-hpfb256-pfb256.md) |
 | **H-ROLL** | Rolling W=128 + S=32 summary; PFB2/segment; L_eff≫W; active≤W+S | [smoke](hroll-roll.md) · [formal](formal-hroll-roll.md) |
 
+## KILL (this wave)
+
+| ID | Lesson | Archive |
+|----|--------|---------|
+| **H-STREAM** | parent=prev commit lifts code but story collapses across T (formal) | [archive](archive/hstream-stream.md) |
+
 ## Queued
 
-H-STREAM · H-SUMCACHE / H-KVCACHE-Q · H-GENCACHE / H-GPFB4-LONG.
+H-SUMCACHE / H-KVCACHE-Q · H-GENCACHE / H-GPFB4-LONG.
 
 ## Doctrine reminder
 
-Every long-context hyp inherits PFB dual gate. Cache = measurable hit-rate / wall↓ / teacher_forwards↓. Do not revive X+ KILL catalog.
+Every long-context hyp inherits PFB dual gate. Cache = measurable hit-rate / wall↓ / teacher_forwards↓. Do not revive X+ KILL catalog. Do not claim infinite stream via parent=prev alone.
