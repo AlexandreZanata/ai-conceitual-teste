@@ -61,4 +61,4 @@ Contract: `nano_lm/tests/test_aj_session.py`.
 - Default ship claim until AJ6 still **AF packaged stack**.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AK · PROMOTE LOOKUP-only as generative IQ.
 
-Next: **AJ1 H-GENPEAK**.
+Next: **AJ1 H-GENPEAK** — **DONE PROMOTE** → [formal-hgenpeak-genpeak.md](formal-hgenpeak-genpeak.md). Next: **AJ2 H-CTXPEAK**.
