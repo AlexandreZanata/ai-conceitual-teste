@@ -107,6 +107,6 @@ Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PR
 **Wave AD COMPLETE + FROZEN** — **H-HARDPARA** · **H-COMPOSE** · **H-ROUTEPLUS** · **H-DEPLPLUS** · [AD-HITL-10](wave-ad-hitl.md) · [wave-ad-summary.md](wave-ad-summary.md) · [ad-freeze.md](ad-freeze.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md).  
 **Wave AE COMPLETE + FROZEN** — **H-CTXMAX** · **H-SMARTMAX** · **H-FASTMAX** · **H-APPMAX** · [AE-HITL-10](wave-ae-hitl.md) · [wave-ae-summary.md](wave-ae-summary.md) · [ae-freeze.md](ae-freeze.md) · [paper-lab-wave-ae.md](paper-lab-wave-ae.md) (ship claim = **AE packaged stack**).  
 **Wave AF COMPLETE + FROZEN** — **H-CTXULTRA** · **H-SMARTULTRA** · **H-FASTULTRA** · **H-APPULTRA** · [AF-HITL-10](wave-af-hitl.md) · [wave-af-summary.md](wave-af-summary.md) · [af-freeze.md](af-freeze.md) · [paper-lab-wave-af.md](paper-lab-wave-af.md) (ship claim = **AF packaged stack**).
-**Wave AG OPEN** — AG0 [SESSION PROMOTE](wave-ag-session.md) · next **AG1 H-ANTIFP** · dual-arm anti-FP HITL (ship claim remains **AF packaged stack** until AG6).
+**Wave AG OPEN** — AG0 [SESSION PROMOTE](wave-ag-session.md) · AG1 [H-ANTIFP PROMOTE](formal-hantifp-antifp.md) · next **AG2 H-CTXREAL** · dual-arm anti-FP HITL (ship claim remains **AF packaged stack** until AG6).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

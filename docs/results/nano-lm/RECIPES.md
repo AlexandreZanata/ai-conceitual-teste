@@ -78,6 +78,7 @@
 | Wave AF6 AF-REPORT | [wave-af-summary.md](wave-af-summary.md) · [paper-lab-wave-af.md](paper-lab-wave-af.md) **PROMOTE** (`npm run nano:af:report`) |
 | Wave AF7 AF-FREEZE | [af-freeze.md](af-freeze.md) **PROMOTE** (`npm run nano:af:freeze`) — no Wave AG invent without reopen |
 | Wave AG0 SESSION | [wave-ag-session.md](wave-ag-session.md) **PROMOTE** (`npm run nano:ag:session`) — 10 held-out HITL Qs (6th set; dual-arm) |
+| Wave AG1 H-ANTIFP | [formal-hantifp-antifp.md](formal-hantifp-antifp.md) **PROMOTE** (`npm run nano:antifp`) — LOOKUP≠gen IQ; dual-arm telemetry |
 
 
 ## Policy
@@ -91,4 +92,4 @@ Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.m
 **Wave AD COMPLETE + FROZEN:** AD0–AD6 **PROMOTE** · AD-FREEZE — [wave-ad-summary.md](wave-ad-summary.md) · [ad-freeze.md](ad-freeze.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md) · **H-HARDPARA** · **H-COMPOSE** · **H-ROUTEPLUS** · **H-DEPLPLUS** · [AD-HITL-10](wave-ad-hitl.md).  
 **Wave AE COMPLETE + FROZEN:** AE0–AE6 **PROMOTE** · AE-FREEZE — [wave-ae-summary.md](wave-ae-summary.md) · [ae-freeze.md](ae-freeze.md) · [paper-lab-wave-ae.md](paper-lab-wave-ae.md) · **H-CTXMAX** · **H-SMARTMAX** · **H-FASTMAX** · **H-APPMAX** · [AE-HITL-10](wave-ae-hitl.md).  
 **Wave AF COMPLETE + FROZEN:** AF0–AF6 **PROMOTE** · AF-FREEZE — [wave-af-summary.md](wave-af-summary.md) · [af-freeze.md](af-freeze.md) · [paper-lab-wave-af.md](paper-lab-wave-af.md) · **H-CTXULTRA** · **H-SMARTULTRA** · **H-FASTULTRA** · **H-APPULTRA** · [AF-HITL-10](wave-af-hitl.md) (ship claim = **AF packaged stack**).  
-**Wave AG OPEN:** AG0 [SESSION PROMOTE](wave-ag-session.md) (`npm run nano:ag:session`) — next **AG1 H-ANTIFP**; ship claim remains **AF packaged stack** until AG6.
+**Wave AG OPEN:** AG0 [SESSION PROMOTE](wave-ag-session.md) · AG1 [H-ANTIFP PROMOTE](formal-hantifp-antifp.md) — next **AG2 H-CTXREAL**; ship claim remains **AF packaged stack** until AG6.
