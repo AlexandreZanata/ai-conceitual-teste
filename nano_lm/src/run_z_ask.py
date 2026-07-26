@@ -50,28 +50,16 @@ def _load_gene(root: Path, recipe: dict[str, Any]) -> dict[str, Any]:
     return clamp_early_gene({**gene, "n": 1, "temperature": 1e-6})
 
 
-def ask_once(
+def _decode_one(
     *,
+    qt: Any,
+    tok: Any,
+    recipe: dict[str, Any],
+    gene: dict[str, Any],
     question: str,
-    root: Path | None = None,
-    seed: int = 0,
+    seed: int,
+    device: torch.device,
 ) -> dict[str, Any]:
-    """
-    GIVEN exported champion + question
-    WHEN decoding QT∘EARLY n=1
-    THEN return completion + wall_ms + recipe_id (no teacher self-grade).
-    """
-    champ = Path(root) if root is not None else _CHAMPION
-    recipe = _load_recipe(champ)
-    gene = _load_gene(champ, recipe)
-    device = resolve_device(True)
-    if device.type != "cuda":
-        raise RuntimeError("Wave Z ask requires CUDA")
-    cache = matrix_cfg()["cache"]
-    tok = load_tokenizer(str(recipe["tokenizer_id"]), cache)
-    student = load_student_ckpt(champ / str(recipe["ckpt"]), tok, device)
-    qt = quantize_student_int8(student)  # type: ignore[arg-type]
-    qt.to(device)
     t0 = time.perf_counter()
     result = decode_early(
         qt,
@@ -87,20 +75,74 @@ def ask_once(
         seed=int(seed),
         device=device,
     )
-    wall_ms = float(result.wall_ms)
-    payload = {
+    return {
         "recipe_id": recipe["recipe_id"],
         "family": recipe["family"],
         "question": question,
         "completion": result.text,
-        "wall_ms": wall_ms,
+        "wall_ms": float(result.wall_ms),
         "n_new": len(result.token_ids),
         "seed": int(seed),
         "mode": "QT+EARLY n=1",
         "elapsed_s": time.perf_counter() - t0,
     }
-    _free_cuda(qt, student)
-    return payload
+
+
+def ask_once(
+    *,
+    question: str,
+    root: Path | None = None,
+    seed: int = 0,
+) -> dict[str, Any]:
+    """
+    GIVEN exported champion + question
+    WHEN decoding QT∘EARLY n=1
+    THEN return completion + wall_ms + recipe_id (no teacher self-grade).
+    """
+    return ask_many(questions=[question], root=root, seed=seed)[0]
+
+
+def ask_many(
+    *,
+    questions: list[str],
+    root: Path | None = None,
+    seed: int = 0,
+) -> list[dict[str, Any]]:
+    """
+    GIVEN exported champion + N questions
+    WHEN decoding QT∘EARLY n=1 with one model load
+    THEN return N completion payloads (warm GPU; no teacher).
+    """
+    if not questions:
+        raise ValueError("questions must be non-empty")
+    champ = Path(root) if root is not None else _CHAMPION
+    recipe = _load_recipe(champ)
+    gene = _load_gene(champ, recipe)
+    device = resolve_device(True)
+    if device.type != "cuda":
+        raise RuntimeError("Wave Z ask requires CUDA")
+    cache = matrix_cfg()["cache"]
+    tok = load_tokenizer(str(recipe["tokenizer_id"]), cache)
+    student = load_student_ckpt(champ / str(recipe["ckpt"]), tok, device)
+    qt = quantize_student_int8(student)  # type: ignore[arg-type]
+    qt.to(device)
+    out: list[dict[str, Any]] = []
+    try:
+        for q in questions:
+            out.append(
+                _decode_one(
+                    qt=qt,
+                    tok=tok,
+                    recipe=recipe,
+                    gene=gene,
+                    question=q,
+                    seed=seed,
+                    device=device,
+                )
+            )
+    finally:
+        _free_cuda(qt, student)
+    return out
 
 
 def main() -> int:

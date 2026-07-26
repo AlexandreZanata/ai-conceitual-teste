@@ -16,7 +16,7 @@ One-pager: [`RECIPES.md`](results/nano-lm/RECIPES.md) · Card: [`champion-card.m
 | W | **COMPLETE** | [wave-w-summary.md](results/nano-lm/wave-w-summary.md) |
 | X+ | **COMPLETE** | [wave-x-summary.md](results/nano-lm/wave-x-summary.md) — PFB family **PROMOTE**; QI/ABS **KILL** |
 | **Y** | **COMPLETE** | [wave-y-summary.md](results/nano-lm/wave-y-summary.md) — PFB256/ROLL/SUMCACHE/GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL** |
-| **Z** | **ACTIVE** | Z0 EXPORT **DONE** (`champion-qpfb2-v0`); next **Z1 HITL-10** — [wave-z-summary.md](results/nano-lm/wave-z-summary.md) |
+| **Z** | **ACTIVE** | Z1 HITL-10 **DONE (FAIL)** mean 1.0; next **Z2 MANUAL×10** — [wave-z-summary.md](results/nano-lm/wave-z-summary.md) · [wave-z-hitl-z1.md](results/nano-lm/wave-z-hitl-z1.md) |
 
 Teachers: TinyStories-33M + `bigcode/tiny_starcoder_py` ([TCHR](results/nano-lm/formal-htchr-code-teacher.md)).  
 KILL tooling purged → [`results/nano-lm/archive/`](results/nano-lm/archive/).

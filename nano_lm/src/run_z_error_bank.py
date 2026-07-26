@@ -4,10 +4,10 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
 
 from matrix_common import REPO
+from z_error_bank import validate_error_row
 
 _DEFAULT = REPO / "results/nano-lm/wave-z/error_bank.jsonl"
 
@@ -17,6 +17,7 @@ def summarize(path: Path) -> dict[str, object]:
         return {"ok": True, "n": 0, "n_error": 0, "path": str(path), "exists": False}
     n = 0
     n_err = 0
+    bad = 0
     with path.open(encoding="utf-8") as f:
         for line in f:
             line = line.strip()
@@ -24,12 +25,15 @@ def summarize(path: Path) -> dict[str, object]:
                 continue
             n += 1
             row = json.loads(line)
+            if validate_error_row(row):
+                bad += 1
             if bool(row.get("error")) or float(row.get("score", 10)) < 8.0:
                 n_err += 1
     return {
-        "ok": True,
+        "ok": bad == 0,
         "n": n,
         "n_error": n_err,
+        "n_schema_bad": bad,
         "path": str(path),
         "exists": True,
     }
