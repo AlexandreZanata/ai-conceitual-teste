@@ -41,4 +41,4 @@ npm run nano:deplplus
 - Trials: `results/nano-lm/wave-ad/trials/AD-DEPLPLUS-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_deplplus.py`
 
-Next: **AD5 AD-HITL-10**.
+Next: **AD5 AD-HITL-10** (**DONE** — see [wave-ad-hitl.md](wave-ad-hitl.md)). Next wave stage: **AD6 AD-REPORT**.

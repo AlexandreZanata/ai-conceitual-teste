@@ -72,6 +72,7 @@
 | **H-COMPOSE** | Dual-source CTXPLUS compose; AD2 **PROMOTE** (usable 10/10; sources 2.0) |
 | **H-ROUTEPLUS** | Cross-app APPPLUS route + honest OOS; AD3 **PROMOTE** (route/OOS 10/10) |
 | **H-DEPLPLUS** | AC+AD DEPL one-pagers + smoke; AD4 **PROMOTE** (pages 4/4; mean 9.0) |
+| **AD-HITL-10** | Final AD pack HITL on declared stack; AD5 **PROMOTE** (mean 9.0; errors 0/10) |
 | **H-ASKSMART** | Anti-period QPFB2+BEAMKV + constrained SEMWRAP FIX; AB4 **PROMOTE** (mean 8.7 > SERVEALIGN 3.4) |
 | **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **AB-HITL-10** | Final Wave AB pack verify on declared stack; AB6 **PROMOTE** (mean 9.0 · errors 0/10) |

@@ -32,6 +32,7 @@
 | [formal-hcompose-compose.md](formal-hcompose-compose.md) | Wave AD2 H-COMPOSE **PROMOTE** |
 | [formal-hrouteplus-routeplus.md](formal-hrouteplus-routeplus.md) | Wave AD3 H-ROUTEPLUS **PROMOTE** |
 | [formal-hdeplplus-deplplus.md](formal-hdeplplus-deplplus.md) | Wave AD4 H-DEPLPLUS **PROMOTE** |
+| [wave-ad-hitl.md](wave-ad-hitl.md) | Wave AD5 AD-HITL-10 **PROMOTE** |
 | [depl-ad.md](depl-ad.md) | AC+AD deploy overview (H-DEPLPLUS) |
 | [wave-ab-summary.md](wave-ab-summary.md) | Wave AB **COMPLETE** public closeout |
 | [ab-freeze.md](ab-freeze.md) | Wave AB **FROZEN** — no Wave AC invent |
