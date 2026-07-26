@@ -41,6 +41,7 @@
 | Wave AB2 ASKFAST | [formal-haskfast-askfast.md](formal-haskfast-askfast.md) **PROMOTE** (`npm run nano:askfast`) — wall↓≥20% compose |
 | Wave AB3 LONGAPP | [formal-hlongapp-longapp.md](formal-hlongapp-longapp.md) **PROMOTE** (`npm run nano:longapp`) — L_eff≫W curated |
 | Wave AB4 ASKSMART | [formal-hasksmart-asksmart.md](formal-hasksmart-asksmart.md) **PROMOTE** (`npm run nano:asksmart`) — >SERVEALIGN 3.4 |
+| Wave AB5 REALAPP | [formal-hrealapp-realapp.md](formal-hrealapp-realapp.md) **PROMOTE** (`npm run nano:realapp`) — app-known + app-longdoc |
 
 ## Policy
 
@@ -48,4 +49,4 @@
 Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.md](wave-x-summary.md) → [`archive/`](archive/).  
 **Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md). **Wave Z COMPLETE:** [wave-z-hitl.md](wave-z-hitl.md) — PFB ≠ interactive LM; wrap + error-bank. **NO-REOPEN:** [lab-freeze.md](lab-freeze.md).  
 **Wave AA COMPLETE:** AA0 [H-WRAPBANK PROMOTE](formal-hwrapbank-wrapbank.md); AA1 [H-PARA HOLD](formal-hpara-para.md); AA2 [H-SERVEALIGN HOLD](formal-hservealign-servealign.md); AA3 [H-ZPREF KILL](formal-hzpref-zpref.md); AA4 [H-DEPL-DOC PROMOTE](formal-hdepldoc-depl-doc.md); AA5 [AA-REPORT PROMOTE](wave-aa-summary.md); AA6 [AA-FREEZE PROMOTE](aa-freeze.md).  
-**Wave AB OPEN:** AB0–AB4 **PROMOTE** (SESSION · SEMWRAP · ASKFAST · LONGAPP · ASKSMART); next **AB5 H-REALAPP**.
+**Wave AB OPEN:** AB0–AB5 **PROMOTE** (SESSION · SEMWRAP · ASKFAST · LONGAPP · ASKSMART · REALAPP); next **AB6 AB-HITL-10**.

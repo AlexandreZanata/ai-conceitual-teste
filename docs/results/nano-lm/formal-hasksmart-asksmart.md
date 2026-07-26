@@ -39,4 +39,4 @@ npm run nano:asksmart
 - Trials: `results/nano-lm/wave-ab/trials/AB-ASKSMART-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_asksmart.py`
 
-Next: **AB5 H-REALAPP**.
+Next: **AB5 H-REALAPP** (**DONE** — see [formal-hrealapp-realapp.md](formal-hrealapp-realapp.md)). Next wave stage: **AB6 AB-HITL-10**.

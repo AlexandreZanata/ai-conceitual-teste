@@ -61,6 +61,7 @@
 | **H-ASKFAST** | SEMWRAP+QT+ask completion cache; AB2 **PROMOTE** (wall↓100% vs raw QT ask) |
 | **H-LONGAPP** | ROLL/SUMCACHE on curated long docs; AB3 **PROMOTE** (10/10 usable; L_eff≫W) |
 | **H-ASKSMART** | Anti-period QPFB2+BEAMKV + constrained SEMWRAP FIX; AB4 **PROMOTE** (mean 8.7 > SERVEALIGN 3.4) |
+| **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **H-SERVEALIGN** | QPFB2+BEAMKV open decode HITL; AA2 **HOLD** (beats Z1; not product bar) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
