@@ -42,4 +42,4 @@ npm run nano:ae:hitl
 - Trials: `AE-FINAL-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_ae_hitl.py`
 
-Next: **AE6 AE-REPORT**.
+Next: **AE6 AE-REPORT** (**DONE** — see [wave-ae-summary.md](wave-ae-summary.md)). Next wave stage: **AE7 AE-FREEZE**.
