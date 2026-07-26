@@ -8,6 +8,8 @@
 
 **PROMOTE** — Wave AF outcomes locked; scoped product remains **AF packaged stack** (CTXULTRA · SMARTULTRA · FASTULTRA · APPULTRA); **no Wave AG** without explicit lab-book reopen.
 
+**Reopen (2026-07-26):** Wave AG opened via `.local/pesquisa.md` §5 — AG0 SESSION **PROMOTE** ([wave-ag-session.md](wave-ag-session.md)); next AG1 H-ANTIFP. AF freeze outcomes stay locked.
+
 **Status: COMPLETE** (freeze gate).
 
 ## Locked outcomes

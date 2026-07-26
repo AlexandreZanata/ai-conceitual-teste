@@ -307,6 +307,7 @@
     "nano:af:hitl": "nano_lm/.venv/bin/python nano_lm/src/run_af_hitl.py",
     "nano:af:report": "nano_lm/.venv/bin/python nano_lm/src/run_af_report.py",
     "nano:af:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_af_freeze.py",
+    "nano:ag:session": "nano_lm/.venv/bin/python nano_lm/src/run_ag_session.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
     "nano:routeplus": "nano_lm/.venv/bin/python nano_lm/src/run_routeplus.py",

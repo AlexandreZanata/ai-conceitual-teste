@@ -57,6 +57,7 @@
 | [paper-lab-wave-af.md](paper-lab-wave-af.md) | Wave AF paper-lab (AF6) |
 | [af-freeze.md](af-freeze.md) | Wave AF7 AF-FREEZE **PROMOTE** |
 | [formal-haffreeze-af-freeze.md](formal-haffreeze-af-freeze.md) | AF-FREEZE formal |
+| [wave-ag-session.md](wave-ag-session.md) | Wave AG0 SESSION **PROMOTE** (10 held-out HITL Qs; Wave AG OPEN) |
 | [depl-af.md](depl-af.md) | AF packaged deploy routes (APPULTRA) |
 | [depl-ad.md](depl-ad.md) | AC+AD deploy overview (H-DEPLPLUS) |
 | [wave-ab-summary.md](wave-ab-summary.md) | Wave AB **COMPLETE** public closeout |
