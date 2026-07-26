@@ -1,9 +1,9 @@
-# Wave AG — anti-FP dual-arm · real answers (**RESEARCH COMPLETE**)
+# Wave AG — anti-FP dual-arm · real answers (**COMPLETE + FROZEN**)
 
-> Lab: `.local/pesquisa.md` §5 · Paper-lab: [paper-lab-wave-ag.md](paper-lab-wave-ag.md) · HITL: [wave-ag-hitl.md](wave-ag-hitl.md)  
+> Lab: `.local/pesquisa.md` §5 · Paper-lab: [paper-lab-wave-ag.md](paper-lab-wave-ag.md) · HITL: [wave-ag-hitl.md](wave-ag-hitl.md) · Freeze: [ag-freeze.md](ag-freeze.md)  
 > Parent: Wave AF **AF-FREEZE** reopen · Ship claim: **AF packaged stack** (unchanged)
 
-**Status: RESEARCH COMPLETE** (freeze = AG8) · Thesis: **Wave AG anti-FP dual-arm on 6th held-out pack: LOOKUP product ok; GENERATE below gen≥5 → documented HOLD; ship claim remains AF packaged stack — not open chat LM.**
+**Status: COMPLETE + FROZEN** · Thesis: **Wave AG anti-FP dual-arm on 6th held-out pack: LOOKUP product ok; GENERATE below gen≥5 → documented HOLD; ship claim remains AF packaged stack — not open chat LM.**
 
 ## Stage scoreboard (Cursor ASK→EVAL→FIX dual-arm)
 
@@ -17,7 +17,7 @@
 | AG5 | **H-APPREAL** | 8.33 | 1 | 0/SERVE | **0** | **HOLD** | expose LOOKUP|GENERATE + DEPL-AG |
 | AG6 | **AG-HITL-10** | 9 | 1 | 0/10 | **0** | **HOLD** | final dual-arm; ship claim=AF |
 | AG7 | **AG-REPORT** | — | — | — | **0** | **PROMOTE** | public summary + paper-lab + anti-FP |
-| AG8 | **AG-FREEZE** | — | — | — | **0** | **pending** | lock; no Wave AH invent |
+| AG8 | **AG-FREEZE** | — | — | — | **0** | **PROMOTE** | lock; no Wave AH invent |
 
 ## Anti-FP evidence (mandatory)
 

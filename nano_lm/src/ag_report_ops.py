@@ -114,7 +114,7 @@ AG_HITL_SCOREBOARD: tuple[dict[str, Any], ...] = (
         "gen_mean": None,
         "errors": None,
         "fix": 0,
-        "decision": "pending",
+        "decision": "PROMOTE",
         "note": "lock; no Wave AH invent",
     },
 )
@@ -139,6 +139,7 @@ AG_EVIDENCE: tuple[str, ...] = (
 
 AG_REPORT_MARKERS: tuple[str, ...] = (
     "COMPLETE",
+    "FROZEN",
     "H-ANTIFP",
     "H-CTXREAL",
     "H-SMARTREAL",
@@ -221,15 +222,17 @@ def antifp_section_ok(text: str) -> bool:
 
 def render_wave_ag_summary() -> str:
     lines = [
-        "# Wave AG — anti-FP dual-arm · real answers (**RESEARCH COMPLETE**)",
+        "# Wave AG — anti-FP dual-arm · real answers "
+        "(**COMPLETE + FROZEN**)",
         "",
         "> Lab: `.local/pesquisa.md` §5 · Paper-lab: "
         "[paper-lab-wave-ag.md](paper-lab-wave-ag.md) · "
-        "HITL: [wave-ag-hitl.md](wave-ag-hitl.md)  ",
+        "HITL: [wave-ag-hitl.md](wave-ag-hitl.md) · "
+        "Freeze: [ag-freeze.md](ag-freeze.md)  ",
         "> Parent: Wave AF **AF-FREEZE** reopen · Ship claim: "
         "**AF packaged stack** (unchanged)",
         "",
-        "**Status: RESEARCH COMPLETE** (freeze = AG8) · Thesis: **"
+        "**Status: COMPLETE + FROZEN** · Thesis: **"
         + AG_THESIS
         + ".**",
         "",
@@ -312,8 +315,9 @@ def render_paper_lab_wave_ag() -> str:
             "",
             "> Companion to [wave-ag-summary.md](wave-ag-summary.md). "
             "English lab note.  ",
-            "> **Status: RESEARCH COMPLETE** · Final HITL: "
+            "> **Status: COMPLETE + FROZEN** · Final HITL: "
             "[wave-ag-hitl.md](wave-ag-hitl.md) · "
+            "Freeze: [ag-freeze.md](ag-freeze.md) · "
             "Parent: [af-freeze.md](af-freeze.md) · "
             "Ship: **AF packaged stack**",
             "",
@@ -340,6 +344,7 @@ def render_paper_lab_wave_ag() -> str:
             "| H-FASTREAL | Gen wall↓ vs AF raw; ≠ LOOKUP speed IQ |",
             "| H-APPREAL | Apps expose LOOKUP\\|GENERATE + DEPL-AG → HOLD |",
             "| AG-HITL-10 | Final L=9.0 G=1.0 → HOLD; ship=AF |",
+            "| AG-FREEZE | Locked; no Wave AH invent without reopen |",
             "",
             "## Anti-FP takeaway",
             "",
@@ -356,6 +361,7 @@ def render_paper_lab_wave_ag() -> str:
             "",
             "- [wave-ag-summary.md](wave-ag-summary.md) · "
             "[wave-ag-hitl.md](wave-ag-hitl.md) · "
+            "[ag-freeze.md](ag-freeze.md) · "
             "[wave-af-summary.md](wave-af-summary.md)  ",
             "- Formals: ANTIFP · CTXREAL · SMARTREAL · FASTREAL · APPREAL  ",
             "- Deploy: [depl-ag.md](depl-ag.md) · Apps: "
