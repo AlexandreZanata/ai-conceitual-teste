@@ -55,6 +55,7 @@
 | **H-ZPREF** | Prefer gold≻raw (DPO-lite); AA3 **KILL** — story < parent−ε (wrap still ok) |
 | **H-DEPL-DOC** | One-pager sync to DEPL-Y + Wave AA outcomes (AA4 **PROMOTE**) |
 | **AA-REPORT** | Wave AA public closeout (summary + paper-lab + wrap smoke; **PROMOTE**) |
+| **AA-FREEZE** | Wave AA NO-REOPEN lock after report; no Wave AB without reopen (**PROMOTE**) |
 | **H-SERVEALIGN** | QPFB2+BEAMKV open decode HITL; AA2 **HOLD** (beats Z1; not product bar) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 

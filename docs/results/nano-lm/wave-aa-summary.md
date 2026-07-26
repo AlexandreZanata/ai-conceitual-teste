@@ -14,6 +14,8 @@
 | AA2 | **H-SERVEALIGN** | **HOLD** | mean **3.4** beats Z1; not pass bar — [formal](formal-hservealign-servealign.md) |
 | AA3 | **H-ZPREF** | **KILL** | story < parent−ε — [formal](formal-hzpref-zpref.md) |
 | AA4 | **H-DEPL-DOC** | **PROMOTE** | one-pagers ↔ DEPL-Y — [formal](formal-hdepldoc-depl-doc.md) |
+| AA5 | **AA-REPORT** | **PROMOTE** | [summary](wave-aa-summary.md) · [paper-lab](paper-lab-wave-aa.md) |
+| AA6 | **AA-FREEZE** | **PROMOTE** | NO Wave AB invent — [aa-freeze.md](aa-freeze.md) · [formal](formal-haafreeze-aa-freeze.md) |
 
 ## Honest product claims
 
@@ -29,6 +31,7 @@
 
 ```bash
 npm run nano:aa:report
+npm run nano:aa:freeze
 npm run nano:z:ask -- --wrap --question "…"
 npm run nano:wrapbank
 npm run nano:para
@@ -39,4 +42,4 @@ npm run nano:depl-doc
 
 ## Do not reopen
 
-QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZERR/SERVEALIGN-as-chat.
+QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZERR/SERVEALIGN-as-chat · invent Wave AB without lab-book reopen.

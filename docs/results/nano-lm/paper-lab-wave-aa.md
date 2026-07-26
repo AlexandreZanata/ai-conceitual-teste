@@ -1,6 +1,7 @@
 # Paper-lab — Wave AA (post-freeze product expansion)
 
-> Companion to [wave-aa-summary.md](wave-aa-summary.md). English lab note for external readers.
+> Companion to [wave-aa-summary.md](wave-aa-summary.md). English lab note for external readers.  
+> **Status: COMPLETE** · Freeze: [aa-freeze.md](aa-freeze.md)
 
 ## Question
 
