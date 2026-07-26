@@ -59,4 +59,4 @@ npm run nano:test && npm run verify
 - Trials: `AG-FINAL-LOOKUP-HITL-01…10` · `AG-FINAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ag_hitl.py`
 
-Next: **AG7 AG-REPORT**.
+Next: **AG8 AG-FREEZE**.
