@@ -65,4 +65,4 @@ npm run nano:test && npm run verify
 - Trials: `AI-FINAL-LOOKUP-HITL-01…10` · `AI-FINAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ai_hitl.py`
 
-Next: **AI7 AI-REPORT** (**DONE — PROMOTE** — [wave-ai-summary.md](wave-ai-summary.md) · [paper-lab-wave-ai.md](paper-lab-wave-ai.md)). Next: **AI8 AI-FREEZE**.
+Next: **AI7 AI-REPORT** (**DONE — PROMOTE** — [wave-ai-summary.md](wave-ai-summary.md) · [paper-lab-wave-ai.md](paper-lab-wave-ai.md)). **AI8 AI-FREEZE** (**DONE — PROMOTE** — [ai-freeze.md](ai-freeze.md) · [formal-haifreeze-ai-freeze.md](formal-haifreeze-ai-freeze.md)).
