@@ -25,6 +25,8 @@
 | [wave-ac-hitl.md](wave-ac-hitl.md) | Wave AC5 AC-HITL-10 **PROMOTE** (final mean 9.0) |
 | [wave-ac-summary.md](wave-ac-summary.md) | Wave AC **COMPLETE** public closeout |
 | [paper-lab-wave-ac.md](paper-lab-wave-ac.md) | Paper-lab one-pager for Wave AC |
+| [ac-freeze.md](ac-freeze.md) | Wave AC **FROZEN** — no Wave AD invent |
+| [formal-hacfreeze-ac-freeze.md](formal-hacfreeze-ac-freeze.md) | AC-FREEZE formal |
 | [wave-ab-summary.md](wave-ab-summary.md) | Wave AB **COMPLETE** public closeout |
 | [ab-freeze.md](ab-freeze.md) | Wave AB **FROZEN** — no Wave AC invent |
 | [formal-habfreeze-ab-freeze.md](formal-habfreeze-ab-freeze.md) | AB-FREEZE formal |

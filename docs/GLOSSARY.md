@@ -66,6 +66,7 @@
 | **H-APPPLUS** | Packaged apps + **app-howto**; AC4 **PROMOTE** (3/3 apps; mean 8.6) |
 | **AC-HITL-10** | Final Wave AC pack verify on declared stack; AC5 **PROMOTE** (mean 9.0 · errors 0/10) |
 | **AC-REPORT** | Public Wave AC closeout + FIX scoreboard; AC6 **PROMOTE** — [wave-ac-summary.md](results/nano-lm/wave-ac-summary.md) |
+| **AC-FREEZE** | Lock Wave AC outcomes; no Wave AD invent; **PROMOTE** — [ac-freeze.md](results/nano-lm/ac-freeze.md) |
 | **H-ASKSMART** | Anti-period QPFB2+BEAMKV + constrained SEMWRAP FIX; AB4 **PROMOTE** (mean 8.7 > SERVEALIGN 3.4) |
 | **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **AB-HITL-10** | Final Wave AB pack verify on declared stack; AB6 **PROMOTE** (mean 9.0 · errors 0/10) |

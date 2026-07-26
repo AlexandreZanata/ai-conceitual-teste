@@ -1,7 +1,7 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Z COMPLETE** · **Wave AA COMPLETE** · **Wave AB COMPLETE + FROZEN**).  
+> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Z COMPLETE** · **Wave AA COMPLETE** · **Wave AB COMPLETE + FROZEN** · **Wave AC COMPLETE + FROZEN**).  
 > Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md) · Wave AA: [wave-aa-summary.md](wave-aa-summary.md) · Wave AB0: [wave-ab-session.md](wave-ab-session.md) · HITL: [wave-z-hitl.md](wave-z-hitl.md) · WRAPBANK: [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md) · PARA: [formal-hpara-para.md](formal-hpara-para.md) · SERVEALIGN: [formal-hservealign-servealign.md](formal-hservealign-servealign.md) · ZPREF: [formal-hzpref-zpref.md](formal-hzpref-zpref.md) · DEPL-DOC: [formal-hdepldoc-depl-doc.md](formal-hdepldoc-depl-doc.md).
 
 ## Official tips
@@ -99,6 +99,6 @@ Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PR
 **Wave Z COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md) (PFB ≠ interactive LM; **H-ZWRAP** + error-bank) · [wave-z-summary.md](wave-z-summary.md) · [paper-lab-wave-z.md](paper-lab-wave-z.md) · [lab-freeze.md](lab-freeze.md).  
 **Wave AA COMPLETE** — AA0 **H-WRAPBANK PROMOTE** · AA1 **H-PARA HOLD** · AA2 **H-SERVEALIGN HOLD** · AA3 **H-ZPREF KILL** · AA4 **H-DEPL-DOC PROMOTE** · AA5 **AA-REPORT PROMOTE** · AA6 **AA-FREEZE PROMOTE** — [wave-aa-summary.md](wave-aa-summary.md) · [aa-freeze.md](aa-freeze.md).  
 **Wave AB COMPLETE + FROZEN** — [wave-ab-summary.md](wave-ab-summary.md) · [ab-freeze.md](ab-freeze.md) · [paper-lab-wave-ab.md](paper-lab-wave-ab.md).  
-**Wave AC COMPLETE** (freeze next) — [wave-ac-summary.md](wave-ac-summary.md) · [paper-lab-wave-ac.md](paper-lab-wave-ac.md) · [wave-ac-hitl.md](wave-ac-hitl.md) · [formal-hctxplus-ctxplus.md](formal-hctxplus-ctxplus.md) · [formal-hsmartplus-smartplus.md](formal-hsmartplus-smartplus.md) · [formal-hfastplus-fastplus.md](formal-hfastplus-fastplus.md) · [formal-happplus-appplus.md](formal-happplus-appplus.md).
+**Wave AC COMPLETE + FROZEN** — **H-CTXPLUS** · **H-SMARTPLUS** · **H-FASTPLUS** · **H-APPPLUS** · [wave-ac-summary.md](wave-ac-summary.md) · [ac-freeze.md](ac-freeze.md) · [paper-lab-wave-ac.md](paper-lab-wave-ac.md) · [wave-ac-hitl.md](wave-ac-hitl.md) · [formal-hctxplus-ctxplus.md](formal-hctxplus-ctxplus.md) · [formal-hsmartplus-smartplus.md](formal-hsmartplus-smartplus.md) · [formal-hfastplus-fastplus.md](formal-hfastplus-fastplus.md) · [formal-happplus-appplus.md](formal-happplus-appplus.md).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

@@ -45,4 +45,4 @@ npm run nano:appplus -- --app app-longdoc
 - Trials: `AC-APPPLUS-{KNOWN,LONGDOC,HOWTO}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_appplus.py`
 
-Next: **AC5 AC-HITL-10** (**DONE** — see [wave-ac-hitl.md](wave-ac-hitl.md)). Report: [wave-ac-summary.md](wave-ac-summary.md). Next wave stage: **AC7 AC-FREEZE**.
+Next: **AC5 AC-HITL-10** (**DONE** — see [wave-ac-hitl.md](wave-ac-hitl.md)). Report: [wave-ac-summary.md](wave-ac-summary.md). **Wave AC COMPLETE + FROZEN** — [ac-freeze.md](ac-freeze.md).

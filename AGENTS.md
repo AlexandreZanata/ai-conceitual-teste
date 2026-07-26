@@ -26,7 +26,7 @@ When rules conflict with existing code, **rules prevail** — unless the user ex
 2. `agent-rules/00-core/size-and-complexity-limits.md` — **80 / 200 / ≤10**
 3. `docs/ARCHITECTURE.md` + `docs/GLOSSARY.md`
 4. `docs/NANO-STUDENT-AGENDA.md` + `docs/results/nano-lm/champion-card.md` + `RECIPES.md`
-5. `.local/pesquisa.md` (lab **NO-REOPEN** KILLs; Waves W–AB **COMPLETE + FROZEN**; [aa-freeze.md](docs/results/nano-lm/aa-freeze.md) · [ab-freeze.md](docs/results/nano-lm/ab-freeze.md) · [wave-ab-summary.md](docs/results/nano-lm/wave-ab-summary.md))
+5. `.local/pesquisa.md` (lab **NO-REOPEN** KILLs; Waves W–AC **COMPLETE + FROZEN**; [aa-freeze.md](docs/results/nano-lm/aa-freeze.md) · [ab-freeze.md](docs/results/nano-lm/ab-freeze.md) · [ac-freeze.md](docs/results/nano-lm/ac-freeze.md) · [wave-ac-summary.md](docs/results/nano-lm/wave-ac-summary.md) · [wave-ab-summary.md](docs/results/nano-lm/wave-ab-summary.md))
 6. `nano_lm/data/CURATED-SOURCES.md` before data work
 7. Wave AC session: `.local/wave-ac/SESSION.md` · Wave AB: `.local/wave-ab/SESSION.md` · Wave AA: `.local/wave-aa/SESSION.md` · Wave Z: `.local/wave-z/SESSION.md`
 
@@ -47,8 +47,7 @@ npm run nano:test && npm run verify
 - **Wave Z COMPLETE** — [wave-z-hitl.md](docs/results/nano-lm/wave-z-hitl.md) · **LAB-FREEZE** [lab-freeze.md](docs/results/nano-lm/lab-freeze.md).  
 - **Wave AA COMPLETE + FROZEN** — [wave-aa-summary.md](docs/results/nano-lm/wave-aa-summary.md) · [aa-freeze.md](docs/results/nano-lm/aa-freeze.md) (`npm run nano:aa:freeze`).
 - **Wave AB COMPLETE + FROZEN** — [wave-ab-summary.md](docs/results/nano-lm/wave-ab-summary.md) · [ab-freeze.md](docs/results/nano-lm/ab-freeze.md) · [paper-lab-wave-ab.md](docs/results/nano-lm/paper-lab-wave-ab.md) (`npm run nano:ab:freeze`).
-- **Wave AC COMPLETE** (freeze next) — [wave-ac-summary.md](docs/results/nano-lm/wave-ac-summary.md) · [paper-lab-wave-ac.md](docs/results/nano-lm/paper-lab-wave-ac.md) · [wave-ac-hitl.md](docs/results/nano-lm/wave-ac-hitl.md) · [formal-happplus-appplus.md](docs/results/nano-lm/formal-happplus-appplus.md) (`npm run nano:ac:report` · `npm run nano:ac:hitl` · `npm run nano:appplus`).
-- **Wave AB COMPLETE** — [wave-ab-summary.md](docs/results/nano-lm/wave-ab-summary.md) · [paper-lab-wave-ab.md](docs/results/nano-lm/paper-lab-wave-ab.md).
+- **Wave AC COMPLETE + FROZEN** — [wave-ac-summary.md](docs/results/nano-lm/wave-ac-summary.md) · [ac-freeze.md](docs/results/nano-lm/ac-freeze.md) · [paper-lab-wave-ac.md](docs/results/nano-lm/paper-lab-wave-ac.md) · [wave-ac-hitl.md](docs/results/nano-lm/wave-ac-hitl.md) (`npm run nano:ac:freeze`).
 
 ---
 

@@ -39,4 +39,4 @@ npm run nano:ac:hitl
 - Trials: `AC-FINAL-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_ac_hitl.py`
 
-Next: **AC6 AC-REPORT** (**DONE** — see [wave-ac-summary.md](wave-ac-summary.md)). Next wave stage: **AC7 AC-FREEZE**.
+Next: **AC6 AC-REPORT** (**DONE** — see [wave-ac-summary.md](wave-ac-summary.md)). **Wave AC COMPLETE + FROZEN** — [ac-freeze.md](ac-freeze.md).

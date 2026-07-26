@@ -95,8 +95,8 @@ AC_HITL_SCOREBOARD: tuple[dict[str, Any], ...] = (
         "mean": None,
         "errors": None,
         "fix": 0,
-        "decision": "NEXT",
-        "note": "lock; no Wave AD invent",
+        "decision": "PROMOTE",
+        "note": "no Wave AD invent",
     },
 )
 
@@ -222,6 +222,7 @@ def render_wave_ac_summary() -> str:
             "npm run nano:fastplus",
             "npm run nano:appplus",
             "npm run nano:ac:hitl",
+            "npm run nano:ac:freeze",
             "```",
             "",
             "## Do not reopen",

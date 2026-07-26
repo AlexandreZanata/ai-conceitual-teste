@@ -50,4 +50,4 @@ Contract: `nano_lm/tests/test_ac_session.py`.
 - After AC5 **PROMOTE**: ship claim is **scoped AC packaged apps** (app-known + app-howto + app-longdoc) — still **not** open chat LM.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AD.
 
-Next after AC0 was **AC1 H-CTXPLUS**. Final pack gate: [wave-ac-hitl.md](wave-ac-hitl.md). Public closeout: [wave-ac-summary.md](wave-ac-summary.md). Wave stage now: **AC7 AC-FREEZE**.
+Next after AC0 was **AC1 H-CTXPLUS**. Final pack gate: [wave-ac-hitl.md](wave-ac-hitl.md). Public closeout: [wave-ac-summary.md](wave-ac-summary.md). **Wave AC COMPLETE + FROZEN** — [ac-freeze.md](ac-freeze.md).

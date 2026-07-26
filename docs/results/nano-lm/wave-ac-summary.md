@@ -16,7 +16,7 @@
 | AC4 | **H-APPPLUS** | 8.6 | 0 | **11** | **PROMOTE** | app-howto + known/longdoc |
 | AC5 | **AC-HITL-10** | 9 | 0 | **0** | **PROMOTE** | final pack gate |
 | AC6 | **AC-REPORT** | — | — | **0** | **PROMOTE** | public summary + paper-lab |
-| AC7 | **AC-FREEZE** | — | — | **0** | **NEXT** | lock; no Wave AD invent |
+| AC7 | **AC-FREEZE** | — | — | **0** | **PROMOTE** | no Wave AD invent |
 
 ## Honest product claims
 
@@ -39,6 +39,7 @@ npm run nano:smartplus
 npm run nano:fastplus
 npm run nano:appplus
 npm run nano:ac:hitl
+npm run nano:ac:freeze
 ```
 
 ## Do not reopen
