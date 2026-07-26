@@ -76,4 +76,4 @@ npm run nano:test && npm run verify
 - Trials: `AJ-FASTPEAK-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_fastpeak.py`
 
-Next: **AJ5 H-APPPEAK**.
+Next: **AJ5 H-APPPEAK** (**DONE — PROMOTE** — [formal-happpeak-apppeak.md](formal-happpeak-apppeak.md)). Next: **AJ6 AJ-HITL-10**.

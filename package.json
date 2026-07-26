@@ -368,6 +368,8 @@
     "nano:aj:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:fastpeak": "nano_lm/.venv/bin/python nano_lm/src/run_fastpeak.py",
     "nano:aj:fastpeak": "nano_lm/.venv/bin/python nano_lm/src/run_fastpeak.py",
+    "nano:apppeak": "nano_lm/.venv/bin/python nano_lm/src/run_apppeak.py",
+    "nano:aj:apppeak": "nano_lm/.venv/bin/python nano_lm/src/run_apppeak.py",
     "nano:ai-session": "nano_lm/.venv/bin/python nano_lm/src/run_ai_session.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
