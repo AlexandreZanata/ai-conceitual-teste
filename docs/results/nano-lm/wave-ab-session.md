@@ -7,7 +7,7 @@
 ## Decision
 
 **PROMOTE** — Freeze **10 real HITL questions** (source_id + app_id + gold) for every AB model/stack.  
-**Status: COMPLETE** (AB0). Next: **AB1 H-SEMWRAP** with Cursor **ASK→EVAL→FIX×10**.
+**Status: COMPLETE** (AB0). **AB1 H-SEMWRAP PROMOTE** — [formal-hsemwrap-semwrap.md](formal-hsemwrap-semwrap.md). Next: **AB2 H-ASKFAST**.
 
 ## Mix (§11.5)
 

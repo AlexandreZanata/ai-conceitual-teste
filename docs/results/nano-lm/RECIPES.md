@@ -13,7 +13,7 @@
 | **Code-smart (btc)** | @128 | **H-ABS-BPFB** | — |
 | **Long context** | L>128 | **H-ROLL / H-SUMCACHE / H-GPFB4-LONG** (+ **H-PFB256**) | STREAM / KVCACHE-Q / GENCACHE / naive CTX |
 | **GENC ∘ PFB** | serve genome | **H-ABS-GPFB4** (K=4 only) | GPFB K=2 (**KILL**) |
-| **Known-ask HITL** | demo Q&A | **`--wrap` LOOKUP** (`champion-wrap-v0`) — **H-ZWRAP** + **H-WRAPBANK** | open chat LM / ZERR-as-chat |
+| **Known-ask HITL** | demo Q&A | **`--wrap` / `--semwrap`** (`champion-wrap-v0`) — **H-ZWRAP** + **H-WRAPBANK** + **H-SEMWRAP** | open chat LM / ZERR-as-chat |
 | **Story-safe CE** | train artifact | **H-ZERR** (`zerr-qpfb2-v0`) | interactive Q&A without wrap |
 | **Cheaper train steps** | train | **H-TPACK** + **H-AMORT** | ETRAIN N=1 / MIXD |
 | **Quality@wall** | in-harness | **H-QPACK** | QPACK OOD (XFER **KILL**) |
@@ -37,6 +37,7 @@
 | Wave AA REPORT | [wave-aa-summary.md](wave-aa-summary.md) · [paper-lab-wave-aa.md](paper-lab-wave-aa.md) **PROMOTE** (`npm run nano:aa:report`) |
 | Wave AA FREEZE | [aa-freeze.md](aa-freeze.md) **PROMOTE** (`npm run nano:aa:freeze`) — Wave AB only via §8.3 reopen |
 | Wave AB0 SESSION | [wave-ab-session.md](wave-ab-session.md) **PROMOTE** (`npm run nano:ab:session`) — 10 real HITL Qs frozen |
+| Wave AB1 SEMWRAP | [formal-hsemwrap-semwrap.md](formal-hsemwrap-semwrap.md) **PROMOTE** (`npm run nano:semwrap`) — fuzzy near-known ask |
 
 ## Policy
 
@@ -44,4 +45,4 @@
 Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.md](wave-x-summary.md) → [`archive/`](archive/).  
 **Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md). **Wave Z COMPLETE:** [wave-z-hitl.md](wave-z-hitl.md) — PFB ≠ interactive LM; wrap + error-bank. **NO-REOPEN:** [lab-freeze.md](lab-freeze.md).  
 **Wave AA COMPLETE:** AA0 [H-WRAPBANK PROMOTE](formal-hwrapbank-wrapbank.md); AA1 [H-PARA HOLD](formal-hpara-para.md); AA2 [H-SERVEALIGN HOLD](formal-hservealign-servealign.md); AA3 [H-ZPREF KILL](formal-hzpref-zpref.md); AA4 [H-DEPL-DOC PROMOTE](formal-hdepldoc-depl-doc.md); AA5 [AA-REPORT PROMOTE](wave-aa-summary.md); AA6 [AA-FREEZE PROMOTE](aa-freeze.md).  
-**Wave AB OPEN:** AB0 [SESSION PROMOTE](wave-ab-session.md); next **AB1 H-SEMWRAP**.
+**Wave AB OPEN:** AB0 [SESSION PROMOTE](wave-ab-session.md); AB1 [H-SEMWRAP PROMOTE](formal-hsemwrap-semwrap.md); next **AB2 H-ASKFAST**.

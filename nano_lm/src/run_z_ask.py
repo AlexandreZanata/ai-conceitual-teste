@@ -70,7 +70,12 @@ def _ensure_wrap_card(root: Path) -> None:
 
 
 def _lookup_payload(
-    recipe: dict[str, Any], question: str, gold: str, seed: int
+    recipe: dict[str, Any],
+    question: str,
+    gold: str,
+    seed: int,
+    *,
+    mode: str = "WRAP_LOOKUP",
 ) -> dict[str, Any]:
     return {
         "recipe_id": recipe["recipe_id"],
@@ -80,7 +85,7 @@ def _lookup_payload(
         "wall_ms": 0.0,
         "n_new": 0,
         "seed": int(seed),
-        "mode": "WRAP_LOOKUP",
+        "mode": mode,
         "elapsed_s": 0.0,
         "wrap_id": WRAP_ID,
     }
@@ -135,11 +140,13 @@ def ask_once(
     root: Path | None = None,
     seed: int = 0,
     wrap: bool = False,
+    semwrap: bool = False,
     bank_path: Path | None = None,
+    curated_root: Path | None = None,
 ) -> dict[str, Any]:
     """
     GIVEN exported champion + question
-    WHEN decoding QT∘EARLY n=1 (optional Z2 wrap)
+    WHEN decoding QT∘EARLY n=1 (optional Z2 wrap / AB1 SEMWRAP)
     THEN return completion + wall_ms + recipe_id (no teacher self-grade).
     """
     return ask_many(
@@ -147,7 +154,9 @@ def ask_once(
         root=root,
         seed=seed,
         wrap=wrap,
+        semwrap=semwrap,
         bank_path=bank_path,
+        curated_root=curated_root,
     )[0]
 
 
@@ -158,15 +167,30 @@ def _fill_lookups(
     bank: list[dict[str, Any]],
     seed: int,
     wrap: bool,
+    semwrap: bool,
+    curated_root: Path | None,
 ) -> tuple[list[dict[str, Any] | None], list[tuple[int, str]]]:
     out: list[dict[str, Any] | None] = [None] * len(questions)
     pending: list[tuple[int, str]] = []
     for i, q in enumerate(questions):
-        if wrap:
+        if wrap or semwrap:
             gold = lookup_gold(q, bank)
             if gold is not None:
                 out[i] = _lookup_payload(recipe, q, gold, seed)
                 continue
+            if semwrap:
+                from semwrap_ops import semantic_lookup
+
+                fuzzy, meta = semantic_lookup(
+                    q, bank, curated_root=curated_root
+                )
+                if fuzzy is not None:
+                    payload = _lookup_payload(
+                        recipe, q, fuzzy, seed, mode="SEMWRAP_LOOKUP"
+                    )
+                    payload["semwrap"] = meta
+                    out[i] = payload
+                    continue
         pending.append((i, q))
     return out, pending
 
@@ -177,11 +201,13 @@ def ask_many(
     root: Path | None = None,
     seed: int = 0,
     wrap: bool = False,
+    semwrap: bool = False,
     bank_path: Path | None = None,
+    curated_root: Path | None = None,
 ) -> list[dict[str, Any]]:
     """
     GIVEN exported champion + N questions
-    WHEN one CUDA load (wrap: bank lookup then few-shot decode)
+    WHEN one CUDA load (wrap/SEMWRAP: bank lookup then few-shot decode)
     THEN return N payloads in order (no teacher self-grade).
     """
     if not questions:
@@ -190,7 +216,8 @@ def ask_many(
     recipe = _load_recipe(champ)
     raw = _load_raw_gene(champ, recipe)
     bank = load_bank_rows(Path(bank_path) if bank_path else _BANK)
-    if wrap:
+    use_wrap = bool(wrap or semwrap)
+    if use_wrap:
         _ensure_wrap_card(champ)
         gene = wrap_ask_gene(raw)
         temperature = float(gene["temperature"])
@@ -203,7 +230,13 @@ def ask_many(
         mode_decode = "QT+EARLY n=1"
 
     out, pending = _fill_lookups(
-        questions, recipe=recipe, bank=bank, seed=seed, wrap=wrap
+        questions,
+        recipe=recipe,
+        bank=bank,
+        seed=seed,
+        wrap=use_wrap,
+        semwrap=bool(semwrap),
+        curated_root=curated_root,
     )
     if not pending:
         return [p for p in out if p is not None]  # type: ignore[misc]
@@ -217,7 +250,7 @@ def ask_many(
     qt.to(device)
     try:
         for i, q in pending:
-            prompt = build_fewshot_prompt(q, bank, k=3) if wrap else q
+            prompt = build_fewshot_prompt(q, bank, k=3) if use_wrap else q
             out[i] = _decode_one(
                 qt=qt,
                 tok=tok,
@@ -251,6 +284,7 @@ def main() -> int:
     ap.add_argument("--trial", default="")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--wrap", action="store_true")
+    ap.add_argument("--semwrap", action="store_true")
     ap.add_argument("--bank", type=Path, default=_BANK)
     ap.add_argument("--root", type=Path, default=_CHAMPION)
     ap.add_argument("--out", type=Path, default=None)
@@ -262,7 +296,9 @@ def main() -> int:
             root=args.root,
             seed=int(args.seed),
             wrap=bool(args.wrap),
+            semwrap=bool(args.semwrap),
             bank_path=args.bank,
+            curated_root=REPO / "nano_lm/data/curated",
         )
     except (OSError, RuntimeError, ValueError) as exc:
         print(json.dumps({"ok": False, "error": str(exc)}), file=sys.stderr)

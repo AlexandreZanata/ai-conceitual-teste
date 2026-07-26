@@ -57,6 +57,7 @@
 | **AA-REPORT** | Wave AA public closeout (summary + paper-lab + wrap smoke; **PROMOTE**) |
 | **AA-FREEZE** | Wave AA NO-REOPEN lock after report; Wave AB only via explicit §8.3 reopen (**PROMOTE**) |
 | **AB0-SESSION** | Freeze 10 real HITL asks (source_id + app_id) for Wave AB (**PROMOTE**) |
+| **H-SEMWRAP** | Fuzzy/semantic recall over wrap bank (+ curated boost); AB1 **PROMOTE** (mean 9.0; 0 false-hit) |
 | **H-SERVEALIGN** | QPFB2+BEAMKV open decode HITL; AA2 **HOLD** (beats Z1; not product bar) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
