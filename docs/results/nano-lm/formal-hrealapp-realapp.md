@@ -43,4 +43,4 @@ npm run nano:realapp -- --app app-longdoc
 - Trials: `AB-REALAPP-KNOWN-HITL-01…10` · `AB-REALAPP-LONGDOC-HITL-01…10`  
 - Contract: `nano_lm/tests/test_realapp.py`
 
-Next: **AB6 AB-HITL-10** (final pack gate mean ≥7.0 · errors ≤3).
+Next: **AB6 AB-HITL-10** (**DONE** — see [wave-ab-hitl.md](wave-ab-hitl.md)). Next wave stage: **AB7 AB-REPORT**.

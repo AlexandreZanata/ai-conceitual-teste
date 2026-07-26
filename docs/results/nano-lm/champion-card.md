@@ -61,6 +61,7 @@ npm run nano:askfast
 npm run nano:longapp
 npm run nano:asksmart
 npm run nano:realapp
+npm run nano:ab:hitl
 npm run nano:para
 npm run nano:zpref
 npm run nano:depl-doc
@@ -90,6 +91,6 @@ Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PR
 **Wave Y COMPLETE** — [wave-y-summary.md](wave-y-summary.md) (GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**).  
 **Wave Z COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md) (PFB ≠ interactive LM; **H-ZWRAP** + error-bank) · [wave-z-summary.md](wave-z-summary.md) · [paper-lab-wave-z.md](paper-lab-wave-z.md) · [lab-freeze.md](lab-freeze.md).  
 **Wave AA COMPLETE** — AA0 **H-WRAPBANK PROMOTE** · AA1 **H-PARA HOLD** · AA2 **H-SERVEALIGN HOLD** · AA3 **H-ZPREF KILL** · AA4 **H-DEPL-DOC PROMOTE** · AA5 **AA-REPORT PROMOTE** · AA6 **AA-FREEZE PROMOTE** — [wave-aa-summary.md](wave-aa-summary.md) · [aa-freeze.md](aa-freeze.md).  
-**Wave AB OPEN** — AB0–AB5 **PROMOTE** — [formal-hrealapp-realapp.md](formal-hrealapp-realapp.md); next **AB6 AB-HITL-10**.
+**Wave AB OPEN** — AB0–AB6 **PROMOTE** — [wave-ab-hitl.md](wave-ab-hitl.md); next **AB7 AB-REPORT**.
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).
