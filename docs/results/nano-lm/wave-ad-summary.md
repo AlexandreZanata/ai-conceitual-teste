@@ -16,7 +16,7 @@
 | AD4 | **H-DEPLPLUS** | 9 | 0 | **0** | **PROMOTE** | pages 4/4; DEPL honest |
 | AD5 | **AD-HITL-10** | 9 | 0 | **0** | **PROMOTE** | final pack gate |
 | AD6 | **AD-REPORT** | — | — | **0** | **PROMOTE** | public summary + paper-lab |
-| AD7 | **AD-FREEZE** | — | — | **0** | **pending** | lock; no Wave AE invent |
+| AD7 | **AD-FREEZE** | — | — | **0** | **PROMOTE** | lock; no Wave AE invent |
 
 ## Honest product claims
 

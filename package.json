@@ -293,6 +293,7 @@
     "nano:deplplus": "nano_lm/.venv/bin/python nano_lm/src/run_deplplus.py",
     "nano:ad:hitl": "nano_lm/.venv/bin/python nano_lm/src/run_ad_hitl.py",
     "nano:ad:report": "nano_lm/.venv/bin/python nano_lm/src/run_ad_report.py",
+    "nano:ad:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ad_freeze.py",
     "nano:btc": "nano_lm/.venv/bin/python nano_lm/src/run_btc_smoke.py",
     "nano:btc:report": "nano_lm/.venv/bin/python nano_lm/src/write_hbtc_report.py",
     "nano:formal:hbtc": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hbtc.py",

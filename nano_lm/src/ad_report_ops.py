@@ -94,11 +94,10 @@ AD_HITL_SCOREBOARD: tuple[dict[str, Any], ...] = (
         "mean": None,
         "errors": None,
         "fix": 0,
-        "decision": "pending",
+        "decision": "PROMOTE",
         "note": "lock; no Wave AE invent",
     },
 )
-
 AD_EVIDENCE: tuple[str, ...] = (
     "docs/results/nano-lm/wave-ad-session.md",
     "docs/results/nano-lm/formal-hhardpara-hardpara.md",

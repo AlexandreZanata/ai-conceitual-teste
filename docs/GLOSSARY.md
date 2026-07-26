@@ -74,6 +74,7 @@
 | **H-DEPLPLUS** | AC+AD DEPL one-pagers + smoke; AD4 **PROMOTE** (pages 4/4; mean 9.0) |
 | **AD-HITL-10** | Final AD pack HITL on declared stack; AD5 **PROMOTE** (mean 9.0; errors 0/10) |
 | **AD-REPORT** | Public Wave AD closeout + paper-lab; AD6 **PROMOTE** |
+| **AD-FREEZE** | Lock AD outcomes; no Wave AE invent; AD7 **PROMOTE** |
 | **H-ASKSMART** | Anti-period QPFB2+BEAMKV + constrained SEMWRAP FIX; AB4 **PROMOTE** (mean 8.7 > SERVEALIGN 3.4) |
 | **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **AB-HITL-10** | Final Wave AB pack verify on declared stack; AB6 **PROMOTE** (mean 9.0 · errors 0/10) |
