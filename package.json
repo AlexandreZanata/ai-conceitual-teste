@@ -354,6 +354,8 @@
     "nano:ai:apppush": "nano_lm/.venv/bin/python nano_lm/src/run_apppush.py",
     "nano:ai:hitl": "nano_lm/.venv/bin/python nano_lm/src/run_ai_hitl.py",
     "nano:ai-hitl": "nano_lm/.venv/bin/python nano_lm/src/run_ai_hitl.py",
+    "nano:ai:report": "nano_lm/.venv/bin/python nano_lm/src/run_ai_report.py",
+    "nano:ai-report": "nano_lm/.venv/bin/python nano_lm/src/run_ai_report.py",
     "nano:ai-session": "nano_lm/.venv/bin/python nano_lm/src/run_ai_session.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
