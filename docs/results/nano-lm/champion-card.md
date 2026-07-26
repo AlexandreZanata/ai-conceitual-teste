@@ -1,7 +1,7 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Z COMPLETE** · **Wave AA COMPLETE** · **Wave AB COMPLETE + FROZEN** · **Wave AC COMPLETE + FROZEN** · **Wave AD COMPLETE + FROZEN** · **Wave AE COMPLETE + FROZEN**).  
+> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Z COMPLETE** · **Wave AA COMPLETE** · **Wave AB COMPLETE + FROZEN** · **Wave AC COMPLETE + FROZEN** · **Wave AD COMPLETE + FROZEN** · **Wave AE COMPLETE + FROZEN** · **Wave AF OPEN**).  
 > Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md) · Wave AA: [wave-aa-summary.md](wave-aa-summary.md) · Wave AB0: [wave-ab-session.md](wave-ab-session.md) · HITL: [wave-z-hitl.md](wave-z-hitl.md) · WRAPBANK: [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md) · PARA: [formal-hpara-para.md](formal-hpara-para.md) · SERVEALIGN: [formal-hservealign-servealign.md](formal-hservealign-servealign.md) · ZPREF: [formal-hzpref-zpref.md](formal-hzpref-zpref.md) · DEPL-DOC: [formal-hdepldoc-depl-doc.md](formal-hdepldoc-depl-doc.md).
 
 ## Official tips
@@ -80,6 +80,7 @@ npm run nano:bpfb && npm run nano:formal:hbpfb
 npm run nano:gpfb4 && npm run nano:formal:hgpfb4
 npm run nano:tchr && npm run nano:formal:htchr
 npm run nano:genc && npm run nano:formal:hgenc
+npm run nano:af:session
 ```
 
 ## Wave Z product claims (honest)
@@ -101,6 +102,7 @@ Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PR
 **Wave AB COMPLETE + FROZEN** — [wave-ab-summary.md](wave-ab-summary.md) · [ab-freeze.md](ab-freeze.md) · [paper-lab-wave-ab.md](paper-lab-wave-ab.md).  
 **Wave AC COMPLETE + FROZEN** — **H-CTXPLUS** · **H-SMARTPLUS** · **H-FASTPLUS** · **H-APPPLUS** · [wave-ac-summary.md](wave-ac-summary.md) · [ac-freeze.md](ac-freeze.md) · [paper-lab-wave-ac.md](paper-lab-wave-ac.md) · [wave-ac-hitl.md](wave-ac-hitl.md) · [formal-hctxplus-ctxplus.md](formal-hctxplus-ctxplus.md) · [formal-hsmartplus-smartplus.md](formal-hsmartplus-smartplus.md) · [formal-hfastplus-fastplus.md](formal-hfastplus-fastplus.md) · [formal-happplus-appplus.md](formal-happplus-appplus.md).
 **Wave AD COMPLETE + FROZEN** — **H-HARDPARA** · **H-COMPOSE** · **H-ROUTEPLUS** · **H-DEPLPLUS** · [AD-HITL-10](wave-ad-hitl.md) · [wave-ad-summary.md](wave-ad-summary.md) · [ad-freeze.md](ad-freeze.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md).  
-**Wave AE COMPLETE + FROZEN** — **H-CTXMAX** · **H-SMARTMAX** · **H-FASTMAX** · **H-APPMAX** · [AE-HITL-10](wave-ae-hitl.md) · [wave-ae-summary.md](wave-ae-summary.md) · [ae-freeze.md](ae-freeze.md) · [paper-lab-wave-ae.md](paper-lab-wave-ae.md) (ship claim = **AE packaged stack**).
+**Wave AE COMPLETE + FROZEN** — **H-CTXMAX** · **H-SMARTMAX** · **H-FASTMAX** · **H-APPMAX** · [AE-HITL-10](wave-ae-hitl.md) · [wave-ae-summary.md](wave-ae-summary.md) · [ae-freeze.md](ae-freeze.md) · [paper-lab-wave-ae.md](paper-lab-wave-ae.md) (ship claim = **AE packaged stack**).  
+**Wave AF OPEN** — AF0 [wave-af-session.md](wave-af-session.md) **PROMOTE**; next **H-CTXULTRA** (`npm run nano:af:session`).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

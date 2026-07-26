@@ -83,6 +83,8 @@
 | **AE-HITL-10** | Final AE pack verify; AE5 **PROMOTE** (mean 9.0; errors 0; held-out ok) |
 | **AE-REPORT** | Public wave summary + paper-lab + FIX log; AE6 **PROMOTE** |
 | **AE-FREEZE** | Lock AE outcomes; no Wave AF invent without reopen; AE7 **PROMOTE** |
+| **AF0-SESSION** | Freeze 10 held-out HITL asks (≠ AB ≠ AC ≠ AD ≠ AE) for Wave AF (**PROMOTE**) |
+| **H-CTXULTRA** | Longer usable ctx beyond CTXMAX (Wave AF1 — pending) |
 | **H-ASKSMART** | Anti-period QPFB2+BEAMKV + constrained SEMWRAP FIX; AB4 **PROMOTE** (mean 8.7 > SERVEALIGN 3.4) |
 | **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **AB-HITL-10** | Final Wave AB pack verify on declared stack; AB6 **PROMOTE** (mean 9.0 · errors 0/10) |

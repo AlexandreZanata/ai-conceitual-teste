@@ -26,9 +26,9 @@ When rules conflict with existing code, **rules prevail** — unless the user ex
 2. `agent-rules/00-core/size-and-complexity-limits.md` — **80 / 200 / ≤10**
 3. `docs/ARCHITECTURE.md` + `docs/GLOSSARY.md`
 4. `docs/NANO-STUDENT-AGENDA.md` + `docs/results/nano-lm/champion-card.md` + `RECIPES.md`
-5. `.local/pesquisa.md` (lab **NO-REOPEN** KILLs; Waves W–AE **COMPLETE + FROZEN** — [ae-freeze.md](docs/results/nano-lm/ae-freeze.md) · [wave-ae-summary.md](docs/results/nano-lm/wave-ae-summary.md) · [paper-lab-wave-ae.md](docs/results/nano-lm/paper-lab-wave-ae.md) · [ad-freeze.md](docs/results/nano-lm/ad-freeze.md) · [ac-freeze.md](docs/results/nano-lm/ac-freeze.md) · [ab-freeze.md](docs/results/nano-lm/ab-freeze.md))
+5. `.local/pesquisa.md` (lab **NO-REOPEN** KILLs; Waves W–AE **COMPLETE + FROZEN**; **Wave AF OPEN** — [ae-freeze.md](docs/results/nano-lm/ae-freeze.md) · [wave-af-session.md](docs/results/nano-lm/wave-af-session.md) · [wave-ae-summary.md](docs/results/nano-lm/wave-ae-summary.md) · [paper-lab-wave-ae.md](docs/results/nano-lm/paper-lab-wave-ae.md) · [ad-freeze.md](docs/results/nano-lm/ad-freeze.md) · [ac-freeze.md](docs/results/nano-lm/ac-freeze.md) · [ab-freeze.md](docs/results/nano-lm/ab-freeze.md))
 6. `nano_lm/data/CURATED-SOURCES.md` before data work
-7. Wave AE session: `.local/wave-ae/SESSION.md` · Wave AD: `.local/wave-ad/SESSION.md` · Wave AC: `.local/wave-ac/SESSION.md` · Wave AB: `.local/wave-ab/SESSION.md` · Wave AA: `.local/wave-aa/SESSION.md` · Wave Z: `.local/wave-z/SESSION.md`
+7. Wave AF session: `.local/wave-af/SESSION.md` · Wave AE: `.local/wave-ae/SESSION.md` · Wave AD: `.local/wave-ad/SESSION.md` · Wave AC: `.local/wave-ac/SESSION.md` · Wave AB: `.local/wave-ab/SESSION.md` · Wave AA: `.local/wave-aa/SESSION.md` · Wave Z: `.local/wave-z/SESSION.md`
 
 ```bash
 ./agent-harness/rules-path.sh
@@ -49,7 +49,8 @@ npm run nano:test && npm run verify
 - **Wave AB COMPLETE + FROZEN** — [wave-ab-summary.md](docs/results/nano-lm/wave-ab-summary.md) · [ab-freeze.md](docs/results/nano-lm/ab-freeze.md) · [paper-lab-wave-ab.md](docs/results/nano-lm/paper-lab-wave-ab.md) (`npm run nano:ab:freeze`).
 - **Wave AC COMPLETE + FROZEN** — [wave-ac-summary.md](docs/results/nano-lm/wave-ac-summary.md) · [ac-freeze.md](docs/results/nano-lm/ac-freeze.md) · [paper-lab-wave-ac.md](docs/results/nano-lm/paper-lab-wave-ac.md) · [wave-ac-hitl.md](docs/results/nano-lm/wave-ac-hitl.md) (`npm run nano:ac:freeze`).
 - **Wave AD COMPLETE + FROZEN** — [ad-freeze.md](docs/results/nano-lm/ad-freeze.md) · [wave-ad-summary.md](docs/results/nano-lm/wave-ad-summary.md) · [paper-lab-wave-ad.md](docs/results/nano-lm/paper-lab-wave-ad.md) · [wave-ad-hitl.md](docs/results/nano-lm/wave-ad-hitl.md) (`npm run nano:ad:freeze`).
-- **Wave AE COMPLETE + FROZEN** — [wave-ae-summary.md](docs/results/nano-lm/wave-ae-summary.md) · [ae-freeze.md](docs/results/nano-lm/ae-freeze.md) · [paper-lab-wave-ae.md](docs/results/nano-lm/paper-lab-wave-ae.md) · [wave-ae-hitl.md](docs/results/nano-lm/wave-ae-hitl.md) (`npm run nano:ae:freeze`); ship claim = **AE packaged stack**; no Wave AF invent without reopen.
+- **Wave AE COMPLETE + FROZEN** — [wave-ae-summary.md](docs/results/nano-lm/wave-ae-summary.md) · [ae-freeze.md](docs/results/nano-lm/ae-freeze.md) · [paper-lab-wave-ae.md](docs/results/nano-lm/paper-lab-wave-ae.md) · [wave-ae-hitl.md](docs/results/nano-lm/wave-ae-hitl.md) (`npm run nano:ae:freeze`); ship claim = **AE packaged stack** until AF5.
+- **Wave AF OPEN** — AF0 [wave-af-session.md](docs/results/nano-lm/wave-af-session.md) **PROMOTE** (`npm run nano:af:session`); next **H-CTXULTRA**; no Wave AG invent without reopen.
 
 ---
 
