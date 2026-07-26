@@ -26,7 +26,7 @@ When rules conflict with existing code, **rules prevail** — unless the user ex
 2. `agent-rules/00-core/size-and-complexity-limits.md` — **80 / 200 / ≤10**
 3. `docs/ARCHITECTURE.md` + `docs/GLOSSARY.md`
 4. `docs/NANO-STUDENT-AGENDA.md` + `docs/results/nano-lm/champion-card.md` + `RECIPES.md`
-5. `.local/pesquisa.md` (lab **NO-REOPEN** KILLs; Waves W–AA **COMPLETE**; **Wave AB OPEN** — AB0–AB1 **DONE** · [formal-hsemwrap-semwrap.md](docs/results/nano-lm/formal-hsemwrap-semwrap.md))
+5. `.local/pesquisa.md` (lab **NO-REOPEN** KILLs; Waves W–AA **COMPLETE**; **Wave AB OPEN** — AB0–AB2 **DONE** · [formal-haskfast-askfast.md](docs/results/nano-lm/formal-haskfast-askfast.md))
 6. `nano_lm/data/CURATED-SOURCES.md` before data work
 7. Wave AB session: `.local/wave-ab/SESSION.md` · Wave AA: `.local/wave-aa/SESSION.md` · Wave Z: `.local/wave-z/SESSION.md`
 
@@ -46,7 +46,7 @@ npm run nano:test && npm run verify
 - **Wave Y COMPLETE** — GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**.  
 - **Wave Z COMPLETE** — [wave-z-hitl.md](docs/results/nano-lm/wave-z-hitl.md) · **LAB-FREEZE** [lab-freeze.md](docs/results/nano-lm/lab-freeze.md).  
 - **Wave AA COMPLETE + FROZEN** — [wave-aa-summary.md](docs/results/nano-lm/wave-aa-summary.md) · [aa-freeze.md](docs/results/nano-lm/aa-freeze.md) (`npm run nano:aa:freeze`).
-- **Wave AB OPEN** — AB0 SESSION **PROMOTE** · AB1 **H-SEMWRAP PROMOTE** — [wave-ab-session.md](docs/results/nano-lm/wave-ab-session.md) · [formal-hsemwrap-semwrap.md](docs/results/nano-lm/formal-hsemwrap-semwrap.md); next **AB2 H-ASKFAST**.
+- **Wave AB OPEN** — AB0–AB2 **PROMOTE** (SESSION · SEMWRAP · ASKFAST) — [formal-haskfast-askfast.md](docs/results/nano-lm/formal-haskfast-askfast.md); next **AB3 H-LONGAPP**.
 
 ---
 

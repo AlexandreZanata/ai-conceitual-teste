@@ -47,4 +47,4 @@ npm run nano:z:ask -- --semwrap --question "How do BIP-39 mnemonic phrases turn 
 | Near-known ask via fuzzy bank/curated-slice recall | Open chat LM / open-web RAG |
 | Honest DEPL: SEMWRAP ⊃ ZWRAP for paraphrases | Revive QI · STREAM · GENCACHE · MIXD · ZPREF |
 
-Next: **AB2 H-ASKFAST**.
+Next: **AB3 H-LONGAPP**.

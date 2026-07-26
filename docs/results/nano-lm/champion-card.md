@@ -57,6 +57,7 @@ npm run nano:z:export && npm run nano:z:ask -- --wrap --question "…"
 npm run nano:wrapbank
 npm run nano:ab:session
 npm run nano:semwrap
+npm run nano:askfast
 npm run nano:para
 npm run nano:zpref
 npm run nano:depl-doc
@@ -86,6 +87,6 @@ Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PR
 **Wave Y COMPLETE** — [wave-y-summary.md](wave-y-summary.md) (GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**).  
 **Wave Z COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md) (PFB ≠ interactive LM; **H-ZWRAP** + error-bank) · [wave-z-summary.md](wave-z-summary.md) · [paper-lab-wave-z.md](paper-lab-wave-z.md) · [lab-freeze.md](lab-freeze.md).  
 **Wave AA COMPLETE** — AA0 **H-WRAPBANK PROMOTE** · AA1 **H-PARA HOLD** · AA2 **H-SERVEALIGN HOLD** · AA3 **H-ZPREF KILL** · AA4 **H-DEPL-DOC PROMOTE** · AA5 **AA-REPORT PROMOTE** · AA6 **AA-FREEZE PROMOTE** — [wave-aa-summary.md](wave-aa-summary.md) · [aa-freeze.md](aa-freeze.md).  
-**Wave AB OPEN** — AB0 **SESSION PROMOTE** · AB1 **H-SEMWRAP PROMOTE** (mean 9.0) — [wave-ab-session.md](wave-ab-session.md) · [formal-hsemwrap-semwrap.md](formal-hsemwrap-semwrap.md); next **AB2 H-ASKFAST**.
+**Wave AB OPEN** — AB0 **SESSION PROMOTE** · AB1 **H-SEMWRAP PROMOTE** · AB2 **H-ASKFAST PROMOTE** (wall↓100%) — [wave-ab-session.md](wave-ab-session.md) · [formal-hsemwrap-semwrap.md](formal-hsemwrap-semwrap.md) · [formal-haskfast-askfast.md](formal-haskfast-askfast.md); next **AB3 H-LONGAPP**.
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

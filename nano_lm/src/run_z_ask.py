@@ -141,12 +141,14 @@ def ask_once(
     seed: int = 0,
     wrap: bool = False,
     semwrap: bool = False,
+    askfast: bool = False,
     bank_path: Path | None = None,
     curated_root: Path | None = None,
+    ask_cache: Any | None = None,
 ) -> dict[str, Any]:
     """
     GIVEN exported champion + question
-    WHEN decoding QT∘EARLY n=1 (optional Z2 wrap / AB1 SEMWRAP)
+    WHEN decoding QT∘EARLY n=1 (optional wrap / SEMWRAP / ASKFAST)
     THEN return completion + wall_ms + recipe_id (no teacher self-grade).
     """
     return ask_many(
@@ -155,8 +157,10 @@ def ask_once(
         seed=seed,
         wrap=wrap,
         semwrap=semwrap,
+        askfast=askfast,
         bank_path=bank_path,
         curated_root=curated_root,
+        ask_cache=ask_cache,
     )[0]
 
 
@@ -169,10 +173,22 @@ def _fill_lookups(
     wrap: bool,
     semwrap: bool,
     curated_root: Path | None,
+    ask_cache: Any | None,
 ) -> tuple[list[dict[str, Any] | None], list[tuple[int, str]]]:
     out: list[dict[str, Any] | None] = [None] * len(questions)
     pending: list[tuple[int, str]] = []
     for i, q in enumerate(questions):
+        if ask_cache is not None:
+            from askfast_ops import merge_cache_payload
+
+            hit = ask_cache.get(q)
+            if hit is not None:
+                out[i] = merge_cache_payload(hit, question=q, seed=seed)
+                out[i]["recipe_id"] = out[i].get("recipe_id") or recipe.get(
+                    "recipe_id"
+                )
+                out[i]["family"] = out[i].get("family") or recipe.get("family")
+                continue
         if wrap or semwrap:
             gold = lookup_gold(q, bank)
             if gold is not None:
@@ -202,12 +218,14 @@ def ask_many(
     seed: int = 0,
     wrap: bool = False,
     semwrap: bool = False,
+    askfast: bool = False,
     bank_path: Path | None = None,
     curated_root: Path | None = None,
+    ask_cache: Any | None = None,
 ) -> list[dict[str, Any]]:
     """
     GIVEN exported champion + N questions
-    WHEN one CUDA load (wrap/SEMWRAP: bank lookup then few-shot decode)
+    WHEN one CUDA load (ASKFAST: SEMWRAP + QT + completion cache)
     THEN return N payloads in order (no teacher self-grade).
     """
     if not questions:
@@ -216,7 +234,13 @@ def ask_many(
     recipe = _load_recipe(champ)
     raw = _load_raw_gene(champ, recipe)
     bank = load_bank_rows(Path(bank_path) if bank_path else _BANK)
-    use_wrap = bool(wrap or semwrap)
+    use_sem = bool(semwrap or askfast)
+    use_wrap = bool(wrap or use_sem)
+    cache = ask_cache
+    if askfast and cache is None:
+        from askfast_ops import AskCompletionCache
+
+        cache = AskCompletionCache()
     if use_wrap:
         _ensure_wrap_card(champ)
         gene = wrap_ask_gene(raw)
@@ -235,11 +259,17 @@ def ask_many(
         bank=bank,
         seed=seed,
         wrap=use_wrap,
-        semwrap=bool(semwrap),
+        semwrap=use_sem,
         curated_root=curated_root,
+        ask_cache=cache,
     )
     if not pending:
-        return [p for p in out if p is not None]  # type: ignore[misc]
+        payloads = [p for p in out if p is not None]
+        if cache is not None:
+            for q, p in zip(questions, payloads, strict=True):
+                if not p.get("cache_hit"):
+                    cache.put(q, p)
+        return payloads  # type: ignore[misc]
 
     device = resolve_device(True)
     if device.type != "cuda":
@@ -266,7 +296,12 @@ def ask_many(
             )
     finally:
         _free_cuda(qt, student)
-    return [p for p in out if p is not None]  # type: ignore[misc]
+    payloads = [p for p in out if p is not None]
+    if cache is not None:
+        for q, p in zip(questions, payloads, strict=True):
+            if not p.get("cache_hit"):
+                cache.put(q, p)
+    return payloads  # type: ignore[misc]
 
 
 def main() -> int:
@@ -285,6 +320,7 @@ def main() -> int:
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--wrap", action="store_true")
     ap.add_argument("--semwrap", action="store_true")
+    ap.add_argument("--askfast", action="store_true")
     ap.add_argument("--bank", type=Path, default=_BANK)
     ap.add_argument("--root", type=Path, default=_CHAMPION)
     ap.add_argument("--out", type=Path, default=None)
@@ -297,6 +333,7 @@ def main() -> int:
             seed=int(args.seed),
             wrap=bool(args.wrap),
             semwrap=bool(args.semwrap),
+            askfast=bool(args.askfast),
             bank_path=args.bank,
             curated_root=REPO / "nano_lm/data/curated",
         )
