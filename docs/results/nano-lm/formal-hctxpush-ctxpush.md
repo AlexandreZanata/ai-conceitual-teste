@@ -64,4 +64,4 @@ npm run nano:test && npm run verify
 - Trials: `AI-CTXPUSH-LOOKUP-HITL-01…10` · `AI-CTXPUSH-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ctxpush.py`
 
-Next: **AI3 H-SMARTPUSH**.
+Next: **AI3 H-SMARTPUSH** (**DONE — HOLD** — [formal-hsmartpush-smartpush.md](formal-hsmartpush-smartpush.md)). Next: **AI4 H-FASTPUSH**.
