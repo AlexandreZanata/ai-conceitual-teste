@@ -368,6 +368,8 @@
     "nano:ak:gentrue": "nano_lm/.venv/bin/python nano_lm/src/run_gentrue.py",
     "nano:ctxpeak": "nano_lm/.venv/bin/python nano_lm/src/run_ctxpeak.py",
     "nano:aj:ctxpeak": "nano_lm/.venv/bin/python nano_lm/src/run_ctxpeak.py",
+    "nano:ctxmore": "nano_lm/.venv/bin/python nano_lm/src/run_ctxmore.py",
+    "nano:ak:ctxmore": "nano_lm/.venv/bin/python nano_lm/src/run_ctxmore.py",
     "nano:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:aj:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:fastpeak": "nano_lm/.venv/bin/python nano_lm/src/run_fastpeak.py",
