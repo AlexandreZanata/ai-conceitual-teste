@@ -15,7 +15,7 @@ One-pager: [`RECIPES.md`](results/nano-lm/RECIPES.md) · Card: [`champion-card.m
 |------|--------|---------|
 | W | **COMPLETE** | [wave-w-summary.md](results/nano-lm/wave-w-summary.md) |
 | X+ | **COMPLETE** | [wave-x-summary.md](results/nano-lm/wave-x-summary.md) — PFB family **PROMOTE**; QI/ABS **KILL** |
-| **Y** | **ACTIVE** | Cache + long/infinite context (`.local/pesquisa.md`) — **H-BEAMKV** + **H-TCACHE PROMOTE**; next **H-SCORERAM** |
+| **Y** | **ACTIVE** | Cache + long/infinite context — **H-BEAMKV** / **H-TCACHE** / **H-SCORERAM PROMOTE**; next **H-PFB256** |
 | **Z** | **QUEUED** | After Y: export champion + Cursor HITL ×10/stage + error-bank retrain (pesquisa §9) |
 
 Teachers: TinyStories-33M + `bigcode/tiny_starcoder_py` ([TCHR](results/nano-lm/formal-htchr-code-teacher.md)).  

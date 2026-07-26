@@ -11,10 +11,11 @@
 |----|-------|----------|
 | **H-BEAMKV** | Shared prompt KV across PFB K beams; wall↓ vs indep prefills; dual gate vs QT | [smoke](hbeamkv-beamkv.md) · [formal](formal-hbeamkv-beamkv.md) |
 | **H-TCACHE** | Teacher LP memo + eligible-only code forwards on PFB2; forwards↓≥30%; wall≤naive; dual gate | [smoke](htcache-tcache.md) · [formal](formal-htcache-tcache.md) |
+| **H-SCORERAM** | Disk/RAM pack teacher score cache; warm wall↓; lp unchanged; hit_rate=1.0 | [smoke](hscoreram-scoreram.md) · [formal](formal-hscoreram-scoreram.md) |
 
 ## Queued
 
-H-SCORERAM · H-PFB256 · H-ROLL / H-STREAM · H-SUMCACHE / H-KVCACHE-Q · H-GENCACHE (after ≥1 long-ctx PROMOTE).
+H-PFB256 · H-ROLL / H-STREAM · H-SUMCACHE / H-KVCACHE-Q · H-GENCACHE (after ≥1 long-ctx PROMOTE).
 
 ## Doctrine reminder
 
