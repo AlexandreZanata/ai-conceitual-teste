@@ -19,6 +19,7 @@ HITL: **H-ZWRAP** (+ **H-WRAPBANK**). Story-CE: **H-ZERR** ≠ chat.
 | **Y** | **COMPLETE** | [wave-y-summary.md](results/nano-lm/wave-y-summary.md) — PFB256/ROLL/SUMCACHE/GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL** |
 | **Z** | **COMPLETE** | [wave-z-hitl.md](results/nano-lm/wave-z-hitl.md) — PFB ≠ interactive LM; **H-ZWRAP** · freeze [lab-freeze.md](results/nano-lm/lab-freeze.md) |
 | **AA** | **COMPLETE** + **FROZEN** | AA0–AA6 (**AA-FREEZE PROMOTE**) — [wave-aa-summary.md](results/nano-lm/wave-aa-summary.md) · [aa-freeze.md](results/nano-lm/aa-freeze.md) |
+| **AB** | **OPEN** | AB0 SESSION **PROMOTE** — [wave-ab-session.md](results/nano-lm/wave-ab-session.md); next **AB1 H-SEMWRAP** |
 
 Teachers: TinyStories-33M + `bigcode/tiny_starcoder_py` ([TCHR](results/nano-lm/formal-htchr-code-teacher.md)).  
 KILL tooling purged → [`results/nano-lm/archive/`](results/nano-lm/archive/).

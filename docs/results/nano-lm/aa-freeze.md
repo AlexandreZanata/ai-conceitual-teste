@@ -8,7 +8,8 @@
 
 **PROMOTE** — Wave AA outcomes locked; known-ask product remains **H-ZWRAP + H-WRAPBANK**; HOLD/KILL decisions stay; **no Wave AB** without explicit lab-book reopen.
 
-**Status: COMPLETE** (freeze gate).
+**Status: COMPLETE** (freeze gate).  
+**Superseded for continuation:** Wave AB reopened explicitly via `.local/pesquisa.md` §8.3 (2026-07-26). AA HOLD/KILL **decisions** stay; AA **KILL revival** still forbidden. AB0: [wave-ab-session.md](wave-ab-session.md).
 
 ## Locked outcomes
 
