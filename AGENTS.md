@@ -48,7 +48,7 @@ npm run nano:test && npm run verify
 - **Wave AA COMPLETE + FROZEN** — [wave-aa-summary.md](docs/results/nano-lm/wave-aa-summary.md) · [aa-freeze.md](docs/results/nano-lm/aa-freeze.md) (`npm run nano:aa:freeze`).
 - **Wave AB COMPLETE + FROZEN** — [wave-ab-summary.md](docs/results/nano-lm/wave-ab-summary.md) · [ab-freeze.md](docs/results/nano-lm/ab-freeze.md) · [paper-lab-wave-ab.md](docs/results/nano-lm/paper-lab-wave-ab.md) (`npm run nano:ab:freeze`).
 - **Wave AC COMPLETE + FROZEN** — [wave-ac-summary.md](docs/results/nano-lm/wave-ac-summary.md) · [ac-freeze.md](docs/results/nano-lm/ac-freeze.md) · [paper-lab-wave-ac.md](docs/results/nano-lm/paper-lab-wave-ac.md) · [wave-ac-hitl.md](docs/results/nano-lm/wave-ac-hitl.md) (`npm run nano:ac:freeze`).
-- **Wave AD OPEN** — [wave-ad-session.md](docs/results/nano-lm/wave-ad-session.md) · [formal-hhardpara-hardpara.md](docs/results/nano-lm/formal-hhardpara-hardpara.md) (`npm run nano:ad:session` · `npm run nano:hardpara`) — next **AD2 H-COMPOSE**.
+- **Wave AD OPEN** — [wave-ad-session.md](docs/results/nano-lm/wave-ad-session.md) · [formal-hhardpara-hardpara.md](docs/results/nano-lm/formal-hhardpara-hardpara.md) · [formal-hcompose-compose.md](docs/results/nano-lm/formal-hcompose-compose.md) (`npm run nano:ad:session` · `npm run nano:hardpara` · `npm run nano:compose`) — next **AD3 H-ROUTEPLUS**.
 
 ---
 

@@ -50,4 +50,4 @@ Contract: `nano_lm/tests/test_ad_session.py`.
 - Default ship claim until AD5 still **AC packaged stack** on AB+AC spine.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AE.
 
-Next: **AD1 H-HARDPARA** (**DONE** — see [formal-hhardpara-hardpara.md](formal-hhardpara-hardpara.md)). Next wave stage: **AD2 H-COMPOSE**.
+Next: **AD1 H-HARDPARA** (**DONE** — see [formal-hhardpara-hardpara.md](formal-hhardpara-hardpara.md)). **AD2 H-COMPOSE** (**DONE** — see [formal-hcompose-compose.md](formal-hcompose-compose.md)). Next wave stage: **AD3 H-ROUTEPLUS**.

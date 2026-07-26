@@ -69,6 +69,7 @@
 | **AC-FREEZE** | Lock Wave AC outcomes; no Wave AD invent; **PROMOTE** — [ac-freeze.md](results/nano-lm/ac-freeze.md) |
 | **AD0-SESSION** | Freeze 10 held-out HITL asks (≠ AB ≠ AC) for Wave AD (**PROMOTE**) |
 | **H-HARDPARA** | Adversarial paraphrase SEMWRAP+SMARTPLUS; AD1 **PROMOTE** (mean 9.0; false-hit 0) |
+| **H-COMPOSE** | Dual-source CTXPLUS compose; AD2 **PROMOTE** (usable 10/10; sources 2.0) |
 | **H-ASKSMART** | Anti-period QPFB2+BEAMKV + constrained SEMWRAP FIX; AB4 **PROMOTE** (mean 8.7 > SERVEALIGN 3.4) |
 | **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **AB-HITL-10** | Final Wave AB pack verify on declared stack; AB6 **PROMOTE** (mean 9.0 · errors 0/10) |
