@@ -1,7 +1,7 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Z COMPLETE** · **Wave AA COMPLETE** · **Wave AB COMPLETE + FROZEN** · **Wave AC COMPLETE + FROZEN** · **Wave AD COMPLETE + FROZEN** · **Wave AE COMPLETE + FROZEN** · **Wave AF COMPLETE + FROZEN** · **Wave AG COMPLETE + FROZEN**).  
+> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Z COMPLETE** · **Wave AA COMPLETE** · **Wave AB COMPLETE + FROZEN** · **Wave AC COMPLETE + FROZEN** · **Wave AD COMPLETE + FROZEN** · **Wave AE COMPLETE + FROZEN** · **Wave AF COMPLETE + FROZEN** · **Wave AG COMPLETE + FROZEN** · **Wave AH OPEN** — AH0 [SESSION](wave-ah-session.md)).  
 > Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md) · Wave AA: [wave-aa-summary.md](wave-aa-summary.md) · Wave AB0: [wave-ab-session.md](wave-ab-session.md) · HITL: [wave-z-hitl.md](wave-z-hitl.md) · WRAPBANK: [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md) · PARA: [formal-hpara-para.md](formal-hpara-para.md) · SERVEALIGN: [formal-hservealign-servealign.md](formal-hservealign-servealign.md) · ZPREF: [formal-hzpref-zpref.md](formal-hzpref-zpref.md) · DEPL-DOC: [formal-hdepldoc-depl-doc.md](formal-hdepldoc-depl-doc.md).
 
 ## Official tips
@@ -81,6 +81,7 @@ npm run nano:gpfb4 && npm run nano:formal:hgpfb4
 npm run nano:tchr && npm run nano:formal:htchr
 npm run nano:genc && npm run nano:formal:hgenc
 npm run nano:af:session
+npm run nano:ah:session
 npm run nano:ctxultra
 npm run nano:smartultra
 npm run nano:fastultra
@@ -107,6 +108,7 @@ Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PR
 **Wave AD COMPLETE + FROZEN** — **H-HARDPARA** · **H-COMPOSE** · **H-ROUTEPLUS** · **H-DEPLPLUS** · [AD-HITL-10](wave-ad-hitl.md) · [wave-ad-summary.md](wave-ad-summary.md) · [ad-freeze.md](ad-freeze.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md).  
 **Wave AE COMPLETE + FROZEN** — **H-CTXMAX** · **H-SMARTMAX** · **H-FASTMAX** · **H-APPMAX** · [AE-HITL-10](wave-ae-hitl.md) · [wave-ae-summary.md](wave-ae-summary.md) · [ae-freeze.md](ae-freeze.md) · [paper-lab-wave-ae.md](paper-lab-wave-ae.md) (ship claim = **AE packaged stack**).  
 **Wave AF COMPLETE + FROZEN** — **H-CTXULTRA** · **H-SMARTULTRA** · **H-FASTULTRA** · **H-APPULTRA** · [AF-HITL-10](wave-af-hitl.md) · [wave-af-summary.md](wave-af-summary.md) · [af-freeze.md](af-freeze.md) · [paper-lab-wave-af.md](paper-lab-wave-af.md) (ship claim = **AF packaged stack**).
-**Wave AG COMPLETE + FROZEN** — AG0 [SESSION PROMOTE](wave-ag-session.md) · AG1 [H-ANTIFP PROMOTE](formal-hantifp-antifp.md) · AG2 [H-CTXREAL PROMOTE](formal-hctxreal-ctxreal.md) · AG3 [H-SMARTREAL HOLD](formal-hsmartreal-smartreal.md) · AG4 [H-FASTREAL PROMOTE](formal-hfastreal-fastreal.md) · AG5 [H-APPREAL HOLD](formal-happreal-appreal.md) · AG6 [AG-HITL-10 HOLD](wave-ag-hitl.md) · AG7 [AG-REPORT PROMOTE](wave-ag-summary.md) · AG8 [AG-FREEZE PROMOTE](ag-freeze.md) · dual-arm anti-FP HITL (ship claim remains **AF packaged stack**).
+**Wave AG COMPLETE + FROZEN** — AG0 [SESSION PROMOTE](wave-ag-session.md) · AG1 [H-ANTIFP PROMOTE](formal-hantifp-antifp.md) · AG2 [H-CTXREAL PROMOTE](formal-hctxreal-ctxreal.md) · AG3 [H-SMARTREAL HOLD](formal-hsmartreal-smartreal.md) · AG4 [H-FASTREAL PROMOTE](formal-hfastreal-fastreal.md) · AG5 [H-APPREAL HOLD](formal-happreal-appreal.md) · AG6 [AG-HITL-10 HOLD](wave-ag-hitl.md) · AG7 [AG-REPORT PROMOTE](wave-ag-summary.md) · AG8 [AG-FREEZE PROMOTE](ag-freeze.md) · dual-arm anti-FP HITL (ship claim remains **AF packaged stack**).  
+**Wave AH OPEN** — AH0 [SESSION PROMOTE](wave-ah-session.md) (`npm run nano:ah:session`) · next **AH1 H-GENLIFT** (ship claim remains **AF packaged stack** until AH6 gen bar).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).
