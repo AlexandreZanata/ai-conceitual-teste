@@ -40,12 +40,13 @@ def validate_trial(trial: Mapping[str, Any]) -> list[str]:
     if not isinstance(trial.get("error"), bool):
         errs.append("error must be bool")
     tid = str(trial.get("trial_id", ""))
-    # Wave Z/AA/AB/AC: Z1-01 · AA0-01 · AB-SEMWRAP-HITL-01 · AC-CTXPLUS-HITL-01
+    # Wave Z/AA/AB/AC/AD: Z1-01 · AA0-01 · AB-… · AC-… · AD-HITL-01
     if not (
         tid.startswith("Z")
         or tid.startswith("AA")
         or tid.startswith("AB")
         or tid.startswith("AC")
+        or tid.startswith("AD")
     ):
-        errs.append("trial_id must start with Z* / AA* / AB* / AC*")
+        errs.append("trial_id must start with Z* / AA* / AB* / AC* / AD*")
     return errs
