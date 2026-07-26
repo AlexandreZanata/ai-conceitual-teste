@@ -6,6 +6,8 @@ from z_recipe import (
     FAMILY,
     FORBIDDEN,
     RECIPE_ID,
+    ZERR_FAMILY,
+    ZERR_RECIPE_ID,
     champion_recipe,
     validate_recipe,
 )
@@ -19,6 +21,14 @@ def test_given_champion_when_validate_then_ok() -> None:
     assert r["family"] == FAMILY
     assert r["pfb_k"] == 2
     assert r["qt_bits"] == 8
+
+
+def test_given_zerr_recipe_when_validate_then_ok() -> None:
+    r = champion_recipe(seed=0)
+    r["recipe_id"] = ZERR_RECIPE_ID
+    r["family"] = ZERR_FAMILY
+    r["ckpt"] = "HZERR_seed0.pt"
+    assert validate_recipe(r) == []
 
 
 def test_given_k4_when_validate_then_err() -> None:

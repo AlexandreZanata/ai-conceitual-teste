@@ -43,4 +43,4 @@ Judge: `cursor-composer-frontier-chat`. Manual adjust: `no change — lookup wra
 - `results/nano-lm/wave-z/z2_summary.json`
 - Error bank unchanged at **10** rows (no new Z2 errors)
 
-Next: **Z3** — choose **H-ZWRAP** (freeze wrap-only) or **H-ZERR** (retrain on bank for novel prompts).
+Next: **Z3** — see [wave-z-zerr.md](wave-z-zerr.md) (**H-ZERR PROMOTE**). Then **Z4**.

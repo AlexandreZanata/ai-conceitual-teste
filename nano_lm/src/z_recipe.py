@@ -10,7 +10,9 @@ from qt_ops import QT_BITS
 
 __all__ = [
     "RECIPE_ID",
+    "ZERR_RECIPE_ID",
     "FAMILY",
+    "ZERR_FAMILY",
     "FORBIDDEN",
     "REQUIRED_KEYS",
     "champion_recipe",
@@ -18,7 +20,9 @@ __all__ = [
 ]
 
 RECIPE_ID = "champion-qpfb2-v0"
+ZERR_RECIPE_ID = "zerr-qpfb2-v0"
 FAMILY = "H-ABS-QPFB2"
+ZERR_FAMILY = "H-ZERR"
 FORBIDDEN = ("STREAM", "KVCACHE-Q", "GENCACHE", "GPFB_K2", "MIXD")
 REQUIRED_KEYS = (
     "recipe_id",
@@ -78,10 +82,18 @@ def _missing_keys(recipe: Mapping[str, Any]) -> list[str]:
 
 def _field_errors(recipe: Mapping[str, Any]) -> list[str]:
     errs: list[str] = []
-    if str(recipe["recipe_id"]) != RECIPE_ID:
-        errs.append(f"recipe_id must be {RECIPE_ID}")
-    if str(recipe["family"]) != FAMILY:
-        errs.append(f"family must be {FAMILY}")
+    rid = str(recipe["recipe_id"])
+    fam = str(recipe["family"])
+    ok_id = rid in (RECIPE_ID, ZERR_RECIPE_ID)
+    ok_fam = fam in (FAMILY, ZERR_FAMILY)
+    if not ok_id:
+        errs.append(f"recipe_id must be {RECIPE_ID} or {ZERR_RECIPE_ID}")
+    if not ok_fam:
+        errs.append(f"family must be {FAMILY} or {ZERR_FAMILY}")
+    if rid == ZERR_RECIPE_ID and fam != ZERR_FAMILY:
+        errs.append("zerr recipe_id requires family H-ZERR")
+    if rid == RECIPE_ID and fam != FAMILY:
+        errs.append("champion recipe_id requires family H-ABS-QPFB2")
     if int(recipe["pfb_k"]) != int(K2_BEAMS):
         errs.append(f"pfb_k must be {K2_BEAMS} (GPFB K=2 forbidden)")
     if int(recipe["qt_bits"]) != int(QT_BITS):
@@ -97,7 +109,7 @@ def _forbidden_errors(recipe: Mapping[str, Any]) -> list[str]:
 def validate_recipe(recipe: Mapping[str, Any]) -> list[str]:
     """
     GIVEN a recipe dict
-    WHEN validating Z0 schema
+    WHEN validating Z0/Z3 schema
     THEN return list of error strings (empty iff ok).
     """
     missing = _missing_keys(recipe)

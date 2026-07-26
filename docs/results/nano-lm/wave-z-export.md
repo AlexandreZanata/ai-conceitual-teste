@@ -22,4 +22,4 @@ npm run nano:z:export
 npm run nano:z:ask -- --question "Write a Python function that returns a+b." --trial Z0-smoke
 ```
 
-Z1 HITL-10 **DONE (FAIL)** — [wave-z-hitl-z1.md](wave-z-hitl-z1.md). Z2 WRAP **PASS** — [wave-z-hitl-z2.md](wave-z-hitl-z2.md). Next: **Z3**.
+Z1 HITL-10 **DONE (FAIL)** — [wave-z-hitl-z1.md](wave-z-hitl-z1.md). Z2 WRAP **PASS** — [wave-z-hitl-z2.md](wave-z-hitl-z2.md). Z3 H-ZERR **PROMOTE** — [wave-z-zerr.md](wave-z-zerr.md). Next: **Z4**.
