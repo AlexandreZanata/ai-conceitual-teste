@@ -52,6 +52,19 @@ class AskCompletionCache:
         out["cache_hit"] = True
         return out
 
+    def peek(self, question: str) -> dict[str, Any] | None:
+        """Return a cache hit payload without mutating hit/miss counters."""
+        key = normalize_question(question)
+        row = self._store.get(key)
+        if row is None:
+            return None
+        out = dict(row)
+        out["mode"] = "ASKFAST_CACHE"
+        out["wall_ms"] = 0.0
+        out["ttft_ms"] = 0.0
+        out["cache_hit"] = True
+        return out
+
     def put(self, question: str, payload: Mapping[str, Any]) -> None:
         key = normalize_question(question)
         self._store[key] = {

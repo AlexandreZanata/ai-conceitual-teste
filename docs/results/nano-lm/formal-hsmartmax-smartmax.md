@@ -42,4 +42,4 @@ npm run nano:smartmax
 - Contract: `nano_lm/tests/test_smartmax.py`  
 - Cite fix: `semwrap_ops.semantic_lookup` EXACT meta includes `source_id`
 
-Next: **AE3 H-FASTMAX**.
+Next: **AE3 H-FASTMAX** (**DONE** — see [formal-hfastmax-fastmax.md](formal-hfastmax-fastmax.md)). Next wave stage: **AE4 H-APPMAX**.

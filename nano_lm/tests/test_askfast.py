@@ -38,6 +38,17 @@ def test_given_cache_when_put_get_then_hit() -> None:
     assert cache.hits == 1 and cache.misses == 1
 
 
+def test_given_cache_when_peek_then_no_counter_bump() -> None:
+    # GIVEN/WHEN/THEN: FASTMAX hot path peeks without distorting hit_rate
+    cache = AskCompletionCache()
+    cache.put("q", {"completion": "g", "mode": "X"})
+    peeked = cache.peek("q")
+    assert peeked is not None and peeked["completion"] == "g"
+    assert cache.hits == 0 and cache.misses == 0
+    assert cache.peek("missing") is None
+    assert cache.hits == 0 and cache.misses == 0
+
+
 def test_given_wall_and_quality_when_decide_then_promote() -> None:
     stats = askfast_stats(
         [9.0] * 10,
