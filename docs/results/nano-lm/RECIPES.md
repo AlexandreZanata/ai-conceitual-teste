@@ -56,6 +56,7 @@
 | Wave AD0 SESSION | [wave-ad-session.md](wave-ad-session.md) **PROMOTE** (`npm run nano:ad:session`) — 10 held-out HITL Qs |
 | Wave AD1 HARDPARA | [formal-hhardpara-hardpara.md](formal-hhardpara-hardpara.md) **PROMOTE** (`npm run nano:hardpara`) — adversarial para; false-hit 0 |
 | Wave AD2 COMPOSE | [formal-hcompose-compose.md](formal-hcompose-compose.md) **PROMOTE** (`npm run nano:compose`) — dual-source; usable 10/10 |
+| Wave AD3 ROUTEPLUS | [formal-hrouteplus-routeplus.md](formal-hrouteplus-routeplus.md) **PROMOTE** (`npm run nano:routeplus`) — route+OOS 10/10 |
 
 
 ## Policy
@@ -66,4 +67,4 @@ Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.m
 **Wave AA COMPLETE:** AA0 [H-WRAPBANK PROMOTE](formal-hwrapbank-wrapbank.md); AA1 [H-PARA HOLD](formal-hpara-para.md); AA2 [H-SERVEALIGN HOLD](formal-hservealign-servealign.md); AA3 [H-ZPREF KILL](formal-hzpref-zpref.md); AA4 [H-DEPL-DOC PROMOTE](formal-hdepldoc-depl-doc.md); AA5 [AA-REPORT PROMOTE](wave-aa-summary.md); AA6 [AA-FREEZE PROMOTE](aa-freeze.md).  
 **Wave AB COMPLETE + FROZEN:** AB0–AB7 **PROMOTE** · AB-FREEZE — [wave-ab-summary.md](wave-ab-summary.md) · [ab-freeze.md](ab-freeze.md).  
 **Wave AC COMPLETE + FROZEN:** AC0–AC6 **PROMOTE** · AC-FREEZE — [wave-ac-summary.md](wave-ac-summary.md) · [ac-freeze.md](ac-freeze.md) · [paper-lab-wave-ac.md](paper-lab-wave-ac.md) · **H-CTXPLUS** · **H-SMARTPLUS** · **H-FASTPLUS** · **H-APPPLUS** · [AC-HITL-10](wave-ac-hitl.md).
-**Wave AD OPEN:** AD0 [SESSION](wave-ad-session.md) · AD1 [H-HARDPARA](formal-hhardpara-hardpara.md) · AD2 [H-COMPOSE](formal-hcompose-compose.md) — robust held-out · hard para · compose · route · deploy (§8.6 · §13).
+**Wave AD OPEN:** AD0 [SESSION](wave-ad-session.md) · AD1 [H-HARDPARA](formal-hhardpara-hardpara.md) · AD2 [H-COMPOSE](formal-hcompose-compose.md) · AD3 [H-ROUTEPLUS](formal-hrouteplus-routeplus.md) — robust held-out · hard para · compose · route · deploy (§8.6 · §13).

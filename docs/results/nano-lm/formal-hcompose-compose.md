@@ -42,4 +42,4 @@ npm run nano:compose
 - Trials: `results/nano-lm/wave-ad/trials/AD-COMPOSE-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_compose.py`
 
-Next: **AD3 H-ROUTEPLUS**.
+Next: **AD3 H-ROUTEPLUS** (**DONE** — see [formal-hrouteplus-routeplus.md](formal-hrouteplus-routeplus.md)). Next wave stage: **AD4 H-DEPLPLUS**.

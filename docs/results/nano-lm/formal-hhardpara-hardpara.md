@@ -39,4 +39,4 @@ npm run nano:hardpara
 - Trials: `results/nano-lm/wave-ad/trials/AD-HARDPARA-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_hardpara.py`
 
-Next: **AD2 H-COMPOSE** (**DONE** — see [formal-hcompose-compose.md](formal-hcompose-compose.md)). Next wave stage: **AD3 H-ROUTEPLUS**.
+Next: **AD2 H-COMPOSE** (**DONE** — see [formal-hcompose-compose.md](formal-hcompose-compose.md)). **AD3 H-ROUTEPLUS** (**DONE** — see [formal-hrouteplus-routeplus.md](formal-hrouteplus-routeplus.md)). Next wave stage: **AD4 H-DEPLPLUS**.
