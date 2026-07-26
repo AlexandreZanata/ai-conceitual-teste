@@ -360,6 +360,8 @@
     "nano:ai-freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ai_freeze.py",
     "nano:aj:session": "nano_lm/.venv/bin/python nano_lm/src/run_aj_session.py",
     "nano:aj-session": "nano_lm/.venv/bin/python nano_lm/src/run_aj_session.py",
+    "nano:ak:session": "nano_lm/.venv/bin/python nano_lm/src/run_ak_session.py",
+    "nano:ak-session": "nano_lm/.venv/bin/python nano_lm/src/run_ak_session.py",
     "nano:genpeak": "nano_lm/.venv/bin/python nano_lm/src/run_genpeak.py",
     "nano:aj:genpeak": "nano_lm/.venv/bin/python nano_lm/src/run_genpeak.py",
     "nano:ctxpeak": "nano_lm/.venv/bin/python nano_lm/src/run_ctxpeak.py",
