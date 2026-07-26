@@ -55,4 +55,4 @@ npm run nano:test && npm run verify
 - Trials: `AG-APPREAL-{KNOWN,HOWTO,LONGDOC}-{LOOKUP\|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_appreal.py`
 
-Next: **AG6 AG-HITL-10**.
+Next: **AG7 AG-REPORT**.
