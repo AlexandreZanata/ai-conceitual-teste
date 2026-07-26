@@ -41,4 +41,4 @@ npm run nano:routeplus
 - Trials: `results/nano-lm/wave-ad/trials/AD-ROUTEPLUS-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_routeplus.py`
 
-Next: **AD4 H-DEPLPLUS**.
+Next: **AD4 H-DEPLPLUS** (**DONE** — see [formal-hdeplplus-deplplus.md](formal-hdeplplus-deplplus.md)). Next wave stage: **AD5 AD-HITL-10**.
