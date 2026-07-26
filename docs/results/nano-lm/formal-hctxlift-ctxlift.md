@@ -63,4 +63,4 @@ npm run nano:test && npm run verify
 - Trials: `AH-CTXLIFT-LOOKUP-HITL-01…10` · `AH-CTXLIFT-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ctxlift.py`
 
-Next: **AH3 H-SMARTLIFT**.
+Next: **AH3 H-SMARTLIFT** → [formal-hsmartlift-smartlift.md](formal-hsmartlift-smartlift.md) **HOLD**.
