@@ -100,6 +100,7 @@ Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PR
 **Wave AA COMPLETE** — AA0 **H-WRAPBANK PROMOTE** · AA1 **H-PARA HOLD** · AA2 **H-SERVEALIGN HOLD** · AA3 **H-ZPREF KILL** · AA4 **H-DEPL-DOC PROMOTE** · AA5 **AA-REPORT PROMOTE** · AA6 **AA-FREEZE PROMOTE** — [wave-aa-summary.md](wave-aa-summary.md) · [aa-freeze.md](aa-freeze.md).  
 **Wave AB COMPLETE + FROZEN** — [wave-ab-summary.md](wave-ab-summary.md) · [ab-freeze.md](ab-freeze.md) · [paper-lab-wave-ab.md](paper-lab-wave-ab.md).  
 **Wave AC COMPLETE + FROZEN** — **H-CTXPLUS** · **H-SMARTPLUS** · **H-FASTPLUS** · **H-APPPLUS** · [wave-ac-summary.md](wave-ac-summary.md) · [ac-freeze.md](ac-freeze.md) · [paper-lab-wave-ac.md](paper-lab-wave-ac.md) · [wave-ac-hitl.md](wave-ac-hitl.md) · [formal-hctxplus-ctxplus.md](formal-hctxplus-ctxplus.md) · [formal-hsmartplus-smartplus.md](formal-hsmartplus-smartplus.md) · [formal-hfastplus-fastplus.md](formal-hfastplus-fastplus.md) · [formal-happplus-appplus.md](formal-happplus-appplus.md).
-**Wave AD COMPLETE + FROZEN** — **H-HARDPARA** · **H-COMPOSE** · **H-ROUTEPLUS** · **H-DEPLPLUS** · [AD-HITL-10](wave-ad-hitl.md) · [wave-ad-summary.md](wave-ad-summary.md) · [ad-freeze.md](ad-freeze.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md).
+**Wave AD COMPLETE + FROZEN** — **H-HARDPARA** · **H-COMPOSE** · **H-ROUTEPLUS** · **H-DEPLPLUS** · [AD-HITL-10](wave-ad-hitl.md) · [wave-ad-summary.md](wave-ad-summary.md) · [ad-freeze.md](ad-freeze.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md).  
+**Wave AE OPEN** — AE0 [SESSION PROMOTE](wave-ae-session.md) · next **H-CTXMAX** (ship claim = AD stack until AE5).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

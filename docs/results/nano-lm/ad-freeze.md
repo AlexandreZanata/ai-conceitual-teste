@@ -8,7 +8,8 @@
 
 **PROMOTE** — Wave AD outcomes locked; scoped product remains **AC/APPPLUS + AD stack** (HARDPARA · COMPOSE · ROUTEPLUS · DEPLPLUS); **no Wave AE** without explicit lab-book reopen.
 
-**Status: COMPLETE** (freeze gate).
+**Status: COMPLETE** (freeze gate).  
+**Reopen (2026-07-26):** Wave AE opened via `.local/pesquisa.md` §5 — AE0 [wave-ae-session.md](wave-ae-session.md) **PROMOTE**; next **H-CTXMAX**. AD freeze outcomes stay locked.
 
 ## Locked outcomes
 

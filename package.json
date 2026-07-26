@@ -287,6 +287,7 @@
     "nano:ac:report": "nano_lm/.venv/bin/python nano_lm/src/run_ac_report.py",
     "nano:ac:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ac_freeze.py",
     "nano:ad:session": "nano_lm/.venv/bin/python nano_lm/src/run_ad_session.py",
+    "nano:ae:session": "nano_lm/.venv/bin/python nano_lm/src/run_ae_session.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
     "nano:routeplus": "nano_lm/.venv/bin/python nano_lm/src/run_routeplus.py",

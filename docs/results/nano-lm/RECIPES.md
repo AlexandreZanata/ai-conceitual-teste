@@ -60,7 +60,8 @@
 | Wave AD4 DEPLPLUS | [formal-hdeplplus-deplplus.md](formal-hdeplplus-deplplus.md) **PROMOTE** (`npm run nano:deplplus`) — pages 4/4 · smoke 9.0 |
 | Wave AD5 HITL-10 | [wave-ad-hitl.md](wave-ad-hitl.md) **PROMOTE** (`npm run nano:ad:hitl`) — **AD-HITL-10** mean 9.0 · errors 0/10 |
 | Wave AD6 REPORT | [wave-ad-summary.md](wave-ad-summary.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md) **PROMOTE** (`npm run nano:ad:report`) |
-| Wave AD-FREEZE | [ad-freeze.md](ad-freeze.md) **PROMOTE** (`npm run nano:ad:freeze`) — no Wave AE invent |
+| Wave AD-FREEZE | [ad-freeze.md](ad-freeze.md) **PROMOTE** (`npm run nano:ad:freeze`) — no Wave AE invent without reopen |
+| Wave AE0 SESSION | [wave-ae-session.md](wave-ae-session.md) **PROMOTE** (`npm run nano:ae:session`) — 10 held-out HITL Qs (4th set) |
 
 
 ## Policy
@@ -71,4 +72,5 @@ Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.m
 **Wave AA COMPLETE:** AA0 [H-WRAPBANK PROMOTE](formal-hwrapbank-wrapbank.md); AA1 [H-PARA HOLD](formal-hpara-para.md); AA2 [H-SERVEALIGN HOLD](formal-hservealign-servealign.md); AA3 [H-ZPREF KILL](formal-hzpref-zpref.md); AA4 [H-DEPL-DOC PROMOTE](formal-hdepldoc-depl-doc.md); AA5 [AA-REPORT PROMOTE](wave-aa-summary.md); AA6 [AA-FREEZE PROMOTE](aa-freeze.md).  
 **Wave AB COMPLETE + FROZEN:** AB0–AB7 **PROMOTE** · AB-FREEZE — [wave-ab-summary.md](wave-ab-summary.md) · [ab-freeze.md](ab-freeze.md).  
 **Wave AC COMPLETE + FROZEN:** AC0–AC6 **PROMOTE** · AC-FREEZE — [wave-ac-summary.md](wave-ac-summary.md) · [ac-freeze.md](ac-freeze.md) · [paper-lab-wave-ac.md](paper-lab-wave-ac.md) · **H-CTXPLUS** · **H-SMARTPLUS** · **H-FASTPLUS** · **H-APPPLUS** · [AC-HITL-10](wave-ac-hitl.md).
-**Wave AD COMPLETE + FROZEN:** AD0–AD6 **PROMOTE** · AD-FREEZE — [wave-ad-summary.md](wave-ad-summary.md) · [ad-freeze.md](ad-freeze.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md) · **H-HARDPARA** · **H-COMPOSE** · **H-ROUTEPLUS** · **H-DEPLPLUS** · [AD-HITL-10](wave-ad-hitl.md).
+**Wave AD COMPLETE + FROZEN:** AD0–AD6 **PROMOTE** · AD-FREEZE — [wave-ad-summary.md](wave-ad-summary.md) · [ad-freeze.md](ad-freeze.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md) · **H-HARDPARA** · **H-COMPOSE** · **H-ROUTEPLUS** · **H-DEPLPLUS** · [AD-HITL-10](wave-ad-hitl.md).  
+**Wave AE OPEN:** AE0 [SESSION PROMOTE](wave-ae-session.md) · next **H-CTXMAX** (ship claim remains AD stack until AE5).
