@@ -70,4 +70,4 @@ npm run nano:test && npm run verify
 - Trials: `AL-CTXFRESH-LOOKUP-HITL-01…10` · `AL-CTXFRESH-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ctxfresh.py`
 
-Next: **AL3 H-SMARTFRESH**.
+Next: **AL3 H-SMARTFRESH** — **DONE PROMOTE** → [formal-hsmartfresh-smartfresh.md](formal-hsmartfresh-smartfresh.md).
