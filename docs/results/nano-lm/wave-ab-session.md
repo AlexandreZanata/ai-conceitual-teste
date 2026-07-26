@@ -7,7 +7,7 @@
 ## Decision
 
 **PROMOTE** — Freeze **10 real HITL questions** (source_id + app_id + gold) for every AB model/stack.  
-**Status: COMPLETE** (AB0–AB7). Wave AB **COMPLETE** — [wave-ab-summary.md](wave-ab-summary.md) · [paper-lab-wave-ab.md](paper-lab-wave-ab.md).
+**Status: COMPLETE + FROZEN** (AB0–AB8). Wave AB locked — [wave-ab-summary.md](wave-ab-summary.md) · [ab-freeze.md](ab-freeze.md).
 
 ## Mix (§11.5)
 

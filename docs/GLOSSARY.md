@@ -64,6 +64,7 @@
 | **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **AB-HITL-10** | Final Wave AB pack verify on declared stack; AB6 **PROMOTE** (mean 9.0 · errors 0/10) |
 | **AB-REPORT** | Public Wave AB closeout + FIX scoreboard; AB7 **PROMOTE** — [wave-ab-summary.md](results/nano-lm/wave-ab-summary.md) |
+| **AB-FREEZE** | Lock Wave AB outcomes; no Wave AC invent; **PROMOTE** — [ab-freeze.md](results/nano-lm/ab-freeze.md) |
 | **H-SERVEALIGN** | QPFB2+BEAMKV open decode HITL; AA2 **HOLD** (beats Z1; not product bar) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 

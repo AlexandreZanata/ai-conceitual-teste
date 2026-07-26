@@ -1,7 +1,7 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Z COMPLETE** · **Wave AA COMPLETE** · **Wave AB OPEN** · AB0 **DONE**).  
+> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Z COMPLETE** · **Wave AA COMPLETE** · **Wave AB COMPLETE + FROZEN**).  
 > Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md) · Wave AA: [wave-aa-summary.md](wave-aa-summary.md) · Wave AB0: [wave-ab-session.md](wave-ab-session.md) · HITL: [wave-z-hitl.md](wave-z-hitl.md) · WRAPBANK: [formal-hwrapbank-wrapbank.md](formal-hwrapbank-wrapbank.md) · PARA: [formal-hpara-para.md](formal-hpara-para.md) · SERVEALIGN: [formal-hservealign-servealign.md](formal-hservealign-servealign.md) · ZPREF: [formal-hzpref-zpref.md](formal-hzpref-zpref.md) · DEPL-DOC: [formal-hdepldoc-depl-doc.md](formal-hdepldoc-depl-doc.md).
 
 ## Official tips
@@ -63,6 +63,7 @@ npm run nano:asksmart
 npm run nano:realapp
 npm run nano:ab:hitl
 npm run nano:ab:report
+npm run nano:ab:freeze
 npm run nano:para
 npm run nano:zpref
 npm run nano:depl-doc
@@ -92,6 +93,6 @@ Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PR
 **Wave Y COMPLETE** — [wave-y-summary.md](wave-y-summary.md) (GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**).  
 **Wave Z COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md) (PFB ≠ interactive LM; **H-ZWRAP** + error-bank) · [wave-z-summary.md](wave-z-summary.md) · [paper-lab-wave-z.md](paper-lab-wave-z.md) · [lab-freeze.md](lab-freeze.md).  
 **Wave AA COMPLETE** — AA0 **H-WRAPBANK PROMOTE** · AA1 **H-PARA HOLD** · AA2 **H-SERVEALIGN HOLD** · AA3 **H-ZPREF KILL** · AA4 **H-DEPL-DOC PROMOTE** · AA5 **AA-REPORT PROMOTE** · AA6 **AA-FREEZE PROMOTE** — [wave-aa-summary.md](wave-aa-summary.md) · [aa-freeze.md](aa-freeze.md).  
-**Wave AB COMPLETE** — [wave-ab-summary.md](wave-ab-summary.md) · [paper-lab-wave-ab.md](paper-lab-wave-ab.md).
+**Wave AB COMPLETE + FROZEN** — [wave-ab-summary.md](wave-ab-summary.md) · [ab-freeze.md](ab-freeze.md) · [paper-lab-wave-ab.md](paper-lab-wave-ab.md).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

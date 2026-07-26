@@ -271,6 +271,7 @@
     "nano:realapp": "nano_lm/.venv/bin/python nano_lm/src/run_realapp.py",
     "nano:ab:hitl": "nano_lm/.venv/bin/python nano_lm/src/run_ab_hitl.py",
     "nano:ab:report": "nano_lm/.venv/bin/python nano_lm/src/run_ab_report.py",
+    "nano:ab:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ab_freeze.py",
     "nano:zpref": "nano_lm/.venv/bin/python nano_lm/src/run_zpref.py",
     "nano:depl-doc": "nano_lm/.venv/bin/python nano_lm/src/run_depl_doc.py",
     "nano:servealign": "nano_lm/.venv/bin/python nano_lm/src/run_servealign.py",

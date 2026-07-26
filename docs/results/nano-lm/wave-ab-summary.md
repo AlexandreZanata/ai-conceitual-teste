@@ -17,6 +17,7 @@
 | AB5 | **H-REALAPP** | 8.85 | 0 | **3** | **PROMOTE** | app-known + app-longdoc |
 | AB6 | **AB-HITL-10** | 9 | 0 | **0** | **PROMOTE** | final pack gate |
 | AB7 | **AB-REPORT** | — | — | **0** | **PROMOTE** | public summary + paper-lab |
+| AB8 | **AB-FREEZE** | — | — | **0** | **PROMOTE** | no Wave AC invent |
 
 ## Honest product claims
 
@@ -40,6 +41,7 @@ npm run nano:longapp
 npm run nano:asksmart
 npm run nano:realapp
 npm run nano:ab:hitl
+npm run nano:ab:freeze
 ```
 
 ## Do not reopen

@@ -97,6 +97,15 @@ AB_HITL_SCOREBOARD: tuple[dict[str, Any], ...] = (
         "decision": "PROMOTE",
         "note": "public summary + paper-lab",
     },
+    {
+        "stage": "AB8",
+        "id": "AB-FREEZE",
+        "mean": None,
+        "errors": None,
+        "fix": 0,
+        "decision": "PROMOTE",
+        "note": "no Wave AC invent",
+    },
 )
 
 AB_EVIDENCE: tuple[str, ...] = (
@@ -111,6 +120,7 @@ AB_EVIDENCE: tuple[str, ...] = (
     "docs/results/nano-lm/wave-ab-hitl.md",
     "docs/results/nano-lm/wave-ab-summary.md",
     "docs/results/nano-lm/paper-lab-wave-ab.md",
+    "docs/results/nano-lm/ab-freeze.md",
     "docs/results/nano-lm/RECIPES.md",
     "docs/results/nano-lm/champion-card.md",
 )
@@ -221,6 +231,7 @@ def render_wave_ab_summary() -> str:
             "npm run nano:asksmart",
             "npm run nano:realapp",
             "npm run nano:ab:hitl",
+            "npm run nano:ab:freeze",
             "```",
             "",
             "## Do not reopen",
