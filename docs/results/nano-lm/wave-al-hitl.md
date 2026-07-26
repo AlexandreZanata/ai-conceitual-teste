@@ -74,4 +74,4 @@ npm run nano:test && npm run verify
 - Trials: `AL-FINAL-LOOKUP-HITL-01…10` · `AL-FINAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_al_hitl.py`
 
-Next: **AL7 AL-REPORT**.
+Next: **AL7 AL-REPORT** — **DONE PROMOTE** → [wave-al-summary.md](wave-al-summary.md) · [paper-lab-wave-al.md](paper-lab-wave-al.md). Next: **AL8 AL-FREEZE**.
