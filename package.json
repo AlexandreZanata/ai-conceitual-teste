@@ -328,6 +328,8 @@
     "nano:ah:ctxlift": "nano_lm/.venv/bin/python nano_lm/src/run_ctxlift.py",
     "nano:smartlift": "nano_lm/.venv/bin/python nano_lm/src/run_smartlift.py",
     "nano:ah:smartlift": "nano_lm/.venv/bin/python nano_lm/src/run_smartlift.py",
+    "nano:fastlift": "nano_lm/.venv/bin/python nano_lm/src/run_fastlift.py",
+    "nano:ah:fastlift": "nano_lm/.venv/bin/python nano_lm/src/run_fastlift.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
     "nano:routeplus": "nano_lm/.venv/bin/python nano_lm/src/run_routeplus.py",
