@@ -62,4 +62,4 @@ npm run nano:test && npm run verify
 - Trials: `AJ-APPPEAK-{KNOWN,HOWTO,LONGDOC}-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_apppeak.py`
 
-Next: **AJ6 AJ-HITL-10**.
+Next: **AJ6 AJ-HITL-10** (**DONE — PROMOTE** — [wave-aj-hitl.md](wave-aj-hitl.md)). Next: **AJ7 AJ-REPORT**.
