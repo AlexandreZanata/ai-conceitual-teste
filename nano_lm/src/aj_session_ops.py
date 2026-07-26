@@ -33,7 +33,7 @@ AJ0_N = 10
 AJ0_THESIS = (
     "Wave AJ OPEN: freeze 10 held-out HITL asks "
     "(≠ AB · ≠ AC · ≠ AD · ≠ AE · ≠ AF · ≠ AG · ≠ AH · ≠ AI); "
-    "AJ1 H-GENPEAK + AJ2 H-CTXPEAK PROMOTE; next AJ3 H-SMARTPEAK"
+    "AJ1–AJ3 PROMOTE; next AJ4 H-FASTPEAK"
 )
 
 AJ0_APP_IDS: frozenset[str] = frozenset(
