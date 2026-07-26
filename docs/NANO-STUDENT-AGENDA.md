@@ -18,7 +18,7 @@ HITL: **H-ZWRAP** (+ **H-WRAPBANK**). Story-CE: **H-ZERR** ≠ chat.
 | X+ | **COMPLETE** | [wave-x-summary.md](results/nano-lm/wave-x-summary.md) — PFB family **PROMOTE**; QI/ABS **KILL** |
 | **Y** | **COMPLETE** | [wave-y-summary.md](results/nano-lm/wave-y-summary.md) — PFB256/ROLL/SUMCACHE/GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL** |
 | **Z** | **COMPLETE** | [wave-z-hitl.md](results/nano-lm/wave-z-hitl.md) — PFB ≠ interactive LM; **H-ZWRAP** · freeze [lab-freeze.md](results/nano-lm/lab-freeze.md) |
-| **AA** | **COMPLETE** | AA0 **H-WRAPBANK PROMOTE** · AA1 **H-PARA HOLD** · AA2 **H-SERVEALIGN HOLD** · AA3 **H-ZPREF KILL** · AA4 **H-DEPL-DOC PROMOTE** — [wrapbank](results/nano-lm/formal-hwrapbank-wrapbank.md) · [para](results/nano-lm/formal-hpara-para.md) · [servealign](results/nano-lm/formal-hservealign-servealign.md) · [zpref](results/nano-lm/formal-hzpref-zpref.md) · [depl-doc](results/nano-lm/formal-hdepldoc-depl-doc.md) |
+| **AA** | **COMPLETE** | AA0–AA4 + **AA-REPORT PROMOTE** — [wave-aa-summary.md](results/nano-lm/wave-aa-summary.md) · [paper-lab](results/nano-lm/paper-lab-wave-aa.md) |
 
 Teachers: TinyStories-33M + `bigcode/tiny_starcoder_py` ([TCHR](results/nano-lm/formal-htchr-code-teacher.md)).  
 KILL tooling purged → [`results/nano-lm/archive/`](results/nano-lm/archive/).

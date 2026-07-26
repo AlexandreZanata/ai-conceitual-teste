@@ -64,4 +64,4 @@ AA1 **H-PARA HOLD** — [formal-hpara-para.md](formal-hpara-para.md).
 AA2 **H-SERVEALIGN HOLD** — mean 3.4 beats Z1; not pass bar — [formal-hservealign-servealign.md](formal-hservealign-servealign.md).  
 AA3 **H-ZPREF KILL** — [formal-hzpref-zpref.md](formal-hzpref-zpref.md).  
 AA4 **H-DEPL-DOC PROMOTE** — [formal-hdepldoc-depl-doc.md](formal-hdepldoc-depl-doc.md).  
-**Wave AA COMPLETE**.
+**Wave AA COMPLETE** — public closeout: [wave-aa-summary.md](wave-aa-summary.md) · [paper-lab-wave-aa.md](paper-lab-wave-aa.md) (`npm run nano:aa:report`).

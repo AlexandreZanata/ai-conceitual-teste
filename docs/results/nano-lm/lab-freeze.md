@@ -33,5 +33,5 @@ Artifact: `results/nano-lm/lab_freeze.json` · Contract: `nano_lm/tests/test_lab
 ## Posture
 
 No new Y/Z letter-packs without explicit lab-book reopen. Maintain [DEPL-Y](wave-z-depl-y.md) + [wave-z-hitl.md](wave-z-hitl.md).  
-Honest product expansion via **Wave AA COMPLETE** (§8.1): [WRAPBANK](formal-hwrapbank-wrapbank.md) **PROMOTE**; [PARA](formal-hpara-para.md) **HOLD**; [SERVEALIGN](formal-hservealign-servealign.md) **HOLD**; [ZPREF](formal-hzpref-zpref.md) **KILL**; [DEPL-DOC](formal-hdepldoc-depl-doc.md) **PROMOTE**.
+Honest product expansion via **Wave AA COMPLETE** (§8.1): [WRAPBANK](formal-hwrapbank-wrapbank.md) **PROMOTE**; [PARA](formal-hpara-para.md) **HOLD**; [SERVEALIGN](formal-hservealign-servealign.md) **HOLD**; [ZPREF](formal-hzpref-zpref.md) **KILL**; [DEPL-DOC](formal-hdepldoc-depl-doc.md) **PROMOTE**; closeout [wave-aa-summary.md](wave-aa-summary.md) / [paper-lab-wave-aa.md](paper-lab-wave-aa.md) (**AA-REPORT**).
 
