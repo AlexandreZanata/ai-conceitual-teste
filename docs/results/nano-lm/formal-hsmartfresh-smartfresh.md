@@ -76,4 +76,4 @@ npm run nano:test && npm run verify
 - Trials: `AL-SMARTFRESH-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_smartfresh.py`
 
-Next: **AL4 H-FASTFRESH**.
+Next: **AL4 H-FASTFRESH** — **DONE PROMOTE** → [formal-hfastfresh-fastfresh.md](formal-hfastfresh-fastfresh.md).

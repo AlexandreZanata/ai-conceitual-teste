@@ -390,6 +390,8 @@
     "nano:al:ctxfresh": "nano_lm/.venv/bin/python nano_lm/src/run_ctxfresh.py",
     "nano:smartfresh": "nano_lm/.venv/bin/python nano_lm/src/run_smartfresh.py",
     "nano:al:smartfresh": "nano_lm/.venv/bin/python nano_lm/src/run_smartfresh.py",
+    "nano:fastfresh": "nano_lm/.venv/bin/python nano_lm/src/run_fastfresh.py",
+    "nano:al:fastfresh": "nano_lm/.venv/bin/python nano_lm/src/run_fastfresh.py",
     "nano:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:aj:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:fastpeak": "nano_lm/.venv/bin/python nano_lm/src/run_fastpeak.py",
