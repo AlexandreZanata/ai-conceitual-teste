@@ -41,6 +41,7 @@
 | [formal-hctxmax-ctxmax.md](formal-hctxmax-ctxmax.md) | Wave AE1 H-CTXMAX **PROMOTE** |
 | [formal-hsmartmax-smartmax.md](formal-hsmartmax-smartmax.md) | Wave AE2 H-SMARTMAX **PROMOTE** |
 | [formal-hfastmax-fastmax.md](formal-hfastmax-fastmax.md) | Wave AE3 H-FASTMAX **PROMOTE** |
+| [formal-happmax-appmax.md](formal-happmax-appmax.md) | Wave AE4 H-APPMAX **PROMOTE** |
 | [depl-ad.md](depl-ad.md) | AC+AD deploy overview (H-DEPLPLUS) |
 | [wave-ab-summary.md](wave-ab-summary.md) | Wave AB **COMPLETE** public closeout |
 | [ab-freeze.md](ab-freeze.md) | Wave AB **FROZEN** — no Wave AC invent |

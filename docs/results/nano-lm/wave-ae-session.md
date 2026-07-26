@@ -51,4 +51,4 @@ Contract: `nano_lm/tests/test_ae_session.py`.
 - Default ship claim until AE5 still **AD packaged stack** on AC/APPPLUS.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AF.
 
-Next: **AE1 H-CTXMAX** (**DONE** — see [formal-hctxmax-ctxmax.md](formal-hctxmax-ctxmax.md)). **AE2 H-SMARTMAX** (**DONE** — see [formal-hsmartmax-smartmax.md](formal-hsmartmax-smartmax.md)). **AE3 H-FASTMAX** (**DONE** — see [formal-hfastmax-fastmax.md](formal-hfastmax-fastmax.md)). Next wave stage: **AE4 H-APPMAX**.
+Next: **AE1 H-CTXMAX** (**DONE** — see [formal-hctxmax-ctxmax.md](formal-hctxmax-ctxmax.md)). **AE2 H-SMARTMAX** (**DONE** — see [formal-hsmartmax-smartmax.md](formal-hsmartmax-smartmax.md)). **AE3 H-FASTMAX** (**DONE** — see [formal-hfastmax-fastmax.md](formal-hfastmax-fastmax.md)). **AE4 H-APPMAX** (**DONE** — see [formal-happmax-appmax.md](formal-happmax-appmax.md)). Next wave stage: **AE5 AE-HITL-10**.

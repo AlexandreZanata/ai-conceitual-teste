@@ -1,22 +1,22 @@
 # app-howto — scoped nano app
 
-> Wave AD4 **H-DEPLPLUS** · Parent AC4 **H-APPPLUS** · Spine: `H-ASKSMART → H-SEMWRAP → H-ASKFAST`
-> Claim: scoped procedural howto from curated sources — not open chat LM
+> Wave AE4 **H-APPMAX** · Spine: `H-SMARTMAX → H-ASKSMART → H-SEMWRAP → H-FASTMAX`
+> Claim: stronger scoped procedural howto from curated sources — not open chat LM
 
 ## Job
 
-Surface `howto` — runnable path for held-out HITL asks.
+Surface `howto` — runnable path for AE0 held-out HITL.
 
 ## Run
 
 ```bash
-npm run nano:appplus -- --app app-howto
-npm run nano:deplplus
+npm run nano:appmax -- --app app-howto
+npm run nano:appmax
 ```
 
-## AD stack (PROMOTE)
+## AE stack (PROMOTE)
 
-- H-HARDPARA · H-COMPOSE · H-ROUTEPLUS · H-APPPLUS · H-DEPLPLUS
+- H-CTXMAX · H-SMARTMAX · H-FASTMAX · H-APPMAX
 
 ## Honesty
 

@@ -291,6 +291,7 @@
     "nano:ctxmax": "nano_lm/.venv/bin/python nano_lm/src/run_ctxmax.py",
     "nano:smartmax": "nano_lm/.venv/bin/python nano_lm/src/run_smartmax.py",
     "nano:fastmax": "nano_lm/.venv/bin/python nano_lm/src/run_fastmax.py",
+    "nano:appmax": "nano_lm/.venv/bin/python nano_lm/src/run_appmax.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
     "nano:routeplus": "nano_lm/.venv/bin/python nano_lm/src/run_routeplus.py",

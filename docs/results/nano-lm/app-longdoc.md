@@ -1,22 +1,22 @@
 # app-longdoc — scoped nano app
 
-> Wave AD4 **H-DEPLPLUS** · Parent AC4 **H-APPPLUS** · Spine: `H-CTXPLUS → H-LONGAPP → H-SUMCACHE → H-ROLL → H-SEMWRAP`
-> Claim: ask over curated long docs via CTXPLUS/ROLL/SUMCACHE — not STREAM / open chat
+> Wave AE4 **H-APPMAX** · Spine: `H-CTXMAX → H-SUMCACHE → H-ROLL → H-SEMWRAP`
+> Claim: ask over curated multi-doc ctx via CTXMAX — not STREAM / open chat
 
 ## Job
 
-Surface `long-doc` — runnable path for held-out HITL asks.
+Surface `long-doc` — runnable path for AE0 held-out HITL.
 
 ## Run
 
 ```bash
-npm run nano:appplus -- --app app-longdoc
-npm run nano:deplplus
+npm run nano:appmax -- --app app-longdoc
+npm run nano:appmax
 ```
 
-## AD stack (PROMOTE)
+## AE stack (PROMOTE)
 
-- H-HARDPARA · H-COMPOSE · H-ROUTEPLUS · H-APPPLUS · H-DEPLPLUS
+- H-CTXMAX · H-SMARTMAX · H-FASTMAX · H-APPMAX
 
 ## Honesty
 

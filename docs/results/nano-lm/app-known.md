@@ -1,22 +1,22 @@
 # app-known — scoped nano app
 
-> Wave AD4 **H-DEPLPLUS** · Parent AC4 **H-APPPLUS** · Spine: `H-ZWRAP → H-SEMWRAP → H-ASKFAST → H-FASTPLUS`
-> Claim: scoped known / near-known held-out ask via SEMWRAP — not open chat LM
+> Wave AE4 **H-APPMAX** · Spine: `H-SEMWRAP → H-ASKFAST → H-FASTMAX`
+> Claim: scoped known / near-known held-out ask via FASTMAX — not open chat LM
 
 ## Job
 
-Surface `known-ask` — runnable path for held-out HITL asks.
+Surface `known-ask` — runnable path for AE0 held-out HITL.
 
 ## Run
 
 ```bash
-npm run nano:appplus -- --app app-known
-npm run nano:deplplus
+npm run nano:appmax -- --app app-known
+npm run nano:appmax
 ```
 
-## AD stack (PROMOTE)
+## AE stack (PROMOTE)
 
-- H-HARDPARA · H-COMPOSE · H-ROUTEPLUS · H-APPPLUS · H-DEPLPLUS
+- H-CTXMAX · H-SMARTMAX · H-FASTMAX · H-APPMAX
 
 ## Honesty
 

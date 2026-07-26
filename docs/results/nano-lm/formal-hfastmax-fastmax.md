@@ -43,4 +43,4 @@ npm run nano:fastmax
 - Contract: `nano_lm/tests/test_fastmax.py`  
 - Cache peek: `AskCompletionCache.peek` (no hit-counter distortion)
 
-Next: **AE4 H-APPMAX**.
+Next: **AE4 H-APPMAX** (**DONE** — see [formal-happmax-appmax.md](formal-happmax-appmax.md)). Next wave stage: **AE5 AE-HITL-10**.
