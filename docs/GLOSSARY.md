@@ -59,6 +59,7 @@
 | **AB0-SESSION** | Freeze 10 real HITL asks (source_id + app_id) for Wave AB (**PROMOTE**) |
 | **H-SEMWRAP** | Fuzzy/semantic recall over wrap bank (+ curated boost); AB1 **PROMOTE** (mean 9.0; 0 false-hit) |
 | **H-ASKFAST** | SEMWRAP+QT+ask completion cache; AB2 **PROMOTE** (wall↓100% vs raw QT ask) |
+| **H-LONGAPP** | ROLL/SUMCACHE on curated long docs; AB3 **PROMOTE** (10/10 usable; L_eff≫W) |
 | **H-SERVEALIGN** | QPFB2+BEAMKV open decode HITL; AA2 **HOLD** (beats Z1; not product bar) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 

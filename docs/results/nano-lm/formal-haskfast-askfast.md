@@ -42,4 +42,4 @@ npm run nano:z:ask -- --askfast --question "How do BIP-39 mnemonic phrases turn 
 - Trials: `results/nano-lm/wave-ab/trials/AB-ASKFAST-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_askfast.py`
 
-Next: **AB3 H-LONGAPP**.
+Next: **AB4 H-ASKSMART**.
