@@ -74,4 +74,4 @@ npm run nano:test && npm run verify
 - Trials: `AJ-FINAL-LOOKUP-HITL-01…10` · `AJ-FINAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_aj_hitl.py`
 
-Next: **AJ7 AJ-REPORT**.
+Next: **AJ7 AJ-REPORT** (**DONE — PROMOTE** — [wave-aj-summary.md](wave-aj-summary.md) · [paper-lab-wave-aj.md](paper-lab-wave-aj.md)). Next: **AJ8 AJ-FREEZE**.
