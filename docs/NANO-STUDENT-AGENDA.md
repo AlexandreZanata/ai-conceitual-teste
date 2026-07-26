@@ -28,7 +28,7 @@ HITL: **H-ZWRAP** (+ **H-WRAPBANK** + **H-SEMWRAP**). Story-CE: **H-ZERR** ≠ c
 | **AH** | **COMPLETE + FROZEN** | [ah-freeze.md](results/nano-lm/ah-freeze.md) · [wave-ah-summary.md](results/nano-lm/wave-ah-summary.md) |
 | **AI** | **COMPLETE + FROZEN** | [ai-freeze.md](results/nano-lm/ai-freeze.md) · [wave-ai-summary.md](results/nano-lm/wave-ai-summary.md) |
 | **AJ** | **COMPLETE + FROZEN** | AJ0–AJ8 **PROMOTE** · [aj-freeze.md](results/nano-lm/aj-freeze.md) · [wave-aj-summary.md](results/nano-lm/wave-aj-summary.md) · [formal-hajfreeze-aj-freeze.md](results/nano-lm/formal-hajfreeze-aj-freeze.md) |
-| **AK** | **OPEN** | AK0 [SESSION PROMOTE](results/nano-lm/wave-ak-session.md) (`npm run nano:ak:session`) · next **AK1 H-GENTRUE** — ship remains **AF packaged stack**; ≤5M stays |
+| **AK** | **OPEN** | AK0 [SESSION PROMOTE](results/nano-lm/wave-ak-session.md) · AK1 [H-GENTRUE HOLD](results/nano-lm/formal-hgentrue-gentrue.md) (`npm run nano:gentrue`) · next **AK2 H-CTXMORE** — ship remains **AF packaged stack**; ≤5M stays |
 
 Teachers: TinyStories-33M + `bigcode/tiny_starcoder_py` ([TCHR](results/nano-lm/formal-htchr-code-teacher.md)).  
 KILL tooling purged → [`results/nano-lm/archive/`](results/nano-lm/archive/).
