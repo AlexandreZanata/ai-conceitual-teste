@@ -63,4 +63,4 @@ npm run nano:test && npm run verify
 - Trials: `AM-APPNEXT-{KNOWN,HOWTO,LONGDOC}-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_appnext.py`
 
-Next: **AM6 AM-HITL-10** — final dual-arm on same 10.
+Next: **AM6 AM-HITL-10** — **DONE PROMOTE** → [wave-am-hitl.md](wave-am-hitl.md).
