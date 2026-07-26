@@ -62,4 +62,4 @@ Contract: `nano_lm/tests/test_am_session.py`.
 - Default ship claim until proven otherwise still **AF packaged stack**.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AN · PROMOTE LOOKUP-only as generative IQ.
 
-Next: **AM1 H-GENTRUTH** — smarter usable gen + dual-arm ASK→EVAL→FIX ×10 + ablation honesty.
+Next: **AM1 H-GENTRUTH** — **DONE HOLD** → [formal-hgentruth-gentruth.md](formal-hgentruth-gentruth.md). Next **AM2 H-CTXNEXT**.
