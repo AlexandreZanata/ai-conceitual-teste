@@ -294,6 +294,7 @@
     "nano:appmax": "nano_lm/.venv/bin/python nano_lm/src/run_appmax.py",
     "nano:ae:hitl": "nano_lm/.venv/bin/python nano_lm/src/run_ae_hitl.py",
     "nano:ae:report": "nano_lm/.venv/bin/python nano_lm/src/run_ae_report.py",
+    "nano:ae:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ae_freeze.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
     "nano:routeplus": "nano_lm/.venv/bin/python nano_lm/src/run_routeplus.py",

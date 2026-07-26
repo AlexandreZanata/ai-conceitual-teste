@@ -1,9 +1,9 @@
-# Wave AE — more ctx · smarter · faster · real apps (**COMPLETE**)
+# Wave AE — more ctx · smarter · faster · real apps (**COMPLETE + FROZEN**)
 
-> Lab: `.local/pesquisa.md` §5 · Paper-lab: [paper-lab-wave-ae.md](paper-lab-wave-ae.md)  
+> Lab: `.local/pesquisa.md` §5 · Paper-lab: [paper-lab-wave-ae.md](paper-lab-wave-ae.md) · Freeze: [ae-freeze.md](ae-freeze.md)  
 > Parent: Wave AD **AD-FREEZE** reopen · Product spine: **AE packaged stack**
 
-**Status: RESEARCH COMPLETE** · Freeze pending (AE7) · Thesis: **Scoped AE packaged stack = CTXMAX+SMARTMAX+FASTMAX+APPMAX on held-out AE0; final HITL mean 9.0; not open chat LM.**
+**Status: COMPLETE + FROZEN** · Thesis: **Scoped AE packaged stack = CTXMAX+SMARTMAX+FASTMAX+APPMAX on held-out AE0; final HITL mean 9.0; not open chat LM.**
 
 ## Stage scoreboard (Cursor ASK→EVAL→FIX)
 
@@ -16,7 +16,7 @@
 | AE4 | **H-APPMAX** | 8.725 | 0 | **0** | **PROMOTE** | howto↑ + app-route + DEPL-AE |
 | AE5 | **AE-HITL-10** | 9 | 0 | **0** | **PROMOTE** | final pack gate |
 | AE6 | **AE-REPORT** | — | — | **0** | **PROMOTE** | public summary + paper-lab |
-| AE7 | **AE-FREEZE** | — | — | **0** | **pending** | lock; no Wave AF invent |
+| AE7 | **AE-FREEZE** | — | — | **0** | **PROMOTE** | lock; no Wave AF invent |
 
 ## Honest product claims
 

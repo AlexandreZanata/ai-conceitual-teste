@@ -51,4 +51,4 @@ Contract: `nano_lm/tests/test_ae_session.py`.
 - Default ship claim until AE5 still **AD packaged stack** on AC/APPPLUS.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AF.
 
-Next: **AE1 H-CTXMAX** (**DONE** — see [formal-hctxmax-ctxmax.md](formal-hctxmax-ctxmax.md)). **AE2–AE5 DONE**. **AE6 AE-REPORT** (**DONE** — see [wave-ae-summary.md](wave-ae-summary.md)). Next wave stage: **AE7 AE-FREEZE**.
+Next: **AE1–AE6 DONE**. **AE7 AE-FREEZE** (**DONE** — see [ae-freeze.md](ae-freeze.md)). Wave **AE COMPLETE + FROZEN**.

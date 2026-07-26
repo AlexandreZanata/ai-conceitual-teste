@@ -1,7 +1,7 @@
 # Paper-lab — Wave AE (more ctx · smarter · faster · real apps)
 
 > Companion to [wave-ae-summary.md](wave-ae-summary.md). English lab note.  
-> **Status: RESEARCH COMPLETE** · Freeze pending · Final HITL: [wave-ae-hitl.md](wave-ae-hitl.md)
+> **Status: COMPLETE + FROZEN** · Final HITL: [wave-ae-hitl.md](wave-ae-hitl.md) · Freeze: [ae-freeze.md](ae-freeze.md)
 
 ## Question
 

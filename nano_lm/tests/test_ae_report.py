@@ -60,7 +60,7 @@ def test_given_thin_text_when_markers_then_fail() -> None:
 def test_given_paper_lab_when_render_then_complete() -> None:
     body = render_paper_lab_wave_ae()
     assert "COMPLETE" in body
-    assert "Freeze pending" in body
+    assert "FROZEN" in body or "Freeze" in body
     assert "not open chat" in body
     assert "AE-HITL-10" in body
     assert "H-CTXMAX" in body

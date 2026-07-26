@@ -94,7 +94,7 @@ AE_HITL_SCOREBOARD: tuple[dict[str, Any], ...] = (
         "mean": None,
         "errors": None,
         "fix": 0,
-        "decision": "pending",
+        "decision": "PROMOTE",
         "note": "lock; no Wave AF invent",
     },
 )
@@ -176,14 +176,16 @@ def scoreboard_ok(
 
 def render_wave_ae_summary() -> str:
     lines = [
-        "# Wave AE — more ctx · smarter · faster · real apps (**COMPLETE**)",
+        "# Wave AE — more ctx · smarter · faster · real apps "
+        "(**COMPLETE + FROZEN**)",
         "",
         "> Lab: `.local/pesquisa.md` §5 · Paper-lab: "
-        "[paper-lab-wave-ae.md](paper-lab-wave-ae.md)  ",
+        "[paper-lab-wave-ae.md](paper-lab-wave-ae.md) · "
+        "Freeze: [ae-freeze.md](ae-freeze.md)  ",
         "> Parent: Wave AD **AD-FREEZE** reopen · Product spine: "
         "**AE packaged stack**",
         "",
-        "**Status: RESEARCH COMPLETE** · Freeze pending (AE7) · Thesis: **"
+        "**Status: COMPLETE + FROZEN** · Thesis: **"
         + AE_THESIS
         + ".**",
         "",
@@ -243,8 +245,9 @@ def render_paper_lab_wave_ae() -> str:
             "",
             "> Companion to [wave-ae-summary.md](wave-ae-summary.md). "
             "English lab note.  ",
-            "> **Status: RESEARCH COMPLETE** · Freeze pending · Final HITL: "
-            "[wave-ae-hitl.md](wave-ae-hitl.md)",
+            "> **Status: COMPLETE + FROZEN** · Final HITL: "
+            "[wave-ae-hitl.md](wave-ae-hitl.md) · "
+            "Freeze: [ae-freeze.md](ae-freeze.md)",
             "",
             "## Question",
             "",

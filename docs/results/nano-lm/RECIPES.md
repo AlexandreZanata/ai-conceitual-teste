@@ -68,6 +68,7 @@
 | Wave AE4 APPMAX | [formal-happmax-appmax.md](formal-happmax-appmax.md) **PROMOTE** (`npm run nano:appmax`) — howto↑ + app-route + DEPL-AE |
 | Wave AE5 AE-HITL-10 | [wave-ae-hitl.md](wave-ae-hitl.md) **PROMOTE** (`npm run nano:ae:hitl`) — final pack mean 9.0 |
 | Wave AE6 AE-REPORT | [wave-ae-summary.md](wave-ae-summary.md) **PROMOTE** (`npm run nano:ae:report`) — paper-lab + FIX log |
+| Wave AE-FREEZE | [ae-freeze.md](ae-freeze.md) **PROMOTE** (`npm run nano:ae:freeze`) — no Wave AF invent without reopen |
 
 
 ## Policy
@@ -79,4 +80,4 @@ Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.m
 **Wave AB COMPLETE + FROZEN:** AB0–AB7 **PROMOTE** · AB-FREEZE — [wave-ab-summary.md](wave-ab-summary.md) · [ab-freeze.md](ab-freeze.md).  
 **Wave AC COMPLETE + FROZEN:** AC0–AC6 **PROMOTE** · AC-FREEZE — [wave-ac-summary.md](wave-ac-summary.md) · [ac-freeze.md](ac-freeze.md) · [paper-lab-wave-ac.md](paper-lab-wave-ac.md) · **H-CTXPLUS** · **H-SMARTPLUS** · **H-FASTPLUS** · **H-APPPLUS** · [AC-HITL-10](wave-ac-hitl.md).
 **Wave AD COMPLETE + FROZEN:** AD0–AD6 **PROMOTE** · AD-FREEZE — [wave-ad-summary.md](wave-ad-summary.md) · [ad-freeze.md](ad-freeze.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md) · **H-HARDPARA** · **H-COMPOSE** · **H-ROUTEPLUS** · **H-DEPLPLUS** · [AD-HITL-10](wave-ad-hitl.md).  
-**Wave AE OPEN:** AE0–AE5 [AE-HITL-10 PROMOTE](wave-ae-hitl.md) · AE6 [AE-REPORT PROMOTE](wave-ae-summary.md) · [paper-lab-wave-ae.md](paper-lab-wave-ae.md) · next **AE-FREEZE** (ship claim = **AE packaged stack**).
+**Wave AE COMPLETE + FROZEN:** AE0–AE6 **PROMOTE** · AE-FREEZE — [wave-ae-summary.md](wave-ae-summary.md) · [ae-freeze.md](ae-freeze.md) · [paper-lab-wave-ae.md](paper-lab-wave-ae.md) · **H-CTXMAX** · **H-SMARTMAX** · **H-FASTMAX** · **H-APPMAX** · [AE-HITL-10](wave-ae-hitl.md).

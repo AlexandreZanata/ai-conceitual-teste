@@ -45,6 +45,8 @@
 | [wave-ae-hitl.md](wave-ae-hitl.md) | Wave AE5 AE-HITL-10 **PROMOTE** |
 | [wave-ae-summary.md](wave-ae-summary.md) | Wave AE6 AE-REPORT **PROMOTE** |
 | [paper-lab-wave-ae.md](paper-lab-wave-ae.md) | Wave AE paper-lab |
+| [ae-freeze.md](ae-freeze.md) | Wave AE7 AE-FREEZE **PROMOTE** |
+| [formal-haefreeze-ae-freeze.md](formal-haefreeze-ae-freeze.md) | Wave AE7 formal lock |
 | [depl-ad.md](depl-ad.md) | AC+AD deploy overview (H-DEPLPLUS) |
 | [wave-ab-summary.md](wave-ab-summary.md) | Wave AB **COMPLETE** public closeout |
 | [ab-freeze.md](ab-freeze.md) | Wave AB **FROZEN** — no Wave AC invent |
