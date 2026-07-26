@@ -61,4 +61,4 @@ npm run nano:appultra -- --app app-compose
 - Trials: `AF-APPULTRA-{KNOWN,LONGDOC,HOWTO,ROUTE,COMPOSE}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_appultra.py`
 
-Next: **AF5 AF-HITL-10** (final gate on declared AF stack).
+Next: **AF5 AF-HITL-10** (**DONE** — see [wave-af-hitl.md](wave-af-hitl.md)). Next wave stage: **AF6 AF-REPORT**.
