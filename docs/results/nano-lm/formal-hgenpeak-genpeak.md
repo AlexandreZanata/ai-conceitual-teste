@@ -75,4 +75,4 @@ npm run nano:test && npm run verify
 - Trials: `AJ-GENPEAK-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_genpeak.py`
 
-Next: **AJ2 H-CTXPEAK**.
+Next: **AJ2 H-CTXPEAK** — **DONE PROMOTE** → [formal-hctxpeak-ctxpeak.md](formal-hctxpeak-ctxpeak.md). Next: **AJ3 H-SMARTPEAK**.
