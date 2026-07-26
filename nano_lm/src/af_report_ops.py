@@ -94,7 +94,7 @@ AF_HITL_SCOREBOARD: tuple[dict[str, Any], ...] = (
         "mean": None,
         "errors": None,
         "fix": 0,
-        "decision": "pending",
+        "decision": "PROMOTE",
         "note": "lock; no Wave AG invent",
     },
 )
@@ -178,15 +178,15 @@ def scoreboard_ok(
 def render_wave_af_summary() -> str:
     lines = [
         "# Wave AF — more ctx · smarter · faster · real apps "
-        "(**COMPLETE** — pending freeze)",
+        "(**COMPLETE + FROZEN**)",
         "",
         "> Lab: `.local/pesquisa.md` §5 · Paper-lab: "
         "[paper-lab-wave-af.md](paper-lab-wave-af.md) · "
-        "Next freeze: AF7 **AF-FREEZE**  ",
+        "Freeze: [af-freeze.md](af-freeze.md)  ",
         "> Parent: Wave AE **AE-FREEZE** reopen · Product spine: "
         "**AF packaged stack**",
         "",
-        "**Status: COMPLETE** (report) · pending **AF-FREEZE** · Thesis: **"
+        "**Status: COMPLETE + FROZEN** · Thesis: **"
         + AF_THESIS
         + ".**",
         "",
@@ -246,9 +246,10 @@ def render_paper_lab_wave_af() -> str:
             "",
             "> Companion to [wave-af-summary.md](wave-af-summary.md). "
             "English lab note.  ",
-            "> **Status: COMPLETE** (report) · pending freeze · Final HITL: "
+            "> **Status: COMPLETE + FROZEN** · Final HITL: "
             "[wave-af-hitl.md](wave-af-hitl.md) · "
-            "Parent freeze: [ae-freeze.md](ae-freeze.md)",
+            "Freeze: [af-freeze.md](af-freeze.md) · "
+            "Parent: [ae-freeze.md](ae-freeze.md)",
             "",
             "## Question",
             "",

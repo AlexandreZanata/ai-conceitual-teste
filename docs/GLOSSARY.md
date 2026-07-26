@@ -90,6 +90,7 @@
 | **H-APPULTRA** | Stronger apps + howto↑ + **app-compose** 5th + DEPL-AF; AF4 **PROMOTE** (5/5 apps; mean 8.86) |
 | **AF-HITL-10** | Final verify on declared AF stack; AF5 **PROMOTE** (mean 9.0; errors 0/10) |
 | **AF-REPORT** | Public Wave AF summary + paper-lab + FIX log; AF6 **PROMOTE** |
+| **AF-FREEZE** | Lock AF outcomes; no Wave AG invent without reopen; AF7 **PROMOTE** |
 | **H-ASKSMART** | Anti-period QPFB2+BEAMKV + constrained SEMWRAP FIX; AB4 **PROMOTE** (mean 8.7 > SERVEALIGN 3.4) |
 | **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **AB-HITL-10** | Final Wave AB pack verify on declared stack; AB6 **PROMOTE** (mean 9.0 · errors 0/10) |

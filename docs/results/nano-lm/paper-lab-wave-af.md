@@ -1,7 +1,7 @@
 # Paper-lab — Wave AF (more ctx · smarter · faster · real apps)
 
 > Companion to [wave-af-summary.md](wave-af-summary.md). English lab note.  
-> **Status: COMPLETE** (report) · pending freeze · Final HITL: [wave-af-hitl.md](wave-af-hitl.md) · Parent freeze: [ae-freeze.md](ae-freeze.md)
+> **Status: COMPLETE + FROZEN** · Final HITL: [wave-af-hitl.md](wave-af-hitl.md) · Freeze: [af-freeze.md](af-freeze.md) · Parent: [ae-freeze.md](ae-freeze.md)
 
 ## Question
 

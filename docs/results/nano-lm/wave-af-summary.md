@@ -1,9 +1,9 @@
-# Wave AF — more ctx · smarter · faster · real apps (**COMPLETE** — pending freeze)
+# Wave AF — more ctx · smarter · faster · real apps (**COMPLETE + FROZEN**)
 
-> Lab: `.local/pesquisa.md` §5 · Paper-lab: [paper-lab-wave-af.md](paper-lab-wave-af.md) · Next freeze: AF7 **AF-FREEZE**  
+> Lab: `.local/pesquisa.md` §5 · Paper-lab: [paper-lab-wave-af.md](paper-lab-wave-af.md) · Freeze: [af-freeze.md](af-freeze.md)  
 > Parent: Wave AE **AE-FREEZE** reopen · Product spine: **AF packaged stack**
 
-**Status: COMPLETE** (report) · pending **AF-FREEZE** · Thesis: **Scoped AF packaged stack = CTXULTRA+SMARTULTRA+FASTULTRA+APPULTRA on held-out AF0; final HITL mean 9.0; not open chat LM.**
+**Status: COMPLETE + FROZEN** · Thesis: **Scoped AF packaged stack = CTXULTRA+SMARTULTRA+FASTULTRA+APPULTRA on held-out AF0; final HITL mean 9.0; not open chat LM.**
 
 ## Stage scoreboard (Cursor ASK→EVAL→FIX)
 
@@ -16,7 +16,7 @@
 | AF4 | **H-APPULTRA** | 8.86 | 0 | **7** | **PROMOTE** | howto↑ + compose 5th + DEPL-AF |
 | AF5 | **AF-HITL-10** | 9 | 0 | **0** | **PROMOTE** | final pack gate |
 | AF6 | **AF-REPORT** | — | — | **0** | **PROMOTE** | public summary + paper-lab |
-| AF7 | **AF-FREEZE** | — | — | **0** | **pending** | lock; no Wave AG invent |
+| AF7 | **AF-FREEZE** | — | — | **0** | **PROMOTE** | lock; no Wave AG invent |
 
 ## Honest product claims
 
