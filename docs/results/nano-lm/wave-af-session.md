@@ -51,4 +51,4 @@ Contract: `nano_lm/tests/test_af_session.py`.
 - Default ship claim until AF5 still **AE packaged stack**.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AG · PROMOTE without FIX.
 
-Next: **AF1 H-CTXULTRA** (**DONE** — see [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md)). Next wave stage: **AF2 H-SMARTULTRA**.
+Next: **AF1 H-CTXULTRA** (**DONE** — see [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md)). **AF2 H-SMARTULTRA** (**DONE** — see [formal-hsmartultra-smartultra.md](formal-hsmartultra-smartultra.md)). Next wave stage: **AF3 H-FASTULTRA**.

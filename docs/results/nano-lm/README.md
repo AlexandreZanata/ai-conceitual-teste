@@ -49,6 +49,7 @@
 | [formal-haefreeze-ae-freeze.md](formal-haefreeze-ae-freeze.md) | Wave AE7 formal lock |
 | [wave-af-session.md](wave-af-session.md) | Wave AF0 SESSION **PROMOTE** (10 held-out HITL Qs; Wave AF OPEN) |
 | [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md) | Wave AF1 H-CTXULTRA **PROMOTE** |
+| [formal-hsmartultra-smartultra.md](formal-hsmartultra-smartultra.md) | Wave AF2 H-SMARTULTRA **PROMOTE** |
 | [depl-ad.md](depl-ad.md) | AC+AD deploy overview (H-DEPLPLUS) |
 | [wave-ab-summary.md](wave-ab-summary.md) | Wave AB **COMPLETE** public closeout |
 | [ab-freeze.md](ab-freeze.md) | Wave AB **FROZEN** — no Wave AC invent |

@@ -85,7 +85,8 @@
 | **AE-FREEZE** | Lock AE outcomes; no Wave AF invent without reopen; AE7 **PROMOTE** |
 | **AF0-SESSION** | Freeze 10 held-out HITL asks (≠ AB ≠ AC ≠ AD ≠ AE) for Wave AF (**PROMOTE**) |
 | **H-CTXULTRA** | Triple-doc K=7 ROLL/SUMCACHE; L_eff↑ vs CTXMAX; AF1 **PROMOTE** (mean 9.0; usable 10/10) |
-| **H-SMARTULTRA** | Smarter retrieve/cite/compose beyond SMARTMAX (Wave AF2 — pending) |
+| **H-SMARTULTRA** | Triple-hop SEMWRAP cite beyond SMARTMAX; AF2 **PROMOTE** (mean 9.0; cite 10/10; false-hit 0) |
+| **H-FASTULTRA** | Faster ask/TTFT beyond FASTMAX (Wave AF3 — pending) |
 | **H-ASKSMART** | Anti-period QPFB2+BEAMKV + constrained SEMWRAP FIX; AB4 **PROMOTE** (mean 8.7 > SERVEALIGN 3.4) |
 | **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **AB-HITL-10** | Final Wave AB pack verify on declared stack; AB6 **PROMOTE** (mean 9.0 · errors 0/10) |
