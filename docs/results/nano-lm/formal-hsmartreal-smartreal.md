@@ -60,4 +60,4 @@ npm run nano:test && npm run verify
 - Trials: `AG-SMARTREAL-LOOKUP-HITL-01…10` · `AG-SMARTREAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_smartreal.py`
 
-Next: **AG4 H-FASTREAL**.
+Next: **AG5 H-APPREAL**.
