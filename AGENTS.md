@@ -26,7 +26,7 @@ When rules conflict with existing code, **rules prevail** — unless the user ex
 2. `agent-rules/00-core/size-and-complexity-limits.md` — **80 / 200 / ≤10**
 3. `docs/ARCHITECTURE.md` + `docs/GLOSSARY.md`
 4. `docs/NANO-STUDENT-AGENDA.md` + `docs/results/nano-lm/champion-card.md` + `RECIPES.md`
-5. `.local/pesquisa.md` (Wave Y ACTIVE — PFB256/ROLL/SUMCACHE **PROMOTE**; STREAM/KVCACHE-Q **KILL**; next **H-GENCACHE**) before new H-IDs
+5. `.local/pesquisa.md` (Wave Y ACTIVE — PFB256/ROLL/SUMCACHE **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**; next **H-GPFB4-LONG**) before new H-IDs
 6. `nano_lm/data/CURATED-SOURCES.md` before data work
 
 ```bash
@@ -42,7 +42,7 @@ npm run nano:test && npm run verify
 - Survival PoC v1 **closed** → archive.  
 - Nano Waves U–W **closed** (recipes frozen; XFER2 + MIXD purged).  
 - Wave X+ **COMPLETE** — PFB family **PROMOTE**; QI/ABS **KILL** → [`wave-x-summary.md`](docs/results/nano-lm/wave-x-summary.md).  
-- **Wave Y ACTIVE** — PFB256/ROLL/SUMCACHE **PROMOTE**; STREAM/KVCACHE-Q **KILL**; next **H-GENCACHE** — see `.local/pesquisa.md` + [`wave-y-summary.md`](docs/results/nano-lm/wave-y-summary.md) · [`archive/hkvcache-kvcache.md`](docs/results/nano-lm/archive/hkvcache-kvcache.md).
+- **Wave Y ACTIVE** — PFB256/ROLL/SUMCACHE **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**; next **H-GPFB4-LONG** — see `.local/pesquisa.md` + [`wave-y-summary.md`](docs/results/nano-lm/wave-y-summary.md) · [`archive/hgencache-gencache.md`](docs/results/nano-lm/archive/hgencache-gencache.md).
 
 ---
 

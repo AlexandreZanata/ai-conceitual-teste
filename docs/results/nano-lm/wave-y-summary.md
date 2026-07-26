@@ -22,11 +22,12 @@
 |----|--------|---------|
 | **H-STREAM** | parent=prev commit lifts code but story collapses across T (formal) | [archive](archive/hstream-stream.md) |
 | **H-KVCACHE-Q** | QT∘PFB2 quality ok; session prefix KV did not cut TTFT vs cold | [archive](archive/hkvcache-kvcache.md) |
+| **H-GENCACHE** | GA on ROLL/TTL wins mem/wall but story < QPFB2−ε (not Pareto) | [archive](archive/hgencache-gencache.md) |
 
 ## Queued
 
-H-GENCACHE · H-GPFB4-LONG.
+H-GPFB4-LONG (compose only if Y4/Y5 PROMOTE — yes).
 
 ## Doctrine reminder
 
-Every long-context hyp inherits PFB dual gate. Cache = measurable hit-rate / wall↓ / teacher_forwards↓. Do not revive X+ KILL catalog. Do not claim infinite stream or session TTFT↓ without evidence.
+Every long-context hyp inherits PFB dual gate. Cache = measurable hit-rate / wall↓ / teacher_forwards↓. Do not revive X+ KILL catalog. Do not claim infinite stream, session TTFT↓, or GA-composed ROLL vs full QPFB2 without evidence.
