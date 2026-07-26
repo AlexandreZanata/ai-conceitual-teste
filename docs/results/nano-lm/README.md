@@ -17,6 +17,12 @@
 | [formal-hasksmart-asksmart.md](formal-hasksmart-asksmart.md) | Wave AB4 H-ASKSMART **PROMOTE** (>SERVEALIGN 3.4) |
 | [formal-hrealapp-realapp.md](formal-hrealapp-realapp.md) | Wave AB5 H-REALAPP **PROMOTE** (app-known + app-longdoc) |
 | [wave-ab-hitl.md](wave-ab-hitl.md) | Wave AB6 AB-HITL-10 **PROMOTE** (final mean 9.0) |
+| [wave-ac-session.md](wave-ac-session.md) | Wave AC0 SESSION **PROMOTE** (10 held-out HITL Qs) |
+| [formal-hctxplus-ctxplus.md](formal-hctxplus-ctxplus.md) | Wave AC1 H-CTXPLUS **PROMOTE** |
+| [formal-hsmartplus-smartplus.md](formal-hsmartplus-smartplus.md) | Wave AC2 H-SMARTPLUS **PROMOTE** |
+| [formal-hfastplus-fastplus.md](formal-hfastplus-fastplus.md) | Wave AC3 H-FASTPLUS **PROMOTE** |
+| [formal-happplus-appplus.md](formal-happplus-appplus.md) | Wave AC4 H-APPPLUS **PROMOTE** |
+| [wave-ac-hitl.md](wave-ac-hitl.md) | Wave AC5 AC-HITL-10 **PROMOTE** (final mean 9.0) |
 | [wave-ab-summary.md](wave-ab-summary.md) | Wave AB **COMPLETE** public closeout |
 | [ab-freeze.md](ab-freeze.md) | Wave AB **FROZEN** — no Wave AC invent |
 | [formal-habfreeze-ab-freeze.md](formal-habfreeze-ab-freeze.md) | AB-FREEZE formal |

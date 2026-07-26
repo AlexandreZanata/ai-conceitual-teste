@@ -40,14 +40,14 @@ npm run nano:ac:session
 npm run nano:test && npm run verify
 ```
 
-Wrap smoke must keep `WRAP_LOOKUP` on the Z1 add known-ask (product claim until AC5).  
+Wrap smoke must keep `WRAP_LOOKUP` on the Z1 add known-ask.  
 Artifacts (gitignored): `results/nano-lm/wave-ac/ac0_session.json` · `results/nano-lm/wave-ac/trials/AC-HITL-*.json` · `error_bank.jsonl`.  
 Contract: `nano_lm/tests/test_ac_session.py`.
 
 ## Claims
 
 - Held-out scoped app assist HITL set — **not** open chat LM.  
-- Default ship claim until AC5 still **AB stack** on H-ZWRAP+WRAPBANK.  
+- After AC5 **PROMOTE**: ship claim is **scoped AC packaged apps** (app-known + app-howto + app-longdoc) — still **not** open chat LM.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AD.
 
-Next: **AC1 H-CTXPLUS** (`npm run nano:ctxplus`).
+Next after AC0 was **AC1 H-CTXPLUS**. Final pack gate: [wave-ac-hitl.md](wave-ac-hitl.md). Wave stage now: **AC6 AC-REPORT**.
