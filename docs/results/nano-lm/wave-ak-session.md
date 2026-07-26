@@ -61,4 +61,4 @@ Contract: `nano_lm/tests/test_ak_session.py`.
 - Default ship claim until proven otherwise still **AF packaged stack**.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AL · PROMOTE LOOKUP-only as generative IQ.
 
-Next: **AK1 H-GENTRUE** — **DONE HOLD** → [formal-hgentrue-gentrue.md](formal-hgentrue-gentrue.md). **AK2–AK6** DONE. **AK7 AK-REPORT** — **DONE PROMOTE** → [wave-ak-summary.md](wave-ak-summary.md). Next: **AK8 AK-FREEZE**.
+Next: **AK1 H-GENTRUE** — **DONE HOLD** → [formal-hgentrue-gentrue.md](formal-hgentrue-gentrue.md). **AK2–AK7** DONE. **AK8 AK-FREEZE** — **DONE PROMOTE** → [ak-freeze.md](ak-freeze.md) · [formal-hakfreeze-ak-freeze.md](formal-hakfreeze-ak-freeze.md). **NO-REOPEN** (no Wave AL without lab-book).

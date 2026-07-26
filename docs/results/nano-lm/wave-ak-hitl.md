@@ -74,4 +74,4 @@ npm run nano:test && npm run verify
 - Trials: `AK-FINAL-LOOKUP-HITL-01…10` · `AK-FINAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ak_hitl.py`
 
-Next: **AK7 AK-REPORT** — **DONE PROMOTE** → [wave-ak-summary.md](wave-ak-summary.md) · [paper-lab-wave-ak.md](paper-lab-wave-ak.md).
+Next: **AK7 AK-REPORT** — **DONE PROMOTE** → [wave-ak-summary.md](wave-ak-summary.md) · [paper-lab-wave-ak.md](paper-lab-wave-ak.md). **AK8 AK-FREEZE** — **DONE PROMOTE** → [ak-freeze.md](ak-freeze.md) · [formal-hakfreeze-ak-freeze.md](formal-hakfreeze-ak-freeze.md).
