@@ -60,6 +60,7 @@
 | **H-SEMWRAP** | Fuzzy/semantic recall over wrap bank (+ curated boost); AB1 **PROMOTE** (mean 9.0; 0 false-hit) |
 | **H-ASKFAST** | SEMWRAP+QT+ask completion cache; AB2 **PROMOTE** (wall↓100% vs raw QT ask) |
 | **H-LONGAPP** | ROLL/SUMCACHE on curated long docs; AB3 **PROMOTE** (10/10 usable; L_eff≫W) |
+| **H-CTXPLUS** | Multi-slice ROLL/SUMCACHE on held-out docs; AC1 **PROMOTE** (L_eff 20523>AB; usable 10/10) |
 | **H-ASKSMART** | Anti-period QPFB2+BEAMKV + constrained SEMWRAP FIX; AB4 **PROMOTE** (mean 8.7 > SERVEALIGN 3.4) |
 | **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **AB-HITL-10** | Final Wave AB pack verify on declared stack; AB6 **PROMOTE** (mean 9.0 · errors 0/10) |

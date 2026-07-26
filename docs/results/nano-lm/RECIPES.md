@@ -45,6 +45,8 @@
 | Wave AB6 HITL-10 | [wave-ab-hitl.md](wave-ab-hitl.md) **PROMOTE** (`npm run nano:ab:hitl`) — final mean 9.0 |
 | Wave AB7 REPORT | [wave-ab-summary.md](wave-ab-summary.md) **PROMOTE** (`npm run nano:ab:report`) — COMPLETE |
 | Wave AB-FREEZE | [ab-freeze.md](ab-freeze.md) **PROMOTE** (`npm run nano:ab:freeze`) — no Wave AC invent |
+| Wave AC0 SESSION | [wave-ac-session.md](wave-ac-session.md) **PROMOTE** (`npm run nano:ac:session`) — 10 held-out HITL Qs |
+| Wave AC1 CTXPLUS | [formal-hctxplus-ctxplus.md](formal-hctxplus-ctxplus.md) **PROMOTE** (`npm run nano:ctxplus`) — L_eff 20523>AB; usable 10/10 |
 
 ## Policy
 
@@ -52,4 +54,5 @@
 Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.md](wave-x-summary.md) → [`archive/`](archive/).  
 **Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md). **Wave Z COMPLETE:** [wave-z-hitl.md](wave-z-hitl.md) — PFB ≠ interactive LM; wrap + error-bank. **NO-REOPEN:** [lab-freeze.md](lab-freeze.md).  
 **Wave AA COMPLETE:** AA0 [H-WRAPBANK PROMOTE](formal-hwrapbank-wrapbank.md); AA1 [H-PARA HOLD](formal-hpara-para.md); AA2 [H-SERVEALIGN HOLD](formal-hservealign-servealign.md); AA3 [H-ZPREF KILL](formal-hzpref-zpref.md); AA4 [H-DEPL-DOC PROMOTE](formal-hdepldoc-depl-doc.md); AA5 [AA-REPORT PROMOTE](wave-aa-summary.md); AA6 [AA-FREEZE PROMOTE](aa-freeze.md).  
-**Wave AB COMPLETE + FROZEN:** AB0–AB7 **PROMOTE** · AB-FREEZE — [wave-ab-summary.md](wave-ab-summary.md) · [ab-freeze.md](ab-freeze.md).
+**Wave AB COMPLETE + FROZEN:** AB0–AB7 **PROMOTE** · AB-FREEZE — [wave-ab-summary.md](wave-ab-summary.md) · [ab-freeze.md](ab-freeze.md).  
+**Wave AC OPEN:** AC0 [SESSION](wave-ac-session.md) · AC1 [H-CTXPLUS](formal-hctxplus-ctxplus.md) — held-out ASK→EVAL→FIX (§8.5 · §12).

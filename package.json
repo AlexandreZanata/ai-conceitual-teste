@@ -278,6 +278,8 @@
     "nano:aa:report": "nano_lm/.venv/bin/python nano_lm/src/run_aa_report.py",
     "nano:aa:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_aa_freeze.py",
     "nano:ab:session": "nano_lm/.venv/bin/python nano_lm/src/run_ab_session.py",
+    "nano:ac:session": "nano_lm/.venv/bin/python nano_lm/src/run_ac_session.py",
+    "nano:ctxplus": "nano_lm/.venv/bin/python nano_lm/src/run_ctxplus.py",
     "nano:btc": "nano_lm/.venv/bin/python nano_lm/src/run_btc_smoke.py",
     "nano:btc:report": "nano_lm/.venv/bin/python nano_lm/src/write_hbtc_report.py",
     "nano:formal:hbtc": "nano_lm/.venv/bin/python nano_lm/src/run_formal_hbtc.py",

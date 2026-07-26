@@ -28,7 +28,7 @@ When rules conflict with existing code, **rules prevail** — unless the user ex
 4. `docs/NANO-STUDENT-AGENDA.md` + `docs/results/nano-lm/champion-card.md` + `RECIPES.md`
 5. `.local/pesquisa.md` (lab **NO-REOPEN** KILLs; Waves W–AB **COMPLETE + FROZEN**; [aa-freeze.md](docs/results/nano-lm/aa-freeze.md) · [ab-freeze.md](docs/results/nano-lm/ab-freeze.md) · [wave-ab-summary.md](docs/results/nano-lm/wave-ab-summary.md))
 6. `nano_lm/data/CURATED-SOURCES.md` before data work
-7. Wave AB session: `.local/wave-ab/SESSION.md` · Wave AA: `.local/wave-aa/SESSION.md` · Wave Z: `.local/wave-z/SESSION.md`
+7. Wave AC session: `.local/wave-ac/SESSION.md` · Wave AB: `.local/wave-ab/SESSION.md` · Wave AA: `.local/wave-aa/SESSION.md` · Wave Z: `.local/wave-z/SESSION.md`
 
 ```bash
 ./agent-harness/rules-path.sh
@@ -47,6 +47,7 @@ npm run nano:test && npm run verify
 - **Wave Z COMPLETE** — [wave-z-hitl.md](docs/results/nano-lm/wave-z-hitl.md) · **LAB-FREEZE** [lab-freeze.md](docs/results/nano-lm/lab-freeze.md).  
 - **Wave AA COMPLETE + FROZEN** — [wave-aa-summary.md](docs/results/nano-lm/wave-aa-summary.md) · [aa-freeze.md](docs/results/nano-lm/aa-freeze.md) (`npm run nano:aa:freeze`).
 - **Wave AB COMPLETE + FROZEN** — [wave-ab-summary.md](docs/results/nano-lm/wave-ab-summary.md) · [ab-freeze.md](docs/results/nano-lm/ab-freeze.md) · [paper-lab-wave-ab.md](docs/results/nano-lm/paper-lab-wave-ab.md) (`npm run nano:ab:freeze`).
+- **Wave AC OPEN** — [wave-ac-session.md](docs/results/nano-lm/wave-ac-session.md) · [formal-hctxplus-ctxplus.md](docs/results/nano-lm/formal-hctxplus-ctxplus.md) (`npm run nano:ac:session` · `npm run nano:ctxplus`).
 - **Wave AB COMPLETE** — [wave-ab-summary.md](docs/results/nano-lm/wave-ab-summary.md) · [paper-lab-wave-ab.md](docs/results/nano-lm/paper-lab-wave-ab.md).
 
 ---
