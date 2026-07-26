@@ -22,7 +22,7 @@ HITL: **H-ZWRAP** (+ **H-WRAPBANK** + **H-SEMWRAP**). Story-CE: **H-ZERR** ≠ c
 | **AB** | **COMPLETE + FROZEN** | AB0–AB7 **PROMOTE** · [ab-freeze.md](results/nano-lm/ab-freeze.md) · [wave-ab-summary.md](results/nano-lm/wave-ab-summary.md) |
 | **AC** | **COMPLETE + FROZEN** | [ac-freeze.md](results/nano-lm/ac-freeze.md) · [wave-ac-summary.md](results/nano-lm/wave-ac-summary.md) |
 | **AD** | **COMPLETE + FROZEN** | [ad-freeze.md](results/nano-lm/ad-freeze.md) · [wave-ad-summary.md](results/nano-lm/wave-ad-summary.md) |
-| **AE** | **OPEN** | AE0 [SESSION](results/nano-lm/wave-ae-session.md) · AE1 [H-CTXMAX PROMOTE](results/nano-lm/formal-hctxmax-ctxmax.md) · next H-SMARTMAX |
+| **AE** | **OPEN** | AE0–AE2 [CTXMAX](results/nano-lm/formal-hctxmax-ctxmax.md) · [SMARTMAX PROMOTE](results/nano-lm/formal-hsmartmax-smartmax.md) · next H-FASTMAX |
 
 Teachers: TinyStories-33M + `bigcode/tiny_starcoder_py` ([TCHR](results/nano-lm/formal-htchr-code-teacher.md)).  
 KILL tooling purged → [`results/nano-lm/archive/`](results/nano-lm/archive/).

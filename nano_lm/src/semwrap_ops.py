@@ -160,7 +160,19 @@ def semantic_lookup(
     """
     exact = lookup_gold(question, rows)
     if exact is not None:
-        return exact, {"kind": "EXACT", "score": 1.0, "margin": 1.0}
+        key = normalize_question(question)
+        sid = ""
+        for row in rows:
+            if normalize_question(str(row.get("question", ""))) != key:
+                continue
+            sid = str(row.get("source_id", ""))
+            break
+        return exact, {
+            "kind": "EXACT",
+            "score": 1.0,
+            "margin": 1.0,
+            "source_id": sid,
+        }
 
     qtok = question_tokens(question)
     curated_cache: dict[str, frozenset[str]] = {}

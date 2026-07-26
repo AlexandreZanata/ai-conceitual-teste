@@ -49,7 +49,7 @@ npm run nano:test && npm run verify
 - **Wave AB COMPLETE + FROZEN** — [wave-ab-summary.md](docs/results/nano-lm/wave-ab-summary.md) · [ab-freeze.md](docs/results/nano-lm/ab-freeze.md) · [paper-lab-wave-ab.md](docs/results/nano-lm/paper-lab-wave-ab.md) (`npm run nano:ab:freeze`).
 - **Wave AC COMPLETE + FROZEN** — [wave-ac-summary.md](docs/results/nano-lm/wave-ac-summary.md) · [ac-freeze.md](docs/results/nano-lm/ac-freeze.md) · [paper-lab-wave-ac.md](docs/results/nano-lm/paper-lab-wave-ac.md) · [wave-ac-hitl.md](docs/results/nano-lm/wave-ac-hitl.md) (`npm run nano:ac:freeze`).
 - **Wave AD COMPLETE + FROZEN** — [ad-freeze.md](docs/results/nano-lm/ad-freeze.md) · [wave-ad-summary.md](docs/results/nano-lm/wave-ad-summary.md) · [paper-lab-wave-ad.md](docs/results/nano-lm/paper-lab-wave-ad.md) · [wave-ad-hitl.md](docs/results/nano-lm/wave-ad-hitl.md) (`npm run nano:ad:freeze`).
-- **Wave AE OPEN** — AE0 [wave-ae-session.md](docs/results/nano-lm/wave-ae-session.md) · AE1 [formal-hctxmax-ctxmax.md](docs/results/nano-lm/formal-hctxmax-ctxmax.md) **PROMOTE** (`npm run nano:ctxmax`); next **H-SMARTMAX**; ship claim remains AD stack until AE5; no Wave AF invent.
+- **Wave AE OPEN** — AE0 [wave-ae-session.md](docs/results/nano-lm/wave-ae-session.md) · AE1 [formal-hctxmax-ctxmax.md](docs/results/nano-lm/formal-hctxmax-ctxmax.md) · AE2 [formal-hsmartmax-smartmax.md](docs/results/nano-lm/formal-hsmartmax-smartmax.md) **PROMOTE** (`npm run nano:smartmax`); next **H-FASTMAX**; ship claim remains AD stack until AE5; no Wave AF invent.
 
 ---
 

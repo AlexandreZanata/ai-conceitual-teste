@@ -39,6 +39,7 @@
 | [formal-hadfreeze-ad-freeze.md](formal-hadfreeze-ad-freeze.md) | Wave AD-FREEZE formal |
 | [wave-ae-session.md](wave-ae-session.md) | Wave AE0 SESSION **PROMOTE** (10 held-out HITL Qs; Wave AE OPEN) |
 | [formal-hctxmax-ctxmax.md](formal-hctxmax-ctxmax.md) | Wave AE1 H-CTXMAX **PROMOTE** |
+| [formal-hsmartmax-smartmax.md](formal-hsmartmax-smartmax.md) | Wave AE2 H-SMARTMAX **PROMOTE** |
 | [depl-ad.md](depl-ad.md) | AC+AD deploy overview (H-DEPLPLUS) |
 | [wave-ab-summary.md](wave-ab-summary.md) | Wave AB **COMPLETE** public closeout |
 | [ab-freeze.md](ab-freeze.md) | Wave AB **FROZEN** — no Wave AC invent |

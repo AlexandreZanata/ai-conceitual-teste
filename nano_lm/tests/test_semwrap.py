@@ -89,7 +89,22 @@ def test_given_wrapbank_bank_when_ab_asks_then_true_hits() -> None:
     assert miss == 0
 
 
-def test_given_false_gold_when_classify_then_false_hit() -> None:
+def test_given_exact_bank_hit_when_lookup_then_source_id_present() -> None:
+    # GIVEN/WHEN/THEN: EXACT wrap hit must cite bank source_id (SMARTMAX cite)
+    rows = [
+        {
+            "question": "What Base58 prefixes do xprv vs xpub use?",
+            "source_id": "bip-0032",
+            "gold": "xprv / xpub",
+        }
+    ]
+    gold, meta = semantic_lookup(
+        "What Base58 prefixes do xprv vs xpub use?", rows
+    )
+    assert gold == "xprv / xpub"
+    assert meta["kind"] == "EXACT"
+    assert meta.get("source_id") == "bip-0032"
+
     kind = classify_semwrap(
         "totally unrelated answer about pasta",
         expected_gold="BIP 9",

@@ -42,4 +42,4 @@ npm run nano:ctxmax
 - Trials: `results/nano-lm/wave-ae/trials/AE-CTXMAX-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_ctxmax.py`
 
-Next: **AE2 H-SMARTMAX**.
+Next: **AE2 H-SMARTMAX** (**DONE** — see [formal-hsmartmax-smartmax.md](formal-hsmartmax-smartmax.md)). Next wave stage: **AE3 H-FASTMAX**.
