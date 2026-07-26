@@ -54,8 +54,15 @@ class AskCompletionCache:
 
     def peek(self, question: str) -> dict[str, Any] | None:
         """Return a cache hit payload without mutating hit/miss counters."""
-        key = normalize_question(question)
-        row = self._store.get(key)
+        return self.peek_key(normalize_question(question))
+
+    def peek_key(self, key: str) -> dict[str, Any] | None:
+        """
+        GIVEN a pre-normalized cache key
+        WHEN peaking without counters
+        THEN return ASKFAST_CACHE payload or None.
+        """
+        row = self._store.get(str(key))
         if row is None:
             return None
         out = dict(row)
