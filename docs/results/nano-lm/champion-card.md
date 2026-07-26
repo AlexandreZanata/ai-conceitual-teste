@@ -81,6 +81,7 @@ npm run nano:gpfb4 && npm run nano:formal:hgpfb4
 npm run nano:tchr && npm run nano:formal:htchr
 npm run nano:genc && npm run nano:formal:hgenc
 npm run nano:af:session
+npm run nano:ctxultra
 ```
 
 ## Wave Z product claims (honest)
@@ -103,6 +104,6 @@ Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PR
 **Wave AC COMPLETE + FROZEN** — **H-CTXPLUS** · **H-SMARTPLUS** · **H-FASTPLUS** · **H-APPPLUS** · [wave-ac-summary.md](wave-ac-summary.md) · [ac-freeze.md](ac-freeze.md) · [paper-lab-wave-ac.md](paper-lab-wave-ac.md) · [wave-ac-hitl.md](wave-ac-hitl.md) · [formal-hctxplus-ctxplus.md](formal-hctxplus-ctxplus.md) · [formal-hsmartplus-smartplus.md](formal-hsmartplus-smartplus.md) · [formal-hfastplus-fastplus.md](formal-hfastplus-fastplus.md) · [formal-happplus-appplus.md](formal-happplus-appplus.md).
 **Wave AD COMPLETE + FROZEN** — **H-HARDPARA** · **H-COMPOSE** · **H-ROUTEPLUS** · **H-DEPLPLUS** · [AD-HITL-10](wave-ad-hitl.md) · [wave-ad-summary.md](wave-ad-summary.md) · [ad-freeze.md](ad-freeze.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md).  
 **Wave AE COMPLETE + FROZEN** — **H-CTXMAX** · **H-SMARTMAX** · **H-FASTMAX** · **H-APPMAX** · [AE-HITL-10](wave-ae-hitl.md) · [wave-ae-summary.md](wave-ae-summary.md) · [ae-freeze.md](ae-freeze.md) · [paper-lab-wave-ae.md](paper-lab-wave-ae.md) (ship claim = **AE packaged stack**).  
-**Wave AF OPEN** — AF0 [wave-af-session.md](wave-af-session.md) **PROMOTE**; next **H-CTXULTRA** (`npm run nano:af:session`).
+**Wave AF OPEN** — AF0 [wave-af-session.md](wave-af-session.md) **PROMOTE** · AF1 [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md) **PROMOTE**; next **H-SMARTULTRA** (`npm run nano:ctxultra`).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

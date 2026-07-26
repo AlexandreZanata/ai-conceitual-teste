@@ -296,6 +296,8 @@
     "nano:ae:report": "nano_lm/.venv/bin/python nano_lm/src/run_ae_report.py",
     "nano:ae:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ae_freeze.py",
     "nano:af:session": "nano_lm/.venv/bin/python nano_lm/src/run_af_session.py",
+    "nano:ctxultra": "nano_lm/.venv/bin/python nano_lm/src/run_ctxultra.py",
+    "nano:af:ctxultra": "nano_lm/.venv/bin/python nano_lm/src/run_ctxultra.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
     "nano:routeplus": "nano_lm/.venv/bin/python nano_lm/src/run_routeplus.py",

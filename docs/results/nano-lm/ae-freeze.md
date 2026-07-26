@@ -8,7 +8,7 @@
 
 **PROMOTE** — Wave AE outcomes locked; scoped product remains **AE packaged stack** (CTXMAX · SMARTMAX · FASTMAX · APPMAX); **no Wave AF** without explicit lab-book reopen.
 
-**Reopen (2026-07-26):** Wave AF opened via `.local/pesquisa.md` §5 — AF0 [wave-af-session.md](wave-af-session.md) **PROMOTE**; next **H-CTXULTRA**. AE freeze outcomes stay locked.
+**Reopen (2026-07-26):** Wave AF opened via `.local/pesquisa.md` §5 — AF0 [wave-af-session.md](wave-af-session.md) **PROMOTE**; AF1 [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md) **PROMOTE**; next **H-SMARTULTRA**. AE freeze outcomes stay locked.
 
 **Status: COMPLETE** (freeze gate).
 

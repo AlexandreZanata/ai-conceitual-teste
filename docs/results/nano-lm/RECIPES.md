@@ -70,6 +70,7 @@
 | Wave AE6 AE-REPORT | [wave-ae-summary.md](wave-ae-summary.md) **PROMOTE** (`npm run nano:ae:report`) — paper-lab + FIX log |
 | Wave AE-FREEZE | [ae-freeze.md](ae-freeze.md) **PROMOTE** (`npm run nano:ae:freeze`) — no Wave AF invent without reopen |
 | Wave AF0 SESSION | [wave-af-session.md](wave-af-session.md) **PROMOTE** (`npm run nano:af:session`) — 10 held-out HITL Qs (5th set) |
+| Wave AF1 CTXULTRA | [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md) **PROMOTE** (`npm run nano:ctxultra`) — triple-doc K=7; L_eff↑ vs CTXMAX |
 
 
 ## Policy
@@ -82,4 +83,4 @@ Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.m
 **Wave AC COMPLETE + FROZEN:** AC0–AC6 **PROMOTE** · AC-FREEZE — [wave-ac-summary.md](wave-ac-summary.md) · [ac-freeze.md](ac-freeze.md) · [paper-lab-wave-ac.md](paper-lab-wave-ac.md) · **H-CTXPLUS** · **H-SMARTPLUS** · **H-FASTPLUS** · **H-APPPLUS** · [AC-HITL-10](wave-ac-hitl.md).
 **Wave AD COMPLETE + FROZEN:** AD0–AD6 **PROMOTE** · AD-FREEZE — [wave-ad-summary.md](wave-ad-summary.md) · [ad-freeze.md](ad-freeze.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md) · **H-HARDPARA** · **H-COMPOSE** · **H-ROUTEPLUS** · **H-DEPLPLUS** · [AD-HITL-10](wave-ad-hitl.md).  
 **Wave AE COMPLETE + FROZEN:** AE0–AE6 **PROMOTE** · AE-FREEZE — [wave-ae-summary.md](wave-ae-summary.md) · [ae-freeze.md](ae-freeze.md) · [paper-lab-wave-ae.md](paper-lab-wave-ae.md) · **H-CTXMAX** · **H-SMARTMAX** · **H-FASTMAX** · **H-APPMAX** · [AE-HITL-10](wave-ae-hitl.md).  
-**Wave AF OPEN:** AF0 [wave-af-session.md](wave-af-session.md) **PROMOTE** — next **H-CTXULTRA** (ship claim remains **AE packaged stack** until AF5).
+**Wave AF OPEN:** AF0 [wave-af-session.md](wave-af-session.md) **PROMOTE** · AF1 [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md) **PROMOTE** — next **H-SMARTULTRA** (ship claim remains **AE packaged stack** until AF5).
