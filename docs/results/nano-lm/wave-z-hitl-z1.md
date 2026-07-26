@@ -52,4 +52,4 @@ npm run nano:z:error-bank
 
 Warm batch: `ask_many` in `nano_lm/src/run_z_ask.py` (one CUDA load).
 
-Next: **Z2 MANUAL×10** — wrapper/decode fixes from this bank, then 10 new trials.
+Next: **Z2 MANUAL×10** — see [wave-z-hitl-z2.md](wave-z-hitl-z2.md) (**DONE — PASS**). Then **Z3**.
