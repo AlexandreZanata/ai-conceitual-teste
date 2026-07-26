@@ -31,8 +31,9 @@ def test_given_card_when_read_then_wave_summaries() -> None:
     assert "Wave X" in text and "wave-x-summary" in text
     assert "Wave Y" in text and "COMPLETE" in text
     assert "wave-y-summary" in text or "H-BEAMKV" in text
-    assert "Wave Z" in text and "ACTIVE" in text
+    assert "Wave Z" in text and "COMPLETE" in text
     assert "wave-z-summary" in text
+    assert "wave-z-hitl" in text
     assert "PROMOTE" in text
 
 

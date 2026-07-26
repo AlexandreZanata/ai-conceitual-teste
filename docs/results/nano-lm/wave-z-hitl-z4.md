@@ -51,4 +51,4 @@ npm run nano:z:ask -- --root results/nano-lm/wave-z/models/zerr --question "…"
 - Gate module: `nano_lm/src/z_z4.py` · runner: `nano_lm/src/run_z4_hitl.py`
 - Contract: `nano_lm/tests/test_z_z4.py`
 
-Next: **DEPL-Y freeze** (§8 #4) then **Z6 REPORT** (`wave-z-hitl.md`).
+Next: **DEPL-Y** · **Z6** — **DONE** → [wave-z-hitl.md](wave-z-hitl.md) (Wave Z **COMPLETE**).

@@ -1,8 +1,8 @@
 # Champion card — tip-stack + official recipes
 
 > Compose closed (**H-SYS** / **H-JOINT** / **H-CACHE** / **H-CAP** **KILL**).  
-> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Wave Z ACTIVE** — DEPL-Y **DONE**; next **Z6**).  
-> Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md) · Z4: [wave-z-hitl-z4.md](wave-z-hitl-z4.md).
+> Deploy: [RECIPES.md](RECIPES.md) · **DEPL-Y frozen:** [wave-z-depl-y.md](wave-z-depl-y.md). Lab: `.local/pesquisa.md` (**Wave Z COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md)).  
+> Wave X+ close-out: [wave-x-summary.md](wave-x-summary.md) · Wave Y: [wave-y-summary.md](wave-y-summary.md) · Wave Z: [wave-z-summary.md](wave-z-summary.md) · HITL: [wave-z-hitl.md](wave-z-hitl.md).
 
 ## Official tips
 
@@ -56,6 +56,7 @@ npm run nano:gpfb4long && npm run nano:formal:hgpfb4long
 npm run nano:z:export && npm run nano:z:ask -- --wrap --question "…"
 npm run nano:z:z4 -- --arms A,B,C
 npm run nano:z:depl-y
+npm run nano:z:z6
 npm run nano:bpfb && npm run nano:formal:hbpfb
 npm run nano:gpfb4 && npm run nano:formal:hgpfb4
 npm run nano:tchr && npm run nano:formal:htchr
@@ -69,13 +70,13 @@ npm run nano:genc && npm run nano:formal:hgenc
 | Known-ask HITL demo | **`--wrap` LOOKUP** (`champion-wrap-v0`) — **H-ZWRAP** | Open generative chat LM |
 | Story-safe CE ckpt | **H-ZERR** (`zerr-qpfb2-v0`) | ZERR fixes interactive Q&A (Z4 arm C FAIL) |
 
-Evidence: [wave-z-hitl-z4.md](wave-z-hitl-z4.md) · [wave-z-depl-y.md](wave-z-depl-y.md).
+Evidence: [wave-z-hitl.md](wave-z-hitl.md) · [wave-z-hitl-z4.md](wave-z-hitl-z4.md) · [wave-z-depl-y.md](wave-z-depl-y.md).
 
 ## Waves
 
 Wave W **COMPLETE** — [wave-w-summary.md](wave-w-summary.md) (PROG/BTC/EFF **PROMOTE**; MIXD **KILL**).  
 Wave X+ **COMPLETE** — [wave-x-summary.md](wave-x-summary.md) (PFB family **PROMOTE**; RAG/CTX/Q*/… **KILL** → [`archive/`](archive/)).  
 **Wave Y COMPLETE** — [wave-y-summary.md](wave-y-summary.md) (GPFB4-LONG **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**).  
-**Wave Z ACTIVE** — DEPL-Y **FROZEN**; next **Z6 REPORT** — [wave-z-summary.md](wave-z-summary.md) · [wave-z-depl-y.md](wave-z-depl-y.md) · ladder `.local/pesquisa.md` §8.
+**Wave Z COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md) (PFB ≠ interactive LM; **H-ZWRAP** + error-bank) · [wave-z-summary.md](wave-z-summary.md) · [paper-lab-wave-z.md](paper-lab-wave-z.md).
 
 Agenda: [`docs/NANO-STUDENT-AGENDA.md`](../../NANO-STUDENT-AGENDA.md).

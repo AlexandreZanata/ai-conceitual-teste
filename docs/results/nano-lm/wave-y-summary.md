@@ -4,7 +4,7 @@
 > Deploy: [RECIPES.md](RECIPES.md) · [champion-card.md](champion-card.md).
 
 **Status: COMPLETE** · X+ closed → [wave-x-summary.md](wave-x-summary.md).  
-**Next:** **Wave Z** (export + Cursor HITL ×10 + retrain-from-errors) — pesquisa §9.
+**Next:** Wave Z **COMPLETE** — [wave-z-hitl.md](wave-z-hitl.md) (HITL product report).
 
 ## PROMOTE (this wave)
 

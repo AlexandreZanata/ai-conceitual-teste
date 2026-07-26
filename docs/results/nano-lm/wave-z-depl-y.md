@@ -44,4 +44,4 @@ Wrap smoke: Z1-01 question → `WRAP_LOOKUP` with `def add` (product path).
 Artifact: `results/nano-lm/wave-z/depl_y_freeze.json` (gitignored).  
 Contract: `nano_lm/tests/test_depl_y.py`.
 
-Next: **Z6 REPORT** → [`wave-z-hitl.md`](wave-z-hitl.md).
+Next: **Z6 REPORT** — **DONE** → [`wave-z-hitl.md`](wave-z-hitl.md). Wave Z **COMPLETE**.

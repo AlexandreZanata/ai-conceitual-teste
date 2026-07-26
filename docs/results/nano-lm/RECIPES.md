@@ -28,10 +28,10 @@
 | Wave Y cache / long | [beamkv](formal-hbeamkv-beamkv.md) · [tcache](formal-htcache-tcache.md) · [scoreram](formal-hscoreram-scoreram.md) · [pfb256](formal-hpfb256-pfb256.md) · [roll](formal-hroll-roll.md) · [sumcache](formal-hsumcache-sumcache.md) · [gpfb4long](formal-hgpfb4long-gpfb4long.md) |
 | TCHR / GENC | [tchr](formal-htchr-code-teacher.md) · [genc](formal-hgenc-genome.md) |
 | Train | [tpack](formal-htpack-vs-hstag.md) · [amort](formal-hamort-vs-hstag.md) · [TIPD](formal-htipd-vs-hstag.md) |
-| Wave Z HITL / DEPL-Y | [z4](wave-z-hitl-z4.md) · [depl-y](wave-z-depl-y.md) |
+| Wave Z HITL / DEPL-Y | [hitl](wave-z-hitl.md) · [z4](wave-z-hitl-z4.md) · [depl-y](wave-z-depl-y.md) · [paper-lab](paper-lab-wave-z.md) |
 
 ## Policy
 
 **DEPL-Y:** speed@128→PACK/QT; code@128→QPFB2+BEAMKV/TCACHE/SCORERAM; long→ROLL/SUMCACHE/GPFB4-LONG; HITL→H-ZWRAP; CE→H-ZERR≠chat; **REJECT** STREAM / KVCACHE-Q / GENCACHE / GPFB-K=2 / ood_long PACK / MIXD.  
 Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.md](wave-x-summary.md) → [`archive/`](archive/).  
-**Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md). **Wave Z:** DEPL-Y **FROZEN** — [wave-z-depl-y.md](wave-z-depl-y.md); next **Z6** — [wave-z-summary.md](wave-z-summary.md).
+**Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md). **Wave Z COMPLETE:** [wave-z-hitl.md](wave-z-hitl.md) — PFB ≠ interactive LM; wrap + error-bank.
