@@ -6,7 +6,7 @@
 
 ## Decision
 
-**PROMOTE** — Wave AI outcomes locked; ctx+speed pushes stay; gen IQ HOLDs stay honest; ≤5M hard stays; ship claim remains **AF packaged stack**; **no Wave AJ** without explicit lab-book reopen.
+**PROMOTE** — Wave AI outcomes locked; ctx+speed pushes stay; gen IQ HOLDs stay honest; ≤5M hard stays; ship claim remains **AF packaged stack**; **no Wave AJ** without explicit lab-book reopen (satisfied 2026-07-26 → [wave-aj-session.md](wave-aj-session.md) §6).
 
 **Status: COMPLETE + FROZEN** (freeze gate).
 

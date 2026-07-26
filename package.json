@@ -358,6 +358,8 @@
     "nano:ai-report": "nano_lm/.venv/bin/python nano_lm/src/run_ai_report.py",
     "nano:ai:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ai_freeze.py",
     "nano:ai-freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ai_freeze.py",
+    "nano:aj:session": "nano_lm/.venv/bin/python nano_lm/src/run_aj_session.py",
+    "nano:aj-session": "nano_lm/.venv/bin/python nano_lm/src/run_aj_session.py",
     "nano:ai-session": "nano_lm/.venv/bin/python nano_lm/src/run_ai_session.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
