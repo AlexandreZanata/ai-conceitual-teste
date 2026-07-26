@@ -332,6 +332,8 @@
     "nano:ah:fastlift": "nano_lm/.venv/bin/python nano_lm/src/run_fastlift.py",
     "nano:applift": "nano_lm/.venv/bin/python nano_lm/src/run_applift.py",
     "nano:ah:applift": "nano_lm/.venv/bin/python nano_lm/src/run_applift.py",
+    "nano:ah:hitl": "nano_lm/.venv/bin/python nano_lm/src/run_ah_hitl.py",
+    "nano:ah-hitl": "nano_lm/.venv/bin/python nano_lm/src/run_ah_hitl.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
     "nano:routeplus": "nano_lm/.venv/bin/python nano_lm/src/run_routeplus.py",

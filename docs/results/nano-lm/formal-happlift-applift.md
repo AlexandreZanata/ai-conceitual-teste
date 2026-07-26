@@ -61,4 +61,4 @@ npm run nano:test && npm run verify
 - Trials: `AH-APPLIFT-{KNOWN,HOWTO,LONGDOC}-{LOOKUP\|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_applift.py`
 
-Next: **AH6 AH-HITL-10**.
+Next: **AH7 AH-REPORT**.
