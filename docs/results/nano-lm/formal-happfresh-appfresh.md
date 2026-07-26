@@ -63,4 +63,4 @@ npm run nano:test && npm run verify
 - Trials: `AL-APPFRESH-{KNOWN,HOWTO,LONGDOC}-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_appfresh.py`
 
-Next: **AL6 AL-HITL-10**.
+Next: **AL6 AL-HITL-10** — **DONE PROMOTE** → [wave-al-hitl.md](wave-al-hitl.md).

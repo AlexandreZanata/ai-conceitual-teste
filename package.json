@@ -394,6 +394,8 @@
     "nano:al:fastfresh": "nano_lm/.venv/bin/python nano_lm/src/run_fastfresh.py",
     "nano:appfresh": "nano_lm/.venv/bin/python nano_lm/src/run_appfresh.py",
     "nano:al:appfresh": "nano_lm/.venv/bin/python nano_lm/src/run_appfresh.py",
+    "nano:al:hitl": "nano_lm/.venv/bin/python nano_lm/src/run_al_hitl.py",
+    "nano:al-hitl": "nano_lm/.venv/bin/python nano_lm/src/run_al_hitl.py",
     "nano:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:aj:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:fastpeak": "nano_lm/.venv/bin/python nano_lm/src/run_fastpeak.py",
