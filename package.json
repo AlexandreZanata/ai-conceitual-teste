@@ -316,6 +316,8 @@
     "nano:ag:smartreal": "nano_lm/.venv/bin/python nano_lm/src/run_smartreal.py",
     "nano:fastreal": "nano_lm/.venv/bin/python nano_lm/src/run_fastreal.py",
     "nano:ag:fastreal": "nano_lm/.venv/bin/python nano_lm/src/run_fastreal.py",
+    "nano:appreal": "nano_lm/.venv/bin/python nano_lm/src/run_appreal.py",
+    "nano:ag:appreal": "nano_lm/.venv/bin/python nano_lm/src/run_appreal.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
     "nano:routeplus": "nano_lm/.venv/bin/python nano_lm/src/run_routeplus.py",

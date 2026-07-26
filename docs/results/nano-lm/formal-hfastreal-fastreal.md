@@ -61,4 +61,4 @@ npm run nano:test && npm run verify
 - Trials: `AG-FASTREAL-LOOKUP-HITL-01…10` · `AG-FASTREAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_fastreal.py`
 
-Next: **AG5 H-APPREAL**.
+Next: **AG6 AG-HITL-10**.
