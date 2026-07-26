@@ -302,6 +302,8 @@
     "nano:af:smartultra": "nano_lm/.venv/bin/python nano_lm/src/run_smartultra.py",
     "nano:fastultra": "nano_lm/.venv/bin/python nano_lm/src/run_fastultra.py",
     "nano:af:fastultra": "nano_lm/.venv/bin/python nano_lm/src/run_fastultra.py",
+    "nano:appultra": "nano_lm/.venv/bin/python nano_lm/src/run_appultra.py",
+    "nano:af:appultra": "nano_lm/.venv/bin/python nano_lm/src/run_appultra.py",
     "nano:hardpara": "nano_lm/.venv/bin/python nano_lm/src/run_hardpara.py",
     "nano:compose": "nano_lm/.venv/bin/python nano_lm/src/run_compose.py",
     "nano:routeplus": "nano_lm/.venv/bin/python nano_lm/src/run_routeplus.py",

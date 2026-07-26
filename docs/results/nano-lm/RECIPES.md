@@ -73,6 +73,7 @@
 | Wave AF1 CTXULTRA | [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md) **PROMOTE** (`npm run nano:ctxultra`) — triple-doc K=7; L_eff↑ vs CTXMAX |
 | Wave AF2 SMARTULTRA | [formal-hsmartultra-smartultra.md](formal-hsmartultra-smartultra.md) **PROMOTE** (`npm run nano:smartultra`) — triple-hop cite≥8; false-hit 0 |
 | Wave AF3 FASTULTRA | [formal-hfastultra-fastultra.md](formal-hfastultra-fastultra.md) **PROMOTE** (`npm run nano:fastultra`) — hot e2e ↓ vs FASTMAX |
+| Wave AF4 APPULTRA | [formal-happultra-appultra.md](formal-happultra-appultra.md) **PROMOTE** (`npm run nano:appultra`) — howto↑ + compose 5th + DEPL-AF |
 
 
 ## Policy
@@ -85,4 +86,4 @@ Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.m
 **Wave AC COMPLETE + FROZEN:** AC0–AC6 **PROMOTE** · AC-FREEZE — [wave-ac-summary.md](wave-ac-summary.md) · [ac-freeze.md](ac-freeze.md) · [paper-lab-wave-ac.md](paper-lab-wave-ac.md) · **H-CTXPLUS** · **H-SMARTPLUS** · **H-FASTPLUS** · **H-APPPLUS** · [AC-HITL-10](wave-ac-hitl.md).
 **Wave AD COMPLETE + FROZEN:** AD0–AD6 **PROMOTE** · AD-FREEZE — [wave-ad-summary.md](wave-ad-summary.md) · [ad-freeze.md](ad-freeze.md) · [paper-lab-wave-ad.md](paper-lab-wave-ad.md) · **H-HARDPARA** · **H-COMPOSE** · **H-ROUTEPLUS** · **H-DEPLPLUS** · [AD-HITL-10](wave-ad-hitl.md).  
 **Wave AE COMPLETE + FROZEN:** AE0–AE6 **PROMOTE** · AE-FREEZE — [wave-ae-summary.md](wave-ae-summary.md) · [ae-freeze.md](ae-freeze.md) · [paper-lab-wave-ae.md](paper-lab-wave-ae.md) · **H-CTXMAX** · **H-SMARTMAX** · **H-FASTMAX** · **H-APPMAX** · [AE-HITL-10](wave-ae-hitl.md).  
-**Wave AF OPEN:** AF0 [wave-af-session.md](wave-af-session.md) **PROMOTE** · AF1 [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md) **PROMOTE** · AF2 [formal-hsmartultra-smartultra.md](formal-hsmartultra-smartultra.md) **PROMOTE** · AF3 [formal-hfastultra-fastultra.md](formal-hfastultra-fastultra.md) **PROMOTE** — next **H-APPULTRA** (ship claim remains **AE packaged stack** until AF5).
+**Wave AF OPEN:** AF0 [wave-af-session.md](wave-af-session.md) **PROMOTE** · AF1 [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md) **PROMOTE** · AF2 [formal-hsmartultra-smartultra.md](formal-hsmartultra-smartultra.md) **PROMOTE** · AF3 [formal-hfastultra-fastultra.md](formal-hfastultra-fastultra.md) **PROMOTE** · AF4 [formal-happultra-appultra.md](formal-happultra-appultra.md) **PROMOTE** — next **AF-HITL-10** (ship claim remains **AE packaged stack** until AF5).

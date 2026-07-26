@@ -87,7 +87,7 @@
 | **H-CTXULTRA** | Triple-doc K=7 ROLL/SUMCACHE; L_eff↑ vs CTXMAX; AF1 **PROMOTE** (mean 9.0; usable 10/10) |
 | **H-SMARTULTRA** | Triple-hop SEMWRAP cite beyond SMARTMAX; AF2 **PROMOTE** (mean 9.0; cite 10/10; false-hit 0) |
 | **H-FASTULTRA** | ASKFAST+key-peek hot serve; e2e ↓ vs FASTMAX; AF3 **PROMOTE** (mean 9.0; hot e2e ≪ 0.034 ms) |
-| **H-APPULTRA** | Stronger real apps beyond APPMAX (Wave AF4 — pending) |
+| **H-APPULTRA** | Stronger apps + howto↑ + **app-compose** 5th + DEPL-AF; AF4 **PROMOTE** (5/5 apps; mean 8.86) |
 | **H-ASKSMART** | Anti-period QPFB2+BEAMKV + constrained SEMWRAP FIX; AB4 **PROMOTE** (mean 8.7 > SERVEALIGN 3.4) |
 | **H-REALAPP** | Packaged `app-known` + `app-longdoc` one-pagers; AB5 **PROMOTE** (mean 8.85 · DEPL honest) |
 | **AB-HITL-10** | Final Wave AB pack verify on declared stack; AB6 **PROMOTE** (mean 9.0 · errors 0/10) |

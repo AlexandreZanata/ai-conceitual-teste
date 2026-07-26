@@ -51,6 +51,8 @@
 | [formal-hctxultra-ctxultra.md](formal-hctxultra-ctxultra.md) | Wave AF1 H-CTXULTRA **PROMOTE** |
 | [formal-hsmartultra-smartultra.md](formal-hsmartultra-smartultra.md) | Wave AF2 H-SMARTULTRA **PROMOTE** |
 | [formal-hfastultra-fastultra.md](formal-hfastultra-fastultra.md) | Wave AF3 H-FASTULTRA **PROMOTE** |
+| [formal-happultra-appultra.md](formal-happultra-appultra.md) | Wave AF4 H-APPULTRA **PROMOTE** |
+| [depl-af.md](depl-af.md) | AF packaged deploy routes (APPULTRA) |
 | [depl-ad.md](depl-ad.md) | AC+AD deploy overview (H-DEPLPLUS) |
 | [wave-ab-summary.md](wave-ab-summary.md) | Wave AB **COMPLETE** public closeout |
 | [ab-freeze.md](ab-freeze.md) | Wave AB **FROZEN** — no Wave AC invent |
