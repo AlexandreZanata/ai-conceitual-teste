@@ -1,4 +1,4 @@
-# DEPL-AM — AL packaged deploy (**H-APPNEXT**)
+# DEPL-AM — AM packaged deploy (**H-APPNEXT**)
 
 > Wave AM5 **H-APPNEXT** · Inherit AL apps + AM next spines
 > Claim: scoped apps expose LOOKUP vs GENERATE — not open chat LM
