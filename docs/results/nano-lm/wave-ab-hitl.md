@@ -38,4 +38,4 @@ npm run nano:ab:hitl
 - Trials: `AB-FINAL-HITL-01.json` … `10.json`  
 - Contract: `nano_lm/tests/test_ab_hitl.py`
 
-Next: **AB7 AB-REPORT** (public `wave-ab-summary.md` + paper-lab + FIX log).
+Next: **AB7 AB-REPORT** (**DONE** — see [wave-ab-summary.md](wave-ab-summary.md)). **Wave AB COMPLETE**.
