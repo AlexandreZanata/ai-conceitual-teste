@@ -62,4 +62,4 @@ npm run nano:test && npm run verify
 - Trials: `AI-APPPUSH-{KNOWN,HOWTO,LONGDOC}-{LOOKUP\|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_apppush.py`
 
-Next: **AI6 AI-HITL-10**.
+Next: **AI6 AI-HITL-10** (**DONE — HOLD** — [wave-ai-hitl.md](wave-ai-hitl.md)). Next: **AI7 AI-REPORT**.
