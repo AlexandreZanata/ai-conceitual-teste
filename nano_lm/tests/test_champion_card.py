@@ -29,8 +29,9 @@ def test_given_card_when_read_then_wave_summaries() -> None:
     assert "Wave W" in text and "COMPLETE" in text
     assert "wave-w-summary" in text
     assert "Wave X" in text and "wave-x-summary" in text
-    assert "Wave Y" in text and "ACTIVE" in text
+    assert "Wave Y" in text and "COMPLETE" in text
     assert "wave-y-summary" in text or "H-BEAMKV" in text
+    assert "Wave Z" in text
     assert "PROMOTE" in text
 
 
@@ -58,6 +59,7 @@ def test_given_card_when_read_then_xplus_promotes() -> None:
         "formal-hpfb256-pfb256",
         "formal-hroll-roll",
         "formal-hsumcache-sumcache",
+        "formal-hgpfb4long-gpfb4long",
     ):
         assert needle in text, f"missing {needle}"
     assert "PROMOTE" in text

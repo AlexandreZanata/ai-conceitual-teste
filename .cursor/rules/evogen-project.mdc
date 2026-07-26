@@ -5,9 +5,9 @@ alwaysApply: true
 
 # Project rules (nano-first)
 
-- **Active:** nano generative student ≤5M — `docs/NANO-STUDENT-AGENDA.md`, `.local/pesquisa.md` (Wave Y ACTIVE — PFB256/ROLL/SUMCACHE **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**; next **H-GPFB4-LONG**), `docs/ARCHITECTURE.md` / `GLOSSARY.md`.
+- **Active:** nano generative student ≤5M — `docs/NANO-STUDENT-AGENDA.md`, `.local/pesquisa.md` (Wave Y **COMPLETE** — GPFB4-LONG **PROMOTE**; next **Wave Z**), `docs/ARCHITECTURE.md` / `GLOSSARY.md`.
 - **Frozen:** EvoGen survival PoC → `docs/archive/evogen/` (do not extend unless lab book re-opens).
 - Domain terms from `docs/GLOSSARY.md` — never call evolutionary individuals “coding agents”.
 - Curated public data: `nano_lm/data/CURATED-SOURCES.md` + `npm run nano:curated`.
 - Caps: ≤80 lines/function, ≤200 lines/file, cyclomatic ≤10; run `npm run verify`.
-- Recipes: `docs/results/nano-lm/RECIPES.md` · Wave Y: `wave-y-summary.md` · H-SUMCACHE: `formal-hsumcache-sumcache.md` · H-ROLL: `formal-hroll-roll.md` · H-PFB256: `formal-hpfb256-pfb256.md` · H-SCORERAM: `formal-hscoreram-scoreram.md` · H-BEAMKV: `formal-hbeamkv-beamkv.md` · H-TCACHE: `formal-htcache-tcache.md` · H-ABS-QPFB2: `formal-hqpfb2-qpfb2.md`.
+- Recipes: `docs/results/nano-lm/RECIPES.md` · Wave Y: `wave-y-summary.md` · H-GPFB4-LONG: `formal-hgpfb4long-gpfb4long.md` · H-SUMCACHE: `formal-hsumcache-sumcache.md` · H-ROLL: `formal-hroll-roll.md` · H-PFB256: `formal-hpfb256-pfb256.md` · H-SCORERAM: `formal-hscoreram-scoreram.md` · H-BEAMKV: `formal-hbeamkv-beamkv.md` · H-TCACHE: `formal-htcache-tcache.md` · H-ABS-QPFB2: `formal-hqpfb2-qpfb2.md`.

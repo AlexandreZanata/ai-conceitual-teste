@@ -28,6 +28,6 @@
 
 ## Policy
 
-DEPL: speed→PACK/QT; code-smart→QPFB2/BPFB (+BEAMKV/TCACHE/SCORERAM/PFB256/ROLL/SUMCACHE); GENC∘PFB→GPFB4; quality→QPACK in-dist; **REJECT** ood_long / QPACK-OOD / revived X+ KILLs / STREAM / KVCACHE-Q / GENCACHE.
+DEPL: speed→PACK/QT; code-smart→QPFB2/BPFB (+BEAMKV/TCACHE/SCORERAM/PFB256/ROLL/SUMCACHE/GPFB4-LONG); GENC∘PFB→GPFB4; quality→QPACK in-dist; **REJECT** ood_long / QPACK-OOD / revived X+ KILLs / STREAM / KVCACHE-Q / GENCACHE.
 Wave W: [wave-w-summary.md](wave-w-summary.md). Wave X+ KILLs: [wave-x-summary.md](wave-x-summary.md) → [`archive/`](archive/).
-**Wave Y:** [wave-y-summary.md](wave-y-summary.md) — PFB256/ROLL/SUMCACHE **PROMOTE**; STREAM/KVCACHE-Q/GENCACHE **KILL**; next H-GPFB4-LONG.
+**Wave Y COMPLETE:** [wave-y-summary.md](wave-y-summary.md) — next **Wave Z** (HITL).
