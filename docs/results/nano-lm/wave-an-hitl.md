@@ -74,5 +74,4 @@ npm run nano:test && npm run verify
 - Trials: `AN-FINAL-LOOKUP-HITL-01…10` · `AN-FINAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_an_hitl.py`
 
-Next: **AN7 AN-REPORT** — public summary + paper-lab. Do **not** invent Wave AO.  
-Report target: `wave-an-summary.md` · `paper-lab-wave-an.md`.
+Next: **AN7 AN-REPORT** — **DONE PROMOTE** → [wave-an-summary.md](wave-an-summary.md) · [paper-lab-wave-an.md](paper-lab-wave-an.md). Next **AN8 AN-FREEZE**. Do **not** invent Wave AO.

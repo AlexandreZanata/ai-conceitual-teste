@@ -432,6 +432,8 @@
     "nano:an:appedge": "nano_lm/.venv/bin/python nano_lm/src/run_appedge.py",
     "nano:an:hitl": "nano_lm/.venv/bin/python nano_lm/src/run_an_hitl.py",
     "nano:an-hitl": "nano_lm/.venv/bin/python nano_lm/src/run_an_hitl.py",
+    "nano:an:report": "nano_lm/.venv/bin/python nano_lm/src/run_an_report.py",
+    "nano:an-report": "nano_lm/.venv/bin/python nano_lm/src/run_an_report.py",
     "nano:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:aj:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:fastpeak": "nano_lm/.venv/bin/python nano_lm/src/run_fastpeak.py",
