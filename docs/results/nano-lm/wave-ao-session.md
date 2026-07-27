@@ -62,4 +62,4 @@ Contract: `nano_lm/tests/test_ao_session.py`.
 - Default ship claim until proven otherwise still **AF packaged stack**.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AP · PROMOTE LOOKUP-only as generative IQ.
 
-Next: **AO1 H-GENCORE** — smarter usable gen + dual-arm + ablation gate.
+Next: **AO1 H-GENCORE** — **DONE HOLD** → [formal-hgencore-gencore.md](formal-hgencore-gencore.md). Next **AO2 H-CTXCORE**.
