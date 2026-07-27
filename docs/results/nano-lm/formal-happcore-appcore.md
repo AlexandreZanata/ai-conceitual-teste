@@ -63,4 +63,4 @@ npm run nano:test && npm run verify
 - Trials: `AO-APPCORE-{KNOWN,HOWTO,LONGDOC}-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_appcore.py`
 
-Next: **AO6 AO-HITL-10** — final dual-arm on same 10.
+Next: **AO6 AO-HITL-10** — **DONE PROMOTE** → [wave-ao-hitl.md](wave-ao-hitl.md). Next **AO7 AO-REPORT**.
