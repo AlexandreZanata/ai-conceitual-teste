@@ -111,7 +111,8 @@
 | **H-ADVSAFE** | Adversary regression after SEMFIX; AS3 **PROMOTE** (ADVSAFE-20 FH **0**/20 · SAFE≠quality) — [formal-hadvsafe-advsafe.md](results/nano-lm/formal-hadvsafe-advsafe.md) |
 | **H-PARAEXT2** | External paraphrase after SEMFIX; AS4 **PROMOTE** (hit **0.80** · FH 0) — [formal-hparaext2-paraext2.md](results/nano-lm/formal-hparaext2-paraext2.md) |
 | **H-METRICS** | Latency tetrad(+ABSTAIN) p50/p99 + KB holes; AS5 **PROMOTE** — [formal-hmetrics-metrics.md](results/nano-lm/formal-hmetrics-metrics.md) |
-| **H-SHIPUI** | Ship/demo + ask always show mode labels (AS6) |
+| **H-SHIPUI** | Ask+ship/demo mode labels 4/4; AS6 **PROMOTE** — [formal-hshipui-shipui.md](results/nano-lm/formal-hshipui-shipui.md) |
+| **H-NANOGEN3** | Ablated DECODE ≥ **5.0** vs NANOGEN2 4.3 (AS7) |
 | **H-PARAEXT2** | External paraphrase hit ≥0.70 after SEMFIX (AS4) |
 | **H-NANOGEN3** | Ablated DECODE ≥5.0 vs NANOGEN2 4.3 (AS7 generative gate) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |

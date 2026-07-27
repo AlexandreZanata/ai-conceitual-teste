@@ -90,4 +90,4 @@ npm run nano:z:ask -- --semwrap --question "Which nation hosted the 2016 Summer 
 | Honest PEAK regress note | Silent regress / fake complete KB |
 | ABSTAIN wall published | Mini-AGI / open-chat claim |
 
-Next: **AS6 H-SHIPUI** — mode visible on ship/demo + ask.
+Next: **AS6 H-SHIPUI** — **DONE PROMOTE** → [formal-hshipui-shipui.md](formal-hshipui-shipui.md).
