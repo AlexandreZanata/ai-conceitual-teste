@@ -71,6 +71,21 @@ def test_given_trial_ok_when_validate_then_empty() -> None:
     assert validate_trial(t) == []
 
 
+def test_given_as_trial_id_when_validate_then_ok() -> None:
+    # GIVEN/WHEN/THEN: Wave AS trial prefix accepted (AS-ADVSAFE-*)
+    t = {
+        "trial_id": "AS-ADVSAFE-01",
+        "stage": "AS3",
+        "question": "near-miss",
+        "source_id": "bip-0039",
+        "recipe_id": RECIPE_ID,
+        "completion": "NO_ANSWER",
+        "score": 9.0,
+        "error": False,
+    }
+    assert validate_trial(t) == []
+
+
 def test_given_bad_score_when_validate_then_err() -> None:
     t = {
         "trial_id": "Z1-01",

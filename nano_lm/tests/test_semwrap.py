@@ -187,6 +187,11 @@ def test_given_near_miss_when_lookup_then_contrast_reject() -> None:
         "Which keyword is a no-op placeholder statement in Python?",
         "pass",
     )
+    assert contrastive_reject(
+        "ADVSAFE REST: GET path for fee estimates (not /rest/tx/<hash>).",
+        "Core REST: GET path for a tx hash?",
+        "GET /rest/tx/<TX-HASH>.json",
+    )
     assert not contrastive_reject(
         "What does BIP-39 specify for wallet seeds?",
         "What does BIP-39 specify for wallet seeds?",

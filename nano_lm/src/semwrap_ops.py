@@ -176,6 +176,25 @@ def _pass_contrast_trap(ask: str, gold: str) -> bool:
     return False
 
 
+def _rest_tx_contrast(ask: str, gold: str) -> bool:
+    """True iff ask wants non-tx REST path but gold is /rest/tx."""
+    g = gold.lower()
+    if "/rest/tx" not in g:
+        return False
+    if "fee" in ask:
+        return True
+    if "not /rest/tx" in ask or "not/rest/tx" in ask.replace(" ", ""):
+        return True
+    return False
+
+
+def _isize_index_trap(ask: str, gold: str) -> bool:
+    """True iff ask traps float indexing but gold is isize/usize."""
+    if "isize" not in gold and "usize" not in gold:
+        return False
+    return "floating-point" in ask or "f64" in ask
+
+
 def contrastive_reject(ask: str, bank_q: str, gold: str) -> bool:
     """
     GIVEN ask + matched bank question/gold
@@ -195,13 +214,13 @@ def contrastive_reject(ask: str, bank_q: str, gold: str) -> bool:
         return True
     if _cs_ent_polarity_flip(a, g):
         return True
+    if _rest_tx_contrast(a, g):
+        return True
     if "by height" in a and (
         "block-hash" in g or "/rest/tx/" in g or "by hash" in b
     ):
         return True
-    if "floating-point" in a and ("isize" in g or "usize" in g):
-        return True
-    return False
+    return _isize_index_trap(a, g)
 
 
 def semantic_lookup(
