@@ -101,6 +101,7 @@
 | **H-SHIPDEMO** | Ship/demo always shows `LOOKUP\|PEAK\|DECODE\|ABSTAIN`; AR2 **PROMOTE** (4/4 modes visible) |
 | **H-PARAEXT** | External paraphrase SEMWRAP (≠ AQ-PARA); AR3 **HOLD** (hit 0.65 < 0.70 · FH 0) |
 | **H-ADVREG** | Adversary regression (≠ AQ-ADV) + SAFE≠quality; AR4 **KILL** (FH 2/20 near-miss · mean not IQ) |
+| **H-NANOGEN2** | Ablated DECODE lift vs H-NANOGEN 4.0; AR5 **HOLD** (ablated 4.3 < 5.0 · peak/bank compare only) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

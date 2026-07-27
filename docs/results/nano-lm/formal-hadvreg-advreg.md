@@ -64,4 +64,4 @@ npm run nano:z:ask -- --semwrap --question "Which nation hosted the 2016 Summer 
 | SAFE≠quality documented | SAFE-mean sold as IQ |
 | Product safety gate | mini-AGI / Wave AS invent |
 
-Next: **AR5 H-NANOGEN2** — ablated generative gate (≥5.0).
+Next: **AR5 H-NANOGEN2** — **DONE HOLD** → [formal-hnanogen2-nanogen2.md](formal-hnanogen2-nanogen2.md). Next **AR6 AR-DUAL-HITL**.
