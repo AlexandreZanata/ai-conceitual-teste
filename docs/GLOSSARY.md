@@ -126,6 +126,7 @@
 | **AU0-SESSION** | Freeze product-debt · human-para · NANOGEN5 hyp · strict judge · real-eval; AU0 **PROMOTE** — [wave-au-session.md](results/nano-lm/wave-au-session.md) |
 | **H-PRODHARD** | Close live-audit debts on default ask (near-miss ABSTAIN · human para · PEAK usable); AU1 **PROMOTE** — [formal-hprodhard-prodhard.md](results/nano-lm/formal-hprodhard-prodhard.md) |
 | **H-SHIPREAL** | Human ask/apps/ship-demo modes + content match claim; AU2 **PROMOTE** — [formal-hshipreal-shipreal.md](results/nano-lm/formal-hshipreal-shipreal.md) |
+| **H-NANOGEN5** | STRICT ablated DECODE (snippet-prefix + gibberish-tail; F1/HITL); AU3 **PROMOTE** strict **5.5** — [formal-hnanogen5-nanogen5.md](results/nano-lm/formal-hnanogen5-nanogen5.md) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”
