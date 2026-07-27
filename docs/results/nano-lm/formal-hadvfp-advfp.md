@@ -56,4 +56,4 @@ npm run nano:z:ask -- --semwrap --question "Who won the 2014 FIFA World Cup fina
 | MISS/DECODE on OOD/trap | Claiming refuse = generative IQ |
 | Product safety gate | Wave AR invent |
 
-Next: **AQ3 H-LATP** — latency p50/p99 for LOOKUP · PEAK · DECODE.
+Next: **AQ3 H-LATP** — **DONE PROMOTE** → [formal-hlatp-latp.md](formal-hlatp-latp.md).
