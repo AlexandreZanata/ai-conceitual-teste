@@ -65,4 +65,4 @@ npm run nano:z:ask -- --question "Which nation hosted the 2016 Summer Olympics?"
 | OOD abstain↑ with FH 0 | LOOKUP-as-IQ · SAFE-as-quality |
 | Product honesty gate | mini-AGI claim · Wave AS invent |
 
-Next: **AR2 H-SHIPDEMO** — ship/demo UI shows all four modes.
+Next: **AR2 H-SHIPDEMO** — **DONE PROMOTE** → [formal-hshipdemo-shipdemo.md](formal-hshipdemo-shipdemo.md).
