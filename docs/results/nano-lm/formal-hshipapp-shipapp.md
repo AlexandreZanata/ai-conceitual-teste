@@ -59,4 +59,4 @@ npm run nano:z:ask -- --semwrap --question "Which nation hosted the 2016 Summer 
 | Labeled modes on ask · apps · ship/demo | Unlabeled answers |
 | PEAK labeled extractive | Peak-as-open-chat |
 
-Next: **AT3 H-NANOGEN4** — ablated DECODE ≥ **5.0** vs NANOGEN3 4.3.
+Next: **AT3 H-NANOGEN4** — **DONE PROMOTE** (ablated **5.5**) → [formal-hnanogen4-nanogen4.md](formal-hnanogen4-nanogen4.md). **AT4 AT-REAL-EVAL** — next.

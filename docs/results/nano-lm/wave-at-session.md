@@ -91,4 +91,5 @@ Contract: `nano_lm/tests/test_at_session.py`.
 - Generative PROMOTE only via later **AT3 H-NANOGEN4** ablated bar ≥5.0.  
 - Forbidden: LOOKUP-as-IQ · peak-as-open-chat · SAFE-as-quality · mini-AGI claim early · Wave AU invent · CTX/SMART/FAST/APP clone · bank stuffing · vanity re-SEMFIX.
 
-Next: **AT1 H-PRODREG** — **DONE PROMOTE** → [formal-hprodreg-prodreg.md](formal-hprodreg-prodreg.md). **AT2 H-SHIPAPP** — **DONE PROMOTE** → [formal-hshipapp-shipapp.md](formal-hshipapp-shipapp.md). **AT3 H-NANOGEN4** — ablated ≥5.0.
+Next: **AT1 H-PRODREG** — **DONE PROMOTE** → [formal-hprodreg-prodreg.md](formal-hprodreg-prodreg.md). **AT2 H-SHIPAPP** — **DONE PROMOTE** → [formal-hshipapp-shipapp.md](formal-hshipapp-shipapp.md). **AT3 H-NANOGEN4** — **DONE PROMOTE** (ablated **5.5**) → [formal-hnanogen4-nanogen4.md](formal-hnanogen4-nanogen4.md). **AT4 AT-REAL-EVAL** — next.
+

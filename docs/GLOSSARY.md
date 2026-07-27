@@ -119,7 +119,7 @@
 | **AT0-SESSION** | Freeze PRODREG suite · SHIPAPP · NANOGEN4 hyp · real-eval; AT0 **PROMOTE** — [wave-at-session.md](results/nano-lm/wave-at-session.md) |
 | **H-PRODREG** | Caminho A product regression (para · FH · p50/p99 · KB · modes · abstain); AT1 **PROMOTE** — [formal-hprodreg-prodreg.md](results/nano-lm/formal-hprodreg-prodreg.md) |
 | **H-SHIPAPP** | Human ask/apps/ship-demo always show `LOOKUP\|PEAK\|DECODE\|ABSTAIN`; AT2 **PROMOTE** — [formal-hshipapp-shipapp.md](results/nano-lm/formal-hshipapp-shipapp.md) |
-| **H-NANOGEN4** | Ablated DECODE lift vs NANOGEN3 4.3 (snippet-prefix hyp); AT3 pending · bar ≥5.0 |
+| **H-NANOGEN4** | Ablated DECODE lift vs NANOGEN3 4.3 via snippet-prefix; AT3 **PROMOTE** (ablated **5.5**) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”
