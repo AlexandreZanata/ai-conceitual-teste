@@ -1,9 +1,9 @@
-# Wave AQ — Product Science + Nano Generative (**COMPLETE**)
+# Wave AQ — Product Science + Nano Generative (**COMPLETE + FROZEN**)
 
-> Lab: `.local/pesquisa.md` §5 · Paper-lab: [paper-lab-wave-aq.md](paper-lab-wave-aq.md) · HITL: [wave-aq-product-hitl.md](wave-aq-product-hitl.md) · Freeze: [aq-freeze.md](aq-freeze.md) (pending AQ9)  
+> Lab: `.local/pesquisa.md` §5 · Paper-lab: [paper-lab-wave-aq.md](paper-lab-wave-aq.md) · HITL: [wave-aq-product-hitl.md](wave-aq-product-hitl.md) · Freeze: [aq-freeze.md](aq-freeze.md) · [formal-haqfreeze-aq-freeze.md](formal-haqfreeze-aq-freeze.md)  
 > Parent: Wave AP **AP-FREEZE** reopen · Ship claim: **AF packaged stack + AQ product layer — not open chat LM**
 
-**Status: COMPLETE** (freeze pending AQ9) · Thesis: **Wave AQ product science on AF: PARAHIT·ADVFP·LATP·KBCOV·MODEUI·PRODUCT-HITL PROMOTE; H-NANOGEN HOLD (ablated 4.0 · peak_only_lift); generative/open-chat/mini-AGI claims locked; ship AF packaged stack + AQ product layer — not open chat LM.**
+**Status: COMPLETE + FROZEN** · Thesis: **Wave AQ product science on AF: PARAHIT·ADVFP·LATP·KBCOV·MODEUI·PRODUCT-HITL PROMOTE; H-NANOGEN HOLD (ablated 4.0 · peak_only_lift); generative/open-chat/mini-AGI claims locked; ship AF packaged stack + AQ product layer — not open chat LM.**
 
 ## Stage scoreboard (product science)
 
@@ -18,7 +18,7 @@
 | AQ6 | **H-NANOGEN** | ablated gen 4.0 | **HOLD** | peak_only_lift · gen claim locked |
 | AQ7 | **AQ-PRODUCT-HITL** | pillars + apps | **PROMOTE** | product PROMOTE · gen locked |
 | AQ8 | **AQ-REPORT** | summary + paper-lab | **PROMOTE** | docs + anti-FP table |
-| AQ9 | **AQ-FREEZE** | lock outcomes | **pending** | stub until AQ9 · no Wave AR invent |
+| AQ9 | **AQ-FREEZE** | lock outcomes | **PROMOTE** | COMPLETE+FROZEN · no Wave AR invent |
 
 ## Anti-FP evidence (mandatory)
 
@@ -50,6 +50,7 @@
 ## Reproduce
 
 ```bash
+npm run nano:aq:freeze
 npm run nano:aq:report
 npm run nano:aq:session
 npm run nano:parahit
@@ -59,7 +60,6 @@ npm run nano:kbcov
 npm run nano:modeui
 npm run nano:nanogen
 npm run nano:aq:product-hitl
-# next: npm run nano:aq:freeze (AQ9)
 ```
 
 ## Do not reopen

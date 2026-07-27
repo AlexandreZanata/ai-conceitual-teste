@@ -98,8 +98,8 @@ AQ_SCOREBOARD: tuple[dict[str, Any], ...] = (
         "stage": "AQ9",
         "id": "AQ-FREEZE",
         "metric": "lock outcomes",
-        "decision": "pending",
-        "note": "stub until AQ9 · no Wave AR invent",
+        "decision": "PROMOTE",
+        "note": "COMPLETE+FROZEN · no Wave AR invent",
     },
 )
 
@@ -208,16 +208,18 @@ def antifp_section_ok(text: str) -> bool:
 
 def render_wave_aq_summary() -> str:
     lines = [
-        "# Wave AQ — Product Science + Nano Generative (**COMPLETE**)",
+        "# Wave AQ — Product Science + Nano Generative "
+        "(**COMPLETE + FROZEN**)",
         "",
         "> Lab: `.local/pesquisa.md` §5 · Paper-lab: "
         "[paper-lab-wave-aq.md](paper-lab-wave-aq.md) · "
         "HITL: [wave-aq-product-hitl.md](wave-aq-product-hitl.md) · "
-        "Freeze: [aq-freeze.md](aq-freeze.md) (pending AQ9)  ",
+        "Freeze: [aq-freeze.md](aq-freeze.md) · "
+        "[formal-haqfreeze-aq-freeze.md](formal-haqfreeze-aq-freeze.md)  ",
         "> Parent: Wave AP **AP-FREEZE** reopen · Ship claim: "
         f"**{SHIP_CLAIM}**",
         "",
-        "**Status: COMPLETE** (freeze pending AQ9) · Thesis: **"
+        "**Status: COMPLETE + FROZEN** · Thesis: **"
         + AQ_THESIS
         + ".**",
         "",
@@ -276,6 +278,7 @@ def render_wave_aq_summary() -> str:
             "## Reproduce",
             "",
             "```bash",
+            "npm run nano:aq:freeze",
             "npm run nano:aq:report",
             "npm run nano:aq:session",
             "npm run nano:parahit",
@@ -285,7 +288,6 @@ def render_wave_aq_summary() -> str:
             "npm run nano:modeui",
             "npm run nano:nanogen",
             "npm run nano:aq:product-hitl",
-            "# next: npm run nano:aq:freeze (AQ9)",
             "```",
             "",
             "## Do not reopen",
@@ -307,9 +309,10 @@ def render_paper_lab_wave_aq() -> str:
             "",
             "> Companion to [wave-aq-summary.md](wave-aq-summary.md). "
             "English lab note.  ",
-            "> **Status: COMPLETE** (freeze pending AQ9) · HITL: "
+            "> **Status: COMPLETE + FROZEN** · HITL: "
             "[wave-aq-product-hitl.md](wave-aq-product-hitl.md) · "
             "Freeze: [aq-freeze.md](aq-freeze.md) · "
+            "[formal-haqfreeze-aq-freeze.md](formal-haqfreeze-aq-freeze.md) · "
             "Parent: [ap-freeze.md](ap-freeze.md) · "
             f"Ship: **{SHIP_CLAIM}**",
             "",
@@ -337,7 +340,7 @@ def render_paper_lab_wave_aq() -> str:
             "| H-NANOGEN | Ablated 4.0 → HOLD; peak compare only |",
             "| AQ-PRODUCT-HITL | Product pillars+apps → PROMOTE; gen locked |",
             "| AQ-REPORT | Summary + paper-lab + anti-FP → PROMOTE |",
-            "| AQ-FREEZE | Pending AQ9 — no Wave AR invent |",
+            "| AQ-FREEZE | Outcomes locked — no Wave AR invent |",
             "",
             "## Anti-FP takeaway",
             "",
@@ -358,6 +361,7 @@ def render_paper_lab_wave_aq() -> str:
             "- [wave-aq-summary.md](wave-aq-summary.md) · "
             "[wave-aq-product-hitl.md](wave-aq-product-hitl.md) · "
             "[wave-aq-session.md](wave-aq-session.md) · "
+            "[aq-freeze.md](aq-freeze.md) · "
             "[ap-freeze.md](ap-freeze.md)  ",
             "- Formals: PARAHIT · ADVFP · LATP · KBCOV · MODEUI · NANOGEN  ",
             "- Demo: [modeui-demo.md](modeui-demo.md)  ",

@@ -1,7 +1,7 @@
 # Paper-lab — Wave AQ (Product Science + Nano Generative)
 
 > Companion to [wave-aq-summary.md](wave-aq-summary.md). English lab note.  
-> **Status: COMPLETE** (freeze pending AQ9) · HITL: [wave-aq-product-hitl.md](wave-aq-product-hitl.md) · Freeze: [aq-freeze.md](aq-freeze.md) · Parent: [ap-freeze.md](ap-freeze.md) · Ship: **AF packaged stack + AQ product layer — not open chat LM**
+> **Status: COMPLETE + FROZEN** · HITL: [wave-aq-product-hitl.md](wave-aq-product-hitl.md) · Freeze: [aq-freeze.md](aq-freeze.md) · [formal-haqfreeze-aq-freeze.md](formal-haqfreeze-aq-freeze.md) · Parent: [ap-freeze.md](ap-freeze.md) · Ship: **AF packaged stack + AQ product layer — not open chat LM**
 
 ## Question
 
@@ -21,7 +21,7 @@ After AP froze the AF packaged stack, can a **product-science** wave (paraphrase
 | H-NANOGEN | Ablated 4.0 → HOLD; peak compare only |
 | AQ-PRODUCT-HITL | Product pillars+apps → PROMOTE; gen locked |
 | AQ-REPORT | Summary + paper-lab + anti-FP → PROMOTE |
-| AQ-FREEZE | Pending AQ9 — no Wave AR invent |
+| AQ-FREEZE | Outcomes locked — no Wave AR invent |
 
 ## Anti-FP takeaway
 
@@ -33,7 +33,7 @@ LOOKUP and product HITL PROMOTE must never be sold as generative IQ. PEAK extrac
 
 ## Cite
 
-- [wave-aq-summary.md](wave-aq-summary.md) · [wave-aq-product-hitl.md](wave-aq-product-hitl.md) · [wave-aq-session.md](wave-aq-session.md) · [ap-freeze.md](ap-freeze.md)  
+- [wave-aq-summary.md](wave-aq-summary.md) · [wave-aq-product-hitl.md](wave-aq-product-hitl.md) · [wave-aq-session.md](wave-aq-session.md) · [aq-freeze.md](aq-freeze.md) · [ap-freeze.md](ap-freeze.md)  
 - Formals: PARAHIT · ADVFP · LATP · KBCOV · MODEUI · NANOGEN  
 - Demo: [modeui-demo.md](modeui-demo.md)  
 - Recipes: [RECIPES.md](RECIPES.md) · Card: [champion-card.md](champion-card.md)
