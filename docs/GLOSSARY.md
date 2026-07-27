@@ -129,6 +129,7 @@
 | **H-NANOGEN5** | STRICT ablated DECODE (snippet-prefix + gibberish-tail; F1/HITL); AU3 **PROMOTE** strict **5.5** — [formal-hnanogen5-nanogen5.md](results/nano-lm/formal-hnanogen5-nanogen5.md) |
 | **AU-REAL-EVAL** | Final product + STRICT gen + live ask battery 7/7; AU4 **PROMOTE** — [wave-au-real-eval.md](results/nano-lm/wave-au-real-eval.md) |
 | **AU-REPORT** | Wave AU public summary + paper-lab anti-FP; AU5 **PROMOTE** — [wave-au-summary.md](results/nano-lm/wave-au-summary.md) · [paper-lab-wave-au.md](results/nano-lm/paper-lab-wave-au.md) |
+| **AU-FREEZE** | Lock Wave AU outcomes; no Wave AV without reopen; AU6 **PROMOTE** — [au-freeze.md](results/nano-lm/au-freeze.md) · [formal-haufreeze-au-freeze.md](results/nano-lm/formal-haufreeze-au-freeze.md) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”
