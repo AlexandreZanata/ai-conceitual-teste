@@ -302,6 +302,7 @@ def run_askabstain(
     trials_dir: Path,
     curated_root: Path,
     seed: int = 0,
+    write_docs: bool = True,
 ) -> dict[str, Any]:
     """
     GIVEN OOD/miss pack + known LOOKUP
@@ -361,8 +362,9 @@ def run_askabstain(
         default_path_wired=wired,
     )
     decision = decide_askabstain(stats)
-    _write_public(decision=decision, stats=stats)
-    _update_local_session(decision, stats)
+    if write_docs:
+        _write_public(decision=decision, stats=stats)
+        _update_local_session(decision, stats)
     payload = {
         "id": ASKABSTAIN_ID,
         "thesis": ASKABSTAIN_THESIS,

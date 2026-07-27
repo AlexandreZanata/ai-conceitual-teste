@@ -279,6 +279,7 @@ def run_shipui(
     bank: Path,
     curated: Path,
     out: Path,
+    write_docs: bool = True,
 ) -> dict[str, Any]:
     """
     GIVEN champion + bank after ASKABSTAIN
@@ -293,8 +294,9 @@ def run_shipui(
     defaults = _default_ask_samples(root=root, bank=bank)
     decision = decide_shipui(rows=rows, default_asks=defaults)
     public = "PROMOTE" if decision == "PROMOTE" else "KILL"
-    _write_public(decision=public, rows=rows)
-    _update_local_session(decision, rows)
+    if write_docs:
+        _write_public(decision=public, rows=rows)
+        _update_local_session(decision, rows)
     summary: dict[str, Any] = {
         "hyp_id": SHIPUI_ID,
         "stage": "AS6",

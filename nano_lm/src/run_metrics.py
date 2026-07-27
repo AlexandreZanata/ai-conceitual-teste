@@ -420,6 +420,7 @@ def run_metrics(
     out: Path,
     workers: int,
     seed: int = 0,
+    write_docs: bool = True,
 ) -> dict[str, Any]:
     """
     GIVEN AS0 metrics protocol after ask-path changes
@@ -463,14 +464,15 @@ def run_metrics(
         regress_noted=True,
         snap=kb["snap"],
     )
-    _write_public(
-        decision=decision,
-        paths=paths,
-        regress=regress,
-        regress_note=note,
-        kb=kb,
-    )
-    _update_local_session(decision, paths, kb)
+    if write_docs:
+        _write_public(
+            decision=decision,
+            paths=paths,
+            regress=regress,
+            regress_note=note,
+            kb=kb,
+        )
+        _update_local_session(decision, paths, kb)
     summary: dict[str, Any] = {
         "hyp_id": METRICS_ID,
         "stage": "AS5",

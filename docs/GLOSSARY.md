@@ -117,7 +117,7 @@
 | **AS-REPORT** | Public summary + paper-lab; AS9 **PROMOTE** — [wave-as-summary.md](results/nano-lm/wave-as-summary.md) · [paper-lab-wave-as.md](results/nano-lm/paper-lab-wave-as.md) |
 | **AS-FREEZE** | Lock AS outcomes; AS10 **PROMOTE** — [as-freeze.md](results/nano-lm/as-freeze.md) · [formal-hasfreeze-as-freeze.md](results/nano-lm/formal-hasfreeze-as-freeze.md) |
 | **AT0-SESSION** | Freeze PRODREG suite · SHIPAPP · NANOGEN4 hyp · real-eval; AT0 **PROMOTE** — [wave-at-session.md](results/nano-lm/wave-at-session.md) |
-| **H-PRODREG** | Caminho A product regression (para · FH · p50/p99 · KB · modes · abstain); AT1 pending |
+| **H-PRODREG** | Caminho A product regression (para · FH · p50/p99 · KB · modes · abstain); AT1 **PROMOTE** — [formal-hprodreg-prodreg.md](results/nano-lm/formal-hprodreg-prodreg.md) |
 | **H-SHIPAPP** | Human ship/demo always shows `LOOKUP\|PEAK\|DECODE\|ABSTAIN`; AT2 pending |
 | **H-NANOGEN4** | Ablated DECODE lift vs NANOGEN3 4.3 (snippet-prefix hyp); AT3 pending · bar ≥5.0 |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |

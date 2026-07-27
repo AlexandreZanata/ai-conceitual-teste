@@ -285,6 +285,7 @@ def run_advsafe(
     trials_dir: Path,
     curated_root: Path,
     seed: int = 0,
+    write_docs: bool = True,
 ) -> dict[str, Any]:
     """
     GIVEN AS0 ADVSAFE-20
@@ -344,8 +345,9 @@ def run_advsafe(
     )
     decision = decide_advsafe(stats)
     hits = false_hit_ids(trials)
-    _write_public(decision=decision, stats=stats, hits=hits)
-    _update_local_session(decision, stats)
+    if write_docs:
+        _write_public(decision=decision, stats=stats, hits=hits)
+        _update_local_session(decision, stats)
     summary: dict[str, Any] = {
         "hyp_id": ADVSAFE_ID,
         "stage": "AS3",
