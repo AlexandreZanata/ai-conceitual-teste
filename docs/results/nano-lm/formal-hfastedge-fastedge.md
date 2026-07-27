@@ -79,4 +79,4 @@ npm run nano:test && npm run verify
 - Trials: `AN-FASTEDGE-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_fastedge.py`
 
-Next: **AN5 H-APPEDGE** — real apps + DEPL dual-arm.
+Next: **AN5 H-APPEDGE** — **DONE PROMOTE** → [formal-happedge-appedge.md](formal-happedge-appedge.md). Next **AN6 AN-HITL-10**.

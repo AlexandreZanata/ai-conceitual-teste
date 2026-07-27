@@ -428,6 +428,8 @@
     "nano:an:smartedge": "nano_lm/.venv/bin/python nano_lm/src/run_smartedge.py",
     "nano:fastedge": "nano_lm/.venv/bin/python nano_lm/src/run_fastedge.py",
     "nano:an:fastedge": "nano_lm/.venv/bin/python nano_lm/src/run_fastedge.py",
+    "nano:appedge": "nano_lm/.venv/bin/python nano_lm/src/run_appedge.py",
+    "nano:an:appedge": "nano_lm/.venv/bin/python nano_lm/src/run_appedge.py",
     "nano:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:aj:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:fastpeak": "nano_lm/.venv/bin/python nano_lm/src/run_fastpeak.py",
