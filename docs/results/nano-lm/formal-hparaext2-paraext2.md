@@ -54,4 +54,4 @@ npm run nano:z:ask -- --semwrap --question "Para-ext2: BIP-39 checksum length �
 | Honest HOLD when hit_rate < bar | Bank stuffing |
 | false-hit 0 as hard law | Rewrite AR PARAEXT |
 
-Next: **AS5 H-METRICS** — **DONE PROMOTE** → [formal-hmetrics-metrics.md](formal-hmetrics-metrics.md).
+Next: **AS5 H-METRICS** — **DONE PROMOTE** → [formal-hmetrics-metrics.md](formal-hmetrics-metrics.md). **AS8 AS-DUAL-HITL** — **DONE PROMOTE** → [wave-as-dual-hitl.md](wave-as-dual-hitl.md).

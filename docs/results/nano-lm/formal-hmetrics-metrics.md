@@ -13,9 +13,9 @@ After ASKABSTAIN · SEMFIX · ADVSAFE · PARAEXT2, republish honest **p50/p99 wa
 | Path | p50 wall_ms | p99 wall_ms | n | sample mode |
 |------|------------:|------------:|--:|-------------|
 | LOOKUP | **0.0000** | **0.0000** | 64 | WRAP_LOOKUP |
-| PEAK | **0.0235** | **0.0276** | 256 | PEAK_FAST+GENBASE |
-| DECODE | **11.0160** | **140.1569** | 12 | QT+EARLY n=1 |
-| ABSTAIN | **99.1236** | **137.1255** | 32 | NO_ANSWER |
+| PEAK | **0.0232** | **0.0266** | 256 | PEAK_FAST+GENBASE |
+| DECODE | **10.8161** | **11.7275** | 12 | QT+EARLY n=1 |
+| ABSTAIN | **93.9141** | **108.7752** | 32 | NO_ANSWER |
 
 | FASTBASE hot (baseline) | **0.0471** | — | — | PEAK_FAST |
 | PEAK regress vs baseline | **False** | — | — | — |
@@ -23,7 +23,7 @@ After ASKABSTAIN · SEMFIX · ADVSAFE · PARAEXT2, republish honest **p50/p99 wa
 
 ## Regress note
 
-PEAK p50 0.0235 ms ≤ FASTBASE hot 0.0471 ms — no regress.
+PEAK p50 0.0232 ms ≤ FASTBASE hot 0.0471 ms — no regress.
 
 ## Protocol (AS0)
 
@@ -90,4 +90,4 @@ npm run nano:z:ask -- --semwrap --question "Which nation hosted the 2016 Summer 
 | Honest PEAK regress note | Silent regress / fake complete KB |
 | ABSTAIN wall published | Mini-AGI / open-chat claim |
 
-Next: **AS6 H-SHIPUI** — **DONE PROMOTE** → [formal-hshipui-shipui.md](formal-hshipui-shipui.md).
+Next: **AS6 H-SHIPUI** — **DONE PROMOTE** → [formal-hshipui-shipui.md](formal-hshipui-shipui.md). **AS8 AS-DUAL-HITL** — **DONE PROMOTE** → [wave-as-dual-hitl.md](wave-as-dual-hitl.md).

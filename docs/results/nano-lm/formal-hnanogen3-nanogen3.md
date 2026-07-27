@@ -50,4 +50,4 @@ npm run nano:nanogen2
 | Peak/bank compare labeled | Peak/bank-as-open-chat |
 | PROMOTE only ablated≥5 | mini-AGI · Wave AT invent |
 
-Next: **AS8 AS-DUAL-HITL** — product pillars + gen gate status.
+Next: **AS8 AS-DUAL-HITL** — **DONE PROMOTE** → [wave-as-dual-hitl.md](wave-as-dual-hitl.md) (product pass · gen locked). Next: **AS9 AS-REPORT**.

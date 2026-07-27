@@ -113,9 +113,7 @@
 | **H-METRICS** | Latency tetrad(+ABSTAIN) p50/p99 + KB holes; AS5 **PROMOTE** — [formal-hmetrics-metrics.md](results/nano-lm/formal-hmetrics-metrics.md) |
 | **H-SHIPUI** | Ask+ship/demo mode labels 4/4; AS6 **PROMOTE** — [formal-hshipui-shipui.md](results/nano-lm/formal-hshipui-shipui.md) |
 | **H-NANOGEN3** | Ablated DECODE vs NANOGEN2 4.3; AS7 **HOLD** (ablated **4.3** · peak_only) — [formal-hnanogen3-nanogen3.md](results/nano-lm/formal-hnanogen3-nanogen3.md) |
-| **AS-DUAL-HITL** | Final real eval: product pillars + gen gate (AS8) |
-| **H-PARAEXT2** | External paraphrase hit ≥0.70 after SEMFIX (AS4) |
-| **H-NANOGEN3** | Ablated DECODE ≥5.0 vs NANOGEN2 4.3 (AS7 generative gate) |
+| **AS-DUAL-HITL** | Product pillars + gen gate; AS8 **PROMOTE** (gen locked) — [wave-as-dual-hitl.md](results/nano-lm/wave-as-dual-hitl.md) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”
