@@ -430,6 +430,8 @@
     "nano:ao:smartcore": "nano_lm/.venv/bin/python nano_lm/src/run_smartcore.py",
     "nano:fastcore": "nano_lm/.venv/bin/python nano_lm/src/run_fastcore.py",
     "nano:ao:fastcore": "nano_lm/.venv/bin/python nano_lm/src/run_fastcore.py",
+    "nano:appcore": "nano_lm/.venv/bin/python nano_lm/src/run_appcore.py",
+    "nano:ao:appcore": "nano_lm/.venv/bin/python nano_lm/src/run_appcore.py",
     "nano:genedge": "nano_lm/.venv/bin/python nano_lm/src/run_genedge.py",
     "nano:an:genedge": "nano_lm/.venv/bin/python nano_lm/src/run_genedge.py",
     "nano:ctxedge": "nano_lm/.venv/bin/python nano_lm/src/run_ctxedge.py",

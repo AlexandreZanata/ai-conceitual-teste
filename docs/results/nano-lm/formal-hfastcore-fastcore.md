@@ -75,4 +75,4 @@ npm run nano:test && npm run verify
 - Trials: `AO-FASTCORE-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_fastcore.py`
 
-Next: **AO5 H-APPCORE** — real apps + DEPL dual-arm.
+Next: **AO5 H-APPCORE** — **DONE PROMOTE** → [formal-happcore-appcore.md](formal-happcore-appcore.md). Next **AO6 AO-HITL-10**.
