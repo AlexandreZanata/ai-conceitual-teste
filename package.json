@@ -430,6 +430,8 @@
     "nano:ap:ctxbase": "nano_lm/.venv/bin/python nano_lm/src/run_ctxbase.py",
     "nano:smartbase": "nano_lm/.venv/bin/python nano_lm/src/run_smartbase.py",
     "nano:ap:smartbase": "nano_lm/.venv/bin/python nano_lm/src/run_smartbase.py",
+    "nano:fastbase": "nano_lm/.venv/bin/python nano_lm/src/run_fastbase.py",
+    "nano:ap:fastbase": "nano_lm/.venv/bin/python nano_lm/src/run_fastbase.py",
     "nano:ctxcore": "nano_lm/.venv/bin/python nano_lm/src/run_ctxcore.py",
     "nano:ao:ctxcore": "nano_lm/.venv/bin/python nano_lm/src/run_ctxcore.py",
     "nano:smartcore": "nano_lm/.venv/bin/python nano_lm/src/run_smartcore.py",

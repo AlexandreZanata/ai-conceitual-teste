@@ -76,4 +76,4 @@ npm run nano:test && npm run verify
 - Trials: `AP-SMARTBASE-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_smartbase.py`
 
-Next: **AP4 H-FASTBASE** — faster than FASTCORE at quality floor.
+Next: **AP4 H-FASTBASE** — **DONE PROMOTE** → [formal-hfastbase-fastbase.md](formal-hfastbase-fastbase.md). Next **AP5 H-APPBASE**.
