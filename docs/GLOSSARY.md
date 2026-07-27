@@ -97,6 +97,7 @@
 | **AB-REPORT** | Public Wave AB closeout + FIX scoreboard; AB7 **PROMOTE** — [wave-ab-summary.md](results/nano-lm/wave-ab-summary.md) |
 | **AB-FREEZE** | Lock Wave AB outcomes; no Wave AC invent; **PROMOTE** — [ab-freeze.md](results/nano-lm/ab-freeze.md) |
 | **H-SERVEALIGN** | QPFB2+BEAMKV open decode HITL; AA2 **HOLD** (beats Z1; not product bar) |
+| **H-ABSTAIN** | Refuse junk DECODE (OOD/miss) → `NO_ANSWER` / `mode=ABSTAIN`; AR1 **PROMOTE** (OOD abstain 1.0 · FH 0) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

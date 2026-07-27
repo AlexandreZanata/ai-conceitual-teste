@@ -110,4 +110,4 @@ Contract: `nano_lm/tests/test_ar_session.py`.
 - Generative PROMOTE only via later **AR5 H-NANOGEN2** ablated bar ≥5.0.  
 - Forbidden: LOOKUP-as-IQ · peak-as-open-chat · SAFE-as-quality · mini-AGI claim early · Wave AS invent · CTX/SMART/FAST/APP clone without named product hole.
 
-Next: **AR1 H-ABSTAIN** — refuse junk DECODE → NO_ANSWER/ABSTAIN.
+Next: **AR1 H-ABSTAIN** — **DONE PROMOTE** → [formal-habstain-abstain.md](formal-habstain-abstain.md). Next: **AR2 H-SHIPDEMO**.
