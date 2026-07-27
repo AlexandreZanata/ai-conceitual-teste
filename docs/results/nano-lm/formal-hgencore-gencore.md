@@ -76,4 +76,4 @@ npm run nano:test && npm run verify
 - Trials: `AO-GENCORE-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_gencore.py`
 
-Next: **AO2 H-CTXCORE** — longer usable ctx beyond CTXEDGE.
+Next: **AO2 H-CTXCORE** — **DONE PROMOTE** → [formal-hctxcore-ctxcore.md](formal-hctxcore-ctxcore.md). Next **AO3 H-SMARTCORE**.
