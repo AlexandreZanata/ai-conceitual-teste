@@ -54,4 +54,4 @@ npm run nano:z:ask -- --semwrap --question "Para-ext2: BIP-39 checksum length �
 | Honest HOLD when hit_rate < bar | Bank stuffing |
 | false-hit 0 as hard law | Rewrite AR PARAEXT |
 
-Next: **AS5 H-METRICS** — latency p50/p99 + KB coverage refresh.
+Next: **AS5 H-METRICS** — **DONE PROMOTE** → [formal-hmetrics-metrics.md](formal-hmetrics-metrics.md).
