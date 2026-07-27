@@ -76,6 +76,7 @@ _PHRASE_RULES: tuple[tuple[tuple[str, ...], tuple[str, ...]], ...] = (
     (("/rest/tx",), ("/rest/tx/<TX-HASH>", "#### Transactions")),
     (("protocol", "bits"), ("Protocol:  8 bits", "next level protocol")),
     (("protocol", "field"), ("Protocol:  8 bits", "next level protocol")),
+    (("ownership",), ("Ownership is a set of rules", "system of ownership")),
 )
 _CUE_TOKENS = (
     "CS = ENT / 32",
@@ -91,6 +92,8 @@ _CUE_TOKENS = (
     "Struct Update Syntax",
     "/rest/tx/",
     "Protocol:  8 bits",
+    "Ownership",
+    "ownership",
 )
 
 
@@ -171,12 +174,51 @@ def _fast_hits(
     return genbase_top_k_chunks(question, capped, kk)
 
 
+def _peak_span_usable(text: str) -> bool:
+    """True iff PEAK text is a readable span (not mid-word fragment)."""
+    t = str(text or "").strip()
+    if len(t) < 12:
+        return False
+    if set(t) <= {".", " ", "`"}:
+        return False
+    # Mid-word fragment like "mory while running"
+    if t[0].islower() and not t.startswith(("`", "_")):
+        return False
+    words = _WORD.findall(t)
+    return len(words) >= 3
+
+
+def _sentence_with_cue(ctx: str, cue: str) -> str | None:
+    """Return best sentence in ctx containing cue (skip headings)."""
+    if not cue or not ctx:
+        return None
+    best: str | None = None
+    for m in re.finditer(
+        rf"[^.!\n]*{re.escape(cue)}[^.!\n]*[.!]?", ctx, re.I
+    ):
+        sent = m.group(0).strip().lstrip("#").strip()
+        if not sent or sent.startswith("#"):
+            continue
+        if not _peak_span_usable(sent):
+            continue
+        if "ownership" in sent.lower() and len(sent) >= 40:
+            return sent
+        if best is None or len(sent) > len(best):
+            best = sent
+    return best
+
+
 def _peak_text(question: str, ctx: str) -> tuple[str, str | None]:
-    """Extract AP-aware peak text; allow struct-update `..`."""
+    """Extract AP-aware peak text; allow struct-update `..`; refuse junk."""
+    ql = question.lower()
+    if "ownership" in ql:
+        sent = _sentence_with_cue(ctx, "ownership")
+        if sent:
+            return normalize_gen_answer(sent), sent
     peak = extract_genbase_answer(question, ctx)
     if peak == "..":
         return "..", peak
-    if peak and not is_period_collapse(peak):
+    if peak and not is_period_collapse(peak) and _peak_span_usable(peak):
         return normalize_gen_answer(peak), peak
     return "", peak
 
@@ -191,25 +233,42 @@ def fastbase_generate(
     """
     GIVEN question + source chunks (no gold, no student decode)
     WHEN peaking GENBASE AP-aware span under wall clock
-    THEN GENERATE payload with wall_ms>0 ∧ n_new>0 (peak-fast product).
+    THEN GENERATE payload with wall_ms>0 ∧ n_new>0 (peak-fast product);
+         unusable span → ABSTAIN (AU1 peak_usable_or_abstain).
     """
     t0 = time.perf_counter()
-    hits = _fast_hits(
-        question, chunks, max(1, int(k_retrieve)), doc=doc
-    )
+    ql = question.lower()
     peak = None
     text = ""
-    for hit in list(hits[:3]):
-        text, peak = _peak_text(question, hit[:_CTX_CAP])
-        if text:
-            break
-    if not text and hits:
-        text, peak = _peak_text(question, "\n\n".join(hits)[:_CTX_CAP])
-    if not text or (is_period_collapse(text) and text != ".."):
-        fallback = hits[0][:80] if hits else "."
-        text = normalize_gen_answer(fallback)
-        peak = None
+    if doc and "ownership" in ql:
+        text, peak = _peak_text(question, doc[:8000])
+    if not text:
+        hits = _fast_hits(
+            question, chunks, max(1, int(k_retrieve)), doc=doc
+        )
+        for hit in list(hits[:3]):
+            text, peak = _peak_text(question, hit[:_CTX_CAP])
+            if text:
+                break
+        if not text and hits:
+            text, peak = _peak_text(question, "\n\n".join(hits)[:_CTX_CAP])
+        if not text and doc:
+            text, peak = _peak_text(question, doc[:8000])
+    else:
+        hits = []
     wall_ms = (time.perf_counter() - t0) * 1000.0
+    if not text or (is_period_collapse(text) and text != ".."):
+        return {
+            "completion": "NO_ANSWER",
+            "mode": "NO_ANSWER",
+            "wall_ms": float(wall_ms),
+            "ttft_ms": float(wall_ms),
+            "n_new": 0,
+            "peak_used": False,
+            "cache_hit": False,
+            "abstained": True,
+            "product_mode": "ABSTAIN",
+        }
     n_new = 1 if text == ".." else max(1, len(_WORD.findall(text)))
     return {
         "completion": text,

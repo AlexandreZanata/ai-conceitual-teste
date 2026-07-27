@@ -239,6 +239,16 @@ def _fill_lookups(
                     payload["semwrap"] = meta
                     out[i] = payload
                     continue
+                if str(meta.get("kind")) == "REJECT_NEAR_MISS":
+                    # Production refuse (AU1) — same path humans use.
+                    payload = _lookup_payload(
+                        recipe, q, "NO_ANSWER", seed, mode="NO_ANSWER"
+                    )
+                    payload["semwrap"] = meta
+                    payload["abstained"] = True
+                    payload["product_mode"] = "ABSTAIN"
+                    out[i] = payload
+                    continue
         pending.append((i, q))
     return out, pending
 
