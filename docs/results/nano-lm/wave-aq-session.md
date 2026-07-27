@@ -114,4 +114,4 @@ Contract: `nano_lm/tests/test_aq_session.py`.
 - Generative PROMOTE only via later **AQ6 H-NANOGEN** ablated bar.  
 - Forbidden: LOOKUP-as-IQ · peak-as-open-chat · Wave AR invent · CTX/SMART/FAST/APP clone without named product hole.
 
-Next: **AQ1 H-PARAHIT** — human paraphrase hit-rate on SEMWRAP.
+Next: **AQ1 H-PARAHIT** — **DONE PROMOTE** → [formal-hparahit-parahit.md](formal-hparahit-parahit.md). Next: **AQ2 H-ADVFP**.
