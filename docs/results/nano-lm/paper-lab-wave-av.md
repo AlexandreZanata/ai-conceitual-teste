@@ -1,7 +1,7 @@
 # Paper-lab — Wave AV (Caminho A ship + Nano true-gen honesty)
 
 > Companion to [wave-av-summary.md](wave-av-summary.md). English lab note.  
-> **Status: RESEARCH_COMPLETE** (pending AV-FREEZE) · Real-eval: [wave-av-real-eval.md](wave-av-real-eval.md) · Freeze: [av-freeze.md](av-freeze.md) · [formal-havfreeze-av-freeze.md](formal-havfreeze-av-freeze.md) · Parent: [au-freeze.md](au-freeze.md) · Ship: **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM**
+> **Status: COMPLETE + FROZEN** · Real-eval: [wave-av-real-eval.md](wave-av-real-eval.md) · Freeze: [av-freeze.md](av-freeze.md) · [formal-havfreeze-av-freeze.md](formal-havfreeze-av-freeze.md) · Parent: [au-freeze.md](au-freeze.md) · Ship: **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM**
 
 ## Question
 

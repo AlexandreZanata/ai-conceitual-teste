@@ -1,9 +1,9 @@
-# Wave AV — Caminho A ship + Nano true-gen honesty (**RESEARCH_COMPLETE** · pending FREEZE)
+# Wave AV — Caminho A ship + Nano true-gen honesty (**COMPLETE + FROZEN**)
 
 > Lab: `.local/pesquisa.md` §5 · Paper-lab: [paper-lab-wave-av.md](paper-lab-wave-av.md) · Real-eval: [wave-av-real-eval.md](wave-av-real-eval.md) · Freeze: [av-freeze.md](av-freeze.md) · [formal-havfreeze-av-freeze.md](formal-havfreeze-av-freeze.md)  
-> Parent: Wave AU **AU-FREEZE** reopen · Ship claim: **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM**
+> Parent: Wave AU **AU-FREEZE** · Ship claim: **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM**
 
-**Status: RESEARCH_COMPLETE** (AV6 FREEZE next) · Thesis: **Wave AV dual track: H-PRODSHIP·H-SHIPUI2 PROMOTE (Caminho A ship · external para · DECODE content law); H-NANOGEN6 HOLD (true_continue=0 · span-fallback ≠ gen IQ); AV-REAL-EVAL PROMOTE (live battery 8/8 · gen locked); ship AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM.**
+**Status: COMPLETE + FROZEN** · Thesis: **Wave AV dual track: H-PRODSHIP·H-SHIPUI2 PROMOTE (Caminho A ship · external para · DECODE content law); H-NANOGEN6 HOLD (true_continue=0 · span-fallback ≠ gen IQ); AV-REAL-EVAL PROMOTE (live battery 8/8 · gen locked); ship AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM.**
 
 ## Stage scoreboard (product + generative)
 

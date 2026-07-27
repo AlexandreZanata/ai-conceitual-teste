@@ -205,17 +205,17 @@ def realeval_section_ok(text: str) -> bool:
 def render_wave_av_summary() -> str:
     lines = [
         "# Wave AV — Caminho A ship + Nano true-gen honesty "
-        "(**RESEARCH_COMPLETE** · pending FREEZE)",
+        "(**COMPLETE + FROZEN**)",
         "",
         "> Lab: `.local/pesquisa.md` §5 · Paper-lab: "
         "[paper-lab-wave-av.md](paper-lab-wave-av.md) · "
         "Real-eval: [wave-av-real-eval.md](wave-av-real-eval.md) · "
         "Freeze: [av-freeze.md](av-freeze.md) · "
         "[formal-havfreeze-av-freeze.md](formal-havfreeze-av-freeze.md)  ",
-        "> Parent: Wave AU **AU-FREEZE** reopen · Ship claim: "
+        "> Parent: Wave AU **AU-FREEZE** · Ship claim: "
         f"**{SHIP_CLAIM}**",
         "",
-        "**Status: RESEARCH_COMPLETE** (AV6 FREEZE next) · Thesis: **"
+        "**Status: COMPLETE + FROZEN** · Thesis: **"
         + AV_THESIS
         + ".**",
         "",
@@ -319,7 +319,7 @@ def render_paper_lab_wave_av() -> str:
             "",
             "> Companion to [wave-av-summary.md](wave-av-summary.md). "
             "English lab note.  ",
-            "> **Status: RESEARCH_COMPLETE** (pending AV-FREEZE) · "
+            "> **Status: COMPLETE + FROZEN** · "
             "Real-eval: [wave-av-real-eval.md](wave-av-real-eval.md) · "
             "Freeze: [av-freeze.md](av-freeze.md) · "
             "[formal-havfreeze-av-freeze.md](formal-havfreeze-av-freeze.md) · "
