@@ -420,6 +420,8 @@
     "nano:am-freeze": "nano_lm/.venv/bin/python nano_lm/src/run_am_freeze.py",
     "nano:an:session": "nano_lm/.venv/bin/python nano_lm/src/run_an_session.py",
     "nano:an-session": "nano_lm/.venv/bin/python nano_lm/src/run_an_session.py",
+    "nano:ao:session": "nano_lm/.venv/bin/python nano_lm/src/run_ao_session.py",
+    "nano:ao-session": "nano_lm/.venv/bin/python nano_lm/src/run_ao_session.py",
     "nano:genedge": "nano_lm/.venv/bin/python nano_lm/src/run_genedge.py",
     "nano:an:genedge": "nano_lm/.venv/bin/python nano_lm/src/run_genedge.py",
     "nano:ctxedge": "nano_lm/.venv/bin/python nano_lm/src/run_ctxedge.py",
