@@ -127,4 +127,4 @@ Contract: `nano_lm/tests/test_as_session.py`.
 - Generative PROMOTE only via later **AS7 H-NANOGEN3** ablated bar ≥5.0.  
 - Forbidden: LOOKUP-as-IQ · peak-as-open-chat · SAFE-as-quality · mini-AGI claim early · Wave AT invent · CTX/SMART/FAST/APP clone without named product hole · bank stuffing.
 
-Next: **AS1–AS6** DONE PROMOTE. **AS7 H-NANOGEN3** — **DONE HOLD** → [formal-hnanogen3-nanogen3.md](formal-hnanogen3-nanogen3.md) (ablated **4.3**). **AS8 AS-DUAL-HITL** — **DONE PROMOTE** → [wave-as-dual-hitl.md](wave-as-dual-hitl.md) (product pass · gen locked). Next: **AS9 AS-REPORT**.
+Next: **AS1–AS6** DONE PROMOTE. **AS7 H-NANOGEN3** — **DONE HOLD** → [formal-hnanogen3-nanogen3.md](formal-hnanogen3-nanogen3.md) (ablated **4.3**). **AS8 AS-DUAL-HITL** — **DONE PROMOTE** → [wave-as-dual-hitl.md](wave-as-dual-hitl.md). **AS9 AS-REPORT** — **DONE PROMOTE** → [wave-as-summary.md](wave-as-summary.md) · [paper-lab-wave-as.md](paper-lab-wave-as.md). Next: **AS10 AS-FREEZE**.

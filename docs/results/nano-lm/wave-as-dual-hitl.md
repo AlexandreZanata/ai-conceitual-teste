@@ -57,4 +57,4 @@ npm run nano:z:ask -- --wrap --question "Write a short Python function named add
 | Product PROMOTE with gen locked | Generative unlock without AS7 |
 | Mode-visible LOOKUP apps | LOOKUP-as-gen-IQ · Wave AT invent |
 
-Next: **AS9 AS-REPORT** — public summary + paper-lab.
+Next: **AS9 AS-REPORT** — **DONE PROMOTE** → [wave-as-summary.md](wave-as-summary.md) · [paper-lab-wave-as.md](paper-lab-wave-as.md). Next: **AS10 AS-FREEZE**.
