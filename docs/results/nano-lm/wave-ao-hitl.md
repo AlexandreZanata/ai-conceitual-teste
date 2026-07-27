@@ -74,4 +74,4 @@ npm run nano:test && npm run verify
 - Trials: `AO-FINAL-LOOKUP-HITL-01…10` · `AO-FINAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ao_hitl.py`
 
-Next: **AO7 AO-REPORT** — **DONE PROMOTE** → [wave-ao-summary.md](wave-ao-summary.md) · [paper-lab-wave-ao.md](paper-lab-wave-ao.md). **AO8 AO-FREEZE** next.
+Next: **AO7 AO-REPORT** — **DONE PROMOTE** → [wave-ao-summary.md](wave-ao-summary.md) · [paper-lab-wave-ao.md](paper-lab-wave-ao.md). **AO8 AO-FREEZE** — **DONE PROMOTE** → [ao-freeze.md](ao-freeze.md) · [formal-haofreeze-ao-freeze.md](formal-haofreeze-ao-freeze.md). Do **not** invent Wave AP.

@@ -435,6 +435,8 @@
     "nano:ao:hitl": "nano_lm/.venv/bin/python nano_lm/src/run_ao_hitl.py",
     "nano:ao:report": "nano_lm/.venv/bin/python nano_lm/src/run_ao_report.py",
     "nano:ao-report": "nano_lm/.venv/bin/python nano_lm/src/run_ao_report.py",
+    "nano:ao:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ao_freeze.py",
+    "nano:ao-freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ao_freeze.py",
     "nano:genedge": "nano_lm/.venv/bin/python nano_lm/src/run_genedge.py",
     "nano:an:genedge": "nano_lm/.venv/bin/python nano_lm/src/run_genedge.py",
     "nano:ctxedge": "nano_lm/.venv/bin/python nano_lm/src/run_ctxedge.py",
