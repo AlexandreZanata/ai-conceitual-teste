@@ -77,4 +77,4 @@ npm run nano:at:session
 SAFE note: SAFE / ADVSAFE false-hit score ≠ answer quality; SAFE = no wrong gold only (anti-FP)  
 Anti-FP: LOOKUP|PEAK|DECODE|ABSTAIN labeled; never LOOKUP-as-IQ; never peak-as-open-chat; SAFE≠quality; generative bar = AT3 only; no vanity re-SEMFIX/ADVSAFE unless PRODREG fails; no Wave AU invent
 
-Next: **AT2 H-SHIPAPP** — human demo/apps always show mode.
+Next: **AT2 H-SHIPAPP** — **DONE PROMOTE** → [formal-hshipapp-shipapp.md](formal-hshipapp-shipapp.md). **AT3 H-NANOGEN4** — ablated DECODE ≥ **5.0**.

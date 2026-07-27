@@ -465,6 +465,8 @@
     "nano:at-session": "nano_lm/.venv/bin/python nano_lm/src/run_at_session.py",
     "nano:prodreg": "nano_lm/.venv/bin/python nano_lm/src/run_prodreg.py",
     "nano:at:prodreg": "nano_lm/.venv/bin/python nano_lm/src/run_prodreg.py",
+    "nano:shipapp": "nano_lm/.venv/bin/python nano_lm/src/run_shipapp.py",
+    "nano:at:shipapp": "nano_lm/.venv/bin/python nano_lm/src/run_shipapp.py",
     "nano:askabstain": "nano_lm/.venv/bin/python nano_lm/src/run_askabstain.py",
     "nano:as:askabstain": "nano_lm/.venv/bin/python nano_lm/src/run_askabstain.py",
     "nano:as-askabstain": "nano_lm/.venv/bin/python nano_lm/src/run_askabstain.py",
