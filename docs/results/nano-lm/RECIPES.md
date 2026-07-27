@@ -177,6 +177,7 @@
 | Wave AR4 H-ADVREG | [formal-hadvreg-advreg.md](formal-hadvreg-advreg.md) **KILL** (`npm run nano:advreg`) — FH 2/20 near-miss · SAFE≠quality documented |
 | Wave AR5 H-NANOGEN2 | [formal-hnanogen2-nanogen2.md](formal-hnanogen2-nanogen2.md) **HOLD** (`npm run nano:nanogen2`) — ablated 4.3 < 5.0 · beats NANOGEN 4.0 · peak/bank compare |
 | Wave AR6 AR-DUAL-HITL | [wave-ar-dual-hitl.md](wave-ar-dual-hitl.md) **HOLD** (`npm run nano:ar:dual-hitl`) — core pass · soft PARAEXT/ADVREG · gen locked |
+| Wave AR7 AR-REPORT | [wave-ar-summary.md](wave-ar-summary.md) · [paper-lab-wave-ar.md](paper-lab-wave-ar.md) **PROMOTE** (`npm run nano:ar:report`) — anti-FP · real-eval |
 | Wave AG1 H-ANTIFP | [formal-hantifp-antifp.md](formal-hantifp-antifp.md) **PROMOTE** (`npm run nano:antifp`) — LOOKUP≠gen IQ; dual-arm telemetry |
 | Wave AG2 H-CTXREAL | [formal-hctxreal-ctxreal.md](formal-hctxreal-ctxreal.md) **PROMOTE** (`npm run nano:ctxreal`) — quad-doc K=9; L_eff↑ vs CTXULTRA |
 | Wave AG3 H-SMARTREAL | [formal-hsmartreal-smartreal.md](formal-hsmartreal-smartreal.md) **HOLD** (`npm run nano:smartreal`) — cite 10/10; gen 4.0 &lt;5 |
