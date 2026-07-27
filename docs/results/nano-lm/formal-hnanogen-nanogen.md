@@ -51,4 +51,4 @@ npm run nano:z:ask -- --question "Human rewrite: make a small Python function ad
 | Peak compare labeled | Peak-as-open-chat |
 | PROMOTE only ablated≥5 | Wave AR invent |
 
-Next: **AQ7 AQ-PRODUCT-HITL** — final product verify.
+Next: **AQ7 AQ-PRODUCT-HITL** — **DONE PROMOTE** → [wave-aq-product-hitl.md](wave-aq-product-hitl.md).

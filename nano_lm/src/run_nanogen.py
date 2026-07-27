@@ -220,7 +220,7 @@ def _write_public(*, decision: str, stats: dict[str, Any]) -> None:
             "| Peak compare labeled | Peak-as-open-chat |",
             "| PROMOTE only ablated≥5 | Wave AR invent |",
             "",
-            "Next: **AQ7 AQ-PRODUCT-HITL** — final product verify.",
+            "Next: **AQ7 AQ-PRODUCT-HITL** — **DONE PROMOTE** → [wave-aq-product-hitl.md](wave-aq-product-hitl.md).",
             "",
         ]
     )
