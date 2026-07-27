@@ -59,7 +59,7 @@ Chase **smarter GENERATE** on AN0 with **peak ablation** + **stricter gen label*
 2. Peak ablation proves AM-style peak lift is **extractive**, not generative IQ.  
 3. Ablated gen **&lt; 5.0** under honest Cursor → **HOLD** per §3 AN1.  
 4. Ship claim remains **AF packaged stack** (+ optional peak path, labeled).  
-5. Optional **AN1b H-CAPCHECK** skipped (size hypothesis unused) → next **AN2 H-CTXEDGE**.
+5. Optional **AN1b H-CAPCHECK** skipped (size hypothesis unused) → next **AN2 H-CTXEDGE** — **DONE PROMOTE**.
 
 ## Reproduce
 
@@ -76,4 +76,4 @@ npm run nano:test && npm run verify
 - Trials: `AN-GENEDGE-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_genedge.py`
 
-Next: **AN2 H-CTXEDGE** — longer usable ctx beyond CTXNEXT.
+Next: **AN2 H-CTXEDGE** — **DONE PROMOTE** → [formal-hctxedge-ctxedge.md](formal-hctxedge-ctxedge.md). Next **AN3 H-SMARTEDGE**.
