@@ -83,4 +83,4 @@ npm run nano:aw:session
 SAFE note: SAFE / ADVSAFE false-hit score ≠ answer quality; SAFE = no wrong gold only (anti-FP); gold-substring / gibberish-tail / truncate-to-span ≠ generative PROMOTE  
 Anti-FP: LOOKUP|PEAK|DECODE|ABSTAIN labeled; never LOOKUP-as-IQ; never peak-as-open-chat; SAFE≠quality; gold-substring≠gen; truncate-to-span≠gen IQ; DECODE gibberish≠content_ok; eval path = prod ask path; generative bar = AW3 only; no vanity re-SEMFIX/ADVSAFE unless PRODKEEP fails; no Wave AX invent; no CTX/SMART/FAST clone; no NANOGEN7 = NANOGEN6+rename; TAC ≠ refuse-or-continue clone
 
-Next: **AW2 H-SHIPKEEP** — ship/demo mode+content honesty.
+Next: **AW2 H-SHIPKEEP** — **DONE PROMOTE** (`npm run nano:shipkeep`) · next **AW3 H-NANOGEN7**.
