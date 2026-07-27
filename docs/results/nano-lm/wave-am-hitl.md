@@ -74,5 +74,5 @@ npm run nano:test && npm run verify
 - Trials: `AM-FINAL-LOOKUP-HITL-01…10` · `AM-FINAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_am_hitl.py`
 
-Next: **AM8 AM-FREEZE** — lock; no Wave AN invent.  
-Report: [wave-am-summary.md](wave-am-summary.md) · [paper-lab-wave-am.md](paper-lab-wave-am.md) (**AM7 PROMOTE**).
+Next: Wave AM **COMPLETE + FROZEN** — [am-freeze.md](am-freeze.md) · [formal-hamfreeze-am-freeze.md](formal-hamfreeze-am-freeze.md). Do **not** invent Wave AN.  
+Report: [wave-am-summary.md](wave-am-summary.md) · [paper-lab-wave-am.md](paper-lab-wave-am.md).

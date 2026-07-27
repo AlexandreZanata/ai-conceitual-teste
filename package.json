@@ -416,6 +416,8 @@
     "nano:am-hitl": "nano_lm/.venv/bin/python nano_lm/src/run_am_hitl.py",
     "nano:am:report": "nano_lm/.venv/bin/python nano_lm/src/run_am_report.py",
     "nano:am-report": "nano_lm/.venv/bin/python nano_lm/src/run_am_report.py",
+    "nano:am:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_am_freeze.py",
+    "nano:am-freeze": "nano_lm/.venv/bin/python nano_lm/src/run_am_freeze.py",
     "nano:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:aj:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:fastpeak": "nano_lm/.venv/bin/python nano_lm/src/run_fastpeak.py",
