@@ -70,4 +70,4 @@ npm run nano:test && npm run verify
 - Trials: `AP-CTXBASE-LOOKUP-HITL-01…10` · `AP-CTXBASE-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ctxbase.py`
 
-Next: **AP3 H-SMARTBASE** — smarter cite+answer; kill SEMWRAP FPs.
+Next: **AP3 H-SMARTBASE** — **DONE PROMOTE** → [formal-hsmartbase-smartbase.md](formal-hsmartbase-smartbase.md). Next **AP4 H-FASTBASE**.
