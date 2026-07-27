@@ -62,4 +62,4 @@ Contract: `nano_lm/tests/test_ap_session.py`.
 - Default ship claim until proven otherwise still **AF packaged stack**.  
 - Forbidden: QI · STREAM · KVCACHE-Q · GENCACHE · MIXD · GPFB-K=2 · naive CTX · ZPREF · invent Wave AQ · PROMOTE LOOKUP-only as generative IQ.
 
-Next: **AP1 H-GENBASE** — **DONE HOLD** → [formal-hgenbase-genbase.md](formal-hgenbase-genbase.md). Next **AP2 H-CTXBASE**.
+Next: **AP1 H-GENBASE** — **DONE HOLD** → [formal-hgenbase-genbase.md](formal-hgenbase-genbase.md). **AP2 H-CTXBASE** — **DONE PROMOTE** → [formal-hctxbase-ctxbase.md](formal-hctxbase-ctxbase.md). Next **AP3 H-SMARTBASE**.

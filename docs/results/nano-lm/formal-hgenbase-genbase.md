@@ -59,7 +59,7 @@ Chase **smarter GENERATE** on AP0 with **peak ablation** + **stricter gen label*
 2. Ablated true-gen mean **4.0** &lt; 5 → **HOLD** (same honesty bar as GENCORE/GENEDGE).  
 3. Peak compare mean **8.2** (9× exact gold @9 · `..` soft-scored) — extractive lift only; not smarter LM PROMOTE.  
 4. Ship claim remains **AF packaged stack**.  
-5. Optional **AP1b H-CAPCHECK** skipped (size hypothesis unused) → next **AP2 H-CTXBASE**.
+5. Optional **AP1b H-CAPCHECK** skipped (size hypothesis unused) → next **AP2 H-CTXBASE** (**DONE PROMOTE**).
 
 ## Reproduce
 
@@ -76,4 +76,4 @@ npm run nano:test && npm run verify
 - Trials: `AP-GENBASE-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_genbase.py`
 
-Next: **AP2 H-CTXBASE** — longer usable ctx beyond CTXCORE.
+Next: **AP2 H-CTXBASE** — **DONE PROMOTE** → [formal-hctxbase-ctxbase.md](formal-hctxbase-ctxbase.md). Next **AP3 H-SMARTBASE**.

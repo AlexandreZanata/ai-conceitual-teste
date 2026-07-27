@@ -426,6 +426,8 @@
     "nano:ao:gencore": "nano_lm/.venv/bin/python nano_lm/src/run_gencore.py",
     "nano:genbase": "nano_lm/.venv/bin/python nano_lm/src/run_genbase.py",
     "nano:ap:genbase": "nano_lm/.venv/bin/python nano_lm/src/run_genbase.py",
+    "nano:ctxbase": "nano_lm/.venv/bin/python nano_lm/src/run_ctxbase.py",
+    "nano:ap:ctxbase": "nano_lm/.venv/bin/python nano_lm/src/run_ctxbase.py",
     "nano:ctxcore": "nano_lm/.venv/bin/python nano_lm/src/run_ctxcore.py",
     "nano:ao:ctxcore": "nano_lm/.venv/bin/python nano_lm/src/run_ctxcore.py",
     "nano:smartcore": "nano_lm/.venv/bin/python nano_lm/src/run_smartcore.py",
