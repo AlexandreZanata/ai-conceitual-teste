@@ -70,7 +70,7 @@ npm run nano:test && npm run verify
 
 ---
 
-- **Wave AW ACTIVE** — AW0 [SESSION PROMOTE](docs/results/nano-lm/wave-aw-session.md) (`npm run nano:aw:session`) · AW1 [H-PRODKEEP PROMOTE](docs/results/nano-lm/formal-hprodkeep-prodkeep.md) (`npm run nano:prodkeep`) · AW2 [H-SHIPKEEP PROMOTE](docs/results/nano-lm/formal-hshipkeep-shipkeep.md) (`npm run nano:shipkeep`) · AW3 [H-NANOGEN7 HOLD](docs/results/nano-lm/formal-hnanogen7-nanogen7.md) (`npm run nano:nanogen7`) · AW4 [AW-REAL-EVAL PROMOTE](docs/results/nano-lm/wave-aw-real-eval.md) (`npm run nano:aw:real-eval`) — battery 8/8 · gen locked (AW3 HOLD); next AW5 AW-REPORT; ship remains **AF + AQ + AS trust + STRICT ablated DECODE**; ≤5M stays
+- **Wave AW ACTIVE** — AW0 [SESSION PROMOTE](docs/results/nano-lm/wave-aw-session.md) (`npm run nano:aw:session`) · AW1 [H-PRODKEEP PROMOTE](docs/results/nano-lm/formal-hprodkeep-prodkeep.md) (`npm run nano:prodkeep`) · AW2 [H-SHIPKEEP PROMOTE](docs/results/nano-lm/formal-hshipkeep-shipkeep.md) (`npm run nano:shipkeep`) · AW3 [H-NANOGEN7 HOLD](docs/results/nano-lm/formal-hnanogen7-nanogen7.md) (`npm run nano:nanogen7`) · AW4 [AW-REAL-EVAL PROMOTE](docs/results/nano-lm/wave-aw-real-eval.md) (`npm run nano:aw:real-eval`) — battery 8/8 · AW5 [AW-REPORT PROMOTE](docs/results/nano-lm/wave-aw-summary.md) (`npm run nano:aw:report`) · [paper-lab-wave-aw.md](docs/results/nano-lm/paper-lab-wave-aw.md); next AW6 AW-FREEZE; ship remains **AF + AQ + AS trust + STRICT ablated DECODE**; ≤5M stays
 ## Quality gates (Lefthook)
 
 Every commit: file ≤200, function ≤80, cyclomatic ≤10, lint 0/0, system 0 errors → `npm run verify`.

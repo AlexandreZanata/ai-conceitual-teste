@@ -32,7 +32,7 @@ One idea: teacher-anchored novel continue (TAC) — DECODE may emit only tokens 
 3. Live result: true_continue=0/10 · teacher_topk_pass=0/10 · span_fallback=3/10 → **honest HOLD** (no fake gen claim).  
 4. Span-fallback labeled **PEAK** (not DECODE gen credit).  
 5. Generative / mini-AGI claim stays locked until true_continue_ablated PROMOTE.  
-6. Next: **AW4 AW-REAL-EVAL** — **DONE PROMOTE** (`npm run nano:aw:real-eval`) · next **AW5 AW-REPORT**.
+6. Next: **AW4 AW-REAL-EVAL** — **DONE PROMOTE** (`npm run nano:aw:real-eval`) · **AW5 AW-REPORT** — **DONE PROMOTE** (`npm run nano:aw:report`) · next **AW6 AW-FREEZE**.
 
 ## Reproduce
 
