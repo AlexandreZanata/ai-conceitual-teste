@@ -459,6 +459,8 @@
     "nano:aq-session": "nano_lm/.venv/bin/python nano_lm/src/run_aq_session.py",
     "nano:ar:session": "nano_lm/.venv/bin/python nano_lm/src/run_ar_session.py",
     "nano:ar-session": "nano_lm/.venv/bin/python nano_lm/src/run_ar_session.py",
+    "nano:as:session": "nano_lm/.venv/bin/python nano_lm/src/run_as_session.py",
+    "nano:as-session": "nano_lm/.venv/bin/python nano_lm/src/run_as_session.py",
     "nano:abstain": "nano_lm/.venv/bin/python nano_lm/src/run_abstain.py",
     "nano:ar:abstain": "nano_lm/.venv/bin/python nano_lm/src/run_abstain.py",
     "nano:ar-abstain": "nano_lm/.venv/bin/python nano_lm/src/run_abstain.py",
