@@ -109,7 +109,8 @@
 | **H-ASKABSTAIN** | Wire ABSTAIN into default `nano:z:ask` / apps; AS1 **PROMOTE** (OOD abstain 1.0 · FH 0) — [formal-haskabstain-askabstain.md](results/nano-lm/formal-haskabstain-askabstain.md) |
 | **H-SEMFIX** | SEMWRAP negation/contrast/margin; AS2 **PROMOTE** (ADVREG-01/05 FH 0) — [formal-hsemfix-semfix.md](results/nano-lm/formal-hsemfix-semfix.md) |
 | **H-ADVSAFE** | Adversary regression after SEMFIX; AS3 **PROMOTE** (ADVSAFE-20 FH **0**/20 · SAFE≠quality) — [formal-hadvsafe-advsafe.md](results/nano-lm/formal-hadvsafe-advsafe.md) |
-| **H-PARAEXT2** | External/human paraphrase after SEMFIX; hit ≥ **0.70** · FH 0 (AS4) |
+| **H-PARAEXT2** | External paraphrase after SEMFIX; AS4 **PROMOTE** (hit **0.80** · FH 0) — [formal-hparaext2-paraext2.md](results/nano-lm/formal-hparaext2-paraext2.md) |
+| **H-METRICS** | Latency p50/p99 triad(+ABSTAIN) + KB coverage refresh (AS5) |
 | **H-PARAEXT2** | External paraphrase hit ≥0.70 after SEMFIX (AS4) |
 | **H-NANOGEN3** | Ablated DECODE ≥5.0 vs NANOGEN2 4.3 (AS7 generative gate) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
