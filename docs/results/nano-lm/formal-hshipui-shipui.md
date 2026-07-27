@@ -50,4 +50,4 @@ npm run nano:z:ask -- --semwrap --question "Which nation hosted the 2016 Summer 
 | Mode banner on default ask | Runner-only abstain theater |
 | Four-arm smoke 4/4 | Peak-as-open-chat · mini-AGI claim |
 
-Next: **AS7 H-NANOGEN3** — ablated DECODE ≥ **5.0**.
+Next: **AS7 H-NANOGEN3** — **DONE HOLD** → [formal-hnanogen3-nanogen3.md](formal-hnanogen3-nanogen3.md) (ablated **4.3**).
