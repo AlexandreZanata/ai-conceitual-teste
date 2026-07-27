@@ -135,6 +135,34 @@ def _decode_one(
     }
 
 
+def _finalize_ask_payload(
+    payload: dict[str, Any], *, abstain: bool
+) -> dict[str, Any]:
+    """
+    GIVEN raw ask payload
+    WHEN optional refuse-junk gate is on (default product path)
+    THEN ABSTAIN/NO_ANSWER sticks with visible modeui_line; else MODEUI attach.
+    """
+    out = dict(payload)
+    if abstain:
+        from abstain_ops import apply_abstain
+
+        out = apply_abstain(out)
+    if bool(out.get("abstained")) or str(out.get("product_mode", "")) == "ABSTAIN":
+        from modeui_ops import format_modeui_line
+
+        raw = str(out.get("mode", "") or "")
+        out["product_mode"] = "ABSTAIN"
+        out["modeui_line"] = format_modeui_line(
+            product_mode="ABSTAIN",
+            wall_ms=float(out.get("wall_ms") or 0.0),
+            n_new=int(out.get("n_new") or 0),
+            raw_mode=raw,
+        )
+        return out
+    return attach_modeui(out)
+
+
 def ask_once(
     *,
     question: str,
@@ -146,11 +174,13 @@ def ask_once(
     bank_path: Path | None = None,
     curated_root: Path | None = None,
     ask_cache: Any | None = None,
+    abstain: bool = True,
 ) -> dict[str, Any]:
     """
     GIVEN exported champion + question
     WHEN decoding QT∘EARLY n=1 (optional wrap / SEMWRAP / ASKFAST)
-    THEN return completion + wall_ms + recipe_id (no teacher self-grade).
+    THEN return completion + wall_ms + recipe_id; junk DECODE → ABSTAIN
+         on the default path (abstain=True).
     """
     return ask_many(
         questions=[question],
@@ -162,6 +192,7 @@ def ask_once(
         bank_path=bank_path,
         curated_root=curated_root,
         ask_cache=ask_cache,
+        abstain=abstain,
     )[0]
 
 
@@ -223,11 +254,12 @@ def ask_many(
     bank_path: Path | None = None,
     curated_root: Path | None = None,
     ask_cache: Any | None = None,
+    abstain: bool = True,
 ) -> list[dict[str, Any]]:
     """
     GIVEN exported champion + N questions
     WHEN one CUDA load (ASKFAST: SEMWRAP + QT + completion cache)
-    THEN return N payloads in order (no teacher self-grade).
+    THEN return N payloads in order; default path applies refuse-junk ABSTAIN.
     """
     if not questions:
         raise ValueError("questions must be non-empty")
@@ -270,7 +302,9 @@ def ask_many(
             for q, p in zip(questions, payloads, strict=True):
                 if not p.get("cache_hit"):
                     cache.put(q, p)
-        return [attach_modeui(dict(p)) for p in payloads]  # type: ignore[misc]
+        return [
+            _finalize_ask_payload(dict(p), abstain=abstain) for p in payloads
+        ]
 
     device = resolve_device(True)
     if device.type != "cuda":
@@ -302,7 +336,7 @@ def ask_many(
         for q, p in zip(questions, payloads, strict=True):
             if not p.get("cache_hit"):
                 cache.put(q, p)
-    return [attach_modeui(dict(p)) for p in payloads]  # type: ignore[misc]
+    return [_finalize_ask_payload(dict(p), abstain=abstain) for p in payloads]
 
 
 def main() -> int:

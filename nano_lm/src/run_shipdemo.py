@@ -81,6 +81,7 @@ def _smoke_decode(*, root: Path, bank: Path) -> dict[str, Any]:
         wrap=False,
         bank_path=bank,
         curated_root=_CURATED,
+        abstain=False,
     )
     row = attach_shipdemo(dict(payload))
     row["arm"] = "DECODE"
@@ -88,6 +89,7 @@ def _smoke_decode(*, root: Path, bank: Path) -> dict[str, Any]:
 
 
 def _smoke_abstain(*, root: Path, bank: Path) -> dict[str, Any]:
+    # Default ask path already applies refuse-junk (H-ASKABSTAIN).
     payload = ask_once(
         question=_OOD,
         root=root,
