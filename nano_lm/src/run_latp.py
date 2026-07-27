@@ -231,7 +231,8 @@ def _write_public(
             "| Honest PEAK regress note | Silent regress vs FASTBASE hot |",
             "| DECODE wall>0 · n_new>0 | Peak-as-open-chat |",
             "",
-            "Next: **AQ4 H-KBCOV** — KB coverage % + explicit hole list.",
+            "Next: **AQ4 H-KBCOV** — **DONE PROMOTE** → "
+            "[formal-hkbcov-kbcov.md](formal-hkbcov-kbcov.md).",
             "",
         ]
     )

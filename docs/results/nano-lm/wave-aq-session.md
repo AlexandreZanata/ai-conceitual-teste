@@ -114,4 +114,4 @@ Contract: `nano_lm/tests/test_aq_session.py`.
 - Generative PROMOTE only via later **AQ6 H-NANOGEN** ablated bar.  
 - Forbidden: LOOKUP-as-IQ · peak-as-open-chat · Wave AR invent · CTX/SMART/FAST/APP clone without named product hole.
 
-Next: **AQ1 H-PARAHIT** — **DONE PROMOTE** → [formal-hparahit-parahit.md](formal-hparahit-parahit.md). **AQ2 H-ADVFP** — **DONE PROMOTE** → [formal-hadvfp-advfp.md](formal-hadvfp-advfp.md). **AQ3 H-LATP** — **DONE PROMOTE** → [formal-hlatp-latp.md](formal-hlatp-latp.md). Next: **AQ4 H-KBCOV**.
+Next: **AQ1 H-PARAHIT** — **DONE PROMOTE** → [formal-hparahit-parahit.md](formal-hparahit-parahit.md). **AQ2 H-ADVFP** — **DONE PROMOTE** → [formal-hadvfp-advfp.md](formal-hadvfp-advfp.md). **AQ3 H-LATP** — **DONE PROMOTE** → [formal-hlatp-latp.md](formal-hlatp-latp.md). **AQ4 H-KBCOV** — **DONE PROMOTE** → [formal-hkbcov-kbcov.md](formal-hkbcov-kbcov.md). Next: **AQ5 H-MODEUI**.
