@@ -104,6 +104,7 @@
 | **H-NANOGEN2** | Ablated DECODE lift vs H-NANOGEN 4.0; AR5 **HOLD** (ablated 4.3 < 5.0 · peak/bank compare only) |
 | **AR-DUAL-HITL** | Final product+gen HITL; AR6 **HOLD** (core ABSTAIN/SHIPDEMO/apps pass · soft PARAEXT/ADVREG · gen locked) |
 | **AR-REPORT** | Public Wave AR closeout + paper-lab; AR7 **PROMOTE** — [wave-ar-summary.md](results/nano-lm/wave-ar-summary.md) |
+| **AR-FREEZE** | Lock Wave AR outcomes; no Wave AS invent; **PROMOTE** — [ar-freeze.md](results/nano-lm/ar-freeze.md) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

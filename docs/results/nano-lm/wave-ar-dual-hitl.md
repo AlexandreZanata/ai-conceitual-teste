@@ -56,4 +56,4 @@ npm run nano:z:ask -- --wrap --question "Write a short Python function named add
 | Product HOLD with soft deepen defects | Generative unlock without AR5 |
 | Mode-visible LOOKUP apps | LOOKUP-as-gen-IQ · Wave AS invent |
 
-Next: **AR7 AR-REPORT** — **DONE PROMOTE** → [wave-ar-summary.md](wave-ar-summary.md) · [paper-lab-wave-ar.md](paper-lab-wave-ar.md). Next **AR8 AR-FREEZE**.
+Next: **AR7 AR-REPORT** — **DONE PROMOTE** → [wave-ar-summary.md](wave-ar-summary.md) · [paper-lab-wave-ar.md](paper-lab-wave-ar.md). **AR8 AR-FREEZE** — **DONE PROMOTE** → [ar-freeze.md](ar-freeze.md). Do not invent Wave AS.

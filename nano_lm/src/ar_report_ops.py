@@ -92,7 +92,7 @@ AR_SCOREBOARD: tuple[dict[str, Any], ...] = (
         "id": "AR-FREEZE",
         "metric": "lock outcomes",
         "decision": "PROMOTE",
-        "note": "pending runner · no Wave AS invent",
+        "note": "COMPLETE+FROZEN · no Wave AS invent",
     },
 )
 
@@ -204,16 +204,17 @@ def antifp_section_ok(text: str) -> bool:
 def render_wave_ar_summary() -> str:
     lines = [
         "# Wave AR — Product Science deepen + Nano Generative "
-        "(**RESEARCH_COMPLETE · pending FREEZE**)",
+        "(**COMPLETE + FROZEN**)",
         "",
         "> Lab: `.local/pesquisa.md` §5 · Paper-lab: "
         "[paper-lab-wave-ar.md](paper-lab-wave-ar.md) · "
         "HITL: [wave-ar-dual-hitl.md](wave-ar-dual-hitl.md) · "
-        "Freeze: [ar-freeze.md](ar-freeze.md)  ",
+        "Freeze: [ar-freeze.md](ar-freeze.md) · "
+        "[formal-harfreeze-ar-freeze.md](formal-harfreeze-ar-freeze.md)  ",
         "> Parent: Wave AQ **AQ-FREEZE** reopen · Ship claim: "
         f"**{SHIP_CLAIM}**",
         "",
-        "**Status: RESEARCH_COMPLETE (pending AR-FREEZE)** · Thesis: **"
+        "**Status: COMPLETE + FROZEN** · Thesis: **"
         + AR_THESIS
         + ".**",
         "",
@@ -317,9 +318,10 @@ def render_paper_lab_wave_ar() -> str:
             "",
             "> Companion to [wave-ar-summary.md](wave-ar-summary.md). "
             "English lab note.  ",
-            "> **Status: RESEARCH_COMPLETE (pending AR-FREEZE)** · HITL: "
+            "> **Status: COMPLETE + FROZEN** · HITL: "
             "[wave-ar-dual-hitl.md](wave-ar-dual-hitl.md) · "
             "Freeze: [ar-freeze.md](ar-freeze.md) · "
+            "[formal-harfreeze-ar-freeze.md](formal-harfreeze-ar-freeze.md) · "
             "Parent: [aq-freeze.md](aq-freeze.md) · "
             f"Ship: **{SHIP_CLAIM}**",
             "",
@@ -349,7 +351,7 @@ def render_paper_lab_wave_ar() -> str:
             "| H-NANOGEN2 | Ablated 4.3 → HOLD; peak/bank compare only |",
             "| AR-DUAL-HITL | Core pass · soft deepen → HOLD; gen locked |",
             "| AR-REPORT | Summary + paper-lab + anti-FP → PROMOTE |",
-            "| AR-FREEZE | Pending — no Wave AS invent |",
+            "| AR-FREEZE | Outcomes locked — no Wave AS invent |",
             "",
             "## Anti-FP takeaway",
             "",

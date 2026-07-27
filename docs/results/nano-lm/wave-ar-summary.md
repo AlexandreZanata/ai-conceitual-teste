@@ -1,9 +1,9 @@
-# Wave AR — Product Science deepen + Nano Generative (**RESEARCH_COMPLETE · pending FREEZE**)
+# Wave AR — Product Science deepen + Nano Generative (**COMPLETE + FROZEN**)
 
-> Lab: `.local/pesquisa.md` §5 · Paper-lab: [paper-lab-wave-ar.md](paper-lab-wave-ar.md) · HITL: [wave-ar-dual-hitl.md](wave-ar-dual-hitl.md) · Freeze: [ar-freeze.md](ar-freeze.md)  
+> Lab: `.local/pesquisa.md` §5 · Paper-lab: [paper-lab-wave-ar.md](paper-lab-wave-ar.md) · HITL: [wave-ar-dual-hitl.md](wave-ar-dual-hitl.md) · Freeze: [ar-freeze.md](ar-freeze.md) · [formal-harfreeze-ar-freeze.md](formal-harfreeze-ar-freeze.md)  
 > Parent: Wave AQ **AQ-FREEZE** reopen · Ship claim: **AF packaged stack + AQ product layer — not open chat LM**
 
-**Status: RESEARCH_COMPLETE (pending AR-FREEZE)** · Thesis: **Wave AR product deepen on AQ: ABSTAIN·SHIPDEMO PROMOTE; PARAEXT HOLD · ADVREG KILL · NANOGEN2 HOLD (ablated 4.3 · peak_only); AR-DUAL-HITL HOLD (soft deepen); generative/open-chat/mini-AGI locked; ship AF packaged stack + AQ product layer — not open chat LM.**
+**Status: COMPLETE + FROZEN** · Thesis: **Wave AR product deepen on AQ: ABSTAIN·SHIPDEMO PROMOTE; PARAEXT HOLD · ADVREG KILL · NANOGEN2 HOLD (ablated 4.3 · peak_only); AR-DUAL-HITL HOLD (soft deepen); generative/open-chat/mini-AGI locked; ship AF packaged stack + AQ product layer — not open chat LM.**
 
 ## Stage scoreboard (product deepen)
 
@@ -17,7 +17,7 @@
 | AR5 | **H-NANOGEN2** | ablated gen 4.3 | **HOLD** | beats NANOGEN 4.0 · peak/bank compare only |
 | AR6 | **AR-DUAL-HITL** | core pass · soft deepen | **HOLD** | ABSTAIN/SHIPDEMO/apps · PARAEXT/ADVREG soft · gen locked |
 | AR7 | **AR-REPORT** | summary + paper-lab | **PROMOTE** | docs + anti-FP table · real-eval |
-| AR8 | **AR-FREEZE** | lock outcomes | **PROMOTE** | pending runner · no Wave AS invent |
+| AR8 | **AR-FREEZE** | lock outcomes | **PROMOTE** | COMPLETE+FROZEN · no Wave AS invent |
 
 ## Anti-FP evidence (mandatory)
 

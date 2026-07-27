@@ -1,7 +1,7 @@
 # Paper-lab — Wave AR (Product deepen + Nano Generative)
 
 > Companion to [wave-ar-summary.md](wave-ar-summary.md). English lab note.  
-> **Status: RESEARCH_COMPLETE (pending AR-FREEZE)** · HITL: [wave-ar-dual-hitl.md](wave-ar-dual-hitl.md) · Freeze: [ar-freeze.md](ar-freeze.md) · Parent: [aq-freeze.md](aq-freeze.md) · Ship: **AF packaged stack + AQ product layer — not open chat LM**
+> **Status: COMPLETE + FROZEN** · HITL: [wave-ar-dual-hitl.md](wave-ar-dual-hitl.md) · Freeze: [ar-freeze.md](ar-freeze.md) · [formal-harfreeze-ar-freeze.md](formal-harfreeze-ar-freeze.md) · Parent: [aq-freeze.md](aq-freeze.md) · Ship: **AF packaged stack + AQ product layer — not open chat LM**
 
 ## Question
 
@@ -20,7 +20,7 @@ After AQ froze the product layer, can Wave AR **deepen** product honesty (abstai
 | H-NANOGEN2 | Ablated 4.3 → HOLD; peak/bank compare only |
 | AR-DUAL-HITL | Core pass · soft deepen → HOLD; gen locked |
 | AR-REPORT | Summary + paper-lab + anti-FP → PROMOTE |
-| AR-FREEZE | Pending — no Wave AS invent |
+| AR-FREEZE | Outcomes locked — no Wave AS invent |
 
 ## Anti-FP takeaway
 

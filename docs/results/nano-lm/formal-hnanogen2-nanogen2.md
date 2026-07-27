@@ -49,4 +49,4 @@ npm run nano:nanogen
 | Peak/bank compare labeled | Peak/bank-as-open-chat |
 | PROMOTE only ablated≥5 | mini-AGI · Wave AS invent |
 
-Next: **AR6 AR-DUAL-HITL** — **DONE HOLD** → [wave-ar-dual-hitl.md](wave-ar-dual-hitl.md). **AR7 AR-REPORT** — **DONE PROMOTE** → [wave-ar-summary.md](wave-ar-summary.md). Next **AR8 AR-FREEZE**.
+Next: **AR6 AR-DUAL-HITL** — **DONE HOLD** → [wave-ar-dual-hitl.md](wave-ar-dual-hitl.md). **AR7 AR-REPORT** — **DONE PROMOTE** → [wave-ar-summary.md](wave-ar-summary.md). **AR8 AR-FREEZE** — **DONE PROMOTE** → [ar-freeze.md](ar-freeze.md). Do not invent Wave AS.
