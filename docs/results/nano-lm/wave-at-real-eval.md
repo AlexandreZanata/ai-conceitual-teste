@@ -59,4 +59,4 @@ npm run nano:shipapp
 | Product PROMOTE + live battery | LOOKUP-as-IQ · Wave AU invent |
 | Mini-AGI-*inspired* stack shape (post AT4) | GPT-class / frontier chat |
 
-Next: **AT5 AT-REPORT** — public summary + paper-lab.
+Next: **AT5 AT-REPORT** — **DONE PROMOTE** → [wave-at-summary.md](wave-at-summary.md). **AT6 AT-FREEZE** — next.
