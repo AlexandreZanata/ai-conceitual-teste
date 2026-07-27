@@ -62,4 +62,4 @@ npm run nano:z:ask -- --wrap --question "Write a short Python function named add
 | Registry 100% with product holes | Selling curated∩bank as open-world |
 | List PARA gold misses | Expanding bank until HITL theater |
 
-Next: **AQ5 H-MODEUI** — ship/demo UI shows `mode=LOOKUP|PEAK|DECODE`.
+Next: **AQ5 H-MODEUI** — **DONE PROMOTE** → [formal-hmodeui-modeui.md](formal-hmodeui-modeui.md).

@@ -18,6 +18,7 @@ from early_ops import clamp_early_gene
 from eval_student import load_student_ckpt
 from load_model import resolve_device
 from matrix_common import REPO, matrix_cfg, write_json
+from modeui_ops import attach_modeui
 from qt_quant import quantize_student_int8
 from tipd_pair import tune_cpu_threads
 from z_recipe import validate_recipe
@@ -269,7 +270,7 @@ def ask_many(
             for q, p in zip(questions, payloads, strict=True):
                 if not p.get("cache_hit"):
                     cache.put(q, p)
-        return payloads  # type: ignore[misc]
+        return [attach_modeui(dict(p)) for p in payloads]  # type: ignore[misc]
 
     device = resolve_device(True)
     if device.type != "cuda":
@@ -301,7 +302,7 @@ def ask_many(
         for q, p in zip(questions, payloads, strict=True):
             if not p.get("cache_hit"):
                 cache.put(q, p)
-    return payloads  # type: ignore[misc]
+    return [attach_modeui(dict(p)) for p in payloads]  # type: ignore[misc]
 
 
 def main() -> int:

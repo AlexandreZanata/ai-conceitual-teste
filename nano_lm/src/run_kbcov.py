@@ -153,8 +153,8 @@ def _write_public(
             "open-world |",
             "| List PARA gold misses | Expanding bank until HITL theater |",
             "",
-            "Next: **AQ5 H-MODEUI** — ship/demo UI shows "
-            "`mode=LOOKUP|PEAK|DECODE`.",
+            "Next: **AQ5 H-MODEUI** — **DONE PROMOTE** → "
+            "[formal-hmodeui-modeui.md](formal-hmodeui-modeui.md).",
             "",
         ]
     )
