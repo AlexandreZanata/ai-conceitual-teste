@@ -174,6 +174,7 @@
 | Wave AR1 H-ABSTAIN | [formal-habstain-abstain.md](formal-habstain-abstain.md) **PROMOTE** (`npm run nano:abstain`) — OOD abstain 1.0 · FH 0 · modes labeled |
 | Wave AR2 H-SHIPDEMO | [formal-hshipdemo-shipdemo.md](formal-hshipdemo-shipdemo.md) **PROMOTE** (`npm run nano:shipdemo`) — LOOKUP·PEAK·DECODE·ABSTAIN visible |
 | Wave AR3 H-PARAEXT | [formal-hparaext-paraext.md](formal-hparaext-paraext.md) **HOLD** (`npm run nano:paraext`) — hit 0.65 < 0.70 · FH 0 · misses 7/20 |
+| Wave AR4 H-ADVREG | [formal-hadvreg-advreg.md](formal-hadvreg-advreg.md) **KILL** (`npm run nano:advreg`) — FH 2/20 near-miss · SAFE≠quality documented |
 | Wave AG1 H-ANTIFP | [formal-hantifp-antifp.md](formal-hantifp-antifp.md) **PROMOTE** (`npm run nano:antifp`) — LOOKUP≠gen IQ; dual-arm telemetry |
 | Wave AG2 H-CTXREAL | [formal-hctxreal-ctxreal.md](formal-hctxreal-ctxreal.md) **PROMOTE** (`npm run nano:ctxreal`) — quad-doc K=9; L_eff↑ vs CTXULTRA |
 | Wave AG3 H-SMARTREAL | [formal-hsmartreal-smartreal.md](formal-hsmartreal-smartreal.md) **HOLD** (`npm run nano:smartreal`) — cite 10/10; gen 4.0 &lt;5 |

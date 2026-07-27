@@ -100,6 +100,7 @@
 | **H-ABSTAIN** | Refuse junk DECODE (OOD/miss) → `NO_ANSWER` / `mode=ABSTAIN`; AR1 **PROMOTE** (OOD abstain 1.0 · FH 0) |
 | **H-SHIPDEMO** | Ship/demo always shows `LOOKUP\|PEAK\|DECODE\|ABSTAIN`; AR2 **PROMOTE** (4/4 modes visible) |
 | **H-PARAEXT** | External paraphrase SEMWRAP (≠ AQ-PARA); AR3 **HOLD** (hit 0.65 < 0.70 · FH 0) |
+| **H-ADVREG** | Adversary regression (≠ AQ-ADV) + SAFE≠quality; AR4 **KILL** (FH 2/20 near-miss · mean not IQ) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”
