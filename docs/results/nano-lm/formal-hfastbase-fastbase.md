@@ -74,4 +74,4 @@ npm run nano:test && npm run verify
 - Trials: `AP-FASTBASE-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_fastbase.py`
 
-Next: **AP5 H-APPBASE** — real apps + DEPL dual-arm.
+Next: **AP5 H-APPBASE** — **DONE PROMOTE** → [formal-happbase-appbase.md](formal-happbase-appbase.md). Next **AP6 AP-HITL-10**.
