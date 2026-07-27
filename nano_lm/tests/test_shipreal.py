@@ -161,6 +161,22 @@ def test_given_period_decode_when_content_then_fail() -> None:
     assert content_matches_mode(bad) is False
 
 
+def test_given_gibberish_decode_when_content_then_fail() -> None:
+    # GIVEN/WHEN/THEN: AV1 DECODE debt — TinyStories sludge ≠ content_ok
+    bad = _arm(
+        "DECODE",
+        "WRAP_DECODE",
+        completion=(
+            "quickly and which,.Suddenly some \ufffd -So one Suddenly "
+            "funny to at m m\ufffd. an set funny almost wasn really this. "
+            "m everything; really everything\ufffd; some carefully "
+        ),
+        wall=103.0,
+        n_new=64,
+    )
+    assert content_matches_mode(bad) is False
+
+
 def test_given_all_ok_when_decide_then_promote() -> None:
     near = attach_shipreal(
         {

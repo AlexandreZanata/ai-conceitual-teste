@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from typing import Any, Mapping, MutableMapping, Sequence
 
+from abstain_ops import is_junk_decode
 from au_session_ops import AU0_ANTI_FP, AU0_MODES, AU0_SAFE_NOTE, AU0_SHIP_LOCK
 from asksmart_ops import is_period_collapse
 from prodhard_ops import NEAR_MISS_ASK, PEAK_ASK, near_miss_ok, peak_span_usable
@@ -93,12 +94,18 @@ def _lookup_content_ok(completion: str) -> bool:
 
 
 def _decode_content_ok(row: Mapping[str, Any]) -> bool:
-    """DECODE bar: labeled gen telemetry; quality ≠ IQ (NANOGEN5)."""
+    """
+    DECODE bar: usable non-junk text.
+    wall_ms/n_new mandatory but never sufficient (AV1 DECODE content debt).
+    """
     text = str(row.get("completion", "")).strip()
     if not text or text == "NO_ANSWER":
         return False
-    # Period-only collapse is not an answer (must use WRAP_DECODE smoke).
     if is_period_collapse(text):
+        return False
+    if is_junk_decode(text):
+        return False
+    if "\ufffd" in text or "�" in text:
         return False
     if float(row.get("wall_ms") or 0.0) <= 0.0:
         return False
