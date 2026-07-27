@@ -125,6 +125,7 @@
 | **AT-FREEZE** | Lock Wave AT outcomes; no Wave AU without reopen; AT6 **PROMOTE** — [at-freeze.md](results/nano-lm/at-freeze.md) · [formal-hatfreeze-at-freeze.md](results/nano-lm/formal-hatfreeze-at-freeze.md) |
 | **AU0-SESSION** | Freeze product-debt · human-para · NANOGEN5 hyp · strict judge · real-eval; AU0 **PROMOTE** — [wave-au-session.md](results/nano-lm/wave-au-session.md) |
 | **H-PRODHARD** | Close live-audit debts on default ask (near-miss ABSTAIN · human para · PEAK usable); AU1 **PROMOTE** — [formal-hprodhard-prodhard.md](results/nano-lm/formal-hprodhard-prodhard.md) |
+| **H-SHIPREAL** | Human ask/apps/ship-demo modes + content match claim; AU2 **PROMOTE** — [formal-hshipreal-shipreal.md](results/nano-lm/formal-hshipreal-shipreal.md) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”
