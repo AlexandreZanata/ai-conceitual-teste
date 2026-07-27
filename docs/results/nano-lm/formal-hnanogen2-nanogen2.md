@@ -49,4 +49,4 @@ npm run nano:nanogen
 | Peak/bank compare labeled | Peak/bank-as-open-chat |
 | PROMOTE only ablated≥5 | mini-AGI · Wave AS invent |
 
-Next: **AR6 AR-DUAL-HITL** — product pillars + gen gate status.
+Next: **AR6 AR-DUAL-HITL** — **DONE HOLD** → [wave-ar-dual-hitl.md](wave-ar-dual-hitl.md). Next **AR7 AR-REPORT**.

@@ -56,4 +56,4 @@ npm run nano:z:ask -- --semwrap --question "<AR-EXT paraphrase>"
 | Honest HOLD when hit_rate < bar | AQ0 paraphrase replay |
 | false-hit 0 as hard law | Bank expand until theater |
 
-Next: **AR4 H-ADVREG** — **DONE KILL** → [formal-hadvreg-advreg.md](formal-hadvreg-advreg.md). Next **AR5 H-NANOGEN2**.
+Next: **AR4 H-ADVREG** — **DONE KILL** → [formal-hadvreg-advreg.md](formal-hadvreg-advreg.md). **AR6 AR-DUAL-HITL** — **DONE HOLD** → [wave-ar-dual-hitl.md](wave-ar-dual-hitl.md).
