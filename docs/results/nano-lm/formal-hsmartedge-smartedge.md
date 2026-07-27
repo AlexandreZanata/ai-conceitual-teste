@@ -76,4 +76,4 @@ npm run nano:test && npm run verify
 - Trials: `AN-SMARTEDGE-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_smartedge.py`
 
-Next: **AN4 H-FASTEDGE** — faster than FASTNEXT at quality floor.
+Next: **AN4 H-FASTEDGE** — **DONE PROMOTE** → [formal-hfastedge-fastedge.md](formal-hfastedge-fastedge.md). Next **AN5 H-APPEDGE**.
