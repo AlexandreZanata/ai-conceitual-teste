@@ -99,6 +99,7 @@
 | **H-SERVEALIGN** | QPFB2+BEAMKV open decode HITL; AA2 **HOLD** (beats Z1; not product bar) |
 | **H-ABSTAIN** | Refuse junk DECODE (OOD/miss) → `NO_ANSWER` / `mode=ABSTAIN`; AR1 **PROMOTE** (OOD abstain 1.0 · FH 0) |
 | **H-SHIPDEMO** | Ship/demo always shows `LOOKUP\|PEAK\|DECODE\|ABSTAIN`; AR2 **PROMOTE** (4/4 modes visible) |
+| **H-PARAEXT** | External paraphrase SEMWRAP (≠ AQ-PARA); AR3 **HOLD** (hit 0.65 < 0.70 · FH 0) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

@@ -40,7 +40,7 @@ def validate_trial(trial: Mapping[str, Any]) -> list[str]:
     if not isinstance(trial.get("error"), bool):
         errs.append("error must be bool")
     tid = str(trial.get("trial_id", ""))
-    # Wave Z + AA…AQ letter packs (Z1-01 · AQ-PARA-01 · …)
+    # Wave Z + AA…AR letter packs (Z1-01 · AQ-PARA-01 · AR-EXT-01 · …)
     allowed = (
         "Z",
         "AA",
@@ -60,9 +60,10 @@ def validate_trial(trial: Mapping[str, Any]) -> list[str]:
         "AO",
         "AP",
         "AQ",
+        "AR",
     )
     if not any(tid.startswith(p) for p in allowed):
         errs.append(
-            "trial_id must start with Z* / AA*…AQ* wave prefix"
+            "trial_id must start with Z* / AA*…AR* wave prefix"
         )
     return errs

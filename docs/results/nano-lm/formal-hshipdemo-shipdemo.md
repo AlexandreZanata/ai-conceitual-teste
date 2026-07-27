@@ -49,4 +49,4 @@ npm run nano:abstain
 | Mode banner on every ask | LOOKUP sold as DECODE IQ |
 | Four-arm smoke | Peak-as-open-chat · mini-AGI claim |
 
-Next: **AR3 H-PARAEXT** — fresh external paraphrase hit-rate.
+Next: **AR3 H-PARAEXT** — **DONE HOLD** → [formal-hparaext-paraext.md](formal-hparaext-paraext.md).
