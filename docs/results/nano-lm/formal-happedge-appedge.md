@@ -44,7 +44,7 @@ LOOKUP = WRAP_LOOKUP TRUE_HIT / honest OOS refuse. GENERATE = QPFB2+GROUNDED+GEN
 1. All three surfaces expose **LOOKUP vs GENERATE** with DEPL-AN dual-arm law documented.  
 2. Lookup quality holds (mean **8.33**, false-hit **0**) — product retrieve path only.  
 3. Generative SERVE mean **9.0** clears gen≥5 and peers APPNEXT via GENEDGE peak stops.  
-4. Ship claim remains **AF packaged stack** until AN6.
+4. Ship claim remains **AF packaged stack** — AN6 AN-HITL-10 **PROMOTE** (see [wave-an-hitl.md](wave-an-hitl.md)).
 
 ## Reproduce
 
@@ -63,4 +63,4 @@ npm run nano:test && npm run verify
 - Trials: `AN-APPEDGE-{KNOWN,HOWTO,LONGDOC}-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_appedge.py`
 
-Next: **AN6 AN-HITL-10** — final dual-arm on same 10.
+Next: **AN6 AN-HITL-10** — **DONE PROMOTE** → [wave-an-hitl.md](wave-an-hitl.md).

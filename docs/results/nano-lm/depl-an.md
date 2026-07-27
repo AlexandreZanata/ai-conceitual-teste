@@ -31,4 +31,4 @@ npm run nano:appedge
 
 - Not an open chat LM.
 - Forbidden: STREAM · KVCACHE-Q · GENCACHE · ZPREF · QI · MIXD.
-- Ship claim remains AF packaged stack until AN6 HITL bar.
+- Ship claim remains AF packaged stack (AN6 HITL bar cleared — see [wave-an-hitl.md](wave-an-hitl.md)).
