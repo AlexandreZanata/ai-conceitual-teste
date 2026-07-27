@@ -70,4 +70,4 @@ npm run nano:test && npm run verify
 - Trials: `AO-CTXCORE-LOOKUP-HITL-01…10` · `AO-CTXCORE-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ctxcore.py`
 
-Next: **AO3 H-SMARTCORE** — smarter cite+answer; kill SEMWRAP FPs.
+Next: **AO3 H-SMARTCORE** — **DONE PROMOTE** → [formal-hsmartcore-smartcore.md](formal-hsmartcore-smartcore.md). Next **AO4 H-FASTCORE**.
