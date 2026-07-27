@@ -530,7 +530,7 @@ def _update_local_session(decision: str) -> None:
             "",
             "| Field | Value |",
             "|-------|--------|",
-            "| Wave | **AV OPEN** |",
+            "| Wave | **AW OPEN** |",
             "| Track | Caminho A product-keep · "
             "**H-NANOGEN7** north star |",
             "| Parent | AV COMPLETE + FROZEN |",

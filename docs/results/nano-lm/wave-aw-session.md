@@ -147,4 +147,4 @@ Contract: `nano_lm/tests/test_aw_session.py`.
 - Generative PROMOTE only via later **AW3 H-NANOGEN7** true_continue_ablated (span-fallback ≠ gen credit).  
 - Forbidden: LOOKUP-as-IQ · peak-as-open-chat · SAFE-as-quality · gold-substring PROMOTE · truncate-to-span as gen · DECODE telemetry-only content_ok · eval↔prod gap · mini-AGI claim early · Wave AX invent · CTX/SMART/FAST/APP clone · NANOGEN6+rename · bank stuffing · vanity re-SEMFIX.
 
-Next: **AW1 H-PRODKEEP** — accept Caminho A; close DECODE content debt; publish pressure para · FH · p50/p99 · KB.
+Next: **AW1 H-PRODKEEP** — **DONE PROMOTE** (`npm run nano:prodkeep`) · next **AW2 H-SHIPKEEP**.
