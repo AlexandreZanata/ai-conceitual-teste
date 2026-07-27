@@ -56,4 +56,4 @@ npm run nano:nanogen3
 | Snippet-prefix on ablated labeled | Peak/bank-as-open-chat |
 | PROMOTE only ablated≥5 | mini-AGI · Wave AU invent |
 
-Next: **AT4 AT-REAL-EVAL** — product + gen with anti-FP law.
+Next: **AT4 AT-REAL-EVAL** — **DONE PROMOTE** → [wave-at-real-eval.md](wave-at-real-eval.md). **AT5 AT-REPORT** — next.
