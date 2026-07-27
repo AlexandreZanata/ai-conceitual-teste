@@ -8,6 +8,8 @@
 
 **PROMOTE** — Wave AV outcomes locked; Caminho A H-PRODSHIP·H-SHIPUI2 PROMOTE stays; H-NANOGEN6 **HOLD** (true_continue unmet · span-fallback ≠ gen IQ) locked; AV-REAL-EVAL battery 8/8 PROMOTE locked; ≤5M hard stays; ship claim remains **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM**; **no Wave AW** without explicit lab-book reopen.
 
+**Superseded for continuation:** Wave AW reopened explicitly via `.local/pesquisa.md` (2026-07-27). AV HOLD/PROMOTE **decisions** stay; AW0: [wave-aw-session.md](wave-aw-session.md).
+
 **Status: COMPLETE + FROZEN** (freeze gate).
 
 ## Locked outcomes

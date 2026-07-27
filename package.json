@@ -467,6 +467,8 @@
     "nano:au-session": "nano_lm/.venv/bin/python nano_lm/src/run_au_session.py",
     "nano:av:session": "nano_lm/.venv/bin/python nano_lm/src/run_av_session.py",
     "nano:av-session": "nano_lm/.venv/bin/python nano_lm/src/run_av_session.py",
+    "nano:aw:session": "nano_lm/.venv/bin/python nano_lm/src/run_aw_session.py",
+    "nano:aw-session": "nano_lm/.venv/bin/python nano_lm/src/run_aw_session.py",
     "nano:prodship": "nano_lm/.venv/bin/python nano_lm/src/run_prodship.py",
     "nano:av:prodship": "nano_lm/.venv/bin/python nano_lm/src/run_prodship.py",
     "nano:shipui2": "nano_lm/.venv/bin/python nano_lm/src/run_shipui2.py",
