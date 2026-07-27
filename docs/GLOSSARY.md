@@ -122,6 +122,7 @@
 | **H-NANOGEN4** | Ablated DECODE lift vs NANOGEN3 4.3 via snippet-prefix; AT3 **PROMOTE** (ablated **5.5**) — [formal-hnanogen4-nanogen4.md](results/nano-lm/formal-hnanogen4-nanogen4.md) |
 | **AT-REAL-EVAL** | Product + gen + live ask battery; AT4 **PROMOTE** — [wave-at-real-eval.md](results/nano-lm/wave-at-real-eval.md) |
 | **AT-REPORT** | Public summary + paper-lab; AT5 **PROMOTE** — [wave-at-summary.md](results/nano-lm/wave-at-summary.md) · [paper-lab-wave-at.md](results/nano-lm/paper-lab-wave-at.md) |
+| **AT-FREEZE** | Lock Wave AT outcomes; no Wave AU without reopen; AT6 **PROMOTE** — [at-freeze.md](results/nano-lm/at-freeze.md) · [formal-hatfreeze-at-freeze.md](results/nano-lm/formal-hatfreeze-at-freeze.md) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

@@ -79,7 +79,7 @@ def test_given_thin_text_when_markers_then_fail() -> None:
 
 def test_given_paper_lab_when_render_then_complete() -> None:
     body = render_paper_lab_wave_at()
-    assert "RESEARCH_COMPLETE" in body or "COMPLETE" in body
+    assert "COMPLETE" in body and "FROZEN" in body
     assert "not unlabeled open chat" in body
     assert "AT-REAL-EVAL" in body
     assert "H-NANOGEN4" in body

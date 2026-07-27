@@ -200,7 +200,7 @@ def realeval_section_ok(text: str) -> bool:
 def render_wave_at_summary() -> str:
     lines = [
         "# Wave AT — Caminho A ship + Nano Generative gate "
-        "(**RESEARCH_COMPLETE** · freeze pending)",
+        "(**COMPLETE + FROZEN**)",
         "",
         "> Lab: `.local/pesquisa.md` §5 · Paper-lab: "
         "[paper-lab-wave-at.md](paper-lab-wave-at.md) · "
@@ -210,7 +210,7 @@ def render_wave_at_summary() -> str:
         "> Parent: Wave AS **AS-FREEZE** reopen · Ship claim: "
         f"**{SHIP_CLAIM}**",
         "",
-        "**Status: RESEARCH_COMPLETE** (AT6 FREEZE next) · Thesis: **"
+        "**Status: COMPLETE + FROZEN** · Thesis: **"
         + AT_THESIS
         + ".**",
         "",
@@ -309,7 +309,7 @@ def render_paper_lab_wave_at() -> str:
             "",
             "> Companion to [wave-at-summary.md](wave-at-summary.md). "
             "English lab note.  ",
-            "> **Status: RESEARCH_COMPLETE** (freeze pending) · "
+            "> **Status: COMPLETE + FROZEN** · "
             "Real-eval: [wave-at-real-eval.md](wave-at-real-eval.md) · "
             "Freeze: [at-freeze.md](at-freeze.md) · "
             "[formal-hatfreeze-at-freeze.md](formal-hatfreeze-at-freeze.md) · "

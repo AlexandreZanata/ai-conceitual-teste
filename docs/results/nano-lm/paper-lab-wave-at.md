@@ -1,7 +1,7 @@
 # Paper-lab — Wave AT (Caminho A ship + Nano Generative gate)
 
 > Companion to [wave-at-summary.md](wave-at-summary.md). English lab note.  
-> **Status: RESEARCH_COMPLETE** (freeze pending) · Real-eval: [wave-at-real-eval.md](wave-at-real-eval.md) · Freeze: [at-freeze.md](at-freeze.md) · [formal-hatfreeze-at-freeze.md](formal-hatfreeze-at-freeze.md) · Parent: [as-freeze.md](as-freeze.md) · Ship: **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix) — not unlabeled open chat LM**
+> **Status: COMPLETE + FROZEN** · Real-eval: [wave-at-real-eval.md](wave-at-real-eval.md) · Freeze: [at-freeze.md](at-freeze.md) · [formal-hatfreeze-at-freeze.md](formal-hatfreeze-at-freeze.md) · Parent: [as-freeze.md](as-freeze.md) · Ship: **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix) — not unlabeled open chat LM**
 
 ## Question
 

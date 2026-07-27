@@ -1,9 +1,9 @@
-# Wave AT — Caminho A ship + Nano Generative gate (**RESEARCH_COMPLETE** · freeze pending)
+# Wave AT — Caminho A ship + Nano Generative gate (**COMPLETE + FROZEN**)
 
 > Lab: `.local/pesquisa.md` §5 · Paper-lab: [paper-lab-wave-at.md](paper-lab-wave-at.md) · Real-eval: [wave-at-real-eval.md](wave-at-real-eval.md) · Freeze: [at-freeze.md](at-freeze.md) · [formal-hatfreeze-at-freeze.md](formal-hatfreeze-at-freeze.md)  
 > Parent: Wave AS **AS-FREEZE** reopen · Ship claim: **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix) — not unlabeled open chat LM**
 
-**Status: RESEARCH_COMPLETE** (AT6 FREEZE next) · Thesis: **Wave AT dual track: H-PRODREG·H-SHIPAPP PROMOTE (Caminho A); H-NANOGEN4 PROMOTE (ablated 5.5 ≥ 5.0 vs NANOGEN3 4.3 · snippet-prefix); AT-REAL-EVAL PROMOTE (live battery 6/6); ship AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix) — not unlabeled open chat LM.**
+**Status: COMPLETE + FROZEN** · Thesis: **Wave AT dual track: H-PRODREG·H-SHIPAPP PROMOTE (Caminho A); H-NANOGEN4 PROMOTE (ablated 5.5 ≥ 5.0 vs NANOGEN3 4.3 · snippet-prefix); AT-REAL-EVAL PROMOTE (live battery 6/6); ship AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix) — not unlabeled open chat LM.**
 
 ## Stage scoreboard (product + generative)
 
