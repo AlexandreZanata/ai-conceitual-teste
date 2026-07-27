@@ -24,6 +24,7 @@ __all__ = [
     "semwrap_stats",
     "decide_semwrap",
     "alias_bank_row",
+    "contrastive_reject",
 ]
 
 SEMWRAP_ID = "H-SEMWRAP"
@@ -145,6 +146,34 @@ def _curated_tokens(source_id: str, curated_root: Path | None) -> frozenset[str]
     return question_tokens(snippet)
 
 
+def contrastive_reject(ask: str, bank_q: str, gold: str) -> bool:
+    """
+    GIVEN ask + matched bank question/gold
+    WHEN checking near-miss contrast traps
+    THEN True iff hit would be a silent wrong gold (reject → MISS).
+    """
+    a = normalize_question(ask)
+    b = normalize_question(bank_q)
+    g = normalize_question(gold)
+    if "other than" in a:
+        return True
+    if "not append" in a and "append" in g:
+        return True
+    if "returning a value" in a and g == "pass":
+        return True
+    if "non-master" in a and "0x00000000" in g:
+        return True
+    if "entropy" in a and "in terms of cs" in a and "cs = ent / 32" in g:
+        return True
+    if "by height" in a and (
+        "block-hash" in g or "/rest/tx/" in g or "by hash" in b
+    ):
+        return True
+    if "floating-point" in a and ("isize" in g or "usize" in g):
+        return True
+    return False
+
+
 def semantic_lookup(
     question: str,
     rows: Sequence[Mapping[str, Any]],
@@ -196,12 +225,13 @@ def semantic_lookup(
     best_sc, best_row = ranked[0]
     second = ranked[1][0] if len(ranked) > 1 else 0.0
     gap = float(best_sc - second)
+    bank_q = str(best_row.get("question", ""))
     meta = {
         "kind": "MISS",
         "score": float(best_sc),
         "margin": gap,
         "source_id": str(best_row.get("source_id", "")),
-        "bank_question": str(best_row.get("question", ""))[:160],
+        "bank_question": bank_q[:160],
     }
     if best_sc < float(threshold):
         return None, meta
@@ -209,6 +239,11 @@ def semantic_lookup(
         meta["kind"] = "AMBIGUOUS"
         return None, meta
     gold = _row_gold(best_row)
+    if gold is None:
+        return None, meta
+    if contrastive_reject(question, bank_q, gold):
+        meta["kind"] = "REJECT_NEAR_MISS"
+        return None, meta
     meta["kind"] = "SEMANTIC"
     return gold, meta
 

@@ -49,4 +49,4 @@ npm run nano:z:ask -- --semwrap --question "<AQ-PARA paraphrase>"
 | Honest HOLD when hit_rate < bar | Expand bank until HITL memorizes paras |
 | false-hit 0 as hard law | Open chat / mini-AGI claim |
 
-Next: **AQ2 H-ADVFP** — adversary / near-miss / OOD false-hit suite.
+Next: **AQ2 H-ADVFP** — **DONE PROMOTE** → [formal-hadvfp-advfp.md](formal-hadvfp-advfp.md).

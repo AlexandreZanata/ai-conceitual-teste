@@ -163,3 +163,19 @@ def test_given_fix_when_alias_then_row_schema() -> None:
     assert row["hyp_id"] == SEMWRAP_ID
     assert row["gold"] == "seed text"
     assert row["error"] is False
+
+
+def test_given_near_miss_when_lookup_then_contrast_reject() -> None:
+    from semwrap_ops import contrastive_reject
+
+    # GIVEN/WHEN/THEN: AQ2 ADVFP — silent wrong gold must reject
+    assert contrastive_reject(
+        "BIP-39: entropy length ENT in terms of CS?",
+        "BIP-39: checksum length CS in terms of ENT?",
+        "CS = ENT / 32",
+    )
+    assert not contrastive_reject(
+        "What does BIP-39 specify for wallet seeds?",
+        "What does BIP-39 specify for wallet seeds?",
+        "mnemonic sentence …",
+    )
