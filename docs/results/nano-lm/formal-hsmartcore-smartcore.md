@@ -76,4 +76,4 @@ npm run nano:test && npm run verify
 - Trials: `AO-SMARTCORE-{LOOKUP|GEN}-HITL-01…10`  
 - Contract: `nano_lm/tests/test_smartcore.py`
 
-Next: **AO4 H-FASTCORE** — faster than FASTEDGE at quality floor.
+Next: **AO4 H-FASTCORE** — **DONE PROMOTE** → [formal-hfastcore-fastcore.md](formal-hfastcore-fastcore.md). Next **AO5 H-APPCORE**.
