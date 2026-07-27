@@ -436,6 +436,8 @@
     "nano:ap:appbase": "nano_lm/.venv/bin/python nano_lm/src/run_appbase.py",
     "nano:ap:hitl": "nano_lm/.venv/bin/python nano_lm/src/run_ap_hitl.py",
     "nano:ap-hitl": "nano_lm/.venv/bin/python nano_lm/src/run_ap_hitl.py",
+    "nano:ap:report": "nano_lm/.venv/bin/python nano_lm/src/run_ap_report.py",
+    "nano:ap-report": "nano_lm/.venv/bin/python nano_lm/src/run_ap_report.py",
     "nano:ctxcore": "nano_lm/.venv/bin/python nano_lm/src/run_ctxcore.py",
     "nano:ao:ctxcore": "nano_lm/.venv/bin/python nano_lm/src/run_ctxcore.py",
     "nano:smartcore": "nano_lm/.venv/bin/python nano_lm/src/run_smartcore.py",

@@ -74,4 +74,4 @@ npm run nano:test && npm run verify
 - Trials: `AP-FINAL-LOOKUP-HITL-01…10` · `AP-FINAL-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ap_hitl.py`
 
-Next: **AP7 AP-REPORT** — public summary + paper-lab. Do **not** invent Wave AQ.
+Next: **AP7 AP-REPORT** — **DONE PROMOTE** → [wave-ap-summary.md](wave-ap-summary.md) · [paper-lab-wave-ap.md](paper-lab-wave-ap.md). Next **AP8 AP-FREEZE**. Do **not** invent Wave AQ.
