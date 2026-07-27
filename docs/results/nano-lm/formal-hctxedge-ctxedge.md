@@ -70,4 +70,4 @@ npm run nano:test && npm run verify
 - Trials: `AN-CTXEDGE-LOOKUP-HITL-01…10` · `AN-CTXEDGE-GEN-HITL-01…10`  
 - Contract: `nano_lm/tests/test_ctxedge.py`
 
-Next: **AN3 H-SMARTEDGE** — smarter cite+answer; kill SEMWRAP FPs.
+Next: **AN3 H-SMARTEDGE** — **DONE PROMOTE** → [formal-hsmartedge-smartedge.md](formal-hsmartedge-smartedge.md). Next **AN4 H-FASTEDGE**.

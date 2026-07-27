@@ -424,6 +424,8 @@
     "nano:an:genedge": "nano_lm/.venv/bin/python nano_lm/src/run_genedge.py",
     "nano:ctxedge": "nano_lm/.venv/bin/python nano_lm/src/run_ctxedge.py",
     "nano:an:ctxedge": "nano_lm/.venv/bin/python nano_lm/src/run_ctxedge.py",
+    "nano:smartedge": "nano_lm/.venv/bin/python nano_lm/src/run_smartedge.py",
+    "nano:an:smartedge": "nano_lm/.venv/bin/python nano_lm/src/run_smartedge.py",
     "nano:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:aj:smartpeak": "nano_lm/.venv/bin/python nano_lm/src/run_smartpeak.py",
     "nano:fastpeak": "nano_lm/.venv/bin/python nano_lm/src/run_fastpeak.py",
