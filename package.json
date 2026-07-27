@@ -475,6 +475,8 @@
     "nano:aw:shipkeep": "nano_lm/.venv/bin/python nano_lm/src/run_shipkeep.py",
     "nano:nanogen7": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen7.py",
     "nano:aw:nanogen7": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen7.py",
+    "nano:aw:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_aw_real_eval.py",
+    "nano:real-eval:aw": "nano_lm/.venv/bin/python nano_lm/src/run_aw_real_eval.py",
     "nano:prodship": "nano_lm/.venv/bin/python nano_lm/src/run_prodship.py",
     "nano:av:prodship": "nano_lm/.venv/bin/python nano_lm/src/run_prodship.py",
     "nano:shipui2": "nano_lm/.venv/bin/python nano_lm/src/run_shipui2.py",

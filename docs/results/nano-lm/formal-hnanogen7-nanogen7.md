@@ -32,7 +32,7 @@ One idea: teacher-anchored novel continue (TAC) — DECODE may emit only tokens 
 3. Live result: true_continue=0/10 · teacher_topk_pass=0/10 · span_fallback=3/10 → **honest HOLD** (no fake gen claim).  
 4. Span-fallback labeled **PEAK** (not DECODE gen credit).  
 5. Generative / mini-AGI claim stays locked until true_continue_ablated PROMOTE.  
-6. Next: **AW4 AW-REAL-EVAL** (product keep + gen locked).
+6. Next: **AW4 AW-REAL-EVAL** — **DONE PROMOTE** (`npm run nano:aw:real-eval`) · next **AW5 AW-REPORT**.
 
 ## Reproduce
 
@@ -54,4 +54,4 @@ npm run nano:nanogen6
 | Span-fallback as PEAK/LOOKUP | Truncate-as-gen PROMOTE |
 | PROMOTE only TAC true_continue≥5.5 | NANOGEN6 refuse-or-continue rename · Wave AX invent |
 
-Next: **AW4 AW-REAL-EVAL** — product + gen with anti-FP law.
+Next: **AW4 AW-REAL-EVAL** — **DONE PROMOTE** (`npm run nano:aw:real-eval`) · next **AW5 AW-REPORT**.
