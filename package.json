@@ -477,6 +477,8 @@
     "nano:au:shipreal": "nano_lm/.venv/bin/python nano_lm/src/run_shipreal.py",
     "nano:nanogen5": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen5.py",
     "nano:au:nanogen5": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen5.py",
+    "nano:nanogen6": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen6.py",
+    "nano:av:nanogen6": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen6.py",
     "nano:au:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_au_real_eval.py",
     "nano:real-eval:au": "nano_lm/.venv/bin/python nano_lm/src/run_au_real_eval.py",
     "nano:au:report": "nano_lm/.venv/bin/python nano_lm/src/run_au_report.py",
