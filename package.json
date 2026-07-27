@@ -457,6 +457,8 @@
     "nano:ap-session": "nano_lm/.venv/bin/python nano_lm/src/run_ap_session.py",
     "nano:aq:session": "nano_lm/.venv/bin/python nano_lm/src/run_aq_session.py",
     "nano:aq-session": "nano_lm/.venv/bin/python nano_lm/src/run_aq_session.py",
+    "nano:ar:session": "nano_lm/.venv/bin/python nano_lm/src/run_ar_session.py",
+    "nano:ar-session": "nano_lm/.venv/bin/python nano_lm/src/run_ar_session.py",
     "nano:parahit": "nano_lm/.venv/bin/python nano_lm/src/run_parahit.py",
     "nano:aq:parahit": "nano_lm/.venv/bin/python nano_lm/src/run_parahit.py",
     "nano:aq-parahit": "nano_lm/.venv/bin/python nano_lm/src/run_parahit.py",
