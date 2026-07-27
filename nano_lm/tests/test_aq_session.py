@@ -70,6 +70,10 @@ def test_given_modes_when_map_then_lookup_peak_decode() -> None:
     assert (
         map_product_mode("QPFB2+BEAMKV+GROUNDED+ANTI_PERIOD+PEAK") == "PEAK"
     )
+    assert (
+        map_product_mode("QPFB2+BEAMKV+GROUNDED+ANTI_PERIOD+ABLATED")
+        == "DECODE"
+    )
     assert set(AQ0_LATENCY_PATHS) == AQ0_MODES
 
 

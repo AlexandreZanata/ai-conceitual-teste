@@ -47,4 +47,4 @@ npm run nano:z:ask -- --question "Explain Merkle trees briefly"
 | Mode banner on every ask | LOOKUP sold as DECODE IQ |
 | Three-arm smoke | Peak-as-open-chat |
 
-Next: **AQ6 H-NANOGEN** — ablated DECODE generative gate (mean ≥ 5.0).
+Next: **AQ6 H-NANOGEN** — **DONE HOLD** → [formal-hnanogen-nanogen.md](formal-hnanogen-nanogen.md).

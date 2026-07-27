@@ -71,6 +71,8 @@ AQ0_MODE_CHARTER: Mapping[str, object] = {
         "QPFB2+BEAMKV+GROUNDED+ANTI_PERIOD+PEAK": "PEAK",
         "WRAP_DECODE": "DECODE",
         "QT+EARLY n=1": "DECODE",
+        "QPFB2+BEAMKV+GROUNDED+ANTI_PERIOD+ABLATED": "DECODE",
+        "QPFB2+BEAMKV+GROUNDED+ANTI_PERIOD+PEAK": "PEAK",
     },
     "rule": "every ASK/demo/HITL trial logs exactly one of LOOKUP|PEAK|DECODE",
 }
@@ -562,6 +564,8 @@ def map_product_mode(raw_mode: str) -> str:
     upper = mode.upper()
     if "PEAK" in upper:
         return "PEAK"
+    if "ABLATED" in upper:
+        return "DECODE"
     if "DECODE" in upper or "EARLY" in upper:
         return "DECODE"
     return "UNKNOWN"
