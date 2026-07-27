@@ -115,6 +115,7 @@
 | **H-NANOGEN3** | Ablated DECODE vs NANOGEN2 4.3; AS7 **HOLD** (ablated **4.3** · peak_only) — [formal-hnanogen3-nanogen3.md](results/nano-lm/formal-hnanogen3-nanogen3.md) |
 | **AS-DUAL-HITL** | Product pillars + gen gate; AS8 **PROMOTE** (gen locked) — [wave-as-dual-hitl.md](results/nano-lm/wave-as-dual-hitl.md) |
 | **AS-REPORT** | Public summary + paper-lab; AS9 **PROMOTE** — [wave-as-summary.md](results/nano-lm/wave-as-summary.md) · [paper-lab-wave-as.md](results/nano-lm/paper-lab-wave-as.md) |
+| **AS-FREEZE** | Lock AS outcomes; AS10 **PROMOTE** — [as-freeze.md](results/nano-lm/as-freeze.md) · [formal-hasfreeze-as-freeze.md](results/nano-lm/formal-hasfreeze-as-freeze.md) |
 | **PROMOTE / KILL** | Smoke+formal decision vs parent tip/recipe |
 
 Never call evolutionary individuals “coding agents.”

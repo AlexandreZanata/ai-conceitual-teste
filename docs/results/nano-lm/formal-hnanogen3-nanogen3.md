@@ -50,4 +50,4 @@ npm run nano:nanogen2
 | Peak/bank compare labeled | Peak/bank-as-open-chat |
 | PROMOTE only ablated≥5 | mini-AGI · Wave AT invent |
 
-Next: **AS8 AS-DUAL-HITL** — **DONE PROMOTE** → [wave-as-dual-hitl.md](wave-as-dual-hitl.md) (product pass · gen locked). **AS9 AS-REPORT** — **DONE PROMOTE** → [wave-as-summary.md](wave-as-summary.md). Next: **AS10 AS-FREEZE**.
+Next: **AS8 AS-DUAL-HITL** — **DONE PROMOTE** → [wave-as-dual-hitl.md](wave-as-dual-hitl.md) (product pass · gen locked). **AS9 AS-REPORT** — **DONE PROMOTE** → [wave-as-summary.md](wave-as-summary.md). **AS10 AS-FREEZE** — **DONE PROMOTE** → [as-freeze.md](as-freeze.md). Do not invent Wave AT.
