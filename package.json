@@ -478,6 +478,8 @@
     "nano:aq:product-hitl": "nano_lm/.venv/bin/python nano_lm/src/run_aq_product_hitl.py",
     "nano:aq-product-hitl": "nano_lm/.venv/bin/python nano_lm/src/run_aq_product_hitl.py",
     "nano:product-hitl": "nano_lm/.venv/bin/python nano_lm/src/run_aq_product_hitl.py",
+    "nano:aq:report": "nano_lm/.venv/bin/python nano_lm/src/run_aq_report.py",
+    "nano:aq-report": "nano_lm/.venv/bin/python nano_lm/src/run_aq_report.py",
     "nano:genedge": "nano_lm/.venv/bin/python nano_lm/src/run_genedge.py",
     "nano:an:genedge": "nano_lm/.venv/bin/python nano_lm/src/run_genedge.py",
     "nano:ctxedge": "nano_lm/.venv/bin/python nano_lm/src/run_ctxedge.py",

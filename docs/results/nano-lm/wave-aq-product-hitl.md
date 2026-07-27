@@ -54,4 +54,4 @@ npm run nano:z:ask -- --wrap --question "Write a short Python function named add
 | Product PROMOTE with AQ6 HOLD | Generative unlock without AQ6 |
 | Mode-visible LOOKUP apps | LOOKUP-as-gen-IQ |
 
-Next: **AQ8 AQ-REPORT** — public summary + paper-lab.
+Next: **AQ9 AQ-FREEZE** — lock AQ outcomes (report landed: [wave-aq-summary.md](wave-aq-summary.md)).
