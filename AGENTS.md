@@ -70,7 +70,7 @@ npm run nano:test && npm run verify
 
 ---
 
-- **Wave AW ACTIVE** — AW0 [SESSION PROMOTE](docs/results/nano-lm/wave-aw-session.md) (`npm run nano:aw:session`) · AW1 [H-PRODKEEP PROMOTE](docs/results/nano-lm/formal-hprodkeep-prodkeep.md) (`npm run nano:prodkeep`) · AW2 [H-SHIPKEEP PROMOTE](docs/results/nano-lm/formal-hshipkeep-shipkeep.md) (`npm run nano:shipkeep`) — modes+content · DECODE usable/ABSTAIN; next AW3 H-NANOGEN7; ship remains **AF + AQ + AS trust + STRICT ablated DECODE**; ≤5M stays
+- **Wave AW ACTIVE** — AW0 [SESSION PROMOTE](docs/results/nano-lm/wave-aw-session.md) (`npm run nano:aw:session`) · AW1 [H-PRODKEEP PROMOTE](docs/results/nano-lm/formal-hprodkeep-prodkeep.md) (`npm run nano:prodkeep`) · AW2 [H-SHIPKEEP PROMOTE](docs/results/nano-lm/formal-hshipkeep-shipkeep.md) (`npm run nano:shipkeep`) · AW3 [H-NANOGEN7 HOLD](docs/results/nano-lm/formal-hnanogen7-nanogen7.md) (`npm run nano:nanogen7`) — TAC true_continue=0 · span-fallback ≠ gen; next AW4 AW-REAL-EVAL; ship remains **AF + AQ + AS trust + STRICT ablated DECODE**; ≤5M stays
 ## Quality gates (Lefthook)
 
 Every commit: file ≤200, function ≤80, cyclomatic ≤10, lint 0/0, system 0 errors → `npm run verify`.
