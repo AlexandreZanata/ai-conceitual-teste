@@ -146,10 +146,40 @@ def _curated_tokens(source_id: str, curated_root: Path | None) -> frozenset[str]
     return question_tokens(snippet)
 
 
+def _cs_ent_polarity_flip(ask: str, gold: str) -> bool:
+    """True iff ask requests reverse BIP-39 CS/ENT formula vs gold CS=ENT/32."""
+    g = gold.replace(" ", "")
+    if "cs=ent/32" not in g and "cs=ent÷32" not in g:
+        return False
+    compact = ask.replace(" ", "")
+    if "ent=32" in compact or "32*cs" in compact or "32xcs" in compact:
+        return True
+    if "in terms of cs" in ask and "ent" in ask:
+        return True
+    if ("as if" in ask or "it is not" in ask) and "formula" in ask:
+        return True
+    return False
+
+
+def _pass_contrast_trap(ask: str, gold: str) -> bool:
+    """True iff ask excludes/contrasts pass (continue/return) but gold is pass."""
+    if gold.strip() != "pass":
+        return False
+    if "skip" in ask and ("iteration" in ask or "loop" in ask):
+        return True
+    if "returning a value" in ask:
+        return True
+    if "not the no-op" in ask:
+        return True
+    if "not" in ask and "placeholder" in ask:
+        return True
+    return False
+
+
 def contrastive_reject(ask: str, bank_q: str, gold: str) -> bool:
     """
     GIVEN ask + matched bank question/gold
-    WHEN checking near-miss contrast traps
+    WHEN checking near-miss contrast / negation / polarity traps
     THEN True iff hit would be a silent wrong gold (reject → MISS).
     """
     a = normalize_question(ask)
@@ -159,11 +189,11 @@ def contrastive_reject(ask: str, bank_q: str, gold: str) -> bool:
         return True
     if "not append" in a and "append" in g:
         return True
-    if "returning a value" in a and g == "pass":
+    if _pass_contrast_trap(a, g):
         return True
     if "non-master" in a and "0x00000000" in g:
         return True
-    if "entropy" in a and "in terms of cs" in a and "cs = ent / 32" in g:
+    if _cs_ent_polarity_flip(a, g):
         return True
     if "by height" in a and (
         "block-hash" in g or "/rest/tx/" in g or "by hash" in b

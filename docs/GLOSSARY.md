@@ -107,7 +107,7 @@
 | **AR-FREEZE** | Lock Wave AR outcomes; Wave AS requires lab-book reopen; **PROMOTE** — [ar-freeze.md](results/nano-lm/ar-freeze.md) |
 | **AS0-SESSION** | Freeze ADVSAFE (cite AR-ADVREG-01/05) · PARAEXT2 · ASKABSTAIN · SEMFIX · NANOGEN3 · metrics; AS0 **PROMOTE** — [wave-as-session.md](results/nano-lm/wave-as-session.md) |
 | **H-ASKABSTAIN** | Wire ABSTAIN into default `nano:z:ask` / apps; AS1 **PROMOTE** (OOD abstain 1.0 · FH 0) — [formal-haskabstain-askabstain.md](results/nano-lm/formal-haskabstain-askabstain.md) |
-| **H-SEMFIX** | Fix SEMWRAP near-miss (negation / contrast / margin) (AS2) |
+| **H-SEMFIX** | SEMWRAP negation/contrast/margin; AS2 **PROMOTE** (ADVREG-01/05 FH 0) — [formal-hsemfix-semfix.md](results/nano-lm/formal-hsemfix-semfix.md) |
 | **H-ADVSAFE** | Adversary regression after SEMFIX; FH **0** (AS3) |
 | **H-PARAEXT2** | External paraphrase hit ≥0.70 after SEMFIX (AS4) |
 | **H-NANOGEN3** | Ablated DECODE ≥5.0 vs NANOGEN2 4.3 (AS7 generative gate) |

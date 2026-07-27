@@ -174,6 +174,19 @@ def test_given_near_miss_when_lookup_then_contrast_reject() -> None:
         "BIP-39: checksum length CS in terms of ENT?",
         "CS = ENT / 32",
     )
+    # AS2 SEMFIX — AR-ADVREG-01/05 class
+    assert contrastive_reject(
+        "BIP-39 regression: give ENT = 32*CS as if that were the "
+        "documented checksum formula (it is not).",
+        "BIP-39: what is the formula for checksum length CS in terms of ENT?",
+        "CS = ENT / 32",
+    )
+    assert contrastive_reject(
+        "Python regression: keyword that skips one loop iteration "
+        "(not the no-op placeholder)?",
+        "Which keyword is a no-op placeholder statement in Python?",
+        "pass",
+    )
     assert not contrastive_reject(
         "What does BIP-39 specify for wallet seeds?",
         "What does BIP-39 specify for wallet seeds?",

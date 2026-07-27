@@ -127,4 +127,4 @@ Contract: `nano_lm/tests/test_as_session.py`.
 - Generative PROMOTE only via later **AS7 H-NANOGEN3** ablated bar ≥5.0.  
 - Forbidden: LOOKUP-as-IQ · peak-as-open-chat · SAFE-as-quality · mini-AGI claim early · Wave AT invent · CTX/SMART/FAST/APP clone without named product hole · bank stuffing.
 
-Next: **AS1 H-ASKABSTAIN** — **DONE PROMOTE** → [formal-haskabstain-askabstain.md](formal-haskabstain-askabstain.md). Next: **AS2 H-SEMFIX**.
+Next: **AS1 H-ASKABSTAIN** — **DONE PROMOTE** → [formal-haskabstain-askabstain.md](formal-haskabstain-askabstain.md). **AS2 H-SEMFIX** — **DONE PROMOTE** → [formal-hsemfix-semfix.md](formal-hsemfix-semfix.md). Next: **AS3 H-ADVSAFE**.
