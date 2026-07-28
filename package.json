@@ -520,6 +520,8 @@
     "nano:nanogen13": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen13.py",
     "nano:bc:nanogen13": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen13.py",
     "nano:bc:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_bc_real_eval.py",
+    "nano:bc:report": "nano_lm/.venv/bin/python nano_lm/src/run_bc_report.py",
+    "nano:report:bc": "nano_lm/.venv/bin/python nano_lm/src/run_bc_report.py",
     "nano:real-eval:bc": "nano_lm/.venv/bin/python nano_lm/src/run_bc_real_eval.py",
     "nano:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:az:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
