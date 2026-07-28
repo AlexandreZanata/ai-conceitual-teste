@@ -517,6 +517,8 @@
     "nano:fastlift:bc": "nano_lm/.venv/bin/python nano_lm/src/run_bc_fastlift.py",
     "nano:bc:ctxlift2": "nano_lm/.venv/bin/python nano_lm/src/run_bc_ctxlift2.py",
     "nano:ctxlift2": "nano_lm/.venv/bin/python nano_lm/src/run_bc_ctxlift2.py",
+    "nano:nanogen13": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen13.py",
+    "nano:bc:nanogen13": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen13.py",
     "nano:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:az:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:shipaz": "nano_lm/.venv/bin/python nano_lm/src/run_shipaz.py",
