@@ -483,6 +483,8 @@
     "nano:fastreal:ba": "nano_lm/.venv/bin/python nano_lm/src/run_ba_fastreal.py",
     "nano:ba:ctxreal2": "nano_lm/.venv/bin/python nano_lm/src/run_ba_ctxreal2.py",
     "nano:ctxreal2": "nano_lm/.venv/bin/python nano_lm/src/run_ba_ctxreal2.py",
+    "nano:nanogen11": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen11.py",
+    "nano:ba:nanogen11": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen11.py",
     "nano:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:az:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:shipaz": "nano_lm/.venv/bin/python nano_lm/src/run_shipaz.py",
