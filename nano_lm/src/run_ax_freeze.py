@@ -138,13 +138,16 @@ def _patch_product_freeze_status() -> None:
         elif "**Wave AX COMPLETE + FROZEN**" not in text:
             # Append near other wave closeouts (never prepend file header).
             text = text.rstrip() + "\n" + frozen + "\n"
-        # Idempotent: collapse accidental duplicate COMPLETE lines.
-        text = re.sub(
-            r"(\*\*Wave AX COMPLETE \+ FROZEN\*\*:[^\n]*\n?)"
-            r"(?:\*\*Wave AX COMPLETE \+ FROZEN\*\*:[^\n]*\n?)+",
-            r"\1",
-            text,
-        )
+        # Idempotent: keep a single Wave AX COMPLETE closeout line.
+        kept: list[str] = []
+        seen_ax = False
+        for line in text.splitlines(keepends=True):
+            if line.startswith("**Wave AX COMPLETE + FROZEN:**"):
+                if seen_ax:
+                    continue
+                seen_ax = True
+            kept.append(line)
+        text = "".join(kept)
         if "Wave AX6 AX-FREEZE" not in text and path == _RECIPES:
             needle = (
                 "| Wave AX5 AX-REPORT | [wave-ax-summary.md]"
