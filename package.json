@@ -484,6 +484,8 @@
     "nano:nanogen9": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen9.py",
     "nano:ay:nanogen9": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen9.py",
     "nano:ay:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_ay_real_eval.py",
+    "nano:ay:report": "nano_lm/.venv/bin/python nano_lm/src/run_ay_report.py",
+    "nano:report:ay": "nano_lm/.venv/bin/python nano_lm/src/run_ay_report.py",
     "nano:nanogen8": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen8.py",
     "nano:ax:nanogen8": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen8.py",
     "nano:ax:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_ax_real_eval.py",
