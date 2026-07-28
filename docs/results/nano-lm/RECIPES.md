@@ -1,4 +1,4 @@
-**Wave AY ACTIVE:** AY0 [SESSION PROMOTE](wave-ay-session.md) (`npm run nano:ay:session`) — intent-adversary FP · PRODINT charter · gen stance **defer** (H-NANOGEN9) · real-eval; next AY1 H-PRODINT; ship remains **AF + AQ + AS trust + STRICT ablated DECODE**; NANOGEN6·7 HOLD · NANOGEN8 DEFER; ≤5M stays.
+**Wave AY ACTIVE:** AY0 [SESSION PROMOTE](wave-ay-session.md) (`npm run nano:ay:session`) — intent-adversary FP · PRODINT charter · gen stance **defer** (H-NANOGEN9) · real-eval · AY1 [H-PRODINT PROMOTE](formal-hprodint-prodint.md) (`npm run nano:prodint`) — intent FH **0**; next AY2 H-SHIPAY; ship remains **AF + AQ + AS trust + STRICT ablated DECODE**; NANOGEN6·7 HOLD · NANOGEN8 DEFER; ≤5M stays.
 # Official nano-LM recipes (frozen claims)
 
 > Tip-stack: **H-STAG′** / **H-EARLY** / **H-POOL**.  
@@ -227,6 +227,7 @@
 | Wave AX5 AX-REPORT | [wave-ax-summary.md](wave-ax-summary.md) · [paper-lab-wave-ax.md](paper-lab-wave-ax.md) **PROMOTE** (`npm run nano:ax:report`) — anti-FP · NANOGEN6/7 HOLD cited · gen DEFER |
 | Wave AX6 AX-FREEZE | [ax-freeze.md](ax-freeze.md) · [formal-haxfreeze-ax-freeze.md](formal-haxfreeze-ax-freeze.md) **PROMOTE** (`npm run nano:ax:freeze`) — COMPLETE+FROZEN; H-NANOGEN8 DEFER; Wave AY reopened via lab-book |
 | Wave AY0 SESSION | [wave-ay-session.md](wave-ay-session.md) **PROMOTE** (`npm run nano:ay:session`) — intent-FP N≥12 · 4 classes · PRODINT charter · gen stance **defer** (H-NANOGEN9) · true-eval |
+| Wave AY1 H-PRODINT | [formal-hprodint-prodint.md](formal-hprodint-prodint.md) **PROMOTE** (`npm run nano:prodint`) — intent FH **0**/12 · hard-natural **1.0**/18 · modes 4/4 |
 | Wave AG1 H-ANTIFP | [formal-hantifp-antifp.md](formal-hantifp-antifp.md) **PROMOTE** (`npm run nano:antifp`) — LOOKUP≠gen IQ; dual-arm telemetry |
 | Wave AG2 H-CTXREAL | [formal-hctxreal-ctxreal.md](formal-hctxreal-ctxreal.md) **PROMOTE** (`npm run nano:ctxreal`) — quad-doc K=9; L_eff↑ vs CTXULTRA |
 | Wave AG3 H-SMARTREAL | [formal-hsmartreal-smartreal.md](formal-hsmartreal-smartreal.md) **HOLD** (`npm run nano:smartreal`) — cite 10/10; gen 4.0 &lt;5 |

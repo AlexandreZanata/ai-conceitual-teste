@@ -25,6 +25,7 @@ __all__ = [
     "decide_semwrap",
     "alias_bank_row",
     "contrastive_reject",
+    "intent_ask_must_abstain",
 ]
 
 SEMWRAP_ID = "H-SEMWRAP"
@@ -236,6 +237,164 @@ def _segwit_bip39_collision(ask: str, gold: str) -> bool:
     return "cs=ent/32" in g or "cs=ent÷32" in g
 
 
+def _sum_add_gold(gold: str) -> bool:
+    g = gold.lower()
+    compact = g.replace(" ", "")
+    return "def add" in g or "a+b" in compact
+
+
+def _mul_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants mul/product but gold is sum add (AY1 intent FP)."""
+    if not _sum_add_gold(gold):
+        return False
+    a = ask.lower()
+    cues = (
+        "named mul",
+        "function named mul",
+        "mul(a",
+        "mul (",
+        "multiply",
+        "product of",
+        "a*b",
+        "a * b",
+        "returning a*b",
+        "return a*b",
+    )
+    if any(c in a for c in cues):
+        return True
+    padded = f" {a} "
+    return " mul " in padded and ("product" in a or "integers" in a)
+
+
+def _add_difference_antonym(ask: str, gold: str) -> bool:
+    """True iff ask names add but wants difference; gold is sum (AY1)."""
+    if not _sum_add_gold(gold):
+        return False
+    a = ask.lower()
+    if "add" not in a:
+        return False
+    diff_cues = (
+        "difference",
+        "minus",
+        "a - b",
+        "a-b",
+        "subtract",
+        "not a+b",
+        "not the sum",
+        "not a + b",
+    )
+    return any(c in a for c in diff_cues)
+
+
+def _remove_clear_false_friend(ask: str, gold: str) -> bool:
+    """True iff ask wants single remove/delete; gold is a.clear() (AY1)."""
+    g = gold.lower()
+    if "clear()" not in g and "a.clear" not in g:
+        return False
+    a = ask.lower()
+    if ("without clearing" in a) or ("not want a.clear" in a):
+        return True
+    if "clear()" in a and ("not" in a or "without" in a or "do not" in a):
+        return True
+    drop = "remove" in a or "delete" in a
+    target = "list" in a or "element" in a or "item" in a
+    return drop and target
+
+
+def _bip39_wordlist_half_known(ask: str, gold: str) -> bool:
+    """True iff ask wants BIP-39 wordlist size; gold is sibling/wrong slot."""
+    a = ask.lower()
+    cues = (
+        "wordlist",
+        "word list",
+        "vocabulary",
+        "how many words",
+        "wordlist length",
+        "wordlist size",
+    )
+    if not any(c in a for c in cues):
+        return False
+    g = gold.lower().replace(" ", "")
+    if "cs=ent/32" in g or "cs=ent÷32" in g:
+        return True
+    # Sibling: ENT→mnemonic-word count ≠ English wordlist length (2048).
+    if gold.strip() in {"12", "15", "18", "21", "24"}:
+        return True
+    gl = gold.lower()
+    return "checksum bits" in gl or "mnemonic words" in gl
+
+
+def _intent_mismatch_reject(ask: str, gold: str) -> bool:
+    """AY1 intent/adversary traps — refuse wrong-gold LOOKUP (no bank stuff)."""
+    traps = (
+        _mul_add_predicate_swap,
+        _add_difference_antonym,
+        _remove_clear_false_friend,
+        _bip39_wordlist_half_known,
+    )
+    return any(fn(ask, gold) for fn in traps)
+
+
+def _ask_is_mul_product(a: str) -> bool:
+    return any(
+        c in a
+        for c in (
+            "named mul",
+            "function named mul",
+            "mul(a",
+            "mul (",
+            "product of two",
+        )
+    )
+
+
+def _ask_is_add_difference(a: str) -> bool:
+    if "add" not in a:
+        return False
+    return any(
+        c in a
+        for c in ("difference", "minus", "subtract", "not the sum", "not a+b")
+    )
+
+
+def _ask_is_remove_not_clear(a: str) -> bool:
+    if "remove" not in a and "delete" not in a:
+        return False
+    return any(
+        c in a
+        for c in (
+            "not clear",
+            "without clearing",
+            "keep other",
+            "do not want a.clear",
+        )
+    )
+
+
+def _ask_is_bip39_wordlist(a: str) -> bool:
+    if "bip-39" not in a and "bip39" not in a.replace("-", ""):
+        return False
+    if any(c in a for c in ("wordlist", "word list", "vocabulary")):
+        return True
+    return "how many words" in a and "wordlist" in a
+
+
+def intent_ask_must_abstain(ask: str) -> bool:
+    """
+    GIVEN novel ask on production SEMWRAP path
+    WHEN no exact bank hit
+    THEN True iff ask is an intent-mismatch class that must ABSTAIN
+         (mul/diff/remove≠clear/BIP wordlist) — never bank-stuff.
+    """
+    a = normalize_question(ask)
+    return (
+        _ask_is_mul_product(a)
+        or _ask_is_add_difference(a)
+        or _ask_is_remove_not_clear(a)
+        or _ask_is_bip39_wordlist(a)
+    )
+
+
 def _gold_equiv(a: str, b: str) -> bool:
     """True iff golds match after whitespace collapse (one-liner vs multiline)."""
     return " ".join(a.split()) == " ".join(b.split())
@@ -244,8 +403,8 @@ def _gold_equiv(a: str, b: str) -> bool:
 def contrastive_reject(ask: str, bank_q: str, gold: str) -> bool:
     """
     GIVEN ask + matched bank question/gold
-    WHEN checking near-miss contrast / negation / polarity traps
-    THEN True iff hit would be a silent wrong gold (reject → MISS).
+    WHEN checking near-miss contrast / negation / polarity / intent traps
+    THEN True iff hit would be a silent wrong gold (reject → MISS/ABSTAIN).
     """
     a = normalize_question(ask)
     b = normalize_question(bank_q)
@@ -268,7 +427,9 @@ def contrastive_reject(ask: str, bank_q: str, gold: str) -> bool:
         "block-hash" in g or "/rest/tx/" in g or "by hash" in b
     ):
         return True
-    return _isize_index_trap(a, g)
+    if _isize_index_trap(a, g):
+        return True
+    return _intent_mismatch_reject(a, g)
 
 
 def semantic_lookup(
@@ -298,6 +459,14 @@ def semantic_lookup(
             "score": 1.0,
             "margin": 1.0,
             "source_id": sid,
+        }
+
+    if intent_ask_must_abstain(question):
+        return None, {
+            "kind": "REJECT_NEAR_MISS",
+            "score": 0.0,
+            "margin": 0.0,
+            "reason": "intent_mismatch",
         }
 
     qtok = question_tokens(question)
@@ -333,6 +502,9 @@ def semantic_lookup(
     if best_sc < float(threshold):
         # Cue override: human "add" paraphrases with def-add gold.
         gold_probe = _row_gold(best_row)
+        if gold_probe and contrastive_reject(question, bank_q, gold_probe):
+            meta["kind"] = "REJECT_NEAR_MISS"
+            return None, meta
         if (
             gold_probe
             and "def add" in gold_probe
@@ -353,6 +525,9 @@ def semantic_lookup(
             str(second_gold), str(gold)
         )
         if not same_gold:
+            if contrastive_reject(question, bank_q, gold):
+                meta["kind"] = "REJECT_NEAR_MISS"
+                return None, meta
             meta["kind"] = "AMBIGUOUS"
             return None, meta
     if contrastive_reject(question, bank_q, gold):
