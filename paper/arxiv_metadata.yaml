@@ -1,0 +1,35 @@
+# arXiv submission metadata — nano-LM archive paper
+# After upload, set arxiv_id and commit.
+
+title: "Nano Generative Students under a Hard Parameter Cap: Honest Product Gains, Anti-False-Positive Evaluation, and Deferred Open-Ended Generation"
+software_version: "0.1.0-archive-ba"
+
+abstract: >
+  We report an archival study of a nano causal language-model student under a hard
+  parameter budget (≤5M) trained and served with curated public programming and
+  frontier corpora. Across research waves W–BA we separate efficiency tips/recipes,
+  a labeled interactive product stack (LOOKUP / PEAK / DECODE / ABSTAIN), and true
+  novel generative continue. Using production-path live ask as the evaluation oracle,
+  tip-stack recipes and known-ask wrappers yield measurable paraphrase hit-rate,
+  adversary/intent false-hit control, usable context content, and wall-clock p50/p99,
+  while open DECODE without wrap remains unsafe or empty and true_continue stays unmet.
+  We promote a strict ship claim (AF packaged stack + AQ/AS trust + ablated DECODE) and
+  honestly HOLD/DEFER nano generative / mini-AGI language until a real method clears
+  true-continue under anti-false-positive gates. Negative results are first-class evidence.
+
+authors:
+  - name: "Alexandre Zanata"
+    affiliation: "Independent Researcher"
+    orcid: null
+
+categories:
+  - cs.LG
+  - cs.CL
+
+comments: >
+  Archive through Wave BA. Code and frozen boards:
+  https://github.com/AlexandreZanata/ai-conceitual-teste
+  Companion lab methodology patterned on quantun-ia paper pipeline.
+
+arxiv_id: null
+journal_ref: null

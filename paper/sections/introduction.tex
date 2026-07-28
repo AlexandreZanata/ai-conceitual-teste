@@ -1,0 +1,45 @@
+\section{Introduction}
+\label{sec:introduction}
+
+Small language models are frequently marketed with large-model metaphors
+(``assistant'', ``AGI-lite'', ``chat'') while evaluation quietly rewards
+retrieval hits, cache hits, or in-bank paraphrase matches.
+This paper archives a multi-wave laboratory study of a \textbf{nano generative
+student} under a hard cap of $\leq$5M parameters, with the explicit north star of
+a \emph{mini-AGI-inspired} capability shape --- retrieve, generate, route, refuse,
+evaluate --- implemented by a small model, not by an unlabeled frontier chat clone.
+
+\paragraph{Problem.}
+Efficiency metrics (wall latency, effective context length) and product wrappers
+(known-answer banks) can look like intelligence gains.
+Without an anti-false-positive (anti-FP) scoreboard on the \emph{production} ask
+path, labs promote LOOKUP scores as IQ, PEAK spans as open chat, and span-fallback
+decode as generative unlock.
+
+\paragraph{Contribution.}
+We provide:
+\begin{enumerate}
+  \item A \textbf{three-layer claim discipline}: tip/recipe efficiency; labeled
+        product modes (\texttt{LOOKUP}/\texttt{PEAK}/\texttt{DECODE}/\texttt{ABSTAIN});
+        true novel continue (generative).
+  \item An \textbf{anti-FP evaluation law}: production ask $=$ eval; forever
+        held-out intent probes; intent-mismatch LOOKUP $=$ false-hit; exact-gold
+        abstain $=$ product miss; pack PASS with forever FP $=$ pack theater.
+  \item An archival consolidation of Waves W--BA: promoted recipes, product
+        trust path, measurable context/speed boards, and honest generative
+        HOLD/DEFER (NANOGEN6--11).
+  \item A documented \textbf{negative-results} catalog (killed tips, failed
+        interactive decode, rename theater) as scientific evidence.
+\end{enumerate}
+
+\paragraph{Headline claim (locked).}
+Under $\leq$5M, the lab ships a \textbf{labeled known-ask assistant} with refuse
+and mode honesty --- not an unlabeled open-chat LM and not true-continue unlock.
+The objective remains a nano generative / mini-AGI-inspired student; the archive
+records what is currently \emph{measured}, not what is hoped.
+
+Supporting public mirrors live under \texttt{docs/results/nano-lm/}
+(recipes, freeze notes, wave summaries). Private lab book: \texttt{.local/pesquisa.md}.
+The archival pipeline follows the same paper discipline used in our companion
+benchmark lab~\cite{quantun_ia}; the code archive is~\cite{nano_lm_lab}.
+Context on small coherent LMs and scaling appears in~\cite{tinystories,kaplan2020scaling}.

@@ -1,0 +1,50 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{Efficiency tips survive; interactive raw decode does not}
+Table~\ref{tab:tips} summarizes official tips.
+Wave~Z HITL showed that champion PFB decode without wrap fails interactive Q\&A
+(mean $\approx$1.0 / 10 errors), while \texttt{--wrap} LOOKUP reaches mean 9.0.
+This negative result is foundational: \textbf{serve recipes are not chat models}.
+
+\input{tables/tip_scoreboard}
+
+\subsection{Product anti-FP and forever held-out}
+Table~\ref{tab:antifp} reports Wave~BA H-REALGAIN: forever held-out intent
+false-hits 0/15, AZ hold 0/12, over-refuse misses 0/3, live FP 0.
+BA live battery passes 10/10 with modes labeled.
+Importantly, pre-BA live audit found outside-pack false-hits
+(\texttt{pow}/\texttt{mod}/\texttt{max}$\rightarrow$\texttt{add},
+\texttt{sort}$\rightarrow$\texttt{reverse}) while named packs looked green ---
+motivating forever held-out as a first-class gate.
+
+\input{tables/product_antifp}
+
+\subsection{Speed and context on the production path}
+Table~\ref{tab:latency} shows H-FASTREAL p50/p99 by mode on production ask.
+LOOKUP/PEAK are sub-millisecond; DECODE and ABSTAIN carry wall cost.
+H-CTXREAL2 promotes howto/cite/long content bars with anti-FP hold;
+$L_{\mathrm{eff}}$ alone is marked insufficient.
+
+\input{tables/latency_ba}
+
+\subsection{Generative north star: honest DEFER}
+Table~\ref{tab:gen} records \texttt{n\_true\_continue}=0 across NANOGEN6--11,
+with span-fallback credited only as PEAK, not generation.
+Ship claim remains:
+\begin{quote}
+AF packaged stack + AQ product layer + AS trust path + ablated DECODE
+(snippet-prefix + gibberish-tail STRICT) --- not unlabeled open chat;
+not TAC unlocked.
+\end{quote}
+
+\input{tables/generative_status}
+
+\subsection{Negative results strengthen positives}
+Table~\ref{tab:kills} lists killed tips.
+Additional negatives: ZPREF kill; SERVEALIGN/PARA holds; ADVREG kill;
+repeated CTX/SMART/FAST letter packs without new method; NANOGEN rename theater
+forbidden.
+Full catalog: \texttt{docs/negative\_results.md}.
+
+\input{tables/kill_archive}

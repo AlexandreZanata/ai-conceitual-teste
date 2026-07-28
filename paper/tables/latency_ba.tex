@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\caption{Production-path latency (H-FASTREAL). Wall ms; LOOKUP is bank hit (not generative IQ).}
+\label{tab:latency}
+\begin{tabular}{lrrr}
+\toprule
+Mode & $n$ & p50 wall\_ms & p99 wall\_ms \\
+\midrule
+LOOKUP & 64 & 0.00 & 0.00 \\
+PEAK & 128 & 0.009 & 0.016 \\
+DECODE & 12 & 12.68 & 17.01 \\
+ABSTAIN & 32 & 95.44 & 125.30 \\
+\bottomrule
+\end{tabular}
+\end{table}

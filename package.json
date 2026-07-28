@@ -6,6 +6,8 @@
   "scripts": {
     "prepare": "lefthook install || true",
     "verify": "bash scripts/check-quality.sh",
+    "paper:build": "bash scripts/build_nano_paper.sh",
+    "paper:bundle": "bash scripts/build_nano_paper.sh --bundle",
     "check:size": "python3 scripts/check_size_complexity.py --root .",
     "check:lint": "bash scripts/check-lint.sh",
     "check:system": "bash scripts/check-system.sh",

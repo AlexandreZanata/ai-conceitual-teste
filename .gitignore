@@ -44,3 +44,12 @@ results/*
 build/
 cmake-build-*/
 compile_commands.json
+
+# LaTeX paper build artifacts (sources stay; rebuild: npm run paper:build)
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/main.pdf
