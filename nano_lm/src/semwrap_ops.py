@@ -661,6 +661,152 @@ def _ask_is_title_case(a: str) -> bool:
     return "title case" in a or "titlecase" in a.replace(" ", "")
 
 
+def _type_digits_bool_cues(a: str) -> bool:
+    """True iff ask checks digits/numeric or bool→int representation."""
+    if "is numeric" in a or "isdigit" in a or "only digits" in a:
+        return True
+    if "integer parsing" in a or "parsing of s" in a:
+        return True
+    return ("true/false" in a or "true false" in a) and "integer" in a
+
+
+def _type_container_bytes_cues(a: str) -> bool:
+    """True iff ask wants list→tuple or bytes→string conversion."""
+    if "tuple" in a and "list" in a and any(
+        c in a for c in ("from", "make", "convert", "to a tuple", "to tuple")
+    ):
+        return True
+    return "bytes" in a and any(
+        c in a for c in ("string", "unicode", "decode", "convert")
+    )
+
+
+def _type_schema_neighbor_cues(a: str) -> bool:
+    """True iff ask is a type-schema neighbor (digits/bool/tuple/bytes)."""
+    return _type_digits_bool_cues(a) or _type_container_bytes_cues(a)
+
+
+def _type_cast_has_verb(a: str) -> bool:
+    """True iff ask uses a cast/convert verb (or into-int paraphrase)."""
+    verbs = (
+        "convert",
+        "cast",
+        "parse",
+        "coerce",
+        "turn ",
+        "transform",
+        "int from",
+        "string from",
+        "decode",
+    )
+    if any(v in a for v in verbs):
+        return True
+    return any(
+        p in a
+        for p in (
+            "into an integer",
+            "into integer",
+            "into a truncated int",
+            "into int",
+        )
+    )
+
+
+def _type_cast_has_dst(a: str) -> bool:
+    """True iff ask names a cast destination type/phrase."""
+    dst = (
+        "to integer",
+        "to an int",
+        "to int",
+        "as an int",
+        "as integer",
+        "as int",
+        "into an integer",
+        "into integer",
+        "into a truncated int",
+        "into int",
+        "to a string",
+        "to string",
+        "to a tuple",
+        "to tuple",
+        "0 or 1",
+        "decimal string",
+        "unicode string",
+    )
+    return any(d in a for d in dst)
+
+
+def _type_parse_coerce_cues(a: str) -> bool:
+    """True iff parse/coerce pairs with a type token."""
+    if "parse" in a and any(
+        t in a for t in ("integer", " int", "an int", "digits")
+    ):
+        return True
+    return "coerce" in a and any(
+        t in a for t in ("boolean", "bool", "integer", "int", "text")
+    )
+
+
+def _type_cast_decode_cues(a: str) -> bool:
+    """True iff cast/decode pairs with a type token."""
+    if "cast" in a and any(
+        t in a for t in ("string", "str", "int", "integer")
+    ):
+        return True
+    return "decode" in a and any(
+        t in a for t in ("bytes", "unicode", "string")
+    )
+
+
+def _type_cast_verb_typed(a: str) -> bool:
+    """True iff parse/coerce/cast/decode pairs with a type token."""
+    return _type_parse_coerce_cues(a) or _type_cast_decode_cues(a)
+
+
+def _type_cast_src_dst_pair(a: str) -> bool:
+    """True iff ask mentions both a source-ish and destination-ish type."""
+    src = (
+        "string",
+        "str",
+        "text",
+        "float",
+        "list",
+        "bytes",
+        "boolean",
+        "bool",
+        "number",
+    )
+    dst_tok = ("integer", "int", "string", "tuple", "numeric")
+    return any(s in a for s in src) and any(d in a for d in dst_tok)
+
+
+def _ask_is_type_coercion(a: str) -> bool:
+    """
+    True iff ask wants type/schema cast (BE1 compositional gate).
+
+    Catches str↔int · float→int · list→tuple · bytes→str · isnumeric ·
+    bool→int — without bank-stuffing forever seed strings.
+    """
+    if _ask_is_str_reverse(a) or _ask_is_title_case(a):
+        return False
+    if _type_schema_neighbor_cues(a):
+        return True
+    if not _type_cast_has_verb(a):
+        return False
+    if _type_cast_has_dst(a):
+        return True
+    if _type_cast_verb_typed(a):
+        return True
+    return _type_cast_src_dst_pair(a)
+
+
+def _type_coercion_add_false_friend(ask: str, gold: str) -> bool:
+    """True iff ask wants type cast but gold is sum add (BE1 forever)."""
+    if not _ask_is_type_coercion(ask.lower()):
+        return False
+    return _sum_add_gold(gold)
+
+
 def _len_gold(gold: str) -> bool:
     g = gold.lower().replace(" ", "")
     return g in {"len(a)", "len(a);"} or g.startswith("len(a)")
@@ -705,6 +851,7 @@ def _intent_mismatch_reject(ask: str, gold: str) -> bool:
         _sort_reverse_false_friend,
         _reverse_fstring_false_friend,
         _len_wrong_slot,
+        _type_coercion_add_false_friend,
         _bip39_wordlist_half_known,
         _bip39_entropy_wrong_slot,
     )
@@ -1079,7 +1226,8 @@ def intent_ask_must_abstain(ask: str) -> bool:
     THEN True iff ask is an intent-mismatch class that must ABSTAIN
          (mul/div/sub/pow/mod/max/min/xor/absdiff/and/or/
           floordiv/neg/gcd/lshift/rshift/nand/sort/len/
-          str-reverse/clamp/sort-return/title-case/…)
+          str-reverse/clamp/sort-return/title-case/
+          type-coercion str↔int·float→int·list→tuple·…/)
          — never bank-stuff.
     """
     a = normalize_question(ask)
@@ -1107,6 +1255,7 @@ def intent_ask_must_abstain(ask: str) -> bool:
         _ask_is_clamp_range,
         _ask_is_sort_return_value,
         _ask_is_title_case,
+        _ask_is_type_coercion,
         _ask_is_add_difference,
         _ask_is_remove_not_clear,
         _ask_is_bip39_wordlist,
