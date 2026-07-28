@@ -493,6 +493,8 @@
     "nano:report:ba": "nano_lm/.venv/bin/python nano_lm/src/run_ba_report.py",
     "nano:ba:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ba_freeze.py",
     "nano:freeze:ba": "nano_lm/.venv/bin/python nano_lm/src/run_ba_freeze.py",
+    "nano:bb:session": "nano_lm/.venv/bin/python nano_lm/src/run_bb_session.py",
+    "nano:bb-session": "nano_lm/.venv/bin/python nano_lm/src/run_bb_session.py",
     "nano:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:az:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:shipaz": "nano_lm/.venv/bin/python nano_lm/src/run_shipaz.py",
