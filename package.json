@@ -509,6 +509,8 @@
     "nano:report:bb": "nano_lm/.venv/bin/python nano_lm/src/run_bb_report.py",
     "nano:bb:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_bb_freeze.py",
     "nano:freeze:bb": "nano_lm/.venv/bin/python nano_lm/src/run_bb_freeze.py",
+    "nano:bc:session": "nano_lm/.venv/bin/python nano_lm/src/run_bc_session.py",
+    "nano:bc-session": "nano_lm/.venv/bin/python nano_lm/src/run_bc_session.py",
     "nano:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:az:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:shipaz": "nano_lm/.venv/bin/python nano_lm/src/run_shipaz.py",
