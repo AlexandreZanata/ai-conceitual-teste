@@ -485,6 +485,8 @@
     "nano:real-eval:az": "nano_lm/.venv/bin/python nano_lm/src/run_az_real_eval.py",
     "nano:az:report": "nano_lm/.venv/bin/python nano_lm/src/run_az_report.py",
     "nano:report:az": "nano_lm/.venv/bin/python nano_lm/src/run_az_report.py",
+    "nano:az:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_az_freeze.py",
+    "nano:freeze:az": "nano_lm/.venv/bin/python nano_lm/src/run_az_freeze.py",
     "nano:prodnat": "nano_lm/.venv/bin/python nano_lm/src/run_prodnat.py",
     "nano:ax:prodnat": "nano_lm/.venv/bin/python nano_lm/src/run_prodnat.py",
     "nano:prodint": "nano_lm/.venv/bin/python nano_lm/src/run_prodint.py",
