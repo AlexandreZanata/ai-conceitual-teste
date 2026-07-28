@@ -528,6 +528,8 @@
     "nano:be:session": "nano_lm/.venv/bin/python nano_lm/src/run_be_session.py",
     "nano:bf:session": "nano_lm/.venv/bin/python nano_lm/src/run_bf_session.py",
     "nano:compint": "nano_lm/.venv/bin/python nano_lm/src/run_compint.py",
+    "nano:predint": "nano_lm/.venv/bin/python nano_lm/src/run_predint.py",
+    "nano:bf:predint": "nano_lm/.venv/bin/python nano_lm/src/run_predint.py",
     "nano:be:compint": "nano_lm/.venv/bin/python nano_lm/src/run_compint.py",
     "nano:shipuse": "nano_lm/.venv/bin/python nano_lm/src/run_shipuse.py",
     "nano:be:shipuse": "nano_lm/.venv/bin/python nano_lm/src/run_shipuse.py",

@@ -807,6 +807,86 @@ def _type_coercion_add_false_friend(ask: str, gold: str) -> bool:
     return _sum_add_gold(gold)
 
 
+def _predicate_bool_result_cues(a: str) -> bool:
+    """True iff ask wants a boolean / True-False predicate result."""
+    cues = (
+        "returns true",
+        "return true",
+        "return a bool",
+        "returns a bool",
+        "return bool",
+        "returns bool",
+        "bool only",
+        "boolean",
+        "whether",
+        "predicate",
+        "true/false",
+        "true or false",
+        "true iff",
+        "returning true",
+        "returning a boolean",
+        "returns a boolean",
+        "return a boolean",
+        "indicating whether",
+        "answer true",
+    )
+    return any(c in a for c in cues)
+
+
+def _predicate_property_cues(a: str) -> bool:
+    """True iff ask names even/odd/parity/zero/compare property."""
+    props = (
+        "is even",
+        "even number",
+        "even parity",
+        "even integer",
+        "is odd",
+        "odd number",
+        "odd integer",
+        "same parity",
+        "parity",
+        "divisible by 2",
+        "remainder 0",
+        "mod 2",
+        "% 2",
+        "equals zero",
+        "equal to zero",
+        "is positive",
+        "less than b",
+        "greater than b",
+        "is_even",
+        "is_odd",
+    )
+    return any(p in a for p in props)
+
+
+def _ask_is_predicate_boolean(a: str) -> bool:
+    """
+    True iff ask wants a boolean/predicate answer (BF1 gate).
+
+    Catches even/odd/parity/zero/positive/compare-bool neighbors without
+    bank-stuffing forever seed strings. Must not fire on exact add gold.
+    """
+    if "is_even" in a or "is_odd" in a:
+        return True
+    if _predicate_property_cues(a) and _predicate_bool_result_cues(a):
+        return True
+    if "divisible by 2" in a and ("bool" in a or "boolean" in a):
+        return True
+    if ("mod 2" in a or "remainder 0" in a) and (
+        "bool" in a or "boolean" in a or "true" in a or "check" in a
+    ):
+        return True
+    return False
+
+
+def _predicate_boolean_add_false_friend(ask: str, gold: str) -> bool:
+    """True iff ask wants bool/predicate but gold is sum add (BF1 forever)."""
+    if not _ask_is_predicate_boolean(ask.lower()):
+        return False
+    return _sum_add_gold(gold)
+
+
 def _len_gold(gold: str) -> bool:
     g = gold.lower().replace(" ", "")
     return g in {"len(a)", "len(a);"} or g.startswith("len(a)")
@@ -852,6 +932,7 @@ def _intent_mismatch_reject(ask: str, gold: str) -> bool:
         _reverse_fstring_false_friend,
         _len_wrong_slot,
         _type_coercion_add_false_friend,
+        _predicate_boolean_add_false_friend,
         _bip39_wordlist_half_known,
         _bip39_entropy_wrong_slot,
     )
@@ -1227,7 +1308,8 @@ def intent_ask_must_abstain(ask: str) -> bool:
          (mul/div/sub/pow/mod/max/min/xor/absdiff/and/or/
           floordiv/neg/gcd/lshift/rshift/nand/sort/len/
           str-reverse/clamp/sort-return/title-case/
-          type-coercion str↔int·float→int·list→tuple·…/)
+          type-coercion str↔int·float→int·list→tuple·…/
+         predicate/boolean even·odd·parity·…/)
          — never bank-stuff.
     """
     a = normalize_question(ask)
@@ -1256,6 +1338,7 @@ def intent_ask_must_abstain(ask: str) -> bool:
         _ask_is_sort_return_value,
         _ask_is_title_case,
         _ask_is_type_coercion,
+        _ask_is_predicate_boolean,
         _ask_is_add_difference,
         _ask_is_remove_not_clear,
         _ask_is_bip39_wordlist,
