@@ -1,3 +1,4 @@
+**Wave AZ ACTIVE:** AZ0 [SESSION PROMOTE](wave-az-session.md) (`npm run nano:az:session`) — held-out intent FP · over-refuse gold · PRODGEN charter · gen stance **defer** (H-NANOGEN10) · real-eval; next AZ1 H-PRODGEN; ship remains **AF + AQ + AS trust + STRICT ablated DECODE**; NANOGEN6·7 HOLD · NANOGEN8·9 DEFER; ≤5M stays.
 **Wave AY COMPLETE + FROZEN:** AY0 [SESSION PROMOTE](wave-ay-session.md) (`npm run nano:ay:session`) · AY1 [H-PRODINT PROMOTE](formal-hprodint-prodint.md) (`npm run nano:prodint`) · AY2 [H-SHIPAY PROMOTE](formal-hshipay-shipay.md) (`npm run nano:shipay`) · AY3 [H-NANOGEN9 DEFER](formal-hnanogen9-nanogen9.md) (`npm run nano:nanogen9`) · AY4 [AY-REAL-EVAL PROMOTE](wave-ay-real-eval.md) (`npm run nano:ay:real-eval`) — battery 8/8 · AY5 [AY-REPORT PROMOTE](wave-ay-summary.md) (`npm run nano:ay:report`) · [paper-lab-wave-ay.md](paper-lab-wave-ay.md); AY6 [AY-FREEZE PROMOTE](ay-freeze.md) (`npm run nano:ay:freeze`) · [formal-hayfreeze-ay-freeze.md](formal-hayfreeze-ay-freeze.md) — ship **AF + AQ + AS trust + ablated DECODE (STRICT)**; H-NANOGEN9 DEFER (NANOGEN6·7 HOLD · NANOGEN8 DEFER stand); ≤5M stays; do not invent Wave AZ.
 # Official nano-LM recipes (frozen claims)
 
@@ -232,7 +233,8 @@
 | Wave AY3 H-NANOGEN9 | [formal-hnanogen9-nanogen9.md](formal-hnanogen9-nanogen9.md) **DEFER** (`npm run nano:nanogen9`) — gen stance defer · CAPCHECK closed · not NANOGEN8 rename · true_continue unmet |
 | Wave AY4 AY-REAL-EVAL | [wave-ay-real-eval.md](wave-ay-real-eval.md) **PROMOTE** (`npm run nano:ay:real-eval`) — battery 8/8 · gen locked (AY3 DEFER) · intent-FP ABSTAIN · prod=eval |
 | Wave AY5 AY-REPORT | [wave-ay-summary.md](wave-ay-summary.md) · [paper-lab-wave-ay.md](paper-lab-wave-ay.md) **PROMOTE** (`npm run nano:ay:report`) — anti-FP · NANOGEN6/7 HOLD · NANOGEN8 DEFER cited · gen DEFER |
-| Wave AY6 AY-FREEZE | [ay-freeze.md](ay-freeze.md) · [formal-hayfreeze-ay-freeze.md](formal-hayfreeze-ay-freeze.md) **PROMOTE** (`npm run nano:ay:freeze`) — COMPLETE+FROZEN; H-NANOGEN9 DEFER; do not invent Wave AZ |
+| Wave AY6 AY-FREEZE | [ay-freeze.md](ay-freeze.md) · [formal-hayfreeze-ay-freeze.md](formal-hayfreeze-ay-freeze.md) **PROMOTE** (`npm run nano:ay:freeze`) — COMPLETE+FROZEN; H-NANOGEN9 DEFER; Wave AZ reopened via lab-book |
+| Wave AZ0 SESSION | [wave-az-session.md](wave-az-session.md) **PROMOTE** (`npm run nano:az:session`) — held-out FP N≥12 · div·sub·wrong-slot · over-refuse a.clear() · PRODGEN charter · gen stance **defer** (H-NANOGEN10) · true-eval |
 | Wave AG1 H-ANTIFP | [formal-hantifp-antifp.md](formal-hantifp-antifp.md) **PROMOTE** (`npm run nano:antifp`) — LOOKUP≠gen IQ; dual-arm telemetry |
 | Wave AG2 H-CTXREAL | [formal-hctxreal-ctxreal.md](formal-hctxreal-ctxreal.md) **PROMOTE** (`npm run nano:ctxreal`) — quad-doc K=9; L_eff↑ vs CTXULTRA |
 | Wave AG3 H-SMARTREAL | [formal-hsmartreal-smartreal.md](formal-hsmartreal-smartreal.md) **HOLD** (`npm run nano:smartreal`) — cite 10/10; gen 4.0 &lt;5 |
