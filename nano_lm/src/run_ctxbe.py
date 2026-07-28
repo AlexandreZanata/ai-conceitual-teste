@@ -29,7 +29,7 @@ from ctxbe_ops import (
     overrefuse_miss,
     overrefuse_row_ok,
 )
-from be_session_ops import BE0_FOREVER_ROWS, map_be_product_mode
+from be_session_ops import BE0_FOREVER_ROWS
 from bd_session_ops import BD0_FOREVER_ROWS, BD0_MODES
 from bc_session_ops import BC0_FOREVER_ROWS
 from curated_sources import SOURCES
