@@ -532,6 +532,48 @@ def _or_add_predicate_swap(ask: str, gold: str) -> bool:
     return _ask_is_or2(ask.lower())
 
 
+def _floordiv_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants floordiv/a//b but gold is sum add (BC1)."""
+    if not _sum_add_gold(gold):
+        return False
+    return _ask_is_floordiv(ask.lower())
+
+
+def _neg_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants neg1/unary negation but gold is sum add (BC1)."""
+    if not _sum_add_gold(gold):
+        return False
+    return _ask_is_neg1(ask.lower())
+
+
+def _gcd_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants gcd2 but gold is sum add (BC1)."""
+    if not _sum_add_gold(gold):
+        return False
+    return _ask_is_gcd2(ask.lower())
+
+
+def _lshift_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants lshift2/a<<b but gold is sum add (BC1)."""
+    if not _sum_add_gold(gold):
+        return False
+    return _ask_is_lshift2(ask.lower())
+
+
+def _rshift_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants rshift2/a>>b but gold is sum add (BC1)."""
+    if not _sum_add_gold(gold):
+        return False
+    return _ask_is_rshift2(ask.lower())
+
+
+def _nand_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants nand2 but gold is sum add (BC1)."""
+    if not _sum_add_gold(gold):
+        return False
+    return _ask_is_nand2(ask.lower())
+
+
 def _reverse_gold(gold: str) -> bool:
     g = gold.lower().replace(" ", "")
     return "a.reverse()" in g or "a.reverse" in g
@@ -557,7 +599,7 @@ def _len_wrong_slot(ask: str, gold: str) -> bool:
 
 
 def _intent_mismatch_reject(ask: str, gold: str) -> bool:
-    """AY1+AZ1+BA1+BB1 intent/adversary traps — refuse wrong-gold LOOKUP."""
+    """AY1+AZ1+BA1+BB1+BC1 intent/adversary traps — refuse wrong-gold LOOKUP."""
     traps = (
         _mul_add_predicate_swap,
         _div_add_predicate_swap,
@@ -570,6 +612,12 @@ def _intent_mismatch_reject(ask: str, gold: str) -> bool:
         _absdiff_add_predicate_swap,
         _and_add_predicate_swap,
         _or_add_predicate_swap,
+        _floordiv_add_predicate_swap,
+        _neg_add_predicate_swap,
+        _gcd_add_predicate_swap,
+        _lshift_add_predicate_swap,
+        _rshift_add_predicate_swap,
+        _nand_add_predicate_swap,
         _add_difference_antonym,
         _remove_clear_false_friend,
         _sort_reverse_false_friend,
@@ -808,6 +856,119 @@ def _ask_is_or2(a: str) -> bool:
     return any(c in a for c in cues)
 
 
+def _ask_is_floordiv(a: str) -> bool:
+    cues = (
+        "named floordiv",
+        "function named floordiv",
+        "floordiv(a",
+        "floordiv (",
+        "floordiv",
+        "floor_div",
+        "ifloordiv",
+        "floor division",
+        "floor quotient",
+        "a // b",
+        "a//b",
+        "// of a by",
+        "// of",
+        "returning a // b",
+        "return a // b",
+    )
+    return any(c in a for c in cues)
+
+
+def _ask_is_neg1(a: str) -> bool:
+    cues = (
+        "named neg1",
+        "function named neg1",
+        "neg1(a",
+        "neg1 (",
+        "negate_one",
+        "unary negation",
+        "unary minus",
+        "negation of a",
+        "negation of int",
+        "negation of integer",
+        "returning -a",
+        "return -a",
+        "returning -x",
+        "return -x",
+    )
+    return any(c in a for c in cues)
+
+
+def _ask_is_gcd2(a: str) -> bool:
+    cues = (
+        "named gcd2",
+        "function named gcd2",
+        "gcd2(a",
+        "gcd2 (",
+        "gcds(a",
+        "gcds (",
+        "gcd helper",
+        "greatest common divisor",
+        "math.gcd",
+        "the gcd of",
+        "returns the gcd",
+    )
+    return any(c in a for c in cues)
+
+
+def _ask_is_lshift2(a: str) -> bool:
+    cues = (
+        "named lshift2",
+        "function named lshift2",
+        "lshift2(a",
+        "lshift2 (",
+        "shift_left",
+        "shifted left by",
+        "left-shift",
+        "left shift",
+        "a << b",
+        "a<<b",
+        "returning a << b",
+        "return a << b",
+    )
+    return any(c in a for c in cues)
+
+
+def _ask_is_rshift2(a: str) -> bool:
+    cues = (
+        "named rshift2",
+        "function named rshift2",
+        "rshift2(a",
+        "rshift2 (",
+        "shift_right",
+        "shifted right by",
+        "right-shift",
+        "right shift",
+        "a >> b",
+        "a>>b",
+        "returning a >> b",
+        "return a >> b",
+    )
+    return any(c in a for c in cues)
+
+
+def _ask_is_nand2(a: str) -> bool:
+    cues = (
+        "named nand2",
+        "function named nand2",
+        "nand2(a",
+        "nand2 (",
+        "bit_nand",
+        "not_and_bits",
+        "bitwise nand",
+        "nand of two",
+        "nand of",
+        "~(a & b)",
+        "~(a&b)",
+        "returning ~(a & b)",
+        "return ~(a & b)",
+    )
+    return any(c in a for c in cues)
+
+
 def _ask_is_sort_asc(a: str) -> bool:
     if "reverse" in a and (
         "do not reverse" in a
@@ -842,7 +1003,8 @@ def intent_ask_must_abstain(ask: str) -> bool:
     GIVEN novel ask on production SEMWRAP path
     WHEN no exact bank hit
     THEN True iff ask is an intent-mismatch class that must ABSTAIN
-         (mul/div/sub/pow/mod/max/min/xor/absdiff/and/or/sort/len/…)
+         (mul/div/sub/pow/mod/max/min/xor/absdiff/and/or/
+          floordiv/neg/gcd/lshift/rshift/nand/sort/len/…)
          — never bank-stuff.
     """
     a = normalize_question(ask)
@@ -858,6 +1020,12 @@ def intent_ask_must_abstain(ask: str) -> bool:
         _ask_is_absdiff,
         _ask_is_and2,
         _ask_is_or2,
+        _ask_is_floordiv,
+        _ask_is_neg1,
+        _ask_is_gcd2,
+        _ask_is_lshift2,
+        _ask_is_rshift2,
+        _ask_is_nand2,
         _ask_is_sort_asc,
         _ask_is_list_len,
         _ask_is_add_difference,
