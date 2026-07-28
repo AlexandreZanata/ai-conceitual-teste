@@ -518,6 +518,8 @@
     "nano:bd:fastgain": "nano_lm/.venv/bin/python nano_lm/src/run_bd_fastgain.py",
     "nano:fastgain": "nano_lm/.venv/bin/python nano_lm/src/run_bd_fastgain.py",
     "nano:bd:ctxgain": "nano_lm/.venv/bin/python nano_lm/src/run_bd_ctxgain.py",
+    "nano:nanogen14": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen14.py",
+    "nano:bd:nanogen14": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen14.py",
     "nano:ctxgain": "nano_lm/.venv/bin/python nano_lm/src/run_bd_ctxgain.py",
     "nano:opsfam": "nano_lm/.venv/bin/python nano_lm/src/run_opsfam.py",
     "nano:bc:opsfam": "nano_lm/.venv/bin/python nano_lm/src/run_opsfam.py",
