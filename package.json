@@ -475,6 +475,8 @@
     "nano:ay-session": "nano_lm/.venv/bin/python nano_lm/src/run_ay_session.py",
     "nano:az:session": "nano_lm/.venv/bin/python nano_lm/src/run_az_session.py",
     "nano:az-session": "nano_lm/.venv/bin/python nano_lm/src/run_az_session.py",
+    "nano:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
+    "nano:az:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:prodnat": "nano_lm/.venv/bin/python nano_lm/src/run_prodnat.py",
     "nano:ax:prodnat": "nano_lm/.venv/bin/python nano_lm/src/run_prodnat.py",
     "nano:prodint": "nano_lm/.venv/bin/python nano_lm/src/run_prodint.py",

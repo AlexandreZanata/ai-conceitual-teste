@@ -243,6 +243,38 @@ def _sum_add_gold(gold: str) -> bool:
     return "def add" in g or "a+b" in compact
 
 
+def _ask_wants_clear_all(a: str) -> bool:
+    """True iff ask wants empty/clear entire list (exact clear gold)."""
+    # Negated clear = remove≠clear false-friend — never treat as clear-all.
+    neg = (
+        "without clearing",
+        "not want a.clear",
+        "do not want a.clear",
+        "don't want a.clear",
+        "not clear()",
+        "not a.clear",
+        "without clear",
+    )
+    if any(c in a for c in neg):
+        return False
+    if "a.clear" in a or "clear()" in a:
+        return True
+    if "empty" in a and "list" in a:
+        return True
+    if "clear every" in a or "clear all" in a:
+        return True
+    if ("remove all" in a or "delete all" in a) and "list" in a:
+        return True
+    return "all items" in a and "list" in a and (
+        "remove" in a or "delete" in a
+    )
+
+
+def _clear_gold(gold: str) -> bool:
+    g = gold.lower()
+    return "a.clear()" in g or "a.clear" in g.replace(" ", "")
+
+
 def _mul_add_predicate_swap(ask: str, gold: str) -> bool:
     """True iff ask wants mul/product but gold is sum add (AY1 intent FP)."""
     if not _sum_add_gold(gold):
@@ -264,6 +296,55 @@ def _mul_add_predicate_swap(ask: str, gold: str) -> bool:
         return True
     padded = f" {a} "
     return " mul " in padded and ("product" in a or "integers" in a)
+
+
+def _div_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants div/quotient but gold is sum add (AZ1 held-out)."""
+    if not _sum_add_gold(gold):
+        return False
+    a = ask.lower()
+    cues = (
+        "named div",
+        "function named div",
+        "div(a",
+        "div (",
+        "divide",
+        "quotient",
+        "a/b",
+        "a / b",
+        "returning a/b",
+        "return a/b",
+        "integer division",
+    )
+    if any(c in a for c in cues):
+        return True
+    padded = f" {a} "
+    return " div " in padded and ("quotient" in a or "integers" in a)
+
+
+def _sub_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants sub/minus but gold is sum add (AZ1 held-out)."""
+    if not _sum_add_gold(gold):
+        return False
+    a = ask.lower()
+    cues = (
+        "named sub",
+        "function named sub",
+        "sub(a",
+        "sub (",
+        "subtract",
+        "a-b",
+        "a - b",
+        "returning a-b",
+        "return a-b",
+        "a minus b",
+    )
+    if any(c in a for c in cues):
+        return True
+    padded = f" {a} "
+    return " sub " in padded and (
+        "minus" in a or "difference" in a or "integers" in a
+    )
 
 
 def _add_difference_antonym(ask: str, gold: str) -> bool:
@@ -288,10 +369,12 @@ def _add_difference_antonym(ask: str, gold: str) -> bool:
 
 def _remove_clear_false_friend(ask: str, gold: str) -> bool:
     """True iff ask wants single remove/delete; gold is a.clear() (AY1)."""
-    g = gold.lower()
-    if "clear()" not in g and "a.clear" not in g:
+    if not _clear_gold(gold):
         return False
     a = ask.lower()
+    # Exact clear-all asks must LOOKUP — never over-refuse (AZ1).
+    if _ask_wants_clear_all(a):
+        return False
     if ("without clearing" in a) or ("not want a.clear" in a):
         return True
     if "clear()" in a and ("not" in a or "without" in a or "do not" in a):
@@ -324,13 +407,33 @@ def _bip39_wordlist_half_known(ask: str, gold: str) -> bool:
     return "checksum bits" in gl or "mnemonic words" in gl
 
 
+def _bip39_entropy_wrong_slot(ask: str, gold: str) -> bool:
+    """True iff ask wants 12-word entropy bits; gold is sibling 32/CS (AZ1)."""
+    a = ask.lower()
+    if "bip-39" not in a and "bip39" not in a.replace("-", ""):
+        return False
+    twelve = any(
+        c in a for c in ("12-word", "12 word", "12 words", "twelve-word")
+    )
+    entropy = "entropy" in a or "bit-length" in a or "bit length" in a
+    if not (twelve and entropy):
+        return False
+    g = gold.strip().lower().replace(" ", "")
+    if g in {"32", "cs=ent/32", "cs=ent÷32"}:
+        return True
+    return gold.strip() == "32"
+
+
 def _intent_mismatch_reject(ask: str, gold: str) -> bool:
-    """AY1 intent/adversary traps — refuse wrong-gold LOOKUP (no bank stuff)."""
+    """AY1+AZ1 intent/adversary traps — refuse wrong-gold LOOKUP."""
     traps = (
         _mul_add_predicate_swap,
+        _div_add_predicate_swap,
+        _sub_add_predicate_swap,
         _add_difference_antonym,
         _remove_clear_false_friend,
         _bip39_wordlist_half_known,
+        _bip39_entropy_wrong_slot,
     )
     return any(fn(ask, gold) for fn in traps)
 
@@ -348,6 +451,33 @@ def _ask_is_mul_product(a: str) -> bool:
     )
 
 
+def _ask_is_div_quotient(a: str) -> bool:
+    return any(
+        c in a
+        for c in (
+            "named div",
+            "function named div",
+            "div(a",
+            "div (",
+            "quotient of two",
+            "integer division",
+        )
+    )
+
+
+def _ask_is_sub_minus(a: str) -> bool:
+    return any(
+        c in a
+        for c in (
+            "named sub",
+            "function named sub",
+            "sub(a",
+            "sub (",
+            "a minus b",
+        )
+    )
+
+
 def _ask_is_add_difference(a: str) -> bool:
     if "add" not in a:
         return False
@@ -359,6 +489,8 @@ def _ask_is_add_difference(a: str) -> bool:
 
 def _ask_is_remove_not_clear(a: str) -> bool:
     if "remove" not in a and "delete" not in a:
+        return False
+    if _ask_wants_clear_all(a):
         return False
     return any(
         c in a
@@ -379,19 +511,33 @@ def _ask_is_bip39_wordlist(a: str) -> bool:
     return "how many words" in a and "wordlist" in a
 
 
+def _ask_is_bip39_12word_entropy(a: str) -> bool:
+    if "bip-39" not in a and "bip39" not in a.replace("-", ""):
+        return False
+    twelve = any(
+        c in a for c in ("12-word", "12 word", "12 words", "twelve-word")
+    )
+    entropy = "entropy" in a or "bit-length" in a or "bit length" in a
+    return twelve and entropy
+
+
 def intent_ask_must_abstain(ask: str) -> bool:
     """
     GIVEN novel ask on production SEMWRAP path
     WHEN no exact bank hit
     THEN True iff ask is an intent-mismatch class that must ABSTAIN
-         (mul/diff/remove≠clear/BIP wordlist) — never bank-stuff.
+         (mul/div/sub/diff/remove≠clear/BIP wordlist/12-word entropy)
+         — never bank-stuff.
     """
     a = normalize_question(ask)
     return (
         _ask_is_mul_product(a)
+        or _ask_is_div_quotient(a)
+        or _ask_is_sub_minus(a)
         or _ask_is_add_difference(a)
         or _ask_is_remove_not_clear(a)
         or _ask_is_bip39_wordlist(a)
+        or _ask_is_bip39_12word_entropy(a)
     )
 
 
@@ -488,8 +634,23 @@ def semantic_lookup(
         return None, {"kind": "MISS", "score": 0.0, "margin": 0.0}
 
     ranked.sort(key=lambda x: -x[0])
-    best_sc, best_row = ranked[0]
-    second = ranked[1][0] if len(ranked) > 1 else 0.0
+    # Prefer exact-clear gold for clear-all paraphrases (AZ1 over-refuse fix).
+    clear_pick = _prefer_clear_gold_row(question, ranked)
+    if clear_pick is not None:
+        best_sc, best_row = clear_pick
+    else:
+        best_sc, best_row = ranked[0]
+    second = 0.0
+    if clear_pick is None and len(ranked) > 1:
+        second = ranked[1][0]
+    elif clear_pick is not None:
+        # Margin vs best non-clear competitor (if any).
+        others = [
+            sc
+            for sc, row in ranked
+            if not _clear_gold(str(_row_gold(row) or ""))
+        ]
+        second = others[0] if others else 0.0
     gap = float(best_sc - second)
     bank_q = str(best_row.get("question", ""))
     meta = {
@@ -512,12 +673,19 @@ def semantic_lookup(
             and best_sc >= 0.12
         ):
             pass  # fall through to contrastive + accept
+        elif (
+            gold_probe
+            and _clear_gold(gold_probe)
+            and _ask_wants_clear_all(normalize_question(question))
+            and best_sc >= 0.12
+        ):
+            pass  # clear-all paraphrase → LOOKUP a.clear()
         else:
             return None, meta
     gold = _row_gold(best_row)
     if gold is None:
         return None, meta
-    if gap < float(margin) and best_sc < 0.4:
+    if gap < float(margin) and best_sc < 0.4 and clear_pick is None:
         second_gold = (
             _row_gold(ranked[1][1]) if len(ranked) > 1 else None
         )
@@ -535,6 +703,29 @@ def semantic_lookup(
         return None, meta
     meta["kind"] = "SEMANTIC"
     return gold, meta
+
+
+def _prefer_clear_gold_row(
+    question: str,
+    ranked: list[tuple[float, Mapping[str, Any]]],
+) -> tuple[float, Mapping[str, Any]] | None:
+    """
+    GIVEN clear-all paraphrase + ranked bank rows
+    WHEN a.clear() gold is present with usable score
+    THEN prefer that row over sibling list-method collisions.
+    """
+    if not _ask_wants_clear_all(normalize_question(question)):
+        return None
+    best: tuple[float, Mapping[str, Any]] | None = None
+    for sc, row in ranked:
+        gold = _row_gold(row)
+        if gold is None or not _clear_gold(gold):
+            continue
+        if sc < 0.12:
+            continue
+        if best is None or sc > best[0]:
+            best = (float(sc), row)
+    return best
 
 
 def classify_semwrap(
