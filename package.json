@@ -513,6 +513,8 @@
     "nano:bc-session": "nano_lm/.venv/bin/python nano_lm/src/run_bc_session.py",
     "nano:bd:session": "nano_lm/.venv/bin/python nano_lm/src/run_bd_session.py",
     "nano:bd-session": "nano_lm/.venv/bin/python nano_lm/src/run_bd_session.py",
+    "nano:semint": "nano_lm/.venv/bin/python nano_lm/src/run_semint.py",
+    "nano:bd:semint": "nano_lm/.venv/bin/python nano_lm/src/run_semint.py",
     "nano:opsfam": "nano_lm/.venv/bin/python nano_lm/src/run_opsfam.py",
     "nano:bc:opsfam": "nano_lm/.venv/bin/python nano_lm/src/run_opsfam.py",
     "nano:bc:fastlift": "nano_lm/.venv/bin/python nano_lm/src/run_bc_fastlift.py",

@@ -275,27 +275,44 @@ def _clear_gold(gold: str) -> bool:
     return "a.clear()" in g or "a.clear" in g.replace(" ", "")
 
 
-def _mul_add_predicate_swap(ask: str, gold: str) -> bool:
-    """True iff ask wants mul/product but gold is sum add (AY1 intent FP)."""
-    if not _sum_add_gold(gold):
-        return False
-    a = ask.lower()
+def _mul_product_cues(a: str) -> bool:
+    """True iff ask asks for multiply/product (BD1 family — not add)."""
     cues = (
         "named mul",
         "function named mul",
         "mul(a",
         "mul (",
+        "mul2",
         "multiply",
+        "multiplies",
+        "multiplication",
         "product of",
+        "returns the product",
+        "returning the product",
+        "return the product",
+        "a times b",
         "a*b",
         "a * b",
         "returning a*b",
         "return a*b",
+        "returning a * b",
+        "return a * b",
+        "product(a",
+        "product (",
     )
     if any(c in a for c in cues):
         return True
     padded = f" {a} "
-    return " mul " in padded and ("product" in a or "integers" in a)
+    if " mul " in padded and ("product" in a or "integers" in a):
+        return True
+    return "product" in a and ("function" in a or "ints" in a or "integers" in a)
+
+
+def _mul_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants mul/product but gold is sum add (AY1+BD1)."""
+    if not _sum_add_gold(gold):
+        return False
+    return _mul_product_cues(ask.lower())
 
 
 def _div_add_predicate_swap(ask: str, gold: str) -> bool:
@@ -579,6 +596,71 @@ def _reverse_gold(gold: str) -> bool:
     return "a.reverse()" in g or "a.reverse" in g
 
 
+def _fstring_format_gold(gold: str) -> bool:
+    """True iff gold is f-string / format FAQ (BD1 wrong-bank for reverse)."""
+    g = gold.lower()
+    if "begin the string with f or f" in g:
+        return True
+    if "f or f before the opening quotation" in g:
+        return True
+    if "f-string" in g or "f string" in g:
+        return True
+    if "format(" in g.replace(" ", "") and "string" in g:
+        return True
+    return "opening quotation mark" in g and ("f or f" in g or " f " in g)
+
+
+def _ask_is_str_reverse(a: str) -> bool:
+    """True iff ask wants string reverse (BD1) — not list.sort reverse."""
+    if _ask_is_sort_asc(a):
+        return False
+    if "do not reverse" in a or "don't reverse" in a:
+        return False
+    cues = (
+        "reverse a string",
+        "reverse the string",
+        "reverse string",
+        "reversed version of string",
+        "reversed string",
+        "reverse the characters",
+        "s[::-1]",
+        "[::-1]",
+        "reverse characters of a text",
+        "reverse the characters of a text",
+    )
+    if any(c in a for c in cues):
+        return True
+    if "reverse" in a and "string" in a:
+        return True
+    return "reversed" in a and "string" in a
+
+
+def _reverse_fstring_false_friend(ask: str, gold: str) -> bool:
+    """True iff ask wants string reverse but gold is f-string/format (BD1)."""
+    if not _ask_is_str_reverse(ask.lower()):
+        return False
+    return _fstring_format_gold(gold)
+
+
+def _ask_is_clamp_range(a: str) -> bool:
+    """True iff ask wants clamp between lo/hi (BD1 wrong-bank neighbor)."""
+    if "clamp" in a:
+        return True
+    return "between lo and hi" in a or "between low and high" in a
+
+
+def _ask_is_sort_return_value(a: str) -> bool:
+    """True iff ask asks what list.sort() returns (BD1 neighbor)."""
+    if "list.sort()" in a.replace(" ", "") or "list.sort()" in a:
+        return True
+    return "sort() return" in a or "does list.sort return" in a.replace(" ", "")
+
+
+def _ask_is_title_case(a: str) -> bool:
+    """True iff ask wants title-case conversion (BD1 neighbor ≠ f-string)."""
+    return "title case" in a or "titlecase" in a.replace(" ", "")
+
+
 def _len_gold(gold: str) -> bool:
     g = gold.lower().replace(" ", "")
     return g in {"len(a)", "len(a);"} or g.startswith("len(a)")
@@ -599,7 +681,7 @@ def _len_wrong_slot(ask: str, gold: str) -> bool:
 
 
 def _intent_mismatch_reject(ask: str, gold: str) -> bool:
-    """AY1+AZ1+BA1+BB1+BC1 intent/adversary traps — refuse wrong-gold LOOKUP."""
+    """AY1+AZ1+BA1+BB1+BC1+BD1 intent/adversary traps — refuse wrong-gold LOOKUP."""
     traps = (
         _mul_add_predicate_swap,
         _div_add_predicate_swap,
@@ -621,6 +703,7 @@ def _intent_mismatch_reject(ask: str, gold: str) -> bool:
         _add_difference_antonym,
         _remove_clear_false_friend,
         _sort_reverse_false_friend,
+        _reverse_fstring_false_friend,
         _len_wrong_slot,
         _bip39_wordlist_half_known,
         _bip39_entropy_wrong_slot,
@@ -629,16 +712,7 @@ def _intent_mismatch_reject(ask: str, gold: str) -> bool:
 
 
 def _ask_is_mul_product(a: str) -> bool:
-    return any(
-        c in a
-        for c in (
-            "named mul",
-            "function named mul",
-            "mul(a",
-            "mul (",
-            "product of two",
-        )
-    )
+    return _mul_product_cues(a)
 
 
 def _ask_is_div_quotient(a: str) -> bool:
@@ -1004,7 +1078,8 @@ def intent_ask_must_abstain(ask: str) -> bool:
     WHEN no exact bank hit
     THEN True iff ask is an intent-mismatch class that must ABSTAIN
          (mul/div/sub/pow/mod/max/min/xor/absdiff/and/or/
-          floordiv/neg/gcd/lshift/rshift/nand/sort/len/…)
+          floordiv/neg/gcd/lshift/rshift/nand/sort/len/
+          str-reverse/clamp/sort-return/title-case/…)
          — never bank-stuff.
     """
     a = normalize_question(ask)
@@ -1028,6 +1103,10 @@ def intent_ask_must_abstain(ask: str) -> bool:
         _ask_is_nand2,
         _ask_is_sort_asc,
         _ask_is_list_len,
+        _ask_is_str_reverse,
+        _ask_is_clamp_range,
+        _ask_is_sort_return_value,
+        _ask_is_title_case,
         _ask_is_add_difference,
         _ask_is_remove_not_clear,
         _ask_is_bip39_wordlist,
