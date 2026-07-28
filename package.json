@@ -486,6 +486,8 @@
     "nano:ba:ctxreal2": "nano_lm/.venv/bin/python nano_lm/src/run_ba_ctxreal2.py",
     "nano:ctxreal2": "nano_lm/.venv/bin/python nano_lm/src/run_ba_ctxreal2.py",
     "nano:nanogen11": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen11.py",
+    "nano:nanogen12": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen12.py",
+    "nano:bb:nanogen12": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen12.py",
     "nano:ba:nanogen11": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen11.py",
     "nano:ba:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_ba_real_eval.py",
     "nano:real-eval:ba": "nano_lm/.venv/bin/python nano_lm/src/run_ba_real_eval.py",
