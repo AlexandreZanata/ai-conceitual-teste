@@ -522,6 +522,8 @@
     "nano:bc:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_bc_real_eval.py",
     "nano:bc:report": "nano_lm/.venv/bin/python nano_lm/src/run_bc_report.py",
     "nano:report:bc": "nano_lm/.venv/bin/python nano_lm/src/run_bc_report.py",
+    "nano:bc:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_bc_freeze.py",
+    "nano:freeze:bc": "nano_lm/.venv/bin/python nano_lm/src/run_bc_freeze.py",
     "nano:real-eval:bc": "nano_lm/.venv/bin/python nano_lm/src/run_bc_real_eval.py",
     "nano:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:az:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
