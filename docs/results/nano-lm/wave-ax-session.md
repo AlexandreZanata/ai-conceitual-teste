@@ -149,7 +149,8 @@ Contract: `nano_lm/tests/test_ax_session.py`.
 
 - AW packs frozen for Wave AX — **not** open chat LM.  
 - Ship claim until generative gate clears: **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM · not TAC unlocked**.  
-- Generative PROMOTE only via later **AX3 H-NANOGEN8** true_continue under a real new method (never NANOGEN7+rename; span-fallback ≠ gen).  
+- Generative PROMOTE only via **AX3 H-NANOGEN8** true_continue under a real new method (never NANOGEN7+rename; span-fallback ≠ gen).  
+- **AX3 outcome:** [formal-hnanogen8-nanogen8.md](formal-hnanogen8-nanogen8.md) **DEFER** (`npm run nano:nanogen8`) — stance defer · CAPCHECK closed · no real new method.  
 - Forbidden: LOOKUP-as-IQ · peak-as-open-chat · SAFE-as-quality · pack-para as hard-natural coverage · gold-substring PROMOTE · span-fallback as gen · DECODE telemetry-only content_ok · eval↔prod gap · mini-AGI claim early · NANOGEN8 rename · CTX/SMART/FAST/APP clone · bank stuffing · vanity re-SEMFIX.
 
-Next: **AX1 H-PRODNAT** — accept Caminho A; close hard-natural para debt; publish para · FH · p50/p99 · KB.
+Next: **AX4 AX-REAL-EVAL** — product + gen + live ask (prod = eval); gen claim only if AX3 PROMOTE (deferred).
