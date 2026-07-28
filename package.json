@@ -499,6 +499,8 @@
     "nano:bb:intentgen": "nano_lm/.venv/bin/python nano_lm/src/run_intentgen.py",
     "nano:fasthold": "nano_lm/.venv/bin/python nano_lm/src/run_bb_fasthold.py",
     "nano:bb:fasthold": "nano_lm/.venv/bin/python nano_lm/src/run_bb_fasthold.py",
+    "nano:ctxhold": "nano_lm/.venv/bin/python nano_lm/src/run_bb_ctxhold.py",
+    "nano:bb:ctxhold": "nano_lm/.venv/bin/python nano_lm/src/run_bb_ctxhold.py",
     "nano:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:az:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:shipaz": "nano_lm/.venv/bin/python nano_lm/src/run_shipaz.py",
