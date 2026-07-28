@@ -424,14 +424,116 @@ def _bip39_entropy_wrong_slot(ask: str, gold: str) -> bool:
     return gold.strip() == "32"
 
 
+def _pow_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants pow/power but gold is sum add (BA1 forever)."""
+    if not _sum_add_gold(gold):
+        return False
+    a = ask.lower()
+    cues = (
+        "named pow2",
+        "function named pow2",
+        "named pow",
+        "function named pow",
+        "pow2(a",
+        "pow2 (",
+        "pow(a",
+        "pow (",
+        "power(a",
+        "raised to the power",
+        "a**b",
+        "a ** b",
+        "returning a**b",
+        "return a**b",
+        "exponentiate",
+    )
+    if any(c in a for c in cues):
+        return True
+    padded = f" {a} "
+    return " pow2 " in padded or (
+        " power " in padded and ("integers" in a or "raised" in a)
+    )
+
+
+def _mod_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants mod/remainder but gold is sum add (BA1 forever)."""
+    if not _sum_add_gold(gold):
+        return False
+    a = ask.lower()
+    cues = (
+        "named mod",
+        "function named mod",
+        "mod(a",
+        "mod (",
+        "remainder",
+        "a % b",
+        "a%b",
+        "returning a % b",
+        "return a % b",
+        "returning a%b",
+        "return a%b",
+    )
+    if any(c in a for c in cues):
+        return True
+    padded = f" {a} "
+    return " mod " in padded and ("remainder" in a or "integers" in a)
+
+
+def _max_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants max2/larger-of but gold is sum add (BA1 forever)."""
+    if not _sum_add_gold(gold):
+        return False
+    a = ask.lower()
+    cues = (
+        "named max2",
+        "function named max2",
+        "max2(a",
+        "max2 (",
+        "larger of two",
+        "larger of",
+        "greater of two",
+        "greater value",
+        "the larger of",
+    )
+    return any(c in a for c in cues)
+
+
+def _reverse_gold(gold: str) -> bool:
+    g = gold.lower().replace(" ", "")
+    return "a.reverse()" in g or "a.reverse" in g
+
+
+def _len_gold(gold: str) -> bool:
+    g = gold.lower().replace(" ", "")
+    return g in {"len(a)", "len(a);"} or g.startswith("len(a)")
+
+
+def _sort_reverse_false_friend(ask: str, gold: str) -> bool:
+    """True iff ask wants sort ascending; gold is a.reverse() (BA1)."""
+    if not _reverse_gold(gold):
+        return False
+    return _ask_is_sort_asc(ask.lower())
+
+
+def _len_wrong_slot(ask: str, gold: str) -> bool:
+    """True iff ask wants list length; gold is not len(a) (BA1)."""
+    if not _ask_is_list_len(ask.lower()):
+        return False
+    return not _len_gold(gold)
+
+
 def _intent_mismatch_reject(ask: str, gold: str) -> bool:
-    """AY1+AZ1 intent/adversary traps — refuse wrong-gold LOOKUP."""
+    """AY1+AZ1+BA1 intent/adversary traps — refuse wrong-gold LOOKUP."""
     traps = (
         _mul_add_predicate_swap,
         _div_add_predicate_swap,
         _sub_add_predicate_swap,
+        _pow_add_predicate_swap,
+        _mod_add_predicate_swap,
+        _max_add_predicate_swap,
         _add_difference_antonym,
         _remove_clear_false_friend,
+        _sort_reverse_false_friend,
+        _len_wrong_slot,
         _bip39_wordlist_half_known,
         _bip39_entropy_wrong_slot,
     )
@@ -521,24 +623,117 @@ def _ask_is_bip39_12word_entropy(a: str) -> bool:
     return twelve and entropy
 
 
+def _ask_is_pow_power(a: str) -> bool:
+    cues = (
+        "named pow2",
+        "function named pow2",
+        "named pow",
+        "function named pow",
+        "pow2(a",
+        "pow2 (",
+        "pow(a",
+        "pow (",
+        "power(a",
+        "raised to the power",
+        "a**b",
+        "a ** b",
+        "exponentiate",
+    )
+    if any(c in a for c in cues):
+        return True
+    padded = f" {a} "
+    return " pow2 " in padded or (
+        " power " in padded and ("integers" in a or "raised" in a)
+    )
+
+
+def _ask_is_mod_remainder(a: str) -> bool:
+    cues = (
+        "named mod",
+        "function named mod",
+        "mod(a",
+        "mod (",
+        "a % b",
+        "a%b",
+        "returning a % b",
+        "return a % b",
+    )
+    if any(c in a for c in cues):
+        return True
+    if "remainder" in a and ("mod" in a or "divided by" in a or "%" in a):
+        return True
+    padded = f" {a} "
+    return " mod " in padded and ("remainder" in a or "integers" in a)
+
+
+def _ask_is_max2_larger(a: str) -> bool:
+    cues = (
+        "named max2",
+        "function named max2",
+        "max2(a",
+        "max2 (",
+        "larger of two",
+        "larger of",
+        "greater of two",
+        "greater value",
+        "the larger of",
+    )
+    return any(c in a for c in cues)
+
+
+def _ask_is_sort_asc(a: str) -> bool:
+    if "reverse" in a and (
+        "do not reverse" in a
+        or "without reversing" in a
+        or "not reverse" in a
+        or "not a.reverse" in a
+    ):
+        return "sort" in a or "ascending" in a or "order list" in a
+    if "sort" in a and ("list" in a or "ascending" in a or "in place" in a):
+        return True
+    if "ascending" in a and "list" in a:
+        return True
+    return "order list" in a and (
+        "smallest" in a or "largest" in a or "ascending" in a
+    )
+
+
+def _ask_is_list_len(a: str) -> bool:
+    if "len(a)" in a.replace(" ", ""):
+        return True
+    if "length of" in a and "list" in a:
+        return True
+    if "how many elements" in a and "list" in a:
+        return True
+    if "how many items" in a and "list" in a:
+        return True
+    return "length of python list" in a
+
+
 def intent_ask_must_abstain(ask: str) -> bool:
     """
     GIVEN novel ask on production SEMWRAP path
     WHEN no exact bank hit
     THEN True iff ask is an intent-mismatch class that must ABSTAIN
-         (mul/div/sub/diff/remove≠clear/BIP wordlist/12-word entropy)
+         (mul/div/sub/pow/mod/max/sort/len/diff/remove≠clear/BIP)
          — never bank-stuff.
     """
     a = normalize_question(ask)
-    return (
-        _ask_is_mul_product(a)
-        or _ask_is_div_quotient(a)
-        or _ask_is_sub_minus(a)
-        or _ask_is_add_difference(a)
-        or _ask_is_remove_not_clear(a)
-        or _ask_is_bip39_wordlist(a)
-        or _ask_is_bip39_12word_entropy(a)
+    detectors = (
+        _ask_is_mul_product,
+        _ask_is_div_quotient,
+        _ask_is_sub_minus,
+        _ask_is_pow_power,
+        _ask_is_mod_remainder,
+        _ask_is_max2_larger,
+        _ask_is_sort_asc,
+        _ask_is_list_len,
+        _ask_is_add_difference,
+        _ask_is_remove_not_clear,
+        _ask_is_bip39_wordlist,
+        _ask_is_bip39_12word_entropy,
     )
+    return any(fn(a) for fn in detectors)
 
 
 def _gold_equiv(a: str, b: str) -> bool:
