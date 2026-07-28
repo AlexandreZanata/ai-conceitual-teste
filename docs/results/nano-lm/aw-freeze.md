@@ -4,6 +4,8 @@
 > Module: `nano_lm/src/aw_freeze_ops.py` · Runner: `npm run nano:aw:freeze`  
 > Parent: [av-freeze.md](av-freeze.md) · [wave-aw-summary.md](wave-aw-summary.md)
 
+**Superseded for continuation:** Wave AX reopened explicitly via `.local/pesquisa.md` (2026-07-28). AW HOLD/PROMOTE **decisions** stay; AX0: [wave-ax-session.md](wave-ax-session.md).
+
 ## Decision
 
 **PROMOTE** — Wave AW outcomes locked; Caminho A H-PRODKEEP·H-SHIPKEEP PROMOTE stays; H-NANOGEN7 **HOLD** (TAC true_continue unmet · span-fallback ≠ gen IQ) locked; AW-REAL-EVAL battery 8/8 PROMOTE locked; ≤5M hard stays; ship claim remains **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM**; **no Wave AX** without explicit lab-book reopen.

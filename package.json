@@ -469,6 +469,8 @@
     "nano:av-session": "nano_lm/.venv/bin/python nano_lm/src/run_av_session.py",
     "nano:aw:session": "nano_lm/.venv/bin/python nano_lm/src/run_aw_session.py",
     "nano:aw-session": "nano_lm/.venv/bin/python nano_lm/src/run_aw_session.py",
+    "nano:ax:session": "nano_lm/.venv/bin/python nano_lm/src/run_ax_session.py",
+    "nano:ax-session": "nano_lm/.venv/bin/python nano_lm/src/run_ax_session.py",
     "nano:prodkeep": "nano_lm/.venv/bin/python nano_lm/src/run_prodkeep.py",
     "nano:aw:prodkeep": "nano_lm/.venv/bin/python nano_lm/src/run_prodkeep.py",
     "nano:shipkeep": "nano_lm/.venv/bin/python nano_lm/src/run_shipkeep.py",
