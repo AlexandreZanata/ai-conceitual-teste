@@ -534,6 +534,8 @@
     "nano:be:fastbe": "nano_lm/.venv/bin/python nano_lm/src/run_fastbe.py",
     "nano:ctxbe": "nano_lm/.venv/bin/python nano_lm/src/run_ctxbe.py",
     "nano:be:ctxbe": "nano_lm/.venv/bin/python nano_lm/src/run_ctxbe.py",
+    "nano:nanogen15": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen15.py",
+    "nano:be:nanogen15": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen15.py",
     "nano:freeze:bd": "nano_lm/.venv/bin/python nano_lm/src/run_bd_freeze.py",
     "nano:ctxgain": "nano_lm/.venv/bin/python nano_lm/src/run_bd_ctxgain.py",
     "nano:opsfam": "nano_lm/.venv/bin/python nano_lm/src/run_opsfam.py",
