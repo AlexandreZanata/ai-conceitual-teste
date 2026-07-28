@@ -480,6 +480,8 @@
     "nano:ax:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_ax_real_eval.py",
     "nano:ax:report": "nano_lm/.venv/bin/python nano_lm/src/run_ax_report.py",
     "nano:report:ax": "nano_lm/.venv/bin/python nano_lm/src/run_ax_report.py",
+    "nano:ax:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_ax_freeze.py",
+    "nano:freeze:ax": "nano_lm/.venv/bin/python nano_lm/src/run_ax_freeze.py",
     "nano:prodkeep": "nano_lm/.venv/bin/python nano_lm/src/run_prodkeep.py",
     "nano:aw:prodkeep": "nano_lm/.venv/bin/python nano_lm/src/run_prodkeep.py",
     "nano:shipkeep": "nano_lm/.venv/bin/python nano_lm/src/run_shipkeep.py",

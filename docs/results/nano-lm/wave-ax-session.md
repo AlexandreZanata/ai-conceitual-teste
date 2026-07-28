@@ -153,4 +153,4 @@ Contract: `nano_lm/tests/test_ax_session.py`.
 - **AX3 outcome:** [formal-hnanogen8-nanogen8.md](formal-hnanogen8-nanogen8.md) **DEFER** (`npm run nano:nanogen8`) — stance defer · CAPCHECK closed · no real new method.  
 - Forbidden: LOOKUP-as-IQ · peak-as-open-chat · SAFE-as-quality · pack-para as hard-natural coverage · gold-substring PROMOTE · span-fallback as gen · DECODE telemetry-only content_ok · eval↔prod gap · mini-AGI claim early · NANOGEN8 rename · CTX/SMART/FAST/APP clone · bank stuffing · vanity re-SEMFIX.
 
-Next: **AX6 AX-FREEZE** — lock AX outcomes; no Wave AY invent without lab-book reopen.
+Next: **COMPLETE + FROZEN** — do not invent Wave AY without lab-book reopen (`npm run nano:ax:freeze`).
