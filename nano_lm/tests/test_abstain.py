@@ -44,9 +44,22 @@ def test_given_story_sludge_when_junk_then_true() -> None:
     assert is_junk_decode(sludge) is True
 
 
+def test_given_tinystories_let_and_when_junk_then_true() -> None:
+    # GIVEN TinyStories sludge with accidental "let and"
+    # WHEN is_junk_decode (bare "let " must not false-exempt)
+    # THEN refuse — product ABSTAIN path stays honest
+    sludge = (
+        " decided. grabbed just doing!; almost something\". m. just asked "
+        "really two some one one To.. this really. let and -. and; decided "
+        "for! everything wasn so. asked so grabbed grabbed some seemed"
+    )
+    assert is_junk_decode(sludge) is True
+
+
 def test_given_real_code_when_junk_then_false() -> None:
     assert is_junk_decode("def add(a, b):\n    return a + b") is False
     assert is_junk_decode("Hardened keys use indices >= 2^31.") is False
+    assert is_junk_decode("fn main() { let x = 1; println!(x); }") is False
 
 
 def test_given_decode_junk_when_should_abstain_then_true() -> None:

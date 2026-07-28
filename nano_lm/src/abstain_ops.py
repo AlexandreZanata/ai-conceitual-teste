@@ -64,7 +64,11 @@ _FILLER = frozenset(
         "even",
     }
 )
-_DOMAIN = ("def ", "class ", "struct ", "BIP", "fn ", "return ", "let ")
+# Real code markers — not bare "let " (TinyStories "let and" false-exempt).
+_CODEISH = re.compile(
+    r"(?:^|\W)(?:def |class |struct |fn |return |BIP)"
+    r"|\blet\s+[A-Za-z_][A-Za-z0-9_]*\s*="
+)
 
 
 def is_junk_decode(text: str) -> bool:
@@ -85,7 +89,7 @@ def is_junk_decode(text: str) -> bool:
     if len(words) < 2:
         return True
     low = {w.lower() for w in words}
-    if len(low & _FILLER) >= 3 and not any(k in stripped for k in _DOMAIN):
+    if len(low & _FILLER) >= 3 and _CODEISH.search(stripped) is None:
         return True
     return False
 
