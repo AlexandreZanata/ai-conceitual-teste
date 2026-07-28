@@ -487,6 +487,8 @@
     "nano:ba:nanogen11": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen11.py",
     "nano:ba:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_ba_real_eval.py",
     "nano:real-eval:ba": "nano_lm/.venv/bin/python nano_lm/src/run_ba_real_eval.py",
+    "nano:ba:report": "nano_lm/.venv/bin/python nano_lm/src/run_ba_report.py",
+    "nano:report:ba": "nano_lm/.venv/bin/python nano_lm/src/run_ba_report.py",
     "nano:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:az:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:shipaz": "nano_lm/.venv/bin/python nano_lm/src/run_shipaz.py",
