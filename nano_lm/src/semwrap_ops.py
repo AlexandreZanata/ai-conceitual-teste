@@ -236,6 +236,11 @@ def _segwit_bip39_collision(ask: str, gold: str) -> bool:
     return "cs=ent/32" in g or "cs=ent÷32" in g
 
 
+def _gold_equiv(a: str, b: str) -> bool:
+    """True iff golds match after whitespace collapse (one-liner vs multiline)."""
+    return " ".join(a.split()) == " ".join(b.split())
+
+
 def contrastive_reject(ask: str, bank_q: str, gold: str) -> bool:
     """
     GIVEN ask + matched bank question/gold
@@ -344,9 +349,8 @@ def semantic_lookup(
         second_gold = (
             _row_gold(ranked[1][1]) if len(ranked) > 1 else None
         )
-        same_gold = (
-            second_gold is not None
-            and str(second_gold).strip() == str(gold).strip()
+        same_gold = second_gold is not None and _gold_equiv(
+            str(second_gold), str(gold)
         )
         if not same_gold:
             meta["kind"] = "AMBIGUOUS"

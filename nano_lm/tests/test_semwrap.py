@@ -114,6 +114,38 @@ def test_given_exact_bank_hit_when_lookup_then_source_id_present() -> None:
     assert kind == "FALSE_HIT"
 
 
+def test_given_same_add_golds_whitespace_when_lookup_then_semantic() -> None:
+    # GIVEN/WHEN/THEN: hard-natural live miss — multiline vs one-liner add
+    # golds must not AMBIGUOUS-refuse (AX1 H-PRODNAT; no bank stuffing)
+    rows = [
+        {
+            "question": (
+                "Write a short Python function named add that returns "
+                "the sum of two integers a and b."
+            ),
+            "source_id": "python-tutorial-intro",
+            "gold": "def add(a, b):\n    return a + b",
+        },
+        {
+            "question": (
+                "Write a one-liner Python function `add(a, b)` "
+                "that returns the sum."
+            ),
+            "source_id": "python-tutorial-intro",
+            "gold": "def add(a, b): return a + b",
+        },
+    ]
+    ask = (
+        "I need a Python helper that adds two numbers "
+        "called a and b — name it add please"
+    )
+    gold, meta = semantic_lookup(ask, rows)
+    assert gold is not None
+    assert "def add" in gold
+    assert meta["kind"] == "SEMANTIC"
+    assert meta["kind"] != "AMBIGUOUS"
+
+
 def test_given_false_hit_when_score_then_zero() -> None:
     score, err, notes = score_semwrap_trial(
         mode="SEMWRAP_LOOKUP",
