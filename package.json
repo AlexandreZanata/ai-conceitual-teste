@@ -481,6 +481,8 @@
     "nano:ax:shipux": "nano_lm/.venv/bin/python nano_lm/src/run_shipux.py",
     "nano:shipay": "nano_lm/.venv/bin/python nano_lm/src/run_shipay.py",
     "nano:ay:shipay": "nano_lm/.venv/bin/python nano_lm/src/run_shipay.py",
+    "nano:nanogen9": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen9.py",
+    "nano:ay:nanogen9": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen9.py",
     "nano:nanogen8": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen8.py",
     "nano:ax:nanogen8": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen8.py",
     "nano:ax:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_ax_real_eval.py",
