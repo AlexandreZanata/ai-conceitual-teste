@@ -525,6 +525,7 @@
     "nano:bd:report": "nano_lm/.venv/bin/python nano_lm/src/run_bd_report.py",
     "nano:report:bd": "nano_lm/.venv/bin/python nano_lm/src/run_bd_report.py",
     "nano:bd:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_bd_freeze.py",
+    "nano:be:session": "nano_lm/.venv/bin/python nano_lm/src/run_be_session.py",
     "nano:freeze:bd": "nano_lm/.venv/bin/python nano_lm/src/run_bd_freeze.py",
     "nano:ctxgain": "nano_lm/.venv/bin/python nano_lm/src/run_bd_ctxgain.py",
     "nano:opsfam": "nano_lm/.venv/bin/python nano_lm/src/run_opsfam.py",
