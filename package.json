@@ -503,6 +503,8 @@
     "nano:bb:fasthold": "nano_lm/.venv/bin/python nano_lm/src/run_bb_fasthold.py",
     "nano:ctxhold": "nano_lm/.venv/bin/python nano_lm/src/run_bb_ctxhold.py",
     "nano:bb:ctxhold": "nano_lm/.venv/bin/python nano_lm/src/run_bb_ctxhold.py",
+    "nano:bb:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_bb_real_eval.py",
+    "nano:real-eval:bb": "nano_lm/.venv/bin/python nano_lm/src/run_bb_real_eval.py",
     "nano:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:az:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:shipaz": "nano_lm/.venv/bin/python nano_lm/src/run_shipaz.py",
