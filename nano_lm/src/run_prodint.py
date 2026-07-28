@@ -426,7 +426,7 @@ def _patch_agenda_prodint() -> None:
         return
     text = _AGENDA.read_text(encoding="utf-8")
     ay_tail = text.split("| **AY** |", 1)[-1][:400] if "| **AY** |" in text else ""
-    if "H-PRODINT" in ay_tail:
+    if "H-PRODINT PROMOTE" in ay_tail:
         return
     text2, count = re.subn(
         r"(\| \*\*AY\*\* \| \*\*ACTIVE\*\* \|[^\n]*AY0 \[SESSION "
