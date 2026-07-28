@@ -540,6 +540,8 @@
     "nano:real-eval:be": "nano_lm/.venv/bin/python nano_lm/src/run_be_real_eval.py",
     "nano:be:report": "nano_lm/.venv/bin/python nano_lm/src/run_be_report.py",
     "nano:be-report": "nano_lm/.venv/bin/python nano_lm/src/run_be_report.py",
+    "nano:be:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_be_freeze.py",
+    "nano:freeze:be": "nano_lm/.venv/bin/python nano_lm/src/run_be_freeze.py",
     "nano:freeze:bd": "nano_lm/.venv/bin/python nano_lm/src/run_bd_freeze.py",
     "nano:ctxgain": "nano_lm/.venv/bin/python nano_lm/src/run_bd_ctxgain.py",
     "nano:opsfam": "nano_lm/.venv/bin/python nano_lm/src/run_opsfam.py",
