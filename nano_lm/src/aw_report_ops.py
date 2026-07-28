@@ -208,7 +208,7 @@ def realeval_section_ok(text: str) -> bool:
 def render_wave_aw_summary() -> str:
     lines = [
         "# Wave AW — Caminho A keep + Nano TAC honesty "
-        "(**RESEARCH COMPLETE** — pending FREEZE)",
+        "(**COMPLETE + FROZEN**)",
         "",
         "> Lab: `.local/pesquisa.md` §2 · Paper-lab: "
         "[paper-lab-wave-aw.md](paper-lab-wave-aw.md) · "
@@ -218,7 +218,7 @@ def render_wave_aw_summary() -> str:
         "> Parent: Wave AV **AV-FREEZE** · Ship claim: "
         f"**{SHIP_CLAIM}**",
         "",
-        "**Status: RESEARCH COMPLETE** (AW6 FREEZE next) · Thesis: **"
+        "**Status: COMPLETE + FROZEN** · Thesis: **"
         + AW_THESIS
         + ".**",
         "",
@@ -322,7 +322,7 @@ def render_paper_lab_wave_aw() -> str:
             "",
             "> Companion to [wave-aw-summary.md](wave-aw-summary.md). "
             "English lab note.  ",
-            "> **Status: RESEARCH COMPLETE** (pending AW6 FREEZE) · "
+            "> **Status: COMPLETE + FROZEN** · "
             "Real-eval: [wave-aw-real-eval.md](wave-aw-real-eval.md) · "
             "Freeze: [aw-freeze.md](aw-freeze.md) · "
             "[formal-hawfreeze-aw-freeze.md](formal-hawfreeze-aw-freeze.md) · "

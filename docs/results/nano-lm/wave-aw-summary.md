@@ -1,9 +1,9 @@
-# Wave AW — Caminho A keep + Nano TAC honesty (**RESEARCH COMPLETE** — pending FREEZE)
+# Wave AW — Caminho A keep + Nano TAC honesty (**COMPLETE + FROZEN**)
 
 > Lab: `.local/pesquisa.md` §2 · Paper-lab: [paper-lab-wave-aw.md](paper-lab-wave-aw.md) · Real-eval: [wave-aw-real-eval.md](wave-aw-real-eval.md) · Freeze: [aw-freeze.md](aw-freeze.md) · [formal-hawfreeze-aw-freeze.md](formal-hawfreeze-aw-freeze.md)  
 > Parent: Wave AV **AV-FREEZE** · Ship claim: **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM**
 
-**Status: RESEARCH COMPLETE** (AW6 FREEZE next) · Thesis: **Wave AW dual track: H-PRODKEEP·H-SHIPKEEP PROMOTE (Caminho A keep · pressure-para ≠ AV/AU · DECODE content law); H-NANOGEN7 HOLD (TAC true_continue=0 · span-fallback ≠ gen IQ); AW-REAL-EVAL PROMOTE (live battery 8/8 · gen locked); ship AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM.**
+**Status: COMPLETE + FROZEN** · Thesis: **Wave AW dual track: H-PRODKEEP·H-SHIPKEEP PROMOTE (Caminho A keep · pressure-para ≠ AV/AU · DECODE content law); H-NANOGEN7 HOLD (TAC true_continue=0 · span-fallback ≠ gen IQ); AW-REAL-EVAL PROMOTE (live battery 8/8 · gen locked); ship AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM.**
 
 ## Stage scoreboard (product + generative)
 
@@ -63,6 +63,10 @@ npm run nano:shipkeep
 npm run nano:nanogen7
 npm run nano:aw:real-eval
 ```
+
+## Freeze
+
+**AW6 AW-FREEZE PROMOTE** (`npm run nano:aw:freeze`) — COMPLETE + FROZEN · do not invent Wave AX.
 
 ## Do not reopen
 

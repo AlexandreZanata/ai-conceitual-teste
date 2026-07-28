@@ -62,4 +62,4 @@ npm run nano:prodkeep
 | AV STRICT ship lock while AW3 HOLD | TAC unlock on HOLD |
 | DECODE usable or ABSTAIN | LOOKUP-as-IQ · Wave AX invent |
 
-Next: **AW5 AW-REPORT** — **DONE PROMOTE** (`npm run nano:aw:report`) · next **AW6 AW-FREEZE**.
+Next: **AW5 AW-REPORT** — **DONE PROMOTE** · **AW6 AW-FREEZE** — **DONE PROMOTE** (`npm run nano:aw:freeze`) · COMPLETE + FROZEN.
