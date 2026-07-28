@@ -479,6 +479,8 @@
     "nano:az:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:shipaz": "nano_lm/.venv/bin/python nano_lm/src/run_shipaz.py",
     "nano:az:shipaz": "nano_lm/.venv/bin/python nano_lm/src/run_shipaz.py",
+    "nano:nanogen10": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen10.py",
+    "nano:az:nanogen10": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen10.py",
     "nano:prodnat": "nano_lm/.venv/bin/python nano_lm/src/run_prodnat.py",
     "nano:ax:prodnat": "nano_lm/.venv/bin/python nano_lm/src/run_prodnat.py",
     "nano:prodint": "nano_lm/.venv/bin/python nano_lm/src/run_prodint.py",
