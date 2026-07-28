@@ -140,8 +140,8 @@ def _patch_product_freeze_status() -> None:
             text = text.rstrip() + "\n" + frozen + "\n"
         # Idempotent: collapse accidental duplicate COMPLETE lines.
         text = re.sub(
-            r"(\*\*Wave AX COMPLETE \+ FROZEN\*\*:[^\n]*\n)"
-            r"(?:\*\*Wave AX COMPLETE \+ FROZEN\*\*:[^\n]*\n)+",
+            r"(\*\*Wave AX COMPLETE \+ FROZEN\*\*:[^\n]*\n?)"
+            r"(?:\*\*Wave AX COMPLETE \+ FROZEN\*\*:[^\n]*\n?)+",
             r"\1",
             text,
         )
