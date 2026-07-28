@@ -478,6 +478,8 @@
     "nano:nanogen8": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen8.py",
     "nano:ax:nanogen8": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen8.py",
     "nano:ax:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_ax_real_eval.py",
+    "nano:ax:report": "nano_lm/.venv/bin/python nano_lm/src/run_ax_report.py",
+    "nano:report:ax": "nano_lm/.venv/bin/python nano_lm/src/run_ax_report.py",
     "nano:prodkeep": "nano_lm/.venv/bin/python nano_lm/src/run_prodkeep.py",
     "nano:aw:prodkeep": "nano_lm/.venv/bin/python nano_lm/src/run_prodkeep.py",
     "nano:shipkeep": "nano_lm/.venv/bin/python nano_lm/src/run_shipkeep.py",
