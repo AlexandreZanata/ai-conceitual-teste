@@ -497,6 +497,41 @@ def _max_add_predicate_swap(ask: str, gold: str) -> bool:
     return any(c in a for c in cues)
 
 
+def _min_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants min2/smaller-of but gold is sum add (BB1 forever)."""
+    if not _sum_add_gold(gold):
+        return False
+    return _ask_is_min2_smaller(ask.lower())
+
+
+def _xor_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants xor2/bitwise xor but gold is sum add (BB1)."""
+    if not _sum_add_gold(gold):
+        return False
+    return _ask_is_xor2(ask.lower())
+
+
+def _absdiff_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants absdiff/|a-b| but gold is sum add (BB1)."""
+    if not _sum_add_gold(gold):
+        return False
+    return _ask_is_absdiff(ask.lower())
+
+
+def _and_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants and2/bitwise and but gold is sum add (BB1)."""
+    if not _sum_add_gold(gold):
+        return False
+    return _ask_is_and2(ask.lower())
+
+
+def _or_add_predicate_swap(ask: str, gold: str) -> bool:
+    """True iff ask wants or2/bitwise or but gold is sum add (BB1)."""
+    if not _sum_add_gold(gold):
+        return False
+    return _ask_is_or2(ask.lower())
+
+
 def _reverse_gold(gold: str) -> bool:
     g = gold.lower().replace(" ", "")
     return "a.reverse()" in g or "a.reverse" in g
@@ -522,7 +557,7 @@ def _len_wrong_slot(ask: str, gold: str) -> bool:
 
 
 def _intent_mismatch_reject(ask: str, gold: str) -> bool:
-    """AY1+AZ1+BA1 intent/adversary traps — refuse wrong-gold LOOKUP."""
+    """AY1+AZ1+BA1+BB1 intent/adversary traps — refuse wrong-gold LOOKUP."""
     traps = (
         _mul_add_predicate_swap,
         _div_add_predicate_swap,
@@ -530,6 +565,11 @@ def _intent_mismatch_reject(ask: str, gold: str) -> bool:
         _pow_add_predicate_swap,
         _mod_add_predicate_swap,
         _max_add_predicate_swap,
+        _min_add_predicate_swap,
+        _xor_add_predicate_swap,
+        _absdiff_add_predicate_swap,
+        _and_add_predicate_swap,
+        _or_add_predicate_swap,
         _add_difference_antonym,
         _remove_clear_false_friend,
         _sort_reverse_false_friend,
@@ -681,6 +721,93 @@ def _ask_is_max2_larger(a: str) -> bool:
     return any(c in a for c in cues)
 
 
+def _ask_is_min2_smaller(a: str) -> bool:
+    cues = (
+        "named min2",
+        "function named min2",
+        "min2(a",
+        "min2 (",
+        "smaller of two",
+        "smaller of",
+        "lesser of two",
+        "lesser value",
+        "the smaller of",
+        "the lesser of",
+        "min_of_pair",
+    )
+    return any(c in a for c in cues)
+
+
+def _ask_is_xor2(a: str) -> bool:
+    cues = (
+        "named xor2",
+        "function named xor2",
+        "xor2(a",
+        "xor2 (",
+        "bitwise xor",
+        "bitwise exclusive-or",
+        "bitwise exclusive or",
+        "xor_bits",
+        "a ^ b",
+        "a^b",
+        "returning a ^ b",
+        "return a ^ b",
+    )
+    if any(c in a for c in cues):
+        return True
+    padded = f" {a} "
+    return " xor " in padded and ("bitwise" in a or "integers" in a)
+
+
+def _ask_is_absdiff(a: str) -> bool:
+    cues = (
+        "named absdiff",
+        "function named absdiff",
+        "absdiff(a",
+        "absdiff (",
+        "absolute difference",
+        "absolute distance",
+        "abs(a-b)",
+        "abs(a - b)",
+        "|a-b|",
+        "|a - b|",
+        "abs_delta",
+    )
+    return any(c in a for c in cues)
+
+
+def _ask_is_and2(a: str) -> bool:
+    cues = (
+        "named and2",
+        "function named and2",
+        "and2(a",
+        "and2 (",
+        "bitwise and of two",
+        "bitwise and of",
+        "a & b",
+        "a&b",
+        "returning a & b",
+        "return a & b",
+    )
+    return any(c in a for c in cues)
+
+
+def _ask_is_or2(a: str) -> bool:
+    cues = (
+        "named or2",
+        "function named or2",
+        "or2(a",
+        "or2 (",
+        "bitwise or of two",
+        "bitwise or of",
+        "a | b",
+        "a|b",
+        "returning a | b",
+        "return a | b",
+    )
+    return any(c in a for c in cues)
+
+
 def _ask_is_sort_asc(a: str) -> bool:
     if "reverse" in a and (
         "do not reverse" in a
@@ -715,7 +842,7 @@ def intent_ask_must_abstain(ask: str) -> bool:
     GIVEN novel ask on production SEMWRAP path
     WHEN no exact bank hit
     THEN True iff ask is an intent-mismatch class that must ABSTAIN
-         (mul/div/sub/pow/mod/max/sort/len/diff/remove≠clear/BIP)
+         (mul/div/sub/pow/mod/max/min/xor/absdiff/and/or/sort/len/…)
          — never bank-stuff.
     """
     a = normalize_question(ask)
@@ -726,6 +853,11 @@ def intent_ask_must_abstain(ask: str) -> bool:
         _ask_is_pow_power,
         _ask_is_mod_remainder,
         _ask_is_max2_larger,
+        _ask_is_min2_smaller,
+        _ask_is_xor2,
+        _ask_is_absdiff,
+        _ask_is_and2,
+        _ask_is_or2,
         _ask_is_sort_asc,
         _ask_is_list_len,
         _ask_is_add_difference,
