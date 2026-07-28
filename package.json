@@ -481,6 +481,8 @@
     "nano:ba:realgain": "nano_lm/.venv/bin/python nano_lm/src/run_realgain.py",
     "nano:ba:fastreal": "nano_lm/.venv/bin/python nano_lm/src/run_ba_fastreal.py",
     "nano:fastreal:ba": "nano_lm/.venv/bin/python nano_lm/src/run_ba_fastreal.py",
+    "nano:ba:ctxreal2": "nano_lm/.venv/bin/python nano_lm/src/run_ba_ctxreal2.py",
+    "nano:ctxreal2": "nano_lm/.venv/bin/python nano_lm/src/run_ba_ctxreal2.py",
     "nano:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:az:prodgen": "nano_lm/.venv/bin/python nano_lm/src/run_prodgen.py",
     "nano:shipaz": "nano_lm/.venv/bin/python nano_lm/src/run_shipaz.py",
