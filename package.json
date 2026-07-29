@@ -534,6 +534,8 @@
     "nano:bf:shipuse2": "nano_lm/.venv/bin/python nano_lm/src/run_shipuse2.py",
     "nano:fastbf": "nano_lm/.venv/bin/python nano_lm/src/run_fastbf.py",
     "nano:bf:fastbf": "nano_lm/.venv/bin/python nano_lm/src/run_fastbf.py",
+    "nano:ctxbf": "nano_lm/.venv/bin/python nano_lm/src/run_ctxbf.py",
+    "nano:bf:ctxbf": "nano_lm/.venv/bin/python nano_lm/src/run_ctxbf.py",
     "nano:be:compint": "nano_lm/.venv/bin/python nano_lm/src/run_compint.py",
     "nano:shipuse": "nano_lm/.venv/bin/python nano_lm/src/run_shipuse.py",
     "nano:be:shipuse": "nano_lm/.venv/bin/python nano_lm/src/run_shipuse.py",
