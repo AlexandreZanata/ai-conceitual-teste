@@ -527,6 +527,7 @@
     "nano:bd:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_bd_freeze.py",
     "nano:be:session": "nano_lm/.venv/bin/python nano_lm/src/run_be_session.py",
     "nano:bf:session": "nano_lm/.venv/bin/python nano_lm/src/run_bf_session.py",
+    "nano:bg:session": "nano_lm/.venv/bin/python nano_lm/src/run_bg_session.py",
     "nano:compint": "nano_lm/.venv/bin/python nano_lm/src/run_compint.py",
     "nano:predint": "nano_lm/.venv/bin/python nano_lm/src/run_predint.py",
     "nano:bf:predint": "nano_lm/.venv/bin/python nano_lm/src/run_predint.py",
