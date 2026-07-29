@@ -1,0 +1,36 @@
+# Indexing-only exclude — files stay @-mentionable but do not bloat codebase index.
+# Prefer this for historical research docs you occasionally open.
+
+# --- Historical wave markdown (keep on disk; @-mention when needed) ---
+docs/results/nano-lm/archive/
+docs/results/nano-lm/formal-*.md
+docs/results/nano-lm/wave-*.md
+docs/results/nano-lm/*-freeze.md
+docs/results/nano-lm/paper-lab-*.md
+docs/results/nano-lm/depl-*.md
+docs/results/nano-lm/ship*-demo.md
+docs/archive/
+
+# Keep active research surfaces indexed (negation; parent dir not fully excluded)
+!docs/results/nano-lm/champion-card.md
+!docs/results/nano-lm/RECIPES.md
+!docs/results/nano-lm/bf-freeze.md
+!docs/results/nano-lm/be-freeze.md
+!docs/results/nano-lm/bd-freeze.md
+!docs/results/nano-lm/wave-bf-summary.md
+!docs/results/nano-lm/wave-be-summary.md
+!docs/results/nano-lm/formal-habffreeze-bf-freeze.md
+!docs/results/nano-lm/formal-habefreeze-be-freeze.md
+
+# --- Heavy / generated under docs ---
+docs/**/*.pdf
+docs/**/*.json
+
+# --- Tests fixtures / snapshots if large ---
+**/fixtures/large/
+**/golden/
+
+# --- Misc noise ---
+package-lock.json
+*.log
+*.map
