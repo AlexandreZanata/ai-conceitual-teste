@@ -528,6 +528,7 @@
     "nano:be:session": "nano_lm/.venv/bin/python nano_lm/src/run_be_session.py",
     "nano:bf:session": "nano_lm/.venv/bin/python nano_lm/src/run_bf_session.py",
     "nano:bg:session": "nano_lm/.venv/bin/python nano_lm/src/run_bg_session.py",
+    "nano:bh:session": "nano_lm/.venv/bin/python nano_lm/src/run_bh_session.py",
     "nano:unaryint": "nano_lm/.venv/bin/python nano_lm/src/run_unaryint.py",
     "nano:bg:unaryint": "nano_lm/.venv/bin/python nano_lm/src/run_unaryint.py",
     "nano:shippub": "nano_lm/.venv/bin/python nano_lm/src/run_shippub.py",
