@@ -536,6 +536,8 @@
     "nano:bf:fastbf": "nano_lm/.venv/bin/python nano_lm/src/run_fastbf.py",
     "nano:ctxbf": "nano_lm/.venv/bin/python nano_lm/src/run_ctxbf.py",
     "nano:bf:ctxbf": "nano_lm/.venv/bin/python nano_lm/src/run_ctxbf.py",
+    "nano:nanogen16": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen16.py",
+    "nano:bf:nanogen16": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen16.py",
     "nano:be:compint": "nano_lm/.venv/bin/python nano_lm/src/run_compint.py",
     "nano:shipuse": "nano_lm/.venv/bin/python nano_lm/src/run_shipuse.py",
     "nano:be:shipuse": "nano_lm/.venv/bin/python nano_lm/src/run_shipuse.py",
