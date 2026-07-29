@@ -532,6 +532,8 @@
     "nano:bg:unaryint": "nano_lm/.venv/bin/python nano_lm/src/run_unaryint.py",
     "nano:shippub": "nano_lm/.venv/bin/python nano_lm/src/run_shippub.py",
     "nano:bg:shippub": "nano_lm/.venv/bin/python nano_lm/src/run_shippub.py",
+    "nano:fastbg": "nano_lm/.venv/bin/python nano_lm/src/run_fastbg.py",
+    "nano:bg:fastbg": "nano_lm/.venv/bin/python nano_lm/src/run_fastbg.py",
     "nano:compint": "nano_lm/.venv/bin/python nano_lm/src/run_compint.py",
     "nano:predint": "nano_lm/.venv/bin/python nano_lm/src/run_predint.py",
     "nano:bf:predint": "nano_lm/.venv/bin/python nano_lm/src/run_predint.py",
