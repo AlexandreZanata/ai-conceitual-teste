@@ -17,7 +17,7 @@ HITL: **H-ZWRAP** (+ **H-WRAPBANK** + **H-SEMWRAP**). Story-CE: **H-ZERR** ≠ c
 |------|--------|-------|
 | W–Z | COMPLETE | `docs/results/nano-lm/wave-*-summary.md` · `lab-freeze.md` |
 | AA–BG | COMPLETE + FROZEN | `docs/results/nano-lm/*-freeze.md` |
-| **BH** | **ACTIVE** | BH0 [SESSION PROMOTE](results/nano-lm/wave-bh-session.md) (`npm run nano:bh:session`) — IQ battery plan · gold holes · BA…BG/AZ hold · Track A++ util · gen stance SKIP (H-NANOGEN18); next BH1 H-IQBAT; ship AF+AQ+AS trust + STRICT ablated DECODE; NANOGEN6·7 HOLD · NANOGEN8…15 DEFER · NANOGEN16·17 SKIP; ≤5M |
+| **BH** | **ACTIVE** | BH0 [SESSION PROMOTE](results/nano-lm/wave-bh-session.md) (`npm run nano:bh:session`) — IQ battery plan · gold holes · BA…BG/AZ hold · Track A++ util · gen stance SKIP (H-NANOGEN18); BH1 [H-IQBAT PROMOTE](results/nano-lm/formal-hiqbat-iqbat.md) (`npm run nano:iq-battery`); next BH2 H-GOLDFIX; ship AF+AQ+AS trust + STRICT ablated DECODE; NANOGEN6·7 HOLD · NANOGEN8…15 DEFER · NANOGEN16·17 SKIP; ≤5M |
 | Active / reopen | **only** lab book | `.local/pesquisa.md` |
 
 Do **not** invent the next wave letter without explicit lab-book reopen.  

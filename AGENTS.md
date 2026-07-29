@@ -41,7 +41,7 @@ npm run nano:test && npm run verify
 
 - Survival PoC v1 **closed** → `docs/archive/evogen/`.
 - Waves W–**BF** **COMPLETE + FROZEN** — public mirrors under `docs/results/nano-lm/*-freeze.md`.
-- **Wave BH ACTIVE** — BH0 [SESSION PROMOTE](docs/results/nano-lm/wave-bh-session.md) (`npm run nano:bh:session`) — IQ battery v0 plan · gold holes (Rust MISS · add truncation) · BA…BG/AZ hold · Track A++ util · gen stance **SKIP** (H-NANOGEN18); next BH1 H-IQBAT; ship remains **AF + AQ + AS trust + STRICT ablated DECODE**; NANOGEN6·7 HOLD · NANOGEN8…15 DEFER · NANOGEN16·17 SKIP; ≤5M stays.
+- **Wave BH ACTIVE** — BH0 [SESSION PROMOTE](docs/results/nano-lm/wave-bh-session.md) (`npm run nano:bh:session`) — IQ battery v0 plan · gold holes (Rust MISS · add truncation) · BA…BG/AZ hold · Track A++ util · gen stance **SKIP** (H-NANOGEN18); BH1 H-IQBAT PROMOTE (`npm run nano:iq-battery`); next BH2 H-GOLDFIX; ship remains **AF + AQ + AS trust + STRICT ablated DECODE**; NANOGEN6·7 HOLD · NANOGEN8…15 DEFER · NANOGEN16·17 SKIP; ≤5M stays.
 - Active wave / reopen: **only** what `.local/pesquisa.md` says.
 - Ship claim until gen PROMOTE: **AF + AQ + AS trust + STRICT ablated DECODE** — not unlabeled open chat · not TAC / mini-AGI unlocked.
 - Generative north star: true_continue via real M1|M2|M3 — else SKIP/DEFER (no NANOGEN rename).

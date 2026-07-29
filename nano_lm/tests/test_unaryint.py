@@ -108,6 +108,40 @@ def test_given_bg_unary_traps_when_contrast_then_reject_family() -> None:
         "Remove all items from list `a` — one method call.",
         clear_g,
     )
+    # BH1 IQ novel/adversary class gates (not bank stuffing)
+    assert contrastive_reject(
+        "Write a Python function that returns the sign of integer a "
+        "(-1, 0, or 1).",
+        add_q,
+        add_g,
+    )
+    assert contrastive_reject(
+        "Write a Python function that returns the bitwise NOT of integer a.",
+        add_q,
+        add_g,
+    )
+    assert contrastive_reject(
+        "Write a Python function hypot(a, b) that returns sqrt(a*a + b*b).",
+        add_q,
+        add_g,
+    )
+    assert contrastive_reject(
+        "Write a Python function median3(a, b, c) returning the median "
+        "of three ints.",
+        add_q,
+        add_g,
+    )
+    assert contrastive_reject(
+        "Write a Python function gcd3(a, b, c) returning gcd of three "
+        "integers.",
+        add_q,
+        add_g,
+    )
+    assert contrastive_reject(
+        "Write a Python function that returns True if list a is empty.",
+        "Remove all items from list `a` — one method call.",
+        clear_g,
+    )
     assert intent_ask_must_abstain(
         "Write a Python function that returns the absolute value of a."
     )

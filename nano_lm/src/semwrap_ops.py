@@ -243,6 +243,16 @@ def _sum_add_gold(gold: str) -> bool:
     return "def add" in g or "a+b" in compact
 
 
+def _ask_is_empty_predicate(a: str) -> bool:
+    """True iff ask wants boolean is-empty check (≠ clear-all mutation)."""
+    if "empty" not in a:
+        return False
+    compact = a.replace(" ", "")
+    if "isempty" in compact or "is_empty" in a or "is empty" in a:
+        return True
+    return ("returns true" in a or "return true" in a or "returning true" in a)
+
+
 def _ask_wants_clear_all(a: str) -> bool:
     """True iff ask wants empty/clear entire list (exact clear gold)."""
     # Negated clear = remove≠clear false-friend — never treat as clear-all.
@@ -256,6 +266,9 @@ def _ask_wants_clear_all(a: str) -> bool:
         "without clear",
     )
     if any(c in a for c in neg):
+        return False
+    # Predicate "is empty" / "returns True if … empty" ≠ clear-all LOOKUP.
+    if _ask_is_empty_predicate(a):
         return False
     if "a.clear" in a or "clear()" in a:
         return True
@@ -945,11 +958,29 @@ def _unary_math_round_cues(a: str) -> bool:
     )
 
 
+def _unary_math_sign_cues(a: str) -> bool:
+    """True iff ask wants sign/signum of a number (BH1 unary neighbor)."""
+    if "signum" in a or "named sign" in a:
+        return True
+    return "sign of" in a or "the sign" in a
+
+
+def _unary_math_bitwise_not_cues(a: str) -> bool:
+    """True iff ask wants bitwise NOT / complement (BH1 unary neighbor)."""
+    if "bitwise not" in a or "bitwise complement" in a:
+        return True
+    if "invert bits" in a or "ones complement" in a:
+        return True
+    compact = a.replace(" ", "")
+    return "~a" in compact or "bitwisenot" in compact
+
+
 def _ask_is_unary_math(a: str) -> bool:
     """
-    True iff ask wants unary math (abs · factorial · floor · round · ceil).
+    True iff ask wants unary math (abs · factorial · floor · round · ceil ·
+    sign · bitwise-not).
 
-    BG1 general gate — class neighbors, not bank-stuffed forever strings.
+    BG1/BH1 general gate — class neighbors, not bank-stuffed forever strings.
     Must not fire on absdiff (|a-b|) or neg1 (unary negation already gated).
     """
     if _unary_math_excluded(a):
@@ -958,7 +989,44 @@ def _ask_is_unary_math(a: str) -> bool:
         return True
     if _unary_math_floor_cues(a) or _unary_math_ceil_cues(a):
         return True
+    if _unary_math_sign_cues(a) or _unary_math_bitwise_not_cues(a):
+        return True
     return _unary_math_round_cues(a)
+
+
+def _ask_is_multi_arg_math(a: str) -> bool:
+    """
+    True iff ask wants multi-arg math ≠ binary add (BH1).
+
+    Covers hypot · median3 · gcd3 · lerp — arity/schema neighbors of add.
+    """
+    if "hypot" in a or "hypotenuse" in a:
+        return True
+    if "median" in a or "median3" in a:
+        return True
+    if "lerp" in a or "linear interpolat" in a:
+        return True
+    if "gcd3" in a or "gcd of three" in a:
+        return True
+    return "gcd" in a and "three" in a
+
+
+def _multi_arg_math_wrong_bank(ask: str, gold: str) -> bool:
+    """True iff multi-arg math ask matched add/clear/f-string gold (BH1)."""
+    if not _ask_is_multi_arg_math(ask.lower()):
+        return False
+    return (
+        _sum_add_gold(gold)
+        or _clear_gold(gold)
+        or _fstring_format_gold(gold)
+    )
+
+
+def _empty_predicate_wrong_bank(ask: str, gold: str) -> bool:
+    """True iff is-empty predicate ask matched clear/add gold (BH1)."""
+    if not _ask_is_empty_predicate(ask.lower()):
+        return False
+    return _clear_gold(gold) or _sum_add_gold(gold)
 
 
 def _ask_is_string_case_transform(a: str) -> bool:
@@ -1095,6 +1163,8 @@ def _intent_mismatch_reject(ask: str, gold: str) -> bool:
         _unary_math_wrong_bank,
         _string_case_wrong_bank,
         _aggregate_truthy_wrong_bank,
+        _multi_arg_math_wrong_bank,
+        _empty_predicate_wrong_bank,
         _bip39_wordlist_half_known,
         _bip39_entropy_wrong_slot,
     )
@@ -1505,6 +1575,8 @@ def intent_ask_must_abstain(ask: str) -> bool:
         _ask_is_type_coercion,
         _ask_is_predicate_boolean,
         _ask_is_unary_math,
+        _ask_is_multi_arg_math,
+        _ask_is_empty_predicate,
         _ask_is_string_case_transform,
         _ask_is_aggregate_truthy,
         _ask_is_add_difference,
