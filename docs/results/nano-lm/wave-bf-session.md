@@ -232,4 +232,4 @@ Contract: `nano_lm/tests/test_bf_session.py`.
 - Generative PROMOTE only via later **BF5 H-NANOGEN16** true_continue under a real new method (M1|M2|M3; written M1|M2|M3 plan — else SKIP stop rule).  
 - Forbidden: LOOKUP-as-IQ · forever FP as hit · pack theater · over-refuse as win · peak-as-open-chat · SAFE-as-quality · L_eff as sole ctx win · warm-cache as sole speed win · gold-substring PROMOTE · span-fallback as gen · DECODE telemetry-only content_ok · eval↔prod gap · mini-AGI claim early · NANOGEN16 without plan · CTX/SMART/FAST clone · bank stuffing · vanity reopen · invent Wave BG.
 
-Next: **BF1 H-PREDINT** — drive forever FH → 0 via predicate/schema gate; hold BA…BE/AZ bars; live ask scoreboard OK|FP|MISS|ABSTAIN-OK; no bank stuffing.
+Next: **COMPLETE + FROZEN** — do not invent Wave BG without lab-book reopen (`npm run nano:bf:freeze`) — drive forever FH → 0 via predicate/schema gate; hold BA…BE/AZ bars; live ask scoreboard OK|FP|MISS|ABSTAIN-OK; no bank stuffing.

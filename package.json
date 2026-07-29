@@ -543,6 +543,8 @@
     "nano:bf:report": "nano_lm/.venv/bin/python nano_lm/src/run_bf_report.py",
     "nano:bf-report": "nano_lm/.venv/bin/python nano_lm/src/run_bf_report.py",
     "nano:report:bf": "nano_lm/.venv/bin/python nano_lm/src/run_bf_report.py",
+    "nano:bf:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_bf_freeze.py",
+    "nano:freeze:bf": "nano_lm/.venv/bin/python nano_lm/src/run_bf_freeze.py",
     "nano:be:compint": "nano_lm/.venv/bin/python nano_lm/src/run_compint.py",
     "nano:shipuse": "nano_lm/.venv/bin/python nano_lm/src/run_shipuse.py",
     "nano:be:shipuse": "nano_lm/.venv/bin/python nano_lm/src/run_shipuse.py",
