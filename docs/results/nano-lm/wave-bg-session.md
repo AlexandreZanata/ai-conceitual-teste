@@ -230,4 +230,4 @@ Contract: `nano_lm/tests/test_bg_session.py`.
 - Generative PROMOTE only via later **BG5 H-NANOGEN17** true_continue under a real new method (M1|M2|M3; written M1|M2|M3 plan — else SKIP stop rule).  
 - Forbidden: LOOKUP-as-IQ · forever FP as hit · pack theater · over-refuse as win · peak-as-open-chat · SAFE-as-quality · L_eff as sole ctx win · warm-cache as sole speed win · gold-substring PROMOTE · span-fallback as gen · DECODE telemetry-only content_ok · eval↔prod gap · mini-AGI claim early · NANOGEN17 without plan · CTX/SMART/FAST clone · bank stuffing · vanity reopen · invent Wave BH.
 
-Next: **BG2 H-SHIPPUB** — utilization++ + paper/arXiv sync + live smoke (hold H-SHIPUSE2). BG1 H-UNARYINT **PROMOTE** (`npm run nano:unaryint`) — BG-FOREVER FH 0 via unary/transform/arity gate.
+Next: **BG3 H-FASTBG** — speed p50/p99 hold/improve without FP regress. BG2 H-SHIPPUB **PROMOTE** (`npm run nano:shippub`) — Track A++ operator + paper/arXiv sync.

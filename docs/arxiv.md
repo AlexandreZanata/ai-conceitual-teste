@@ -64,6 +64,11 @@ Update `paper/README.md` checklist and commit.
 
 ---
 
+
+## Thesis (Track A++ · H-SHIPPUB)
+
+Publish as a **selective retriever** + refuse product under ≤5M — not an open generative LM / mini-AGI unlock. Cite H-UNARYINT · H-SHIPUSE2 · AF+AQ+AS STRICT ablated DECODE.
+
 ## Honesty checklist (before submit)
 
 - [ ] Abstract does **not** claim open chat / GPT-class / true-continue unlock
