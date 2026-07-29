@@ -20,10 +20,10 @@ Under a hard **≤5M** student budget, **labeled known-ask + refuse + mode hones
 | Tips | H-STAG′ · H-EARLY · H-POOL |
 | Recipes | PACK/QT · QPFB2+BEAMKV/TCACHE/SCORERAM · ROLL/SUMCACHE/GPFB4-LONG |
 | Product doctrine | Wave Z: PFB ≠ interactive LM · H-ZWRAP |
-| Ship stack | AF packaged + AQ product + AS trust + STRICT ablated DECODE · H-SHIPUSE Track A |
-| Anti-FP | H-COMPINT · H-PRODGEN · H-REALGAIN · BA…BE-FOREVER · live ask batteries |
+| Ship stack | AF packaged + AQ product + AS trust + STRICT ablated DECODE · H-SHIPUSE2 Track A+ |
+| Anti-FP | H-PREDINT · H-COMPINT · H-PRODGEN · H-REALGAIN · BA…BF-FOREVER · live ask batteries |
 | Speed / context | H-FASTREAL · H-CTXREAL2 (content bars; L_eff alone ≠ win) |
-| Generative honesty | NANOGEN6·7 HOLD · NANOGEN8–14 DEFER · `n_true_continue=0` |
+| Generative honesty | NANOGEN6·7 HOLD · NANOGEN8–15 DEFER · `n_true_continue=0` |
 
 Public mirrors: `docs/results/nano-lm/{RECIPES,champion-card,*-freeze,wave-*-summary,paper-lab-wave-*}.md`.
 
