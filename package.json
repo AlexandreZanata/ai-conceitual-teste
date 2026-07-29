@@ -553,6 +553,8 @@
     "nano:real-eval:bg": "nano_lm/.venv/bin/python nano_lm/src/run_bg_real_eval.py",
     "nano:bg:report": "nano_lm/.venv/bin/python nano_lm/src/run_bg_report.py",
     "nano:report:bg": "nano_lm/.venv/bin/python nano_lm/src/run_bg_report.py",
+    "nano:bg:freeze": "nano_lm/.venv/bin/python nano_lm/src/run_bg_freeze.py",
+    "nano:freeze:bg": "nano_lm/.venv/bin/python nano_lm/src/run_bg_freeze.py",
     "nano:bf:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_bf_real_eval.py",
     "nano:real-eval:bf": "nano_lm/.venv/bin/python nano_lm/src/run_bf_real_eval.py",
     "nano:bf:report": "nano_lm/.venv/bin/python nano_lm/src/run_bf_report.py",

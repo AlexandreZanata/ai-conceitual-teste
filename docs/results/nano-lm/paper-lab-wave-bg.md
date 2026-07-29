@@ -1,7 +1,7 @@
 # Paper-lab — Wave BG (unary/transform anti-FP + util + Nano gen-SKIP)
 
 > Companion to [wave-bg-summary.md](wave-bg-summary.md). English lab note.  
-> **Status: RESEARCH_COMPLETE** (BG8 FREEZE next) · Real-eval: [wave-bg-real-eval.md](wave-bg-real-eval.md) · Freeze: [bg-freeze.md](bg-freeze.md) · [formal-habgfreeze-bg-freeze.md](formal-habgfreeze-bg-freeze.md) · Parent: [bf-freeze.md](bf-freeze.md) · Ship: **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM · not TAC unlocked**
+> **Status: COMPLETE + FROZEN** · Real-eval: [wave-bg-real-eval.md](wave-bg-real-eval.md) · Freeze: [bg-freeze.md](bg-freeze.md) · [formal-habgfreeze-bg-freeze.md](formal-habgfreeze-bg-freeze.md) · Parent: [bf-freeze.md](bf-freeze.md) · Ship: **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM · not TAC unlocked**
 
 ## Question
 

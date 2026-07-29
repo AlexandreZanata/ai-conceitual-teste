@@ -1,9 +1,9 @@
-# Wave BG — unary/transform anti-FP + util + Nano gen-SKIP honesty (**RESEARCH_COMPLETE** — freeze pending)
+# Wave BG — unary/transform anti-FP + util + Nano gen-SKIP honesty (**COMPLETE + FROZEN**)
 
 > Lab: `.local/pesquisa.md` §9 · Paper-lab: [paper-lab-wave-bg.md](paper-lab-wave-bg.md) · Real-eval: [wave-bg-real-eval.md](wave-bg-real-eval.md) · Freeze: [bg-freeze.md](bg-freeze.md) · [formal-habgfreeze-bg-freeze.md](formal-habgfreeze-bg-freeze.md)  
 > Parent: Wave BF **BF-FREEZE** · Ship claim: **AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM · not TAC unlocked**
 
-**Status: RESEARCH_COMPLETE** (BG8 FREEZE next) · Thesis: **Wave BG dual track: H-UNARYINT·H-SHIPPUB·H-FASTBG·H-CTXBG PROMOTE (BG-FOREVER FH 0 · Track A++ util/paper · prod p50/p99 hold · howto·cite·long content · anti-FP); H-NANOGEN17 SKIP (gen stance skip · CAPCHECK closed · no written M1|M2|M3 plan · NANOGEN6·7 HOLD · NANOGEN8…15 DEFER · NANOGEN16 SKIP cited · not empty DEFER letter · not NANOGEN16 rename); BG-REAL-EVAL PROMOTE (live battery 17/17 · BG-FOREVER FP ABSTAIN · BA…BF forever hold · over-refuse LOOKUP · utilization smoke · gen locked); ship AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM · not TAC unlocked.**
+**Status: COMPLETE + FROZEN** · Thesis: **Wave BG dual track: H-UNARYINT·H-SHIPPUB·H-FASTBG·H-CTXBG PROMOTE (BG-FOREVER FH 0 · Track A++ util/paper · prod p50/p99 hold · howto·cite·long content · anti-FP); H-NANOGEN17 SKIP (gen stance skip · CAPCHECK closed · no written M1|M2|M3 plan · NANOGEN6·7 HOLD · NANOGEN8…15 DEFER · NANOGEN16 SKIP cited · not empty DEFER letter · not NANOGEN16 rename); BG-REAL-EVAL PROMOTE (live battery 17/17 · BG-FOREVER FP ABSTAIN · BA…BF forever hold · over-refuse LOOKUP · utilization smoke · gen locked); ship AF packaged stack + AQ product layer + AS trust path + ablated DECODE (snippet-prefix + gibberish-tail STRICT) — not unlabeled open chat LM · not TAC unlocked.**
 
 ## Stage scoreboard (product + generative)
 

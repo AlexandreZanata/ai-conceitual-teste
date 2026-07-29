@@ -306,7 +306,7 @@ def realeval_section_ok(text: str) -> bool:
 def render_wave_bg_summary() -> str:
     lines = [
         "# Wave BG — unary/transform anti-FP + util + Nano gen-SKIP honesty "
-        "(**RESEARCH_COMPLETE** — freeze pending)",
+        "(**COMPLETE + FROZEN**)",
         "",
         "> Lab: `.local/pesquisa.md` §9 · Paper-lab: "
         "[paper-lab-wave-bg.md](paper-lab-wave-bg.md) · "
@@ -316,7 +316,7 @@ def render_wave_bg_summary() -> str:
         "> Parent: Wave BF **BF-FREEZE** · Ship claim: "
         f"**{SHIP_CLAIM}**",
         "",
-        "**Status: RESEARCH_COMPLETE** (BG8 FREEZE next) · Thesis: **"
+        "**Status: COMPLETE + FROZEN** · Thesis: **"
         + BG_THESIS
         + ".**",
         "",
@@ -455,7 +455,7 @@ def render_paper_lab_wave_bg() -> str:
             "",
             "> Companion to [wave-bg-summary.md](wave-bg-summary.md). "
             "English lab note.  ",
-            "> **Status: RESEARCH_COMPLETE** (BG8 FREEZE next) · "
+            "> **Status: COMPLETE + FROZEN** · "
             "Real-eval: [wave-bg-real-eval.md](wave-bg-real-eval.md) · "
             "Freeze: [bg-freeze.md](bg-freeze.md) · "
             "[formal-habgfreeze-bg-freeze.md](formal-habgfreeze-bg-freeze.md) · "
