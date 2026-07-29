@@ -887,6 +887,165 @@ def _predicate_boolean_add_false_friend(ask: str, gold: str) -> bool:
     return _sum_add_gold(gold)
 
 
+def _unary_math_excluded(a: str) -> bool:
+    """True iff ask is absdiff / neg1 / absolute-distance (not unary abs)."""
+    if _ask_is_absdiff(a) or _ask_is_neg1(a):
+        return True
+    return "absolute difference" in a or "absolute distance" in a
+
+
+def _unary_math_abs_cues(a: str) -> bool:
+    """True iff ask cues absolute value (words · abs() · |x|)."""
+    if "absolute value" in a or "abs value" in a:
+        return True
+    if "absolute" in a and "value" in a:
+        return True
+    compact = a.replace(" ", "")
+    if any(tok in compact for tok in ("abs(a)", "abs(n)", "abs(x)")):
+        return True
+    return any(tok in compact for tok in ("|x|", "|a|", "|n|", "|y|", "|t|"))
+
+
+def _unary_math_factorial_cues(a: str) -> bool:
+    return "factorial" in a or "n!" in a.replace(" ", "")
+
+
+def _unary_math_floor_cues(a: str) -> bool:
+    return any(
+        c in a
+        for c in (
+            "floor of",
+            "floor(",
+            "named floor",
+            "math.floor",
+            "floors float",
+        )
+    )
+
+
+def _unary_math_ceil_cues(a: str) -> bool:
+    if "ceil" not in a:
+        return False
+    return any(c in a for c in ("float", "of ", "ceil(", "named ceil"))
+
+
+def _unary_math_round_cues(a: str) -> bool:
+    if "round-trip" in a or "around" in a:
+        return False
+    return any(
+        c in a
+        for c in (
+            "rounds float",
+            "round float",
+            "round(",
+            "nearest int",
+            "nearest integer",
+            "named round",
+        )
+    )
+
+
+def _ask_is_unary_math(a: str) -> bool:
+    """
+    True iff ask wants unary math (abs · factorial · floor · round · ceil).
+
+    BG1 general gate — class neighbors, not bank-stuffed forever strings.
+    Must not fire on absdiff (|a-b|) or neg1 (unary negation already gated).
+    """
+    if _unary_math_excluded(a):
+        return False
+    if _unary_math_factorial_cues(a) or _unary_math_abs_cues(a):
+        return True
+    if _unary_math_floor_cues(a) or _unary_math_ceil_cues(a):
+        return True
+    return _unary_math_round_cues(a)
+
+
+def _ask_is_string_case_transform(a: str) -> bool:
+    """
+    True iff ask wants upper/lower case transform (BG1).
+
+    Must not fire on title-case (BD neighbor) or string reverse.
+    """
+    if _ask_is_title_case(a) or _ask_is_str_reverse(a):
+        return False
+    cues = (
+        "uppercase",
+        "upper case",
+        "to upper",
+        "upper(",
+        ".upper()",
+        "uppercase letters",
+        "upper letters",
+        "lowercase",
+        "lower case",
+        "to lower",
+        "lower(",
+        ".lower()",
+        "lowercase letters",
+        "lower letters",
+    )
+    if any(c in a for c in cues):
+        return True
+    return ("upper" in a or "lower" in a) and "string" in a
+
+
+def _ask_is_aggregate_truthy(a: str) -> bool:
+    """
+    True iff ask wants all/any truthy aggregate (BG1).
+
+    Must not fire on clear-all / remove-all list empties.
+    """
+    if _ask_wants_clear_all(a):
+        return False
+    if "truthy" in a or "truthiness" in a:
+        return True
+    if ("all items" in a or "all elements" in a) and (
+        "true" in a or "non-empty" in a or "nonzero" in a or "non-zero" in a
+    ):
+        return True
+    if ("any item" in a or "any element" in a or "any items" in a) and (
+        "true" in a or "truthy" in a
+    ):
+        return True
+    if "all(" in a and ("truthy" in a or " true" in a):
+        return True
+    return "any(" in a and ("truthy" in a or " true" in a)
+
+
+def _unary_math_wrong_bank(ask: str, gold: str) -> bool:
+    """True iff unary-math ask matched add/clear/f-string gold (BG1)."""
+    if not _ask_is_unary_math(ask.lower()):
+        return False
+    return (
+        _sum_add_gold(gold)
+        or _clear_gold(gold)
+        or _fstring_format_gold(gold)
+    )
+
+
+def _string_case_wrong_bank(ask: str, gold: str) -> bool:
+    """True iff case-transform ask matched f-string/add/clear gold (BG1)."""
+    if not _ask_is_string_case_transform(ask.lower()):
+        return False
+    return (
+        _fstring_format_gold(gold)
+        or _sum_add_gold(gold)
+        or _clear_gold(gold)
+    )
+
+
+def _aggregate_truthy_wrong_bank(ask: str, gold: str) -> bool:
+    """True iff all/any-truthy ask matched clear/add/f-string gold (BG1)."""
+    if not _ask_is_aggregate_truthy(ask.lower()):
+        return False
+    return (
+        _clear_gold(gold)
+        or _sum_add_gold(gold)
+        or _fstring_format_gold(gold)
+    )
+
+
 def _len_gold(gold: str) -> bool:
     g = gold.lower().replace(" ", "")
     return g in {"len(a)", "len(a);"} or g.startswith("len(a)")
@@ -933,6 +1092,9 @@ def _intent_mismatch_reject(ask: str, gold: str) -> bool:
         _len_wrong_slot,
         _type_coercion_add_false_friend,
         _predicate_boolean_add_false_friend,
+        _unary_math_wrong_bank,
+        _string_case_wrong_bank,
+        _aggregate_truthy_wrong_bank,
         _bip39_wordlist_half_known,
         _bip39_entropy_wrong_slot,
     )
@@ -1309,7 +1471,10 @@ def intent_ask_must_abstain(ask: str) -> bool:
           floordiv/neg/gcd/lshift/rshift/nand/sort/len/
           str-reverse/clamp/sort-return/title-case/
           type-coercion str↔int·float→int·list→tuple·…/
-         predicate/boolean even·odd·parity·…/)
+         predicate/boolean even·odd·parity·…/
+         unary-math abs·factorial·floor·round·…/
+         string-case upper·lower·…/
+         aggregate all/any-truthy·…/)
          — never bank-stuff.
     """
     a = normalize_question(ask)
@@ -1339,6 +1504,9 @@ def intent_ask_must_abstain(ask: str) -> bool:
         _ask_is_title_case,
         _ask_is_type_coercion,
         _ask_is_predicate_boolean,
+        _ask_is_unary_math,
+        _ask_is_string_case_transform,
+        _ask_is_aggregate_truthy,
         _ask_is_add_difference,
         _ask_is_remove_not_clear,
         _ask_is_bip39_wordlist,
