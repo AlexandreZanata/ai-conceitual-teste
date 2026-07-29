@@ -547,6 +547,8 @@
     "nano:bf:ctxbf": "nano_lm/.venv/bin/python nano_lm/src/run_ctxbf.py",
     "nano:nanogen16": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen16.py",
     "nano:bf:nanogen16": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen16.py",
+    "nano:nanogen17": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen17.py",
+    "nano:bg:nanogen17": "nano_lm/.venv/bin/python nano_lm/src/run_nanogen17.py",
     "nano:bf:real-eval": "nano_lm/.venv/bin/python nano_lm/src/run_bf_real_eval.py",
     "nano:real-eval:bf": "nano_lm/.venv/bin/python nano_lm/src/run_bf_real_eval.py",
     "nano:bf:report": "nano_lm/.venv/bin/python nano_lm/src/run_bf_report.py",
