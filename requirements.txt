@@ -1,0 +1,37 @@
+# N32 Python dependencies.
+#
+# Install:
+#   python3 -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# The venv lives at .venv/ and is gitignored. Never commit it — the previous
+# one was 5.1 GB.
+#
+# CUDA note: torch is installed from the cu130 index for the RTX 4060.
+#   pip install torch --index-url https://download.pytorch.org/whl/cu130
+
+# --- Core ---
+torch>=2.12.0
+numpy>=1.26.0
+
+# --- Tokenizer + data ---
+tokenizers>=0.20.0
+datasets>=3.0.0
+huggingface-hub>=0.26.0
+zstandard>=0.23.0
+datasketch>=1.6.5          # MinHash LSH deduplication (P02)
+fasttext-wheel>=0.9.2      # language identification (P02)
+
+# --- Evaluation ---
+scipy>=1.14.0              # bootstrap confidence intervals (P06)
+matplotlib>=3.9.0          # loss curves, heatmaps, frontier plots
+
+# --- Reference baselines (P04 parity check, P17 comparison) ---
+transformers>=4.46.0
+
+# --- Retrieval (P16) ---
+rank-bm25>=0.2.2
+
+# --- Quality gates ---
+ruff>=0.7.0
+pytest>=8.3.0

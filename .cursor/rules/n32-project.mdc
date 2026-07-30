@@ -1,0 +1,38 @@
+---
+description: N32 project rules — 32k-context nano LM pipeline; wave protocol retired; EvoGen frozen
+alwaysApply: true
+---
+
+# Project rules — N32
+
+- **Active programme:** `N32` — ≤60M non-embedding params, **32,768-token context**, trained end to end on one RTX 4060 in <72 h. Spec: `docs/pipeline/README.md`.
+- **Read first, always:** `docs/pipeline/P19-agent-operating-protocol.md`, then `docs/ASSESSMENT-2026-07-30.md`.
+- **Find your task:** `ls docs/pipeline/results/` — the highest-numbered file is the last completed stage; the next stage is the job. One stage at a time.
+- **Wave protocol is RETIRED.** Never create a wave, letter-named phase, forever pack, or new numbering scheme.
+- **Deleted history:** waves W–BH, EvoGen C++, and the old harness were removed in the 2026-07-30 reset. They live only in the git tag `legacy/waves-w-bh`. **Do not restore or read them** — 341,926 lines of the protocol that failed.
+
+## Seven laws
+
+| # | Law |
+|---|---|
+| R1 | Held-out **bits-per-byte** is primary. Never report perplexity. |
+| R2 | No claim without a committed artifact (git hash · config hash · seed · wall time). Markdown is never evidence. |
+| R3 | Retrieval and generation measured separately, always. |
+| R4 | Embedding vs non-embedding params reported separately, always. |
+| R5 | A stage that costs no FLOPs is not research. |
+| R6 | One pipeline. No waves. |
+| R7 | A failed gate stops the pipeline. Fix the cause, never the gate. |
+
+## Hard prohibitions
+
+- Serving any answer from a lookup table.
+- Weakening a gate so a stage passes.
+- Leaving a hypothesis in `HOLD` / `DEFER` — resolve to `PROMOTE` or `FALSIFY`.
+- Adding an npm script no stage references.
+- Writing a summary document instead of running an experiment.
+
+**Three failed attempts at a gate → stop and ask the user.**
+
+- Research tracks: `docs/pipeline/P13-quantum-inspired-training-lab.md` (quantum-inspired; classical controls mandatory) · `docs/hypotheses/README.md` (100-architecture catalogue, fixed size).
+- Caps: cyclomatic ≤10 per function; `npm run verify` before every commit.
+- Repository hygiene (what never enters git): `docs/REPO-HYGIENE.md`.

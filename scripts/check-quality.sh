@@ -1,27 +1,30 @@
 #!/usr/bin/env bash
-# Full quality gate used by Lefthook pre-commit and `npm run verify`.
+# Full quality gate. Used by Lefthook (pre-commit, pre-push) and `npm run verify`.
+# Caps: cyclomatic <=10 per function, lint 0/0, hygiene clean, tests pass.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
-echo "=== ai-conceitual-teste quality gate ==="
+SCOPE="${1:---all}"
+
+echo "=== N32 quality gate ==="
 
 echo ""
-echo "1/4 Size + complexity (cyclomatic≤10; file/function line caps waived)"
-python3 "$ROOT/scripts/check_size_complexity.py" --root "$ROOT" "$@"
+echo "1/4 Repository hygiene (no binaries, no secrets, no bloat)"
+python3 scripts/check_repo_hygiene.py "$SCOPE"
 
 echo ""
-echo "2/4 Lint (0 errors, 0 warnings)"
-bash "$ROOT/scripts/check-lint.sh"
+echo "2/4 Complexity (cyclomatic <= 10 per function)"
+python3 scripts/check_size_complexity.py --root "$ROOT"
 
 echo ""
-echo "3/3 System / compile (0 errors)"
-bash "$ROOT/scripts/check-system.sh"
+echo "3/4 Lint (0 errors, 0 warnings)"
+bash scripts/check-lint.sh
 
 echo ""
-echo "4/4 Benchmark report contract (phase 09)"
-python3 "$ROOT/scripts/validate_benchmark_report.py"
+echo "4/4 Tests"
+bash scripts/check-tests.sh
 
 echo ""
 echo "=== All quality gates passed ==="

@@ -1,7 +1,0 @@
-# Holdout fitness prompts — IDs must stay disjoint from smoke/eval (p*).
-# Used by H-HOLD for selection only; never for claim eval.
-prompts:
-  - id: f01
-    text: "Sara found a red balloon in the garden. She decided to"
-  - id: f02
-    text: "The old owl told a secret to the mouse. Then the mouse"

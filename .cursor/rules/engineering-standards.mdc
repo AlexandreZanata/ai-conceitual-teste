@@ -1,0 +1,59 @@
+---
+description: Engineering standards — English only, minimal diffs, complexity caps, layering
+alwaysApply: true
+---
+
+# ENGINEERING STANDARDS
+
+Self-contained. There is no external rules harness — it was removed in the 2026-07-30 reset.
+
+## English only
+
+ALL artifacts are 100% English: code identifiers, comments, docs, commits, tests, API names.
+
+- Voice: imperative — `MUST`, `NEVER`, `VERIFY`
+- Structure: bullets and tables over paragraphs
+- Uncertainty: prefix `UNCERTAIN:` + one clarifying question
+- Never invent mixed-language identifiers
+
+## Complexity caps
+
+| Metric | Cap |
+|---|---|
+| Cyclomatic complexity | **≤ 10 per function** |
+| File / function lines | waived |
+
+Extract helper functions when approaching 8. **Never nest deeper to game the metric.**
+Enforced by `scripts/check_size_complexity.py`.
+
+## Lazy-senior discipline
+
+The best code is the code never written. Before writing any code, stop at the first rung that holds:
+
+1. Does this need to exist at all? (YAGNI)
+2. Does it already exist in this repo? Reuse it.
+3. Does the standard library do it? Use it.
+4. Does an installed dependency solve it? Use it.
+5. Can it be one line? Make it one line.
+6. Only then: write the minimum that works.
+
+Climb the ladder **after** understanding the problem, not instead of.
+
+- No abstractions that were not requested. No new dependency if avoidable.
+- Deletion over addition. Boring over clever. Fewest files possible.
+- Bug fix = root cause. Grep every caller and fix the shared function once.
+- Mark intentional simplifications with a `ponytail:` comment (ceiling + upgrade path).
+
+**Not lazy about:** understanding the problem, input validation at trust boundaries, error handling that prevents data loss, security, anything explicitly requested.
+
+## Architecture
+
+- Inner layers never depend on outer ones.
+- No frameworks in domain logic.
+- Immutable value objects; domain-generated IDs.
+- Mask sensitive data in logs and outputs.
+- Match `docs/METRICS.md` terminology exactly — never redefine a metric locally.
+
+## Scope
+
+Smallest diff that solves the problem. No drive-by refactors. One logical change per commit.

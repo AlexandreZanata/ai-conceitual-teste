@@ -1,33 +1,98 @@
-# Local overrides and ephemeral Cursor task rules (not part of harness)
-.local/
-.cursor/rules/_task-active.mdc
+# =============================================================================
+# N32 .gitignore
+#
+# RULE: the repository holds SOURCE, CONFIG, SPECS, and SMALL JSON RESULTS.
+# Everything a machine can regenerate stays out. See docs/REPO-HYGIENE.md.
+#
+# Nothing over 1 MB is ever committed without an explicit decision.
+# =============================================================================
 
-# Environment and secrets
+# --- Secrets ----------------------------------------------------------------
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+credentials.json
+secrets.yaml
 
-# OS and IDE (non-Cursor)
-.DS_Store
-.idea/
-*.swp
+# --- Private scratch --------------------------------------------------------
+# Working notes for the active stage. Never required by another agent.
+.local/
+.cursor/rules/_task-active.mdc
 
-# Python tooling (harness + quality scripts)
+# =============================================================================
+# THE BIG FOUR — regenerable, and the reason most ML repos become unusable
+# =============================================================================
+
+# --- 1. Training data (~14 GB raw, ~8 GB tokenized) -------------------------
+# Rebuild: npm run data:fetch && npm run data:clean && npm run data:dedup
+# The MANIFEST with SHA-256 hashes is committed; the bytes are not.
+data/*
+!data/.gitkeep
+!data/manifest.json
+
+# --- 2. Model weights (13 MB - 200 MB each) ---------------------------------
+# Distribute via HuggingFace Hub, never via git. See docs/REPO-HYGIENE.md.
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.gguf
+*.onnx
+*.ckpt
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.h5
+*.msgpack
+artifacts/*
+!artifacts/.gitkeep
+
+# --- 3. Training runs (checkpoints + metrics streams) -----------------------
+# Rebuild: npm run train. Only the final summary JSON is promoted to results/.
+runs/*
+!runs/.gitkeep
+
+# --- 4. Run artifacts (heavy JSON dumps, plots, logs) -----------------------
+# Committed EXCEPTION: small summary JSON referenced by a stage result.
+# See docs/REPO-HYGIENE.md section "What may enter results/".
+# `!results/**/` re-admits directories so git descends into them; without it the
+# negations below can never match.
+results/**
+!results/**/
+!results/.gitkeep
+!results/**/summary.json
+!results/**/*_summary.json
+
+# --- Caches -----------------------------------------------------------------
+.cache/
+.hf_cache/
+~/.cache/huggingface
+wandb/
+tensorboard/
+lightning_logs/
+
+# --- Python -----------------------------------------------------------------
 __pycache__/
+*.py[cod]
+*$py.class
 .venv/
 venv/
-*.pyc
+env/
+*.egg-info/
+.eggs/
+build/
+sdist/
+.mypy_cache/
+.ruff_cache/
 .pytest_cache/
+.coverage
+htmlcov/
+.tox/
 
-# nano_lm Hugging Face / torch caches (weights stay local)
-nano_lm/.cache/
-nano_lm/.hf_cache/
-
-# Curated public downloads (regenerate: npm run nano:curated)
-nano_lm/data/curated/**
-!nano_lm/data/curated/.gitkeep
-
-# Node
+# --- Node -------------------------------------------------------------------
 node_modules/
 dist/
 coverage/
@@ -35,21 +100,41 @@ coverage/
 .next/
 *.tsbuildinfo
 .tmp/
+npm-debug.log*
 
-# EvoGen experiment outputs (keep folder via .gitkeep)
-results/*
-!results/.gitkeep
-
-# C++ build
-build/
+# --- C / C++ / CUDA ---------------------------------------------------------
 cmake-build-*/
 compile_commands.json
+*.o
+*.so
+*.a
+*.dylib
 
-# LaTeX paper build artifacts (sources stay; rebuild: npm run paper:build)
+# --- Editors and OS ---------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Notebooks --------------------------------------------------------------
+# Outputs bloat diffs and leak data. Strip before committing (nbstripout).
+.ipynb_checkpoints/
+
+# --- Logs and profiles ------------------------------------------------------
+*.log
+*.prof
+*.nsys-rep
+*.sqlite
+*.trace.json
+
+# --- LaTeX ------------------------------------------------------------------
 paper/*.aux
 paper/*.bbl
 paper/*.blg
 paper/*.log
 paper/*.out
 paper/*.toc
-paper/main.pdf
+paper/*.synctex.gz
+paper/*.pdf

@@ -1,61 +1,41 @@
-# Hard block — Cursor must not read / index these (speed + safety).
-# After edits: Command Palette → "Cursor: Resync Index".
+# Excluded from Cursor's index and from agent access.
+# The repository is small by design (~60 tracked files) — this file only needs
+# to keep generated bulk out. See docs/REPO-HYGIENE.md.
 
-.env
-.env.*
-!.env.example
-
-nano_lm/.venv/
-nano_lm/.cache/
-nano_lm/.hf_cache/
-**/.venv/
-**/__pycache__/
-**/.pytest_cache/
-**/*.pyc
-.mypy_cache/
-.ruff_cache/
-
+# --- Heavy regenerable output ---
+data/
+runs/
+artifacts/
 results/
-!results/.gitkeep
 
-nano_lm/data/curated/
-!nano_lm/data/curated/.gitkeep
+# --- Environments and caches ---
+node_modules/
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.cache/
+.hf_cache/
+wandb/
 
+# --- Build ---
+build/
+dist/
+
+# --- Binaries (never in the repo, but may exist on disk) ---
 *.pt
 *.pth
 *.bin
 *.safetensors
 *.gguf
 *.onnx
-*.ckpt
-*.pkl
-*.pickle
 *.npy
 *.npz
+*.parquet
+*.arrow
 
-node_modules/
-dist/
-build/
-coverage/
-.turbo/
-.next/
-*.tsbuildinfo
-compile_commands.json
-
-paper/*.aux
-paper/*.bbl
-paper/*.blg
-paper/*.log
-paper/*.out
-paper/*.toc
-paper/*.synctex.gz
-paper/main.pdf
-
-.local/tmp/
-.local/tmp-live-audit/
-.local/**/trials/
-.local/**/*.jsonl
-
-.DS_Store
-.idea/
-*.swp
+# --- Lockfiles and logs ---
+package-lock.json
+*.log

@@ -1,65 +1,110 @@
-# AGENTS.md — Nano generative LM (active)
+# AGENTS.md — N32
 
-> **Read this first** in any new agent session.
+> **Read this, then [`docs/pipeline/P19-agent-operating-protocol.md`](docs/pipeline/P19-agent-operating-protocol.md). Then stop reading and start working.**
 
-**Project:** Nano generative student (≤5M) under `nano_lm/` — speed, efficiency, curated KB.  
-**Language:** 100% English for code, comments, commits, and agent technical output.  
-**EvoGen C++ PoC:** frozen — [`docs/archive/evogen/`](docs/archive/evogen/README.md).
-
-When rules conflict with existing code, **rules prevail** — unless the user explicitly overrides.
+**Project:** `N32` — a ≤60M non-embedding-parameter, 32k-context causal language model, trained end to end on one RTX 4060 in under 72 hours.
+**Language:** 100% English for code, comments, commits, documents, and technical output.
+**Status:** redirected 2026-07-30. Waves W–BH are frozen. The wave protocol is retired permanently.
 
 ---
 
-## What this repo is
+## Where you are
 
-| Is | Is not |
-|----|--------|
-| Nano causal LM research (tips + recipes + domain KB) | Generic ML framework / SaaS |
-| Public curated programming + frontier corpora | Private scrape dump |
-| STAG′ / EARLY / POOL + PACK efficiency stack | Unbounded model scale |
+This project already failed once. Not from lack of effort — 341,926 lines of Python, 856 npm scripts, 564 commits, 37 "waves" — but because **none of it was ever checked against a number that could go down**. Held-out perplexity was never computed. The shipped product answered questions from an 18-row lookup table.
+
+The full autopsy is [`docs/ASSESSMENT-2026-07-30.md`](docs/ASSESSMENT-2026-07-30.md). Read it before you write code. The rules below exist because of specific things that happened, and they will look excessive until you know what they prevent.
 
 ---
 
-## Always load
-
-1. `agent-rules/AGENT-CORE-PRINCIPLES.md`
-2. `agent-rules/00-core/size-and-complexity-limits.md` — **80 / 200 / ≤10**
-3. `docs/ARCHITECTURE.md` + `docs/GLOSSARY.md`
-4. `docs/NANO-STUDENT-AGENDA.md` + `docs/results/nano-lm/champion-card.md` + `RECIPES.md`
-5. `.local/pesquisa.md` — **lab source of truth** (wave status, anti-FP scoreboard, next actions)
-6. `nano_lm/data/CURATED-SOURCES.md` before data work
+## First five commands
 
 ```bash
-./agent-harness/rules-path.sh
-./agent-harness/resolve-rules.sh <keywords>
-npm run nano:test && npm run verify
+ls docs/pipeline/results/     # highest-numbered file = last completed stage; the next one is your job
+ls .local/                    # a PXX-* directory means that stage is in flight — read its LOG.md
+npm run verify                # must be green before anything else
+nvidia-smi                    # GPU must be free
+git rev-parse --short HEAD    # record this in your stage log
 ```
 
 ---
 
-## Delivery posture
+## Required reading — and nothing else
 
-- Survival PoC v1 **closed** → `docs/archive/evogen/`.
-- Waves W–**BF** **COMPLETE + FROZEN** — public mirrors under `docs/results/nano-lm/*-freeze.md`.
-- **Wave BH ACTIVE** — BH0 [SESSION PROMOTE](docs/results/nano-lm/wave-bh-session.md) (`npm run nano:bh:session`) — IQ battery v0 plan · gold holes (Rust MISS · add truncation) · BA…BG/AZ hold · Track A++ util · gen stance **SKIP** (H-NANOGEN18); BH1 H-IQBAT PROMOTE (`npm run nano:iq-battery`); next BH2 H-GOLDFIX; ship remains **AF + AQ + AS trust + STRICT ablated DECODE**; NANOGEN6·7 HOLD · NANOGEN8…15 DEFER · NANOGEN16·17 SKIP; ≤5M stays.
-- Active wave / reopen: **only** what `.local/pesquisa.md` says.
-- Ship claim until gen PROMOTE: **AF + AQ + AS trust + STRICT ablated DECODE** — not unlabeled open chat · not TAC / mini-AGI unlocked.
-- Generative north star: true_continue via real M1|M2|M3 — else SKIP/DEFER (no NANOGEN rename).
+| Order | Document | Lines |
+|---|---|---:|
+| 1 | [`docs/pipeline/P19-agent-operating-protocol.md`](docs/pipeline/P19-agent-operating-protocol.md) | ~250 |
+| 2 | [`docs/ASSESSMENT-2026-07-30.md`](docs/ASSESSMENT-2026-07-30.md) | ~230 |
+| 3 | [`docs/pipeline/README.md`](docs/pipeline/README.md) | ~200 |
+| 4 | Your stage spec, `docs/pipeline/PXX-*.md` | ~200 |
 
----
-
-## Quality gates (Lefthook)
-
-Every commit: file ≤200, function ≤80, cyclomatic ≤10, lint 0/0, system 0 errors → `npm run verify`.
+**Do not read anything else.** The wave history — 573 reports and 341,926 lines — was deleted on 2026-07-30 and lives only in the git tag `legacy/waves-w-bh`. Do not check it out. Do not read stage specs other than your own. That material will exhaust your context and teach you the protocol that failed.
 
 ---
 
-## Local workspace
+## The seven laws
 
-`.local/` is gitignored. Public mirrors under `docs/`.  
-Curated blobs under `nano_lm/data/curated/` are gitignored — regenerate with `npm run nano:curated`.  
-Heavy experiment dumps under `results/` are gitignored — regenerate with `npm run nano:*`.
+| # | Law |
+|---|---|
+| R1 | Held-out **bits-per-byte** is the primary metric. Report it at every stage. Never report perplexity. |
+| R2 | **No claim without a committed artifact** carrying git hash, config hash, seed, and wall time. Markdown is never evidence. |
+| R3 | **Retrieval and generation are measured separately.** A lookup hit is never model capability. |
+| R4 | **Embedding and non-embedding parameters** are always reported separately. |
+| R5 | **A stage that costs no FLOPs is not a research stage.** Documents are overhead. |
+| R6 | **One pipeline.** No waves, no letters, no forever packs, no new numbering schemes. |
+| R7 | **A failed gate stops the pipeline.** Fix the cause, never the gate. |
 
-## Cursor performance
+---
 
-See `.cursorignore` + `.cursorindexingignore`. After changing them: **Cursor: Resync Index**.
+## Never do these
+
+Every item is something that actually happened here.
+
+| Never | What it produced |
+|---|---|
+| Create a wave or letter-named phase | 37 waves, zero model improvement |
+| Weaken a gate so a stage passes | Gates became strings to grep for in markdown |
+| Report a metric that cannot fail | `L_eff` in the hundreds of thousands, on a model that could not use context |
+| Serve an answer from a lookup table | An 18-row JSON file scored as 9.0/10 model quality |
+| Cite an artifact without verifying it exists | 251 reports cite `formal.json`; **zero exist** |
+| Leave a hypothesis in `HOLD` or `DEFER` | NANOGEN 1–18, never resolved |
+| Write a document instead of running an experiment | 789 markdown files, one 120-step training run |
+| Rename a failed approach and retry it | `NANOGEN` → `NANOGEN2` → … → `NANOGEN18` |
+| Add an npm script no stage references | 856 scripts |
+
+**Three failed attempts at a gate means stop and ask the user.** The previous programme's answer to a blocked path was to open a new wave, 37 times. That is the most expensive mistake available to you.
+
+---
+
+## Always do these
+
+- Copy your stage's gate **verbatim** into `.local/PXX-*/LOG.md`. Paraphrasing is how gates get weakened.
+- **Commit a numeric prediction before running.** It converts a fit into a test.
+- Name the **classical control** for any novel method. Beating the naive baseline proves nothing.
+- Report p50 and p99, never the mean. Report confidence intervals on every comparison.
+- Write failures to [`docs/negative_results.md`](docs/negative_results.md). Failures are results.
+- Run `npm run verify` before every commit. Cyclomatic complexity ≤10 per function.
+- Write heavy output to `data/`, `runs/`, `artifacts/`, `results/` — all gitignored. Promote only the small summary JSON that proves the gate passed. **Never `git commit --no-verify`.**
+
+---
+
+## Repository map
+
+| Path | Contents | Editable? |
+|---|---|---|
+| `docs/pipeline/` | 19 stage specs + protocol | Only with user approval |
+| `docs/pipeline/results/` | The scoreboard | Append only |
+| `docs/hypotheses/` | 100-architecture catalogue | Yes — keep the count at 100 |
+| `docs/ASSESSMENT-2026-07-30.md` | Historical audit | **No.** Frozen. |
+| `docs/negative_results.md` | Failures ledger | **Append always** |
+| `docs/METRICS.md` | Metric definitions | Yes — the **only** place a metric is defined |
+| `n32/` | Active source | Yes |
+| `.local/` | Your scratch space; `STAGE-TEMPLATE/` is permanent | Yes |
+| `docs/REPO-HYGIENE.md` | What may enter git | Read before committing anything unusual |
+| `data/` `runs/` `artifacts/` `results/` | Heavy output, gitignored | Write freely; commit nothing |
+| git tag `legacy/waves-w-bh` | Deleted history | **No.** Do not check out. |
+
+---
+
+## The whole job, in one paragraph
+
+> Find the highest-numbered file in `docs/pipeline/results/`; the next stage is yours. Read the four documents above and nothing else. Copy your gate verbatim, commit a numeric prediction, run the experiment, and produce a JSON artifact with a git hash in it. If the gate passes, write a one-page result and advance. If it fails, fix the cause — never the gate. If it fails three times, stop and ask. Do not create waves, do not write summary documents, do not serve answers from lookup tables, and never report a number you cannot point at a file for.

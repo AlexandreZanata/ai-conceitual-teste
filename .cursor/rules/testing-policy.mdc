@@ -1,0 +1,45 @@
+---
+description: Contract-first testing — tests are immutable contracts, never weakened to pass CI
+alwaysApply: true
+---
+
+# TEST CONTRACT POLICY
+
+## Law
+
+Tests are **immutable logical contracts**. They fail when code breaks the contract.
+**Never** change a test to match broken code.
+
+## Forbidden
+
+- Mirroring production logic inside the test
+- Weakening an assertion to make CI green
+- Tests that cannot fail
+- Asserting on document contents (the previous programme tested that markdown contained the string `PROMOTE`)
+- Fixing test expectations without a documented contract change
+
+## Required
+
+1. Write the failing test first.
+2. Implement until it passes.
+3. If test and code conflict → **fix the code**, or change the contract explicitly with the user.
+4. Every non-trivial change leaves one runnable contract test that fails if the rule breaks.
+
+## Pyramid
+
+| Type | ~Share | Purpose |
+|---|---|---|
+| **Unit** | 75% | Pure functions, math, state machines |
+| **Integration** | 20% | Module boundaries, checkpoint round-trips |
+| **E2E** | 5% | Train → eval → serve smoke path |
+
+## This project specifically
+
+Highest-value contracts, from `docs/pipeline/P04-baseline-architecture.md`:
+
+- Parameter count matches the config arithmetic **exactly**
+- Attention is causal; sliding window attends exactly `w` positions
+- Incremental KV-cache decode equals a full forward pass
+- Checkpoint resume is **bit-exact**
+- BPB is tokenizer-invariant
+- Every metric can report bad news — test it on deliberately damaged input

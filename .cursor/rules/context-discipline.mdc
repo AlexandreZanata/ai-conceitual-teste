@@ -1,40 +1,39 @@
 ---
-description: Conditional rule loading — token economy via triggers and manifest
+description: Context discipline and token economy — read four documents, not the archive
 alwaysApply: true
 ---
 
 # CONTEXT DISCIPLINE
 
-## Rules path resolution
+## Required reading — and nothing else
 
-1. Run `./harness/rules-path.sh` (or `./agent-harness/rules-path.sh` after install).
-2. Read `harness.config.yaml` → `rules_dir`: `rules/` in harness repo, `agent-rules/` when installed.
+| # | Document |
+|---|---|
+| 1 | `docs/pipeline/P19-agent-operating-protocol.md` |
+| 2 | `docs/ASSESSMENT-2026-07-30.md` |
+| 3 | `docs/pipeline/README.md` |
+| 4 | Your stage spec: `docs/pipeline/PXX-*.md` |
 
-## Always loaded
+~2,000 lines total. That is the entire required reading for this project.
+If you need more, **ask the user** — do not explore.
 
-- `.cursor/rules/*.mdc`
-- Base rules from `{rules_dir}/manifest.yaml` → `always_apply`
-
-## Conditional load (MUST for non-trivial tasks)
+## Find your task
 
 ```bash
-./harness/resolve-rules.sh <keywords>
-# Installed project: ./agent-harness/resolve-rules.sh <keywords>
+ls docs/pipeline/results/   # highest number = last completed stage; next one is yours
+ls .local/                  # a PXX-* dir means that stage is in flight
 ```
 
-| Task | Keywords example |
-|------|------------------|
-| API endpoint | `api endpoint controller auth validation` |
-| Domain feature | `domain layer state event` |
-| Security review | `security authz bola injection` |
-| Bug fix | `bugfix regression error` |
-| Performance | `query cache n+1` |
+## MUST
 
-## Protocol
+- Cite file paths — never paste whole files into a response.
+- Reference `docs/METRICS.md` once for a metric definition; never re-define it.
+- Use tables and bullets where they beat paragraphs.
+- State which stage you are working on before implementing.
 
-1. Resolve `rules_dir` via `rules-path.sh`.
-2. Resolve 2–6 rule files — NOT entire tree.
-3. State loaded rule IDs at start of implementation.
-4. Follow `{rules_dir}/09-ai-agent-specific/incremental-verification.md` after each edit.
+## NEVER
 
-Full index: `{rules_dir}/STRUCTURE.md`
+- Read `docs/pipeline/` stage specs other than your own.
+- Reconstruct deleted history from `git show legacy/waves-w-bh` unless the user asks. It is 341,926 lines of the protocol that failed.
+- Write a summary document. The only output document is `docs/pipeline/results/PXX.md`, one page, after the gate passes.
+- Re-explain the assessment or the seven laws back to the user — cite the section.

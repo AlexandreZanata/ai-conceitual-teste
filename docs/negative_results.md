@@ -1,76 +1,51 @@
-# Negative results — Nano-LM archive
+# Negative results
 
-Honest failures and non-promotions. Patterned after quantun-ia `docs/negative_results.md`.
-International labs treat negatives as rigor, not weakness.
+> **Append-only ledger of failures.** A failed gate produces an entry here, never a result file in [`pipeline/results/`](pipeline/results/README.md).
+> Required by law R7 and by the protocol in [P19](pipeline/P19-agent-operating-protocol.md).
 
----
+Failures are results. International labs treat negatives as rigor, not weakness.
 
-## Summary table
-
-| ID / event | Hypothesis (brief) | Outcome | Lesson |
-|------------|-------------------|---------|--------|
-| Wave Z HITL-Z1 | Champion PFB decode answers interactive Q&A | **FAIL** mean ≈1.0, 10/10 errors | PFB ≠ interactive LM |
-| H-ZPREF | Preference tip lifts story CE | **KILL** story < parent−ε | Do not ship |
-| H-PARA (AA) | Paraphrase bank alone is robust | **HOLD** brittle exact-match | Need SEMWRAP+ |
-| H-SERVEALIGN | Open decode alignment passes bar | **HOLD** beats Z1; not pass bar | Wrap still required |
-| STREAM / KVCACHE-Q / GENCACHE | Cache tricks = product win | **KILL** | Lab freeze |
-| MIXD / GPFB K=2 / naive CTX | Mix / K=2 / raw long window | **KILL** | Archive only |
-| H-NANOGEN · NANOGEN2–3 | Generative unlock ≤5M | **HOLD** | true_continue unmet |
-| H-NANOGEN6 · NANOGEN7 | True-continue / TAC | **HOLD** | `true_continue=0` |
-| H-NANOGEN8–11 | Real new method generative lift | **DEFER** | No M1/M2/M3; not rename |
-| H-ADVREG | Adversary reg as product | **KILL** (AR) | — |
-| H-GEN* peak arms (many waves) | Gen mean lift via peak | **HOLD** peak_only_lift | Peak ≠ gen IQ |
-| Pack-only FH 0 (pre-BA audit) | Named/AZ packs imply generalization | **Pack theater** | Forever held-out required |
-| Live FP seeds | pow/mod/max→add; sort→reverse; len→junk | **FP** then closed in BA-FOREVER | Gate ≠ bank stuffing |
-| DECODE no-wrap known gold | Student generates add without wrap | **ABSTAIN** / dots | Gen path dead; honest refuse OK |
+**This was the strongest document the previous programme produced.** The verdicts below were recorded correctly and never retracted — the failure was that they were routed around rather than obeyed. See [`ASSESSMENT-2026-07-30.md §3`](ASSESSMENT-2026-07-30.md#3-what-is-genuinely-worth-keeping).
 
 ---
 
-## Foundational negative — Wave Z interactive decode
+## N32 — active programme
 
-**Claim tested:** Serving champion QPFB2 as interactive LM.  
-**Result:** HITL-Z1 FAIL (mean 1.0). Wrap LOOKUP (H-ZWRAP) PASS (mean 9.0).  
-**Doctrine locked:** recipes optimize serve; they do not create chat intelligence.
+Add every `FALSIFY` and `KILL` here. Cross-referenced by [`QUANTUM-LEDGER.md`](QUANTUM-LEDGER.md) and [`THEORY-LEDGER.md`](THEORY-LEDGER.md).
 
-Evidence: `docs/results/nano-lm/wave-z-hitl.md` · `wave-z-hitl-z1.md` · `wave-z-hitl-z4.md`.
-
----
-
-## Generative series — HOLD / DEFER
-
-Repeated NANOGEN waves without a real train/data/arch method produced no `true_continue` PROMOTE.
-Span-fallback and gold-substring must not be scored as generative IQ.
-CAPCHECK stays closed unless named reopen with ablations.
-
-Evidence: `formal-hnanogen*.md` · Wave BA `nanogen11_summary.json` (`n_true_continue=0`).
+| ID | Hypothesis | Named control | Outcome | Artifact | Lesson |
+|---|---|---|---|---|---|
+| — | *(none yet)* | | | | |
 
 ---
 
-## Pack theater — outside-pack false positives
+## Waves W–BH — frozen historical record
 
-**Observation (2026-07-28 live ask):** AZ/named packs looked green while novel ops still LOOKUP-matched `add` / wrong list golds.  
-**Classification:** pack PASS ≠ intelligence.  
-**Fix direction:** forever held-out + intent/ops gate (BA H-REALGAIN), not stuffing probe strings into the bank.
+> **Do not extend this section.** The wave tree was deleted in the 2026-07-30 reset.
+> Evidence is recoverable from the git tag: `git checkout legacy/waves-w-bh`, then look under `docs/results/nano-lm/`.
+> These verdicts are retained because **the knowledge of what failed is worth keeping even though the code is not.**
 
----
+### What was tried and killed
 
-## Tip KILLs (lab freeze)
+| ID / event | Hypothesis | Outcome | Lesson |
+|---|---|---|---|
+| Wave Z HITL-Z1 | Champion decode answers interactive Q&A | **FAIL** — mean 1.0/10, 10/10 errors | A serving recipe does not create chat intelligence |
+| H-ZPREF | Preference tip lifts story CE | **KILL** | Below parent baseline |
+| H-PARA | Paraphrase bank alone is robust | **HOLD** | Brittle exact-match |
+| H-SERVEALIGN | Open decode alignment clears the bar | **HOLD** | Beat Z1 but never passed |
+| STREAM · KVCACHE-Q · GENCACHE | Cache tricks are a product win | **KILL** | Cache theater |
+| MIXD · GPFB K=2 · naive CTX | Train mix / K=2 / raw long window | **KILL** | Archive only |
+| H-NANOGEN, NANOGEN2–3 | Generative unlock at ≤5M | **HOLD** | `true_continue` unmet |
+| H-NANOGEN6 · NANOGEN7 | True continue / TAC | **HOLD** | `true_continue = 0` |
+| H-NANOGEN8–11 | Real new method for generative lift | **DEFER** | No method — a rename is not a method |
+| H-ADVREG | Adversary regularization as product | **KILL** | — |
+| H-GEN* peak arms | Generative lift via extractive peak | **HOLD** | Peak ≠ generation |
+| Pack-only FH 0 | Named packs imply generalization | **PACK THEATER** | Held-out probes are mandatory |
+| Live FP seeds | `pow/mod/max → add`, `sort → reverse` | **FALSE HIT** | Fix the gate, never stuff the bank |
+| DECODE without wrap on known gold | Student generates `add` unaided | **ABSTAIN** / period collapse | The generative path was dead throughout |
 
-Must stay archived under `docs/results/nano-lm/archive/`:
+### The three lessons that shaped this pipeline
 
-| ID | Archive pointer |
-|----|-----------------|
-| STREAM | `archive/hstream-stream.md` |
-| KVCACHE-Q | `archive/hkvcache-kvcache.md` |
-| GENCACHE | `archive/hgencache-gencache.md` |
-| MIXD | `archive/hmixd-mix.md` |
-| GPFB K=2 | `archive/hgpfb-gpfb.md` |
-| naive CTX | `archive/hctx-long-window.md` |
-
-Validate: `npm run nano:lab-freeze`.
-
----
-
-## How to cite in the paper
-
-Main text §Results points here. Tables in `paper/tables/kill_archive.tex` and `generative_status.tex` summarize for reviewers.
+1. **Wave Z was right and was ignored.** Raw decode scored 1.0/10. Thirty waves then routed around that measurement instead of fixing its cause — data starvation and a 132K-parameter transformer. Law **R7** exists because of this.
+2. **Pack theater.** Named probe sets went green while novel inputs still produced false hits. Passing a fixed string list is not capability. Laws **R1** and **R3** exist because of this.
+3. **Rename is not method.** `NANOGEN` ran to 18 iterations without a written mechanism. [P13 §2](pipeline/P13-quantum-inspired-training-lab.md#2-protocol) now forbids indefinite `HOLD`: every hypothesis resolves to `PROMOTE` or `FALSIFY`.

@@ -1,28 +1,39 @@
 ---
-description: Lefthook quality gates — 0 lint, cyclomatic ≤10 (line caps waived) before every commit
+description: Quality gates and repository hygiene — every commit must pass npm run verify
 alwaysApply: true
 ---
 
-# Quality gates — ai-conceitual-teste
+# QUALITY GATES
 
-> **Non-negotiable:** every commit (local included) must pass `npm run verify`.
-
-## Hard caps
-
-| Metric | Cap |
-|--------|-----|
-| File lines | **waived** |
-| Function lines | **waived** |
-| Cyclomatic complexity | ≤ **10** |
-| Lint | **0** errors, **0** warnings |
-| System / typecheck | **0** errors when tooling exists |
-
-## Before every commit
+> **Non-negotiable:** every commit, local included, must pass `npm run verify`.
 
 ```bash
 npm run verify
 ```
 
-Do not commit if any gate fails.
+## Gates
 
-Full doc: `docs/QUALITY-GATES.md`. Harness reference: `agent-rules/00-core/size-and-complexity-limits.md`.
+| # | Gate | Cap |
+|---|---|---|
+| 1 | Repository hygiene | no binaries · no secrets · no file >1 MB · ≤400 tracked files · ≤40 npm scripts |
+| 2 | Cyclomatic complexity | **≤ 10** per function |
+| 3 | Lint | **0** errors, **0** warnings |
+| 4 | Tests | all pass |
+
+Enforced by Lefthook on pre-commit and pre-push. Install once: `npx lefthook install`.
+
+## Repository hygiene — the permanent rule
+
+**Git history is forever.** A pushed 200 MB checkpoint is downloaded by every clone, forever. Deleting it later does not remove it.
+
+**NEVER commit:** `.pt .pth .bin .safetensors .gguf .onnx .ckpt .npy .parquet` · `data/` `runs/` `artifacts/` `node_modules/` `.venv/` `.local/` · `.env` `*.pem` `*.key` · anything >1 MB.
+
+**Write heavy output to gitignored directories; promote only the small summary JSON (<100 KB) that proves a gate passed.**
+
+Full doc: `docs/REPO-HYGIENE.md`.
+
+## Never
+
+- `git commit --no-verify` — if the gate blocks you, it is right.
+- Raise a cap to make a commit pass. Raising a cap is a reviewable commit that explains why.
+- Commit a broken `main`.

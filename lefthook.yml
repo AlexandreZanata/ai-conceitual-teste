@@ -1,17 +1,27 @@
-# Lefthook — blocks every commit (local included) unless quality gates pass.
-# Caps: cyclomatic ≤10 (file/function line caps waived), lint 0/0, system 0 errors.
+# Lefthook — blocks every commit and push unless quality gates pass.
 #
 # Install: npm install && npx lefthook install
 # Manual:  npm run verify
+#
+# The pre-commit hygiene gate is the last cheap moment to stop a binary or a
+# secret from entering git history. Once pushed, it is there forever.
+# Never bypass with --no-verify.
 
 output:
   - failure
+  - summary
 
 pre-commit:
   parallel: false
   commands:
+    hygiene:
+      # Staged scope: fast, and catches the file before it becomes an object.
+      run: python3 scripts/check_repo_hygiene.py --staged
+      skip:
+        - merge
+        - rebase
     quality:
-      run: bash scripts/check-quality.sh
+      run: bash scripts/check-quality.sh --staged
       skip:
         - merge
         - rebase
@@ -19,4 +29,4 @@ pre-commit:
 pre-push:
   commands:
     quality:
-      run: bash scripts/check-quality.sh
+      run: bash scripts/check-quality.sh --all
