@@ -1,15 +1,18 @@
 # Excluded from Cursor's index and from agent access.
-# The repository is small by design (~60 tracked files) — this file only needs
-# to keep generated bulk out. See docs/REPO-HYGIENE.md.
+#
+# Leading slash = anchored to repo root. WITHOUT it, `results/` would also block
+# `docs/pipeline/results/` — the project scoreboard, which agents must read.
 
-# --- Heavy regenerable output ---
-data/
-runs/
-artifacts/
-results/
+# --- Heavy regenerable output (root only) ---
+/data/
+/runs/
+/artifacts/
+/results/
+/build/
+/dist/
+/node_modules/
 
-# --- Environments and caches ---
-node_modules/
+# --- Environments and caches (any depth) ---
 .venv/
 venv/
 __pycache__/
@@ -20,11 +23,7 @@ __pycache__/
 .hf_cache/
 wandb/
 
-# --- Build ---
-build/
-dist/
-
-# --- Binaries (never in the repo, but may exist on disk) ---
+# --- Binaries (never committed, but may exist on disk) ---
 *.pt
 *.pth
 *.bin

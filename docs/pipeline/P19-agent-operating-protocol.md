@@ -199,6 +199,12 @@ One sentence: what the next stage should know.
 **Maximum one page.** If it needs more, the extra belongs in a JSON artifact, not
 in prose.
 
+Then tick your stage in [`docs/CHECKPOINT.md`](../CHECKPOINT.md) and fill in its
+measured numbers. That file accumulates the paper's evidence one stage at a time —
+collecting it at the end is what failed last time. If ticking your stage completes
+a checkpoint's stop condition, **say so and stop**: writing the paper becomes the
+next task, not the next stage.
+
 ---
 
 ## 8. Repository map — where things are

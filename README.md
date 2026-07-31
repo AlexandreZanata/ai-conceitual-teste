@@ -10,10 +10,13 @@
 
 | You are | Read |
 |---|---|
-| **An agent picking up this work** | [`docs/pipeline/P19-agent-operating-protocol.md`](docs/pipeline/P19-agent-operating-protocol.md) — **first, always** |
+| **Continuing the work** | Paste [`docs/AGENT-PROMPT.md`](docs/AGENT-PROMPT.md) into a fresh agent session. It is self-contained. |
+| An agent that was just handed that prompt | [`docs/pipeline/P19-agent-operating-protocol.md`](docs/pipeline/P19-agent-operating-protocol.md) — **first, always** |
 | Evaluating the project | [`docs/ASSESSMENT-2026-07-30.md`](docs/ASSESSMENT-2026-07-30.md) |
 | Looking for the plan | [`docs/pipeline/README.md`](docs/pipeline/README.md) |
-| Looking for progress | [`docs/pipeline/results/`](docs/pipeline/results/README.md) |
+| Looking for progress | [`docs/pipeline/results/`](docs/pipeline/results/README.md) · [`docs/CHECKPOINT.md`](docs/CHECKPOINT.md) |
+| Ready to write the paper | [`docs/CHECKPOINT.md`](docs/CHECKPOINT.md) — the stop conditions and the evidence ledger |
+| Committing anything | [`docs/REPO-HYGIENE.md`](docs/REPO-HYGIENE.md) |
 
 ```bash
 ls docs/pipeline/results/    # highest-numbered file = last completed stage

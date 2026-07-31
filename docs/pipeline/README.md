@@ -214,3 +214,8 @@ Carried over from [assessment §7](../ASSESSMENT-2026-07-30.md#7-non-negotiable-
 Public stage results are written to [`results/`](results/README.md), one file per
 stage, only after the gate passes. That directory is the project's scoreboard —
 if a stage is not there, it did not happen.
+
+[`docs/CHECKPOINT.md`](../CHECKPOINT.md) aggregates those results into the
+evidence base for the paper, and defines the two points at which the pipeline
+stops and the paper gets written: **Checkpoint A after P12** (systems paper) and
+**Checkpoint B after P17** (full paper).

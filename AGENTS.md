@@ -97,6 +97,8 @@ Every item is something that actually happened here.
 | `docs/ASSESSMENT-2026-07-30.md` | Historical audit | **No.** Frozen. |
 | `docs/negative_results.md` | Failures ledger | **Append always** |
 | `docs/METRICS.md` | Metric definitions | Yes — the **only** place a metric is defined |
+| `docs/CHECKPOINT.md` | Paper evidence ledger and stop conditions | **Update on every passed gate** |
+| `docs/AGENT-PROMPT.md` | The prompt that starts a session | Only with user approval |
 | `n32/` | Active source | Yes |
 | `.local/` | Your scratch space; `STAGE-TEMPLATE/` is permanent | Yes |
 | `docs/REPO-HYGIENE.md` | What may enter git | Read before committing anything unusual |
