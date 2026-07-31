@@ -1,0 +1,59 @@
+{
+  "config_hash": "8d7ebfffe298da76",
+  "embedding_params": null,
+  "gate_pass": true,
+  "gates": {
+    "active_python_files": {
+      "measured": 15,
+      "pass": true,
+      "threshold": "<=80"
+    },
+    "contract_tests_that_can_fail": {
+      "measured": 7,
+      "pass": true,
+      "threshold": ">=1"
+    },
+    "legacy_files_in_working_tree": {
+      "measured": 0,
+      "pass": true,
+      "threshold": "==0"
+    },
+    "legacy_tag_exists": {
+      "measured": true,
+      "pass": true,
+      "threshold": "exists"
+    },
+    "npm_run_verify": {
+      "measured": 0,
+      "pass": true,
+      "threshold": "green",
+      "wall_seconds": 1.807
+    },
+    "npm_scripts": {
+      "measured": 39,
+      "pass": true,
+      "threshold": "<=40"
+    },
+    "tracked_files": {
+      "measured": 77,
+      "pass": true,
+      "threshold": "<=400"
+    },
+    "training_entrypoints": {
+      "measured": 1,
+      "pass": true,
+      "threshold": "==1"
+    }
+  },
+  "generation_score": null,
+  "git_hash": "6655ad0c84f7cf48b8c64198625a487d43528de3",
+  "held_out_bpb": null,
+  "latency_p50_ms": null,
+  "latency_p99_ms": null,
+  "non_embedding_params": null,
+  "retrieval_score": null,
+  "seed": 0,
+  "stage": "P01",
+  "timestamp": "2026-07-31T00:20:03.182166+00:00",
+  "wall_seconds": 2.085
+}

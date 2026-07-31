@@ -30,7 +30,7 @@ Tick only when `docs/pipeline/results/PXX.md` exists. Nothing else counts as don
 | ✓ | Stage | Gate | Measured |
 |:-:|---|---|---|
 | ☑ | [P00](pipeline/P00-charter-and-hardware-envelope.md) Hardware envelope | Reproducible profile committed | sustained TFLOP/s: **24.577** · usable VRAM: **7174 MB** · feasible: **true** (45.8 h) |
-| ☐ | [P01](pipeline/P01-ground-truth-reset.md) Ground-truth reset | ≤40 scripts, verify green, ≥1 failing-capable test | scripts: **39** · tests: `___` |
+| ☑ | [P01](pipeline/P01-ground-truth-reset.md) Ground-truth reset | ≤40 scripts, verify green, ≥1 failing-capable test | scripts: **39** · tests: **7** · train entries: **1** |
 | ☐ | [P02](pipeline/P02-data-foundation.md) Data foundation | ≥4B deduplicated tokens, licence-clean | tokens: `___` B · dedup removed: `___`% |
 | ☐ | [P03](pipeline/P03-tokenizer.md) Tokenizer | ≤3.6 bytes/token at vocab 16,384 | bytes/token: `___` |
 

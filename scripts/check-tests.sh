@@ -6,8 +6,8 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
 if ! find n32 bench -name 'test_*.py' -print -quit 2>/dev/null | grep -q .; then
-  echo "[tests] OK - no tests yet (first contracts land in P04)"
-  exit 0
+  echo "[tests] FAILED - no contract tests found under n32/ or bench/"
+  exit 1
 fi
 
 if command -v pytest > /dev/null 2>&1 || python3 -c "import pytest" 2>/dev/null; then
