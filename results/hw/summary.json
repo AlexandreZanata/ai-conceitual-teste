@@ -1,0 +1,56 @@
+{
+  "budget_path": "results/hw/budget.json",
+  "config_hash": "3d7e354fb4330430",
+  "cpu_gemm_tflops": 0.12832483358993665,
+  "disk_sequential_read_gbs": 4.537187524765854,
+  "driver_version": "580.173.02",
+  "embedding_params": null,
+  "feasible": true,
+  "gate_pass": true,
+  "gates": {
+    "feasible_flag_present": {
+      "measured": true,
+      "pass": true,
+      "threshold": "present"
+    },
+    "peak_tflops_repro_delta": {
+      "measured": 0.0074850408336769566,
+      "pass": true,
+      "threshold": "within \u00b110%"
+    },
+    "sustained_bf16_tflops": {
+      "measured": 24.57670458954881,
+      "minutes": 10.0,
+      "pass": true,
+      "threshold": "recorded, non-zero, measured over >=10 min"
+    },
+    "usable_vram_mb": {
+      "measured": 7174,
+      "pass": true,
+      "threshold": ">= 7000"
+    }
+  },
+  "generation_score": null,
+  "git_hash": "6ac884214f1e3d8fe92a2f6c8102cc8928993d0a",
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "hbm_bandwidth_gbs": 112.19306526003318,
+  "held_out_bpb": null,
+  "host_device_h2d_gbs": 6.097184852368012,
+  "latency_matmul_seconds_p50": 0.005655117001879262,
+  "latency_matmul_seconds_p99": 0.005663478004862554,
+  "max_params_at_4b_tokens_in_72h": 66357102.39178179,
+  "max_tokens_in_72h": 6289772738.557516,
+  "non_embedding_params": null,
+  "peak_bf16_tflops_median": 24.303467713634824,
+  "peak_tflops_repro_delta": 0.0074850408336769566,
+  "predicted_wall_hours": 45.78861780402727,
+  "profile_path": "results/hw/profile.json",
+  "retrieval_score": null,
+  "seed": 0,
+  "stage": "P00",
+  "sustained_bf16_tflops_final_minute_median": 24.57670458954881,
+  "timestamp": "2026-07-31T00:17:28.170339+00:00",
+  "torch_version": "2.12.1+cu130",
+  "usable_vram_mb": 7174,
+  "wall_seconds": 634.129
+}

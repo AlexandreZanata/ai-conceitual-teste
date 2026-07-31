@@ -112,20 +112,21 @@ Using \(C \approx 6ND\) with \(N = 4.2\times10^{7}\) and \(D = 4\times10^{9}\) t
 C \approx 6 \times 4.2{\times}10^{7} \times 4{\times}10^{9} = 1.01 \times 10^{18}\ \text{FLOPs}
 \]
 
-At a sustained \(7.5\times10^{12}\) FLOP/s (bf16, ~25% MFU on an RTX 4060 Mobile):
+**Measured** (P00, `results/hw/summary.json`): sustained bf16 matmul **24.577 TFLOP/s** over 10 min.
+At 25% MFU that is \(6.14\times10^{12}\) FLOP/s effective:
 
 \[
-t = \frac{1.01\times10^{18}}{7.5\times10^{12}} \approx 1.35\times10^{5}\ \text{s} \approx \mathbf{37.4\ hours}
+t = \frac{1.01\times10^{18}}{6.14\times10^{12}} \approx 1.65\times10^{5}\ \text{s} \approx \mathbf{45.8\ hours}
 \]
 
-| Phase | Tokens | Context | Est. wall |
+| Phase | Tokens | Context | Est. wall (scaled) |
 |---|---:|---:|---:|
-| Main pretrain | 3.6 B | 2,048 | ~32 h |
-| Context extension | 0.3 B | 8,192 | ~4 h |
-| Long-context anneal | 0.1 B | 32,768 | ~3 h |
-| **Total** | **4.0 B** | — | **≈ 39 h** |
+| Main pretrain | 3.6 B | 2,048 | ~41 h |
+| Context extension | 0.3 B | 8,192 | ~5 h |
+| Long-context anneal | 0.1 B | 32,768 | ~4 h |
+| **Total** | **4.0 B** | — | **≈ 46 h** |
 
-Under the 72-hour budget with ~45% slack for restarts. **The compute exists. It has simply never been spent.**
+`feasible: true` under the 72-hour cap (~26 h slack). Usable VRAM measured at **7,174 MB**. **The compute exists. It has simply never been spent.**
 
 ---
 

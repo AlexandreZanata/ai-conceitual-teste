@@ -29,7 +29,7 @@ Tick only when `docs/pipeline/results/PXX.md` exists. Nothing else counts as don
 ### Foundation
 | ✓ | Stage | Gate | Measured |
 |:-:|---|---|---|
-| ☐ | [P00](pipeline/P00-charter-and-hardware-envelope.md) Hardware envelope | Reproducible profile committed | sustained TFLOP/s: `___` |
+| ☑ | [P00](pipeline/P00-charter-and-hardware-envelope.md) Hardware envelope | Reproducible profile committed | sustained TFLOP/s: **24.577** · usable VRAM: **7174 MB** · feasible: **true** (45.8 h) |
 | ☐ | [P01](pipeline/P01-ground-truth-reset.md) Ground-truth reset | ≤40 scripts, verify green, ≥1 failing-capable test | scripts: **39** · tests: `___` |
 | ☐ | [P02](pipeline/P02-data-foundation.md) Data foundation | ≥4B deduplicated tokens, licence-clean | tokens: `___` B · dedup removed: `___`% |
 | ☐ | [P03](pipeline/P03-tokenizer.md) Tokenizer | ≤3.6 bytes/token at vocab 16,384 | bytes/token: `___` |
@@ -105,7 +105,7 @@ One row per section. Write nothing until the "evidence ready" column is fully ti
 |---|---|---|:---:|
 | Abstract | The five numbers in §3 | §3 | ☐ |
 | 1. Introduction | Small models are parameter-misallocated, not capacity-limited | [assessment §2.4](ASSESSMENT-2026-07-30.md#24-the-parameter-budget-was-spent-on-the-wrong-thing) | ☐ |
-| 2. Hardware envelope | What one consumer laptop actually sustains | P00 | ☐ |
+| 2. Hardware envelope | What one consumer laptop actually sustains | P00 | ☑ |
 | 3. Data | Corpus, dedup, decontamination, licences | P02 · [DATA-PROVENANCE](DATA-PROVENANCE.md) | ☐ |
 | 4. Vocabulary as budget | 16,384 vocab → 256× more transformer at equal total params | P03 · [pipeline §3](pipeline/README.md#3-why-the-vocabulary-is-the-headline-change) | ☐ |
 | 5. Architecture | GQA + sliding-window/global hybrid; 38.7 MB KV at 32k | P04 · P08 | ☐ |
