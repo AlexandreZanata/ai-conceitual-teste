@@ -1,0 +1,228 @@
+{
+  "bytes_per_token_approx": 4.301946338622222,
+  "clean_report": {
+    "contamination_removed": 0,
+    "drops": {},
+    "kept": 8841543,
+    "note": "kept from prior clean of FineWeb-Edu sample-10BT; gopher pre-filtered upstream; contamination checked vs data/eval_sets"
+  },
+  "config_hash": "d4dea4044ba65745",
+  "dedup_report": {
+    "exact_duplicate_rate_in_output": 0.0,
+    "exact_pass": {
+      "capped": true,
+      "dropped": 72039,
+      "exact_dup_rate": 0.01877849951867045,
+      "kept": 3764210,
+      "kept_bytes": 19000008339,
+      "resumed": true
+    },
+    "near_duplicate_rate_jaccard_gt_0_8_sample": 0.00018,
+    "near_pass": {
+      "dropped": 0,
+      "kept": 3764210,
+      "near_dup_rate_removed": 0.0,
+      "probe_rate": 0.0001,
+      "reason": "upstream FineWeb-Edu near-dedup; probe under 1%",
+      "skipped_full_lsh": true
+    }
+  },
+  "embedding_params": null,
+  "gate_pass": true,
+  "gates": {
+    "contamination_13gram_rate": {
+      "measured": 0.0,
+      "pass": true,
+      "threshold": "<0.0001"
+    },
+    "exact_duplicate_rate_in_output": {
+      "measured": 0.0,
+      "pass": true,
+      "threshold": "<0.001"
+    },
+    "heldout_split": {
+      "measured": {
+        "doc_overlap": 0,
+        "tokens": 10000067
+      },
+      "pass": true,
+      "threshold": ">=1e7 tokens, zero doc overlap"
+    },
+    "manifest_reproducibility": {
+      "measured": {
+        "checked": 16,
+        "match_rate": 1.0,
+        "matched": 16
+      },
+      "pass": true,
+      "threshold": "100% sha256 match"
+    },
+    "near_duplicate_rate_sample": {
+      "measured": 0.00018,
+      "pass": true,
+      "threshold": "<0.02"
+    },
+    "total_tokens_after_dedup": {
+      "measured": 4416607471,
+      "pass": true,
+      "threshold": ">=4.0e9"
+    },
+    "unknown_licence_sources": {
+      "measured": 0,
+      "pass": true,
+      "threshold": "==0"
+    }
+  },
+  "generation_score": null,
+  "git_hash": "8a8c4ca9986be56bf03dbfb86fe094bd85198bad",
+  "held_out_bpb": null,
+  "heldout_tokens": 10000067,
+  "manifest_files": [
+    {
+      "bytes": 2152222432,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/001_00000.parquet",
+      "sha256": "3fcf2dc69cd52503986276d3d2d26a8c356d0f2ea28a0de4fdbda8cf87755693",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 2152819114,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/000_00000.parquet",
+      "sha256": "b1ba7b2ce4cb5ea6ef42dca40263eabb85f37700d01693a68e9b30a31d78e871",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 2151796315,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/002_00000.parquet",
+      "sha256": "547ae182d132c9f06b6ce63149567208ea9f57630bfd9b1a2938e504f0c9ebd7",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 2152437524,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/003_00000.parquet",
+      "sha256": "22184e6eb25759ddd97783751ffc73e1705dfa2542e630dae1f2a8bac8ee6ddb",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 2152189947,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/005_00000.parquet",
+      "sha256": "e08d79927ecb377786572cd854817c748ceb8880878b1a0eb91abf8c85d505ea",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 2152338550,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/004_00000.parquet",
+      "sha256": "33557ddd87a07a4ae6fcaf7a4789c7b484e5cc0c273ca12a65b74200e6d8748b",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 2152689867,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/006_00000.parquet",
+      "sha256": "554fa2613c9261d6c9c396caab881de3160175794c6c3e1856bf28a0e9cb9b76",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 2151274846,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/008_00000.parquet",
+      "sha256": "a6d9dcc0c72ecd7c7f0173c2d06b3a4249a2ccaa94961469d1a522ca689bbf1a",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 2150686637,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/007_00000.parquet",
+      "sha256": "4b7d1f697d4afff7f5f65cb7aa4d83acc6db716da4d46ea23399d0c50608c6e3",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 2151913277,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/009_00000.parquet",
+      "sha256": "f836cd3c70b95776699eb6c356b2dbf702816e25dcf39992f5c80a29029d23c3",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 2152323681,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/011_00000.parquet",
+      "sha256": "db71cf0425bb3d1813a09f12ff1acd6dabdfb91a2e4f141960254ee5a7f036e7",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 2152798864,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/010_00000.parquet",
+      "sha256": "e5a2eae25f057f0856a10bfae314c6ca8ea8bb08456d2131e9e89b2b8305e2f6",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 540632672,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/013_00000.parquet",
+      "sha256": "b393f51fefab26cd6f4c8f65707c1924f6666c4961a0ebebe04bb57f7ec832de",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 2152069689,
+      "licence": "ODC-By 1.0",
+      "name": "sample/10BT/012_00000.parquet",
+      "sha256": "08b47a3e1c25161f796d2f8dbf99ccf60affdebdcea4910833d0d5783315551f",
+      "source_id": "fineweb_edu"
+    },
+    {
+      "bytes": 73158,
+      "licence": "MIT/BSD-2-Clause/PSF-2.0/IETF Trust",
+      "name": "https://docs.python.org/3/tutorial/introduction.html",
+      "sha256": "f6c76c07c20059863070979c4f11ebc35119d377bdab19b77351641d6daa7b3f",
+      "source_id": "tech_docs_seed"
+    },
+    {
+      "bytes": 94892,
+      "licence": "MIT/BSD-2-Clause/PSF-2.0/IETF Trust",
+      "name": "https://www.rfc-editor.org/rfc/rfc791.txt",
+      "sha256": "6cfb387fcecfc1b72f2f69343c5b6951b5d263d708162e2b5c66ab8f394f6265",
+      "source_id": "tech_docs_seed"
+    }
+  ],
+  "manifest_rejected": [
+    {
+      "date": "2026-07-30",
+      "reason": "Children fiction corpus that caused prior failure; banned by P02 \u00a77",
+      "source": "roneneldan/TinyStories"
+    },
+    {
+      "date": "2026-07-30",
+      "reason": "P02 \u00a72: quality-starved models lose BPB on unfiltered crawl",
+      "source": "unfiltered CommonCrawl / FineWeb without edu filter"
+    },
+    {
+      "date": "2026-07-30",
+      "reason": "Requires per-file permissive filter + HF gate; deferred until auth available",
+      "source": "bigcode/the-stack-v2 (unfiltered)"
+    }
+  ],
+  "non_embedding_params": null,
+  "retrieval_score": null,
+  "seed": 0,
+  "stage": "P02",
+  "timestamp": "2026-08-01T00:15:56.657726+00:00",
+  "tokenize_report": {
+    "doc_overlap": 0,
+    "heldout_docs": 8408,
+    "heldout_tokens": 10000067,
+    "shards": 45,
+    "train_docs": 3755802,
+    "train_tokens": 4406607404,
+    "vocab_size": 16384
+  },
+  "total_tokens": 4416607471,
+  "train_tokens": 4406607404,
+  "wall_seconds": 6551.437
+}
